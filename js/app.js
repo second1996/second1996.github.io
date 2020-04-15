@@ -10,8 +10,14 @@
 
 $(document).ready(function(){
 
+	/**
+	 * Init Inputmask
+	 */
 	$(":input").inputmask();
 
+	/**
+	 * Construction Modal Template (Модальне вікно для "Хід будівництва")
+	 */
 	$('#constructionModal').on('show.bs.modal', function (event) {
 		var button  = $(event.relatedTarget),
 				title   = button.data('constr-title'),
@@ -24,7 +30,9 @@ $(document).ready(function(){
 		modal.find('.modal-text').html(text);
 	});
 
-	// Fancybox
+	/**
+	 * Init Fancybox
+	 */
 	$('[data-fancybox]').fancybox({
 		buttons: [
 			"zoom",
@@ -49,7 +57,9 @@ $(document).ready(function(){
 		},
 	});
 
-	// Swiper for Home section: "Heroes"
+	/**
+	 * Swiper for Home section: "Heroes"
+	 */
 	var homeSwiperAutoplay = 6000;
 	var homeSwiper = new Swiper ('.h-heroes-slider', {
 		effect: 'fade',
@@ -90,7 +100,9 @@ $(document).ready(function(){
 		},
 	});
 
-	// Swiper for Home section: "About Us"
+	/**
+	 * Swiper for Home section: "About Us"
+	 */
 	var quoteSwiper = new Swiper ('.h-about-quote-slider', {
 		slidesPerView: 1,
 		speed: 1000,
@@ -104,7 +116,9 @@ $(document).ready(function(){
 		},
 	});
 
-	// Swiper for Home section "Construction"
+	/**
+	 * Swiper for Home section "Construction" 
+	 */
 	var constructionSwiper = new Swiper ('.h-construction-slider', {
 		spaceBetween: 20,
 		slidesPerView: 3,
@@ -135,7 +149,9 @@ $(document).ready(function(){
 		}
 	})
 
-	// Site Menu
+	/**
+	 * Open "Site menu" when clicked on hamburger button
+	 */
 	var humbBtn   = $('.hamburger'),
 			siteMenu  = $('.site-menu');
 
@@ -143,6 +159,22 @@ $(document).ready(function(){
 		$('body').toggleClass('menu-open');
 		$(humbBtn).toggleClass('is-active');
 		siteMenu.toggleClass('shown');
+	});
+
+
+});
+
+$(window).on('load', function () {
+
+	/**
+ * Marquee string for background text (classname: .bg-text)
+ */
+	$('.marquee').marquee({
+		// duration: 12000,
+		delayBeforeStart: 0,
+		startVisible: true,
+		duplicated: true,
+		gap: 350,
 	});
 
 });
