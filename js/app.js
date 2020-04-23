@@ -117,7 +117,7 @@ $(document).ready(function(){
 	});
 
 	/**
-	 * Swiper for Home section "Construction" 
+	 * Swiper for Home section "Construction"
 	 */
 	var constructionSwiper = new Swiper ('.h-construction-slider', {
 		spaceBetween: 20,
@@ -125,10 +125,10 @@ $(document).ready(function(){
 		grabCursor: true,
 		freeMode: true,
 		preloadImages: false,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchSlidesVisibility: true,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// },
+		// watchSlidesVisibility: true,
 		navigation: {
 			nextEl: '.h-construction-slider-next',
 			prevEl: '.h-construction-slider-prev',
@@ -147,7 +147,37 @@ $(document).ready(function(){
 				slidesPerView: 3,
 			}
 		}
-	})
+	});
+
+	/**
+	 * Swiper for single page News & Promo section "Other news"
+	 */
+	var constructionSwiper = new Swiper ('.s-news-slider', {
+		spaceBetween: 20,
+		slidesPerView: 3,
+		freeMode: true,
+		grabCursor: true,
+		preloadImages: false,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// },
+		// watchSlidesVisibility: true,
+		navigation: {
+			nextEl: '.s-news-slider-next',
+			prevEl: '.s-news-slider-prev',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			660: {
+				slidesPerView: 2,
+			},
+			940: {
+				slidesPerView: 3,
+			}
+		}
+	});
 
 	/**
 	 * Open "Site menu" when clicked on hamburger button
@@ -161,8 +191,9 @@ $(document).ready(function(){
 		siteMenu.toggleClass('shown');
 	});
 
-
 });
+
+
 
 $(window).on('load', function () {
 
