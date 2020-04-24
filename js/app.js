@@ -125,10 +125,6 @@ $(document).ready(function(){
 		grabCursor: true,
 		freeMode: true,
 		preloadImages: false,
-		// lazy: {
-		// 	loadPrevNext: true,
-		// },
-		// watchSlidesVisibility: true,
 		navigation: {
 			nextEl: '.h-construction-slider-next',
 			prevEl: '.h-construction-slider-prev',
@@ -158,10 +154,6 @@ $(document).ready(function(){
 		freeMode: true,
 		grabCursor: true,
 		preloadImages: false,
-		// lazy: {
-		// 	loadPrevNext: true,
-		// },
-		// watchSlidesVisibility: true,
 		navigation: {
 			nextEl: '.s-news-slider-next',
 			prevEl: '.s-news-slider-prev',
@@ -192,7 +184,6 @@ $(document).ready(function(){
 	});
 
 });
-
 
 
 $(window).on('load', function () {
