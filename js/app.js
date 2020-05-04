@@ -15,6 +15,7 @@ $(document).ready(function(){
 	 */
 	$(":input").inputmask();
 
+
 	/**
 	 * Construction Modal Template (Модальне вікно для "Хід будівництва")
 	 */
@@ -29,6 +30,7 @@ $(document).ready(function(){
 		modal.find('.modal-fancy').html(images);
 		modal.find('.modal-text').html(text);
 	});
+
 
 	/**
 	 * Init Fancybox
@@ -46,7 +48,8 @@ $(document).ready(function(){
 		},
 		backFocus: false,
 	});
-	
+
+
 	// LazyLoad images
 	var lazyLoadInstance = new LazyLoad({
 		elements_selector: ".lazy",
@@ -56,6 +59,7 @@ $(document).ready(function(){
 			$(element).siblings('.lazy-spin').remove();
 		},
 	});
+
 
 	/**
 	 * Swiper for Home section: "Heroes"
@@ -100,6 +104,7 @@ $(document).ready(function(){
 		},
 	});
 
+
 	/**
 	 * Swiper for Home section: "About Us"
 	 */
@@ -115,6 +120,7 @@ $(document).ready(function(){
 			clickable: true,
 		},
 	});
+
 
 	/**
 	 * Swiper for Home section "Construction"
@@ -145,10 +151,11 @@ $(document).ready(function(){
 		}
 	});
 
+
 	/**
 	 * Swiper for single page News & Promo section "Other news"
 	 */
-	var constructionSwiper = new Swiper ('.s-news-slider', {
+	var newsSwiper = new Swiper ('.s-news-slider', {
 		spaceBetween: 20,
 		slidesPerView: 3,
 		freeMode: true,
@@ -171,6 +178,62 @@ $(document).ready(function(){
 		}
 	});
 
+
+	/**
+	 * Swiper for House section "Planning"
+	 */
+	var planningSwiper = $('.planning-slider');
+	planningSwiper.each(function(){
+		var planningSlider = new Swiper (this, {
+			slidesPerView: 1,
+			grabCursor: true,
+			preloadImages: false,
+			navigation: {
+				nextEl: $(this).parent().find('.planning-slider-next')[0],
+				prevEl: $(this).parent().find('.planning-slider-prev')[0],
+			},
+		});
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+			// e.target // newly activated tab
+			// e.relatedTarget // previous active tab
+			planningSlider.update();
+		});
+	});
+
+
+		/**
+	 * Swiper for House section "Planning"
+	 */
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 12,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 4,
+			},
+			576: {
+				slidesPerView: 6,
+			},
+			768: {
+				slidesPerView: 12,
+			},
+		},
+	});
+
+	var gallerySlider = new Swiper('.gallery-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+		}
+	});
+
+
 	/**
 	 * Open "Site menu" when clicked on hamburger button
 	 */
@@ -181,6 +244,75 @@ $(document).ready(function(){
 		$('body').toggleClass('menu-open');
 		$(humbBtn).toggleClass('is-active');
 		siteMenu.toggleClass('shown');
+	});
+
+
+	/**
+	 * Anchor smooth scroll link
+	 */
+	$('a[data-link^="anchor"]').bind('click.smoothscroll', function(){
+		var target = $(this).attr('href'),
+				bl_top = $(target).offset().top - 75;
+
+		$('body, html').animate({scrollTop: bl_top}, 1000);
+		return false;
+	});
+
+
+	/**
+	 * Installment calculator (Section: Calculate on House page)
+	 */
+	const calcForm							= $("#c-calc-form");
+	const firstPay							= $("#c-first-pay");
+	const termPay								= $("#c-term-pay");
+	const cTotalCost						= $("#c-total-cost-val > em").text();
+	const cFirstPay							= $("#c-first-pay-val > em");
+	const cMonthlyPay						= $("#c-monthly-val > em");
+	const cModalLink						= $("#c-modal-link");
+	const cModalFirstPay				= $("#cModal-firstPay");
+	const cModalMonthlyPay			= $("#cModal-monthlyPay");
+	const cModalLabelFirstPay		= $("#cModalLabel-firstPay");
+	const cModalLabelMonthlyPay	= $("#cModalLabel-monthlyPay");
+
+	// Show "Залишити заявку" when input first time changed
+	calcForm.one('input change', function() {
+		cModalLink.addClass('show');
+	});
+
+	// Calculate values when load page
+	cFirstPay.text(Math.round( ( parseInt(cTotalCost) * ( firstPay.val() / 100 ) ) ));
+	cMonthlyPay.text(Math.round( ( parseInt(cTotalCost) - cFirstPay.text() ) / termPay.val() ));
+	cModalFirstPay.val(Math.round( ( parseInt(cTotalCost) * ( firstPay.val() / 100 ) ) ));
+	cModalMonthlyPay.val(Math.round( ( parseInt(cTotalCost) - cFirstPay.text() ) / termPay.val() ));
+	cModalLabelFirstPay.text(Math.round( ( parseInt(cTotalCost) * ( firstPay.val() / 100 ) ) ));
+	cModalLabelMonthlyPay.text(Math.round( ( parseInt(cTotalCost) - cFirstPay.text() ) / termPay.val() ));
+
+	// Calculate function
+	function calculateFirstPay(price, value) {
+		// Перший внесок
+		cFirstPay.text(Math.round( ( parseInt(price) * ( value / 100 ) ) ));
+		cModalFirstPay.val(Math.round( ( parseInt(price) * ( value / 100 ) ) ));
+		cModalLabelFirstPay.text(Math.round( ( parseInt(price) * ( value / 100 ) ) ));
+		// Щомісячний платіж
+		cMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / termPay.val() ));
+		cModalMonthlyPay.val(Math.round( ( parseInt(price) - cFirstPay.text() ) / termPay.val() ));
+		cModalLabelMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / termPay.val() ));
+	}
+	function calculateMonthlyPay(price, value) {
+		// Щомісячний платіж
+		cMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / value ));
+		cModalMonthlyPay.val(Math.round( ( parseInt(price) - cFirstPay.text() ) / value ));
+		cModalLabelMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / value ));
+	}
+
+	// Write the value when changing range input
+	firstPay.on("input change", function() {
+		// console.log($(this).val());
+		calculateFirstPay(cTotalCost, $(this).val());
+	});
+	termPay.on("input change", function() {
+		// console.log($(this).val());
+		calculateMonthlyPay(cTotalCost, $(this).val());
 	});
 
 });
