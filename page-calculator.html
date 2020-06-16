@@ -92,6 +92,7 @@
 					<form class="calculator-form" action="" id="c-calc-form">
 						<div class="row">
 							<div class="col-12 calculator-form-item">
+								<div class="title text-lg text-uppercase w-medium">Оберіть тип будинку:</div>
 								<div class="calculator-houses">
 									<div class="house card house--selected" data-house-type="river" data-house-price="226548">
 										<div class="house-head">
@@ -100,7 +101,7 @@
 										</div>
 										<div class="house-meta">
 											<h5 class="title text-md w-medium">Villa «RIVER»</h5>
-											<p class="info text-xs">Заг. площа: 252 м<sup>2</sup>, площа буд.: 198 м<sup>2</sup></p>
+											<p class="info text-xs">Площа будинку: 252 м<sup>2</sup></p>
 										</div>
 									</div><!-- /.house -->
 									<div class="house card" data-house-type="forest" data-house-price="194184">
@@ -110,7 +111,7 @@
 										</div>
 										<div class="house-meta">
 											<h5 class="title text-md w-medium">Villa «FOREST»</h5>
-											<p class="info text-xs">Заг. площа: 216 м<sup>2</sup>, площа буд.: 172 м<sup>2</sup></p>
+											<p class="info text-xs">Площа будинку: 216 м<sup>2</sup></p>
 										</div>
 									</div><!-- /.house -->
 									<div class="house card" data-house-type="sun" data-house-price="199578">
@@ -120,7 +121,7 @@
 										</div>
 										<div class="house-meta">
 											<h5 class="title text-md w-medium">Villa «SUN»</h5>
-											<p class="info text-xs">Заг. площа: 222 м<sup>2</sup>, площа буд.: 180 м<sup>2</sup></p>
+											<p class="info text-xs">Площа будинку: 222 м<sup>2</sup></p>
 										</div>
 									</div><!-- /.house -->
 								</div><!-- /.calculator-houses -->
@@ -144,22 +145,27 @@
 					<div class="calculator-total">
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Вартість будинку, $</div>
-							<div class="value title-md text-accent w-medium" id="c-total-cost-val"><em>0</em> <span class="w-light">*</span></div>
+							<div class="value title-md text-accent w-medium"><em id="c-total-cost-val">0</em></div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
-							<div class="title text-lg text-uppercase w-regular">Обов'язковий платіж, $</div>
-							<div class="value title-md text-accent w-medium" id="c-req-pay-val"><em>10000</em> <span class="w-light">*</span></div>
+							<div class="title text-lg text-uppercase w-regular">Завдаток, $</div>
+							<div class="value title-md text-accent w-medium">10 000</div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Перший внесок, $</div>
-							<div class="value title-md text-accent w-medium" id="c-first-pay-val"><em>0</em> <span class="w-light">*</span></div>
+							<div class="value title-md text-accent w-medium"><em id="c-first-pay-val">0</em></div>
+						</div>
+						<div class="calculator-total-separator"></div>
+						<div class="calculator-total-item">
+							<div class="title text-lg text-uppercase w-regular">Термін, <span class="text-white" id="c-term-type">міс.</span></div>
+							<div class="value title-md text-accent w-medium"><em id="c-term-val">0</em></div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Платіж на період розтермінування, $</div>
-							<div class="value title-md text-accent w-medium" id="c-monthly-val"><em>0</em> <span class="w-light">*</span></div>
+							<div class="value title-md text-accent w-medium"><em id="c-term-pay-val">0</em></div>
 							<div class="calculator-total-form fade" id="c-modal-link"><a href="#" class="link text-xss text-uppercase w-regular" data-toggle="modal" data-target="#calcHouseModal" role="button">Залишити заявку?</a></div>
 						</div>
 					</div><!-- /.calculator-total -->
@@ -407,15 +413,16 @@
 					<form action="#" class="form modal-form">
 						<input type="hidden" value="0" id="cModal-house">
 						<input type="hidden" value="0" id="cModal-price">
-						<input type="hidden" value="0" id="cModal-firstPay">
+						<input type="hidden" value="0" id="cModal-firstpay">
 						<input type="hidden" value="0" id="cModal-term">
-						<input type="hidden" value="0" id="cModal-monthlyPay">
+						<input type="hidden" value="0" id="cModal-termpay">
 						<div class="form-plate">
-							<div class="form-plate-item"><span class="name">Будинок:</span> <span class="value"><em id="cModalLabel-house"></em><sup>*</sup> $</span></div>
-							<div class="form-plate-item"><span class="name">Вартість:</span> <span class="value"><em id="cModalLabel-cost"></em><sup>*</sup> $</span></div>
-							<div class="form-plate-item"><span class="name">Перший внесок:</span> <span class="value"><em id="cModalLabel-firstPay"></em><sup>*</sup> $</span></div>
-							<div class="form-plate-item"><span class="name">Термін:</span> <span class="value"><em id="cModalLabel-term"></em><sup>*</sup> $</span></div>
-							<div class="form-plate-item"><span class="name">Платіж на період розтермінування:</span> <span class="value"><em id="cModalLabel-monthlyPay"></em><sup>*</sup> $</span></div>
+							<div class="form-plate-item"><span class="name">Будинок:</span> <span class="value"><em id="cModalLabel-house">0</em></span></div>
+							<div class="form-plate-item"><span class="name">Вартість:</span> <span class="value">$<em id="cModalLabel-price">0</em></span></div>
+							<div class="form-plate-item"><span class="name">Завдаток:</span> <span class="value">$10 000</span></div>
+							<div class="form-plate-item"><span class="name">Перший внесок:</span> <span class="value">$<em id="cModalLabel-firstpay">0</em></span></div>
+							<div class="form-plate-item"><span class="name">Термін:</span> <span class="value"><em id="cModalLabel-term">0</em> <em id="cModalLabel-term-label">міс.</em></span></div>
+							<div class="form-plate-item"><span class="name">Платіж на період розтермінування:</span> <span class="value">$<em id="cModalLabel-termpay">0</em></span></div>
 						</div>
 						<div class="form-row">
 							<div class="col-lg-6">
