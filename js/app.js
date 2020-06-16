@@ -245,6 +245,11 @@ $(document).ready(function(){
 		$(humbBtn).toggleClass('is-active');
 		siteMenu.toggleClass('shown');
 	});
+	$('.site-menu-footer-btn, .site-menu-navigation-list > li > a').on('click', function() {
+		$('body').removeClass('menu-open');
+		$(humbBtn).removeClass('is-active');
+		siteMenu.removeClass('shown');
+	});
 
 
 	/**
@@ -256,63 +261,6 @@ $(document).ready(function(){
 
 		$('body, html').animate({scrollTop: bl_top}, 1000);
 		return false;
-	});
-
-
-	/**
-	 * Installment calculator (Section: Calculate on House page)
-	 */
-	const calcForm							= $("#c-calc-form");
-	const firstPay							= $("#c-first-pay");
-	const termPay								= $("#c-term-pay");
-	const cTotalCost						= $("#c-total-cost-val > em").text();
-	const cFirstPay							= $("#c-first-pay-val > em");
-	const cMonthlyPay						= $("#c-monthly-val > em");
-	const cModalLink						= $("#c-modal-link");
-	const cModalFirstPay				= $("#cModal-firstPay");
-	const cModalMonthlyPay			= $("#cModal-monthlyPay");
-	const cModalLabelFirstPay		= $("#cModalLabel-firstPay");
-	const cModalLabelMonthlyPay	= $("#cModalLabel-monthlyPay");
-
-	// Show "Залишити заявку" when input first time changed
-	calcForm.one('input change', function() {
-		cModalLink.addClass('show');
-	});
-
-	// Calculate values when load page
-	cFirstPay.text(Math.round( ( parseInt(cTotalCost) * ( firstPay.val() / 100 ) ) ));
-	cMonthlyPay.text(Math.round( ( parseInt(cTotalCost) - cFirstPay.text() ) / termPay.val() ));
-	cModalFirstPay.val(Math.round( ( parseInt(cTotalCost) * ( firstPay.val() / 100 ) ) ));
-	cModalMonthlyPay.val(Math.round( ( parseInt(cTotalCost) - cFirstPay.text() ) / termPay.val() ));
-	cModalLabelFirstPay.text(Math.round( ( parseInt(cTotalCost) * ( firstPay.val() / 100 ) ) ));
-	cModalLabelMonthlyPay.text(Math.round( ( parseInt(cTotalCost) - cFirstPay.text() ) / termPay.val() ));
-
-	// Calculate function
-	function calculateFirstPay(price, value) {
-		// Перший внесок
-		cFirstPay.text(Math.round( ( parseInt(price) * ( value / 100 ) ) ));
-		cModalFirstPay.val(Math.round( ( parseInt(price) * ( value / 100 ) ) ));
-		cModalLabelFirstPay.text(Math.round( ( parseInt(price) * ( value / 100 ) ) ));
-		// Щомісячний платіж
-		cMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / termPay.val() ));
-		cModalMonthlyPay.val(Math.round( ( parseInt(price) - cFirstPay.text() ) / termPay.val() ));
-		cModalLabelMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / termPay.val() ));
-	}
-	function calculateMonthlyPay(price, value) {
-		// Щомісячний платіж
-		cMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / value ));
-		cModalMonthlyPay.val(Math.round( ( parseInt(price) - cFirstPay.text() ) / value ));
-		cModalLabelMonthlyPay.text(Math.round( ( parseInt(price) - cFirstPay.text() ) / value ));
-	}
-
-	// Write the value when changing range input
-	firstPay.on("input change", function() {
-		// console.log($(this).val());
-		calculateFirstPay(cTotalCost, $(this).val());
-	});
-	termPay.on("input change", function() {
-		// console.log($(this).val());
-		calculateMonthlyPay(cTotalCost, $(this).val());
 	});
 
 });

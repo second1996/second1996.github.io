@@ -1,0 +1,951 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+.line-link
+	position: relative
+	display: inline-flex
+	align-items: center
+	margin-top: 30px
+	padding-bottom: 8px
+	padding-right: 26px
+	color: $white
+	font-size: 20px
+	font-weight: $font-regular
+	line-height: 1
+	transition: .45s ease
+	background-image: url('../images/icons/arrow-accent.svg')
+	background-repeat: no-repeat
+	background-position: 100% 26%
+	background-size: cover
+	background-size: 13px
+	+media-breakpoint-down(md)
+		font-size: 18px
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		height: 2px
+	&::before
+		width: 100%
+		background: rgba($white, 0.05)
+	&::after
+		width: 25px
+		background: $white
+		transition: .45s ease
+	&:hover
+		color: $white
+		&::after
+			width: 100%
+			background: $accent
+
+
+/* ==========================================================================
+   Hamburger menu
+   ========================================================================== */
+.hamburger
+	padding: 10px
+	display: inline-block
+	cursor: pointer
+	transition-property: opacity, filter
+	transition-duration: 0.15s
+	transition-timing-function: linear
+	text-transform: none
+	background-color: transparent
+	border: 0
+	margin: 0
+	overflow: visible
+	+media-breakpoint-down(lg)
+		padding: 0
+
+	+media-breakpoint-up(lg)
+		&.hamburger--arrow:hover .hamburger-inner,
+		&.hamburger--arrow:hover .hamburger-inner::before,
+		&.hamburger--arrow:hover .hamburger-inner::after
+			background: #5a5c5f
+
+.hamburger-box
+	width: 50px
+	height: 27px
+	display: flex
+	position: relative
+
+.hamburger-inner
+	display: block
+	top: 50%
+	margin-top: -1px
+	width: 50px
+	&::before,
+	&::after
+		width: 30px
+	+media-breakpoint-down(xs)
+		width: 46px
+		&::before,
+		&::after
+			width: 24px
+	&,
+	&::before,
+	&::after
+		position: absolute
+		height: 2px
+		background-color: $accent
+		transition: .45s ease
+	&::before,
+	&::after
+		content: ''
+		left: 50%
+		margin-left: -15px
+		display: block
+		+media-breakpoint-down(xs)
+			margin-left: -12px
+	&::before
+		top: -12px
+	&::after
+		bottom: -12px
+	+media-breakpoint-down(xs)
+		&::before
+			top: -10px
+		&::after
+			bottom: -10px
+
+// When open menu
+.hamburger--arrow.is-active .hamburger-inner::before
+	transform: translate3d(-18px, 5px, 0) rotate(-45deg) scale(0.7, 1)
+.hamburger--arrow.is-active .hamburger-inner::after
+	transform: translate3d(-18px, -5px, 0) rotate(45deg) scale(0.7, 1)
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn
+	display: inline-flex
+	align-items: center
+	padding: 20px 36px
+	border: 1px solid $trsp
+	font-size: 14px
+	font-weight: $font-regular
+	line-height: 1
+	text-transform: uppercase
+	white-space: nowrap
+	transition: .45s ease
+	+media-breakpoint-down(xl)
+		padding: 18px 30px
+	+media-breakpoint-down(sm)
+		padding: 16px 28px
+	&-icon
+		position: relative
+		&::after
+			content: ''
+			display: inline-block
+			width: 12px
+			height: 12px
+			margin-left: 10px
+			background-repeat: no-repeat
+			background-position-y: center
+			background-size: cover
+			transform: none
+			transition: transform .45s ease
+		&:hover::after
+			transform: translateX(4px)
+		&-key,
+		&-question,
+		&-pdf
+			position: relative
+			align-items: center
+			&::before
+				content: ''
+				display: inline-block
+				width: 16px
+				height: 16px
+				margin-right: 10px
+				background-repeat: no-repeat
+				background-position-y: center
+				background-size: 100%
+				transform: none
+				transition: transform .45s ease
+		&-key::before
+			background-image: url('../images/icons/key.svg')
+		&-question::before
+			background-image: url('../images/icons/question-accent.svg')
+		&-pdf::before
+			background-image: url('../images/icons/pdf-file-accent.svg')
+	&-primary
+		box-shadow: 0 0 0 2px rgba($border-accent, 0.6)
+		background-color: $accent
+		color: $text-dark
+		&:hover
+			box-shadow: 0 0 0 2px rgba($white, 0.4)
+			background-color: $white
+			color: $text-dark
+		&:active
+			box-shadow: 0 0 0 3px rgba($white, 0.5)
+			background-color: darken($white, 10%)
+		&.btn-icon::after
+			background-image: url('../images/icons/arrow.svg')
+	&-outline
+		box-shadow: 0 0 0 1px rgba($white, 0.15)
+		background: $text-dark
+		color: $white
+		&:active
+			border: 1px solid rgba($white, 0.15)
+		&:hover
+			background: $dark
+		&.btn-icon::after
+			background-image: url('../images/icons/arrow-white.svg')
+	&-outline-accent
+		box-shadow: 0 0 0 1px $accent
+		background: $text-dark
+		color: $accent
+		&:active
+			border: 1px solid $accent
+		&:hover
+			background: $dark
+		&.btn-icon::after
+			background-image: url('../images/icons/arrow-accent.svg')
+	&-solid
+		box-shadow: 0 0 0 2px rgba($white, 0.15)
+		background: $dark
+		color: $white
+		&:active
+			border: 1px solid rgba($white, 0.15)
+		&:hover
+			background: $item-bg
+		&.btn-icon::after
+			background-image: url('../images/icons/arrow-white.svg')
+	&-link-icon
+		position: relative
+		display: inline-flex
+		align-items: center
+		padding-bottom: 10px
+		padding-left: 26px
+		color: $white
+		font-size: 16px
+		font-weight: $font-light
+		line-height: 1
+		text-transform: uppercase
+		transition: .45s ease
+		background-repeat: no-repeat
+		background-position: 2px 0
+		background-size: cover
+		background-size: 16px
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			height: 2px
+		&::before
+			width: 100%
+			background: rgba($white, 0.05)
+		&::after
+			width: 20px
+			background: $accent
+			transition: .45s ease
+		&:hover
+			color: $white
+			&::after
+				width: 100%
+		&-call
+			background-image: url('../images/icons/phone-accent.svg')
+		&-question
+			background-image: url('../images/icons/question-accent.svg')
+		&-pdf
+			background-image: url('../images/icons/pdf-file-accent.svg')
+
+
+/* ==========================================================================
+   JS Range Slider
+   ========================================================================== */
+.form-range-slider
+	.js-range-slider
+		margin-top: -10px
+	.irs--round
+		.irs-bar--single,
+		.irs-line
+			border-radius: 0
+			top: 16px
+		.irs-from,
+		.irs-to,
+		.irs-single
+			display: none
+		.irs-line
+			z-index: 1
+			width: 100%
+			height: 12px
+			color: transparent
+			cursor: pointer
+			background-color: $item-bg
+			border: 1px solid $border
+			border-radius: 0
+			box-shadow: 0
+		.irs-bar
+			z-index: 2
+			height: 12px
+			border: 1px solid $border-accent
+			background-color: $accent
+		.irs-handle
+			top: 10px
+			z-index: 3
+			cursor: pointer
+			width: 30px
+			height: 24px
+			box-shadow: none
+			background: $accent url('../images/icons/range-separator.svg') no-repeat center/6px
+			border: 1px solid $border-accent
+			border-radius: 2px
+			box-shadow: 0
+			transition: background-color .45s ease
+		.irs-grid-pol
+			background-color: $border
+			&.small
+				height: 6px
+		.irs-grid-text
+			color: darken($text-main, 25%)
+			line-height: 0
+		&.irs-with-grid
+			height: 51px
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+.form
+	&-plate
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 20px
+		padding: 10px 0
+		border: 2px solid $border
+		border-left: 0
+		border-right: 0
+		&-item
+			padding: 6px 0
+			line-height: 1
+			&:not(:last-child)
+				margin-right: 20px
+			.name
+				display: inline-block
+				color: $white
+				font-size: 14px
+				font-weight: $font-regular
+			.value
+				display: inline-block
+				margin-left: 6px
+				padding: 6px
+				border-radius: 2px
+				background: $accent
+				color: $text-dark
+				font-size: 14px
+				font-weight: $font-medium
+				font-style: normal
+				> em
+					font-style: normal
+	&-row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-left: -10px
+		margin-right: -10px
+		> .col,
+		> [class*=col-]
+			padding-right: 10px
+			padding-left: 10px
+	&-control,
+	&-textarea
+		appearance: none
+		display: block
+		width: 100%
+		margin-bottom: 20px
+		color: $white
+		font-size: 15px
+		font-weight: 400
+		font-weight: $font-light
+		border-radius: 0
+		border: 1px solid rgba($white, 0.15)
+		background-color: $text-dark
+		background-clip: padding-box
+		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out
+		+media-breakpoint-down(md)
+			margin-bottom: 15px
+			font-size: 14px
+	&-control
+		height: 56px
+		padding: 0 30px
+		line-height: 56px
+		+media-breakpoint-down(xs)
+			height: 50px
+			padding: 0 20px
+			line-height: 50px
+	&-textarea
+		resize: none
+		padding: 16px 30px
+		+media-breakpoint-down(xs)
+			padding: 14px 20px
+	&-text
+		color: rgba($white, 0.3)
+		margin-bottom: 15px
+		+media-breakpoint-down(xs)
+			font-size: 14px
+	&-label-tabs
+		display: inline-block
+		position: relative
+	&-range-tabs
+		position: absolute
+		top: -6px
+		left: 100%
+		display: flex
+		margin-left: 30px
+		.tab-item
+			position: relative
+			height: 34px
+			padding: 0 18px
+			border: 1px solid $border
+			background-color: $item-bg
+			line-height: 34px
+			transition: .35s ease
+			&:not(.tab-item--selected)
+				opacity: 0.5
+				&:hover
+					cursor: pointer
+					opacity: 1
+			&--selected
+				pointer-events: none
+				z-index: 1
+				border-color: $accent
+				color: $accent
+	&-range
+		overflow: hidden
+		position: relative
+		z-index: 2
+		width: 100%
+		height: 24px
+		padding: 0
+		background-color: $trsp
+		appearance: none
+		&:focus
+			box-shadow: none
+			outline: none
+			&::-webkit-slider-thumb
+				box-shadow: none!important
+			&::-moz-range-thumb
+				box-shadow: none!important
+			&::-ms-thumb
+				box-shadow: none!important
+		// -webkit- vendor
+		&::-webkit-slider-thumb
+			cursor: pointer
+			width: 30px
+			height: 24px
+			margin-top: -8px
+			background: $accent url('../images/icons/range-separator.svg') no-repeat center/6px
+			border: 1px solid $border-accent
+			border-radius: 2px
+			box-shadow: 0
+			transition: .45s ease
+			appearance: none
+			&:active
+				background-color: $white
+		&::range-progress
+			height: 20px
+			border-radius: 10px 0 0 10px
+			background-color: #2196F3
+			border: 2px solid #1976D2
+		&::-webkit-slider-runnable-track
+			width: 100%
+			height: 10px
+			color: transparent
+			cursor: pointer
+			background-color: $item-bg
+			border: 1px solid $border
+			border-radius: 0
+			box-shadow: 0
+		// -moz- vendor
+		&::-moz-focus-outer
+			border: 0
+		&::-moz-range-thumb
+			cursor: pointer
+			width: 30px
+			height: 24px
+			background: $accent url('../images/icons/range-separator.svg') no-repeat center/6px
+			border: 1px solid $border-accent
+			border-radius: 2px
+			box-shadow: 0
+			transition: .45s ease
+			appearance: none
+			&:active
+				background-color: $white
+		&::-moz-range-progress
+			height: 9px
+			background: $accent
+			padding: 0
+			margin: 0
+			border: 1px solid $border
+			border-left: 0
+		&::-moz-range-track
+			width: 100%
+			height: 10px
+			color: transparent
+			cursor: pointer
+			background-color: $item-bg
+			border-color: $trsp
+			border-radius: 0
+			box-shadow: 0 0 0 1px $border
+		// -ms- vendor
+		&::-ms-thumb
+			cursor: pointer
+			width: 30px
+			height: 24px
+			margin-top: 0
+			margin-right: 6px
+			margin-left: 6px
+			background: $accent url('../images/icons/range-separator.svg') no-repeat center/6px
+			border: 1px solid $border-accent
+			border-radius: 2px
+			box-shadow: 0
+			transition: .45s ease
+			appearance: none
+			&:active
+				background-color: $white
+		&::-ms-track
+			width: 100%
+			height: 10px
+			color: transparent
+			cursor: pointer
+			background-color: $item-bg
+			border-width: 0
+			border-color: $trsp
+			border-radius: 0
+			box-shadow: 0 0 0 1px $border
+		&::-ms-fill-lower
+			background-color: $accent
+		&::-ms-fill-upper
+			margin-right: 15px
+			background-color: $trsp
+		// Disabled
+		&:disabled
+			&::-webkit-slider-thumb
+				opacity: 0.5
+			&::-webkit-slider-runnable-track
+				cursor: default
+			&::-moz-range-thumb
+				opacity: 0.5
+			&::-moz-range-track
+				cursor: default
+			&::-ms-thumb
+				opacity: 0.5
+		&-mark
+			display: flex
+			justify-content: space-between
+			margin-top: -15px
+			> li
+				position: relative
+				z-index: 1
+				width: 30px
+				padding-top: 20px
+				font-size: 16px
+				line-height: 1
+				text-align: center
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					width: 1px
+					height: 7px
+					margin: 0 auto
+					background: $border
+
+
+/* ==========================================================================
+   Background Text, Pattern
+   ========================================================================== */
+.bg
+	&-pattern
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-image: url('../images/dest/ozon_pattern-white.png')
+			opacity: 0.01
+	&-text
+		user-select: none
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: -1
+		-webkit-text-stroke: 1px $white
+		text-shadow: 1px 1px 0 $white, -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white
+		color: $text-dark
+		font-size: 500px
+		font-weight: $font-bold
+		line-height: 0.85
+		letter-spacing: 10px
+		text-align: center
+		text-transform: uppercase
+		white-space: nowrap
+		opacity: 0.04
+		+media-breakpoint-down(xl)
+			top: 50px
+			font-size: 400px
+		+media-breakpoint-down(md)
+			font-size: 360px
+			line-height: 0.9
+		+media-breakpoint-down(sm)
+			top: 25px
+			font-size: 330px
+		+media-breakpoint-down(xs)
+			top: 0
+			font-size: 300px
+		+media-breakpoint-down(xss)
+			top: -10px
+
+
+/* ==========================================================================
+   <ul> list
+   ========================================================================== */
+.list-group
+	margin-top: 20px
+	> li
+		position: relative
+		margin-top: 6px
+		padding-left: 20px
+		line-height: 1.4
+		&::before
+			content: ''
+			position: absolute
+			top: 12px
+			left: 0
+			width: 10px
+			height: 1px
+			background: $text-main
+			+media-breakpoint-down(xl)
+				top: 11px
+			+media-breakpoint-down(xs)
+				top: 10px
+	&-square
+		> li
+			&::before
+				top: 10px
+				left: 2px
+				width: 5px
+				height: 5px
+				background: $accent
+
+
+/* ==========================================================================
+   Card
+   ========================================================================== */
+.card
+	position: relative
+	display: flex
+	flex-direction: column
+	height: 100%
+	border: 1px solid $border
+	background: $item-bg
+	&-animate
+		transition: box-shadow .45s ease
+		.card-image img
+			transition: opacity 1s ease, transform 1s ease
+		&:hover
+			box-shadow: 0 0 0 5px $border
+			.card-image img
+				transform: scale(1.075)
+	&-head
+		padding: 30px 50px
+		+media-breakpoint-down(xl)
+			padding: 30px 40px
+		+media-breakpoint-down(xs)
+			padding: 20px 30px
+	&-image
+		position: relative
+		overflow: hidden
+		width: 100%
+		height: 360px
+		+media-breakpoint-down(xl)
+			height: 270px
+		+media-breakpoint-down(sm)
+			height: 240px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			will-change: transform
+	&-body
+		padding: 40px 50px
+		+media-breakpoint-down(xl)
+			padding: 30px 40px
+		+media-breakpoint-down(xs)
+			padding: 30px
+
+
+/* ==========================================================================
+   Swiper customize
+   ========================================================================== */
+.swiper-lazy-preloader-white
+	opacity: 0.25
+
+.swiper-button
+	&-prev,
+	&-next
+		outline: none
+		position: static
+		display: inline-block
+		vertical-align: middle
+		width: 50px
+		height: 50px
+		margin: 0
+		border: 1px solid $border
+		background-color: $item-bg
+		background-image: url('../images/icons/arrow-white.svg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 16px
+		transition: background-color .45s ease
+		+media-breakpoint-down(xss)
+			width: 40px
+			height: 40px
+		&::after
+			display: none
+		&:hover
+			background-color: $dark
+	&-prev
+		margin-right: 8px
+		transform: rotate(-180deg)
+
+.swiper-container-horizontal
+	> .swiper-scrollbar
+		position: static
+		width: 100%
+		height: 4px
+		margin-top: 30px
+.swiper-scrollbar-drag
+	border-radius: 0
+	background: $accent
+
+.swiper-pagination-bullet
+	width: 6px
+	height: 6px
+	&-active
+		width: 8px
+		height: 8px
+		background: $text-dark
+
+
+/* ==========================================================================
+   Fancybox customize
+   ========================================================================== */
+.fancybox-thumbs
+	top: auto
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	background: $trsp
+.fancybox-thumbs__list
+	margin: 0 auto
+	a:before
+		border: 4px solid $accent
+.fancybox-show-thumbs .fancybox-inner
+	right: 0
+	bottom: 95px
+
+
+/* ==========================================================================
+   Modal Bootstrap
+   ========================================================================== */
+.modal
+	&-xl
+		max-width: 1400px
+	&-xls
+		max-width: 1000px
+	&-dialog
+		padding-left: 30px
+		padding-right: 30px
+		+media-breakpoint-down(xs)
+			padding-left: 5px
+			padding-right: 5px
+	&-content
+		padding: 60px
+		border-radius: 0
+		border: 1px solid $border
+		background: $item-bg
+		+media-breakpoint-down(lg)
+			padding: 50px 40px
+		+media-breakpoint-down(xs)
+			padding: 40px 30px
+	&-header
+		position: relative
+		padding: 0
+		padding-right: 60px
+		border-bottom: 0
+		.close
+			position: absolute
+			top: 0
+			right: 0
+			width: 50px
+			height: 50px
+			border: 1px solid $accent
+			background: $trsp
+			margin: 0
+			padding: 0
+			> span
+				position: absolute
+				left: 50%
+				display: block
+				width: 30px
+				height: 1px
+				margin-left: -15px
+				background: $accent
+				transition: background-color .45s ease
+				&:nth-child(1)
+					transform: rotate(-45deg)
+				&:nth-child(2)
+					transform: rotate(45deg)
+			&:hover
+				box-shadow: 0 0 0 3px rgba($white, 0.15)
+				background-color: $accent
+				> span
+					background: $text-dark
+			&:active
+				box-shadow: none
+			+media-breakpoint-down(xs)
+				width: 30px
+				height: 30px
+				> span
+					width: 18px
+					margin-left: -9px
+	&-title
+		padding-top: 10px
+		+media-breakpoint-down(xs)
+			padding-top: 0
+	&-body
+		padding: 0
+		padding-top: 60px
+		+media-breakpoint-down(lg)
+			padding-top: 40px
+	&-fancy
+		overflow-x: auto
+		height: 100%
+		margin-bottom: 10px
+		white-space: nowrap
+		&-item
+			display: inline-block
+			width: 140px
+			height: 100px
+			margin-bottom: 16px
+			&:not(:last-child)
+				margin-right: 20px
+			+media-breakpoint-down(lg)
+				width: 100px
+				height: 80px
+				&:not(:last-child)
+					margin-right: 15px
+			+media-breakpoint-down(sm)
+				width: 80px
+				height: 60px
+			&:hover
+				opacity: 0.5
+			> img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	&-text
+		position: relative
+	&-backdrop
+		background: $darken
+		&.show
+			opacity: 0.9
+
+
+/* ==========================================================================
+   Quick buttons
+   ========================================================================== */
+.q-buttons
+	position: fixed
+	right: 20px
+	bottom: 75px
+	z-index: 99
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	padding: 3px 0
+	text-align: right
+	+media-breakpoint-down(xl)
+		right: 12px
+		bottom: 60px
+	+media-breakpoint-down(lg)
+		right: 15px
+		bottom: 30px
+	&-link
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		background: $white
+		+media-breakpoint-down(xl)
+			width: 50px
+			height: 50px
+		+media-breakpoint-down(xs)
+			width: 44px
+			height: 44px
+		&:not(:first-child)
+			margin-top: 20px
+			+media-breakpoint-down(xs)
+				margin-top: 15px
+		&:hover
+			background: $accent
+			> span
+				visibility: visible
+				border-radius: 40px 0 0 40px
+				background: $accent
+				opacity: 1
+				transform: translateX(28px)
+				+media-breakpoint-down(xs)
+					transform: translateX(24px)
+		> span
+			visibility: hidden
+			position: absolute
+			top: 0
+			right: 100%
+			z-index: -1
+			bottom: 0
+			display: block
+			height: 60px
+			padding-left: 26px
+			padding-right: 30px
+			border-radius: 40px
+			background: $white
+			color: $text-dark
+			font-size: 14px
+			font-weight: $font-medium
+			text-transform: uppercase
+			line-height: 60px
+			white-space: nowrap
+			opacity: 0
+			transform: translateX(60px)
+			transform-origin: right
+			transition: .45s ease
+			+media-breakpoint-down(xl)
+				height: 50px
+				line-height: 50px
+			+media-breakpoint-down(xs)
+				height: 44px
+				line-height: 44px
+				transform: translateX(46px)
+		.icon
+			font-size: 20px
+			color: $text-dark

@@ -1,0 +1,137 @@
+// VARIABLES
+$border             : #323232
+$border-accent      : #8e5f1c
+$darken             : #151515
+$dark               : #181818
+$item-bg            : #252525
+$white              : #fff
+$accent             : #ffb228
+$text-main          : #c2c2c2
+$text-dark          : #222
+$black              : #000
+$trsp               : transparent
+$font-light         : 300
+$font-regular       : 400
+$font-medium        : 500
+$font-semibold      : 600
+$font-bold          : 800
+$font-black         : 900
+$system             : -apple-system, BlinkMacSystemFont, Arial, sans-serif
+$font               : 'Fira Sans', sans-serif
+
+// BOOTSTRAP VARIABLES
+$grid-gutter-width     : 20px
+$gutter                : $grid-gutter-width
+$container-max-widths  : (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1540px)
+$grid-breakpoints      : (xss: 0, xs: 375px, sm: 576px, md: 768px, lg: 992px, xl: 1240px, xxl: 1600px)
+
+
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss'
+@import 'node_modules/bootstrap/scss/_transitions.scss'
+@import 'node_modules/bootstrap/scss/_modal.scss'
+@import 'node_modules/bootstrap/scss/_nav.scss'
+// @import 'node_modules/bootstrap/scss/_custom-forms.scss'
+@import 'node_modules/swiper/css/swiper.min'
+@import "../libs/fancybox/dist/jquery.fancybox.min.css"
+
+
+
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Fira Sans', normal, 200, '../fonts/firasans-light-webfont.woff2')
+@include font('Fira Sans', normal, 400, '../fonts/firasans-regular-webfont.woff2')
+@include font('Fira Sans', normal, 500, '../fonts/firasans-medium-webfont.woff2')
+@include font('Fira Sans', normal, 600, '../fonts/firasans-semibold-webfont.woff2')
+@include font('Fira Sans', normal, 700, '../fonts/firasans-bold-webfont.woff2')
+@include font('Fira Sans', normal, 800, '../fonts/firasans-extrabold-webfont.woff2')
+@include font('Fira Sans', normal, 900, '../fonts/firasans-black-webfont.woff2')
+
+
+
+// GENERAL DOCUMENT STYLES
+::placeholder
+	color: #949494
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus
+		outline: none
+		border-color: $accent
+		box-shadow: 0 0 0 4px rgba($accent, 0.075)
+
+button:focus,
+button:active
+	outline: 0
+
+body
+	text-rendering: optimizeSpeed
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	background: #222
+	color: $text-main
+	font-family: $font
+	font-size: 17px
+	font-weight: $font-light
+	line-height: 1.6
+	+media-breakpoint-down(xl)
+		font-size: 16px
+	+media-breakpoint-down(xs)
+		font-size: 15px
+	&.menu-open
+		overflow: hidden
+		padding-right: 17px
+		+media-breakpoint-down(lg)
+			padding-right: 0
+
+a
+	outline: 0
+	color: $white
+	transition: .45s ease
+	&:hover
+		color: $accent
+		text-decoration: none
+
+p
+	margin-bottom: 0
+	&:not(:first-child)
+		margin-top: 15px
+
+ul, ol
+	list-style: none
+	margin: 0
+	padding: 0
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	margin-bottom: 0
+	font-weight: $font-bold
+	line-height: 1.4
+
+hr
+	width: 100%
+	height: 2px
+	margin: 20px 0
+	background: $border
+	border: 0
