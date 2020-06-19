@@ -589,54 +589,94 @@
 	&-tooltip
 		pointer-events: none
 		visibility: hidden
+		opacity: 0
 		position: absolute
 		top: 0
 		left: 0
 		z-index: 5
-		width: 230px
+		width: 300px
 		margin-left: -150px
-		padding-top: 25px
 		background: $item-bg
 		font-size: 18px
 		text-align: center
 		line-height: 30px
-		opacity: 0
 		transition: visibility .35s ease, opacity .35s ease
 		&.active
 			visibility: visible
 			opacity: 1
 		+media-breakpoint-down(lg)
 			margin-left: 0
-		> .title
-			text-transform: uppercase
-		> .number
-			display: inline-block
-			margin-top: 6px
+		.head
+			position: relative
 			margin-bottom: 20px
-			padding: 6px 8px
-			border-radius: 2px
-			border: 1px solid $border-accent
-			background: $accent
-			color: $darken
-			font-size: 14px
-			font-weight: $font-medium
-			line-height: 1
-			> em
-				font-style: normal
-		> .square
-			margin-top: 5px
-			color: $text-main
-			font-size: 14px
-			font-weight: $font-light
-			line-height: 1.5
-			> span
-				display: block
-				color: $white
-				font-size: 16px
-				font-weight: $font-regular
-				> em
-					font-style: normal
-		> .status
+			.photo
+				position: relative
+				width: 100%
+				height: 250px
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					z-index: 1
+					display: block
+					width: 100%
+					height: 50%
+					background: linear-gradient(to top, #222 0%, rgba(#222, 0) 100%)
+				&-item
+					display: none
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-size: cover
+					background-repeat: no-repeat
+					&.active
+						display: block
+			.meta
+				position: absolute
+				z-index: 2
+				left: 0
+				right: 0
+				bottom: 0
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin: 0 auto
+				padding: 0 30px
+				.title
+					text-transform: uppercase
+				.number
+					display: inline-block
+					padding: 6px 8px
+					border-radius: 2px
+					border: 1px solid $border-accent
+					background: $accent
+					color: $darken
+					font-size: 14px
+					font-weight: $font-medium
+					line-height: 1
+					> em
+						font-style: normal
+		.square
+			display: flex
+			justify-content: center
+			&-item
+				margin: 0 10px
+				color: $text-main
+				font-size: 14px
+				font-weight: $font-light
+				line-height: 1.5
+				> span
+					display: block
+					color: $white
+					font-size: 16px
+					font-weight: $font-regular
+					> em
+						font-style: normal
+		.status
 			margin-top: 25px
 			padding: 15px
 			font-size: 13px

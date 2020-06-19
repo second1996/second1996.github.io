@@ -16,6 +16,9 @@ $(document).ready(function(){
   $gpWrap = $('.h-genplan-wrap')
   $gpHouse = $('.h-genplan-map .house')
   $gpTooltip = $('.h-genplan-tooltip')
+  $gpTooltipPhotoRiver = $('#gp-tooltip-photo-1')
+  $gpTooltipPhotoSun = $('#gp-tooltip-photo-2')
+  $gpTooltipPhotoForest = $('#gp-tooltip-photo-3')
   $gpTooltipTitle = $('#gp-tooltip-title')
   $gpTooltipNumber = $('#gp-tooltip-number')
   $gpTooltipSquare = $('#gp-tooltip-square')
@@ -23,6 +26,7 @@ $(document).ready(function(){
   $gpTooltipStatus = $('#gp-tooltip-status')
 
   $gpHouse.hover(function() {
+    let houseType = $(this).data('house-name')
     let houseStatus = $(this).data('house-status')
 
     $gpTooltip.addClass('active');
@@ -30,7 +34,15 @@ $(document).ready(function(){
     $gpTooltipNumber.text($(this).data('house-number'))
     $gpTooltipSquare.text($(this).data('house-square'))
     $gpTooltipArea.text($(this).data('house-area'))
-    
+
+    if ( houseType === 'Villa «River»' ) {
+      $gpTooltipPhotoRiver.addClass('active')
+    } else if ( houseType === 'Villa «Sun»' ) {
+      $gpTooltipPhotoSun.addClass('active')
+    } else if ( houseType === 'Villa «Forest»' ) {
+      $gpTooltipPhotoForest.addClass('active')
+    }
+
     if ( houseStatus === 'reserved' ) {
       $gpTooltipStatus.attr('class', 'status status--reserved')
       $gpTooltipStatus.text('Заброньовано')
@@ -43,6 +55,9 @@ $(document).ready(function(){
     }
   }, function() {
     $gpTooltip.removeClass('active')
+    $gpTooltipPhotoRiver.removeClass('active')
+    $gpTooltipPhotoSun.removeClass('active')
+    $gpTooltipPhotoForest.removeClass('active')
   })
 
   $gpWrap.on('mousemove', function(e){
