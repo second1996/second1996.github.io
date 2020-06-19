@@ -121,6 +121,7 @@ function calcFirstpay(price = houseCost, persent = firstpaySliderValue) {
   let fpFormat = fpVal.toLocaleString('uk-UA')
   // Записуємо значення в блок "Загальні обрахунки"
   $('#c-first-pay-val').text(fpFormat)
+  $('#c-descr-firstpay').text(fpFormat)
   // Записуємо значення в модальне вікно "Залишити заявку"
   $("#cModal-firstpay").val(fpFormat)
   $("#cModalLabel-firstpay").text(fpFormat)
@@ -139,6 +140,8 @@ function calcTermpay(price = houseCost, term = termSliderValue) {
   // Записуємо значення в блок "Загальні обрахунки"
   $('#c-term-val').text(termSlider.val())
   $('#c-term-pay-val').text(termFormat)
+  $('#c-descr-term').text(termSlider.val())
+  $('#c-descr-termpay').text(termFormat)
   // Записуємо значення в модальне вікно "Залишити заявку"
   $("#cModal-term").val(termFormat)
   $("#cModalLabel-term").text(termSlider.val())

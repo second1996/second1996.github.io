@@ -146,29 +146,37 @@
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Вартість будинку, $</div>
 							<div class="value title-md text-accent w-medium"><em id="c-total-cost-val">0</em></div>
+							<div class="descr text-xss">Вартість площі будинку</div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Завдаток, $</div>
 							<div class="value title-md text-accent w-medium">10 000</div>
+							<div class="descr text-xss">При бронюванні будинку</div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Перший внесок, $</div>
 							<div class="value title-md text-accent w-medium"><em id="c-first-pay-val">0</em></div>
+							<div class="descr text-xss">Перша сума, яка вкладається</div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Термін, <span class="text-white" id="c-term-type">міс.</span></div>
 							<div class="value title-md text-accent w-medium"><em id="c-term-val">0</em></div>
+							<div class="descr text-xss">Термін розтермінування</div>
 						</div>
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Платіж на період розтермінування, $</div>
 							<div class="value title-md text-accent w-medium"><em id="c-term-pay-val">0</em></div>
-							<div class="calculator-total-form fade" id="c-modal-link"><a href="#" class="link text-xss text-uppercase w-regular" data-toggle="modal" data-target="#calcHouseModal" role="button">Залишити заявку?</a></div>
+							<div class="descr text-xss">Фіксований платіж розтермінування</div>
 						</div>
 					</div><!-- /.calculator-total -->
+					<div class="calculator-descr">
+						<p class="mb-30 text-md text-white">При першому внеску в розмірі $<span id="c-descr-firstpay">0</span> та завдатком $10 000, сума розтермінування на <span id="c-descr-term">0</span> міс. складатиме $<span id="c-descr-termpay">0</span></p>
+						<a href="#" class="btn btn-primary" id="c-modal-link" data-toggle="modal" data-target="#calcHouseModal" role="button">Залишити заявку</a>
+					</div>
 				</div><!-- /.calculator -->
 			</div><!-- /.container-fluid -->
 		</div><!-- /.page-content -->
@@ -403,7 +411,7 @@
 		<div class="modal-dialog modal-dialog-centered modal-xls" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title title title-md w-medium text-uppercase" id="calcHouseModalLabel">Розтермінування <span>Villa «RIVER»</span></h5>
+					<h5 class="modal-title title title-md w-medium text-uppercase" id="calcHouseModalLabel">Розтермінування</h5>
 					<button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
