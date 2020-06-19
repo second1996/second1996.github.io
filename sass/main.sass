@@ -589,7 +589,6 @@
 	&-tooltip
 		pointer-events: none
 		visibility: hidden
-		opacity: 0
 		position: absolute
 		top: 0
 		left: 0
@@ -600,6 +599,7 @@
 		font-size: 18px
 		text-align: center
 		line-height: 30px
+		opacity: 0
 		transition: visibility .35s ease, opacity .35s ease
 		&.active
 			visibility: visible
@@ -625,7 +625,7 @@
 					height: 50%
 					background: linear-gradient(to top, #222 0%, rgba(#222, 0) 100%)
 				&-item
-					display: none
+					visibility: hidden
 					position: absolute
 					top: 0
 					left: 0
@@ -634,7 +634,7 @@
 					background-size: cover
 					background-repeat: no-repeat
 					&.active
-						display: block
+						visibility: visible
 			.meta
 				position: absolute
 				z-index: 2
