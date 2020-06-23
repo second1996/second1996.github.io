@@ -7,7 +7,7 @@ const reqPay = 10000
 const firstpaySlider = $('#c-first-pay')
 const termSlider = $('#c-term-pay')
 const termTab = $('.form-range-tabs > .tab-item')
-const houseTab = $(".calculator-houses > .house")
+const houseTab = $(".calculator-houses .house")
 let houseCost = parseInt($(".house--selected").data('house-price'))
 let firstpaySliderValue = parseInt(firstpaySlider.val())
 let termSliderValue = parseInt(termSlider.val())
@@ -75,6 +75,7 @@ termSlider.ionRangeSlider({
 termTab.on('click', function() {
   const termType = $(this).data('term-type')
   const termTypeLabel = $("#c-term-type")
+  const termTypeDescrLabel = $("#c-descr-term-label")
   const termTypeModalLabel = $("#cModalLabel-term-label")
   const termRS = termSlider.data('ionRangeSlider')
 
@@ -85,12 +86,14 @@ termTab.on('click', function() {
       values: monthsArr,
     })
     termTypeLabel.text('міс.')
+    termTypeDescrLabel.text('міс.')
     termTypeModalLabel.text('міс.')
   } else {
     termRS.update({
       values: quartersArr,
     })
     termTypeLabel.text('квр.')
+    termTypeDescrLabel.text('квр.')
     termTypeModalLabel.text('квр.')
   }
 })
@@ -163,6 +166,6 @@ firstpaySlider.on("input change", function() {
 termSlider.on("input change", function() {
   calcTermpay(houseCost, $(this).val())
 })
-calcForm.one('input change', function() {
-  cModalLink.addClass('show')
+calcForm.on('input change', function() {
+  cModalLink.addClass('shown')
 })

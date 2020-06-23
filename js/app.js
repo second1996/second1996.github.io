@@ -15,7 +15,9 @@ $(document).ready(function(){
    */
   $gpWrap = $('.h-genplan-wrap')
   $gpHouse = $('.h-genplan-map .house')
+  $gpStage = $('.h-genplan-map .second-stage')
   $gpTooltip = $('.h-genplan-tooltip')
+  $gpStageTooltip = $('.h-genplan-stage-tooltip')
   $gpTooltipPhotoRiver = $('#gp-tooltip-photo-1')
   $gpTooltipPhotoSun = $('#gp-tooltip-photo-2')
   $gpTooltipPhotoForest = $('#gp-tooltip-photo-3')
@@ -60,8 +62,20 @@ $(document).ready(function(){
     $gpTooltipPhotoForest.removeClass('active')
   })
 
+  $gpStage.hover(function(e) {
+    $gpStageTooltip.addClass('active');
+  } , function() {
+    $gpStageTooltip.removeClass('active')
+  })
+
+  $('#second-stage').on('mousemove', function(e){
+    $gpStageTooltip.css({
+      top: e.pageY + 30,
+      left: e.pageX,
+    })
+  })
+
   $gpWrap.on('mousemove', function(e){
-    // console.log($gpTooltip.position());
     $gpTooltip.css({
       top: e.pageY + 30,
       left: e.pageX - 10,

@@ -307,6 +307,9 @@
 		.irs-grid-text
 			color: darken($text-main, 25%)
 			line-height: 0
+			+media-breakpoint-down(sm)
+				font-size: 10px
+				line-height: 9px
 		&.irs-with-grid
 			height: 51px
 
@@ -329,12 +332,12 @@
 				margin-right: 20px
 			.name
 				display: inline-block
+				margin: 5px 6px 5px 0
 				color: $white
 				font-size: 14px
 				font-weight: $font-regular
 			.value
 				display: inline-block
-				margin-left: 6px
 				padding: 6px
 				border-radius: 2px
 				background: $accent
@@ -407,6 +410,10 @@
 			background-color: $item-bg
 			line-height: 34px
 			transition: .35s ease
+			+media-breakpoint-down(xss)
+				padding: 0 14px
+				font-size: 12px
+				line-height: 32px
 			&:not(.tab-item--selected)
 				opacity: 0.5
 				&:hover
