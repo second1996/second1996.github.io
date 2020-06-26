@@ -18,14 +18,20 @@ $(document).ready(function(){
   $gpStage = $('.h-genplan-map .second-stage')
   $gpTooltip = $('.h-genplan-tooltip')
   $gpStageTooltip = $('.h-genplan-stage-tooltip')
-  $gpTooltipPhotoRiver = $('#gp-tooltip-photo-1')
-  $gpTooltipPhotoSun = $('#gp-tooltip-photo-2')
-  $gpTooltipPhotoForest = $('#gp-tooltip-photo-3')
   $gpTooltipTitle = $('#gp-tooltip-title')
   $gpTooltipNumber = $('#gp-tooltip-number')
   $gpTooltipSquare = $('#gp-tooltip-square')
   $gpTooltipArea = $('#gp-tooltip-area')
   $gpTooltipStatus = $('#gp-tooltip-status')
+  $gpTooltipPhoto = $('#gp-tooltip-photo')
+  $gpHousePhotos = {
+    'Nebokray': '/images/dest/home-heroes-photo-05.jpg',
+    'Svitanok': '/images/dest/home-heroes-photo-06.jpg',
+    'Zatyshok': '/images/dest/home-heroes-photo-07.jpg'
+    // 'Nebokray': '/wp-content/themes/ozon/assets/images/dest/home-heroes-photo-05.jpg',
+    // 'Svitanok': '/wp-content/themes/ozon/assets/images/dest/home-heroes-photo-06.jpg',
+    // 'Zatyshok': '/wp-content/themes/ozon/assets/images/dest/home-heroes-photo-07.jpg'
+  }
 
   $gpHouse.hover(function() {
     let houseType = $(this).data('house-name')
@@ -37,12 +43,12 @@ $(document).ready(function(){
     $gpTooltipSquare.text($(this).data('house-square'))
     $gpTooltipArea.text($(this).data('house-area'))
 
-    if ( houseType === 'Villa «River»' ) {
-      $gpTooltipPhotoRiver.addClass('active')
-    } else if ( houseType === 'Villa «Sun»' ) {
-      $gpTooltipPhotoSun.addClass('active')
-    } else if ( houseType === 'Villa «Forest»' ) {
-      $gpTooltipPhotoForest.addClass('active')
+    if ( houseType === 'VILLA «NEBOKRAY»' ) {
+      $gpTooltipPhoto.attr('style', 'background-image: url("' + $gpHousePhotos.Nebokray + '")')
+    } else if ( houseType === 'VILLA «SVITANOK»' ) {
+      $gpTooltipPhoto.attr('style', 'background-image: url("' + $gpHousePhotos.Svitanok + '")')
+    } else if ( houseType === 'VILLA «ZATYSHOK»' ) {
+      $gpTooltipPhoto.attr('style', 'background-image: url("' + $gpHousePhotos.Zatyshok + '")')
     }
 
     if ( houseStatus === 'reserved' ) {
@@ -57,14 +63,11 @@ $(document).ready(function(){
     }
   }, function() {
     $gpTooltip.removeClass('active')
-    $gpTooltipPhotoRiver.removeClass('active')
-    $gpTooltipPhotoSun.removeClass('active')
-    $gpTooltipPhotoForest.removeClass('active')
   })
 
   $gpStage.hover(function(e) {
     $gpStageTooltip.addClass('active');
-  } , function() {
+  }, function() {
     $gpStageTooltip.removeClass('active')
   })
 

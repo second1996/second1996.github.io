@@ -103,13 +103,13 @@ termTab.on('click', function() {
  * Обраховуэмо вартість за будинок на основні вибраного типу будинку.
  */
 function calcHouseCost() {
-  const houseType = $(".house--selected > .house-meta > .title").text();
+  const houseName = $(".house--selected > .house-meta > .title").text();
   const houseCostFormat = houseCost.toLocaleString('uk-UA')
   // Записуємо значення в блок "Загальні обрахунки"
   $("#c-total-cost-val").text(houseCostFormat)
   // Записуємо значення в модальне вікно "Залишити заявку"
-  $("#cModal-house").val(houseType)
-  $("#cModalLabel-house").text(houseType)
+  $("#cModal-house").val(houseName)
+  $("#cModalLabel-house").text(houseName)
   $("#cModal-price").val(houseCostFormat)
   $("#cModalLabel-price").text(houseCostFormat)
 };
