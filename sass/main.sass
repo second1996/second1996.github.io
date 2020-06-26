@@ -1241,11 +1241,14 @@
 			.point
 				position: absolute
 				max-width: 300px
+				+media-breakpoint-down(xl)
+					margin-left: -36px
 				+media-breakpoint-down(md)
 					position: static
 					flex-basis: 50%
 					max-width: 50%
 					margin-top: 20px
+					margin-left: 0
 					padding: 0 10px
 					+media-breakpoint-down(xs)
 						flex-basis: 100%
@@ -1279,7 +1282,7 @@
 					border-radius: 5px
 					border: 1px solid rgba($white, 0.05)
 					box-shadow: 0 10px 15px rgba($black, 0.15)
-					background: $item-bg
+					background: rgba($item-bg, 0.975)
 					text-align: center
 					opacity: 0
 					will-change: transform
@@ -1319,18 +1322,31 @@
 					font-size: 14px
 					font-weight: $font-regular
 				&-descr
-					margin-top: 15px
+					margin-top: 10px
 					font-size: 15px
+					> p
+						margin: 0
+					> ul
+						> li
+							position: relative
+							&::before
+								content: ''
+								position: relative
+								top: -3px
+								display: inline-block
+								width: 4px
+								height: 4px
+								margin-right: 6px
+								background: $accent
 		&-photo
 			width: 100%
-			height: 750px
 			border: 1px solid $border
+			background: $item-bg
 			+media-breakpoint-down(md)
 				display: none
 			> img
 				width: 100%
 				height: 100%
-				object-fit: cover
 	// Energy in figures
 	.figures
 		> .row [class*="col"]
