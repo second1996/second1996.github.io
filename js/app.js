@@ -25,12 +25,12 @@ $(document).ready(function(){
   $gpTooltipStatus = $('#gp-tooltip-status')
   $gpTooltipPhoto = $('#gp-tooltip-photo')
   $gpHousePhotos = {
-    'Nebokray': '/images/dest/home-heroes-photo-05.jpg',
-    'Svitanok': '/images/dest/home-heroes-photo-06.jpg',
-    'Zatyshok': '/images/dest/home-heroes-photo-07.jpg'
-    // 'Nebokray': '/wp-content/themes/ozon/assets/images/dest/home-heroes-photo-05.jpg',
-    // 'Svitanok': '/wp-content/themes/ozon/assets/images/dest/home-heroes-photo-06.jpg',
-    // 'Zatyshok': '/wp-content/themes/ozon/assets/images/dest/home-heroes-photo-07.jpg'
+    'Nebokray': '/images/dest/villa-nebokray-main.jpg',
+    'Zatyshok': '/images/dest/villa-zatyshok-main.jpg',
+    'Svitanok': '/images/dest/villa-svitanok-main.jpg'
+    // 'Nebokray': '/wp-content/uploads/2020/05/villa-nebokray-main-1024x579.jpg',
+    // 'Zatyshok': '/wp-content/uploads/2020/05/villa-zatyshok-main-1024x579.jpg',
+    // 'Svitanok': '/wp-content/uploads/2020/05/villa-svitanok-main-1024x579.jpg'
   }
 
   $gpHouse.hover(function() {
