@@ -76,6 +76,7 @@ termTab.on('click', function() {
   const termType = $(this).data('term-type')
   const termTypeLabel = $("#c-term-type")
   const termTypeDescrLabel = $("#c-descr-term-label")
+  const termTypeModalValue = $("#cModal-term-label")
   const termTypeModalLabel = $("#cModalLabel-term-label")
   const termRS = termSlider.data('ionRangeSlider')
 
@@ -88,13 +89,15 @@ termTab.on('click', function() {
     termTypeLabel.text('міс.')
     termTypeDescrLabel.text('міс.')
     termTypeModalLabel.text('міс.')
+    termTypeModalValue.val('помісячно')
   } else {
     termRS.update({
       values: quartersArr,
     })
-    termTypeLabel.text('квр.')
-    termTypeDescrLabel.text('квр.')
-    termTypeModalLabel.text('квр.')
+    termTypeLabel.text('кв.')
+    termTypeDescrLabel.text('кв.')
+    termTypeModalLabel.text('кв.')
+    termTypeModalValue.val('квартально')
   }
 })
 
@@ -146,7 +149,8 @@ function calcTermpay(price = houseCost, term = termSliderValue) {
   $('#c-descr-term').text(termSlider.val())
   $('#c-descr-termpay').text(termFormat)
   // Записуємо значення в модальне вікно "Залишити заявку"
-  $("#cModal-term").val(termFormat)
+  $("#cModal-term").val(termSlider.val())
+  $("#cModal-termpay").val(termFormat)
   $("#cModalLabel-term").text(termSlider.val())
   $("#cModalLabel-termpay").text(termFormat)
   // Записуємо повернене значення в змінну
