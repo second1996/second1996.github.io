@@ -295,7 +295,7 @@ button-transparent {
 .btn-icon-arrow,
 button-icon-arrow {
   padding-right: 42px;
-  background-image: url(../images/dest/icons/arrow.svg);
+  background-image: url(../../images/dest/icons/arrow.svg);
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 16px
@@ -498,10 +498,10 @@ button-more:hover > span {
   background-size: 100%
 }
 .dots--orange {
-  background-image: url(../images/dest/icons/dots-orange.svg)
+  background-image: url(../../images/dest/icons/dots-orange.svg)
 }
 .dots--gray {
-  background-image: url(../images/dest/icons/dots-gray.svg)
+  background-image: url(../../images/dest/icons/dots-gray.svg)
 }
 .dots-top-right {
   top: 0;
@@ -637,7 +637,7 @@ button-more:hover > span {
   vertical-align: middle;
   width: 16px;
   height: 16px;
-  background: url(../images/dest/icons/arrow-dark.svg) no-repeat center/cover;
+  background: url(../../images/dest/icons/arrow-dark.svg) no-repeat center/cover;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg)
@@ -845,7 +845,7 @@ button-more:hover > span {
 .header-middle .phone-link {
   margin-bottom: 6px;
   padding-left: 24px;
-  background-image: url(../images/dest/icons/phone.svg);
+  background-image: url(../../images/dest/icons/phone.svg);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 16px;
@@ -1152,7 +1152,7 @@ button-more:hover > span {
   flex-direction: column;
   margin-bottom: 20px;
   padding-left: 24px;
-  background-image: url(../images/dest/icons/phone.svg);
+  background-image: url(../../images/dest/icons/phone.svg);
   background-repeat: no-repeat;
   background-position: left 4px;
   background-size: 16px;
@@ -1198,7 +1198,7 @@ button-more:hover > span {
   flex-direction: column;
   margin-bottom: 20px;
   padding-left: 24px;
-  background-image: url(../images/dest/icons/mail.svg);
+  background-image: url(../../images/dest/icons/mail.svg);
   background-repeat: no-repeat;
   background-position: left 3px;
   background-size: 16px;
@@ -1243,7 +1243,7 @@ button-more:hover > span {
   .footer-contacts .adress-title {
     padding-top: 24px;
     padding-left: 0;
-    background-image: url(../images/dest/icons/place.svg);
+    background-image: url(../../images/dest/icons/place.svg);
     background-repeat: no-repeat;
     background-position: left 0;
     background-size: 16px
@@ -1253,7 +1253,7 @@ button-more:hover > span {
   padding-left: 24px;
   color: #1e2021;
   font-size: 14px;
-  background-image: url(../images/dest/icons/place.svg);
+  background-image: url(../../images/dest/icons/place.svg);
   background-repeat: no-repeat;
   background-position: left 3px;
   background-size: 16px
@@ -1472,7 +1472,7 @@ button-more:hover > span {
 .m-menu-info .phone-link {
   margin-bottom: 6px;
   padding-left: 24px;
-  background-image: url(../images/dest/icons/phone.svg);
+  background-image: url(../../images/dest/icons/phone.svg);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 16px;
