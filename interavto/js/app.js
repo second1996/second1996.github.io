@@ -89,9 +89,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
+
 // jQuery
 jQuery(document).ready(function($) {
 
+	/**
+	 * Preloader
+	 */
 	var preloader = $('.preloader')
 	preloader
 	.delay(500).queue(function () {
@@ -103,24 +107,38 @@ jQuery(document).ready(function($) {
 		$(this).dequeue()
 	})
 
-	// LazyLoad
+
+	/**
+	 * LazyLoad initialization
+	 */
 	var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy",
-    // callback_loaded: function(element) {
-    //   console.log("👍 LOADED", element);
-    //   $(element).siblings('.lazy-spin').remove();
-    // },
-  })
-	
-	// Home slider
-	$('.heroes-slider').slick({
-		// autoplay: true,
-		// autoplaySpeed: 3000,
-		// infinite: false,
-		dots: true,
+		elements_selector: ".lazy",
+		// callback_loaded: function(element) {
+		//   console.log("👍 LOADED", element);
+		//   $(element).siblings('.lazy-spin').remove();
+		// },
 	})
 
-	// Toggle Search form
+
+	/**
+	 * Home slider
+	 */
+	if( $.fn.slick ) {
+		$('.heroes-slider').slick({
+			// autoplay: true,
+			// autoplaySpeed: 3000,
+			infinite: false,
+			dots: true,
+		})
+	}
+	// $('.heroes-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	// 	lazyLoadInstance.update();
+	// });
+
+
+	/**
+	 * Toggle Search form
+	 */
 	var searchBlock = $('.header-search')
 
 	$('.mobile-action .search-btn').on('click', function() {
@@ -129,24 +147,87 @@ jQuery(document).ready(function($) {
 	$('#header-search-form .search-form-close').on('click', function() {
 		$('#header-search-form').removeClass('is-active')
 		searchBlock.removeClass('is-active')
+		$('.header-search-backdrop').remove()
 	})
-	$('#header-search-form .search-form-input').on('click', function(e) {
+	$('#header-search-form .search-form-input').on('click', function() {
 		searchBlock.addClass('is-active')
-		$('body').append('<div class="header-search-backdrop"></div>')
+		if( !$('.header-search-backdrop').length ) {
+			$('body').append('<div class="header-search-backdrop"></div>')
+		}
 		$('.header-search-backdrop').click(function() {
 			searchBlock.removeClass('is-active')
 			$(this).remove()
 		})
 	})
 
-	// Toggle Mobile menu
+
+	/**
+	 * Toggle Mobile menu
+	 */
 	$('.mobile-action .burger-btn').on('click', function() {
-		$('body').addClass('m-menu--opened')
+		$('body').addClass('disable-scroll')
 		$('.m-menu').addClass('is-active')
 	})
 	$('.m-menu-header .close').on('click', function() {
-		$('body').removeClass('m-menu--opened')
+		$('body').removeClass('disable-scroll')
 		$('.m-menu').removeClass('is-active')
 	})
+
+
+	/**
+	 * Toggle Product filter
+	 */
+	$('#product-filter-open').on('click', function() {
+		$('body').addClass('disable-scroll')
+		$('.filter-wrapper').addClass('is-active')
+		if( !$('.modal-backdrop').length ) {
+			$('body').append('<div class="modal-backdrop fade"></div>')
+			$('.modal-backdrop').delay(20).queue(function () {
+				$(this).addClass('show')
+				$(this).dequeue()
+			})
+			$('.modal-backdrop').click(function() {
+				$(this).remove()
+				$('body').removeClass('disable-scroll')
+				$('.filter-wrapper').removeClass('is-active')
+			})
+		}
+	})
+	$('#product-filter .filter-header .close').on('click', function() {
+		$('body').removeClass('disable-scroll')
+		$('.filter-wrapper').removeClass('is-active')
+		$('.modal-backdrop').remove()
+	})
+	$('#product-filter input[type="checkbox"]').on('click', function() {
+		checkFilters()
+	})
+	// Toggle '.active-filters' & '.filter-trigger--clear' when input checkbox length > 1
+	function checkFilters() {
+		var filterInputs = $('#product-filter input[type="checkbox"]:checked')
+		console.log(filterInputs)
+		if( filterInputs.length > 0 ) {
+			if ( !$('#product-filter-open .active-filters').length ) {
+				$('#product-filter-open').append('<span class="active-filters"></span>')
+			}
+			if ( !$('.filter-trigger--clear').hasClass('is-shown') ) {
+				$('.filter-trigger--clear').addClass('is-shown')
+			}
+		} else {
+			$('#product-filter-open .active-filters').remove()
+			$('.filter-trigger--clear').removeClass('is-shown')
+		}
+	}
+	// Clear filter input checkboxs
+	$('#product-filter-clear').on('click', function() {
+		$('.filter-trigger--clear').removeClass('is-shown')
+		clearFilters()
+	})
+	function clearFilters() {
+		var filterInputs = $('#product-filter input[type="checkbox"]:checked')
+		$('#product-filter-open .active-filters').remove()
+		$.each(filterInputs, function(index, element) {
+			$(element).prop('checked', false)
+		})
+	}
 
 })

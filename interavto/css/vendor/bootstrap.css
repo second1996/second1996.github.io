@@ -5254,3 +5254,19 @@ html {
     transition: none
   }
 }
+.row-items > [class*=col] {
+  margin-bottom: 40px
+}
+@media (max-width:575.98px) {
+  .no-xs-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 40px
+  }
+  .no-xs-gutters > .col,
+  .no-xs-gutters > [class*=col-] {
+    margin: -1px 0 0 -1px;
+    padding-right: 0;
+    padding-left: 0
+  }
+}
