@@ -217,12 +217,12 @@
     transition: .3s ease
   }
 }
-@media (max-width:991.98px) and (max-width:575.98px) {
+@media (max-width:575.98px) {
   .sidebar .filter-wrapper {
     max-width: 320px
   }
 }
-@media (max-width:991.98px) and (max-width:374.98px) {
+@media (max-width:374.98px) {
   .sidebar .filter-wrapper {
     max-width: 100%
   }
