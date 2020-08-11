@@ -204,7 +204,7 @@ jQuery(document).ready(function($) {
 	// Toggle '.active-filters' & '.filter-trigger--clear' when input checkbox length > 1
 	function checkFilters() {
 		var filterInputs = $('#product-filter input[type="checkbox"]:checked')
-		console.log(filterInputs)
+		// console.log(filterInputs)
 		if( filterInputs.length > 0 ) {
 			if ( !$('#product-filter-open .active-filters').length ) {
 				$('#product-filter-open').append('<span class="active-filters"></span>')
