@@ -9,12 +9,16 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dest/preview.jpg">
-	<link rel="stylesheet" href="css/app.min.css">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+	<style>.preloader{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;background-color: #fff;-webkit-transition: opacity .3s ease;-o-transition: opacity .3s ease;transition: opacity .3s ease;}</style>
 
 </head>
 
 <body>
+
+	<div class="preloader">
+		<img src="images/dest/logotype.svg" alt="Смазочная компания Интеравто">
+	</div>
 
 	<!-- Site Header -->
 	<header class="header">
@@ -85,15 +89,15 @@
 		<div class="header-bottom d-none d-md-block">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="header-bottom-catalog col-auto">
-						<a href="page-catalog.html" class="btn btn-primary btn-catalog">
-							<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
-							<span>Каталог</span>
-						</a>
-					</div>
 					<div class="header-bottom-nav col">
 						<div class="header-menu">
 							<ul class="header-menu-primary" role="navigation">
+								<li class="cc_cursor">
+									<a href="page-catalog.html" class="btn btn-primary btn-catalog">
+										<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+										<span>Каталог</span>
+									</a>
+								</li>
 								<li><a href="#">О компании</a></li>
 								<li><a href="#">Отраслевые решения</a></li>
 								<li><a href="#">Техническая информация</a></li>
@@ -182,36 +186,36 @@
 				<div class="heroes-slide">
 					<div class="heroes-slide-inner">
 						<div class="content order-1 order-md-0">
-							<h2 class="title">Термостойкие и графитовые смазки в ассортименте</h2>
+							<div class="title">Термостойкие и графитовые смазки в ассортименте</div>
 							<a href="#" class="btn btn-dark btn-icon-arrow">Подробнее</a>
 						</div>
 						<div class="image order-0 order-md-1">
 							<img src="images/dest/slide-photo-01.png" alt="Термостойкие и графитовые смазки в ассортименте">
 						</div>
 					</div>
-				</div><!-- /.heroes-slide -->
+				</div>
 				<div class="heroes-slide">
 					<div class="heroes-slide-inner">
 						<div class="content order-1 order-md-0">
-							<h2 class="title">Красная пластичная смазка ROXOL LK-222</h2>
+							<div class="title">Красная пластичная смазка ROXOL LK-222</div>
 							<a href="#" class="btn btn-dark btn-icon-arrow">Подробнее</a>
 						</div>
 						<div class="image order-0 order-md-1">
-							<img src="https://farbex.ua/wp-content/uploads/2019/12/structure.png" alt="Синяя пластичная смазка ROXOL LK-222">
+							<img src="images/dest/slide-photo-02.png" alt="Синяя пластичная смазка ROXOL LK-222">
 						</div>
 					</div>
-				</div><!-- /.heroes-slide -->
+				</div>
 				<div class="heroes-slide">
 					<div class="heroes-slide-inner">
 						<div class="content order-1 order-md-0">
-							<h2 class="title">Структурная латексная краска Farbex</h2>
+							<div class="title">Структурная латексная краска Farbex</div>
 							<a href="#" class="btn btn-dark btn-icon-arrow">Подробнее</a>
 						</div>
 						<div class="image order-0 order-md-1">
-							<img src="https://farbex.ua/wp-content/uploads/2019/12/structure.png" alt="ROXOL LIX EP">
+							<img src="images/dest/slide-photo-02.png" alt="ROXOL LIX EP">
 						</div>
 					</div>
-				</div><!-- /.heroes-slide -->
+				</div>
 			</div>
 		</div>
 	</section>
@@ -690,7 +694,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="s-about-header">
-						<h2 class="section-title">Компания «РОКС» — российские смазочные материалы от производителя</h2>
+						<h2 class="section-title">Компания «РОКС» — российские смазочные материалы от производителя</h2>
 						<div class="section-descr">
 							<p>Смазка узлов и механизмов эксплуатируемого оборудования является наиболее важной и ответственной операцией при его обслуживании. От грамотного выбора материала, его качества и своевременного нанесения напрямую зависит срок эксплуатации техники.</p>
 						</div>
@@ -955,8 +959,18 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/vendor/slick-carousel.css">
+	<link rel="stylesheet" href="css/pages/home.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Load JS -->
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/lazyload.min.js"></script>
+	<script src="js/vendor/slick.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
 
 </body>
 </html>

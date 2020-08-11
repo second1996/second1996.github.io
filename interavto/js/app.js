@@ -1,3 +1,4 @@
+// JavaScript
 document.addEventListener("DOMContentLoaded", function() {
 	// Adaptive menu
 	const container = document.querySelector('.header-menu')
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// insert "more" button and duplicate the list
 	primary.insertAdjacentHTML('beforeend', `
 		<li class="more">
-			<button class="btn btn-transparent" aria-haspopup="true" aria-expanded="false">
+			<button class="btn btn-more" aria-haspopup="true" aria-expanded="false">
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M2 2H14V4H2V2Z" />
 					<path d="M2 7H14V9H2V7Z" />
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			container.classList.remove('--show-secondary')
 			moreBtn.setAttribute('aria-expanded', false)
 		}
-		else {  
+		else {
 			secondaryItems.forEach((item, i) => {
 				if(!hiddenItems.includes(i)) {
 					item.classList.add('--hidden')
@@ -67,11 +68,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-	doAdapt() // adapt immediately on load
+	// doAdapt() // adapt immediately on load
+	setTimeout(() => {
+		doAdapt()
+	}, 500)
 	window.addEventListener('resize', doAdapt) // adapt on window resize
 
 	// hide Secondary on the outside click
-
 	document.addEventListener('click', (e) => {
 		let el = e.target
 		while(el) {
@@ -84,10 +87,21 @@ document.addEventListener("DOMContentLoaded", function() {
 		moreBtn.setAttribute('aria-expanded', false)
 	})
 
-});
+})
 
-
+// jQuery
 jQuery(document).ready(function($) {
+
+	var preloader = $('.preloader')
+	preloader
+	.delay(500).queue(function () {
+		$(this).css({opacity: '0'})
+		$(this).dequeue()
+	})
+	.delay(250).queue(function () {
+		$(this).remove()
+		$(this).dequeue()
+	})
 
 	// LazyLoad
 	var lazyLoadInstance = new LazyLoad({
@@ -96,7 +110,7 @@ jQuery(document).ready(function($) {
     //   console.log("👍 LOADED", element);
     //   $(element).siblings('.lazy-spin').remove();
     // },
-  });
+  })
 	
 	// Home slider
 	$('.heroes-slider').slick({
@@ -135,4 +149,4 @@ jQuery(document).ready(function($) {
 		$('.m-menu').removeClass('is-active')
 	})
 
-});
+})
