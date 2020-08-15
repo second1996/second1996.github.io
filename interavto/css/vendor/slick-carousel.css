@@ -83,3 +83,61 @@
 .slick-arrow.slick-hidden {
   display: none
 }
+.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border: 1px solid #eff3f6;
+  background: #fff url(../../images/dest/icons/arrow-dark.svg) no-repeat center/16px;
+  font-size: 0
+}
+.slick-arrow:hover {
+  opacity: .75
+}
+.slick-arrow.slick-disabled {
+  cursor: default;
+  opacity: .15
+}
+.slick-arrow.slick-prev {
+  left: 0
+}
+.slick-arrow.slick-next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.slick-dots {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  bottom: 32px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+.slick-dots > li {
+  margin: 0 8px
+}
+.slick-dots > li.slick-active > button {
+  -webkit-box-shadow: 0 0 0 3px #becfd7;
+  box-shadow: 0 0 0 3px #becfd7
+}
+.slick-dots > li > button {
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  background-color: #becfd7;
+  font-size: 0
+}
+.slick-slide {
+  outline: 0;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0)
+}

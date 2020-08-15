@@ -109,6 +109,14 @@ jQuery(document).ready(function($) {
 
 
 	/**
+	 * Toggle User Profile Modal
+	 */
+	$(document).on('hidden.bs.modal', '.modal', function () {
+		$('.modal:visible').length && $(document.body).addClass('modal-open')
+	})
+
+
+	/**
 	 * LazyLoad initialization
 	 */
 	var lazyLoadInstance = new LazyLoad({
@@ -131,6 +139,17 @@ jQuery(document).ready(function($) {
 			dots: true,
 		})
 	}
+	/**
+	 * Product slider
+	 */
+	if( $.fn.slick ) {
+		$('.product-slider').slick({
+			// autoplay: true,
+			// autoplaySpeed: 3000,
+			infinite: false,
+			dots: true,
+		})
+	}
 	// $('.heroes-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 	// 	lazyLoadInstance.update();
 	// });
@@ -141,20 +160,20 @@ jQuery(document).ready(function($) {
 	 */
 	var searchBlock = $('.header-search')
 
-	$('.mobile-action .search-btn').on('click', function() {
+	$('.mobile-action .search-btn').on('click', function () {
 		$('#header-search-form').addClass('is-active')
 	})
-	$('#header-search-form .search-form-close').on('click', function() {
+	$('#header-search-form .search-form-close').on('click', function () {
 		$('#header-search-form').removeClass('is-active')
 		searchBlock.removeClass('is-active')
 		$('.header-search-backdrop').remove()
 	})
-	$('#header-search-form .search-form-input').on('click', function() {
+	$('#header-search-form .search-form-input').on('click', function () {
 		searchBlock.addClass('is-active')
 		if( !$('.header-search-backdrop').length ) {
 			$('body').append('<div class="header-search-backdrop"></div>')
 		}
-		$('.header-search-backdrop').click(function() {
+		$('.header-search-backdrop').click(function () {
 			searchBlock.removeClass('is-active')
 			$(this).remove()
 		})
@@ -164,11 +183,11 @@ jQuery(document).ready(function($) {
 	/**
 	 * Toggle Mobile menu
 	 */
-	$('.mobile-action .burger-btn').on('click', function() {
+	$('.mobile-action .burger-btn').on('click', function () {
 		$('body').addClass('disable-scroll')
 		$('.m-menu').addClass('is-active')
 	})
-	$('.m-menu-header .close').on('click', function() {
+	$('.m-menu-header .close').on('click', function () {
 		$('body').removeClass('disable-scroll')
 		$('.m-menu').removeClass('is-active')
 	})
@@ -177,28 +196,28 @@ jQuery(document).ready(function($) {
 	/**
 	 * Toggle Product filter
 	 */
-	$('#product-filter-open').on('click', function() {
+	$('#product-filter-open').on('click', function () {
 		$('body').addClass('disable-scroll')
 		$('.filter-wrapper').addClass('is-active')
-		if( !$('.modal-backdrop').length ) {
-			$('body').append('<div class="modal-backdrop fade"></div>')
-			$('.modal-backdrop').delay(20).queue(function () {
+		if( !$('.filter-backdrop').length ) {
+			$('body').append('<div class="filter-backdrop fade"></div>')
+			$('.filter-backdrop').delay(20).queue(function () {
 				$(this).addClass('show')
 				$(this).dequeue()
 			})
-			$('.modal-backdrop').click(function() {
+			$('.filter-backdrop').click(function () {
 				$(this).remove()
 				$('body').removeClass('disable-scroll')
 				$('.filter-wrapper').removeClass('is-active')
 			})
 		}
 	})
-	$('#product-filter .filter-header .close').on('click', function() {
+	$('#product-filter .filter-header .close').on('click', function () {
 		$('body').removeClass('disable-scroll')
 		$('.filter-wrapper').removeClass('is-active')
-		$('.modal-backdrop').remove()
+		$('.filter-backdrop').remove()
 	})
-	$('#product-filter input[type="checkbox"]').on('click', function() {
+	$('#product-filter input[type="checkbox"]').on('click', function () {
 		checkFilters()
 	})
 	// Toggle '.active-filters' & '.filter-trigger--clear' when input checkbox length > 1
@@ -218,16 +237,26 @@ jQuery(document).ready(function($) {
 		}
 	}
 	// Clear filter input checkboxs
-	$('#product-filter-clear').on('click', function() {
+	$('#product-filter-clear').on('click', function () {
 		$('.filter-trigger--clear').removeClass('is-shown')
 		clearFilters()
 	})
 	function clearFilters() {
 		var filterInputs = $('#product-filter input[type="checkbox"]:checked')
 		$('#product-filter-open .active-filters').remove()
-		$.each(filterInputs, function(index, element) {
+		$.each(filterInputs, function (index, element) {
 			$(element).prop('checked', false)
 		})
 	}
 
+	$('.profile-orders-table').footable({
+		// "toggleColumn": "last",
+		"breakpoints": {
+			"xxs": 320,
+			"xs": 576,
+			"sm": 768,
+			"md": 992,
+			"lg": 1278
+		}
+	});
 })
