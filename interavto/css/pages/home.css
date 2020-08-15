@@ -449,17 +449,8 @@
   margin-top: -6px
 }
 .s-cta-expert {
-  position: relative
-}
-@media (max-width:1277.98px) {
-  .s-cta-expert {
-    margin-top: 20px
-  }
-}
-@media (max-width:1277.98px) {
-  .s-cta-expert {
-    margin-top: 40px
-  }
+  position: relative;
+  margin-top: 40px
 }
 .s-cta-expert .photo {
   position: absolute;

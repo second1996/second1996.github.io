@@ -1,6 +1,8 @@
 // JavaScript
 document.addEventListener("DOMContentLoaded", function() {
-	// Adaptive menu
+	/**
+	 * Appadtive header menu
+	 */
 	const container = document.querySelector('.header-menu')
 	const primary = container.querySelector('.header-menu-primary')
 	const primaryItems = container.querySelectorAll('.header-menu-primary > li:not(.more)')
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	// doAdapt() // adapt immediately on load
-	setTimeout(() => {
+	setTimeout(function () {
 		doAdapt()
 	}, 500)
 	window.addEventListener('resize', doAdapt) // adapt on window resize
@@ -92,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // jQuery
 jQuery(document).ready(function($) {
-
 	/**
 	 * Preloader
 	 */
@@ -107,7 +108,6 @@ jQuery(document).ready(function($) {
 		$(this).dequeue()
 	})
 
-
 	/**
 	 * Toggle User Profile Modal
 	 */
@@ -115,21 +115,15 @@ jQuery(document).ready(function($) {
 		$('.modal:visible').length && $(document.body).addClass('modal-open')
 	})
 
-
 	/**
 	 * LazyLoad initialization
 	 */
 	var lazyLoadInstance = new LazyLoad({
 		elements_selector: ".lazy",
-		// callback_loaded: function(element) {
-		//   console.log("👍 LOADED", element);
-		//   $(element).siblings('.lazy-spin').remove();
-		// },
 	})
 
-
 	/**
-	 * Home slider
+	 * Slick slider
 	 */
 	if( $.fn.slick ) {
 		$('.heroes-slider').slick({
@@ -138,11 +132,9 @@ jQuery(document).ready(function($) {
 			infinite: false,
 			dots: true,
 		})
-	}
-	/**
-	 * Product slider
-	 */
-	if( $.fn.slick ) {
+		// $('.heroes-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		//	lazyLoadInstance.update();
+		// });
 		$('.product-slider').slick({
 			// autoplay: true,
 			// autoplaySpeed: 3000,
@@ -150,10 +142,6 @@ jQuery(document).ready(function($) {
 			dots: true,
 		})
 	}
-	// $('.heroes-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	// 	lazyLoadInstance.update();
-	// });
-
 
 	/**
 	 * Toggle Search form
@@ -179,7 +167,6 @@ jQuery(document).ready(function($) {
 		})
 	})
 
-
 	/**
 	 * Toggle Mobile menu
 	 */
@@ -192,71 +179,4 @@ jQuery(document).ready(function($) {
 		$('.m-menu').removeClass('is-active')
 	})
 
-
-	/**
-	 * Toggle Product filter
-	 */
-	$('#product-filter-open').on('click', function () {
-		$('body').addClass('disable-scroll')
-		$('.filter-wrapper').addClass('is-active')
-		if( !$('.filter-backdrop').length ) {
-			$('body').append('<div class="filter-backdrop fade"></div>')
-			$('.filter-backdrop').delay(20).queue(function () {
-				$(this).addClass('show')
-				$(this).dequeue()
-			})
-			$('.filter-backdrop').click(function () {
-				$(this).remove()
-				$('body').removeClass('disable-scroll')
-				$('.filter-wrapper').removeClass('is-active')
-			})
-		}
-	})
-	$('#product-filter .filter-header .close').on('click', function () {
-		$('body').removeClass('disable-scroll')
-		$('.filter-wrapper').removeClass('is-active')
-		$('.filter-backdrop').remove()
-	})
-	$('#product-filter input[type="checkbox"]').on('click', function () {
-		checkFilters()
-	})
-	// Toggle '.active-filters' & '.filter-trigger--clear' when input checkbox length > 1
-	function checkFilters() {
-		var filterInputs = $('#product-filter input[type="checkbox"]:checked')
-		// console.log(filterInputs)
-		if( filterInputs.length > 0 ) {
-			if ( !$('#product-filter-open .active-filters').length ) {
-				$('#product-filter-open').append('<span class="active-filters"></span>')
-			}
-			if ( !$('.filter-trigger--clear').hasClass('is-shown') ) {
-				$('.filter-trigger--clear').addClass('is-shown')
-			}
-		} else {
-			$('#product-filter-open .active-filters').remove()
-			$('.filter-trigger--clear').removeClass('is-shown')
-		}
-	}
-	// Clear filter input checkboxs
-	$('#product-filter-clear').on('click', function () {
-		$('.filter-trigger--clear').removeClass('is-shown')
-		clearFilters()
-	})
-	function clearFilters() {
-		var filterInputs = $('#product-filter input[type="checkbox"]:checked')
-		$('#product-filter-open .active-filters').remove()
-		$.each(filterInputs, function (index, element) {
-			$(element).prop('checked', false)
-		})
-	}
-
-	$('.profile-orders-table').footable({
-		// "toggleColumn": "last",
-		"breakpoints": {
-			"xxs": 320,
-			"xs": 576,
-			"sm": 768,
-			"md": 992,
-			"lg": 1278
-		}
-	});
 })
