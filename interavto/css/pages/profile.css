@@ -1,0 +1,175 @@
+.profile .nav-tabs {
+  overflow-x: auto;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 40px
+}
+@media (max-width:767.98px) {
+  .profile .nav-tabs {
+    margin-bottom: 32px
+  }
+}
+.profile .nav-tabs .nav-item {
+  margin: 0
+}
+.profile .nav-tabs .nav-item:not(:last-child) {
+  margin-right: 48px
+}
+@media (max-width:767.98px) {
+  .profile .nav-tabs .nav-item:not(:last-child) {
+    margin-right: 32px
+  }
+}
+.profile-info .discount {
+  margin-bottom: 40px;
+  padding: 16px;
+  background-color: #eff3f6;
+  line-height: 1.4
+}
+@media (max-width:767.98px) {
+  .profile-info .discount {
+    margin-bottom: 28px
+  }
+}
+.profile-info .discount-system-table {
+  max-width: 400px;
+  margin-top: 32px
+}
+@media (max-width:767.98px) {
+  .profile-info .discount-system-table {
+    max-width: 100%
+  }
+}
+.profile-info .discount-system-table td {
+  border-bottom: 1px dashed rgba(37,55,63,.5)
+}
+@media (max-width:767.98px) {
+  .profile-personal {
+    background-color: #eff3f6
+  }
+}
+.profile-personal-wrapper {
+  padding: 32px 24px;
+  background-color: #eff3f6
+}
+@media (max-width:767.98px) {
+  .profile-personal-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent
+  }
+}
+.profile-personal-wrapper .form {
+  max-width: 530px
+}
+@media (max-width:767.98px) {
+  .profile-personal-wrapper .form .form-control {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+}
+.profile-personal-wrapper .form .form-submit {
+  width: 100%;
+  max-width: 312px
+}
+.profile .profile-orders-table {
+  border-spacing: revert;
+  background-color: #eff3f6
+}
+.profile .profile-orders-table td,
+.profile .profile-orders-table th {
+  padding: 15px 0
+}
+.profile .profile-orders-table thead {
+  background-color: #fff
+}
+@media (max-width:767.98px) {
+  .profile .profile-orders-table thead {
+    display: none
+  }
+}
+.profile .profile-orders-table thead th {
+  width: 11.111%
+}
+.profile .profile-orders-table tbody tr {
+  border-top: 16px solid #fff
+}
+@media (max-width:767.98px) {
+  .profile .profile-orders-table tbody tr:first-child {
+    border-top: 0
+  }
+}
+.profile .profile-orders-table tbody tr td {
+  position: relative;
+  border-bottom: 0
+}
+.profile .profile-orders-table tbody tr td:first-child {
+  padding-left: 16px
+}
+@media (max-width:1277.98px) {
+  .profile .profile-orders-table tbody tr td:first-child {
+    padding-left: 42px
+  }
+}
+.profile .profile-orders-table tbody tr td .invoice {
+  display: block;
+  font-weight: 700
+}
+.profile .profile-orders-table tbody tr td .date {
+  display: block;
+  font-weight: 700
+}
+.profile .profile-orders-table tbody tr td .status {
+  display: block
+}
+.profile .profile-orders-table tbody tr td .status--send {
+  color: #35b02a
+}
+.profile .profile-orders-table tbody tr td .status--hold {
+  color: #ca9d22
+}
+.profile .profile-orders-table tbody tr td .status--wrong {
+  color: #b62424
+}
+.profile .profile-orders-table tbody tr td .status--passive {
+  color: #7a7a7a
+}
+.profile .profile-orders-table tbody tr td .document {
+  display: block;
+  line-height: 1.2;
+  margin-top: 4px
+}
+.profile .profile-orders-table tbody tr td .document:not(:last-child) {
+  margin-bottom: 10px
+}
+.profile .profile-orders-table tbody tr td .document > a {
+  text-decoration: underline
+}
+.profile .profile-orders-table .footable-detail-row {
+  border-top: 16px solid #eff3f6
+}
+.profile .profile-orders-table .footable-detail-row td:first-child {
+  padding-left: 16px
+}
+.profile .profile-orders-table .footable-detail-row td:last-child {
+  padding-right: 16px
+}
+.profile .profile-orders-table .footable-details {
+  margin-top: -30px
+}
+.profile .profile-orders-table .footable-details tbody > tr {
+  border-top: 0
+}
+.profile .profile-orders-table .footable-details tbody th {
+  font-size: 14px
+}
+.profile .profile-orders-table .footable-details tbody td,
+.profile .profile-orders-table .footable-details tbody th {
+  padding: 0;
+  padding-bottom: 16px
+}
