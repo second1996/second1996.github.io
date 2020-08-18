@@ -314,7 +314,7 @@ button:hover {
   color: #fff
 }
 .btn-white {
-  border: 1px solid #eff3f6;
+  border: 1px solid #e0e6ec;
   background-color: #fff;
   color: #1e2021
 }
@@ -333,13 +333,6 @@ button:hover {
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 16px
-}
-.btn-outline {
-  border: 1px solid #e0e6ec
-}
-.btn-outline:hover {
-  border-color: #ff6c02;
-  color: #ff6c02
 }
 .btn-catalog,
 .btn-clear,
@@ -493,6 +486,32 @@ button:hover {
 }
 .card--file:hover .card-meta .title {
   color: #ff6c02
+}
+.card--pdf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.card--pdf .card-photo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 120px;
+  height: 160px;
+  margin-bottom: 0;
+  background-color: #becfd7
+}
+@media (max-width:575.98px) {
+  .card--pdf .card-photo {
+    width: 90px;
+    height: 120px
+  }
+}
+.card--pdf .card-meta {
+  margin-left: 16px
+}
+.card--pdf .card-meta .title {
+  margin-bottom: 12px
 }
 .card--industry {
   margin-bottom: 16px;
@@ -676,7 +695,17 @@ button:hover {
 .form-group:not(:first-child) {
   margin-top: 24px
 }
+.form-group-note {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 340px;
+  margin: 16px 0 16px auto;
+  font-size: 12px;
+  line-height: 1.4
+}
 .form-group .form-control,
+.form-group .form-select,
 .form-group .form-textarea {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 70%;
@@ -702,6 +731,33 @@ button:hover {
     padding-bottom: 8px
   }
 }
+.form-group-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.form-group-list:not(:last-child) {
+  margin-bottom: 24px
+}
+.form-group-list > div {
+  margin-top: 0;
+  margin-right: 40px;
+  margin-bottom: 16px
+}
+.form-group-list > div:not(:last-child) {
+  margin-bottom: 16px
+}
+.form-group-list--vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.form-group-list--vertical > div {
+  margin-right: 0
+}
 .form-descr {
   color: #76858c
 }
@@ -717,18 +773,17 @@ button:hover {
 }
 .form-label {
   margin-bottom: 0;
+  line-height: 1.35;
   cursor: pointer
 }
 .form-control,
+.form-select,
 .form-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   display: block;
   width: 100%;
   max-width: 340px;
   margin-bottom: 20px;
-  color: #25373f;
+  color: #1e2021;
   font-family: "Open Sans",sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -736,19 +791,34 @@ button:hover {
   border: 0;
   background-color: #fff;
   background-clip: padding-box;
-  color: #1e2021;
+  outline: 0;
   -webkit-transition: border-color .3s ease-in-out,-webkit-box-shadow .3s ease-in-out;
   transition: border-color .3s ease-in-out,-webkit-box-shadow .3s ease-in-out;
   -o-transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
   transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
   transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out
 }
-.form-control {
+.form-control,
+.form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   height: 40px;
   padding: 0 16px;
   line-height: 40px
 }
+.form-select {
+  padding-left: 16px;
+  background-image: url(../../images/dest/icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right 14px center;
+  cursor: pointer
+}
 .form-textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   resize: none;
   padding: 8px 16px
 }
@@ -792,7 +862,11 @@ button:hover {
   background-image: url(../../images/dest/icons/check.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px
+  background-size: 14px;
+  opacity: 1;
+  -webkit-transition: background-color .25s ease,opacity .25s ease;
+  -o-transition: background-color .25s ease,opacity .25s ease;
+  transition: background-color .25s ease,opacity .25s ease
 }
 .form-checkbox > label {
   position: relative;
@@ -1468,9 +1542,9 @@ table tr > th:not(:last-child) {
     z-index: 10;
     bottom: 20px;
     height: 20px;
-    background: -webkit-gradient(linear,left bottom,left top,from(white),to(rgba(255,255,255,.25)));
-    background: -o-linear-gradient(bottom,#fff 0,rgba(255,255,255,.25) 100%);
-    background: linear-gradient(to top,#fff 0,rgba(255,255,255,.25) 100%)
+    background-image: -webkit-gradient(linear,left bottom,left top,from(white),to(rgba(255,255,255,.25)));
+    background-image: -o-linear-gradient(bottom,#fff 0,rgba(255,255,255,.25) 100%);
+    background-image: linear-gradient(to top,#fff 0,rgba(255,255,255,.25) 100%)
   }
 }
 .header-search.is-active {

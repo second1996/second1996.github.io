@@ -222,7 +222,7 @@
 							<div class="product-order-meta">
 								<h5 class="title text-xxs w-bold text-uppercase">Заказ бесплатного образца</h5>
 								<p class="descr">Бесплатный образец предоставляется только для юридических лиц</p>
-								<a href="#" class="btn btn-white btn-icon-right">
+								<a href="page-application.html" class="btn btn-white btn-icon-right">
 									<span>Получить бесплатный образец</span>
 									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
 								</a>
@@ -765,7 +765,7 @@
 						</div>
 						<div class="form-group">
 							<label for="cta-phone" class="form-label">Телефон</label>
-							<input type="text" id="cta-phone" class="form-control" placeholder="+ 7" required>
+							<input type="text" id="cta-phone" class="form-control" placeholder="+7" data-mask="+7 000 000 00 00" required>
 						</div>
 						<div class="form-group">
 							<label for="cta-organization" class="form-label">Название организации</label>
@@ -831,7 +831,7 @@
 								</div>
 								<div class="form-group">
 									<label for="sign-up-phone" class="form-label">Телефон</label>
-									<input type="text" id="sign-up-phone" class="form-control" required>
+									<input type="text" id="sign-up-phone" class="form-control" data-mask="+7 000 000 00 00" required>
 								</div>
 								<div class="form-group">
 									<label for="sign-up-organization" class="form-label">Организация</label>
@@ -890,6 +890,7 @@
 	<script src="js/vendor/lazyload.min.js"></script>
 	<script src="js/vendor/slick.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/jquery.mask.min.js"></script>
 	<script src="js/app.js"></script>
 
 </body>
