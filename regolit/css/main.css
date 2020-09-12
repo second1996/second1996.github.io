@@ -159,9 +159,11 @@ img.lazy:not([src]) {
   visibility: hidden
 }
 img.lazy:not(.initial) {
-  -webkit-transition: opacity .75s ease .2s;
-  -o-transition: opacity .75s ease .2s;
-  transition: opacity .75s ease .2s
+  -webkit-transition: opacity .75s ease .2s,-webkit-transform .3s ease;
+  transition: opacity .75s ease .2s,-webkit-transform .3s ease;
+  -o-transition: opacity .75s ease .2s,transform .3s ease;
+  transition: opacity .75s ease .2s,transform .3s ease;
+  transition: opacity .75s ease .2s,transform .3s ease,-webkit-transform .3s ease
 }
 img.error,
 img.initial,
