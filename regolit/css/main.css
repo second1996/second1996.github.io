@@ -150,6 +150,24 @@ hr {
   stroke: currentColor;
   fill: currentColor
 }
+img.lazy {
+  position: relative;
+  border: 0;
+  opacity: 0
+}
+img.lazy:not([src]) {
+  visibility: hidden
+}
+img.lazy:not(.initial) {
+  -webkit-transition: opacity .75s ease .2s;
+  -o-transition: opacity .75s ease .2s;
+  transition: opacity .75s ease .2s
+}
+img.error,
+img.initial,
+img.loaded {
+  opacity: 1
+}
 .mt-40 {
   margin-top: 40px
 }

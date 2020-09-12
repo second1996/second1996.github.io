@@ -9,17 +9,18 @@
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dest/preview.jpg">
 
-	<!-- Load CSS -->
-	<link rel="stylesheet" href="css/vendor/bootstrap.css">
-	<link rel="stylesheet" href="css/vendor/slick.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/pages/home.css">
+	<!-- Preloader inline CSS -->
+	<style>.preloader{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;width: 100vw;height: 100vh;background-color: #66a6fe;-webkit-transition: opacity .3s ease;-o-transition: opacity .3s ease;transition: opacity .3s ease}</style>
 
 </head>
 
 <body>
 
-	<header class="header">
+	<div class="preloader">
+	<img src="images/logo.svg" alt="Смазочная компания Интеравто">
+</div>
+
+<header class="header">
 	<div class="header-top">
 		<div class="container">
 			<div class="header-top-inner">
@@ -142,7 +143,14 @@
 		<section class="search-tours section">
 			<div class="container">
 				<!-- КОД виджета -->
-				<img src="images/search-widget.png" alt="">
+				<img class="lazy" data-src="images/search-widget.png" alt="">
+				<!-- <script src="//ui.sletat.ru/module-5.0/app.js" type="text/javascript" charset="utf-8"></script>
+        <br/>
+        <script type="text/javascript">// <![CDATA[
+          sletat.createModule5('Search', {files: ["//ui.sletat.ru/module-5.0/theme/dream_dec2015.min.css"], enabledCurrencies: ["RUB", "EUR", "USD"], useCard: false, country: 150});
+          // ]]&gt;</script>
+        <br/>
+        <span class="sletat-copyright">Идет загрузка модуля <a title="поиск туров" href="http://sletat.ru/" target="_blank">поиска туров</a> …</span> -->
 			</div>
 		</section>
 
@@ -156,7 +164,7 @@
 							<div class="card card-tour">
 								<div class="card-photo">
 									<a href="page-single-tour.html">
-										<img src="images/tours/turcija.jpg" alt="">
+										<img class="lazy" data-src="images/tours/turcija.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -500,9 +508,9 @@
 				<div class="cta-wrapper">
 					<h2 class="cta-title section-title">Туры<br> выходного дня</h2>
 					<form action="" method="POST" class="cta-form form form--light">
-						<input type="text" class="form-control cta-form-date" placeholder="Дата" required>
+						<input type="text" class="form-control cta-form-date" data-mask="00/00/0000" data-mask-placeholder="__/__/____" placeholder="Дата" required>
 						<input type="email" class="form-control cta-form-email" placeholder="Ваш E-mail" required>
-						<button class="cta-form-submit btn btn-large" data-toggle="modal" data-target="#callbackModal">Получить предложения</button>
+						<button type="submit" class="cta-form-submit btn btn-large">Получить предложения</button>
 					</form>
 					<div class="cta-photo">
 						<img src="images/travel-daily.png" alt="">
@@ -952,6 +960,13 @@
 	</div>
 </div>
 
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/vendor/slick.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/pages/home.css">
+
+	<!-- Load JS -->
 	<script src="js/vendors.min.js"></script>
 	<script src="js/app.min.js"></script>
 
