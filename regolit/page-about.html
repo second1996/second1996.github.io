@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<title>Туристическая компания Реголит</title>
+	<meta name="description" content="Туристическая компания Реголит">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="images/favicon.png">
+
+	<!-- Preloader inline CSS -->
+	<style>.preloader{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;width: 100vw;height: 100vh;background-color: #66a6fe;-webkit-transition: opacity .3s ease;-o-transition: opacity .3s ease;transition: opacity .3s ease}</style>
+
+</head>
+
+<body>
+
+	<div class="preloader">
+	<img src="images/logo.svg" alt="Смазочная компания Интеравто">
+</div>
+
+<header class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="header-top-inner">
+				<div class="calculate">
+					<button class="btn btn-icon-left" data-toggle="modal" data-target="#calculateModal">
+						<svg class="icon icon-calculator"><use xlink:href="images/symbol-defs.svg#calculator"></use></svg>
+						<span>Расчет цены тура</span>
+					</button>
+				</div>
+				<div class="callback">
+					<form action="" method="POST" class="callback-form form form--light">
+						<input type="tel" class="form-control" data-mask="+9 (999) 999-99-99" placeholder="+7" required>
+						<button type="submit" class="form-submit btn">Обратный звонок</button>
+					</form>
+					<span class="callback-label label-arrow">Перезвоним<br> через 1 мин</span>
+				</div>
+				<div class="subscribe">
+					<a href="https://instagram.com" class="btn btn-subscribe btn-icon-left" target="_blank" rel="noopener">
+						<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#instagram"></use></svg>
+						<span>Подпишись на нас<br> в инстаграмм</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-middle">
+		<div class="container">
+			<div class="header-middle-inner">
+				<div class="burger">
+					<button class="burger-btn" id="m-menu">
+						<svg class="icon icon-burger"><use xlink:href="images/symbol-defs.svg#burger"></use></svg>
+					</button>
+				</div>
+				<div class="logo">
+					<a href="index.html" rel="home">
+						<img src="images/logo.svg" alt="Туристическая компания Реголит">
+					</a>
+				</div>
+				<div class="contacts">
+					<div class="contacts-item">
+						<div class="picture">
+							<svg class="icon icon-metro icon-metro--blue"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+						</div>
+						<span class="title">Пятницкое шоссе</span>
+						<span class="phone">
+							<a href="tel:84994260482">8 499 426-04-82</a>
+						</span>
+					</div>
+					<div class="contacts-item">
+						<div class="picture">
+							<svg class="icon icon-metro icon-metro--blue"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+						</div>
+						<span class="title">Строгино</span>
+						<span class="phone">
+							<a href="tel:84994260482">8 499 426-04-82</a>
+						</span>
+					</div>
+					<div class="contacts-item">
+						<div class="picture">
+							<svg class="icon icon-metro icon-metro--yellow"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+						</div>
+						<span class="title">Перово</span>
+						<span class="phone">
+							<a href="tel:84994260482">8 499 426-04-82</a>
+						</span>
+					</div>
+					<div class="contacts-item">
+						<div class="picture">
+							<svg class="icon icon-metro icon-metro--gray"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+						</div>
+						<span class="title">Цветной бульвар</span>
+						<span class="phone">
+							<a href="tel:84994260482">8 499 426-04-82</a>
+						</span>
+					</div>
+				</div><!-- /.contacts -->
+				<div class="phone">
+					<button class="phone-btn" data-toggle="modal" data-target="#callbackModal">
+						<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom d-none d-lg-block">
+		<div class="container">
+			<div class="header-bottom-inner">
+				<nav class="navigation">
+					<ul class="navigation-list">
+						<li class="hot"><a href="page-hot-tours.html">Горящие туры</a></li>
+						<li class="daily"><a href="page-daily-tours.html">Предложения дня</a></li>
+						<li class="weekend"><a href="page-weekend-tours.html">Туры выходного дня</a></li>
+						<li>
+							<span>Клиентам</span>
+							<ul>
+								<li><a href="#">Акции и новости</a></li>
+								<li><a href="#">Подарки</a></li>
+								<li><a href="#">Подарочные сертификаты</a></li>
+								<li><a href="#">Бонусные карты</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>О компании</span>
+							<ul>
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<main class="main">
+		
+		<section class="main-header">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li><span>О компании</span></li>
+				</ul>
+				<h1 class="title">О компании</h1>
+			</div>
+		</section>
+
+		<!-- Section: About -->
+		<section class="about">
+			<div class="container">
+				<div class="row row-items">
+					<div class="col-lg-6">
+						<h3 class="about-title"><span>Реголит</span> —<br> официальный представитель<br> CORAL TRAVEL</h3>
+						<p class="about-descr">С 2006 года Компания «Реголит» имеет статус официального партнера ведущего туроператора России – компании CORAL TRAVEL. Бренд CORAL позиционируется на российском рынке как марка надежности и качества, что накладывает особую ответственность на деятельность компании и является стимулом для дальнейшего развития и совершенствования.</p>
+					</div>
+					<div class="col-lg-6">
+						<h3 class="about-title"><span>18 лет</span><br> на рынке<br> туристических услуг</h3>
+						<p class="descr">За годы своей деятельности Компания «Реголит» была награждены дипломами и грамотами ведущих туроператоров России за профессионализм и высокие показатели в работе.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section: Awards -->
+		<section class="awards section">
+			<div class="container">
+				<h3>Наши награды</h3>
+				<div class="row row-items mt-40">
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/1.jpg">
+							<img class="lazy" data-src="images/awards/1.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/2.jpg">
+							<img class="lazy" data-src="images/awards/2.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/3.jpg">
+							<img class="lazy" data-src="images/awards/3.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/4.jpg">
+							<img class="lazy" data-src="images/awards/4.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/3.jpg">
+							<img class="lazy" data-src="images/awards/3.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/1.jpg">
+							<img class="lazy" data-src="images/awards/1.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/4.jpg">
+							<img class="lazy" data-src="images/awards/4.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+					<div class="col-6 col-lg-3">
+						<a class="awards-item" href="images/awards/2.jpg">
+							<img class="lazy" data-src="images/awards/2.jpg" alt="">
+						</a>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div>
+		</section>
+
+		<!-- Section: News -->
+		<section class="news section">
+			<div class="container">
+				<h3>Новости компании</h3>
+				<div class="row row-items mt-40">
+					<div class="col-sm-6 col-xl-3">
+						<div class="card card-news">
+							<div class="card-photo card-photo-animate">
+								<a href="page-single-promo.html">
+									<img class="lazy" data-src="images/hotels/2.jpg" alt="">
+								</a>
+							</div>
+							<div class="card-meta">
+								<span class="title"><a href="page-single-promo.html">Заголовок для новости</a></span>
+								<span class="date">15 января 2021</span>
+							</div>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-xl-3">
+						<div class="card card-news">
+							<div class="card-photo card-photo-animate">
+								<a href="page-single-promo.html">
+									<img class="lazy" data-src="images/hotels/3.jpg" alt="">
+								</a>
+							</div>
+							<div class="card-meta">
+								<span class="title"><a href="page-single-promo.html">Заголовок для новости</a></span>
+								<span class="date">15 января 2021</span>
+							</div>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-xl-3">
+						<div class="card card-news">
+							<div class="card-photo card-photo-animate">
+								<a href="page-single-promo.html">
+									<img class="lazy" data-src="images/hotels/1.jpg" alt="">
+								</a>
+							</div>
+							<div class="card-meta">
+								<span class="title"><a href="page-single-promo.html">Заголовок для новости</a></span>
+								<span class="date">15 января 2021</span>
+							</div>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-xl-3">
+						<div class="card card-news">
+							<div class="card-photo card-photo-animate">
+								<a href="page-single-promo.html">
+									<img class="lazy" data-src="images/hotels/4.jpg" alt="">
+								</a>
+							</div>
+							<div class="card-meta">
+								<span class="title"><a href="page-single-promo.html">Заголовок для новости</a></span>
+								<span class="date">15 января 2021</span>
+							</div>
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div>
+		</section>
+
+		<!-- Section: Payment info -->
+		<section class="payment section">
+			<div class="container">
+				<h3>Реквизиты</h3>
+				<div class="row row-items mt-40">
+					<div class="col-lg-6">
+						<div class="payment-tile">
+							<h5>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «РЕГОЛИТ»</h5>
+							<p>г. Москва, ул. Таллинская, д. 26 этаж 2 пом. X каб. 55/11</p>
+							<p>ИНН — 7701329205</p>
+							<p>ОГРН — 1037701020356</p>
+							<p>КПП — 773401001</p>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-lg-6">
+						<div class="payment-tile">
+							<h5>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «СЕДНА» (пятницкое шоссе)</h5>
+							<p>г. Москва, ул. Таллинская, д. 26 этаж 2 пом. X каб. 55/11</p>
+							<p>ИНН — 7701329205</p>
+							<p>ОГРН — 1037701020356</p>
+							<p>КПП — 773401001</p>
+						</div>
+						<div class="payment-descr">
+							<p>В 2014 году к ООО «Реголит» присоединилось ООО «Седна».<br> Мы стали одной семьей.</p>
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Site Footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer-main">
+			<button class="upward" id="go-up">
+				<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+			</button>
+			<div class="row">
+				<div class="col-lg-2">
+					<a href="index.html" rel="home">
+						<img class="logo" src="images/logo-blue.svg" alt="Реголит">
+					</a>
+				</div><!-- /.col -->
+				<div class="col-lg">
+					<div class="contacts">
+						<div class="contacts-item">
+							<div class="picture">
+								<svg class="icon icon-metro icon-metro--blue"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+							</div>
+							<span class="title">Пятницкое шоссе</span>
+							<span class="phone">
+								<a href="tel:84994260482">8 499 426-04-82</a>
+							</span>
+						</div>
+						<div class="contacts-item">
+							<div class="picture">
+								<svg class="icon icon-metro icon-metro--blue"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+							</div>
+							<span class="title">Строгино</span>
+							<span class="phone">
+								<a href="tel:84994260482">8 499 426-04-82</a>
+							</span>
+						</div>
+						<div class="contacts-item">
+							<div class="picture">
+								<svg class="icon icon-metro icon-metro--yellow"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+							</div>
+							<span class="title">Перово</span>
+							<span class="phone">
+								<a href="tel:84994260482">8 499 426-04-82</a>
+							</span>
+						</div>
+						<div class="contacts-item">
+							<div class="picture">
+								<svg class="icon icon-metro icon-metro--gray"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+							</div>
+							<span class="title">Цветной бульвар</span>
+							<span class="phone">
+								<a href="tel:84994260482">8 499 426-04-82</a>
+							</span>
+						</div>
+					</div><!-- /.contacts -->
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+			<div class="row footer-navigation">
+				<div class="col-6 col-md-4 col-lg-3 offset-lg-2">
+					<ul class="menu">
+						<li><a href="#">Поиск тура</a></li>
+						<li><a href="page-hot-tours.html">Горящие туры</a></li>
+						<li><a href="page-daily-tours.html">Предложения дня</a></li>
+						<li><a href="#">Расчет цены тура</a></li>
+						<li><a href="#">Акции и новости</a></li>
+						<li><a href="#">Блог</a></li>
+					</ul>
+				</div><!-- /.col -->
+				<div class="col-6 col-md-4 col-lg-3">
+					<ul class="menu">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Обратная связь</a></li>
+						<li><a href="page-weekend-tours.html">Туры выходного дня</a></li>
+						<li><a href="#">Карта сайта</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+					</ul>
+				</div><!-- /.col -->
+				<div class="col-md-4 col-lg">
+					<ul class="social">
+						<li class="social-item">
+							<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#instagram"></use></svg>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-vkontakte"><use xlink:href="images/symbol-defs.svg#vkontakte"></use></svg>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-odnoklassniki"><use xlink:href="images/symbol-defs.svg#odnoklassniki"></use></svg>
+							</a>
+						</li>
+					</ul>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.footer-main -->
+	</div><!-- /.container -->
+	<div class="footer-copyright">
+		<div class="container">
+			<span class="copyright">© 2003 – 2019 Турагентство «Реголит»</span>
+		</div>
+	</div>
+</footer>
+
+<!-- Mobile menu -->
+<div class="m-menu">
+	<button class="m-menu-close">
+		<svg class="icon icon-cross"><use xlink:href="images/symbol-defs.svg#cross"></use></svg>
+	</button>
+	<div class="m-menu-inner">
+		<div class="container">
+			<div class="m-menu-main">
+				<div class="m-menu-nav nav">
+					<ul class="nav-list">
+						<li class="hot"><a href="page-hot-tours.html">Горящие туры</a></li>
+						<li class="daily"><a href="page-daily-tours.html">Предложения дня</a></li>
+						<li class="weekend"><a href="page-weekend-tours.html">Туры выходного дня</a></li>
+						<li class="submenu">
+							<span>Клиентам</span>
+							<ul>
+								<li><a href="#">Акции и новости</a></li>
+								<li><a href="#">Подарки</a></li>
+								<li><a href="#">Подарочные сертификаты</a></li>
+								<li><a href="#">Бонусные карты</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<span>О компании</span>
+							<ul>
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<span>Офисы продаж</span>
+							<ul class="contacts">
+								<li class="contacts-item">
+									<div class="picture">
+										<svg class="icon icon-metro icon-metro--blue"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+									</div>
+									<span class="title">Пятницкое шоссе</span>
+									<span class="phone">
+										<a href="tel:84994260482">8 499 426-04-82</a>
+									</span>
+								</li>
+								<li class="contacts-item">
+									<div class="picture">
+										<svg class="icon icon-metro icon-metro--blue"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+									</div>
+									<span class="title">Строгино</span>
+									<span class="phone">
+										<a href="tel:84994260482">8 499 426-04-82</a>
+									</span>
+								</li>
+								<li class="contacts-item">
+									<div class="picture">
+										<svg class="icon icon-metro icon-metro--yellow"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+									</div>
+									<span class="title">Перово</span>
+									<span class="phone">
+										<a href="tel:84994260482">8 499 426-04-82</a>
+									</span>
+								</li>
+								<li class="contacts-item">
+									<div class="picture">
+										<svg class="icon icon-metro icon-metro--gray"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+									</div>
+									<span class="title">Цветной бульвар</span>
+									<span class="phone">
+										<a href="tel:84994260482">8 499 426-04-82</a>
+									</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="m-menu-subscribe">
+					<a href="https://instagram.com" class="btn btn-subscribe btn-icon-left" target="_blank" rel="noopener">
+						<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#instagram"></use></svg>
+						<span>Подпишись на нас<br> в инстаграмм</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="m-menu-backdrop"></div>
+
+<!-- Modal: Review -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="reviewModalLabel">Оставить отзыв</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-cross"><use xlink:href="images/symbol-defs.svg#cross"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="" method="POST" class="modal-form form">
+					<input type="text" class="form-control" placeholder="Ваше имя" required>
+					<input type="tel" class="form-control" data-mask="+9 (999) 999-99-99" placeholder="Телефон" required>
+					<textarea class="form-textarea" rows="4" placeholder="Текст отзыва" required></textarea>
+					<button type="submit" class="form-submit">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal: Callback -->
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="callbackModalLabel">Обратный звонок</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-cross"><use xlink:href="images/symbol-defs.svg#cross"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="" method="POST" class="modal-form form">
+					<input type="text" class="form-control" placeholder="Ваше имя" required>
+					<input type="tel" class="form-control" data-mask="+9 (999) 999-99-99" placeholder="Телефон" required>
+					<button type="submit" class="form-submit">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal: Calculate Tour -->
+<div class="modal fade" id="calculateModal" tabindex="-1" aria-labelledby="calculateModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="calculateModalLabel">Расчитать цену тура</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-cross"><use xlink:href="images/symbol-defs.svg#cross"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<style>
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+				</style>
+				<form id="calcTourForm" action="" class="form form-multi-step">
+
+					<ul class="form-steps">
+						<li class="step current-step"><span>1</span></li>
+						<li class="step"><span>2</span></li>
+						<li class="step"><span>3</span></li>
+						<li class="step"><span>4</span></li>
+						<li class="step"><span>5</span></li>
+					</ul>
+
+					<!-- One "tab" for each step in the form: -->
+					<div class="form-tab">
+						<div class="form-tab-title">Какую страну хотели бы посетить?</div>
+						<div class="form-tab-content">
+							<select class="form-select" name="calc-tour-coutry" id="calc-tour-country">
+								<option value="Турция" selected>Турция</option>
+								<option value="Тунис">Тунис</option>
+								<option value="Кипр">Кипр</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-tab">
+						<div class="form-tab-title">Период вылета</div>
+						<div class="form-tab-descr">Выберите удобные для Вас диапазон дат от и до</div>
+						<div class="form-tab-content">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="date" name="calc-tour-date-from" class="form-control" placeholder="От" required>
+								</div>
+								<div class="col-md-6">
+									<input type="date" name="calc-tour-date-to" class="form-control" placeholder="До" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-tab">
+						<div class="form-tab-title">На сколько ночей?</div>
+						<div class="form-tab-content">
+							<select class="form-select" name="calc-tour-coutry" id="calc-tour-country">
+								<option value="От 1 до 3 ночей" selected>От 1 до 3 ночей</option>
+								<option value="От 3 до 5 ночей">От 3 до 5 ночей</option>
+								<option value="От 5 до 8 ночей">От 5 до 8 ночей</option>
+								<option value="От 8 ночей">От 8 ночей</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-tab">
+						<div class="form-tab-title">Сколько человек поедет?</div>
+						<div class="form-tab-content">
+							<select class="form-select" name="calc-tour-coutry" id="calc-tour-country">
+								<option value="1 человек">1 человек</option>
+								<option value="2 человека" selected>2 человека</option>
+								<option value="3 человека">3 человека</option>
+								<option value="4 человека">4 человека</option>
+								<option value="Больше 5 человек">Больше 5 человек</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-tab">
+						<div class="form-tab-title">Готово! Как с вами связаться?</div>
+						<div class="form-tab-descr">Оставьте Ваши контакты для того, чтобы получить лучшие предложения по вашим пожеланиям!</div>
+						<div class="form-tab-content">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="email" class="form-control" placeholder="E-mail" required>
+								</div>
+								<div class="col-md-6">
+									<input type="tel" class="form-control" data-mask="+9 (999) 999-99-99" placeholder="Телефон" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-navigation">
+						<button type="button" class="btn btn-prev" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
+						<button type="button" class="btn btn-next" id="nextBtn" onclick="nextPrev(1)">
+							<span>Дальше</span>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</button>
+						<button type="submit" class="btn btn-complete" id="completeBtn">Получить предложения</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/vendor/magnific-popup.css">
+	<link rel="stylesheet" href="css/common/main.css">
+	<link rel="stylesheet" href="css/pages/about.css">
+
+	<!-- Load JS -->
+	<script src="js/vendors.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
