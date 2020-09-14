@@ -1,0 +1,14 @@
+.promo .row > [class*=col]:nth-child(1) .card-promo,
+.promo .row > [class*=col]:nth-child(2) .card-promo {
+  padding-bottom: 10px
+}
+.promo .row > [class*=col]:nth-child(1) .card-promo .card-photo,
+.promo .row > [class*=col]:nth-child(2) .card-promo .card-photo {
+  height: 345px
+}
+@media (max-width:767.98px) {
+  .promo .row > [class*=col]:nth-child(1) .card-promo .card-photo,
+  .promo .row > [class*=col]:nth-child(2) .card-promo .card-photo {
+    height: 220px
+  }
+}

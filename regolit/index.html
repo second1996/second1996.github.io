@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
 
 	<meta charset="utf-8">
-	<title>Project</title>
+	<title>Турестическая компания Реголит</title>
 	<meta name="description" content="Project description">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dest/preview.jpg">
 
-	<!-- Load CSS -->
-	<link rel="stylesheet" href="css/vendor/bootstrap.css">
-	<link rel="stylesheet" href="css/vendor/slick.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/pages/home.css">
+	<!-- Preloader inline CSS -->
+	<style>.preloader{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;width: 100vw;height: 100vh;background-color: #66a6fe;-webkit-transition: opacity .3s ease;-o-transition: opacity .3s ease;transition: opacity .3s ease}</style>
 
 </head>
 
 <body>
 
-	<header class="header">
+	<div class="preloader">
+	<img src="images/logo.svg" alt="Смазочная компания Интеравто">
+</div>
+
+<header class="header">
 	<div class="header-top">
 		<div class="container">
 			<div class="header-top-inner">
@@ -30,7 +30,7 @@
 					</button>
 				</div>
 				<div class="callback">
-					<form action="" method="POST" class="callback-form form">
+					<form action="" method="POST" class="callback-form form form--light">
 						<input type="tel" class="form-control" data-mask="+9 (999) 999-99-99" placeholder="+7" required>
 						<button type="submit" class="form-submit btn">Обратный звонок</button>
 					</form>
@@ -54,7 +54,7 @@
 					</button>
 				</div>
 				<div class="logo">
-					<a href="index.html">
+					<a href="index.html" rel="home">
 						<img src="images/logo.svg" alt="Турестическая компания Реголит">
 					</a>
 				</div>
@@ -109,9 +109,9 @@
 			<div class="header-bottom-inner">
 				<nav class="navigation">
 					<ul class="navigation-list">
-						<li class="hot"><a href="#">Горящие туры</a></li>
-						<li class="daily"><a href="#">Предложения дня</a></li>
-						<li class="weekend"><a href="#">Туры выходного дня</a></li>
+						<li class="hot"><a href="page-hot-tours.html">Горящие туры</a></li>
+						<li class="daily"><a href="page-daily-tours.html">Предложения дня</a></li>
+						<li class="weekend"><a href="page-weekend-tours.html">Туры выходного дня</a></li>
 						<li>
 							<span>Клиентам</span>
 							<ul>
@@ -138,13 +138,28 @@
 
 	<main class="main">
 		
-		<!-- Section: Search Tours -->
-		<section class="search-tours section">
+		<!-- Widget: Search Tours -->
+		<div class="search-tours search-tours-widget section">
 			<div class="container">
 				<!-- КОД виджета -->
-				<img src="images/search-widget.png" alt="">
+<<<<<<< HEAD
+				<script src="//ui.sletat.ru/module-5.0/app.js" type="text/javascript" charset="utf-8"></script>
+				<script type="text/javascript">// <![CDATA[
+					sletat.createModule5('Search', {files: ["//ui.sletat.ru/module-5.0/theme/dream_dec2015.min.css"], enabledCurrencies: ["RUB", "EUR", "USD"], useCard: false, country: 150});
+					// ]]&gt;</script>
+				<span class="sletat-copyright">Идет загрузка модуля <a title="поиск туров" href="http://sletat.ru/" target="_blank">поиска туров</a> …</span>
+=======
+				<img class="lazy" data-src="images/search-widget.png" alt="">
+				<!-- <script src="//ui.sletat.ru/module-5.0/app.js" type="text/javascript" charset="utf-8"></script>
+        <br/>
+        <script type="text/javascript">// <![CDATA[
+          sletat.createModule5('Search', {files: ["//ui.sletat.ru/module-5.0/theme/dream_dec2015.min.css"], enabledCurrencies: ["RUB", "EUR", "USD"], useCard: false, country: 150});
+          // ]]&gt;</script>
+        <br/>
+        <span class="sletat-copyright">Идет загрузка модуля <a title="поиск туров" href="http://sletat.ru/" target="_blank">поиска туров</a> …</span> -->
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
 			</div>
-		</section>
+		</div>
 
 		<!-- Section: Popular Tours -->
 		<section class="tours section">
@@ -155,8 +170,12 @@
 						<div class="col-md-6 col-lg-4">
 							<div class="card card-tour">
 								<div class="card-photo">
+<<<<<<< HEAD
+									<a href="page-country.html">
+=======
 									<a href="page-single-tour.html">
-										<img src="images/tours/turcija.jpg" alt="">
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
+										<img class="lazy" data-src="images/tours/turcija.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -164,7 +183,7 @@
 									<span class="price">от 54 600 ₽</span>
 									<div class="info">
 										<p>Отдых на побережье солнечной Турции радует теплым морем, отличным сервисом и любимым "Все включено".</p>
-										<a href="page-single-tour.html" class="btn">Туры в Турцию</a>
+										<a href="page-country.html" class="btn">Туры в Турцию</a>
 									</div>
 								</div>
 							</div>
@@ -172,8 +191,12 @@
 						<div class="col-md-6 col-lg-4">
 							<div class="card card-tour">
 								<div class="card-photo">
+<<<<<<< HEAD
+									<a href="page-country.html">
+=======
 									<a href="page-single-tour.html">
-										<img src="images/tours/grecija.jpg" alt="">
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
+										<img class="lazy" data-src="images/tours/grecija.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -181,7 +204,7 @@
 									<span class="price">от 84 600 ₽</span>
 									<div class="info">
 										<p>Страна с белым песком и лазурными водами морей, утонченными винами, античной архитектурой и многовековой историей, которая подарила миру знаменитых философов и ученых.</p>
-										<a href="page-single-tour.html" class="btn">Туры в Грецию</a>
+										<a href="page-country.html" class="btn">Туры в Грецию</a>
 									</div>
 								</div>
 							</div>
@@ -189,8 +212,12 @@
 						<div class="col-md-6 col-lg-4">
 							<div class="card card-tour">
 								<div class="card-photo">
+<<<<<<< HEAD
+									<a href="page-country.html">
+=======
 									<a href="page-single-tour.html">
-										<img src="images/tours/cypr.jpg" alt="">
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
+										<img class="lazy" data-src="images/tours/cypr.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -198,7 +225,7 @@
 									<span class="price">от 73 400 ₽</span>
 									<div class="info">
 										<p>Небольшой, но известный остров в Средиземном море, предлагающий любителям пляжей отдых 350 дней в году. Туры на Кипр интересны и древними историческими и архитектурными памятниками.</p>
-										<a href="page-single-tour.html" class="btn">Туры в Кипр</a>
+										<a href="page-country.html" class="btn">Туры в Кипр</a>
 									</div>
 								</div>
 							</div>
@@ -206,8 +233,12 @@
 						<div class="col-md-6 col-lg-4">
 							<div class="card card-tour">
 								<div class="card-photo">
+<<<<<<< HEAD
+									<a href="page-country.html">
+=======
 									<a href="page-single-tour.html">
-										<img src="images/tours/espanyol.jpg" alt="">
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
+										<img class="lazy" data-src="images/tours/espanyol.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -215,7 +246,7 @@
 									<span class="price">от 104 100 ₽</span>
 									<div class="info">
 										<p>Отдых на побережье солнечной Турции радует теплым морем, отличным сервисом и любимым "Все включено</p>
-										<a href="page-single-tour.html" class="btn">Туры в Испанию</a>
+										<a href="page-country.html" class="btn">Туры в Испанию</a>
 									</div>
 								</div>
 							</div>
@@ -223,8 +254,12 @@
 						<div class="col-md-6 col-lg-4">
 							<div class="card card-tour">
 								<div class="card-photo">
+<<<<<<< HEAD
+									<a href="page-country.html">
+=======
 									<a href="page-single-tour.html">
-										<img src="images/tours/tunis.jpg" alt="">
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
+										<img class="lazy" data-src="images/tours/tunis.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -232,7 +267,7 @@
 									<span class="price">от 64 800 ₽</span>
 									<div class="info">
 										<p>Отдых на побережье солнечной Турции радует теплым морем, отличным сервисом и любимым "Все включено</p>
-										<a href="page-single-tour.html" class="btn">Туры в Тунис</a>
+										<a href="page-country.html" class="btn">Туры в Тунис</a>
 									</div>
 								</div>
 							</div>
@@ -240,8 +275,12 @@
 						<div class="col-md-6 col-lg-4">
 							<div class="card card-tour">
 								<div class="card-photo">
+<<<<<<< HEAD
+									<a href="page-country.html">
+=======
 									<a href="page-single-tour.html">
-										<img src="images/tours/russia.jpg" alt="">
+>>>>>>> e84ac46aee3ab33561b0a58b7bd3af2f91864e58
+										<img class="lazy" data-src="images/tours/russia.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-meta">
@@ -249,7 +288,7 @@
 									<span class="price">от 24 600 ₽</span>
 									<div class="info">
 										<p>Отдых на побережье солнечной Турции радует теплым морем, отличным сервисом и любимым "Все включено</p>
-										<a href="page-single-tour.html" class="btn">Туры в Россию</a>
+										<a href="page-country.html" class="btn">Туры в Россию</a>
 									</div>
 								</div>
 							</div>
@@ -269,7 +308,7 @@
 						<span class="cta-link-label label-arrow">Воспользуйтесь знаниями<br> наших экспертов</span>
 					</div>
 					<div class="cta-photo">
-						<img src="images/travel-bag.png" alt="Поможем подобрать тур вашей мечты">
+						<img class="lazy" data-src="images/travel-bag.png" alt="Поможем подобрать тур вашей мечты">
 					</div>
 				</div>
 			</div>
@@ -291,7 +330,7 @@
 								<h3 class="title">Ответственно подходим к выбору партнёров</h3>
 								<p>ООО «Реголит» заключает договора только с надёжными Туроператорами, имеющими финансовое обеспечение и состоящими в Реестре Туроператоров.</p>
 								<p>С 2006 года ООО «Реголит» является официальным представителем туроператора <b>«Корал тревел»</b> в Москве.</p>
-								<img src="images/tour-companies.jpg" alt="">
+								<img class="lazy" data-src="images/tour-companies.jpg" alt="">
 							</div>
 							<div class="advantages-list-block">
 								<span class="suptitle">2. Профессионализм</span>
@@ -470,7 +509,7 @@
 							<div class="director-info">
 								<div class="photo">
 									<svg class="icon icon-quote"><use xlink:href="images/symbol-defs.svg#quote"></use></svg>
-									<img src="images/director-photo.png" alt="Калиничева Наталия">
+									<img class="lazy" data-src="images/director-photo.png" alt="Калиничева Наталия">
 								</div>
 								<div class="meta">
 									<div class="name">Калиничева Наталия</div>
@@ -500,12 +539,12 @@
 				<div class="cta-wrapper">
 					<h2 class="cta-title section-title">Туры<br> выходного дня</h2>
 					<form action="" method="POST" class="cta-form form form--light">
-						<input type="text" class="form-control cta-form-date" placeholder="Дата" required>
+						<input type="text" class="form-control cta-form-date" data-mask="00/00/0000" data-mask-placeholder="__/__/____" placeholder="Дата" required>
 						<input type="email" class="form-control cta-form-email" placeholder="Ваш E-mail" required>
-						<button class="cta-form-submit btn btn-large" data-toggle="modal" data-target="#callbackModal">Получить предложения</button>
+						<button type="submit" class="cta-form-submit btn btn-large">Получить предложения</button>
 					</form>
 					<div class="cta-photo">
-						<img src="images/travel-daily.png" alt="">
+						<img class="lazy" data-src="images/travel-daily.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -521,7 +560,7 @@
 							<div class="card card-blog">
 								<div class="card-photo card-photo-animate">
 									<a href="page-single-news.html">
-										<img src="images/blog/1.jpg" alt="">
+										<img class="lazy" data-src="images/blog/1.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-title">
@@ -534,7 +573,7 @@
 							<div class="card card-blog">
 								<div class="card-photo card-photo-animate">
 									<a href="page-single-news.html">
-										<img src="images/blog/2.jpg" alt="">
+										<img class="lazy" data-src="images/blog/2.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-title">
@@ -547,7 +586,7 @@
 							<div class="card card-blog">
 								<div class="card-photo card-photo-animate">
 									<a href="page-single-news.html">
-										<img src="images/blog/3.jpg" alt="">
+										<img class="lazy" data-src="images/blog/3.jpg" alt="">
 									</a>
 								</div>
 								<div class="card-title">
@@ -705,7 +744,7 @@
 			</button>
 			<div class="row">
 				<div class="col-lg-2">
-					<a href="index.html">
+					<a href="index.html" rel="home">
 						<img class="logo" src="images/logo-blue.svg" alt="Реголит">
 					</a>
 				</div><!-- /.col -->
@@ -754,8 +793,8 @@
 				<div class="col-6 col-md-4 col-lg-3 offset-lg-2">
 					<ul class="menu">
 						<li><a href="#">Поиск тура</a></li>
-						<li><a href="#">Горящие туры</a></li>
-						<li><a href="#">Предложения дня</a></li>
+						<li><a href="page-hot-tours.html">Горящие туры</a></li>
+						<li><a href="page-daily-tours.html">Предложения дня</a></li>
 						<li><a href="#">Расчет цены тура</a></li>
 						<li><a href="#">Акции и новости</a></li>
 						<li><a href="#">Блог</a></li>
@@ -765,7 +804,7 @@
 					<ul class="menu">
 						<li><a href="#">Контакты</a></li>
 						<li><a href="#">Обратная связь</a></li>
-						<li><a href="#">Туры выходного дня</a></li>
+						<li><a href="page-weekend-tours.html">Туры выходного дня</a></li>
 						<li><a href="#">Карта сайта</a></li>
 						<li><a href="#">Политика конфиденциальности</a></li>
 					</ul>
@@ -809,9 +848,9 @@
 			<div class="m-menu-main">
 				<div class="m-menu-nav nav">
 					<ul class="nav-list">
-						<li class="hot"><a href="#">Горящие туры</a></li>
-						<li class="daily"><a href="#">Предложения дня</a></li>
-						<li class="weekend"><a href="#">Туры выходного дня</a></li>
+						<li class="hot"><a href="page-hot-tours.html">Горящие туры</a></li>
+						<li class="daily"><a href="page-daily-tours.html">Предложения дня</a></li>
+						<li class="weekend"><a href="page-weekend-tours.html">Туры выходного дня</a></li>
 						<li class="submenu">
 							<span>Клиентам</span>
 							<ul>
@@ -882,6 +921,7 @@
 		</div>
 	</div>
 </div>
+<div class="m-menu-backdrop"></div>
 
 <!-- Modal: Review -->
 <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -931,27 +971,116 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title" id="calculateModalLabel">Куда бы вы хотели поехать?</h4>
+				<h4 class="modal-title" id="calculateModalLabel">Расчитать цену тура</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<svg class="icon icon-cross"><use xlink:href="images/symbol-defs.svg#cross"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
-				<!-- <div class="modal-descr">
-					<p>Оставьте Ваши контакты для того, чтобы получить лучшие предложения по вашим пожеланиям!</p>
-				</div> -->
-				...
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn">
-					<span>Дальше</span>
-					<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
-				</button>
+				<style>
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+				</style>
+				<form id="calcTourForm" action="" class="form form-multi-step">
+
+					<ul class="form-steps">
+						<li class="step current-step"><span>1</span></li>
+						<li class="step"><span>2</span></li>
+						<li class="step"><span>3</span></li>
+						<li class="step"><span>4</span></li>
+						<li class="step"><span>5</span></li>
+					</ul>
+
+					<!-- One "tab" for each step in the form: -->
+					<div class="form-tab">
+						<div class="form-tab-title">Какую страну хотели бы посетить?</div>
+						<div class="form-tab-content">
+							<select class="form-select" name="calc-tour-coutry" id="calc-tour-country">
+								<option value="Турция" selected>Турция</option>
+								<option value="Тунис">Тунис</option>
+								<option value="Кипр">Кипр</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-tab">
+						<div class="form-tab-title">Период вылета</div>
+						<div class="form-tab-descr">Выберите удобные для Вас диапазон дат от и до</div>
+						<div class="form-tab-content">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="date" name="calc-tour-date-from" class="form-control" placeholder="От" required>
+								</div>
+								<div class="col-md-6">
+									<input type="date" name="calc-tour-date-to" class="form-control" placeholder="До" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-tab">
+						<div class="form-tab-title">На сколько ночей?</div>
+						<div class="form-tab-content">
+							<select class="form-select" name="calc-tour-coutry" id="calc-tour-country">
+								<option value="От 1 до 3 ночей" selected>От 1 до 3 ночей</option>
+								<option value="От 3 до 5 ночей">От 3 до 5 ночей</option>
+								<option value="От 5 до 8 ночей">От 5 до 8 ночей</option>
+								<option value="От 8 ночей">От 8 ночей</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-tab">
+						<div class="form-tab-title">Сколько человек поедет?</div>
+						<div class="form-tab-content">
+							<select class="form-select" name="calc-tour-coutry" id="calc-tour-country">
+								<option value="1 человек">1 человек</option>
+								<option value="2 человека" selected>2 человека</option>
+								<option value="3 человека">3 человека</option>
+								<option value="4 человека">4 человека</option>
+								<option value="Больше 5 человек">Больше 5 человек</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-tab">
+						<div class="form-tab-title">Готово! Как с вами связаться?</div>
+						<div class="form-tab-descr">Оставьте Ваши контакты для того, чтобы получить лучшие предложения по вашим пожеланиям!</div>
+						<div class="form-tab-content">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="email" class="form-control" placeholder="E-mail" required>
+								</div>
+								<div class="col-md-6">
+									<input type="tel" class="form-control" data-mask="+9 (999) 999-99-99" placeholder="Телефон" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-navigation">
+						<button type="button" class="btn btn-prev" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
+						<button type="button" class="btn btn-next" id="nextBtn" onclick="nextPrev(1)">
+							<span>Дальше</span>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</button>
+						<button type="submit" class="btn btn-complete" id="completeBtn">Получить предложения</button>
+					</div>
+
+				</form>
 			</div>
 		</div>
 	</div>
 </div>
 
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/vendor/slick.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/pages/home.css">
+
+	<!-- Load JS -->
 	<script src="js/vendors.min.js"></script>
 	<script src="js/app.min.js"></script>
 

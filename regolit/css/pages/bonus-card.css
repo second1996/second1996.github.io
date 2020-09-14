@@ -1,0 +1,63 @@
+.bonus-preview {
+  height: 400px
+}
+.bonus-preview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.bonus-info {
+  margin-top: 32px
+}
+.bonus-info .alert {
+  padding: 24px 32px
+}
+.bonus-info .alert-title {
+  max-width: 730px
+}
+.bonus-descr {
+  margin-top: 40px
+}
+.bonus-descr h1:not(:first-of-type),
+.bonus-descr h2:not(:first-of-type),
+.bonus-descr h3:not(:first-of-type),
+.bonus-descr h4:not(:first-of-type),
+.bonus-descr h5:not(:first-of-type),
+.bonus-descr h6:not(:first-of-type) {
+  margin-top: 16px
+}
+@media (max-width:1023.98px) {
+  .bonus-info .alert {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .bonus-info .alert .alert-title {
+    margin-bottom: 0;
+    text-align: left
+  }
+}
+@media (max-width:767.98px) {
+  .bonus-preview {
+    height: 200px
+  }
+  .bonus-info .alert {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 16px
+  }
+  .bonus-info .alert .alert-title {
+    margin-bottom: 16px
+  }
+  .bonus-info .alert .alert-badge {
+    margin-left: 0
+  }
+}

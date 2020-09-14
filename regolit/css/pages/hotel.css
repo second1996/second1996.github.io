@@ -1,0 +1,113 @@
+.hotel-calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 48px
+}
+.hotel-calc-label {
+  margin-left: 92px
+}
+.hotel-calc-label::after {
+  left: -75px
+}
+.hotel-gallery .slick-arrow.slick-prev {
+  left: 32px
+}
+.hotel-gallery .slick-arrow.slick-next {
+  right: 32px
+}
+.hotel-gallery-slide {
+  overflow: hidden;
+  border-radius: 16px
+}
+.hotel-gallery-photo {
+  height: 500px
+}
+.hotel-gallery-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.hotel-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 20px
+}
+.hotel-rating .value {
+  margin-right: 16px;
+  font-size: 24px;
+  font-weight: 500
+}
+.hotel-descr {
+  margin-top: 40px
+}
+@media (max-width:1023.98px) {
+  .hotel-calc br {
+    display: none
+  }
+  .hotel-gallery-photo {
+    height: 420px
+  }
+}
+@media (max-width:767.98px) {
+  .hotel-calc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .hotel-calc br {
+    display: block
+  }
+  .hotel-calc-label {
+    margin-top: 16px;
+    margin-left: 0
+  }
+  .hotel-calc-label::after {
+    top: auto;
+    bottom: 15px;
+    left: -56px;
+    width: 46px;
+    height: 10.5px;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg)
+  }
+  .hotel-calc-btn {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+  .hotel-gallery-photo {
+    height: 320px
+  }
+}
+@media (max-width:575.98px) {
+  .hotel-calc-label {
+    margin-left: 72px
+  }
+  .hotel-calc-label::after {
+    top: 10px;
+    bottom: auto
+  }
+  .hotel-gallery .slick-arrow.slick-prev {
+    left: -24px
+  }
+  .hotel-gallery .slick-arrow.slick-next {
+    right: -24px
+  }
+  .hotel-gallery-photo {
+    height: 240px
+  }
+}
