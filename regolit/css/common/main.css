@@ -1114,16 +1114,27 @@ button-icon-right .icon {
 }
 .header {
   background-color: #3082fe;
-  margin-bottom: 25px
+  margin-bottom: 25px;
+  padding-top: 80px
 }
 .header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  height: 80px;
   padding: 16px 0;
-  border-bottom: 1px solid rgba(255,255,255,.1)
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  background-color: #3082fe
 }
 .header-top-inner {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
 }
 .header-top-inner .calculate {
   margin-right: 106px
