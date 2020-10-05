@@ -1058,8 +1058,8 @@ button:hover {
   right: 0;
   bottom: 0;
   z-index: -1;
-  -webkit-mask: url(../../images/product-badge.svg) no-repeat 100% 100%;
-  mask: url(../../images/product-badge.svg) no-repeat 100% 100%;
+  -webkit-mask: url(../images/product-badge.svg) no-repeat 100% 100%;
+  mask: url(../images/product-badge.svg) no-repeat 100% 100%;
   -webkit-mask-size: cover;
   mask-size: cover;
   -webkit-transform: rotate(-45deg);
