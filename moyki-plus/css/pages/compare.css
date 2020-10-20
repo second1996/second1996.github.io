@@ -1,0 +1,84 @@
+.compare-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.compare-header-actions {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 328px;
+  flex: 0 0 328px
+}
+.compare-header-products {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+.compare-header-products .swiper-slide {
+  width: auto!important
+}
+.compare-header-products .card-product {
+  border-bottom: 1px solid transparent
+}
+.compare-header-products .card-product:hover {
+  border-radius: 5px;
+  border-bottom-color: #763a9c
+}
+.compare-header-products .card-product .card-actions {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap
+}
+.compare-header-products .card-product .card-actions .order-btn {
+  width: 106px;
+  margin-top: 0
+}
+.compare-header-products .card-product .card-actions .order-btn._active {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.compare-header-products .card-product .card-actions .order-btn._active .icon {
+  margin-right: 0;
+  margin-bottom: 4px
+}
+.compare-header-products .card-product .card-actions .order-btn._active span {
+  font-weight: 400
+}
+.compare-header-products .card-product .card-actions .wishlist-btn {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0
+}
+.compare-table {
+  margin-top: 20px
+}
+.compare-table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.compare-table-row:nth-child(odd) {
+  background-color: #fff
+}
+.compare-table-row:nth-child(even) {
+  background-color: #f8f6f8
+}
+.compare-table-key {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 328px;
+  flex: 0 0 328px;
+  padding: 26px 20px;
+  color: #120c16;
+  font-weight: 500;
+  line-height: 1.2
+}
+.compare-table-value {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 210px;
+  flex: 0 0 210px;
+  padding: 26px 18px;
+  border-left: 1px solid #e7e7e7;
+  color: #120c16;
+  font-weight: 500;
+  line-height: 1.2
+}

@@ -1,0 +1,364 @@
+.promotion-completed {
+  margin-top: 80px
+}
+.promotion-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 50px
+}
+.promotion-head--current .promotion-head-icon,
+.promotion-head--current .promotion-head-title {
+  color: #11a453
+}
+.promotion-head--completed .promotion-head-icon,
+.promotion-head--completed .promotion-head-title {
+  color: #e71836
+}
+.promotion-head-icon {
+  margin-right: 25px
+}
+.promotion-head-title {
+  margin-bottom: 0
+}
+.promotion-card {
+  margin-bottom: 50px;
+  padding: 50px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
+  box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow .35s ease;
+  transition: -webkit-box-shadow .35s ease;
+  -o-transition: box-shadow .35s ease;
+  transition: box-shadow .35s ease;
+  transition: box-shadow .35s ease,-webkit-box-shadow .35s ease
+}
+.promotion-card:hover {
+  -webkit-box-shadow: 0 3px 24px 2px rgba(118,58,156,.16);
+  box-shadow: 0 3px 24px 2px rgba(118,58,156,.16)
+}
+.promotion-card:hover .promotion-card-image a img {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03)
+}
+.promotion-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative
+}
+.promotion-card-header .badge {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 196px;
+  height: 42px;
+  margin-right: 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center
+}
+.promotion-card-header .badge--current {
+  background-color: rgba(17,164,83,.1);
+  color: #11a453
+}
+.promotion-card-header .badge--completed {
+  background-color: rgba(231,24,54,.1);
+  color: #e71836
+}
+.promotion-card-header .title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin-bottom: 0;
+  padding-top: 6px;
+  font-size: 24px;
+  text-align: center
+}
+.promotion-card-image {
+  position: relative;
+  margin: 20px 0
+}
+.promotion-card-image a {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 272px;
+  border-radius: 5px
+}
+.promotion-card-image a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: left center;
+  object-position: left center;
+  will-change: transform;
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-transition: -webkit-transform .35s ease;
+  transition: -webkit-transform .35s ease;
+  -o-transition: transform .35s ease;
+  transition: transform .35s ease;
+  transition: transform .35s ease,-webkit-transform .35s ease
+}
+.promotion-card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.promotion-card-footer .duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.3
+}
+.promotion-card-footer .duration .icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #763a9c
+}
+.promotion-card-footer .duration span {
+  margin-left: 10px
+}
+.promotion-card-footer .read-more {
+  margin-left: 30px
+}
+.promotion-single .promotion-image {
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 50px
+}
+.promotion-single .promotion-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.promotion-single .promotion-info .duration {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 20px;
+  padding: 16px 20px;
+  border-radius: 5px;
+  border: 1px solid #763a9c;
+  background-color: #fff;
+  line-height: 1.4
+}
+.promotion-single .promotion-info .duration-icon {
+  margin-right: 12px
+}
+.promotion-single .promotion-info .counter-badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 196px;
+  height: 42px;
+  margin-right: 26px;
+  margin-bottom: 18px;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center
+}
+.promotion-single .promotion-info .counter--current .counter-badge {
+  background-color: rgba(17,164,83,.1);
+  color: #11a453
+}
+.promotion-single .promotion-info .counter--current .counter-left span {
+  color: #11a453
+}
+.promotion-single .promotion-info .counter--completed .counter-badge {
+  background-color: rgba(231,24,54,.1);
+  color: #e71836
+}
+.promotion-single .promotion-info .counter--completed .counter-left span {
+  color: #e71836
+}
+.promotion-single .promotion-info .counter-left {
+  line-height: 1
+}
+.promotion-single .promotion-info .counter-left span {
+  font-size: 18px
+}
+.promotion-single .promotion-content {
+  margin-top: 50px
+}
+.promotion-single .promotion-form {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 102px;
+  width: 100%;
+  max-width: 430px;
+  padding: 40px 30px;
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
+  background-color: #fff
+}
+.promotion-single .promotion-form .title {
+  margin-bottom: 35px;
+  text-align: center
+}
+@media (max-width:1229.98px) {
+  .promotion-card-header .title {
+    padding-top: 8px;
+    font-size: 22px
+  }
+  .promotion-single .promotion-form {
+    position: static;
+    margin: 50px auto 0;
+    max-width: 700px
+  }
+}
+@media (max-width:991.98px) {
+  .promotion-card {
+    padding: 30px
+  }
+  .promotion-card-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .promotion-card-header .badge {
+    width: 172px;
+    height: 36px;
+    font-size: 13px
+  }
+  .promotion-card-header .title {
+    margin-top: 20px;
+    padding-top: 0;
+    font-size: 20px;
+    text-align: left
+  }
+}
+@media (max-width:767.98px) {
+  .promotion-card-header .title {
+    font-size: 18px
+  }
+  .promotion-card-image a {
+    height: 200px
+  }
+  .promotion-card-footer .duration span {
+    font-size: 14px
+  }
+}
+@media (max-width:575.98px) {
+  .promotion-completed {
+    margin-top: 60px
+  }
+  .promotion-head {
+    margin-bottom: 30px
+  }
+  .promotion-head-icon {
+    margin-right: 15px
+  }
+  .promotion-head-title {
+    font-size: 20px
+  }
+  .promotion-card {
+    margin-bottom: 40px;
+    padding: 20px
+  }
+  .promotion-card-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+  }
+  .promotion-card-footer .read-more {
+    margin-top: 20px;
+    margin-left: 0
+  }
+  .promotion-single .promotion-image {
+    height: 140px;
+    margin-bottom: 20px
+  }
+  .promotion-single .promotion-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left center;
+    object-position: left center
+  }
+  .promotion-single .promotion-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+  .promotion-single .promotion-info .counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px
+  }
+  .promotion-single .promotion-info .counter-badge {
+    min-width: 172px;
+    margin-right: 20px;
+    margin-bottom: 0
+  }
+  .promotion-single .promotion-info .counter-left span {
+    display: block;
+    margin-top: 8px
+  }
+  .promotion-single .promotion-form {
+    padding: 30px 20px
+  }
+}
+@media (max-width:374.98px) {
+  .promotion-head-title {
+    font-size: 18px
+  }
+  .promotion-single .promotion-info .duration {
+    width: 100%;
+    padding: 16px
+  }
+}

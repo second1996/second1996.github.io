@@ -25,21 +25,30 @@
   border-radius: 5px;
   background-color: #e6e6e6
 }
+.h-banner-slide.swiper-slide .h-banner-content .banner-meta .btn,
+.h-banner-slide.swiper-slide .h-banner-content .banner-meta .descr,
+.h-banner-slide.swiper-slide .h-banner-content .banner-meta .labels,
+.h-banner-slide.swiper-slide .h-banner-content .banner-meta .title {
+  opacity: 0
+}
+.h-banner-slide.swiper-slide .h-banner-content .banner-photo {
+  opacity: 0
+}
 .h-banner-slide.swiper-slide-active .h-banner-content .banner-meta .labels {
+  -webkit-animation: mp-slideFromLeft 1.5s both;
+  animation: mp-slideFromLeft 1.5s both
+}
+.h-banner-slide.swiper-slide-active .h-banner-content .banner-meta .title {
   -webkit-animation: mp-slideFromLeft 1.5s .3s both;
   animation: mp-slideFromLeft 1.5s .3s both
 }
-.h-banner-slide.swiper-slide-active .h-banner-content .banner-meta .title {
+.h-banner-slide.swiper-slide-active .h-banner-content .banner-meta .descr {
   -webkit-animation: mp-slideFromLeft 1.5s .45s both;
   animation: mp-slideFromLeft 1.5s .45s both
 }
-.h-banner-slide.swiper-slide-active .h-banner-content .banner-meta .descr {
-  -webkit-animation: mp-slideFromLeft 1.5s .6s both;
-  animation: mp-slideFromLeft 1.5s .6s both
-}
 .h-banner-slide.swiper-slide-active .h-banner-content .banner-meta .btn {
-  -webkit-animation: mp-slideFromLeft 1.8s .75s both;
-  animation: mp-slideFromLeft 1.8s .75s both
+  -webkit-animation: mp-slideFromLeft 1.8s .6s both;
+  animation: mp-slideFromLeft 1.8s .6s both
 }
 .h-banner-slide.swiper-slide-active .h-banner-content .banner-photo {
   -webkit-animation: mp-slideFromRight 1.8s .75s both;
@@ -190,6 +199,9 @@
   justify-content: center;
   height: 100%;
   overflow-y: auto
+}
+.h-advantages-item:hover {
+  cursor: help
 }
 .h-advantages-item:hover .descr {
   opacity: 1;
@@ -364,21 +376,6 @@
   transition: transform .6s;
   transition: transform .6s,-webkit-transform .6s
 }
-.h-sale-products {
-  padding-top: 75px;
-  padding-bottom: 95px;
-  background: url(../../images/percent-bg.png) no-repeat left -150px bottom -25px,-o-linear-gradient(273deg,#5495a2 0,#42656c 100%);
-  background: url(../../images/percent-bg.png) no-repeat left -150px bottom -25px,linear-gradient(-183deg,#5495a2 0,#42656c 100%)
-}
-.h-sale-products .section-title {
-  color: #fff
-}
-.h-sale-products .section-title::after {
-  background-color: #fff
-}
-.h-sale-products .product-tabs-nav .nav-tabs .nav-link:hover:not(.active) {
-  background-color: #e78332
-}
 .h-articles-slider .swiper-button-next,
 .h-articles-slider .swiper-button-prev {
   top: 28%;
@@ -386,9 +383,17 @@
   -ms-transform: translateY(-28%);
   transform: translateY(-28%)
 }
+.h-posts {
+  overflow: hidden
+}
 .h-articles-slider,
 .h-news-slider {
   padding-bottom: 78px
+}
+.h-articles-slider-container,
+.h-news-slider-container {
+  margin: -24px 0;
+  padding: 24px 0
 }
 .h-news-slider .swiper-button-next,
 .h-news-slider .swiper-button-prev {
@@ -406,9 +411,11 @@
   text-align: center
 }
 .h-about p {
+  color: #736f75;
   line-height: 1.8
 }
 .h-about .ul-check {
+  color: #736f75;
   margin-top: 20px
 }
 .h-about-gallery {
@@ -479,11 +486,15 @@
 .h-about-video:hover::after {
   opacity: .6
 }
+.h-manufacturers {
+  overflow: hidden
+}
 .h-manufacturers-slider {
   position: relative
 }
 .h-manufacturers-slider-container {
-  padding: 18px 0
+  margin: -18px;
+  padding: 18px
 }
 .h-manufacturers-slide a {
   display: -webkit-box;
@@ -519,7 +530,7 @@
   box-shadow: 0 3px 18px 1px rgba(68,68,79,.08)
 }
 .h-manufacturers-btn {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center
 }
 @media (max-width:1229.98px) {

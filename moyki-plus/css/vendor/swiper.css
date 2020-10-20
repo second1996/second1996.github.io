@@ -700,7 +700,8 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination {
   width: 100%;
-  margin-top: 60px
+  margin-top: 60px;
+  line-height: 1
 }
 .swiper-pagination-bullet {
   position: relative;
@@ -768,9 +769,25 @@ button.swiper-pagination-bullet {
 .swiper-pagination--white .swiper-pagination-bullet-active::after {
   background-color: #fff
 }
+.swiper-lazy-preloader {
+  border: 4px solid #763a9c;
+  border-top-color: transparent
+}
 @media (max-width:767.98px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none
+  .swiper-button-next.swiper-button--large,
+  .swiper-button-prev.swiper-button--large {
+    width: 36px;
+    height: 36px
+  }
+  .swiper-button-next.swiper-button--large::before,
+  .swiper-button-prev.swiper-button--large::before {
+    width: 14px;
+    height: 6px
+  }
+  .swiper-button-prev.swiper-button--large {
+    left: -13px
+  }
+  .swiper-button-next.swiper-button--large {
+    right: -13px
   }
 }

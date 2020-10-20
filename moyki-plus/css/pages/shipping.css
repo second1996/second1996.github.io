@@ -1,0 +1,68 @@
+.shipping-calc-form {
+  margin: 20px 0;
+  padding: 40px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
+  box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
+  background-color: #fff
+}
+.shipping-calc-form .form-control {
+  border: 1px solid #763a9c
+}
+.shipping-calc-form .form-control:focus {
+  border-color: transparent
+}
+.shipping-calc-form .form-group-row .form-checkbox {
+  margin-left: 25px;
+  white-space: nowrap
+}
+.shipping-calc-form .form-group-row .form-checkbox-label {
+  margin-bottom: 0
+}
+.shipping-calc-form .form-submit {
+  margin-top: 30px;
+  text-align: center
+}
+.shipping-calc-logo {
+  max-width: 85%;
+  height: 62px;
+  margin: 0 auto 20px;
+  text-align: center
+}
+.shipping-calc-logo img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  -o-object-fit: scale-down;
+  object-fit: scale-down
+}
+@media (max-width:575.98px) {
+  .shipping-calc-form {
+    padding: 40px 20px
+  }
+  .shipping-calc-form .form-group {
+    margin-bottom: 15px
+  }
+  .shipping-calc-form .row {
+    margin: 0 -8px
+  }
+  .shipping-calc-form [class*=col] {
+    padding: 0 8px
+  }
+  .shipping-calc-form .form-control {
+    padding: 0 10px
+  }
+  .shipping-calc-logo {
+    height: 36px
+  }
+}
+@media (max-width:374.98px) {
+  .shipping-calc-form .form-group-row-checkbox {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+  }
+  .shipping-calc-form .form-group-row-checkbox .form-checkbox {
+    margin-top: 10px;
+    margin-left: 0
+  }
+}
