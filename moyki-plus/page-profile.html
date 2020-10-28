@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<title>Мойки Плюс: Интернет магазин сантехники и бытовой техники для дома</title>
+	<meta name="description" content="➢ Большой ассортимент сантехники и бытовой техники для дома в Москве в интернет-магазине MoykiPlus ➢ Заказать по ☎ 8-(495)-642-26-05.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/vendor/swiper.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/pages/user-profile.css">
+
+</head>
+
+<body>
+
+	<!-- Site Header -->
+<header class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="header-top-inner">
+				<div class="contacts">
+					<div class="contacts-item">
+						<div class="title c-gray text-xxs w-medium">Адрес:</div>
+						<div class="dropdown">
+							<button type="button" id="adressLabel" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="text c-white text-xxs w-medium">Москва, ул. Дорожная 3 стр. 3А</span>
+								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							</button>
+							<div class="dropdown-menu dropdown-adress" aria-labelledby="adressLabel">
+								<ul class="dropdown-menu-list">
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-icon">
+											<svg class="icon icon-home"><use xlink:href="images/symbol-defs.svg#home"></use></svg>
+										</div>
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Офис:</span>
+											<span class="descr c-black text-xxs w-medium">117405, Москва, ул. Дорожная 3, стр. 3А</span>
+										</div>
+									</li>
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-icon">
+											<svg class="icon icon-home"><use xlink:href="images/symbol-defs.svg#home"></use></svg>
+										</div>
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Магазин м. «Домодедовская»:</span>
+											<span class="descr c-black text-xxs w-medium">ТРЦ "Вегас", "Твой дом", 25 км (МКАД внешняя сторона), вход 2</span>
+										</div>
+									</li>
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-icon">
+											<svg class="icon icon-home"><use xlink:href="images/symbol-defs.svg#home"></use></svg>
+										</div>
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Магазин м. «Мякинино»:</span>
+											<span class="descr c-black text-xxs w-medium">ТЦ Твой Дом 2, 66 км МКАД, 2-й этаж, Кухонные мойки</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-item">
+						<div class="title c-gray text-xxs w-medium">Режим работы:</div>
+						<div class="dropdown">
+							<button type="button" id="workingHoursLabel" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="text c-white text-xxs w-medium">Пн-Пт с 9:00 до 18:00 (Офис)</span>
+								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							</button>
+							<div class="dropdown-menu dropdown-working-hours" aria-labelledby="workingHoursLabel">
+								<ul class="dropdown-menu-list">
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-icon">
+											<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+										</div>
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Офис:</span>
+											<span class="descr c-black text-xxs w-medium">Пн-Пт с 9:00 до 18:00 <br>Сб-Вс выходные</span>
+										</div>
+									</li>
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-icon">
+											<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+										</div>
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Магазины:</span>
+											<span class="descr c-black text-xxs w-medium">Пн-Пт: 17:30 до 22:00 <br>Сб-Вс: 10:00 до 22:00</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-item">
+						<div class="title c-gray text-xxs w-medium">Email:</div>
+						<a href="mailto:info@moykiplus.ru" class="text c-white text-xxs w-medium">info@moykiplus.ru</a>
+					</div>
+				</div><!-- /.contacts -->
+				<div class="actions">
+					<div class="actions-item dropdown">
+						<div class="dropdown">
+							<button type="button" id="userProfileLabel" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#user"></use></svg>
+								<span class="text c-white text-xxs w-medium">Личный кабинет</span>
+								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							</button>
+							<div class="dropdown-menu dropdown-user-profile" aria-labelledby="userProfileLabel">
+								<ul class="dropdown-menu-list">
+									<li class="dropdown-menu-item">
+										<a href="#" class="dropdown-menu-link c-black text-xxs w-bold">Войти</a>
+									</li>
+									<li class="dropdown-menu-item">
+										<a href="#" class="dropdown-menu-link c-black text-xxs w-bold">Зарегистрироваться</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="actions-item">
+						<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+						<a href="#checkOrderStatusModal" class="text c-white text-xxs w-medium" data-toggle="modal">Что с моим заказом?</a>
+					</div>
+				</div><!-- /.actions -->
+			</div><!-- /.header-top-inner -->
+		</div><!-- /.container -->
+	</div><!-- /.header-top -->
+	<div class="header-middle">
+		<div class="container">
+			<div class="header-middle-inner">
+				<div class="logotype">
+					<a href="index.html">
+						<img src="images/logo.png" alt="Мойки Плюс: Интернет магазин сантехники и бытовой техники для дома">
+					</a>
+				</div><!-- /.logotype -->
+				<div class="phone">
+					<div class="phone-icon">
+						<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+					</div>
+					<div class="phone-info">
+						<span class="title c-gray text-xxs w-medium">Телефон</span>
+						<div class="dropdown">
+							<button type="button" id="phoneListLabel" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="text c-white text-xxs w-medium">+7 (495) 642-26-05</span>
+								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							</button>
+							<div class="dropdown-menu dropdown-phone-list" aria-labelledby="phoneListLabel">
+								<ul class="dropdown-menu-list">
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Справочная служба:</span>
+											<a href="tel:+79850175099" class="dropdown-menu-link text text-xxs w-bold">+7 (985) 017-50-99</a>
+										</div>
+									</li>
+									<li class="dropdown-menu-item">
+										<div class="dropdown-menu-info">
+											<span class="title c-gray text-xxs">Магазин:</span>
+											<a href="tel:+74955094160" class="dropdown-menu-link text text-xxs w-bold">+7 (495) 509-41-60</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.phone -->
+				<div class="buttons">
+					<a href="page-contacts.html" class="btn btn-secondary">
+						<svg class="icon icon-store"><use xlink:href="images/symbol-defs.svg#store"></use></svg>
+						<span>Магазины</span>
+					</a>
+					<a href="page-contacts.html" class="btn btn-secondary">
+						<svg class="icon icon-sale"><use xlink:href="images/symbol-defs.svg#sale"></use></svg>
+						<span>Распродажа</span>
+					</a>
+					<a href="page-contacts.html" class="btn btn-secondary">
+						<svg class="icon icon-discount"><use xlink:href="images/symbol-defs.svg#discount"></use></svg>
+						<span>Акции</span>
+					</a>
+					<button class="btn btn-primary btn-callback" data-toggle="modal" data-target="#callbackModal">
+						<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+						<span>Заказать звонок</span>
+					</button>
+				</div><!-- /.buttons -->
+			</div><!-- /.header-middle-inner -->
+		</div><!-- /.container -->
+	</div><!-- /.header-middle -->
+	<div class="header-bottom">
+		<div class="container">
+			<div class="header-bottom-inner">
+				<!-- Mobile actions -->
+				<div class="m-actions">
+					<div class="m-actions-item">
+						<button class="menu-btn">
+							<svg class="icon icon-list-menu"><use xlink:href="images/symbol-defs.svg#list-menu"></use></svg>
+							<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+						</button>
+					</div>
+					<div class="m-actions-item">
+						<button class="search-btn">
+							<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+							<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg>
+						</button>
+					</div>
+				</div>
+				<!-- Logotype -->
+				<div class="logotype">
+					<a href="index.html">
+						<img src="images/logo-mobile.png" alt="Мойки Плюс: Интернет магазин сантехники и бытовой техники для дома">
+					</a>
+				</div>
+				<!-- Catalog menu -->
+				<div class="catalog">
+					<button class="catalog-btn btn btn-primary">
+						<svg class="icon icon-list-menu"><use xlink:href="images/symbol-defs.svg#list-menu"></use></svg>
+						<span>Каталог товаров</span>
+					</button>
+					<!-- Mega menu -->
+					<div class="mega-menu scrollbar">
+						<div class="mega-menu-sections">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="#" class="nav-link has-submenu">
+										<span>Сантехника</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<ul class="nav-submenu">
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Смесители</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+											<div class="nav-submenu-content category">
+												<div class="category-wrapper row">
+													<div class="col">
+														<div class="category-title">Смесители</div>
+														<div class="category-inner row">
+															<div class="col-5">
+																<span class="category-subtitle c-black text-xs w-medium">Категории</span>
+																<ul class="category-list category-list--category">
+																	<li><a href="#">Из нержавеющей стали</a></li>
+																	<li><a href="#">Гранитные</a></li>
+																	<li><a href="#">Из искусственного камня</a></li>
+																	<li><a href="#">Керамические</a></li>
+																	<li><a href="#">Кварцевые</a></li>
+																	<li><a href="#">Мраморные</a></li>
+																</ul>
+															</div>
+															<div class="col-7">
+																<span class="category-subtitle c-black text-xs w-medium">Популярная подборка</span>
+																<ul class="category-list category-list--collection">
+																	<li><a href="#">Накладные</a></li>
+																	<li><a href="#">Металлические</a></li>
+																	<li><a href="#">Угловые</a></li>
+																	<li><a href="#">Круглые</a></li>
+																	<li><a href="#">Врезные</a></li>
+																	<li><a href="#">В шкаф 45 см</a></li>
+																	<li><a href="#">Керамические</a></li>
+																	<li><a href="#">С 2 чашами</a></li>
+																	<li><a href="#">Распродажа</a></li>
+																</ul>
+															</div>
+														</div>
+													</div><!-- /.col -->
+													<div class="col-auto">
+														<div class="category-banner banner lazy" data-bg="images/mega-menu-banner.png">
+															<div class="banner-brand">
+																<a href="page-brand.html">
+																	<img class="lazy" data-src="images/brands/longran.png" alt="">
+																</a>
+															</div>
+															<div class="banner-meta">
+																<span class="title c-black w-bold">Купи любой комплект мойку + смеситель</span>
+																<span class="descr text-xs w-medium">Longran из гранита и получи скидку 10%</span>
+																<a href="page-single-product.html" class="btn btn-primary">Купить</a>
+															</div>
+														</div>
+													</div><!-- /.col -->
+													<div class="col-12">
+														<div class="category-brands brands">
+															<div class="brands-title category-title">Популярные бренды</div>
+															<div class="brands-slider">
+																<div class="brands-slider-container swiper-container">
+																	<div class="swiper-wrapper">
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																	</div>
+																</div><!-- /.swiper-container  -->
+																<div class="swiper-button-prev"></div>
+																<div class="swiper-button-next"></div>
+															</div>
+														</div>
+													</div><!-- /.col -->
+												</div><!-- /.category-wrapper .row -->
+											</div><!-- /.nav-submenu-content .category -->
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Мойки для кухни</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+											<div class="nav-submenu-content category">
+												<div class="category-wrapper row">
+													<div class="col">
+														<div class="category-title">Мойки для кухни</div>
+														<div class="category-inner row">
+															<div class="col-5">
+																<span class="category-subtitle c-black text-xs w-medium">Категории</span>
+																<ul class="category-list category-list--category">
+																	<li><a href="#">Из нержавеющей стали</a></li>
+																	<li><a href="#">Гранитные</a></li>
+																	<li><a href="#">Из искусственного камня</a></li>
+																	<li><a href="#">Керамические</a></li>
+																</ul>
+															</div>
+															<div class="col-7">
+																<span class="category-subtitle c-black text-xs w-medium">Популярная подборка</span>
+																<ul class="category-list category-list--collection">
+																	<li><a href="#">Накладные</a></li>
+																	<li><a href="#">Металлические</a></li>
+																	<li><a href="#">Угловые</a></li>
+																	<li><a href="#">Круглые</a></li>
+																	<li><a href="#">Врезные</a></li>
+																</ul>
+															</div>
+														</div>
+													</div><!-- /.col -->
+													<div class="col-auto">
+														<div class="category-banner banner banner lazy" data-bg="images/mega-menu-banner.png">
+															<div class="banner-brand">
+																<a href="page-brand.html">
+																	<img class="lazy" data-src="images/brands/longran.png" alt="">
+																</a>
+															</div>
+															<div class="banner-meta">
+																<span class="title c-black w-bold">Купи любой комплект мойку + смеситель</span>
+																<span class="descr text-xs w-medium">Longran из гранита и получи скидку 10%</span>
+																<a href="page-single-product.html" class="btn btn-primary">Купить</a>
+															</div>
+														</div>
+													</div><!-- /.col -->
+													<div class="col-12">
+														<div class="category-brands brands">
+															<div class="brands-title category-title">Популярные бренды</div>
+															<div class="brands-slider">
+																<div class="brands-slider-container swiper-container">
+																	<div class="swiper-wrapper">
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																		<div class="brands-slide swiper-slide">
+																			<a href="page-brand.html">
+																				<img class="lazy" data-src="images/brands/longran.png" alt="">
+																			</a>
+																		</div>
+																	</div>
+																</div><!-- /.swiper-container  -->
+																<div class="swiper-button-prev"></div>
+																<div class="swiper-button-next"></div>
+															</div>
+														</div>
+													</div><!-- /.col -->
+												</div><!-- /.category-wrapper .row -->
+											</div><!-- /.nav-submenu-content .category -->
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Душевые системы</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Фильтры для воды</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Краны для питьевой воды</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Измельчители отходов</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Комплекты</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+										</li>
+										<li class="nav-submenu-item">
+											<a href="#" class="nav-submenu-link">
+												<span>Полотенцесушители</span>
+												<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link has-submenu">
+										<span>Бытавая техника</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<ul class="nav-submenu">
+										<li class="nav-submenu-item"><a href="#" class="nav-submenu-link">Фильтры для воды</a></li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link has-submenu">
+										<span>Аксессуары</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<ul class="nav-submenu">
+										<li class="nav-submenu-item"><a href="#" class="nav-submenu-link">Фильтры для воды</a></li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link nav-link--red">
+										<span>Уцененные товары</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Search & Navigation -->
+				<div class="navigation">
+					<!-- Search form -->
+					<div class="search">
+						<form action="#" method="POST" class="form search-form">
+							<input type="search" class="form-control" placeholder="Поиск по сайту" required>
+							<button type="submit" class="search-form-btn">
+								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg>
+							</button>
+							<div class="search-form-results scrollbar">
+								<div class="results">
+									<div class="results-queries">
+										<div class="results-queries-tale results-often">
+											<span class="results-queries-title c-accent text-xxs w-medium">Часто ищут</span>
+											<ul class="results-queries-list">
+												<li><a href="#">тумба с раковиной</a></li>
+												<li><a href="#">унитаз</a></li>
+												<li><a href="#">полотенцесушитель водяной</a></li>
+												<li><a href="#">смеситель для кухни</a></li>
+												<li><a href="#">душевая кабина</a></li>
+											</ul>
+										</div>
+										<div class="results-queries-tale results-popular">
+											<span class="results-queries-title c-accent text-xxs w-medium">Популярные категории</span>
+											<ul class="results-queries-list">
+												<li><a href="#">тумба с раковиной</a></li>
+												<li><a href="#">унитаз</a></li>
+												<li><a href="#">полотенцесушитель водяной</a></li>
+												<li><a href="#">смеситель для кухни</a></li>
+												<li><a href="#">душевая кабина</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="results-products">
+										<span class="results-products-title c-accent text-xxs w-medium">Популярные товары</span>
+										<ul class="results-products-list">
+											<li class="results-products-item">
+												<a href="page-single-product.html" class="product-link"></a>
+												<div class="product-photo">
+													<img src="images/products/product-1.jpg" alt="">
+												</div>
+												<div class="product-meta">
+													<span class="brand c-accent text-xs w-medium">Telma</span>
+													<span class="title text-xs w-medium">Мойка Telma Functional FU 50.10</span>
+													<span class="price c-black text-sm w-medium">10 999 руб.</span>
+												</div>
+											</li>
+											<li class="results-products-item">
+												<a href="page-single-product.html" class="product-link"></a>
+												<div class="product-photo">
+													<img src="images/products/product-2.jpg" alt="">
+												</div>
+												<div class="product-meta">
+													<span class="brand c-accent text-xs w-medium">Telma</span>
+													<span class="title text-xs w-medium">Мойка Telma Functional FU 50.10 гранит</span>
+													<span class="price c-black text-sm w-medium">10 999 руб.</span>
+												</div>
+											</li>
+											<li class="results-products-item">
+												<a href="page-single-product.html" class="product-link"></a>
+												<div class="product-photo">
+													<img src="images/products/product-3.jpg" alt="">
+												</div>
+												<div class="product-meta">
+													<span class="brand c-accent text-xs w-medium">Telma</span>
+													<span class="title text-xs w-medium">Мойка Telma Cube 76.10</span>
+													<span class="price c-black text-sm w-medium">10 999 руб.</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- Navigation menu -->
+					<div class="menu">
+						<ul class="menu-list">
+							<li>
+								<a href="#">О компании</a>
+								<ul>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Сертификаты</a></li>
+									<li><a href="#">Лицензии</a></li>
+									<li><a href="#">Отзывы покупателей</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li>
+								<a href="#">Покупателю</a>
+								<ul>
+									<li><a href="#">Гарантия и возврат</a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Уценённые товары</a></li>
+									<li><a href="#">Бренды</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Бренды</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Actions: Compare, Wishlist, Cart-->
+				<div class="actions">
+					<div class="actions-item actions-wishlist">
+						<a href="page-wishlist.html" class="actions-link">
+							<span class="actions-count">12</span>
+							<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+						</a>
+					</div>
+					<div class="actions-item actions-compare">
+						<a href="page-compare.html" class="actions-link">
+							<span class="actions-count">0</span>
+							<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+						</a>
+					</div>
+					<div class="actions-item actions-cart">
+						<a href="page-cart.html" class="actions-link">
+							<span class="actions-count">3</span>
+							<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#shopping-cart"></use></svg>
+						</a>
+						<!-- Cart Widget -->
+						<div class="cart-widget scrollbar">
+							<div class="cart-widget-wrapper">
+								<ul class="cart-widget-list">
+									<li class="cart-widget-item">
+										<a href="page-single-product.html" class="product-photo">
+											<img src="images/products/product-1.jpg" alt="">
+										</a>
+										<div class="product-meta">
+											<span class="title c-black text-xs w-medium">Мойка Telma Functional FU 50.10</span>
+											<div class="quantity">
+												<input type="hidden" value="1">
+												<span class="count"><em>1</em> шт.</span>
+												<button class="minus">-</button>
+												<button class="plus">+</button>
+											</div>
+											<span class="price c-black text-sm w-medium">10 999 руб.</span>
+										</div>
+										<div class="product-remove">
+											<a href="#" class="btn-close">
+												<span></span>
+												<span></span>
+											</a>
+										</div>
+									</li>
+									<li class="cart-widget-item">
+										<a href="page-single-product.html" class="product-photo">
+											<img src="images/products/product-3.jpg" alt="">
+										</a>
+										<div class="product-meta">
+											<span class="title c-black text-xs w-medium">Мойка Telma Cube 76.10</span>
+											<div class="quantity">
+												<input type="hidden" value="1">
+												<span class="count"><em>1</em> шт.</span>
+												<button class="minus">-</button>
+												<button class="plus">+</button>
+											</div>
+											<span class="price c-black text-sm w-medium">10 999 руб.</span>
+										</div>
+										<div class="product-remove">
+											<a href="#" class="btn-close">
+												<span></span>
+												<span></span>
+											</a>
+										</div>
+									</li>
+									<li class="cart-widget-item">
+										<a href="page-single-product.html" class="product-photo">
+											<img src="images/products/product-2.jpg" alt="">
+										</a>
+										<div class="product-meta">
+											<span class="title c-black text-xs w-medium">Мойка Telma Functional FU 50.10 гранит</span>
+											<div class="quantity">
+												<input type="hidden" value="1">
+												<span class="count"><em>1</em> шт.</span>
+												<button class="minus">-</button>
+												<button class="plus">+</button>
+											</div>
+											<span class="price c-black text-sm w-medium">10 999 руб.</span>
+										</div>
+										<div class="product-remove">
+											<a href="#" class="btn-close">
+												<span></span>
+												<span></span>
+											</a>
+										</div>
+									</li>
+									<li class="cart-widget-item">
+										<a href="page-single-product.html" class="product-photo">
+											<img src="images/products/product-3.jpg" alt="">
+										</a>
+										<div class="product-meta">
+											<span class="title c-black text-xs w-medium">Мойка Telma Cube 76.10</span>
+											<div class="quantity">
+												<input type="hidden" value="1">
+												<span class="count"><em>1</em> шт.</span>
+												<button class="minus">-</button>
+												<button class="plus">+</button>
+											</div>
+											<span class="price c-black text-sm w-medium">10 999 руб.</span>
+										</div>
+										<div class="product-remove">
+											<a href="#" class="btn-close">
+												<span></span>
+												<span></span>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="cart-widget-checkout">
+									<a href="#" class="btn btn-primary">Оформить заказ</a>
+								</div>
+							</div>
+						</div><!-- /.cart-widget -->
+					</div>
+				</div>
+			</div><!-- /.header-bottom-inner -->
+		</div><!-- /.container -->
+	</div><!-- /.header-bottom -->
+</header>
+
+<div class="promo">
+	<div class="container">
+		<div class="promo-inner">
+			<div class="promo-content">
+				<div class="promo-content-marquee" data-duration="15000">
+					<p style="color: #b91d28">Грандиозный обвал цен на откатные ворота на винтовых сваях в сезон 2020 года. Подробности звоните и уточняйте у наших менеджеров <a href="tel:+74956422605"><b>+7(495) 642-26-05</b></a></p>
+				</div>
+			</div>
+			<div class="promo-close">
+				<button class="btn-close">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<main class="site-main">
+		<div class="container">
+
+			<!-- Breadcrumbs -->
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list">
+					<li><a href="page-home.html">Главная</a></li>
+					<li><span>Личный кабинет</span></li>
+				</ul>
+			</div>
+
+			<!-- Page title -->
+			<h1 class="page-title text-xl w-bold text-center">Личный кабинет</h1>
+
+			<!-- User Profile -->
+			<div class="profile">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<!-- Персональная информация -->
+						<div class="profile-block profile-block-personal">
+							<div class="profile-block-head">
+								<div class="icon-border">
+									<svg class="icon icon-user-2"><use xlink:href="images/symbol-defs.svg#user-2"></use></svg>
+								</div>
+								<h3 class="title text-sm w-semibold">Персональная информация</h3>
+							</div>
+							<div class="profile-block-body">
+								<table>
+									<tbody>
+										<tr>
+											<th class="c-gray text-xs w-medium" width="50%">Имя Фамилия:</th>
+											<td class="c-black text-xs w-medium" width="50%">Евгений Буряк</td>
+										</tr>
+										<tr>
+											<th class="c-gray text-xs w-medium" width="50%">Email:</th>
+											<td class="c-black text-xs w-medium" width="50%">byrzh0108@gmail.com</td>
+										</tr>
+										<tr>
+											<th class="c-gray text-xs w-medium" width="50%">Телефон:</th>
+											<td class="c-black text-xs w-medium" width="50%">+7 (985) 017-50-99</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="row mt-10">
+									<div class="col-xs-6">
+										<a href="#" class="btn btn-primary-outline">Изменить данные</a>
+									</div>
+									<div class="col-xs-6">
+										<a href="#" class="btn btn-primary-outline">Изменить пароль</a>
+									</div>
+								</div>
+							</div>
+						</div><!-- /.profile-block -->
+						<!-- Сравнение товаров -->
+						<div class="profile-block profile-block-personal">
+							<div class="profile-block-head">
+								<div class="icon-border">
+									<svg class="icon icon-compare-2"><use xlink:href="images/symbol-defs.svg#compare-2"></use></svg>
+								</div>
+								<h3 class="title text-sm w-semibold">Сравнение товаров</h3>
+							</div>
+							<div class="profile-block-body">
+								<div class="mb-15 c-gray text-xxs">Категории:</div>
+								<ul class="categories-list">
+									<li><a href="page-compare.html"><span>Мойки для кухни</span><em>9</em></a></li>
+									<li><a href="page-compare.html"><span>Варочные панели</span><em>2</em></a></li>
+									<li><a href="page-compare.html"><span>Дозаторы</span><em>4</em></a></li>
+									<li><a href="page-compare.html"><span>Смесители</span><em>3</em></a></li>
+								</ul>
+							</div>
+						</div><!-- /.profile-block -->
+					</div><!-- /.col -->
+					<div class="col-md-6 col-lg-4">
+						<!-- Профили -->
+						<div class="profile-block profile-block-personal">
+							<div class="profile-block-head">
+								<div class="icon-border">
+									<svg class="icon icon-adress-2"><use xlink:href="images/symbol-defs.svg#adress-2"></use></svg>
+								</div>
+								<h3 class="title text-sm w-semibold">Профили</h3>
+							</div>
+							<div class="profile-block-body">
+								<!-- <div class="c-gray text-xxs">У вас еще нет сохраненных адресов</div> -->
+								<ul class="adress-list">
+									<li>
+										<span>Москва, ул. Дорожная, 3, стр. 3А</span>
+										<a href="#" class="adress-remove">
+											<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+										</a>
+									</li>
+									<li>
+										<span>Москва, Пятницкое шоссе, дом 39, ТЦ «Мандарин»</span>
+										<a href="#" class="adress-remove">
+											<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+										</a>
+									</li>
+								</ul>
+								<a href="#" class="mt-30 btn btn-primary-outline">Добавить адрес</a>
+							</div>
+						</div><!-- /.profile-block -->
+						<!-- Избранное -->
+						<div class="profile-block profile-block-personal">
+							<div class="profile-block-head">
+								<div class="icon-border">
+									<svg class="icon icon-heart-2"><use xlink:href="images/symbol-defs.svg#heart-2"></use></svg>
+								</div>
+								<h3 class="title text-sm w-semibold">Избранное</h3>
+							</div>
+							<div class="profile-block-body">
+								<div class="mb-15 c-gray text-xxs">Категории:</div>
+								<ul class="categories-list">
+									<li><a href="page-wishlist.html"><span>Мойки для кухни</span><em>3</em></a></li>
+									<li><a href="page-wishlist.html"><span>Смесители</span><em>8</em></a></li>
+									<li><a href="page-wishlist.html"><span>Духовые шкафы</span><em>2</em></a></li>
+									<li><a href="page-wishlist.html"><span>Холодильники</span><em>5</em></a></li>
+								</ul>
+							</div>
+						</div><!-- /.profile-block -->
+					</div><!-- /.col -->
+					<div class="col-md-6 col-lg-4">
+						<!-- Подписатся на рассылку -->
+						<div class="profile-block profile-block-personal">
+							<div class="profile-block-head">
+								<div class="icon-border">
+									<svg class="icon icon-adress-2"><use xlink:href="images/symbol-defs.svg#adress-2"></use></svg>
+								</div>
+								<h3 class="title text-sm w-semibold">Подписаться на рассылку</h3>
+							</div>
+							<div class="profile-block-body">
+								<form action="#" method="POST" class="form subscribe-form">
+									<label for="profile-subscribe" class="c-gray text-xxs w-regular">Ваш E-mail</label>
+									<input type="email" class="form-control" id="profile-subscribe" placeholder="Введите Ваш E-mail" required>
+									<button type="submit" class="btn btn-primary">Подписаться</button>
+								</form>
+							</div>
+						</div><!-- /.profile-block -->
+						<!-- История заказов -->
+						<div class="profile-block profile-block-personal">
+							<div class="profile-block-head">
+								<div class="icon-border">
+									<svg class="icon icon-box-2"><use xlink:href="images/symbol-defs.svg#box-2"></use></svg>
+								</div>
+								<h3 class="title text-sm w-semibold">История заказов</h3>
+							</div>
+							<div class="profile-block-body">
+								<ul class="order-list">
+									<li>
+										<span>Заказ: #8958781</span>
+										<div class="order-status order-status--done">Выполнено</div>
+									</li>
+									<li>
+										<span>Заказ: #23569976</span>
+										<div class="order-status order-status--done">Выполнено</div>
+									</li>
+									<li>
+										<span>Заказ: #137480</span>
+										<div class="order-status order-status--progress">В обработке</div>
+									</li>
+								</ul>
+							</div>
+						</div><!-- /.profile-block -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.profile -->
+
+		</div><!-- /.container -->
+	</main>
+
+		<!-- Site Footer -->
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-sm-6 col-lg-auto">
+						<h5 class="footer-title c-white text-sm w-medium text-uppercase">Информация</h5>
+						<ul class="footer-nav">
+							<li><a href="#">Гарантии</a></li>
+							<li><a href="#">Оптовикам</a></li>
+							<li><a href="#">Конфиденциальность</a></li>
+							<li><a href="#">Оферта</a></li>
+							<li><a href="#">Рекламация</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Статьи</a></li>
+							<li><a href="#">Установка</a></li>
+							<li><a href="#">Карта сайта</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-lg-auto">
+						<h5 class="footer-title c-white text-sm w-medium text-uppercase">Контакты</h5>
+						<ul class="footer-contacts">
+							<li>
+								<span class="title text-xxs">Контактный телефон:</span>
+								<span class="text text-xs"><a href="tel:+74956422605" title="Позвонить на данный номер">+7 (495) 642-26-05</a></span>
+							</li>
+							<li>
+								<span class="title text-xxs">Горячая линия:</span>
+								<span class="text text-xs"><a href="tel:+79850175099" title="Позвонить на данный номер">+7 (985) 017-50-99</a></span>
+							</li>
+							<li>
+								<span class="title text-xxs">Магазин:</span>
+								<span class="text text-xs"><a href="tel:+74955094160" title="Позвонить на данный номер">+7 (495) 509-41-60</a></span>
+							</li>
+							<li>
+								<span class="title text-xxs">Email:</span>
+								<span class="text text-xs"><a href="mailto:info@moykiplus.ru" title="Написать письмо на почту">info@moykiplus.ru</a></span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-lg-auto">
+						<h5 class="footer-title c-white text-sm w-medium text-uppercase">Адрес</h5>
+						<ul class="footer-contacts">
+							<li>
+								<span class="title text-xxs">Офис:</span>
+								<span class="text text-xs">Москва, ул. Дорожная<br> 3 стр. 3А</span>
+							</li>
+							<li>
+								<span class="title text-xxs">Режим работы Офис:</span>
+								<span class="text text-xs">Пн-Пт с 9:00 до 18:00<br> Сб-Вс выходные</span>
+							</li>
+							<li>
+								<span class="title text-xxs">Режим работы Магазин:</span>
+								<span class="text text-xs">Пн-Пт: 17:30 до 22:00<br> Сб-Вс: 10:00 до 22:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-6 col-lg-auto">
+						<h5 class="footer-title c-white text-sm w-medium text-uppercase">Обратная связь</h5>
+						<ul class="footer-nav">
+							<li><a href="#">Заказать обратный звонок</a></li>
+							<li><a href="#">Поблагодарить</a></li>
+							<li><a href="#">Обнаружили ошибку?</a></li>
+						</ul>
+						<h5 class="mb-15 mt-30 c-white text-sm w-medium text-uppercase">Мы в соцсетях</h5>
+						<div class="footer-socials">
+							<a href="https://vk.com" class="footer-socials-item vkontakte" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-vkontakte"><use xlink:href="images/symbol-defs.svg#vkontakte"></use></svg>
+							</a>
+							<a href="https://facebook.com" class="footer-socials-item facebook" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#facebook"></use></svg>
+							</a>
+							<a href="https://youtube.com" class="footer-socials-item youtube" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-youtube"><use xlink:href="images/symbol-defs.svg#youtube"></use></svg>
+							</a>
+						</div>
+						<h5 class="mb-15 mt-30 c-white text-sm w-medium text-uppercase">Способы оптаты</h5>
+						<img class="footer-payments" src="images/payments.png" alt="Мы принимаем платежи" title="Мы принимаем платежи">
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.footer-top -->
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="order-0 col-sm-6 col-lg">
+						<div class="yandex-market">
+							<a href="#" title="Перейти на сайт Яндекс.Маркет" target="_blank" rel="nofollow noopener">
+								<img src="images/yandex-market.png" alt="Оцените магазин на Яндекс Маркете">
+								<span class="text-xs w-medium">Оцените магазин на Яндекс Маркете</span>
+							</a>
+						</div>
+					</div><!-- /.col -->
+					<div class="order-2 order-lg-1 col-12 col-lg-auto">
+						<div class="copyright">© 2008 - 2020 «Мойки Плюс»</div>
+					</div><!-- /.col -->
+					<div class="order-1 order-lg-3 col-sm-6 col-lg">
+						<div class="made-by">
+							<a href="#" title="Перейти на сайт создателя" target="_blank" rel="nofollow noopener">
+								<img src="images/made-by-logo.png" alt="Создание и продвижение сайта от Iceseo">
+								<span class="text-xs">Создание и продвижение сайта от Iceseo</span>
+							</a>
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.footer-bottom -->
+		<div class="footer-info">
+			<div class="container">
+				<div class="footer-info-content">
+					<p class="text-center text-xs">Cайт носит исключительно информационный характер, и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) Гражданского кодекса Российской Федерации. Наличие и цены уточняйте у наших операторов. Копирование всех составляющих частей сайта в какой бы то ни было форме без письменного разрешения владельцев авторских прав запрещено. Сайт использует технологию cookie. Используя сайт, Вы соглашаетесь с правилами использования cookie, а также даете согласие на обработку персональных данных.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Stores button -->
+	<div class="btn-stores">
+		<div class="btn-stores-content">
+			<div class="btn-stores-content-inner">
+				<div class="btn-stores-item">
+					<div class="title">
+						<svg class="icon icon-metro"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
+						<span>Метро Южная (Самовывоз: ул. Дорожная, д.3, стр.3)</span>
+					</div>
+					<div class="info">
+						<a href="tel:+74952583725" title="Позвонить на данный номер">+7 (495)-258-37-25</a>
+					</div>
+				</div>
+				<div class="btn-stores-item">
+					<div class="title">
+						<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+						<span>Режим работы</span>
+					</div>
+					<div class="info">
+						<span>Пн-Пт с 9:00 до 18:00</span>
+					</div>
+				</div>
+			</div><!-- /.btn-stores-content-inner -->
+			<button class="btn-stores-button">
+				<span class="btn-stores-button-icon">
+					<svg class="icon icon-store"><use xlink:href="images/symbol-defs.svg#store"></use></svg>
+				</span>
+				<span class="btn-stores-button-title">Магазин<br> онлайн</span>
+			</button>
+		</div><!-- /.btn-stores-content -->
+	</div>
+
+	<!-- Modal: Callback -->
+	<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="callbackModalLabel">Заказать обратный звонок</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="cb-name" class="form-label">Ваше имя</label>
+							<input type="text" class="form-control form-field-icon form-field-icon--user" id="cb-name" placeholder="Евгений" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="cb-phone" class="form-label">Ваш телефон</label>
+							<input type="tel" class="form-control form-field-icon form-field-icon--phone" id="cb-phone" placeholder="+7 (___) ___-__-__" minlength="11" required autocomplete="off">
+							<div class="form-checkbox switch-input-mask">
+								<input type="checkbox" name="cb-phone-mask" id="cb-phone-mask" checked>
+								<label for="cb-phone-mask" class="form-checkbox-label">Отобразить маску ввода номера телефона</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cb-hours" class="form-label">Удобное время для звонка</label>
+							<input type="text" class="form-control form-field-icon form-field-icon--hours" id="cb-hours" placeholder="В любое время" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="cb-message" class="form-label">Комментарий</label>
+							<textarea class="form-textarea" id="cb-message"></textarea>
+						</div>
+						<div class="form-group form-checkbox">
+							<input type="checkbox" name="cb-policy" id="cb-policy" required>
+							<label for="cb-policy" class="form-checkbox-label">Я подтверждаю, что ознакомлен и согласен с условиями предоставления даных</label>
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Заказать</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Check order status -->
+	<div class="modal fade" id="checkOrderStatusModal" tabindex="-1" aria-labelledby="checkOrderStatusModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="checkOrderStatusModalLabel">Что с моим заказом?</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="os-phone" class="form-label">Ваш телефон</label>
+							<input type="tel" class="form-control form-field-icon form-field-icon--phone" id="os-phone" data-mask="+7 (999) 999-99-99" placeholder="+7 (___) ___-__-__" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="os-number" class="form-label">Номер заказа</label>
+							<input type="text" class="form-control form-field-icon form-field-icon--order" id="os-number" placeholder="4357854" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Проверить статус заказа</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div class="m-menu scrollbar">
+		<div class="m-menu-wrapper">
+			<nav class="m-menu-nav">
+				<ul>
+					<li class="catalog">
+						<a href="#" class="has-submenu">
+							<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#catalog"></use></svg>
+							<span>Каталог товаров</span>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</a>
+						<ul class="submenu">
+							<button type="button" class="back-btn btn btn-primary">
+								<svg class="icon icon-long-arrow"><use xlink:href="images/symbol-defs.svg#long-arrow"></use></svg>
+								<span>Назад</span>
+							</button>
+							<li>
+								<a href="#" class="has-dropmenu">
+									<span>Сантехника</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</a>
+								<ul class="dropmenu">
+									<li>
+										<a href="#" class="has-dropmenu">
+											<span>Смесители</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+										<ul class="dropmenu">
+											<li><span class="title c-black text-xs w-medium">Категории</span></li>
+											<li><a href="#">Из нержавеющей стали</a></li>
+											<li><a href="#">Гранитные</a></li>
+											<li><a href="#">Из искусственного камня</a></li>
+											<li><a href="#">Керамические</a></li>
+											<li><a href="#">Кварцевые</a></li>
+											<li><a href="#">Мраморные</a></li>
+											<li><span class="title c-black text-xs w-medium">Популярная подборка</span></li>
+											<li><a href="#">Накладные</a></li>
+											<li><a href="#">Металлические</a></li>
+											<li><a href="#">Угловые</a></li>
+											<li><a href="#">Круглые</a></li>
+											<li><a href="#">Врезные</a></li>
+											<li><a href="#">В шкаф 45 см</a></li>
+											<li><a href="#">Керамические</a></li>
+											<li><a href="#">С 2 чашами</a></li>
+											<li><a href="#">Распродажа</a></li>
+											<li class="banner lazy" data-bg="images/mega-menu-banner.png">
+												<div class="banner-brand">
+													<a href="page-brand.html">
+														<img class="lazy" data-src="images/brands/longran.png" alt="">
+													</a>
+												</div>
+												<div class="banner-meta">
+													<span class="title c-black w-bold">Купи любой комплект мойку + смеситель</span>
+													<span class="descr text-xs w-medium">Longran из гранита и получи скидку 10%</span>
+													<a href="page-single-product.html" class="btn btn-primary">Купить</a>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">
+											<span>Мойки для кухни</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Душевые системы</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Фильтры для воды</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Краны для питьевой воды</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Измельчители отходов</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Комплекты</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Полотенцесушители</span>
+											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="has-dropmenu">
+									<span>Бытавая техника</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</a>
+								<ul class="dropmenu">
+									<li><a href="#">Фильтры для воды</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="has-dropmenu">
+									<span>Аксессуары</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</a>
+								<ul class="dropmenu">
+									<li><a href="#">Фильтры для воды</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									<span>Уцененные товары</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</a>
+							</li>
+						</ul><!-- /.submenu -->
+					</li>
+					<li>
+						<a href="#" class="has-submenu">
+							<span>О компании</span>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</a>
+						<ul class="submenu">
+							<button type="button" class="back-btn btn btn-primary">
+								<svg class="icon icon-long-arrow"><use xlink:href="images/symbol-defs.svg#long-arrow"></use></svg>
+								<span>Назад</span>
+							</button>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Сертификаты</a></li>
+							<li><a href="#">Лицензии</a></li>
+							<li><a href="#">Отзывы покупателей</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li>
+						<a href="#" class="has-submenu">
+							<span>Покупателю</span>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</a>
+						<ul class="submenu">
+							<button type="button" class="back-btn btn btn-primary">
+								<svg class="icon icon-long-arrow"><use xlink:href="images/symbol-defs.svg#long-arrow"></use></svg>
+								<span>Назад</span>
+							</button>
+							<li><a href="#">Гарантия и возврат</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Уценённые товары</a></li>
+							<li><a href="#">Бренды</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Бренды</a></li>
+				</ul>
+			</nav><!-- /.m-menu-nav -->
+			<div class="m-menu-buttons">
+				<a href="page-contacts.html" class="btn btn-primary">
+					<svg class="icon icon-store"><use xlink:href="images/symbol-defs.svg#store"></use></svg>
+					<span>Магазины</span>
+				</a>
+				<a href="page-contacts.html" class="btn btn-primary">
+					<svg class="icon icon-sale"><use xlink:href="images/symbol-defs.svg#sale"></use></svg>
+					<span>Распродажа</span>
+				</a>
+				<a href="page-contacts.html" class="btn btn-primary">
+					<svg class="icon icon-discount"><use xlink:href="images/symbol-defs.svg#discount"></use></svg>
+					<span>Акции</span>
+				</a>
+			</div><!-- /.m-menu-buttons -->
+			<div class="m-menu-contacts">
+				<div class="toggle-box">
+					<div class="toggle-box-header">
+						<div class="toggle-box-header-icon">
+							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+						</div>
+						<div class="toggle-box-header-content">
+							<span class="d-block title c-gray text-xxs w-medium">Телефон:</span>
+							<a href="tel:+74956422605" class="text c-black text-xxs w-bold">+7 (495) 642-26-05</a>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</div>
+					</div>
+					<div class="toggle-box-dropdown">
+						<ul class="toggle-box-dropdown-list">
+							<li class="toggle-box-dropdown-item">
+								<span class="d-block title c-gray text-xxs w-medium">Справочная служба:</span>
+								<a href="tel:+79850175099" class="text text-xxs w-bold">+7 (985) 017-50-99</a>
+							</li>
+							<li class="toggle-box-dropdown-item">
+								<span class="d-block title c-gray text-xxs w-medium">Магазин:</span>
+								<a href="tel:+74955094160" class="text text-xxs w-bold">+7 (495) 509-41-60</a>
+							</li>
+						</ul>
+					</div>
+				</div><!-- /.toggle-box -->
+				<div class="toggle-box">
+					<div class="toggle-box-header">
+						<div class="toggle-box-header-icon">
+							<svg class="icon icon-mail"><use xlink:href="images/symbol-defs.svg#mail"></use></svg>
+						</div>
+						<div class="toggle-box-header-content">
+							<span class="d-block title c-gray text-xxs w-medium">E-mail:</span>
+							<a href="mailto:info@moykiplus.ru" class="text c-black text-xxs w-bold">info@moykiplus.ru</a>
+						</div>
+					</div>
+				</div><!-- /.toggle-box -->
+				<div class="toggle-box">
+					<div class="toggle-box-header">
+						<div class="toggle-box-header-icon">
+							<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+						</div>
+						<div class="toggle-box-header-content">
+							<span class="d-block title c-gray text-xxs w-medium">Режим работы:</span>
+							<span class="text c-black text-xxs w-bold">Пн-Пт с 9:00 до 18:00 (Офис)</span>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</div>
+					</div>
+					<div class="toggle-box-dropdown">
+						<ul class="toggle-box-dropdown-list">
+							<li class="toggle-box-dropdown-item">
+								<span class="d-block title c-gray text-xxs w-medium">Офис:</span>
+								<span class="text text-xxs w-bold">Пн-Пт с 9:00 до 18:00 <br>Сб-Вс выходные</span>
+							</li>
+							<li class="toggle-box-dropdown-item">
+								<span class="d-block title c-gray text-xxs w-medium">Магазины:</span>
+								<span class="text text-xxs w-bold">Пн-Пт: 17:30 до 22:00 <br>Сб-Вс: 10:00 до 22:00</span>
+							</li>
+						</ul>
+					</div>
+				</div><!-- /.toggle-box -->
+				<div class="toggle-box">
+					<div class="toggle-box-header">
+						<div class="toggle-box-header-icon">
+							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+						</div>
+						<div class="toggle-box-header-content">
+							<span class="d-block title c-gray text-xxs w-medium">Адрес:</span>
+							<a href="tel:+74956422605" class="text c-black text-xxs w-bold">Москва, ул. Дорожная, 3 стр. 3А</a>
+							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						</div>
+					</div>
+					<div class="toggle-box-dropdown">
+						<ul class="toggle-box-dropdown-list">
+							<li class="toggle-box-dropdown-item">
+								<span class="d-block title c-gray text-xxs w-medium">Магазин м. «Домодедовская»:</span>
+								<span class="text text-xxs w-bold">ТРЦ "Вегас", "Твой дом", 25 км (МКАД внешняя сторона), вход 2</span>
+							</li>
+							<li class="toggle-box-dropdown-item">
+								<span class="d-block title c-gray text-xxs w-medium">Магазин м. «Мякинино»:</span>
+								<span class="text text-xxs w-bold">ТЦ Твой Дом 2, 66 км МКАД, 2-й этаж, Кухонные мойки</span>
+							</li>
+						</ul>
+					</div>
+				</div><!-- /.toggle-box -->
+			</div><!-- /.m-menu-contacts -->
+			<div class="m-menu-footer">
+				<a href="#" class="btn btn-success">Войти в личный кабинет</a>
+				<button class="btn btn-primary btn-callback" data-toggle="modal" data-target="#callbackModal">
+					<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+					<span>Заказать звонок</span>
+				</button>
+			</div><!-- /.m-menu-footer -->
+		</div><!-- /.m-menu-wrapper -->
+	</div>
+
+	<!-- Back to Top Button -->
+	<button type="button" id="back-to-top" class="back-to-top">
+		<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+	</button>
+
+	<script src="js/vendors.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

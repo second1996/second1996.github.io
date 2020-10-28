@@ -386,6 +386,9 @@
 .h-posts {
   overflow: hidden
 }
+.h-posts .nav-tabs .nav-link {
+  text-transform: uppercase
+}
 .h-articles-slider,
 .h-news-slider {
   padding-bottom: 78px

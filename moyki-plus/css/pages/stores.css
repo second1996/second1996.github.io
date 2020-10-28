@@ -1,0 +1,297 @@
+.stores .nav-tabs .nav-link {
+  -ms-flex-preferred-size: 300px;
+  flex-basis: 300px
+}
+.stores-map {
+  position: relative;
+  margin-bottom: 60px;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  background-color: rgba(231,231,231,.35)
+}
+.stores-map iframe {
+  display: block;
+  width: 100%;
+  height: 560px
+}
+.stores-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 60px;
+  padding: 50px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
+  box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
+  background-color: #fff
+}
+.stores-contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.stores-contacts-item:not(:first-child) {
+  margin-top: 30px
+}
+.stores-contacts-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.stores-contacts-adress {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%
+}
+.stores-contacts-phone {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%
+}
+.stores-contacts-hours {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 250px;
+  flex: 0 0 250px;
+  width: auto;
+  max-width: 100%
+}
+.stores-contacts-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 12px
+}
+.stores-contacts-content .title {
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1
+}
+.stores-contacts-content .text {
+  display: block;
+  line-height: 1.2
+}
+.stores-descr {
+  margin-bottom: 30px
+}
+.stores-descr article p {
+  margin-bottom: 15px
+}
+.stores-descr article ~ .read-more {
+  position: relative;
+  bottom: 10px;
+  margin-top: 0
+}
+.stores-gallery-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -16px
+}
+.stores-gallery-item {
+  -webkit-box-flex: 33.33333%;
+  -ms-flex: 33.33333%;
+  flex: 33.33333%;
+  max-width: 33.33333%;
+  padding: 16px
+}
+.stores-gallery-item > a {
+  position: relative;
+  display: block;
+  height: 300px
+}
+.stores-gallery-item > a::after {
+  content: '+';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba(18,12,22,.7);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease
+}
+.stores-gallery-item > a:hover::after {
+  visibility: visible;
+  opacity: 1
+}
+.stores-gallery-item > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+@media (max-width:1229.98px) {
+  .stores-map iframe {
+    height: 420px
+  }
+  .stores-contacts {
+    padding: 40px
+  }
+  .stores-contacts-adress {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%
+  }
+  .stores-contacts-phone {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 28%;
+    flex: 0 0 28%;
+    max-width: 28%
+  }
+  .stores-contacts-hours {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px
+  }
+  .stores-descr article ~ .read-more {
+    position: static;
+    margin-top: 15px
+  }
+  .stores-gallery-item > a {
+    height: 260px
+  }
+}
+@media (max-width:991.98px) {
+  .stores-map iframe {
+    height: 360px
+  }
+  .stores-contacts {
+    padding: 30px
+  }
+  .stores-contacts-adress {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 38%;
+    flex: 0 0 38%;
+    max-width: 38%
+  }
+  .stores-contacts-hours {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 180px;
+    flex: 0 0 180px
+  }
+  .stores-gallery-list {
+    margin: -10px
+  }
+  .stores-gallery-item {
+    padding: 10px
+  }
+  .stores-gallery-item > a {
+    height: 200px
+  }
+}
+@media (max-width:767.98px) {
+  .stores .tab-content {
+    margin-top: 30px
+  }
+  .stores-map {
+    margin-top: 15px
+  }
+  .stores-contacts-item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+  }
+  .stores-contacts-inner {
+    margin-bottom: 15px
+  }
+  .stores-contacts-adress {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%
+  }
+  .stores-contacts-phone {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%
+  }
+  .stores-contacts-hours {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 0
+  }
+  .stores-gallery-item > a {
+    height: 160px
+  }
+}
+@media (max-width:575.98px) {
+  .stores-map iframe {
+    height: 300px
+  }
+  .stores-contacts {
+    padding: 30px 20px
+  }
+  .stores-contacts-adress {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+  .stores-contacts-phone {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+  .stores-contacts-hours {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+  .stores-gallery-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+  .stores-gallery-item:not(:first-child) {
+    display: none
+  }
+  .stores-gallery-item > a {
+    height: 275px
+  }
+}

@@ -1,0 +1,119 @@
+.pickup .nav-tabs .nav-link {
+  -ms-flex-preferred-size: 300px;
+  flex-basis: 300px
+}
+.pickup-photo {
+  position: relative;
+  height: 245px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: rgba(231,231,231,.35)
+}
+.pickup-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.pickup-contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px
+}
+.pickup-contacts-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 12px
+}
+.pickup-contacts-content .title {
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1
+}
+.pickup-contacts-content .text {
+  display: block;
+  line-height: 1.2
+}
+.pickup-map {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  background-color: rgba(231,231,231,.35)
+}
+.pickup-map iframe {
+  display: block;
+  width: 100%;
+  height: 460px
+}
+.pickup-plan {
+  position: relative;
+  height: 300px
+}
+.pickup-plan img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
+  -o-object-position: left center;
+  object-position: left center
+}
+.pickup-gallery {
+  position: relative
+}
+.pickup-gallery .swiper-pagination {
+  margin-top: 20px
+}
+.pickup-gallery-slider {
+  background-color: rgba(231,231,231,.35)
+}
+.pickup-gallery-slide {
+  height: 300px
+}
+.pickup-gallery-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+@media (max-width:991.98px) {
+  .pickup-map iframe {
+    height: 380px
+  }
+}
+@media (max-width:767.98px) {
+  .pickup .tab-content {
+    margin-top: 30px
+  }
+  .pickup-photo {
+    margin-bottom: 20px
+  }
+  .pickup-contacts-item {
+    margin-bottom: 20px
+  }
+  .pickup-map {
+    margin-top: 15px
+  }
+  .pickup-plan {
+    height: 100%
+  }
+  .pickup-plan img {
+    -o-object-position: center top;
+    object-position: center top
+  }
+  .pickup-gallery {
+    margin-top: 30px
+  }
+}
+@media (max-width:575.98px) {
+  .pickup-map iframe {
+    height: 300px
+  }
+  .pickup-gallery-slide {
+    height: 260px
+  }
+}

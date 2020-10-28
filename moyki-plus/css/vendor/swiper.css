@@ -661,8 +661,8 @@ button.swiper-pagination-bullet {
 }
 .swiper-button-next.swiper-button--large::before,
 .swiper-button-prev.swiper-button--large::before {
-  width: 15px;
-  height: 7px;
+  width: 18px;
+  height: 9px;
   background-image: url(../../images/arrow-big-shadow.svg)
 }
 .swiper-button-next.swiper-button--large::after,
@@ -677,10 +677,10 @@ button.swiper-pagination-bullet {
   left: 1px
 }
 .swiper-button-prev.swiper-button--large {
-  left: -14px
+  left: -18px
 }
 .swiper-button-prev.swiper-button--large::before {
-  left: -1px
+  left: 0
 }
 .swiper-button-next {
   border-radius: 5px 2px 5px 5px;
@@ -693,10 +693,10 @@ button.swiper-pagination-bullet {
   transform: scaleX(-1)
 }
 .swiper-button-next.swiper-button--large {
-  right: -14px
+  right: -18px
 }
 .swiper-button-next.swiper-button--large::before {
-  right: -1px
+  right: 0
 }
 .swiper-pagination {
   width: 100%;
@@ -772,6 +772,9 @@ button.swiper-pagination-bullet {
 .swiper-lazy-preloader {
   border: 4px solid #763a9c;
   border-top-color: transparent
+}
+.swiper-scrollbar-drag {
+  background-color: #763a9c
 }
 @media (max-width:767.98px) {
   .swiper-button-next.swiper-button--large,

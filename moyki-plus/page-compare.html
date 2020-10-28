@@ -738,19 +738,32 @@
 
 			<!-- Compare -->
 			<div class="compare">
-				
+
+				<!-- Compare empty -->
+				<!-- <div class="compare-empty">
+					<p>Нет товаров для сравнения. Вы можете добавить товары в сравнение со страницы каталога или карточек товаров.</p>
+				</div> -->
+
+				<!-- Compare body -->
 				<div class="compare-header">
 					<div class="compare-header-actions">
-						<button type="button" id="compare-all" class="btn btn-primary">Все характеристики</button>
-						<button type="button" id="compare-differences" class="btn btn-secondary">Показать различия</button>
-						<select name="" id="compare-categories" class="form-select">
-							<option value="all">Все (8)</option>
-							<option value="all">Мойки</option>
-							<option value="all">Смесители</option>
-							<option value="all">Душевые системы</option>
-						</select>
-						<a href="#" class="btn btn-info">Добавить товар</a>
-						<a href="#" class="btn btn-wrong">Удалить все</a>
+						<div>
+							<button type="button" id="compare-all" class="btn btn-primary mb-10">Все характеристики</button>
+							<button type="button" id="compare-differences" class="btn btn-primary-outline">Показать различия</button>
+							<div class="compare-categories mt-20">
+								<div class="mb-10 title c-black text-sm w-semibold">Категории</div>
+								<select name="compare-categories" id="compare-categories" class="form-select">
+									<option value="all">Все (8)</option>
+									<option value="all">Мойки</option>
+									<option value="all">Смесители</option>
+									<option value="all">Душевые системы</option>
+								</select>
+							</div>
+						</div>
+						<div>
+							<a href="#" class="btn btn-info mb-10">Добавить товар</a>
+							<a href="#" class="btn btn-remove">Удалить все</a>
+						</div>
 					</div>
 					<div class="compare-header-products">
 						<div class="products-slider">
@@ -758,6 +771,9 @@
 								<div class="swiper-wrapper">
 									<div class="products-slide swiper-slide">
 										<div class="card card-product">
+											<a href="#" class="card-delete">
+												<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+											</a>
 											<div class="card-quick-view">
 												<button class="btn btn-outline">Быстрый просмотр</button>
 											</div>
@@ -836,6 +852,9 @@
 									</div><!-- /.slide -->
 									<div class="products-slide swiper-slide">
 										<div class="card card-product">
+											<a href="#" class="card-delete">
+												<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+											</a>
 											<div class="card-quick-view">
 												<button class="btn btn-outline">Быстрый просмотр</button>
 											</div>
@@ -914,6 +933,9 @@
 									</div><!-- /.slide -->
 									<div class="products-slide swiper-slide">
 										<div class="card card-product">
+											<a href="#" class="card-delete">
+												<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+											</a>
 											<div class="card-quick-view">
 												<button class="btn btn-outline">Быстрый просмотр</button>
 											</div>
@@ -992,6 +1014,9 @@
 									</div><!-- /.slide -->
 									<div class="products-slide swiper-slide">
 										<div class="card card-product">
+											<a href="#" class="card-delete">
+												<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+											</a>
 											<div class="card-quick-view">
 												<button class="btn btn-outline">Быстрый просмотр</button>
 											</div>
@@ -1070,6 +1095,9 @@
 									</div><!-- /.slide -->
 									<div class="products-slide swiper-slide">
 										<div class="card card-product">
+											<a href="#" class="card-delete">
+												<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+											</a>
 											<div class="card-quick-view">
 												<button class="btn btn-outline">Быстрый просмотр</button>
 											</div>
@@ -1148,6 +1176,9 @@
 									</div><!-- /.slide -->
 									<div class="products-slide swiper-slide">
 										<div class="card card-product">
+											<a href="#" class="card-delete">
+												<svg class="icon icon-delete"><use xlink:href="images/symbol-defs.svg#delete"></use></svg>
+											</a>
 											<div class="card-quick-view">
 												<button class="btn btn-outline">Быстрый просмотр</button>
 											</div>
@@ -1226,31 +1257,87 @@
 									</div><!-- /.slide -->
 								</div><!-- /.swiper-wrapper -->
 							</div><!-- /.product-slider-container -->
+							<div class="d-none d-xs-flex swiper-button-prev"></div>
+							<div class="d-none d-xs-flex swiper-button-next"></div>
 						</div><!-- /.products-slider -->
 					</div><!-- /.compare-header-products -->
 				</div><!-- /.compare-header -->
 				<div class="compare-table">
-					<div class="compare-table-row">
+					<div class="compare-table-keys">
 						<div class="compare-table-key">Производитель</div>
-						<div class="compare-table-value">Blanco</div>
-						<div class="compare-table-value">Blanco</div>
-						<div class="compare-table-value">Blanco</div>
-						<div class="compare-table-value">Blanco</div>
-					</div><!-- /.compare-table-row -->
-					<div class="compare-table-row">
 						<div class="compare-table-key">Артикул</div>
-						<div class="compare-table-value">Zia 40S</div>
-						<div class="compare-table-value">Zia 40S</div>
-						<div class="compare-table-value">Zia 40S</div>
-						<div class="compare-table-value">Zia 40S</div>
-					</div><!-- /.compare-table-row -->
-					<div class="compare-table-row">
 						<div class="compare-table-key">Материал изготовления</div>
-						<div class="compare-table-value">Искусственный камень</div>
-						<div class="compare-table-value">Искусственный камень</div>
-						<div class="compare-table-value">Искусственный камень</div>
-						<div class="compare-table-value">Искусственный камень</div>
-					</div><!-- /.compare-table-row -->
+						<div class="compare-table-key">Форма мойки</div>
+						<div class="compare-table-key">Страна</div>
+						<div class="compare-table-key">Тип монтажа</div>
+						<div class="compare-table-key">Размеры (ДхШ)</div>
+						<div class="compare-table-key">Глубина чаши</div>
+					</div>
+					<div class="compare-table-values swiper-container">
+						<div class="swiper-wrapper">
+							<div class="compare-table-slide swiper-slide">
+								<div class="compare-table-value" data-compare-title="Производитель">Blanco</div>
+								<div class="compare-table-value" data-compare-title="Артикул">Zia 40S</div>
+								<div class="compare-table-value" data-compare-title="Материал изготовления">Искусственный камень</div>
+								<div class="compare-table-value" data-compare-title="Форма мойки">Круглая</div>
+								<div class="compare-table-value" data-compare-title="Страна">Италия</div>
+								<div class="compare-table-value" data-compare-title="Тип монтажа">Врезная сверху</div>
+								<div class="compare-table-value" data-compare-title="Размеры (ДхШ)">440 х 400 мм</div>
+								<div class="compare-table-value" data-compare-title="Глубина чаши">180 мм</div>
+							</div><!-- /.compare-table-slide -->
+							<div class="compare-table-slide swiper-slide">
+								<div class="compare-table-value" data-compare-title="Производитель">Blanco</div>
+								<div class="compare-table-value" data-compare-title="Артикул">Zia 40S</div>
+								<div class="compare-table-value" data-compare-title="Материал изготовления">Керамика</div>
+								<div class="compare-table-value" data-compare-title="Форма мойки">Квадратная</div>
+								<div class="compare-table-value" data-compare-title="Страна">Италия</div>
+								<div class="compare-table-value" data-compare-title="Тип монтажа">Врезная сверху</div>
+								<div class="compare-table-value" data-compare-title="Размеры (ДхШ)">440 х 400 мм</div>
+								<div class="compare-table-value" data-compare-title="Глубина чаши">200 мм</div>
+							</div><!-- /.compare-table-slide -->
+							<div class="compare-table-slide swiper-slide">
+								<div class="compare-table-value" data-compare-title="Производитель">Blanco</div>
+								<div class="compare-table-value" data-compare-title="Артикул">Zia 40S</div>
+								<div class="compare-table-value" data-compare-title="Материал изготовления">Искусственный камень</div>
+								<div class="compare-table-value" data-compare-title="Форма мойки">Круглая</div>
+								<div class="compare-table-value" data-compare-title="Страна">Германия</div>
+								<div class="compare-table-value" data-compare-title="Тип монтажа">Врезная сверху</div>
+								<div class="compare-table-value" data-compare-title="Размеры (ДхШ)">440 х 400 мм</div>
+								<div class="compare-table-value" data-compare-title="Глубина чаши">170 мм</div>
+							</div><!-- /.compare-table-slide -->
+							<div class="compare-table-slide swiper-slide">
+								<div class="compare-table-value" data-compare-title="Производитель">Blanco</div>
+								<div class="compare-table-value" data-compare-title="Артикул">Zia 50S</div>
+								<div class="compare-table-value" data-compare-title="Материал изготовления">Искусственный камень</div>
+								<div class="compare-table-value" data-compare-title="Форма мойки">Круглая</div>
+								<div class="compare-table-value" data-compare-title="Страна">Франция</div>
+								<div class="compare-table-value" data-compare-title="Тип монтажа">Врезная сверху</div>
+								<div class="compare-table-value" data-compare-title="Размеры (ДхШ)">410 х 300 мм</div>
+								<div class="compare-table-value" data-compare-title="Глубина чаши">160 мм</div>
+							</div><!-- /.compare-table-slide -->
+							<div class="compare-table-slide swiper-slide">
+								<div class="compare-table-value" data-compare-title="Производитель">Blanco</div>
+								<div class="compare-table-value" data-compare-title="Артикул">Zia 40S</div>
+								<div class="compare-table-value" data-compare-title="Материал изготовления">Искусственный камень</div>
+								<div class="compare-table-value" data-compare-title="Форма мойки">Круглая</div>
+								<div class="compare-table-value" data-compare-title="Страна">Италия</div>
+								<div class="compare-table-value" data-compare-title="Тип монтажа">Врезная сверху</div>
+								<div class="compare-table-value" data-compare-title="Размеры (ДхШ)">440 х 400 мм</div>
+								<div class="compare-table-value" data-compare-title="Глубина чаши">180 мм</div>
+							</div><!-- /.compare-table-slide -->
+							<div class="compare-table-slide swiper-slide">
+								<div class="compare-table-value" data-compare-title="Производитель">Blanco</div>
+								<div class="compare-table-value" data-compare-title="Артикул">Zia 40S</div>
+								<div class="compare-table-value" data-compare-title="Материал изготовления">Искусственный камень</div>
+								<div class="compare-table-value" data-compare-title="Форма мойки">Круглая</div>
+								<div class="compare-table-value" data-compare-title="Страна">Италия</div>
+								<div class="compare-table-value" data-compare-title="Тип монтажа">Врезная сверху</div>
+								<div class="compare-table-value" data-compare-title="Размеры (ДхШ)">440 х 400 мм</div>
+								<div class="compare-table-value" data-compare-title="Глубина чаши">180 мм</div>
+							</div><!-- /.compare-table-slide -->
+						</div><!-- /.swiper-wrapper -->
+						<div class="swiper-scrollbar"></div>
+					</div><!-- /.compare-table-values -->
 				</div><!-- /.compare-table -->
 			</div>
 
@@ -1373,20 +1460,11 @@
 		</div>
 	</footer>
 
-	<!-- Stores contacts -->
-	<div class="stores">
-		<div class="stores-content">
-			<div class="stores-content-inner">
-				<div class="stores-item">
-					<div class="title">
-						<svg class="icon icon-metro"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
-						<span>Метро Домодедовская (ТРЦ "Вегас", "Твой Дом")</span>
-					</div>
-					<div class="info">
-						<a href="tel:+74952281233" title="Позвонить на данный номер">+7 (495)-228-12-33</a>
-					</div>
-				</div>
-				<div class="stores-item">
+	<!-- Stores button -->
+	<div class="btn-stores">
+		<div class="btn-stores-content">
+			<div class="btn-stores-content-inner">
+				<div class="btn-stores-item">
 					<div class="title">
 						<svg class="icon icon-metro"><use xlink:href="images/symbol-defs.svg#metro"></use></svg>
 						<span>Метро Южная (Самовывоз: ул. Дорожная, д.3, стр.3)</span>
@@ -1395,7 +1473,7 @@
 						<a href="tel:+74952583725" title="Позвонить на данный номер">+7 (495)-258-37-25</a>
 					</div>
 				</div>
-				<div class="stores-item">
+				<div class="btn-stores-item">
 					<div class="title">
 						<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
 						<span>Режим работы</span>
@@ -1404,14 +1482,14 @@
 						<span>Пн-Пт с 9:00 до 18:00</span>
 					</div>
 				</div>
-			</div><!-- /.stores-content-inner -->
-			<button class="stores-button">
-				<span class="stores-button-icon">
+			</div><!-- /.btn-stores-content-inner -->
+			<button class="btn-stores-button">
+				<span class="btn-stores-button-icon">
 					<svg class="icon icon-store"><use xlink:href="images/symbol-defs.svg#store"></use></svg>
 				</span>
-				<span class="stores-button-title">Магазин<br> онлайн</span>
+				<span class="btn-stores-button-title">Магазин<br> онлайн</span>
 			</button>
-		</div><!-- /.stores-content -->
+		</div><!-- /.btn-stores-content -->
 	</div>
 
 	<!-- Modal: Callback -->
