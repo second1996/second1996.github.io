@@ -53,7 +53,15 @@
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg)
 }
+.brands-countries-button:hover ~ .brands-countries-list {
+  border-color: #29b153
+}
 .brands-countries-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 20px 16px;
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 24px 2px rgba(68,68,79,.08);
@@ -67,7 +75,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 170px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 15.25%;
+  flex: 0 0 15.25%;
   height: 44px;
   margin: 5px 8px;
   padding-left: 15px;
@@ -395,7 +405,8 @@
     height: 33px
   }
   .brands-countries-item {
-    width: 160px
+    -ms-flex-preferred-size: 18.2%;
+    flex-basis: 18.2%
   }
   .brands-card {
     padding: 30px
@@ -430,6 +441,10 @@
     width: 32px;
     height: 32px;
     font-size: 13px
+  }
+  .brands-countries-item {
+    -ms-flex-preferred-size: 22.5%;
+    flex-basis: 22.5%
   }
   .brands-card {
     -webkit-box-orient: vertical;

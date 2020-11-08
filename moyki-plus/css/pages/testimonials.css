@@ -251,7 +251,7 @@
 }
 .testimonials-card-body {
   overflow: hidden;
-  max-height: 205px;
+  max-height: 90px;
   margin-top: 25px;
   color: #120c16
 }

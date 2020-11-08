@@ -429,6 +429,9 @@
 .h-about-gallery .swiper-pagination {
   bottom: 20px
 }
+.h-about-gallery-slide {
+  background-color: rgba(231,231,231,.35)
+}
 .h-about-gallery-slide img {
   width: 100%;
   height: 360px;
