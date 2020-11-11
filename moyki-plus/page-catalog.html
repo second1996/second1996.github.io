@@ -112,10 +112,10 @@
 							<div class="dropdown-menu dropdown-user-profile" aria-labelledby="userProfileLabel">
 								<ul class="dropdown-menu-list">
 									<li class="dropdown-menu-item">
-										<a href="#" class="dropdown-menu-link c-black text-xxs w-bold">Войти</a>
+										<a href="#userLoginModal" data-toggle="modal" class="dropdown-menu-link c-black text-xxs w-bold">Войти</a>
 									</li>
 									<li class="dropdown-menu-item">
-										<a href="#" class="dropdown-menu-link c-black text-xxs w-bold">Зарегистрироваться</a>
+										<a href="#userRegisterModal" data-toggle="modal" class="dropdown-menu-link c-black text-xxs w-bold">Зарегистрироваться</a>
 									</li>
 								</ul>
 							</div>
@@ -611,16 +611,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-1.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Functional FU 50.10</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="3 шт." data-quantity-value="3" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -632,16 +631,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-3.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Cube 76.10</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -653,16 +651,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-2.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Functional FU 50.10 гранит</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -674,16 +671,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-3.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Cube 76.10</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="2 шт." data-quantity-value="2" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -1580,6 +1576,116 @@
 						</div>
 						<div class="form-submit">
 							<button type="submit" class="btn btn-primary">Проверить статус заказа</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Login -->
+	<div class="modal authorization-modal fade" id="userLoginModal" tabindex="-1" aria-labelledby="userLoginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userLoginModalLabel">Вход</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="login-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="login-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="login-user-password" class="form-label">Пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="login-user-password" placeholder="Пароль" required autocomplete="off">
+							<div class="form-forgot-password"><a href="#userForgotPasswordModal" data-toggle="modal">Забыли пароль?</a></div>
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Войти</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас нет аккаунта?</div>
+						<a href="#userRegisterModal" data-toggle="modal" class="btn btn-primary-outline">Зарегистрироватся</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Registration -->
+	<div class="modal authorization-modal fade" id="userRegisterModal" tabindex="-1" aria-labelledby="userRegisterModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userRegisterModalLabel">Регистрация</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="register-user-name" class="form-label">Ваше имя</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--user" id="register-user-name" placeholder="Имя" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="register-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-password" class="form-label">Введите пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="register-user-password" placeholder="Пароль" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-confirm-password" class="form-label">Повторите пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="register-user-confirm-password" placeholder="Ещё раз пароль" required autocomplete="off">
+						</div>
+						<div class="form-submit-captcha">
+							<div class="form-captcha">
+								<img src="images/google-recaptcha.png" alt="Google Recaptcha">
+							</div>
+							<button type="submit" class="btn btn-primary">Зарегистрироватся</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас уже есть аккаунт?</div>
+						<a href="#userLoginModal" data-toggle="modal" class="btn btn-primary-outline">Войти</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Forgot password -->
+	<div class="modal authorization-modal fade" id="userForgotPasswordModal" tabindex="-1" aria-labelledby="userForgotPasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userForgotPasswordModalLabel">Восстановить пароль</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="user-restore-password" class="form-label">Ваше Email</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="user-restore-password" placeholder="Email" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Отправить новый пароль</button>
 						</div>
 					</form>
 				</div>

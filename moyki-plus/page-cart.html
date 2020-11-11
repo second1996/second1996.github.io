@@ -112,10 +112,10 @@
 							<div class="dropdown-menu dropdown-user-profile" aria-labelledby="userProfileLabel">
 								<ul class="dropdown-menu-list">
 									<li class="dropdown-menu-item">
-										<a href="#" class="dropdown-menu-link c-black text-xxs w-bold">Войти</a>
+										<a href="#userLoginModal" data-toggle="modal" class="dropdown-menu-link c-black text-xxs w-bold">Войти</a>
 									</li>
 									<li class="dropdown-menu-item">
-										<a href="#" class="dropdown-menu-link c-black text-xxs w-bold">Зарегистрироваться</a>
+										<a href="#userRegisterModal" data-toggle="modal" class="dropdown-menu-link c-black text-xxs w-bold">Зарегистрироваться</a>
 									</li>
 								</ul>
 							</div>
@@ -611,16 +611,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-1.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Functional FU 50.10</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="3 шт." data-quantity-value="3" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -632,16 +631,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-3.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Cube 76.10</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -653,16 +651,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-2.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Functional FU 50.10 гранит</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -674,16 +671,15 @@
 										<a href="page-single-product.html" class="product-photo">
 											<img src="images/products/product-3.jpg" alt="">
 										</a>
-										<div class="product-meta">
+										<form action="#" method="POST" class="product-meta">
 											<span class="title c-black text-xs w-medium">Мойка Telma Cube 76.10</span>
 											<div class="quantity">
-												<input type="hidden" value="1">
-												<span class="count"><em>1</em> шт.</span>
-												<button class="minus">-</button>
-												<button class="plus">+</button>
+												<input type="text" class="quantity-value form-control" name="mcart-quantity" value="2 шт." data-quantity-value="2" step="1" min="1" max="99" title="Количество" readonly>
+												<button type="button" class="quantity-minus">-</button>
+												<button type="button" class="quantity-plus">+</button>
 											</div>
 											<span class="price c-black text-sm w-medium">10 999 руб.</span>
-										</div>
+										</form>
 										<div class="product-remove">
 											<a href="#" class="btn-close">
 												<span></span>
@@ -783,6 +779,7 @@
 							</div><!-- /.order-item -->
 							<div class="order-item order-item-price">
 								<div class="order-price">
+									<div class="price-label">Цена за шт., Руб.</div>
 									<div class="price">
 										<ins>35 500 Руб.</ins>
 										<del>36 500 Руб.</del>
@@ -791,6 +788,7 @@
 							</div><!-- /.order-item -->
 							<div class="order-item order-item-total">
 								<div class="order-total">
+									<div class="price-label">Стоимость, Руб.</div>
 									<div class="price">
 										<ins>35 500 Руб.</ins>
 									</div>
@@ -837,6 +835,7 @@
 							</div><!-- /.order-item -->
 							<div class="order-item order-item-price">
 								<div class="order-price">
+									<div class="price-label">Цена за шт., Руб.</div>
 									<div class="price">
 										<ins>126 000 Руб.</ins>
 									</div>
@@ -844,6 +843,7 @@
 							</div><!-- /.order-item -->
 							<div class="order-item order-item-total">
 								<div class="order-total">
+									<div class="price-label">Стоимость, Руб.</div>
 									<div class="price">
 										<ins>126 000 Руб.</ins>
 									</div>
@@ -890,6 +890,7 @@
 							</div><!-- /.order-item -->
 							<div class="order-item order-item-price">
 								<div class="order-price">
+									<div class="price-label">Цена за шт., Руб.</div>
 									<div class="price">
 										<ins>9 600 Руб.</ins>
 										<del>12 300 Руб.</del>
@@ -898,6 +899,7 @@
 							</div><!-- /.order-item -->
 							<div class="order-item order-item-total">
 								<div class="order-total">
+									<div class="price-label">Стоимость, Руб.</div>
 									<div class="price">
 										<ins>9 600 Руб.</ins>
 									</div>
@@ -947,8 +949,89 @@
 					<div class="tab-content">
 						<!-- Quick order -->
 						<div class="tab-pane fade show active" id="checkout-quick-order" role="tabpanel" aria-labelledby="checkout-quick-order-tab">
-							<form action="#" method="POST" class="s-cart-checkout-form form">
-								<div class="row row-items">
+							<form action="#" method="POST" class="checkout-quick-form form">
+								<div class="checkout-step">
+									<div class="checkout-step-head">
+										<span class="step-number">1</span>
+										<span class="step-title">Регион доставки:</span>
+									</div>
+									<div class="checkout-step-body">
+										<div class="checkout-region">
+											<div class="checkout-region-item">
+												<input type="radio" id="c-quick-region-1" name="c-quick-region" checked>
+												<label for="c-quick-region-1">Москва</label>
+											</div>
+											<div class="checkout-region-item">
+												<input type="radio" id="c-quick-region-2" name="c-quick-region">
+												<label for="c-quick-region-2">Московская область</label>
+											</div>
+											<div class="checkout-region-item">
+												<input type="radio" id="c-quick-region-3" name="c-quick-region">
+												<label for="c-quick-region-3">Другой регион России</label>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.checkout-step -->
+								<div class="checkout-step">
+									<div class="checkout-step-head">
+										<span class="step-number">2</span>
+										<span class="step-title">Цена доставки:</span>
+									</div>
+									<div class="checkout-step-body">
+										<span class="d-block c-accent w-semibold">Уточняется у менеджера</span>
+									</div>
+								</div><!-- /.checkout-step -->
+								<div class="checkout-step">
+									<div class="checkout-step-head">
+										<span class="step-number">3</span>
+										<span class="step-title">Дата доставки:</span>
+									</div>
+									<div class="checkout-step-body">
+										<div class="checkout-datepicker" data-toggle="delivery-datepicker">
+											<input type="hidden" class="delivery-from" name="c-quick-time-delivery-from" readonly>
+											<input type="hidden" class="delivery-to" name="c-quick-time-delivery-to" readonly>
+											<span class="delivery-output">15 ноября</span>
+											<svg class="icon icon-calendar"><use xlink:href="images/symbol-defs.svg#calendar"></use></svg>
+										</div>
+									</div>
+								</div><!-- /.checkout-step -->
+								<div class="checkout-step">
+									<div class="checkout-step-head">
+										<span class="step-number">4</span>
+										<span class="step-title">Время доставки:</span>
+									</div>
+									<div class="checkout-step-body">
+										<select class="checkout-select form-control form-select" name="c-quick-time-delivery">
+											<option value="Весь день">Весь день</option>
+											<option value="С 9:00 — до 14:00">С 9:00 — до 14:00</option>
+											<option value="С 14:00 — до 18:00">С 14:00 — до 18:00</option>
+										</select>
+									</div>
+								</div><!-- /.checkout-step -->
+								<div class="checkout-step">
+									<div class="checkout-step-head">
+										<span class="step-number">5</span>
+										<span class="step-title">Оплата:</span>
+									</div>
+									<div class="checkout-step-body">
+										<div class="checkout-payment">
+											<div class="checkout-payment-item">
+												<input type="radio" id="c-quick-payment-1" name="c-quick-payment" checked>
+												<label for="c-quick-payment-1">Наличными при получении</label>
+											</div>
+											<div class="checkout-payment-item">
+												<input type="radio" id="c-quick-payment-2" name="c-quick-payment">
+												<label for="c-quick-payment-2">Оплата online</label>
+											</div>
+											<div class="checkout-payment-item">
+												<input type="radio" id="c-quick-payment-3" name="c-quick-payment">
+												<label for="c-quick-payment-3">Безналичный расчет</label>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.checkout-step -->
+								<!-- Summary -->
+								<div class="row row-items mt-50">
 									<div class="col-md-6">
 										<div class="checkout-summary-box">
 											<h4 class="checkout-summary-box-title c-black text-md w-bold">Заполните данные</h4>
@@ -964,6 +1047,9 @@
 														<input type="checkbox" name="checkout-quick-phone-mask" id="checkout-quick-phone-mask" checked>
 														<label for="checkout-quick-phone-mask" class="form-checkbox-label">Отобразить маску ввода номера телефона</label>
 													</div>
+												</div>
+												<div class="form-submit">
+													<button type="submit" class="btn btn-primary">Оформить заказ</button>
 												</div>
 											</div>
 										</div><!-- /.checkout-summary-box -->
@@ -984,7 +1070,7 @@
 						</div><!-- /.tab-pane -->
 						<!-- Full order -->
 						<div class="tab-pane fade" id="checkout-full-order" role="tabpanel" aria-labelledby="checkout-full-order-tab">
-							<form action="#" method="POST" class="s-cart-checkout-form form">
+							<form action="#" method="POST" class="checkout-full-form form">
 								<div class="checkout-step">
 									<div class="checkout-step-head">
 										<span class="step-number">1</span>
@@ -1064,10 +1150,12 @@
 													<label for="checkout-shipping-1" class="form-checkbox-label">Курьерская служба по Москве</label>
 												</div>
 												<div class="checkout-list-note">Доставка курьером для Москвы и Московской области</div>
-												<div class="checkout-list-date">
+												<div class="checkout-list-date" data-toggle="delivery-datepicker">
+													<input type="hidden" class="delivery-from" name="checkout-shipping-1-from" readonly>
+													<input type="hidden" class="delivery-to" name="checkout-shipping-1-to" readonly>
 													<span>Дата доставки:</span>
-													<div class="checkout-list-date-picker">
-														<span>15 ноября</span>
+													<div class="checkout-list-datepicker">
+														<span class="delivery-output">15 ноября</span>
 														<svg class="icon icon-calendar"><use xlink:href="images/symbol-defs.svg#calendar"></use></svg>
 													</div>
 												</div>
@@ -1079,10 +1167,12 @@
 													<label for="checkout-shipping-2" class="form-checkbox-label">Транспортной компанией</label>
 												</div>
 												<div class="checkout-list-note">Доставка транспортной компанией</div>
-												<div class="checkout-list-date">
+												<div class="checkout-list-date" data-toggle="delivery-datepicker">
+													<input type="hidden" class="delivery-from" name="checkout-shipping-2-from" readonly>
+													<input type="hidden" class="delivery-to" name="checkout-shipping-2-to" readonly>
 													<span>Дата доставки:</span>
-													<div class="checkout-list-date-picker">
-														<span>23 ноября</span>
+													<div class="checkout-list-datepicker">
+														<span class="delivery-output">23 ноября</span>
 														<svg class="icon icon-calendar"><use xlink:href="images/symbol-defs.svg#calendar"></use></svg>
 													</div>
 												</div>
@@ -1094,10 +1184,12 @@
 													<label for="checkout-shipping-3" class="form-checkbox-label">Самовывоз</label>
 												</div>
 												<div class="checkout-list-note">Самовывоз из склада, по адесу ул. Дорожная 3стр. 3А</div>
-												<div class="checkout-list-date">
+												<div class="checkout-list-date" data-toggle="delivery-datepicker">
+													<input type="hidden" class="delivery-from" name="checkout-shipping-3-from" readonly>
+													<input type="hidden" class="delivery-to" name="checkout-shipping-3-to" readonly>
 													<span>Дата самовывоза:</span>
-													<div class="checkout-list-date-picker">
-														<span>25 ноября</span>
+													<div class="checkout-list-datepicker">
+														<span class="delivery-output">25 ноября</span>
 														<svg class="icon icon-calendar"><use xlink:href="images/symbol-defs.svg#calendar"></use></svg>
 													</div>
 												</div>
@@ -1200,48 +1292,46 @@
 									</div><!-- /.row -->
 								</div><!-- /.checkout-additional -->
 								<!-- Summary -->
-								<div class="checkout-summary">
-									<div class="row row-items">
-										<div class="col-md-6">
-											<div class="checkout-summary-box">
-												<div class="checkout-summary-total">
-													<div class="discount"><span>Скидка:</span> <em>-754 Руб.</em></div>
-													<div class="total"><span>Итого:</span> <em>85 900 Руб.</em></div>
+								<div class="row row-items mt-30">
+									<div class="col-md-6">
+										<div class="checkout-summary-box">
+											<div class="checkout-summary-total">
+												<div class="discount"><span>Скидка:</span> <em>-754 Руб.</em></div>
+												<div class="total"><span>Итого:</span> <em>85 900 Руб.</em></div>
+											</div>
+											<div class="checkout-summary-check">
+												<div class="form-checkbox">
+													<input type="checkbox" name="checkout-summary-register" id="checkout-summary-register">
+													<label for="checkout-summary-register" class="form-checkbox-label">Зарегистрироваться на сайте</label>
 												</div>
-												<div class="checkout-summary-check">
-													<div class="form-checkbox">
-														<input type="checkbox" name="checkout-summary-register" id="checkout-summary-register">
-														<label for="checkout-summary-register" class="form-checkbox-label">Зарегистрироваться на сайте</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="checkout-summary-policy" id="checkout-summary-policy">
-														<label for="checkout-summary-policy" class="form-checkbox-label">Я подтверждаю, что ознакомлен и согласен с условиями <a href="#">предоставления даных</a></label>
-													</div>
+												<div class="form-checkbox">
+													<input type="checkbox" name="checkout-summary-policy" id="checkout-summary-policy">
+													<label for="checkout-summary-policy" class="form-checkbox-label">Я подтверждаю, что ознакомлен и согласен с условиями <a href="#">предоставления даных</a></label>
 												</div>
-												<div class="checkout-summary-complete">
-													<button type="submit" class="btn btn-primary">Оформить заказ</button>
+											</div>
+											<div class="checkout-summary-complete">
+												<button type="submit" class="btn btn-primary">Оформить заказ</button>
+											</div>
+										</div><!-- /.checkout-summary-box -->
+									</div><!-- /.col -->
+									<div class="col-md-6">
+										<div class="checkout-summary-box">
+											<div class="checkout-summary-warranty">
+												<div class="warranty-icon">
+													<img class="lazy" data-src="images/icons/warranty.svg" alt="14 дней на возврат">
 												</div>
-											</div><!-- /.checkout-summary-box -->
-										</div><!-- /.col -->
-										<div class="col-md-6">
-											<div class="checkout-summary-box">
-												<div class="checkout-summary-warranty">
-													<div class="warranty-icon">
-														<img class="lazy" data-src="images/icons/warranty.svg" alt="14 дней на возврат">
-													</div>
-													<p class="warranty-text"><span>14 дней на возврат</span> денег без вопросов если товар не подошел</p>
-												</div>
-											</div><!-- /.checkout-summary-box -->
-										</div><!-- /.col -->
-									</div><!-- /.row -->
-								</div><!-- /.checkout-summary -->
+												<p class="warranty-text"><span>14 дней на возврат</span> денег без вопросов если товар не подошел</p>
+											</div>
+										</div><!-- /.checkout-summary-box -->
+									</div><!-- /.col -->
+								</div><!-- /.row -->
 							</form><!-- /.s-cart-checkout-form -->
 						</div><!-- /.tab-pane -->
 					</div><!-- /.tab-content -->
 				</div><!-- /.s-cart-checkout -->
 
 				<!-- Shop Cart Guide -->
-				<div class="s-cart-guide mt-60">
+				<div class="s-cart-guide">
 					<article class="article">
 						<h3 class="title">Как работать с корзиной?</h3>
 						<ol>
@@ -1479,6 +1569,116 @@
 						</div>
 						<div class="form-submit">
 							<button type="submit" class="btn btn-primary">Проверить статус заказа</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Login -->
+	<div class="modal authorization-modal fade" id="userLoginModal" tabindex="-1" aria-labelledby="userLoginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userLoginModalLabel">Вход</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="login-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="login-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="login-user-password" class="form-label">Пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="login-user-password" placeholder="Пароль" required autocomplete="off">
+							<div class="form-forgot-password"><a href="#userForgotPasswordModal" data-toggle="modal">Забыли пароль?</a></div>
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Войти</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас нет аккаунта?</div>
+						<a href="#userRegisterModal" data-toggle="modal" class="btn btn-primary-outline">Зарегистрироватся</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Registration -->
+	<div class="modal authorization-modal fade" id="userRegisterModal" tabindex="-1" aria-labelledby="userRegisterModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userRegisterModalLabel">Регистрация</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="register-user-name" class="form-label">Ваше имя</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--user" id="register-user-name" placeholder="Имя" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="register-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-password" class="form-label">Введите пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="register-user-password" placeholder="Пароль" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-confirm-password" class="form-label">Повторите пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="register-user-confirm-password" placeholder="Ещё раз пароль" required autocomplete="off">
+						</div>
+						<div class="form-submit-captcha">
+							<div class="form-captcha">
+								<img src="images/google-recaptcha.png" alt="Google Recaptcha">
+							</div>
+							<button type="submit" class="btn btn-primary">Зарегистрироватся</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас уже есть аккаунт?</div>
+						<a href="#userLoginModal" data-toggle="modal" class="btn btn-primary-outline">Войти</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Forgot password -->
+	<div class="modal authorization-modal fade" id="userForgotPasswordModal" tabindex="-1" aria-labelledby="userForgotPasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userForgotPasswordModalLabel">Восстановить пароль</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="user-restore-password" class="form-label">Ваше Email</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="user-restore-password" placeholder="Email" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Отправить новый пароль</button>
 						</div>
 					</form>
 				</div>

@@ -1772,6 +1772,10 @@ html {
   border-width: 7px 7px 0;
   border-top-color: #763a9c
 }
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #763a9c
+}
 .tooltip.show {
   opacity: 1
 }

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<title>Мойки Плюс: Интернет магазин сантехники и бытовой техники для дома</title>
+	<meta name="description" content="➢ Большой ассортимент сантехники и бытовой техники для дома в Москве в интернет-магазине MoykiPlus ➢ Заказать по ☎ 8-(495)-642-26-05.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+	<style>
+		.modal-links-inner {
+			margin: -5px;
+		}
+		.modal-links-inner .btn {
+			margin: 5px;
+		}
+	</style>
+
+	<main class="site-main">
+		<div class="container">
+
+		<div class="pages-logo mb-30">
+			<a href="index.html">
+				<img src="images/logo.png" alt="МойкиПлюс">
+			</a>
+		</div>
+
+		<div class="modal-links">
+			<h3 class="mb-20 c-black text-md w-bold">Общие модальные окна</h3>
+			<div class="modal-links-inner">
+				<a href="#callbackModal" class="btn btn-primary" data-toggle="modal">Обратный звонок</a>
+				<a href="#checkOrderStatusModal" class="btn btn-primary" data-toggle="modal">Что с моим заказом?</a>
+				<a href="#userLoginModal" class="btn btn-primary" data-toggle="modal">Авторизация</a>
+				<a href="#userRegisterModal" class="btn btn-primary" data-toggle="modal">Регистрация</a>
+				<a href="#userForgotPasswordModal" class="btn btn-primary" data-toggle="modal">Восстановить пароль</a>
+				<a href="#userChangePassswordModal" class="btn btn-primary" data-toggle="modal">Изменить пароль</a>
+			</div>
+		</div>
+
+		<div class="modal-links mt-60">
+			<h3 class="mb-20 c-black text-md w-bold">Успешные модальные окна</h3>
+			<div class="modal-links-inner">
+				<a href="#callbackThanksModal" class="btn btn-primary" data-toggle="modal">Заказать обратный звонок</a>
+				<a href="#orderStatusCheckModal" class="btn btn-primary" data-toggle="modal">Что с моим заказом?</a>
+				<a href="#checkoutThanksModal" class="btn btn-primary" data-toggle="modal">Спасибо за заказ</a>
+				<a href="#successfulLoginModal" class="btn btn-primary" data-toggle="modal">Успешная авторизация</a>
+				<a href="#profileEditedModal" class="btn btn-primary" data-toggle="modal">Данные изменены</a>
+				<a href="#restorePasswordModal" class="btn btn-primary" data-toggle="modal">Пароль восстановлен</a>
+			</div>
+		</div>
+
+		<div class="modal-links mt-60">
+			<h3 class="mb-20 c-black text-md w-bold">Ошибочные модальные окна</h3>
+			<div class="modal-links-inner">
+				<a href="#errorModal" class="btn btn-primary" data-toggle="modal">Произошла ошибка</a>
+				<a href="#errorLoginModal" class="btn btn-primary" data-toggle="modal">Ошибочная авторизация</a>
+			</div>
+		</div>
+
+		</div><!-- /.container -->
+	</main>
+
+
+
+	<!-- Info Modal: Callback Thanks -->
+	<div class="modal info-modal fade" id="callbackThanksModal" tabindex="-1" aria-labelledby="callbackThanksModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="callbackThanksModalLabel">Заказать обратный звонок</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-done"><use xlink:href="images/symbol-defs.svg#done"></use></svg>
+						</div>
+						<div class="info-modal-text">Спасибо! Наш менеджер с Вам свяжется в ближайшее время</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info Modal: Order Status check -->
+	<div class="modal info-modal fade" id="orderStatusCheckModal" tabindex="-1" aria-labelledby="orderStatusCheckModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="orderStatusCheckModalLabel">Что с моим заказом?</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-done"><use xlink:href="images/symbol-defs.svg#done"></use></svg>
+						</div>
+						<div class="info-modal-text">Спасибо! Мы начали проверять заказ и менеджер магазина в ближайшее время Вам перезвонит</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info Modal: Checkout Thanks -->
+	<div class="modal info-modal fade" id="checkoutThanksModal" tabindex="-1" aria-labelledby="checkoutThanksModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="checkoutThanksModalLabel">Спасибо за заказ!</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-done"><use xlink:href="images/symbol-defs.svg#done"></use></svg>
+						</div>
+						<div class="info-modal-text">Наш менеджер с Вами свяжется в ближайшее время</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info Modal: Successful password restore -->
+	<div class="modal info-modal fade" id="restorePasswordModal" tabindex="-1" aria-labelledby="restorePasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="restorePasswordModalLabel">Информация для восстановления пароля отправлена на почту</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-restore-password"><use xlink:href="images/symbol-defs.svg#restore-password"></use></svg>
+						</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info Modal: Successful profile edit -->
+	<div class="modal info-modal fade" id="profileEditedModal" tabindex="-1" aria-labelledby="profileEditedModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="profileEditedModalLabel">Данные изменены</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-done"><use xlink:href="images/symbol-defs.svg#done"></use></svg>
+						</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info Modal: Successful login -->
+	<div class="modal info-modal fade" id="successfulLoginModal" tabindex="-1" aria-labelledby="successfulLoginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="successfulLoginModalLabel">Вы вошли в аккаунт</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-done"><use xlink:href="images/symbol-defs.svg#done"></use></svg>
+						</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info Modal: Successful registration -->
+	<div class="modal info-modal fade" id="successfulRegisterModal" tabindex="-1" aria-labelledby="successfulRegisterModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="successfulRegisterModalLabel">Регистрация прошла успешно!</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--succes">
+							<svg class="icon icon-done"><use xlink:href="images/symbol-defs.svg#done"></use></svg>
+						</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Error Modal: Successful registration -->
+	<div class="modal info-modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="errorModalLabel">Произошла ошибка</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="info-modal-wrapper">
+						<div class="info-modal-icon info-modal-icon--error">
+							<svg class="icon icon-error"><use xlink:href="images/symbol-defs.svg#error"></use></svg>
+						</div>
+						<button type="button" class="info-modal-btn btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Error Modal: User Login -->
+	<div class="modal authorization-modal fade" id="errorLoginModal" tabindex="-1" aria-labelledby="errorLoginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="errorLoginModalLabel">Вход</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-notification">
+							<ul class="form-notification-output">
+								<li>Логин или пароль введён не верно</li>
+								<li>Пользователь с таким логином не существует</li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<label for="login-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-control--error form-field-icon form-field-icon--email" id="login-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="login-user-password" class="form-label">Пароль</label>
+							<input type="password" class="form-control form-control--error form-field-icon form-field-icon--password" id="login-user-password" placeholder="Пароль" required autocomplete="off">
+							<div class="form-forgot-password"><a href="#userForgotPasswordModal" data-toggle="modal">Забыли пароль?</a></div>
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Войти</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас нет аккаунта?</div>
+						<a href="#userRegisterModal" data-toggle="modal" class="btn btn-primary-outline">Зарегистрироватся</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Modal: Callback -->
+	<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="callbackModalLabel">Заказать обратный звонок</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="cb-name" class="form-label">Ваше имя</label>
+							<input type="text" class="form-control form-field-icon form-field-icon--user" id="cb-name" placeholder="Евгений" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="cb-phone" class="form-label">Ваш телефон</label>
+							<input type="tel" class="form-control form-field-icon form-field-icon--phone" id="cb-phone" placeholder="+7 (___) ___-__-__" minlength="11" required autocomplete="off">
+							<div class="form-checkbox switch-input-mask">
+								<input type="checkbox" name="cb-phone-mask" id="cb-phone-mask" checked>
+								<label for="cb-phone-mask" class="form-checkbox-label">Отобразить маску ввода номера телефона</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cb-hours" class="form-label">Удобное время для звонка</label>
+							<input type="text" class="form-control form-field-icon form-field-icon--hours" id="cb-hours" placeholder="В любое время" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="cb-message" class="form-label">Комментарий</label>
+							<textarea class="form-textarea" id="cb-message"></textarea>
+						</div>
+						<div class="form-group form-checkbox">
+							<input type="checkbox" name="cb-policy" id="cb-policy" required>
+							<label for="cb-policy" class="form-checkbox-label">Я подтверждаю, что ознакомлен и согласен с условиями предоставления даных</label>
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Заказать</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Check order status -->
+	<div class="modal fade" id="checkOrderStatusModal" tabindex="-1" aria-labelledby="checkOrderStatusModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="checkOrderStatusModalLabel">Что с моим заказом?</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="os-phone" class="form-label">Ваш телефон</label>
+							<input type="tel" class="form-control form-field-icon form-field-icon--phone" id="os-phone" data-mask="+7 (999) 999-99-99" placeholder="+7 (___) ___-__-__" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="os-number" class="form-label">Номер заказа</label>
+							<input type="text" class="form-control form-field-icon form-field-icon--order" id="os-number" placeholder="4357854" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Проверить статус заказа</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Login -->
+	<div class="modal authorization-modal fade" id="userLoginModal" tabindex="-1" aria-labelledby="userLoginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userLoginModalLabel">Вход</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="login-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="login-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="login-user-password" class="form-label">Пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="login-user-password" placeholder="Пароль" required autocomplete="off">
+							<div class="form-forgot-password"><a href="#userForgotPasswordModal" data-toggle="modal">Забыли пароль?</a></div>
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Войти</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас нет аккаунта?</div>
+						<a href="#userRegisterModal" data-toggle="modal" class="btn btn-primary-outline">Зарегистрироватся</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Registration -->
+	<div class="modal authorization-modal fade" id="userRegisterModal" tabindex="-1" aria-labelledby="userRegisterModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userRegisterModalLabel">Регистрация</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="register-user-name" class="form-label">Ваше имя</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--user" id="register-user-name" placeholder="Имя" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-email" class="form-label">Ваш E-mail</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="register-user-email" placeholder="E-mail" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-password" class="form-label">Введите пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="register-user-password" placeholder="Пароль" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="register-user-confirm-password" class="form-label">Повторите пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="register-user-confirm-password" placeholder="Ещё раз пароль" required autocomplete="off">
+						</div>
+						<div class="form-submit-captcha">
+							<div class="form-captcha">
+								<img src="images/google-recaptcha.png" alt="Google Recaptcha">
+							</div>
+							<button type="submit" class="btn btn-primary">Зарегистрироватся</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="change-authorization">
+						<div class="title c-black text-xs">У Вас уже есть аккаунт?</div>
+						<a href="#userLoginModal" data-toggle="modal" class="btn btn-primary-outline">Войти</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Forgot password -->
+	<div class="modal authorization-modal fade" id="userForgotPasswordModal" tabindex="-1" aria-labelledby="userForgotPasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userForgotPasswordModalLabel">Восстановить пароль</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="user-restore-password" class="form-label">Ваше Email</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="user-restore-password" placeholder="Email" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Отправить новый пароль</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Change password -->
+	<div class="modal fade" id="userChangePassswordModal" tabindex="-1" aria-labelledby="userChangePassswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userChangePassswordModalLabel">Изменить пароль</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="user-current-password" class="form-label">Текущий пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="user-current-password" placeholder="Введить текущий пароль" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="user-new-password" class="form-label">Новый пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="user-new-password" placeholder="Введить новый пароль" required autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="user-confirm-password" class="form-label">Текущий пароль</label>
+							<input type="password" class="form-control form-field-icon form-field-icon--password" id="user-confirm-new-password" placeholder="Подтвердите новый пароль" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Изменить пароль</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: User Forgot password -->
+	<div class="modal fade" id="userForgotPasswordModal" tabindex="-1" aria-labelledby="userForgotPasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userForgotPasswordModalLabel">Восстановить пароль</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="POST" class="form">
+						<div class="form-group">
+							<label for="user-restore-password" class="form-label">Ваше Email</label>
+							<input type="email" class="form-control form-field-icon form-field-icon--email" id="user-restore-password" placeholder="Email" required autocomplete="off">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-primary">Отправить новый пароль</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/vendors.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
