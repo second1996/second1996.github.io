@@ -827,7 +827,7 @@
 	<div class="col-xs-6 col-md-4 col-lg-3 col-xl-auto">
 		<div class="card card-product">
 			<div class="card-quick-view">
-				<button class="btn btn-outline">Быстрый просмотр</button>
+				<button data-toggle="modal" data-target="#quickviewProductModal" class="btn btn-outline">Быстрый просмотр</button>
 			</div>
 			<div class="card-badge">
 				<div class="badge badge--green">Новинки</div>
@@ -916,7 +916,7 @@
 	<div class="col-xs-6 col-md-4 col-lg-3 col-xl-auto">
 		<div class="card card-product">
 			<div class="card-quick-view">
-				<button class="btn btn-outline">Быстрый просмотр</button>
+				<button data-toggle="modal" data-target="#quickviewProductModal" class="btn btn-outline">Быстрый просмотр</button>
 			</div>
 			<div class="card-badge">
 				<div class="badge badge--green">Новинки</div>
@@ -1000,7 +1000,7 @@
 	<div class="col-xs-6 col-md-4 col-lg-3 col-xl-auto">
 		<div class="card card-product no-attributes">
 			<div class="card-quick-view">
-				<button class="btn btn-outline">Быстрый просмотр</button>
+				<button data-toggle="modal" data-target="#quickviewProductModal" class="btn btn-outline">Быстрый просмотр</button>
 			</div>
 			<div class="card-badge">
 				<div class="badge badge--green">Новинки</div>
@@ -1094,7 +1094,7 @@
 	<div class="col-xs-6 col-md-4 col-lg-3 col-xl-auto">
 		<div class="card card-product no-attributes">
 			<div class="card-quick-view">
-				<button class="btn btn-outline">Быстрый просмотр</button>
+				<button data-toggle="modal" data-target="#quickviewProductModal" class="btn btn-outline">Быстрый просмотр</button>
 			</div>
 			<div class="card-badge">
 				<div class="badge badge--green">Новинки</div>
@@ -1178,7 +1178,7 @@
 	<div class="col-xs-6 col-md-4 col-lg-3 col-xl-auto">
 		<div class="card card-product">
 			<div class="card-quick-view">
-				<button class="btn btn-outline">Быстрый просмотр</button>
+				<button data-toggle="modal" data-target="#quickviewProductModal" class="btn btn-outline">Быстрый просмотр</button>
 			</div>
 			<div class="card-badge">
 				<div class="badge badge--green">Новинки</div>
@@ -1629,6 +1629,247 @@
 		</div>
 	</div>
 
+	<!-- Modal: Quick product view -->
+<div class="modal quickview-modal fade" id="quickviewProductModal" tabindex="-1" aria-labelledby="quickviewProductModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="quickviewProductModalLabel">Кухонная мойка Blanco Zia 40S</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="quickview scrollbar">
+					<div class="quickview-head">
+						<div class="price">
+							<span class="price-label text-xs">Цена:</span>
+							<span class="price-wrapper">
+								<ins>35 500 Руб.</ins>
+								<del>36 500 Руб.</del>
+							</span>
+						</div>
+						<div class="actions">
+							<a href="#" class="wishlist-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Добавить в желаемое">
+								<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+							</a>
+							<a href="#" class="compare-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Добавить в сравнение">
+								<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+							</a>
+							<form action="#">
+								<button type="button" class="order-btn btn btn-primary">
+									<span class="buy">Купить</span>
+									<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+								</button>
+							</form>
+						</div>
+					</div><!-- /.quickview-head -->
+					<div class="quickview-nav">
+						<div class="quickview-nav-slider swiper-container">
+							<div class="quickview-nav-wrapper swiper-wrapper">
+								<div class="quickview-nav-slide swiper-slide">
+									<a href="#" role="button">Фото</a>
+								</div>
+								<div class="quickview-nav-slide swiper-slide">
+									<a href="#" role="button">Характеристики</a>
+								</div>
+								<div class="quickview-nav-slide swiper-slide">
+									<a href="#" role="button">Отзывы</a>
+								</div>
+								<div class="quickview-nav-slide swiper-slide">
+									<a href="page-single-product.html" class="product-link">На страницу товара</a>
+								</div>
+							</div><!-- /.swiper-wrapper -->
+						</div><!-- /.quickview-nav-slider -->
+					</div><!-- /.quickview-nav -->
+					<div class="quickview-body">
+						<div class="quickview-body-slider">
+							<div class="swiper-wrapper">
+								<!-- Product Photo -->
+								<div class="quickview-body-slide swiper-slide">
+									<div class="quickview-body-inner quickview-photo">
+										<div class="quickview-photo-slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-1.jpg" alt="">
+													<div class="lazy-preloader"></div>
+												</div>
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-2.jpg" alt="">
+													<div class="lazy-preloader"></div>
+												</div>
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-3.jpg" alt="">
+													<div class="lazy-preloader"></div>
+												</div>
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-4.png" alt="">
+													<div class="lazy-preloader"></div>
+												</div>
+												<div class="swiper-slide has-video">
+													<a href="https://www.youtube.com/watch?v=zMZHHdVUMUo" data-fancybox>
+														<img class="lazy" data-src="images/about-video-preview.jpg" alt="Мойка Longran Ultra ULS780.500">
+														<div class="lazy-preloader"></div>
+													</a>
+												</div>
+											</div>
+											<div class="d-none d-md-flex swiper-button-prev swiper-button--large"></div>
+											<div class="d-none d-md-flex swiper-button-next swiper-button--large"></div>
+										</div><!-- /.quickview-photo-slider -->
+										<div class="quickview-photo-thumbs-slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-1.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-2.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-3.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img class="lazy" data-src="images/products/product-4.png" alt="">
+												</div>
+												<div class="swiper-slide has-video">
+													<img class="lazy" data-src="images/about-video-preview.jpg" alt="">
+												</div>
+											</div>
+										</div><!-- /.quickview-thumbs-slider -->
+									</div><!-- /.quickview-photo -->
+								</div><!-- /.slide -->
+								<!-- Product Attributes -->
+								<div class="quickview-body-slide swiper-slide">
+									<div class="quickview-body-inner quickview-attributes">
+										<table>
+											<tbody>
+												<tr>
+													<th class="name">Артикул товара</th>
+													<td class="value">856
+														<span class="hint" data-toggle="tooltip" data-placement="right" title="Артикул товара на складе">
+															<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+														</span>
+													</td>
+													<th class="name">Материал</th>
+													<td class="value">Гранит
+														<span class="hint" data-toggle="tooltip" data-placement="right" title="Мойка изготовлена из гранита, высокого качества и прочности">
+															<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="name">Раздел</th>
+													<td class="value">Мойки для кухни</td>
+													<th class="name">Установка</th>
+													<td class="value">Врезная
+														<span class="hint" data-toggle="tooltip" data-placement="right" title="Текст подсказки...">
+															<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="name">Бренд</th>
+													<td class="value">Longran, Италия</td>
+													<th class="name">Ширина шкафа</th>
+													<td class="value">от 600 мм</td>
+												</tr>
+												<tr>
+													<th class="name">Артикул товара</th>
+													<td class="value">856
+														<span class="hint" data-toggle="tooltip" data-placement="right" title="Текст подсказки...">
+															<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+														</span>
+													</td>
+													<th class="name">Материал</th>
+													<td class="value">Гранит
+														<span class="hint" data-toggle="tooltip" data-placement="right" title="Текст подсказки...">
+															<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="name">Раздел</th>
+													<td class="value">Мойки для кухни</td>
+													<th class="name">Установка</th>
+													<td class="value">Врезная
+														<span class="hint" data-toggle="tooltip" data-placement="right" title="Текст подсказки...">
+															<svg class="icon icon-information"><use xlink:href="images/symbol-defs.svg#information"></use></svg>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="name">Бренд</th>
+													<td class="value">Longran, Италия</td>
+													<th class="name">Ширина шкафа</th>
+													<td class="value">от 600 мм</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div><!-- /.slide -->
+								<!-- Product Testimonials -->
+								<div class="quickview-body-slide swiper-slide">
+									<div class="quickview-body-inner quickview-testimonials">
+										<div class="testimonials-card">
+											<div class="testimonials-card-header">
+												<div class="author">
+													<div class="name text-xs c-black w-semibold">Мария Зайцева</div>
+													<div class="date">
+														<div class="date-icon icon-border">
+															<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+														</div>
+														<span class="c-accent text-xxs w-semibold">08.07.2020</span>
+													</div>
+												</div><!-- /.author -->
+											</div>
+											<div class="testimonials-card-body">
+												<p>Прямоугольная кухонная мойка Longran имеет стильный характер, она проста и элегантна, отвечает современной потребностив сочетании красоты и функциональности. Времена, когда в каждом доме была одинаковая типовая кухонная раковина давно прошли, сейчас прослеживается тенденция создавать необычный дизайн кухонного пространства, сочетая разные формы, цвета, материалы и фактуры. Кухонная мойка Longran помогает оформить кухню стильно, уютно и современно. Абсолютно безопасена для пищевых продуктов. Длительный срок эксплуатации.</p>
+											</div>
+										</div><!-- /.testimonials-card -->
+										<div class="testimonials-card">
+											<div class="testimonials-card-header">
+												<div class="author">
+													<div class="name text-xs c-black w-semibold">Мария Зайцева</div>
+													<div class="date">
+														<div class="date-icon icon-border">
+															<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+														</div>
+														<span class="c-accent text-xxs w-semibold">08.07.2020</span>
+													</div>
+												</div><!-- /.author -->
+											</div>
+											<div class="testimonials-card-body">
+												<p>Кухонная мойка Longran помогает оформить кухню стильно, уютно и современно. Абсолютно безопасена для пищевых продуктов. Длительный срок эксплуатации. Не меняет цвет при контакте с красящими веществами. Устойчива к воздействию высоких температур. В эксплуатации она будет удобна и будет идеально сочетаться с кухонной мебелью.</p>
+											</div>
+										</div><!-- /.testimonials-card -->
+										<div class="testimonials-card">
+											<div class="testimonials-card-header">
+												<div class="author">
+													<div class="name text-xs c-black w-semibold">Мария Зайцева</div>
+													<div class="date">
+														<div class="date-icon icon-border">
+															<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+														</div>
+														<span class="c-accent text-xxs w-semibold">08.07.2020</span>
+													</div>
+												</div><!-- /.author -->
+											</div>
+											<div class="testimonials-card-body">
+												<p>Прямоугольная кухонная мойка Longran имеет стильный характер, она проста и элегантна, отвечает современной потребностив сочетании красоты и функциональности.</p>
+											</div>
+										</div><!-- /.testimonials-card -->
+									</div><!-- /.quickview-testimonials -->
+								</div><!-- /.slide -->
+							</div><!-- /.swiper-wrapper -->
+						</div><!-- /.quickview-body-slider -->
+					</div><!-- /.quickview-body -->
+				</div><!-- /.quickview -->
+
+			</div>
+		</div>
+	</div>
+</div>
+
 	<!-- Mobile Menu -->
 	<div class="m-menu scrollbar">
 		<div class="m-menu-wrapper">
@@ -1909,9 +2150,10 @@
 		<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
 	</button>
 
-	<script src="js/vendors.min.js"></script>
-	<script src="js/app.min.js"></script>
-	<script src="js/shop-scripts.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vendors.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/shop-scripts.js"></script>
 
 </body>
 </html>

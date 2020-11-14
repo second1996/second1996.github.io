@@ -136,10 +136,13 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box
 }
-.product-single .product-preview-photo-slide.has-video img:hover {
-  opacity: .75
+.product-single .product-preview-photo-slide.has-video a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%
 }
-.product-single .product-preview-photo-slide.has-video::after {
+.product-single .product-preview-photo-slide.has-video a::after {
   content: '';
   pointer-events: none;
   position: absolute;
@@ -149,6 +152,9 @@
   bottom: 0;
   border-radius: 5px;
   background: url(../../images/icons/play.svg) no-repeat center/26px
+}
+.product-single .product-preview-photo-slide.has-video img:hover {
+  opacity: .75
 }
 .product-single .product-preview-photo-slide img {
   width: 100%;
@@ -236,6 +242,78 @@
   height: 85%;
   -o-object-fit: scale-down;
   object-fit: scale-down
+}
+.product-single .product-share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 20px
+}
+.product-single .product-share-label {
+  margin-right: 12px;
+  color: #120c16;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1
+}
+.product-single .product-share-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.product-single .product-share-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: #e78332;
+  color: #fff;
+  font-size: 15px
+}
+.product-single .product-share-button:not(:last-child) {
+  margin-right: 6px
+}
+.product-single .product-share-button:hover {
+  background-color: #dc701a;
+  color: #fff
+}
+.product-single .product-share-button.vkontakte {
+  background-color: #547bcf
+}
+.product-single .product-share-button.vkontakte:hover {
+  background-color: #3865c7
+}
+.product-single .product-share-button.facebook {
+  background-color: #3b5998
+}
+.product-single .product-share-button.facebook:hover {
+  background-color: #314a7e
+}
+.product-single .product-share-button.odnoklassniki {
+  background-color: #orange
+}
+.product-single .product-share-button.odnoklassniki:hover {
+  background-color: #dc701a
+}
+.product-single .product-share-button.twitter {
+  background-color: #4285f4
+}
+.product-single .product-share-button.twitter:hover {
+  background-color: #206ff2
 }
 .product-single .product-attributes {
   margin-top: 50px

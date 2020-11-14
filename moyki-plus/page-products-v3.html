@@ -13,7 +13,6 @@
 	<link rel="stylesheet" href="css/vendor/bootstrap.css">
 	<link rel="stylesheet" href="css/vendor/swiper.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/pages/pickup.css">
 
 </head>
 
@@ -718,315 +717,403 @@
 	</div>
 </div>
 
-	<main class="site-main">
+	<main class="site-main shop-products">
 		<div class="container">
 
 			<!-- Breadcrumbs -->
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
 					<li><a href="page-home.html">Главная</a></li>
-					<li><span>Самовывоз</span></li>
+					<li><span>Карточка товара — вид №3</span></li>
 				</ul>
-			</div>
-
-			<!-- Promo banner -->
-			<div class="promo-banner">
-				<div class="promo-banner-slider swiper-large-arrows">
-					<div class="promo-banner-slider-container swiper-container">
-						<div class="promo-banner-wrapper swiper-wrapper">
-							<div class="promo-banner-slide swiper-slide">
-								<picture>
-									<source media="(min-width: 576px)" data-srcset="images/promo-banner.jpg" />
-									<source media="(min-width: 320px)" data-srcset="images/promo-banner-2.jpg" />
-									<img class="lazy" data-src="images/promo-banner-2.jpg" alt="Promo Banner">
-									<div class="lazy-preloader"></div>
-								</picture>
-							</div>
-							<div class="promo-banner-slide swiper-slide">
-								<picture>
-									<source media="(min-width: 576px)" data-srcset="images/promo-banner.jpg" />
-									<source media="(min-width: 320px)" data-srcset="images/promo-banner-2.jpg" />
-									<img class="lazy" data-src="images/promo-banner-2.jpg" alt="Promo Banner">
-									<div class="lazy-preloader"></div>
-								</picture>
-							</div>
-						</div>
-						<div class="swiper-pagination swiper-pagination--white"></div>
-					</div>
-					<div class="swiper-button-prev swiper-button--large"></div>
-					<div class="swiper-button-next swiper-button--large"></div>
-				</div>
 			</div>
 
 			<!-- Page title -->
-			<h1 class="page-title text-xl w-bold text-center">Самовывоз</h1>
+			<h1 class="page-title text-xl w-bold text-center">Карточка товара — вид №3</h1>
 
-			<!-- Pickup content -->
-			<div class="pickup">
-				<nav class="tabs">
-					<div class="nav nav-tabs" role="tablist">
-						<a class="nav-link active" id="pickup-tab-1" data-toggle="tab" href="#pickup-content-1" role="tab" aria-controls="pickup-content-1" aria-selected="true">Склад</a>
-						<a class="nav-link" id="pickup-tab-2" data-toggle="tab" href="#pickup-content-2" role="tab" aria-controls="pickup-content-2" aria-selected="false">Магазин на Домодедовской</a>
+			<div class="s-category-tabs mb-40">
+				<nav class="product-tabs-nav tabs">
+					<div class="nav nav-tabs">
+						<a class="nav-link" href="page-products-v1.html">
+							<svg class="icon icon-view-grid"><use xlink:href="images/symbol-defs.svg#view-grid"></use></svg>
+							<span>Вид карточки №1</span>
+						</a>
+						<a class="nav-link" href="page-products-v2.html">
+							<svg class="icon icon-view-row"><use xlink:href="images/symbol-defs.svg#view-row"></use></svg>
+							<span>Вид карточки №2</span>
+						</a>
+						<a class="nav-link active" href="page-products-v3.html">
+							<svg class="icon icon-view-row-inline"><use xlink:href="images/symbol-defs.svg#view-row-inline"></use></svg>
+							<span>Вид карточки №3</span>
+						</a>
+						<a class="nav-link" href="page-products-v4.html">
+							<svg class="icon icon-view-grid-more"><use xlink:href="images/symbol-defs.svg#view-grid-more"></use></svg>
+							<span>Вид карточки №4</span>
+						</a>
 					</div>
-				</nav><!-- /.tabs-nav -->
-				<div class="tab-content">
-					<div class="tab-pane fade show active" id="pickup-content-1" role="tabpanel" aria-labelledby="pickup-tab-1">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="row">
-									<div class="col-12 col-sm-6 col-md-12">
-										<div class="pickup-photo">
-											<img class="lazy" data-src="images/pickup-2.jpg" alt="">
-											<div class="lazy-preloader"></div>
-										</div>
-									</div>
-									<div class="col-12 col-sm-6 col-md-12">
-										<div class="pickup-photo">
-											<img class="lazy" data-src="images/pickup-1.jpg" alt="">
-											<div class="lazy-preloader"></div>
-										</div>
-									</div>
-								</div>
-							</div><!-- /.col -->
-							<div class="col-md-8">
-								<article class="pickup-content">
-									<p>Самовывоз осуществляется бесплатно по предварительному заказу товара и оговорённому времени по следующим адресам:</p>
-									<!-- Contacts -->
-									<div class="pickup-contacts">
-										<div class="pickup-contacts-item">
-											<div class="pickup-contacts-icon icon-border">
-												<svg class="icon icon-home"><use xlink:href="images/symbol-defs.svg#home"></use></svg>
-											</div>
-											<div class="pickup-contacts-content">
-												<span class="title c-gray text-xxs">Самовывоз-склад-офис</span>
-												<span class="text c-black text-xxs w-medium">м. Южная (ул. Дорожная 3 стр. 3А)</span>
-											</div>
-										</div><!-- /.pickup-contacts-item -->
-										<div class="pickup-contacts-item">
-											<div class="pickup-contacts-icon icon-border">
-												<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
-											</div>
-											<div class="pickup-contacts-content">
-												<span class="title c-gray text-xxs">Режим работы</span>
-												<span class="text c-black text-xxs w-medium">Пн-Пт с 9:00 до 17:30<br> Сб-Вс выходные</span>
-											</div>
-										</div><!-- /.pickup-contacts-item -->
-										<div class="pickup-contacts-item">
-											<div class="pickup-contacts-icon icon-border">
-												<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
-											</div>
-											<div class="pickup-contacts-content">
-												<span class="title c-gray text-xxs">Телефон</span>
-												<a href="tel:+74956422605" class="text c-black text-xxs w-medium">+7 (495) 642-26-05</a>
-											</div>
-										</div><!-- /.pickup-contacts-item -->
-									</div><!-- /.pickup-contacts -->
-									<p>Уважаемые покупатели в нашем выставочном зале демонстрируется далеко не весь товар который Вы можете найти на нашем сайте. Товар на складе находится в упаковке, ктоторую можно вскрыть только прри покупке товара для проверки его целостности и комплектности.</p>
-									<p>Уважаемые покупатели в нашем выставочном зале демонстрируется далеко не весь товар который Вы можете найти на нашем сайте. Товар на складе находится в упаковке, ктоторую можно вскрыть только прри покупке товара для проверки его целостности и комплектности.</p>
-								</article><!-- /.pickup-content -->
-							</div><!-- /.col -->
-							<div class="col-12">
-								<div class="pickup-map">
-									<iframe class="lazy" data-src="https://yandex.ru/map-widget/v1/-/CCQ~bGF~dA" frameborder="0"></iframe>
-									<div class="lazy-preloader"></div>
-								</div>
-							</div><!-- /.col -->
-							<div class="col-12">
-								<h3 class="mb-30 text-sm w-semibold">Схема проезда на склад</h3>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="pickup-plan">
-											<img class="lazy" data-src="images/pickup-plan.jpg" alt="Схема проезда на склад">
-										</div>
-									</div><!-- /.col -->
-									<div class="col-md-6">
-										<div class="pickup-gallery">
-											<div class="pickup-gallery-slider swiper-container">
-												<div class="swiper-wrapper">
-													<div class="pickup-gallery-slide swiper-slide">
-														<a href="https://mo.fishretail.ru/data/tradeboard/3353/tradeboardApZOOc_img.jpg" data-fancybox="pickup-gallery-1">
-															<img class="lazy" data-src="https://mo.fishretail.ru/data/tradeboard/3353/tradeboardApZOOc_img.jpg" alt="">
-															<div class="lazy-preloader"></div>
-														</a>
-													</div>
-													<div class="pickup-gallery-slide swiper-slide">
-														<a href="https://alians-kirov.ru/statics/project_photos/489/57921c9c91607.jpg" data-fancybox="pickup-gallery-1">
-															<img class="lazy" data-src="https://alians-kirov.ru/statics/project_photos/489/57921c9c91607.jpg" alt="">
-														</a>
-													</div>
-												</div>
-											</div><!-- /.swiper-wrapper -->
-											<div class="swiper-pagination"></div>
-											<div class="d-none d-md-flex swiper-button-prev swiper-button--large"></div>
-											<div class="d-none d-md-flex swiper-button-next swiper-button--large"></div>
-										</div>
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.tab-pane -->
-					<div class="tab-pane fade" id="pickup-content-2" role="tabpanel" aria-labelledby="pickup-tab-2">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="row">
-									<div class="col-12 col-sm-6 col-md-12">
-										<div class="pickup-photo">
-											<img class="lazy" data-src="images/pickup-1.jpg" alt="">
-											<div class="lazy-preloader"></div>
-										</div>
-									</div>
-									<div class="col-12 col-sm-6 col-md-12">
-										<div class="pickup-photo">
-											<img class="lazy" data-src="images/pickup-2.jpg" alt="">
-											<div class="lazy-preloader"></div>
-										</div>
-									</div>
-								</div>
-							</div><!-- /.col -->
-							<div class="col-md-8">
-								<article class="pickup-content">
-									<p>Самовывоз из магазина на Домодедовской осуществляется бесплатно по предварительному заказу товара и оговорённому времени по следующим адресам:</p>
-									<!-- Contacts -->
-									<div class="pickup-contacts">
-										<div class="pickup-contacts-item">
-											<div class="pickup-contacts-icon icon-border">
-												<svg class="icon icon-home"><use xlink:href="images/symbol-defs.svg#home"></use></svg>
-											</div>
-											<div class="pickup-contacts-content">
-												<span class="title c-gray text-xxs">Магазин на Домодедовской</span>
-												<span class="text c-black text-xxs w-medium">м. Южная (ул. Дорожная 3 стр. 3А)</span>
-											</div>
-										</div><!-- /.pickup-contacts-item -->
-										<div class="pickup-contacts-item">
-											<div class="pickup-contacts-icon icon-border">
-												<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
-											</div>
-											<div class="pickup-contacts-content">
-												<span class="title c-gray text-xxs">Режим работы</span>
-												<span class="text c-black text-xxs w-medium">Пн-Пт с 9:00 до 17:30<br> Сб-Вс выходные</span>
-											</div>
-										</div><!-- /.pickup-contacts-item -->
-										<div class="pickup-contacts-item">
-											<div class="pickup-contacts-icon icon-border">
-												<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
-											</div>
-											<div class="pickup-contacts-content">
-												<span class="title c-gray text-xxs">Телефон</span>
-												<a href="tel:+74956422605" class="text c-black text-xxs w-medium">+7 (495) 642-26-05</a>
-											</div>
-										</div><!-- /.pickup-contacts-item -->
-									</div><!-- /.pickup-contacts -->
-									<p>Уважаемые покупатели в нашем выставочном зале демонстрируется далеко не весь товар который Вы можете найти на нашем сайте. Товар на складе находится в упаковке, ктоторую можно вскрыть только прри покупке товара для проверки его целостности и комплектности.</p>
-									<p>Уважаемые покупатели в нашем выставочном зале демонстрируется далеко не весь товар который Вы можете найти на нашем сайте. Товар на складе находится в упаковке, ктоторую можно вскрыть только прри покупке товара для проверки его целостности и комплектности.</p>
-								</article><!-- /.pickup-content -->
-							</div><!-- /.col -->
-							<div class="col-12">
-								<div class="pickup-map">
-									<iframe class="lazy" data-src="https://yandex.ru/map-widget/v1/-/CCQ~bGF~dA" frameborder="0"></iframe>
-									<div class="lazy-preloader"></div>
-								</div>
-							</div><!-- /.col -->
-							<div class="col-12">
-								<h3 class="mb-30 text-sm w-semibold">Схема проезда на склад</h3>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="pickup-plan">
-											<img class="lazy" data-src="images/pickup-plan.jpg" alt="Схема проезда на склад">
-										</div>
-									</div><!-- /.col -->
-									<div class="col-md-6">
-										<div class="pickup-gallery">
-											<div class="pickup-gallery-slider swiper-container">
-												<div class="swiper-wrapper">
-													<div class="pickup-gallery-slide swiper-slide">
-														<a href="https://mo.fishretail.ru/data/tradeboard/3353/tradeboardApZOOc_img.jpg" data-fancybox="pickup-gallery-2">
-															<img class="lazy" data-src="https://mo.fishretail.ru/data/tradeboard/3353/tradeboardApZOOc_img.jpg" alt="">
-															<div class="lazy-preloader"></div>
-														</a>
-													</div>
-													<div class="pickup-gallery-slide swiper-slide">
-														<a href="https://alians-kirov.ru/statics/project_photos/489/57921c9c91607.jpg" data-fancybox="pickup-gallery-2">
-															<img class="lazy" data-src="https://alians-kirov.ru/statics/project_photos/489/57921c9c91607.jpg" alt="">
-														</a>
-													</div>
-												</div>
-											</div><!-- /.swiper-wrapper -->
-											<div class="swiper-pagination"></div>
-											<div class="d-none d-md-flex swiper-button-prev swiper-button--large"></div>
-											<div class="d-none d-md-flex swiper-button-next swiper-button--large"></div>
-										</div>
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.tab-pane -->
-				</div><!-- /.tab-content -->
-			</div><!-- /.pickup -->
+				</nav>
+			</div><!-- /.s-category-tabs -->
 
-			<!-- Question Form -->
-			<section class="page-form mt-80 mb-80">
-				<h2 class="page-form-title text-xl w-semibold">Задать вопрос</h2>
-				<form action="#" method="POST" class="form form-light">
-					<div class="row">
-						<div class="col-lg-4">
-							<input type="text" name="question-name" class="form-control" placeholder="Укажите Ваше имя" required>
+			<!-- Products items -->
+			<h2 class="mb-30 c-black text-lg w-bold">Вид карточек без сайдбара</h2>
+			<div class="row products-row-inline">
+				<div class="col-12">
+					<div class="card card-product card-product--v3">
+						<div class="card-meta">
+							<a href="page-single-product.html" class="product-link"></a>
+							<div class="product-title">
+								<span class="stock in-stock text-xxs">В наличии</span>
+								<span class="title c-black text-sm w-bold">Кухонная мойка Blanco Zia 40S</span>
+							</div>
+							<div class="product-price">
+								<div class="price">
+									<span class="price-label text-xs">Цена:</span>
+									<span class="price-wrapper">
+										<ins>102 999 Руб.</ins>
+										<del>96 300 Руб.</del>
+									</span>
+								</div>
+							</div>
+							<div class="product-quantity">
+								<div class="quantity">
+									<button type="button" class="quantity-minus">-</button>
+									<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+									<button type="button" class="quantity-plus">+</button>
+								</div>
+							</div>
 						</div>
-						<div class="col-lg-4">
-							<input type="email" name="question-email" class="form-control" placeholder="Укажите Ваш email" required>
+						<div class="card-actions">
+							<a href="#" class="compare-btn btn btn-outline _active" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+								<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+							</a>
+							<a href="#" class="wishlist-btn btn btn-outline _active" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+								<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+							</a>
+							<form action="#">
+								<button type="button" class="order-btn btn btn-primary _active">
+									<span class="buy">Купить</span>
+									<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+								</button>
+							</form>
 						</div>
-						<div class="col-lg-4">
-							<input type="tel" name="question-phone" class="form-control" data-mask="+7 (000) 000-00-00" placeholder="Укажите Ваш номер телефона" required>
+					</div><!-- /.card-product -->
+				</div><!-- /.col -->
+				<div class="col-12">
+					<div class="card card-product card-product--v3">
+						<div class="card-meta">
+							<a href="page-single-product.html" class="product-link"></a>
+							<div class="product-title">
+								<span class="stock in-stock text-xxs">В наличии</span>
+								<span class="title c-black text-sm w-bold">Доска разделочная передвижная универсальная (для моек шириной 480- 525мм кроме серии Venus)</span>
+							</div>
+							<div class="product-price">
+								<div class="price">
+									<span class="price-label text-xs">Цена:</span>
+									<span class="price-wrapper">
+										<ins>5 500 Руб.</ins>
+										<del>6 500 Руб.</del>
+									</span>
+								</div>
+							</div>
+							<div class="product-quantity">
+								<div class="quantity">
+									<button type="button" class="quantity-minus">-</button>
+									<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+									<button type="button" class="quantity-plus">+</button>
+								</div>
+							</div>
 						</div>
+						<div class="card-actions">
+							<a href="#" class="compare-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+								<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+							</a>
+							<a href="#" class="wishlist-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+								<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+							</a>
+							<form action="#">
+								<button type="button" class="order-btn btn btn-primary">
+									<span class="buy">Купить</span>
+									<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+								</button>
+							</form>
+						</div>
+					</div><!-- /.card-product -->
+				</div><!-- /.col -->
+				<div class="col-12">
+					<div class="card card-product card-product--v3">
+						<div class="card-meta">
+							<a href="page-single-product.html" class="product-link"></a>
+							<div class="product-title">
+								<span class="stock in-stock text-xxs">В наличии</span>
+								<span class="title c-black text-sm w-bold">Смеситель для кухни Юкинокс 41116 CR (1 169) УЦ</span>
+							</div>
+							<div class="product-price">
+								<div class="price">
+									<span class="price-label text-xs">Цена:</span>
+									<span class="price-wrapper">
+										<ins>21 030 Руб.</ins>
+									</span>
+								</div>
+							</div>
+							<div class="product-quantity">
+								<div class="quantity">
+									<button type="button" class="quantity-minus">-</button>
+									<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+									<button type="button" class="quantity-plus">+</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-actions">
+							<a href="#" class="compare-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+								<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+							</a>
+							<a href="#" class="wishlist-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+								<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+							</a>
+							<form action="#">
+								<button type="button" class="order-btn btn btn-primary">
+									<span class="buy">Купить</span>
+									<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+								</button>
+							</form>
+						</div>
+					</div><!-- /.card-product -->
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<h2 class="mt-60 mb-30 c-black text-lg w-bold">Вид карточек при наличии сайдбара</h2>
+			<div class="s-category-main row">
+				<!-- Page Widgets -->
+				<div class="col-lg-auto">
+					<aside class="page-widgets">
+						<!-- Widget: Related categories -->
+						<div class="widget">
+							<div class="widget-header _toggled" data-toggle="toggle-box">
+								<span class="title c-black text-md w-semibold">Смежные категории</span>
+								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							</div>
+							<div class="widget-inner">
+								<ul>
+									<li><a href="#">Мойки для кухни</a></li>
+									<li><a href="#">Выдвижные системы</a></li>
+									<li><a href="#">Смесители</a></li>
+									<li><a href="#">Фильтры для воды</a></li>
+									<li><a href="#">Дозаторы</a></li>
+									<li><a href="#">Духовые шкафы</a></li>
+								</ul>
+							</div>
+						</div><!-- /.w-categories -->
+					</aside>
+				</div>
+				<div class="shop-products col-lg mt-0">
+					<!-- Products list -->
+					<div class="row products-row-inline">
 						<div class="col-12">
-							<textarea name="question-message" class="form-textarea" placeholder="Задать вопрос" rows="5" required></textarea>
-						</div>
-					</div>
-					<div class="page-form-bottom row">
-						<div class="col-auto mt-30">
-							<div class="form-checkbox">
-								<input type="checkbox" name="question-policy" id="question-policy" required>
-								<label for="question-policy" class="form-checkbox-label">Даю свое согласие на обработку персональных данных</label>
-							</div>
-						</div>
-						<div class="col-auto mt-30">
-							<div class="page-form-bottom-submit">
-								<div class="form-captcha">
-									<img class="lazy" data-src="images/google-recaptcha.png" alt="Google Recaptcha">
+							<div class="card card-product card-product--v3">
+								<div class="card-meta">
+									<a href="page-single-product.html" class="product-link"></a>
+									<div class="product-title">
+										<span class="stock in-stock text-xxs">В наличии</span>
+										<span class="title c-black text-sm w-bold">Кухонная мойка Blanco Zia 40S</span>
+									</div>
+									<div class="product-price">
+										<div class="price">
+											<span class="price-label text-xs">Цена:</span>
+											<span class="price-wrapper">
+												<ins>102 999 Руб.</ins>
+												<del>96 300 Руб.</del>
+											</span>
+										</div>
+									</div>
+									<div class="product-quantity">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">-</button>
+											<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+											<button type="button" class="quantity-plus">+</button>
+										</div>
+									</div>
 								</div>
-								<button type="submit" class="form-submit btn btn-orange">Отправить</button>
-							</div>
-						</div>
-					</div>
-				</form>
-			</section>
-
-			<!-- FAQ List -->
-			<section class="post-section faq">
-				<h2 class="post-section-title text-lg w-semibold text-center">Часто задаваемые вопросы</h2>
-				<ul class="faq-list">
-					<li class="faq-item">
-						<p>Какие основные преимущества для покупателя?</p>
-					</li>
-					<li class="faq-item">
-						<p>В актуальном списке предложений — сотни моек и смесителей известных отечественных и зарубежных производителей.</p>
-						<p>Это разнообразие позволяет в точности выполнять определенные эстетические и технические требования. Кроме отмеченных выше приоритетных направлений, мы включили в ассортимент дренажную арматуру и крепления, измельчители отходов и фильтры водоподготовки. Каждая позиция в каталоге представлена с точным описанием.</p>
-					</li>
-					<li class="faq-item">
-						<p>Какие основные преимущества для покупателя?</p>
-					</li>
-					<li class="faq-item">
-						<p>В актуальном списке предложений — сотни моек и смесителей известных отечественных и зарубежных производителей.</p>
-						<p>Это разнообразие позволяет в точности выполнять определенные эстетические и технические требования. Кроме отмеченных выше приоритетных направлений, мы включили в ассортимент дренажную арматуру и крепления, измельчители отходов и фильтры водоподготовки. Каждая позиция в каталоге представлена с точным описанием.</p>
-					</li>
-					<li class="faq-item">
-						<p>Какие основные преимущества для покупателя?</p>
-					</li>
-					<li class="faq-item">
-						<p>В актуальном списке предложений — сотни моек и смесителей известных отечественных и зарубежных производителей.</p>
-						<p>Это разнообразие позволяет в точности выполнять определенные эстетические и технические требования. Кроме отмеченных выше приоритетных направлений, мы включили в ассортимент дренажную арматуру и крепления, измельчители отходов и фильтры водоподготовки. Каждая позиция в каталоге представлена с точным описанием.</p>
-					</li>
-				</ul>
-			</section>
+								<div class="card-actions">
+									<a href="#" class="compare-btn btn btn-outline _active" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+										<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+									</a>
+									<a href="#" class="wishlist-btn btn btn-outline _active" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+										<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+									</a>
+									<form action="#">
+										<button type="button" class="order-btn btn btn-primary _active">
+											<span class="buy">Купить</span>
+											<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+										</button>
+									</form>
+								</div>
+							</div><!-- /.card-product -->
+						</div><!-- /.col -->
+						<div class="col-12">
+							<div class="card card-product card-product--v3">
+								<div class="card-meta">
+									<a href="page-single-product.html" class="product-link"></a>
+									<div class="product-title">
+										<span class="stock in-stock text-xxs">В наличии</span>
+										<span class="title c-black text-sm w-bold">Доска разделочная передвижная универсальная (для моек шириной 480- 525мм кроме серии Venus)</span>
+									</div>
+									<div class="product-price">
+										<div class="price">
+											<span class="price-label text-xs">Цена:</span>
+											<span class="price-wrapper">
+												<ins>5 500 Руб.</ins>
+												<del>6 500 Руб.</del>
+											</span>
+										</div>
+									</div>
+									<div class="product-quantity">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">-</button>
+											<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+											<button type="button" class="quantity-plus">+</button>
+										</div>
+									</div>
+								</div>
+								<div class="card-actions">
+									<a href="#" class="compare-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+										<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+									</a>
+									<a href="#" class="wishlist-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+										<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+									</a>
+									<form action="#">
+										<button type="button" class="order-btn btn btn-primary">
+											<span class="buy">Купить</span>
+											<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+										</button>
+									</form>
+								</div>
+							</div><!-- /.card-product -->
+						</div><!-- /.col -->
+						<div class="col-12">
+							<div class="card card-product card-product--v3">
+								<div class="card-meta">
+									<a href="page-single-product.html" class="product-link"></a>
+									<div class="product-title">
+										<span class="stock in-stock text-xxs">В наличии</span>
+										<span class="title c-black text-sm w-bold">Смеситель для кухни Юкинокс 41116 CR (1 169) УЦ</span>
+									</div>
+									<div class="product-price">
+										<div class="price">
+											<span class="price-label text-xs">Цена:</span>
+											<span class="price-wrapper">
+												<ins>21 030 Руб.</ins>
+											</span>
+										</div>
+									</div>
+									<div class="product-quantity">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">-</button>
+											<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+											<button type="button" class="quantity-plus">+</button>
+										</div>
+									</div>
+								</div>
+								<div class="card-actions">
+									<a href="#" class="compare-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+										<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+									</a>
+									<a href="#" class="wishlist-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+										<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+									</a>
+									<form action="#">
+										<button type="button" class="order-btn btn btn-primary">
+											<span class="buy">Купить</span>
+											<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+										</button>
+									</form>
+								</div>
+							</div><!-- /.card-product -->
+						</div><!-- /.col -->
+						<div class="col-12">
+							<div class="card card-product card-product--v3">
+								<div class="card-meta">
+									<a href="page-single-product.html" class="product-link"></a>
+									<div class="product-title">
+										<span class="stock in-stock text-xxs">В наличии</span>
+										<span class="title c-black text-sm w-bold">Кухонная мойка Blanco Zia 40S</span>
+									</div>
+									<div class="product-price">
+										<div class="price">
+											<span class="price-label text-xs">Цена:</span>
+											<span class="price-wrapper">
+												<ins>102 999 Руб.</ins>
+												<del>96 300 Руб.</del>
+											</span>
+										</div>
+									</div>
+									<div class="product-quantity">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">-</button>
+											<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+											<button type="button" class="quantity-plus">+</button>
+										</div>
+									</div>
+								</div>
+								<div class="card-actions">
+									<a href="#" class="compare-btn btn btn-outline _active" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+										<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+									</a>
+									<a href="#" class="wishlist-btn btn btn-outline _active" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+										<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+									</a>
+									<form action="#">
+										<button type="button" class="order-btn btn btn-primary _active">
+											<span class="buy">Купить</span>
+											<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+										</button>
+									</form>
+								</div>
+							</div><!-- /.card-product -->
+						</div><!-- /.col -->
+						<div class="col-12">
+							<div class="card card-product card-product--v3">
+								<div class="card-meta">
+									<a href="page-single-product.html" class="product-link"></a>
+									<div class="product-title">
+										<span class="stock in-stock text-xxs">В наличии</span>
+										<span class="title c-black text-sm w-bold">Смеситель для кухни Юкинокс 41116 CR (1 169) УЦ</span>
+									</div>
+									<div class="product-price">
+										<div class="price">
+											<span class="price-label text-xs">Цена:</span>
+											<span class="price-wrapper">
+												<ins>21 030 Руб.</ins>
+											</span>
+										</div>
+									</div>
+									<div class="product-quantity">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">-</button>
+											<input type="text" class="quantity-value form-control" name="mcart-quantity" value="1 шт." data-quantity-value="1" step="1" min="1" max="99" title="Количество" readonly>
+											<button type="button" class="quantity-plus">+</button>
+										</div>
+									</div>
+								</div>
+								<div class="card-actions">
+									<a href="#" class="compare-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в сравнение">
+										<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+									</a>
+									<a href="#" class="wishlist-btn btn btn-outline" data-toggle="tooltip" data-placement="top" title="Перейти в желаемое">
+										<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#heart"></use></svg>
+									</a>
+									<form action="#">
+										<button type="button" class="order-btn btn btn-primary">
+											<span class="buy">Купить</span>
+											<span class="added">Товар добавлен в <a href="page-cart.html" data-toggle="tooltip" data-placement="bottom" title="Перейти в корзину">корзину</a></span>
+										</button>
+									</form>
+								</div>
+							</div><!-- /.card-product -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.shop-products -->
+			</div>
 
 		</div><!-- /.container -->
 	</main>
