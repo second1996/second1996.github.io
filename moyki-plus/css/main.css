@@ -6422,8 +6422,12 @@ article a:hover {
   right: -30px;
   bottom: 0;
   z-index: 29;
+  display: none;
   padding: 100px 0;
   background-color: rgba(250,250,250,.75)
+}
+.shop-products-preloader._active {
+  display: block
 }
 .shop-products-preloader .lazy-preloader {
   position: -webkit-sticky;

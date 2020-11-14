@@ -723,11 +723,18 @@
 
 			<!-- Breadcrumbs -->
 			<div class="breadcrumbs">
-				<ul class="breadcrumbs-list">
-					<li><a href="page-home.html">Главная</a></li>
-					<li><a href="page-catalog.html">Каталог товаров</a></li>
-					<li>
-						<a href="page-category.html" class="has-dropmenu">Сантехника</a>
+				<ul class="breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+						<a href="page-home.html" itemprop="item">Главная</a>
+						<meta itemprop="position" content="0" />
+					</li>
+					<li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+						<a href="page-catalog.html" itemprop="item">Каталог товаров</a>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+						<a href="page-category.html" class="has-dropmenu" itemprop="item">Сантехника</a>
+						<meta itemprop="position" content="2" />
 						<ul>
 							<li><a href="page-category.html">Из нержавеющей стали</a></li>
 							<li><a href="page-category.html">Гранитные</a></li>
@@ -736,8 +743,9 @@
 							<li><a href="page-category.html">Мраморные</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="page-subcategory.html" class="has-dropmenu">Мойки для кухни</a>
+					<li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+						<a href="page-subcategory.html" class="has-dropmenu" itemprop="item">Мойки для кухни</a>
+						<meta itemprop="position" content="3" />
 						<ul>
 							<li><a href="page-category.html">Из нержавеющей стали</a></li>
 							<li><a href="page-category.html">Гранитные</a></li>
@@ -751,7 +759,7 @@
 			</div>
 
 			<!-- START Product Single page -->
-			<div class="product-single">
+			<div class="product-single" itemscope itemtype="http://schema.org/Product">
 
 				<div class="row">
 					<div class="product-single-left col-12 col-xl-auto">
@@ -777,7 +785,7 @@
 						</div>
 					</div><!-- /.col -->
 					<div class="product-single-right col-12 col-xl">
-						<h1 class="product-title text-md w-semibold">Аксессуар Schock Доска разделочная передвижная универсальная (для моек шириной 480- 525мм кроме серии Venus), массив бамбука</h1>
+						<h1 class="product-title text-md w-semibold" itemprop="name">Аксессуар Schock Доска разделочная передвижная универсальная (для моек шириной 480- 525мм кроме серии Venus), массив бамбука</h1>
 
 						<!-- Product Main-->
 						<div class="product-main row">
@@ -798,7 +806,7 @@
 											<div class="product-preview-photo-slider swiper-container">
 												<div class="swiper-wrapper">
 													<div class="product-preview-photo-slide swiper-slide" data-product-full-preview="images/products/product-single-photo.png">
-														<img class="lazy" data-src="images/products/product-single-photo.png" alt="Мойка Longran Ultra ULS780.500">
+														<img class="lazy" data-src="images/products/product-single-photo.png" alt="Мойка Longran Ultra ULS780.500" itemprop="image">
 														<div class="lazy-preloader"></div>
 													</div><!-- /.slide -->
 													<div class="product-preview-photo-slide swiper-slide" data-product-full-preview="images/products/product-4.png">
@@ -1022,7 +1030,7 @@
 							</div><!-- /.col -->
 							<div class="col-lg-5 product-main-right">
 								<!-- Product Summary -->
-								<div class="product-summary product-box">
+								<div class="product-summary product-box" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 									<div class="product-summary-section">
 										<div class="product-brand">
 											<a href="page-single-brands.html" title="Перейти на страницу бренда">
@@ -1053,6 +1061,7 @@
 											</div>
 										</div>
 										<div class="product-stock">В наличии</div>
+										<link itemprop="availability" href="http://schema.org/InStock">
 									</div>
 									<div class="product-summary-section">
 										<div class="product-price">
@@ -1063,7 +1072,7 @@
 											<div class="price">
 												<span class="price-label text-xs">Цена:</span>
 												<span class="price-wrapper">
-													<ins data-final-price="35500">35 500 Руб.</ins>
+													<ins data-final-price="35500" itemprop="price">35 500 <span itemprop="priceCurrency">Руб.</span></ins>
 													<del>36 500 Руб.</del>
 												</span>
 											</div>
@@ -1484,7 +1493,7 @@
 						<!-- Product Description -->
 						<div class="product-description">
 							<h2 class="product-description-title c-black text-md w-semibold">Описание товара:</h2>
-							<article class="article" data-readmore="inline">
+							<article class="article" data-readmore="inline" itemprop="description">
 								<p>Раковины должны быть не только функциональными, но и эстетичными. Мойка Longran Ultra Uls 780.500 воплощает все лучшие качества, которыми должна обладать современная сантехника. Изделие производится на крупнейшем европейском заводе, который соответствует всем международным требованиям.</p>
 								<p>Минималистичный дизайн в сочетании со стилем хай-тек позволяет подчеркнуть все достоинства интерьера кухни. Кроме того, линейка включает модели, выполненные в деревенских традициях или других стилистических направлениях. Раковина стойко выдерживает высокие температуры и механические воздействия.</p>
 							</article>
