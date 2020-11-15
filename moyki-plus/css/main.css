@@ -3375,6 +3375,12 @@ ol li::before {
   display: block;
   margin-bottom: 6px
 }
+.faq-answer-text p:last-child,
+.faq-answer-text span:last-child,
+.faq-question-text p:last-child,
+.faq-question-text span:last-child {
+  margin-bottom: 0
+}
 .faq-answer .faq-admin,
 .faq-answer .faq-user,
 .faq-question .faq-admin,
