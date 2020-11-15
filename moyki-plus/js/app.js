@@ -194,8 +194,8 @@ jQuery(document).ready( function($) {
 			$('.card-testimonial .text').readmore({
 				embedCSS: false,
 				speed: 75,
-				moreLink: '<button type="button" class="read-more"><span>Читать все</span><svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></button>',
-				lessLink: '<button type="button" class="read-more _toggled"><span>Спрятать</span><svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></button>',
+				moreLink: '<button type="button" class="read-more"><span>Читать все</span><svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg></button>',
+				lessLink: '<button type="button" class="read-more _toggled"><span>Спрятать</span><svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg></button>',
 				afterToggle: function(trigger, element, expanded) {
 					hTestimonialsSlider.update()
 				}
@@ -1065,8 +1065,8 @@ jQuery(document).ready( function($) {
 	$('[data-readmore="inline"]').readmore({
 		embedCSS: false,
 		speed: 75,
-		moreLink: '<button type="button" class="read-more"><span>Читать все</span><svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></button>',
-		lessLink: '<button type="button" class="read-more _toggled"><span>Скрыть</span><svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></button>',
+		moreLink: '<button type="button" class="read-more"><span>Читать все</span><svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg></button>',
+		lessLink: '<button type="button" class="read-more _toggled"><span>Скрыть</span><svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg></button>',
 	})
 	$('[data-readmore="button"]').readmore({
 		embedCSS: false,
