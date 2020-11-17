@@ -5216,8 +5216,8 @@ ol li::before {
 .section-sale-products {
   padding-top: 75px;
   padding-bottom: 95px;
-  background: url(../../images/percent-bg.png) no-repeat left -150px bottom -25px,-o-linear-gradient(273deg,#5495a2 0,#42656c 100%);
-  background: url(../../images/percent-bg.png) no-repeat left -150px bottom -25px,linear-gradient(-183deg,#5495a2 0,#42656c 100%)
+  background: url(../images/percent-bg.png) no-repeat left -150px bottom -25px,-o-linear-gradient(273deg,#5495a2 0,#42656c 100%);
+  background: url(../images/percent-bg.png) no-repeat left -150px bottom -25px,linear-gradient(-183deg,#5495a2 0,#42656c 100%)
 }
 .section-sale-products .section-title {
   color: #fff
