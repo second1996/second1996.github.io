@@ -149,6 +149,11 @@ svg.icon {
   background-color: #e78332;
   color: #fff
 }
+img[data-src],
+img[data-srcset] {
+  min-width: 1px;
+  min-height: 1px
+}
 img.lazy {
   position: relative;
   border: 0;
