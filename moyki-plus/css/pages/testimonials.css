@@ -223,6 +223,9 @@
   font-size: 12px
 }
 .testimonials-card-header .summary {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

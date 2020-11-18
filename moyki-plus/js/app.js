@@ -779,6 +779,13 @@ jQuery(document).ready( function($) {
 	 * LazyLoad init
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 */
+	var callback_finish = function () {
+		allLoaded = true;
+		if (printRequested) {
+			openPrintDialog();
+		}
+	}
+
 	var lazyLoadInstance = new LazyLoad({
 		elements_selector: ".lazy",
 		load_delay: 250,
@@ -786,10 +793,52 @@ jQuery(document).ready( function($) {
 			// console.log("👍 LOADED", element);
 			$(element).siblings('.lazy-preloader').remove();
 		},
+		callback_finish: callback_finish,
 	})
+
 	// Callback function for AJAX dynamic content
 	reinitLazyLoad = function () {
 		lazyLoadInstance.update();
+	}
+
+	// lazyLoadAll when page printing
+	var printRequested = false;
+	var allLoaded = false;
+
+	function printButtonHandler(event) {
+		printButton.innerHTML = "Подготовка...";
+		printButton.disabled = true;
+		if (allLoaded) {
+			openPrintDialog();
+		} else {
+			printRequested = true;
+			lazyLoadInstance.loadAll();
+		}
+	}
+
+	function openPrintDialog() {
+		printButton.innerHTML = printButtonContent;
+		printButton.disabled = false;
+		window.print();
+	}
+
+	var printButton = document.querySelector(".print");
+	printButtonContent = printButton.innerHTML
+	printButton.addEventListener("click", printButtonHandler)
+
+	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+	if (!isSafari) {
+		window.onbeforeprint = function () {
+			lazyLoadInstance.loadAll()
+		}
+	} else {
+		// Safari doesn't support the onbeforeprint event
+		var mediaQueryList = window.matchMedia("print");
+		mediaQueryList.addListener(function (mql) {
+			if (mql.matches) {
+				lazyLoadInstance.loadAll()
+			}
+		})
 	}
 
 
@@ -1070,9 +1119,17 @@ jQuery(document).ready( function($) {
 	})
 	$('[data-readmore="button"]').readmore({
 		embedCSS: false,
+		collapsedHeight: 160,
+		collapsedMoreHeight: 320,
 		speed: 75,
 		moreLink: '<button type="button" class="btn btn-more btn-primary">Показать еще</button>',
 		lessLink: '<button type="button" class="btn btn-more btn-primary">Скрыть</button>',
+		afterToggle: function( trigger, element, expanded ) {
+			if ( expanded ) {
+					element.css( "height", "" );
+					element.css( "height", element.height() + "px" );
+			}
+		},
 	})
 	$('.brands-card .brand-categories').readmore({
 		embedCSS: false,
