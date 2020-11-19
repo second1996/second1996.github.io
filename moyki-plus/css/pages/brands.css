@@ -87,6 +87,13 @@
   color: rgba(18,12,22,.7);
   line-height: 1
 }
+.brands-countries-item._active {
+  border-color: #763a9c
+}
+.brands-countries-item._active span {
+  color: #763a9c;
+  font-weight: 500
+}
 .brands-countries-item img {
   width: 25px;
   height: 25px;

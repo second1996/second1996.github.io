@@ -214,10 +214,10 @@
 				</div>
 				<!-- Catalog menu -->
 				<div class="catalog">
-					<button class="catalog-btn btn btn-primary">
+					<a href="page-catalog.html" class="catalog-btn btn btn-primary">
 						<svg class="icon icon-list-menu"><use xlink:href="images/symbol-defs.svg#list-menu"></use></svg>
 						<span>Каталог товаров</span>
-					</button>
+					</a>
 					<!-- Mega menu -->
 					<div class="mega-menu scrollbar">
 						<div class="mega-menu-sections">
@@ -574,7 +574,7 @@
 									<li><a href="#">Бренды</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Бренды</a></li>
+							<li class="_active"><a href="#">Бренды</a></li>
 						</ul>
 					</div>
 				</div>
@@ -753,7 +753,7 @@
 						<div class="filter-toggle-inner">
 							<div class="filter-slider">
 								<div class="filter-slider-handle" data-slidermin="2500" data-slidermax="96500"></div>
-								<div class="filter-slider-range">
+								<div class="filter-slider-range" data-toggle="filter-tooltip" title="<a href='#show'>Показать 47</a>">
 									<input type="number" name="p-price-from" id="p-price-from" value="2500" class="form-control filter-slider-from">
 									<span class="c-black text-md w-medium">–</span>
 									<input type="number" name="p-price-to" id="p-price-to" value="96500" class="form-control filter-slider-to">
@@ -772,8 +772,8 @@
 									<input type="search" class="form-control filter-search-control" placeholder="Поиск">
 								</div>
 								<div class="filter-alphabet-list filter-scrolling" id="sort-brand-az">
-									<div class="form-checkbox"><input type="checkbox" id="p-brand-1"><label for="p-brand-1" class="form-checkbox-label">Alveus</label></div>
-									<div class="form-checkbox"><input type="checkbox" id="p-brand-2"><label for="p-brand-2" class="form-checkbox-label">Lex</label></div>
+									<div class="form-checkbox"><input type="checkbox" id="p-brand-1"><label for="p-brand-1" class="form-checkbox-label" data-toggle="filter-tooltip" title="<a href='#show'>Показать 6</a>">Alveus</label></div>
+									<div class="form-checkbox"><input type="checkbox" id="p-brand-2"><label for="p-brand-2" class="form-checkbox-label" data-toggle="filter-tooltip" title="<a href='#show'>Показать 4</a>">Lex</label></div>
 									<div class="form-checkbox"><input type="checkbox" id="p-brand-3"><label for="p-brand-3" class="form-checkbox-label">Longran</label></div>
 									<div class="form-checkbox"><input type="checkbox" id="p-brand-4"><label for="p-brand-4" class="form-checkbox-label">Matteo</label></div>
 									<div class="form-checkbox"><input type="checkbox" id="p-brand-5"><label for="p-brand-5" class="form-checkbox-label">Teka</label></div>
@@ -794,8 +794,8 @@
 						</button>
 						<div class="filter-toggle-inner">
 							<div class="filter-scrolling">
-								<div class="form-checkbox"><input disabled type="checkbox" id="p-material-1"><label for="p-material-1" class="form-checkbox-label">Гранит</label></div>
-								<div class="form-checkbox"><input type="checkbox" id="p-material-2"><label for="p-material-2" class="form-checkbox-label">Латунь</label></div>
+								<div class="form-checkbox"><input disabled type="checkbox" id="p-material-1"><label for="p-material-1" class="form-checkbox-label" data-toggle="filter-tooltip" title="<a href='#show'>Показать 11</a>">Гранит</label></div>
+								<div class="form-checkbox"><input type="checkbox" id="p-material-2"><label for="p-material-2" class="form-checkbox-label" data-toggle="filter-tooltip" title="<a href='#show'>Показать 47</a>">Латунь</label></div>
 								<div class="form-checkbox"><input type="checkbox" id="p-material-3"><label for="p-material-3" class="form-checkbox-label">Керамика</label></div>
 								<div class="form-checkbox"><input disabled type="checkbox" id="p-material-4"><label for="p-material-4" class="form-checkbox-label">Хром</label></div>
 								<div class="form-checkbox"><input type="checkbox" id="p-material-5"><label for="p-material-5" class="form-checkbox-label">Бронза</label></div>
@@ -812,7 +812,7 @@
 						<div class="filter-toggle-inner">
 							<div class="filter-slider">
 								<div class="filter-slider-handle" data-slidermin="20" data-slidermax="300"></div>
-								<div class="filter-slider-range">
+								<div class="filter-slider-range" data-toggle="filter-tooltip" title="<a href='#show'>Показать 29</a>">
 									<input type="number" name="p-width-from" id="p-width-from" value="20" class="form-control filter-slider-from">
 									<span class="c-black text-md w-medium">–</span>
 									<input type="number" name="p-width-to" id="p-width-to" value="300" class="form-control filter-slider-to">
@@ -827,8 +827,8 @@
 						</button>
 						<div class="filter-toggle-inner">
 							<div class="filter-scrolling">
-								<div class="form-checkbox"><input type="checkbox" id="p-color-1"><label for="p-color-1" class="form-checkbox-label"><span class="color"><img class="lazy" data-src="images/products/filter-color-red.jpg" alt="Красный цвет"></span> Красный</label></div>
-								<div class="form-checkbox"><input type="checkbox" id="p-color-2"><label for="p-color-2" class="form-checkbox-label"><span class="color"><img class="lazy" data-src="images/products/filter-color-green.jpg" alt="Зелёный цвет"></span> Зеленый</label></div>
+								<div class="form-checkbox"><input type="checkbox" id="p-color-1"><label for="p-color-1" class="form-checkbox-label" data-toggle="filter-tooltip" title="<a href='#show'>Показать 23</a>"><span class="color"><img class="lazy" data-src="images/products/filter-color-red.jpg" alt="Красный цвет"></span> Красный</label></div>
+								<div class="form-checkbox"><input type="checkbox" id="p-color-2"><label for="p-color-2" class="form-checkbox-label" data-toggle="filter-tooltip" title="<a href='#show'>Показать 7</a>"><span class="color"><img class="lazy" data-src="images/products/filter-color-green.jpg" alt="Зелёный цвет"></span> Зеленый</label></div>
 								<div class="form-checkbox"><input type="checkbox" id="p-color-3"><label for="p-color-3" class="form-checkbox-label"><span class="color"><img class="lazy" data-src="images/products/filter-color-red.jpg" alt="Красный цвет"></span> Черный</label></div>
 								<div class="form-checkbox"><input disabled type="checkbox" id="p-color-4"><label for="p-color-4" class="form-checkbox-label"><span class="color"><img class="lazy" data-src="images/products/filter-color-green.jpg" alt="Зелёный цвет"></span> Серый</label></div>
 								<div class="form-checkbox"><input type="checkbox" id="p-color-5"><label for="p-color-5" class="form-checkbox-label"><span class="color"><img class="lazy" data-src="images/products/filter-color-red.jpg" alt="Красный цвет"></span> Синий</label></div>
@@ -839,8 +839,8 @@
 						</div>
 					</div><!-- /.filter-toggle -->
 					<div class="filter-triggers">
-						<button type="button" class="filter-show btn btn-primary">Показать 144</button>
-						<button type="button" class="filter-reset btn btn-primary-outline">Очистить фильтр</button>
+						<!-- <button type="button" class="filter-show btn btn-primary">Показать 144</button> -->
+						<button type="button" class="filter-reset btn btn-primary">Очистить фильтр</button>
 					</div>
 				</form><!-- /.w-filters-form -->
 			</div><!-- /.w-filters-inner -->
@@ -1301,7 +1301,7 @@
 									<div class="shop-sort-list">
 										<a rel="nofollow" href="#">Популярные</a>
 										<a rel="nofollow" href="#">Дешевые</a>
-										<a rel="nofollow" href="#">Дорогие</a>
+										<a rel="nofollow" href="#" class="_active">Дорогие</a>
 										<a rel="nofollow" href="#">По отзывам</a>
 										<a rel="nofollow" href="#">По рейтингу</a>
 										<a rel="nofollow" href="#">Скидки</a>

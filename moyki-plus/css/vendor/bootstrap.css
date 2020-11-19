@@ -1802,6 +1802,13 @@ html {
   line-height: 1.3;
   text-align: left
 }
+.filter-tooltip .tooltip-inner {
+  background-color: #763a9c;
+  color: #fff
+}
+.filter-tooltip .tooltip-inner > a {
+  color: #fff
+}
 .variative-tooltip-comment {
   padding-bottom: 15px!important
 }

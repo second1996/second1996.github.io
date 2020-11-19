@@ -280,9 +280,7 @@ jQuery(document).ready( function($) {
 	var compareProductsSlider = new Swiper('.compare .products-slider-container', {
 		watchSlidesVisibility: true,
 		allowTouchMove: true,
-		mousewheel: {
-			invert: true,
-		},
+		grabCursor: true,
 		keyboard: {
 			enabled: true,
 			onlyInViewport: false,
@@ -309,9 +307,7 @@ jQuery(document).ready( function($) {
 	})
 	var compareTableSlider = new Swiper('.compare .compare-table-values', {
 		allowTouchMove: true,
-		mousewheel: {
-			invert: true,
-		},
+		grabCursor: true,
 		keyboard: {
 			enabled: true,
 			onlyInViewport: false,
@@ -802,43 +798,45 @@ jQuery(document).ready( function($) {
 	}
 
 	// lazyLoadAll when page printing
-	var printRequested = false;
-	var allLoaded = false;
+	if( $('.print').length ) {
+		var printRequested = false;
+		var allLoaded = false;
 
-	function printButtonHandler(event) {
-		printButton.innerHTML = "Подготовка...";
-		printButton.disabled = true;
-		if (allLoaded) {
-			openPrintDialog();
-		} else {
-			printRequested = true;
-			lazyLoadInstance.loadAll();
+		function printButtonHandler(event) {
+			printButton.innerHTML = "Подготовка...";
+			printButton.disabled = true;
+			if (allLoaded) {
+				openPrintDialog();
+			} else {
+				printRequested = true;
+				lazyLoadInstance.loadAll();
+			}
 		}
-	}
 
-	function openPrintDialog() {
-		printButton.innerHTML = printButtonContent;
-		printButton.disabled = false;
-		window.print();
-	}
-
-	var printButton = document.querySelector(".print");
-	printButtonContent = printButton.innerHTML
-	printButton.addEventListener("click", printButtonHandler)
-
-	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-	if (!isSafari) {
-		window.onbeforeprint = function () {
-			lazyLoadInstance.loadAll()
+		function openPrintDialog() {
+			printButton.innerHTML = printButtonContent;
+			printButton.disabled = false;
+			window.print();
 		}
-	} else {
-		// Safari doesn't support the onbeforeprint event
-		var mediaQueryList = window.matchMedia("print");
-		mediaQueryList.addListener(function (mql) {
-			if (mql.matches) {
+
+		var printButton = document.querySelector(".print");
+		printButtonContent = printButton.innerHTML
+		printButton.addEventListener("click", printButtonHandler)
+
+		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+		if (!isSafari) {
+			window.onbeforeprint = function () {
 				lazyLoadInstance.loadAll()
 			}
-		})
+		} else {
+			// Safari doesn't support the onbeforeprint event
+			var mediaQueryList = window.matchMedia("print");
+			mediaQueryList.addListener(function (mql) {
+				if (mql.matches) {
+					lazyLoadInstance.loadAll()
+				}
+			})
+		}
 	}
 
 
@@ -867,6 +865,19 @@ jQuery(document).ready( function($) {
 		// trigger: 'click',
 		template: '<div class="tooltip base-tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
 	})
+
+	$('[data-toggle="filter-tooltip"]').tooltip({
+		html: true,
+		trigger: 'manual',
+		placement: 'right',
+		template: '<div class="tooltip base-tooltip filter-tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+	})
+	if( $('[data-toggle="filter-tooltip"]').length ) {
+		$('.widget-filters [data-toggle="filter-tooltip"]').click(function () {
+			$('.widget-filters [data-toggle="filter-tooltip"]').tooltip('hide')
+			$(this).tooltip('show')
+		})
+	}
 
 	if( window.matchMedia('(min-width: 992px)').matches ) {
 		$('[data-toggle="variative-product"]').tooltip({

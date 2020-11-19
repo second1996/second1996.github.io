@@ -4915,6 +4915,10 @@ ol li::before {
   position: relative;
   line-height: 60px
 }
+.header-bottom .navigation .menu-list > li._active::after {
+  opacity: 1;
+  background-color: #763a9c
+}
 .header-bottom .navigation .menu-list > li::after {
   content: '';
   position: absolute;
@@ -5880,6 +5884,7 @@ article a:hover {
   margin-left: -30px;
   margin-right: -30px;
   padding: 15px 15px;
+  border-radius: 0 0 5px 5px;
   border-top: 1px solid #e7e7e7;
   background-color: #fff
 }
@@ -6303,6 +6308,9 @@ article a:hover {
 .page-settings .shop-sort-list > a {
   color: rgba(18,12,22,.8);
   font-weight: 500
+}
+.page-settings .shop-sort-list > a._active {
+  color: #e78332
 }
 .page-settings .shop-sort-list > a:not(:last-child) {
   margin-right: 15px
@@ -8240,6 +8248,12 @@ body.compensate-for-scrollbar {
   .section-title {
     font-size: 25px
   }
+  .page-widgets .widget-filters .filter-triggers {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0
+  }
   .quick-search-row-4 .quick-search-item {
     -ms-flex-preferred-size: 33.33333%;
     flex-basis: 33.33333%
@@ -8434,7 +8448,6 @@ body.compensate-for-scrollbar {
     display: none;
     margin-top: -10px;
     padding-top: 10px;
-    padding-bottom: 30px;
     border-radius: 0 0 5px 5px;
     border: 1px solid #763a9c;
     border-top: 0;
@@ -8456,19 +8469,24 @@ body.compensate-for-scrollbar {
     -ms-flex-direction: column;
     flex-direction: column
   }
+  .page-widgets .widget-filters-form .form-checkbox-label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex
+  }
   .page-widgets .widget-filters .filter-show {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     max-width: 220px;
-    margin: 30px auto 0
+    margin: 15px auto 0
   }
   .page-widgets .widget-filters .filter-reset {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     max-width: 220px;
-    margin: 30px auto 0
+    margin: 15px auto 0
   }
   .quick-search-title {
     cursor: pointer;
@@ -9318,10 +9336,10 @@ body.compensate-for-scrollbar {
     flex: 0 0 100%
   }
   .page-widgets .widget-filters .filter-show {
-    max-width: 180px
+    max-width: 100%
   }
   .page-widgets .widget-filters .filter-reset {
-    max-width: 180px
+    max-width: 100%
   }
   .page-navigation-list > li > a {
     padding: 20px 15px;
