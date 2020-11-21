@@ -5671,6 +5671,9 @@ article a:hover {
 .page-widgets .widget-filters-title {
   display: none
 }
+.page-widgets .widget-filters-inner .filter-toggle:first-child {
+  display: none
+}
 .page-widgets .widget-filters .filter-toggle:not(:first-child) .filter-toggle-header {
   border-top: 1px solid #e7e7e7
 }
@@ -5755,9 +5758,15 @@ article a:hover {
   display: flex;
   margin-bottom: 0;
   padding-left: 24px;
+  padding-right: 8px;
   color: rgba(18,12,22,.9);
   font-weight: 500;
   line-height: 1.1
+}
+.page-widgets .widget-filters-form .form-checkbox-label .qty {
+  margin-left: auto;
+  color: #763a9c;
+  font-weight: 500
 }
 .page-widgets .widget-filters-form .form-checkbox-label::after,
 .page-widgets .widget-filters-form .form-checkbox-label::before {
@@ -5874,6 +5883,45 @@ article a:hover {
 .page-widgets .widget-filters .filter-scrolling {
   overflow-y: auto;
   max-height: 136px
+}
+.page-widgets .widget-filters .filter-results {
+  position: absolute;
+  left: 100%;
+  z-index: 29;
+  width: 120px;
+  min-width: auto;
+  height: 42px;
+  margin-left: 15px;
+  margin-top: -14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid rgba(255,255,255,.25);
+  background-color: #763a9c;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease
+}
+.page-widgets .widget-filters .filter-results._active {
+  visibility: visible;
+  opacity: 1
+}
+.page-widgets .widget-filters .filter-results::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  border: 6px solid transparent;
+  border-right-color: #763a9c;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
 }
 .page-widgets .widget-filters .filter-triggers {
   display: none;
@@ -8248,12 +8296,6 @@ body.compensate-for-scrollbar {
   .section-title {
     font-size: 25px
   }
-  .page-widgets .widget-filters .filter-triggers {
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0
-  }
   .quick-search-row-4 .quick-search-item {
     -ms-flex-preferred-size: 33.33333%;
     flex-basis: 33.33333%
@@ -8390,7 +8432,7 @@ body.compensate-for-scrollbar {
     display: none
   }
   .page-widgets .widget-header {
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px
   }
   .page-widgets .widget-filters-title {
@@ -8408,7 +8450,7 @@ body.compensate-for-scrollbar {
     justify-content: space-between;
     height: 46px;
     margin-bottom: 0;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
     background-color: #763a9c;
@@ -8454,11 +8496,11 @@ body.compensate-for-scrollbar {
     background-color: #fafafa
   }
   .page-widgets .widget-filters .filter-toggle-header {
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px
   }
   .page-widgets .widget-filters .filter-toggle-inner {
-    padding: 20px 30px 20px 40px
+    padding: 20px 30px 20px 30px
   }
   .page-widgets .widget-filters-form {
     display: -webkit-box;
@@ -8469,10 +8511,28 @@ body.compensate-for-scrollbar {
     -ms-flex-direction: column;
     flex-direction: column
   }
-  .page-widgets .widget-filters-form .form-checkbox-label {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex
+  .page-widgets .widget-filters .filter-results {
+    top: auto;
+    left: 50%;
+    margin-top: 32px;
+    margin-left: -2px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  .page-widgets .widget-filters .filter-results::before {
+    top: -6px;
+    right: auto;
+    left: 50%;
+    margin-left: -4px;
+    border-right-color: transparent;
+    border-bottom-color: #763a9c
+  }
+  .page-widgets .widget-filters .filter-triggers {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0
   }
   .page-widgets .widget-filters .filter-show {
     -ms-flex-item-align: center;
@@ -8503,7 +8563,7 @@ body.compensate-for-scrollbar {
     justify-content: space-between;
     height: 46px;
     margin-bottom: 0;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
     background-color: #528f9b;

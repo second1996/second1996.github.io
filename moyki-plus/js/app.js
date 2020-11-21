@@ -1017,17 +1017,9 @@ jQuery(document).ready( function($) {
 		//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
 		$submenu.toggleClass('_toggled')
 		$content.slideToggle(250)
-
-		// Fix readmore when element isn't visible (display: none)
-		// if( $('.filter-show-less').length ) {
-		// 	$('.filter-show-less').readmore({
-		// 		embedCSS: false,
-		// 		speed: 75,
-		// 		moreLink: '<button type="button" class="read-more"><span>Показать ещё</span></button>',
-		// 		lessLink: '<button type="button" class="read-more _toggled"><span>Скрыть</span></button>',
-		// 	})
-		// }
 	})
+	// Show submenu when page location equail category menu
+	$('.mega-menu-sections .nav-item .has-submenu._toggled, .m-menu-nav > ul > li .has-dropmenu._toggled').next().css('display', 'block')
 
 
 	/**
