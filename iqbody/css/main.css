@@ -136,19 +136,6 @@ hr {
   stroke: currentColor;
   fill: currentColor
 }
-#particles-js {
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  height: 100vh
-}
 @-webkit-keyframes pulse-white {
   0% {
     -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,.35);
@@ -1022,10 +1009,11 @@ article a:hover {
   position: relative;
   z-index: 1;
   padding-top: 75px;
-  background: url(../images/heroes-gradient-bg.png) no-repeat left top -130px/100%
+  background: url(../images/heroes-gradient-bg.png) no-repeat center top -130px/100%
 }
 .heroes::before {
   content: '';
+  pointer-events: none;
   position: absolute;
   top: -100px;
   left: 0;
@@ -1035,6 +1023,20 @@ article a:hover {
   background: -webkit-gradient(linear,left top,left bottom,color-stop(59.77%,#fff),to(rgba(255,255,255,0)));
   background: -o-linear-gradient(top,#fff 59.77%,rgba(255,255,255,0) 100%);
   background: linear-gradient(180deg,#fff 59.77%,rgba(255,255,255,0) 100%)
+}
+.heroes::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/heroes-dots-bg.svg) no-repeat center top/100%
 }
 .heroes-inner {
   position: relative;
@@ -1093,7 +1095,22 @@ article a:hover {
   max-width: 486px
 }
 .personal {
+  position: relative;
   padding-top: 180px
+}
+.personal::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/personal-dots-bg.svg) no-repeat center top/100%
 }
 .personal-inner .section-title {
   max-width: 550px
@@ -1138,8 +1155,23 @@ article a:hover {
   background: url(../images/icons/quote.svg) no-repeat center/cover
 }
 .includes {
-  padding-top: 100px;
-  overflow: hidden
+  overflow: hidden;
+  position: relative;
+  padding-top: 100px
+}
+.includes::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/includes-dots-bg.svg) no-repeat center top/100%
 }
 .includes-title {
   margin-bottom: 0;
@@ -1237,8 +1269,23 @@ article a:hover {
   background: linear-gradient(90deg,rgba(255,255,255,0) 0,#fff 3%,#fff 100%)
 }
 .presentation {
+  position: relative;
   margin-bottom: 175px;
   padding-top: 250px
+}
+.presentation::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 230px;
+  left: -210px;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/presentation-dots-bg.svg) no-repeat center top/100%
 }
 .presentation-inner {
   display: -webkit-box;
@@ -1404,9 +1451,24 @@ article a:hover {
   margin-top: 40px
 }
 .motivation {
+  position: relative;
   margin-top: 150px;
   padding-top: 150px;
   padding-bottom: 75px
+}
+.motivation::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: -210px;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/motivation-dots-bg.svg) no-repeat center bottom/100%
 }
 .motivation-title {
   display: inline-block;
@@ -1458,7 +1520,22 @@ article a:hover {
   margin-bottom: 0
 }
 .solution {
+  position: relative;
   margin-top: 150px
+}
+.solution::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/solution-dots-bg.svg) no-repeat center top/100%
 }
 .solution-inner .section-title {
   text-align: center
@@ -1588,7 +1665,22 @@ article a:hover {
   margin-bottom: 40px
 }
 .subscribe {
+  position: relative;
   padding-top: 150px
+}
+.subscribe::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/subscribe-dots-bg.svg) no-repeat center top/100%
 }
 .subscribe-inner {
   display: -webkit-box;
@@ -1828,6 +1920,9 @@ article a:hover {
   .includes-programm-2 .includes-slider-inner::before {
     display: none
   }
+  .presentation::after {
+    display: none
+  }
   .presentation {
     padding-top: 100px;
     margin-bottom: 100px
@@ -1891,6 +1986,10 @@ article a:hover {
     -ms-flex-pack: start;
     justify-content: flex-start
   }
+  .motivation::after {
+    left: -50px;
+    background-position-y: center
+  }
   .motivation {
     padding-top: 60px;
     padding-bottom: 30px
@@ -1918,6 +2017,9 @@ article a:hover {
   }
   .motivation-item {
     margin-bottom: 30px
+  }
+  .solution::after {
+    display: none
   }
   .solution-list {
     -webkit-box-pack: justify;
@@ -1997,6 +2099,10 @@ article a:hover {
   .section-title {
     font-size: 28px
   }
+  .heroes::after {
+    top: 0;
+    background-image: url(../images/heroes-dots-mobile-bg.svg)
+  }
   .heroes-content {
     max-width: 100%;
     margin-top: 350px
@@ -2028,6 +2134,9 @@ article a:hover {
   .quote {
     margin-top: 30px;
     padding: 64px 0 120px
+  }
+  .includes::after {
+    display: none
   }
   .includes {
     padding-top: 64px
@@ -2155,6 +2264,10 @@ article a:hover {
   .about-title {
     max-width: 364px
   }
+  .personal::after {
+    top: 70px;
+    background-image: url(../images/personal-dots-mobile-bg.svg)
+  }
   .personal-inner .section-title {
     max-width: 288px
   }
@@ -2227,6 +2340,10 @@ article a:hover {
   }
   .cost-depend-list .depend-title {
     max-width: 200px
+  }
+  .subscribe::after {
+    top: 0;
+    background-image: url(../images/subscribe-dots-mobile-bg.svg)
   }
   .subscribe-descr {
     margin-top: 24px
