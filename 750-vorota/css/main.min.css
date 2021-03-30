@@ -16863,9 +16863,10 @@ table {
   .f-questions,
   .pagination,
   .shop-promo,
+  .tooltip,
   footer.footer,
   header.header {
-    display: none
+    display: none!important
   }
   .tabs-accordion .nav-tabs {
     display: none
