@@ -14,24 +14,24 @@
 </head>
 <body>
 
-	<!-- Shop Promo -->
-	<div class="shop-promo d-none">
-		<div class="container">
-			<div class="shop-promo-wrapper">
-				<div class="shop-promo-content">
-					<p>Скидка на лучшие товары −35%</p>
-				</div>
-				<div class="shop-promo-close">
-					<button type="button" class="btn btn-close">
-						<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
-					</button>
+	<!-- Site header -->
+	<header class="header">
+
+		<!-- Shop Promo -->
+		<div class="shop-promo d-none">
+			<div class="container">
+				<div class="shop-promo-wrapper">
+					<div class="shop-promo-content">
+						<p>Скидка на лучшие товары −35%</p>
+					</div>
+					<div class="shop-promo-close">
+						<button type="button" class="btn btn-close">
+							<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Site header -->
-	<header class="header">
 
 		<div class="header-top">
 			<div class="container">
@@ -226,14 +226,14 @@
 						</div><!-- /.compare -->
 						<div class="compare d-none d-sm-block">
 							<div class="compare-icon">
-								<a href="#" class="btn btn-secondary btn-compare">
+								<a href="page-shop-compare.html" class="btn btn-secondary btn-compare">
 									<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
 								</a>
 							</div>
 						</div><!-- /.compare -->
 						<div class="wishlist d-none d-sm-block">
 							<div class="wishlist-icon">
-								<a href="#" class="btn btn-secondary btn-wishlist">
+								<a href="page-shop-wishlist.html" class="btn btn-secondary btn-wishlist">
 									<span class="badge">2</span>
 									<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
 								</a>
@@ -280,7 +280,7 @@
 						</div><!-- /.wishlist -->
 						<div class="shopping-cart">
 							<div class="shopping-cart-icon">
-								<a href="#" class="btn btn-secondary btn-shopping-cart">
+								<a href="page-shop-cart.html" class="btn btn-secondary btn-shopping-cart">
 									<span class="badge">11</span>
 									<svg class="icon icon-cart"><use xlink:href="images/symbol-defs.svg#cart"></use></svg>
 								</a>
@@ -945,7 +945,7 @@
 			</div><!-- /.mmenu-main-catalog -->
 
 			<div class="mmenu-main-actions">
-				<a href="#" class="shopping-cart">
+				<a href="page-shop-cart.html" class="shopping-cart">
 					<div class="shopping-cart-icon">
 						<button class="btn btn-secondary btn-shopping-cart">
 							<span class="badge">11</span>
@@ -957,7 +957,7 @@
 						<span class="total">2 500 Руб.</span>
 					</div>
 				</a><!--/.shopping-cart-->
-				<a href="#" class="compare">
+				<a href="page-shop-compare.html" class="compare">
 					<div class="compare-icon">
 						<button class="btn btn-secondary btn-compare">
 							<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
@@ -967,7 +967,7 @@
 						<span class="title">Сравнить товары</span>
 					</div>
 				</a><!-- /.compare -->
-				<a href="#" class="wishlist">
+				<a href="page-shop-wishlist.html" class="wishlist">
 					<div class="wishlist-icon">
 						<button class="btn btn-secondary btn-wishlist">
 							<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
@@ -1081,7 +1081,7 @@
 	</div><!-- /.mmenu-wrapper -->
 </div>
 
-	<!-- Modal: Callback -->
+	<!-- Modal: Заказать обратный звонок -->
 <div class="modal fade" id="callbackModal" tabindex="-1" role="dialog">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
@@ -1110,7 +1110,7 @@
 	</div><!-- /.modal-dialog -->
 </div>
 
-	<!-- Modal: Check order status -->
+	<!-- Modal: Что с моим заказом? -->
 <div class="modal fade" id="checkOrderStatusModal" tabindex="-1" role="dialog">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
@@ -1143,7 +1143,7 @@
 	</div><!-- /.modal-dialog -->
 </div>
 
-	<!-- Modal: Free advice -->
+	<!-- Modal: Бесплатная консультация -->
 <div class="modal fade" id="freeAdviceModal" tabindex="-1" role="dialog">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
@@ -1176,9 +1176,9 @@
 	</div><!-- /.modal-dialog -->
 </div>
 
-	<!-- Modal: Buy in one click -->
+	<!-- Modal: Купить в 1 клик -->
 <div class="modal modal-quick-buy fade" id="buyOneClickModal" tabindex="-1" role="dialog">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold text-center">Купить в 1 клик</h5>
@@ -1226,9 +1226,9 @@
 	</div><!-- /.modal-dialog -->
 </div>
 
-	<!-- Modal: Quick View product -->
+	<!-- Modal: Быстрый просмотр товара -->
 <div class="modal modal-quick-view fade" id="quickViewProductModal" tabindex="-1" role="dialog">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold text-center">Быстрый просмотр</h5>
@@ -1244,8 +1244,8 @@
 
 					<!-- Tabs -->
 					<div class="qv-product-nav nav nav-tabs" role="tablist">
-						<a class="nav-link active" id="qv-attributes-tab" data-toggle="tab" href="#qv-attributes" role="tab" aria-controls="qv-attributes" aria-selected="true">Характеристики</a>
-						<a class="nav-link" id="qv-gallery-tab" data-toggle="tab" href="#qv-gallery" role="tab" aria-controls="qv-gallery" aria-selected="false">Фото</a>
+						<a class="nav-link active" id="qv-gallery-tab" data-toggle="tab" href="#qv-gallery" role="tab" aria-controls="qv-gallery" aria-selected="true">Фото</a>
+						<a class="nav-link" id="qv-attributes-tab" data-toggle="tab" href="#qv-attributes" role="tab" aria-controls="qv-attributes" aria-selected="false">Характеристики</a>
 						<a class="permalink blue-link" href="#" class="product-link">
 							<span>Подробнее о товаре</span>
 							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
@@ -1255,40 +1255,8 @@
 					<!-- Content -->
 					<div class="qv-product-content tab-content">
 
-						<!-- Attributes -->
-						<div class="tab-pane fade show active" id="qv-attributes" role="tabpanel" aria-labelledby="qv-attributes-tab">
-							<table class="table-attributes">
-								<tbody>
-									<tr>
-										<td class="attribute"><span>Напряжение электропитания</span></td>
-										<td class="value"><span>230В, 50/60 Гц</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Напряжение питания двигателя</span></td>
-										<td class="value"><span>230В, 50/60 Гц</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Потребляемая мощность в режиме ожидания</span></td>
-										<td class="value"><span>4,5 Вт</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Потребляемая мощность с модулем Green Рower</span></td>
-										<td class="value"><span>0,8 Вт</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Мощность</span></td>
-										<td class="value"><span>530 Вт</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Толкающее усилие</span></td>
-										<td class="value"><span>800 Н</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div><!-- /.tab -->
-
 						<!-- Gallery -->
-						<div class="tab-pane fade" id="qv-gallery" role="tabpanel" aria-labelledby="qv-gallery-tab">
+						<div class="tab-pane fade show active" id="qv-gallery" role="tabpanel" aria-labelledby="qv-gallery-tab">
 							<div class="product-gallery">
 
 								<!-- Main slider -->
@@ -1369,6 +1337,38 @@
 							</div><!-- /.product-gallery -->
 						</div><!-- /.tab -->
 
+						<!-- Attributes -->
+						<div class="tab-pane fade" id="qv-attributes" role="tabpanel" aria-labelledby="qv-attributes-tab">
+							<table class="table-attributes">
+								<tbody>
+									<tr>
+										<td class="attribute"><span>Напряжение электропитания</span></td>
+										<td class="value"><span>230В, 50/60 Гц</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Напряжение питания двигателя</span></td>
+										<td class="value"><span>230В, 50/60 Гц</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Потребляемая мощность в режиме ожидания</span></td>
+										<td class="value"><span>4,5 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Потребляемая мощность с модулем Green Рower</span></td>
+										<td class="value"><span>0,8 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Мощность</span></td>
+										<td class="value"><span>530 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Толкающее усилие</span></td>
+										<td class="value"><span>800 Н</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /.tab -->
+
 					</div><!-- /.qv-product-content -->
 
 					<!-- Product summary -->
@@ -1383,7 +1383,7 @@
 								<input type="text" class="quantity-value form-control" name="qv-product-quantity" value="1" step="1" min="1" max="99" title="Количество" readonly>
 								<button type="button" class="quantity-plus">+</button>
 							</div>
-							<button type="submit" class="btn btn-green btn-cart btn-submit">
+							<button type="submit" class="btn btn-green btn-purchase btn-submit">
 								<div class="before-added">В корзину</div>
 								<div class="after-added">
 									<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
@@ -1394,6 +1394,76 @@
 					</div><!-- /.qv-product-summary -->
 
 				</div><!-- /.qv-product -->
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Запрос на уменьшение цены -->
+<div class="modal modal-discount fade" id="discountProductModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold">Запрос на уменьшение цены</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="form-group">
+						<div class="mb-8 text-gray-400 text-xxs">Товар</div>
+						<input type="text" class="discount-product form-control" id="m-discount-product" value="CAME BX608 COMBO CLASSICO (001U2625RU) автоматика для откатных ворот" readonly required>
+					</div>
+					<div class="form-group form-group-slider">
+						<div class="mb-24 text-gray-400 text-xxs">Запрос на скидку</div>
+						<div id="m-discount-slider" data-slidermin="3" data-slidermax="10" data-sliderstart="10"></div>
+						<div class="form-group-slider-values mt-16">
+							<div class="from"></div>
+							<div class="to"></div>
+						</div>
+					</div>
+					<div class="form-group form-group-label">
+						<input type="text" class="form-control discount-slider-value" id="m-discount-value" required readonly>
+						<label for="callback-form-phone">Величина скидки</label>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group form-group-label">
+								<input type="text" class="form-control discount-old-price" id="m-discount-old-price" value="18 990 руб." required readonly>
+								<label for="m-discount-old-price">Старая цена</label>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group form-group-label">
+								<input type="text" class="form-control discount-new-price" id="m-discount-new-price" required readonly>
+								<label for="m-discount-new-price">Новая цена</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group form-group-label">
+						<input type="text" class="form-control" id="m-discount-name" placeholder="Ваше имя" autocomplete="off" required>
+						<label for="m-discount-name">Ваше имя</label>
+					</div>
+					<div class="form-group">
+						<div class="form-group-label">
+							<input type="tel" class="form-control" id="m-discount-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+							<label for="m-discount-phone">Телефон</label>
+						</div>
+						<div class="form-checkbox switch-input-mask">
+							<input type="checkbox" id="m-discount-phone-mask" checked>
+							<label for="m-discount-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+						</div>
+					</div>
+					<div class="form-group form-group-label">
+						<input type="email" class="form-control" id="m-discount-email" placeholder="Ваш e-mail" autocomplete="off" required>
+						<label for="m-discount-email">Ваш e-mail</label>
+					</div>
+					<div class="form-group form-group-label">
+						<textarea class="form-textarea" rows="3" placeholder="Комментарий"></textarea>
+					</div>
+					<button type="submit" class="btn btn-lg btn-green btn-submit">Заказать</button>
+				</form>
 			</div><!-- /.modal-body -->
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
