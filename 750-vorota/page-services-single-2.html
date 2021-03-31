@@ -7,10 +7,9 @@
 	<meta name="description" content="Автоматика для ворот 750">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="./images/favicon.png">
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
 
@@ -105,7 +104,7 @@
 			<div class="container">
 				<div class="row flex-nowrap align-items-center">
 
-					<div class="col-auto header-middle-burger d-xxl-none">
+					<div class="col-auto header-middle-burger">
 						<button class="toggle-mmenu-btn">
 							<svg class="icon icon-bars"><use xlink:href="images/symbol-defs.svg#bars"></use></svg>
 						</button>
@@ -1249,7 +1248,7 @@
 		</button>
 	</div>
 
-	<div class="mmenu">
+	<div class="mmenu scrollbar">
 	<div class="mmenu-wrapper">
 
 		<div class="mmenu-heading">
@@ -1740,77 +1739,9 @@
 	</div><!-- /.modal-dialog -->
 </div>
 
-	<!-- Modal: Запрос на уменьшение цены -->
-<div class="modal modal-discount fade" id="discountProductModal" tabindex="-1" role="dialog">
-	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="title text-lg w-bold">Запрос на уменьшение цены</h5>
-				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
-				</button>
-			</div>
-			<div class="modal-body">
-				<form class="form">
-					<div class="form-group">
-						<div class="mb-8 text-gray-400 text-xxs">Товар</div>
-						<input type="text" class="discount-product form-control" id="m-discount-product" value="CAME BX608 COMBO CLASSICO (001U2625RU) автоматика для откатных ворот" readonly required>
-					</div>
-					<div class="form-group form-group-slider">
-						<div class="mb-24 text-gray-400 text-xxs">Запрос на скидку</div>
-						<div id="m-discount-slider" data-slidermin="3" data-slidermax="10" data-sliderstart="10"></div>
-						<div class="form-group-slider-values mt-16">
-							<div class="from"></div>
-							<div class="to"></div>
-						</div>
-					</div>
-					<div class="form-group form-group-label">
-						<input type="text" class="form-control discount-slider-value" id="m-discount-value" required readonly>
-						<label for="callback-form-phone">Величина скидки</label>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group form-group-label">
-								<input type="text" class="form-control discount-old-price" id="m-discount-old-price" value="18 990 руб." required readonly>
-								<label for="m-discount-old-price">Старая цена</label>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-group form-group-label">
-								<input type="text" class="form-control discount-new-price" id="m-discount-new-price" required readonly>
-								<label for="m-discount-new-price">Новая цена</label>
-							</div>
-						</div>
-					</div>
-					<div class="form-group form-group-label">
-						<input type="text" class="form-control" id="m-discount-name" placeholder="Ваше имя" autocomplete="off" required>
-						<label for="m-discount-name">Ваше имя</label>
-					</div>
-					<div class="form-group">
-						<div class="form-group-label">
-							<input type="tel" class="form-control" id="m-discount-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
-							<label for="m-discount-phone">Телефон</label>
-						</div>
-						<div class="form-checkbox switch-input-mask">
-							<input type="checkbox" id="m-discount-phone-mask" checked>
-							<label for="m-discount-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
-						</div>
-					</div>
-					<div class="form-group form-group-label">
-						<input type="email" class="form-control" id="m-discount-email" placeholder="Ваш e-mail" autocomplete="off" required>
-						<label for="m-discount-email">Ваш e-mail</label>
-					</div>
-					<div class="form-group form-group-label">
-						<textarea class="form-textarea" rows="3" placeholder="Комментарий"></textarea>
-					</div>
-					<button type="submit" class="btn btn-lg btn-green btn-submit">Заказать</button>
-				</form>
-			</div><!-- /.modal-body -->
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div>
+	<script src="./js/app.min.js"></script>
 
-	<script src="js/app.min.js"></script>
+</script>
 
 </body>
 </html>

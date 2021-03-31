@@ -4086,8 +4086,46 @@ article ul > li::before {
   -webkit-box-shadow: 0 0 0 3px rgba(248,203,45,.25);
   box-shadow: 0 0 0 3px rgba(248,203,45,.25)
 }
+.header-middle.header--clone {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.header-middle.header--clone .header-middle-burger {
+  display: block
+}
+.header-middle.header--clone .header-middle-search {
+  max-width: 100%;
+  margin-right: 30px
+}
+.header-middle.header--clone .header-middle-search .form {
+  width: 100%
+}
+.header-middle.header--clone .header-middle-contacts {
+  display: none
+}
+.header-middle.header--stick {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0)
+}
 .header {
-  position: relative
+  position: relative;
+  z-index: 91;
+  background-color: #fff
 }
 .header-top {
   background-color: #fff;
@@ -9098,6 +9136,9 @@ table {
   font-size: 13px;
   line-height: 1
 }
+.s-brands-link {
+  text-align: right
+}
 .s-cart-table .product {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 54%;
@@ -13442,24 +13483,6 @@ table {
     right: 0;
     left: auto
   }
-  .scrollbar * {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,.25) #fff
-  }
-  .scrollbar ::-webkit-scrollbar {
-    width: 12px
-  }
-  .scrollbar ::-webkit-scrollbar-track {
-    background-color: #fff
-  }
-  .scrollbar ::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,.25);
-    border-radius: 20px;
-    border: 3px solid #fff
-  }
-  .scrollbar ::-webkit-scrollbar-thumb:hover {
-    background-color: #f8cb2d
-  }
   .footer-intro .logo {
     max-width: 200px
   }
@@ -14296,6 +14319,30 @@ table {
     right: 0;
     left: auto
   }
+  .scrollbar * {
+    scrollbar-width: thin;
+    scrollbar-color: #dfe3e8 #fff
+  }
+  .scrollbar ::-webkit-scrollbar {
+    width: 10px
+  }
+  .scrollbar ::-webkit-scrollbar-track {
+    background-color: #fff
+  }
+  .scrollbar ::-webkit-scrollbar-thumb {
+    background-color: #dfe3e8;
+    border-radius: 20px;
+    border: 3px solid #fff
+  }
+  .scrollbar ::-webkit-scrollbar-thumb:hover {
+    background-color: #f8cb2d
+  }
+  body.lock-scroll {
+    padding-right: 17px
+  }
+  body.lock-scroll .header-middle.header--clone {
+    padding-right: 17px
+  }
   .h-categories-item .heading--bottom .heading-title {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -15093,6 +15140,9 @@ table {
     right: 0;
     left: auto
   }
+  .header-middle-burger {
+    display: none
+  }
   .tabs-accordion .nav-tabs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -15114,13 +15164,6 @@ table {
   }
   .footer-contacts .phone a {
     font-size: 20px
-  }
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 98
   }
   .header-top {
     display: none
@@ -15869,6 +15912,9 @@ table {
     border: none;
     background-color: transparent
   }
+  .s-brands-link {
+    text-align: left
+  }
   .s-cart-table .product {
     -ms-flex-preferred-size: 42%;
     flex-basis: 42%
@@ -16008,6 +16054,10 @@ table {
   .shop-promo-content {
     font-size: 13px;
     line-height: 16px
+  }
+  .header-middle.header--clone {
+    padding-top: 6px;
+    padding-bottom: 6px
   }
   .header-middle {
     padding-top: 12px;
