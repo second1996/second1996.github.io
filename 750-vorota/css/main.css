@@ -11229,6 +11229,7 @@ table {
 @media print {
   .breadcrumbs,
   .f-questions,
+  .header--clone,
   .pagination,
   .shop-promo,
   .tooltip,
