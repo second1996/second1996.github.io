@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Автоматика для ворот</title>
+	<meta name="description" content="Автоматика для ворот 750">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/vendors/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<style>
+		a.link-arrow .icon {
+			margin-left: 0;
+			margin-right: 10px;
+			transform: scaleX(-1);
+		}
+	</style>
+
+	<main class="page-main">
+		<div class="container">
+			<a href="index.html" class="link-arrow">
+				<svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#arrow-right"></use></svg>
+				<span>Вернуться назад</span>
+			</a>
+
+			<div class="row mt-16 row-items-24">
+				<div class="col-auto">
+
+					<!-- Modal: Бесплатная консультация -->
+					<button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#freeAdviceModal">Бесплатная консультация</button>
+					<div class="modal fade" id="freeAdviceModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="title text-lg w-bold">Бесплатная консультация</h5>
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="form">
+										<div class="form-group form-group-label">
+											<input type="text" class="form-control" id="free-advice-form-name" placeholder="Имя" autocomplete="off" required>
+											<label for="free-advice-form-name">Имя</label>
+										</div>
+										<div class="form-group">
+											<div class="form-group-label">
+												<input type="tel" class="form-control" id="free-advice-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+												<label for="free-advice-form-phone">Телефон</label>
+											</div>
+											<div class="form-checkbox switch-input-mask">
+												<input type="checkbox" id="free-advice-form-phone-mask" checked>
+												<label for="free-advice-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+											</div>
+										</div>
+										<button type="submit" class="btn btn-lg btn-yellow btn-submit">Заказать</button>
+									</form>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+				<div class="col-auto">
+
+					<!-- Modal: Что с моим заказом? -->
+					<button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#checkOrderStatusModal">Что с моим заказом?</button>
+					<div class="modal fade" id="checkOrderStatusModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="title text-lg w-bold">Что с моим заказом?</h5>
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="form">
+										<div class="form-group form-group-label">
+											<input type="text" class="form-control" id="check-order-form-name" placeholder="Номер заказа" autocomplete="off" required>
+											<label for="check-order-form-name">Номер заказа</label>
+										</div>
+										<div class="form-group">
+											<div class="form-group-label">
+												<input type="tel" class="form-control" id="check-order-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+												<label for="check-order-form-phone">Телефон</label>
+											</div>
+											<div class="form-checkbox switch-input-mask">
+												<input type="checkbox" id="check-order-form-phone-mask" checked>
+												<label for="check-order-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+											</div>
+										</div>
+										<button type="submit" class="btn btn-lg btn-green btn-submit">Проверить статус заказа</button>
+									</form>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+				<div class="col-auto">
+
+					<!-- Modal: Заказать обратный звонок -->
+					<button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#callbackModal">Заказать обратный звонок</button>
+					<div class="modal fade" id="callbackModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="title text-lg w-bold">Заказать обратный звонок</h5>
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="form">
+										<div class="form-group">
+											<div class="form-group-label">
+												<input type="tel" class="form-control" id="callback-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+												<label for="callback-form-phone">Телефон</label>
+											</div>
+											<div class="form-checkbox switch-input-mask">
+												<input type="checkbox" id="callback-form-phone-mask" checked>
+												<label for="callback-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+											</div>
+										</div>
+										<button type="submit" class="btn btn-lg btn-green btn-submit">Заказать</button>
+									</form>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<div class="row row-items-24">
+				<div class="col-auto">
+
+					<!-- Modal: Нашли ошибку -->
+					<button type="button" class="btn btn-secondary-green" data-toggle="modal" data-target="#errorReportModal">Нашли ошибку</button>
+					<div class="modal fade" id="errorReportModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="title text-lg w-bold">Нашли ошибку</h5>
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="form">
+										<div class="form-group">
+											<textarea class="form-textarea" rows="4" placeholder="Ваш комментарий" required></textarea>
+										</div>
+										<div class="form-group form-group-label">
+											<input type="email" class="form-control" id="error-report-email" placeholder="Ваш e-mail" autocomplete="off" required>
+											<label for="error-report-email">Ваш e-mail</label>
+										</div>
+										<button type="submit" class="btn btn-lg btn-green btn-submit">Отправить</button>
+									</form>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+				<div class="col-auto">
+
+					<!-- Modal: Оставить комментарий -->
+					<button type="button" class="btn btn-secondary-green" data-toggle="modal" data-target="#leaveCommentModal">Оставить комментарий</button>
+					<div class="modal fade" id="leaveCommentModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="title text-lg w-bold">Оставить комментарий</h5>
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="form">
+										<div class="form-group">
+											<textarea class="form-textarea" rows="4" placeholder="Ваш комментарий" required></textarea>
+										</div>
+										<div class="form-group form-group-label">
+											<input type="email" class="form-control" id="error-report-email" placeholder="Ваш e-mail" autocomplete="off" required>
+											<label for="error-report-email">Ваш e-mail</label>
+										</div>
+										<button type="submit" class="btn btn-lg btn-green btn-submit">Отправить</button>
+									</form>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<div class="row ow-items-24">
+				<div class="col-auto">
+
+					<!-- Modal: Форма отправлена -->
+					<button type="button" class="btn btn-green" data-toggle="modal" data-target="#successModal">Форма отправлена</button>
+					<div class="modal modal-success fade" id="successModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<svg class="icon icon-success"><use xlink:href="images/symbol-defs.svg#success"></use></svg>
+									<h5 class="title text-lg w-bold">Успешно!</h5>
+									<p class="descr">Мы получили Ваше обращение и ответим в течение 30 минут</p>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+
+
+		</div><!-- /.container -->
+	</main>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

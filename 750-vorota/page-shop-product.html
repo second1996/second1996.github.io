@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,7 +8,8 @@
 
 	<link rel="icon" href="./images/favicon.png">
 
-	<link rel="stylesheet" href="./css/main.min.css">
+	<link rel="stylesheet" href="./css/vendors/bootstrap.css">
+	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 					</div>
 					<div class="shop-promo-close">
 						<button type="button" class="btn btn-close">
-							<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+							<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 						</button>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 							<button type="button" class="btn btn-dropdown" id="dropdownAdressMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Адрес и режим работы</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownAdressMenu">
 								<div class="dropdown-adress-item">
-									<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#location"></use></svg>
+									<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
 									<div class="content">
 										<span>Офис 1</span>
 										<p>г. Москва, ул. Летчика Бабушкина, д 103, кор. 4К, оф. 233</p>
@@ -49,7 +49,7 @@
 									</div>
 								</div><!-- /.dropdown-adress-item -->
 								<div class="dropdown-adress-item">
-									<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#location"></use></svg>
+									<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
 									<div class="content">
 										<span>Офис 2</span>
 										<p>г. Москва, ул. 8 марта Бабушкина, д 45, оф. 245</p>
@@ -62,7 +62,7 @@
 
 					<div class="col-auto header-top-btns">
 						<button type="button" class="btn btn-yellow btn-sm" data-toggle="modal" data-target="#freeAdviceModal">
-							<svg class="icon icon-support"><use xlink:href="images/symbol-defs.svg#support"></use></svg>
+							<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
 							<span>Бесплатная консультация</span>
 						</button>
 						<button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#checkOrderStatusModal">Что с моим заказом?</button>
@@ -91,8 +91,8 @@
 							<li><a href="page-contacts.html">Контакты</a></li>
 						</ul>
 						<ul class="social-list">
-							<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/dist/icons/instagram.svg" alt="Instagram"></a></li>
-							<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/dist/icons/youtube.svg" alt="YouTube"></a></li>
+							<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/instagram.svg" alt="Instagram"></a></li>
+							<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/youtube.svg" alt="YouTube"></a></li>
 						</ul>
 					</div><!-- /.header-top-nav -->
 
@@ -106,7 +106,7 @@
 
 					<div class="col-auto header-middle-burger">
 						<button class="toggle-mmenu-btn">
-							<svg class="icon icon-bars"><use xlink:href="images/symbol-defs.svg#bars"></use></svg>
+							<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
 						</button>
 					</div><!-- /.header-middle-burger -->
 
@@ -120,7 +120,7 @@
 						<div class="heading">
 							<span class="heading-title text-lg w-bold">Поиск</span>
 							<button class="heading-btn btn btn-close">
-								<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+								<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 							</button>
 						</div>
 						<form class="form form-search">
@@ -128,7 +128,7 @@
 								<input type="text" id="header-search-field" class="form-control" placeholder="Поиск" required autocomplete="off">
 								<label for="header-search-field">Поиск</label>
 							</div>
-							<button type="submit" class="btn btn-yellow btn-submit"><svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg></button>
+							<button type="submit" class="btn btn-yellow btn-submit"><svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg></button>
 						</form>
 						<div class="search-results">
 							<div class="search-results-wrapper">
@@ -145,13 +145,13 @@
 									<span class="products-title mb-8">Товары</span>
 									<div class="products-results">
 										<span>Найдено: 140 товаров</span>
-										<a href="page-search.html" class="link-arrow">Все результаты поиска <svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></a>
+										<a href="page-search.html" class="link-arrow">Все результаты поиска <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></a>
 									</div>
 									<ul class="products-list">
 										<li>
 											<a href="#">
 												<div class="photo img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="">
+													<img src="./images/menu-categories/1.jpg" alt="">
 												</div>
 												<div class="meta">
 													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
@@ -165,7 +165,7 @@
 										<li>
 											<a href="#">
 												<div class="photo img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="">
+													<img src="./images/menu-categories/1.jpg" alt="">
 												</div>
 												<div class="meta">
 													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
@@ -179,7 +179,7 @@
 										<li>
 											<a href="#">
 												<div class="photo img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="">
+													<img src="./images/menu-categories/1.jpg" alt="">
 												</div>
 												<div class="meta">
 													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
@@ -198,7 +198,7 @@
 					<div class="col header-middle-contacts">
 						<div class="phone">
 							<div class="phone-icon">
-								<svg class="icon icon-phone-alt"><use xlink:href="images/symbol-defs.svg#phone-alt"></use></svg>
+								<svg class="icon icon-phone-alt"><use xlink:href="./images/symbol-defs.svg#phone-alt"></use></svg>
 							</div>
 							<div class="phone-list">
 								<a href="tel:+74951283027" class="text-xs w-bold">+7 (495) 128-30-27</a>
@@ -207,7 +207,7 @@
 						</div>
 						<div class="mail">
 							<div class="mail-icon">
-								<svg class="icon icon-mail-alt"><use xlink:href="images/symbol-defs.svg#mail-alt"></use></svg>
+								<svg class="icon icon-mail-alt"><use xlink:href="./images/symbol-defs.svg#mail-alt"></use></svg>
 							</div>
 							<div class="mail-list">
 								<a href="mailto:zakaz@avtomatikavorot750.ru" class="text-xs w-bold">zakaz@avtomatikavorot750.ru</a>
@@ -219,14 +219,14 @@
 						<div class="search d-xl-none">
 							<div class="search-icon">
 								<button class="btn btn-secondary btn-search">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg>
+									<svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg>
 								</button>
 							</div>
 						</div><!-- /.compare -->
 						<div class="compare d-none d-sm-block">
 							<div class="compare-icon">
 								<a href="page-shop-compare.html" class="btn btn-secondary btn-compare">
-									<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+									<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 								</a>
 							</div>
 						</div><!-- /.compare -->
@@ -234,16 +234,16 @@
 							<div class="wishlist-icon">
 								<a href="page-shop-wishlist.html" class="btn btn-secondary btn-wishlist">
 									<span class="badge">2</span>
-									<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+									<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 								</a>
 							</div>
 							<div class="wishlist-widget">
 								<div class="wrapper">
 									<ul class="products-list">
 										<li class="products-list-item">
-											<a href="#" class="products-list-link">
+											<a href="page-shop-product.html" class="products-list-link">
 												<div class="photo img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="">
+													<img src="./images/menu-categories/1.jpg" alt="">
 												</div>
 												<div class="meta">
 													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
@@ -253,13 +253,13 @@
 												</div>
 											</a>
 											<a href="#" class="products-list-delete">
-												<svg class="icon icon-trash-alt"><use xlink:href="images/symbol-defs.svg#trash-alt"></use></svg>
+												<svg class="icon icon-trash-alt"><use xlink:href="./images/symbol-defs.svg#trash-alt"></use></svg>
 											</a>
 										</li>
 										<li class="products-list-item">
-											<a href="#" class="products-list-link">
+											<a href="page-shop-product.html" class="products-list-link">
 												<div class="photo img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="">
+													<img src="./images/menu-categories/1.jpg" alt="">
 												</div>
 												<div class="meta">
 													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
@@ -269,11 +269,11 @@
 												</div>
 											</a>
 											<a href="#" class="products-list-delete">
-												<svg class="icon icon-trash-alt"><use xlink:href="images/symbol-defs.svg#trash-alt"></use></svg>
+												<svg class="icon icon-trash-alt"><use xlink:href="./images/symbol-defs.svg#trash-alt"></use></svg>
 											</a>
 										</li>
 									</ul>
-									<a href="page-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
+									<a href="page-shop-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
 								</div><!-- /.wrapper -->
 							</div><!-- /.widget -->
 						</div><!-- /.wishlist -->
@@ -281,7 +281,7 @@
 							<div class="shopping-cart-icon">
 								<a href="page-shop-cart.html" class="btn btn-secondary btn-shopping-cart">
 									<span class="badge">11</span>
-									<svg class="icon icon-cart"><use xlink:href="images/symbol-defs.svg#cart"></use></svg>
+									<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
 								</a>
 							</div>
 							<div class="shopping-cart-content">
@@ -292,9 +292,9 @@
 								<div class="wrapper">
 									<ul class="products-list">
 										<li class="products-list-item">
-											<a href="#" class="products-list-link">
+											<a href="page-shop-product.html" class="products-list-link">
 												<div class="photo img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="">
+													<img src="./images/menu-categories/1.jpg" alt="">
 												</div>
 												<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
 											</a>
@@ -310,12 +310,12 @@
 												</div>
 											</div>
 											<a href="#" class="products-list-delete">
-												<svg class="icon icon-trash-alt"><use xlink:href="images/symbol-defs.svg#trash-alt"></use></svg>
+												<svg class="icon icon-trash-alt"><use xlink:href="./images/symbol-defs.svg#trash-alt"></use></svg>
 											</a>
 										</li>
 									</ul>
 									<div class="subtotal text-md w-bold">Итого: 15 800 руб.</div>
-									<a href="page-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
+									<a href="page-shop-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
 								</div><!-- /.wrapper -->
 							</div><!-- /.widget -->
 						</div><!--/.shopping-cart-->
@@ -331,7 +331,7 @@
 
 					<div class="col-auto header-bottom-catalog">
 						<a href="page-shop-catalog.html" class="catalog-btn btn btn-yellow">
-							<svg class="icon icon-bars"><use xlink:href="images/symbol-defs.svg#bars"></use></svg>
+							<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
 							<span>Каталог</span>
 						</a>
 						<nav class="catalog-nav">
@@ -339,7 +339,7 @@
 								<li class="catalog-nav-item">
 									<a href="#" class="catalog-nav-link">
 										<span>Автоматика для ворот</span>
-										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 									</a>
 									<div class="catalog-nav-submenu">
 										<h3 class="menu-title mb-24">Автоматика для ворот</h3>
@@ -470,7 +470,7 @@
 								<li class="catalog-nav-item">
 									<a href="#" class="catalog-nav-link">
 										<span>Шлагбаумы</span>
-										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 									</a>
 									<div class="catalog-nav-submenu">
 										<h3 class="menu-title mb-24">Шлагбаумы</h3>
@@ -560,25 +560,25 @@
 								<li class="catalog-nav-item">
 									<a href="#" class="catalog-nav-link">
 										<span>Комплектующие для ворот</span>
-										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 									</a>
 								</li>
 								<li class="catalog-nav-item">
 									<a href="#" class="catalog-nav-link">
 										<span>Парковочное оборудование</span>
-										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 									</a>
 								</li>
 								<li class="catalog-nav-item">
 									<a href="#" class="catalog-nav-link">
 										<span>Пульты</span>
-										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 									</a>
 								</li>
 								<li class="catalog-nav-item">
 									<a href="#" class="catalog-nav-link">
 										<span>Аксессуары</span>
-										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 									</a>
 								</li>
 							</ul>
@@ -595,7 +595,7 @@
 										<div class="megamenu-list">
 											<div class="megamenu-item">
 												<div class="image img-cover">
-													<img src="./images/dist/menu-categories/1.jpg" alt="Автоматика для откатных ворот">
+													<img src="./images/menu-categories/1.jpg" alt="Автоматика для откатных ворот">
 												</div>
 												<a href="#" class="category">Автоматика для откатных ворот</a>
 												<ul class="subcategories">
@@ -607,7 +607,7 @@
 												</ul>
 											</div><!-- /.megamenu-item-->
 											<div class="megamenu-item">
-												<img src="./images/dist/menu-categories/1.jpg" class="image" alt="Автоматика для распашных ворот">
+												<img src="./images/menu-categories/1.jpg" class="image" alt="Автоматика для распашных ворот">
 												<a href="#" class="category">Автоматика для распашных ворот</a>
 												<ul class="subcategories">
 													<li><a href="#">Комплекты</a></li>
@@ -684,53 +684,53 @@
 									<div class="swiper-container">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-1.jpg" alt="">
+												<a href="images/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-2.jpg" alt="">
+												<a href="images/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-1.jpg" alt="">
+												<a href="images/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-2.jpg" alt="">
+												<a href="images/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-3.jpg" alt="">
+												<a href="images/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-4.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-4.jpg" alt="">
+												<a href="images/products/qv-photo-4.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-5.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-5.jpg" alt="">
+												<a href="images/products/qv-photo-5.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-5.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-3.jpg" alt="">
+												<a href="images/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 										</div><!-- /.swiper-wrapper -->
 									</div><!-- /.swiper-container -->
 									<div class="product-gallery-slider-nav swiper-nav">
 										<button class="swiper-button-prev btn">
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</button>
 										<button class="swiper-button-next btn">
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</button>
 									</div><!-- /.swiper-nav -->
 								</div><!-- /.product-gallery-slider -->
@@ -741,42 +741,42 @@
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-1.jpg" alt="">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-2.jpg" alt="">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-3.jpg" alt="">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-4.jpg" alt="">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-5.jpg" alt="">
+													<img src="./images/products/qv-photo-5.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-4.jpg" alt="">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-1.jpg" alt="">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-2.jpg" alt="">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 										</div><!-- /.swiper-wrapper -->
@@ -859,7 +859,7 @@
 									</table>
 								</div>
 								<div class="all-attributes mt-16">
-									<a href="#" class="link-arrow">Все характеристики <svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></a>
+									<a href="#" class="link-arrow">Все характеристики <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></a>
 								</div>
 								<script>
 									document.querySelector('.all-attributes .link-arrow').addEventListener('click', function(e) {
@@ -876,13 +876,13 @@
 								<div class="product-documents-list">
 									<a href="#" class="document" download>
 										<div class="document-preview">
-											<img src="images/dist/icons/pdf-document.svg" alt="Инструкция.pdf">
+											<img src="images/icons/pdf-document.svg" alt="Инструкция.pdf">
 										</div>
 										<div class="document-title text-xxs">Инструкция.pdf</div>
 									</a>
 									<a href="#" class="document" download>
 										<div class="document-preview">
-											<img src="images/dist/icons/pdf-document.svg" alt="Сертификат.pdf">
+											<img src="images/icons/pdf-document.svg" alt="Сертификат.pdf">
 										</div>
 										<div class="document-title text-xxs">Сертификат.pdf</div>
 									</a>
@@ -896,7 +896,7 @@
 							<div class="product-info">
 								<div class="product-info-print">
 									<button type="button" class="btn" onclick="window.print()" data-toggle="tooltip" data-placement="left" title="Распечатать страницу">
-										<svg class="icon icon-print"><use xlink:href="images/symbol-defs.svg#print"></use></svg>
+										<svg class="icon icon-print"><use xlink:href="./images/symbol-defs.svg#print"></use></svg>
 									</button>
 								</div><!-- /.product-info-print -->
 								<div class="product-info-price">
@@ -928,7 +928,7 @@
 											<button type="submit" class="btn btn-green btn-purchase">
 												<div class="before-added">В корзину</div>
 												<div class="after-added">
-													<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
+													<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
 													<span>Товар добавлен<br> в <a href="#">корзину</a></span>
 												</div>
 											</button>
@@ -956,11 +956,11 @@
 								<div class="product-info-actions">
 									<div class="buttons">
 										<a href="#" class="btn btn-secondary _added">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+											<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 											<span>В избранном</span>
 										</a>
 										<a href="#" class="btn btn-secondary">
-											<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+											<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 											<span>Сравнить</span>
 										</a>
 									</div>
@@ -974,7 +974,7 @@
 								<!-- Other info -->
 								<div class="product-info-other">
 									<div class="product-info-other-item">
-										<div class="title mb-8 w-bold">Способы оплаты <img src="images/dist/payments-2.png" alt="Способы оплаты"></div>
+										<div class="title mb-8 w-bold">Способы оплаты <img src="images/payments-2.png" alt="Способы оплаты"></div>
 										<div class="descr text-xxs">
 											<p>Наличный, безналичный расчёт, банковской картой.</p>
 										</div>
@@ -1025,7 +1025,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-1" aria-expanded="false">
 											<span>Характеристики</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1104,7 +1104,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-2" aria-expanded="false">
 											<span>Описание</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1153,7 +1153,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-3" aria-expanded="false">
 											<span>Комплектация</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1163,7 +1163,7 @@
 										<div class="product-complectation">
 											<a href="#" class="product-complectation-item">
 												<div class="product-complectation-photo img-scale">
-													<img src="images/dist/products/1.png" alt="">
+													<img src="images/products/1.png" alt="">
 												</div>
 												<div class="product-complectation-meta">
 													<span class="title">CAME BX608AGS (801MS-0050)</span>
@@ -1172,7 +1172,7 @@
 											</a><!-- /.product-complectation-item -->
 											<a href="#" class="product-complectation-item">
 												<div class="product-complectation-photo img-scale">
-													<img src="images/dist/products/2.jpg" alt="">
+													<img src="images/products/2.jpg" alt="">
 												</div>
 												<div class="product-complectation-meta">
 													<span class="title">CAME AF43S</span>
@@ -1181,7 +1181,7 @@
 											</a><!-- /.product-complectation-item -->
 											<a href="#" class="product-complectation-item">
 												<div class="product-complectation-photo img-scale">
-													<img src="images/dist/products/3.jpg" alt="">
+													<img src="images/products/3.jpg" alt="">
 												</div>
 												<div class="product-complectation-meta">
 													<span class="title">CAME TOP44RGR (806TS-0130)</span>
@@ -1190,7 +1190,7 @@
 											</a><!-- /.product-complectation-item -->
 											<a href="#" class="product-complectation-item">
 												<div class="product-complectation-photo img-scale">
-													<img src="images/dist/products/4.jpg" alt="">
+													<img src="images/products/4.jpg" alt="">
 												</div>
 												<div class="product-complectation-meta">
 													<span class="title">CAME DIR10 фотоэлементы накладные дальность 10 м</span>
@@ -1208,7 +1208,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-4" aria-expanded="false">
 											<span>Отзывы (2)</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1222,11 +1222,11 @@
 													<div class="card-testimonial mb-24">
 														<div class="card-heading">
 															<div class="rating">
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
 															</div>
 															<div class="date">16 января 2020</div>
 														</div>
@@ -1240,11 +1240,11 @@
 													<div class="card-testimonial mb-24">
 														<div class="card-heading">
 															<div class="rating">
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
-																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
+																<svg class="icon icon-rating icon-rating--filled"><use xlink:href="./images/symbol-defs.svg#rating"></use></svg>
 															</div>
 															<div class="date">16 января 2020</div>
 														</div>
@@ -1261,7 +1261,7 @@
 	<ul class="pagination-wrapper">
 		<li class="pagination-button pagination-button-prev _disabled">
 			<a href="#">
-				<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+				<svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg>
 				<span>Предыдущая</span>
 			</a>
 		</li>
@@ -1289,7 +1289,7 @@
 		<li class="pagination-button pagination-button-next">
 			<a class="page-link" href="#">
 				<span>Следующая</span>
-				<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+				<svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg>
 			</a>
 		</li>
 	</ul>
@@ -1347,7 +1347,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-5" aria-expanded="false">
 											<span>Документация</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1360,7 +1360,7 @@
 												<div class="col">
 													<a href="#" class="document" download>
 														<div class="document-preview">
-															<img src="images/dist/icons/pdf-document.svg" alt="Инструкция.pdf">
+															<img src="images/icons/pdf-document.svg" alt="Инструкция.pdf">
 														</div>
 														<div class="document-title text-xxs">Инструкция.pdf</div>
 													</a>
@@ -1368,7 +1368,7 @@
 												<div class="col">
 													<a href="#" class="document" download>
 														<div class="document-preview">
-															<img src="images/dist/icons/pdf-document.svg" alt="Сертификат.pdf">
+															<img src="images/icons/pdf-document.svg" alt="Сертификат.pdf">
 														</div>
 														<div class="document-title text-xxs">Сертификат.pdf</div>
 													</a>
@@ -1386,7 +1386,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-6" aria-expanded="false">
 											<span>Доставка</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1419,7 +1419,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-7" aria-expanded="false">
 											<span>Возврат</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1428,7 +1428,7 @@
 										<h2 class="mb-48">Возврат товара</h2>
 										<div class="product-return">
 											<div class="photo">
-												<img src="images/dist/return-product.svg" alt="Возврат товара">
+												<img src="images/return-product.svg" alt="Возврат товара">
 											</div>
 											<div class="text">
 												<p>Мы даем 100% гарантию, что в течении 7 дней со дня покупки товара в нашем интернет магазине, Вы легко сможете вернуть и получить обратно свои деньги, или обменять товар на любой другой.</p>
@@ -1446,7 +1446,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-8" aria-expanded="false">
 											<span>Оплата</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1480,7 +1480,7 @@
 									<h5 class="mb-0">
 										<a data-toggle="collapse" href="#collapse-9" aria-expanded="false">
 											<span>С нами надёжно!</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</a>
 									</h5>
 								</div>
@@ -1491,7 +1491,7 @@
 											<div class="col">
 												<div class="info-box">
 													<figure class="info-box-picture">
-														<img src="./images/dist/icons/advantages/wallet.svg" alt="Оплата удобным способом">
+														<img src="./images/icons/advantages/wallet.svg" alt="Оплата удобным способом">
 														<div class="blur"></div>
 													</figure>
 													<h4 class="info-box-title text-sm w-medium">Оплата удобным способом</h4>
@@ -1501,7 +1501,7 @@
 											<div class="col">
 												<div class="info-box">
 													<figure class="info-box-picture">
-														<img src="./images/dist/icons/advantages/coins.svg" alt="Цены с НДС">
+														<img src="./images/icons/advantages/coins.svg" alt="Цены с НДС">
 														<div class="blur"></div>
 													</figure>
 													<h4 class="info-box-title text-sm w-medium">Цены с НДС</h4>
@@ -1511,7 +1511,7 @@
 											<div class="col">
 												<div class="info-box">
 													<figure class="info-box-picture">
-														<img src="./images/dist/icons/advantages/box.svg" alt="Доставка по России">
+														<img src="./images/icons/advantages/box.svg" alt="Доставка по России">
 														<div class="blur"></div>
 													</figure>
 													<h4 class="info-box-title text-sm w-medium">Доставка по России</h4>
@@ -1521,7 +1521,7 @@
 											<div class="col">
 												<div class="info-box">
 													<figure class="info-box-picture">
-														<img src="./images/dist/icons/advantages/thumbs-up.svg" alt="Гарантия">
+														<img src="./images/icons/advantages/thumbs-up.svg" alt="Гарантия">
 														<div class="blur"></div>
 													</figure>
 													<h4 class="info-box-title text-sm w-medium">Гарантия</h4>
@@ -1531,7 +1531,7 @@
 											<div class="col">
 												<div class="info-box">
 													<figure class="info-box-picture">
-														<img src="./images/dist/icons/delivery/wrench.svg" alt="Установка под ключ">
+														<img src="./images/icons/delivery/wrench.svg" alt="Установка под ключ">
 														<div class="blur"></div>
 													</figure>
 													<h4 class="info-box-title text-sm w-medium">Установка под ключ</h4>
@@ -1566,41 +1566,50 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--yellow">−15%</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/1.png" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--yellow">−15%</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Alutech RTO-1000MKIT автоматика для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/1.png" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Alutech RTO-1000MKIT автоматика для откатных ворот</a>
 			<div class="price">
 				<ins>15 800 Руб.</ins>
 				<del>17 400 Руб.</del>
@@ -1609,61 +1618,67 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase _added">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--red">Хит продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
 			<div class="price">
 				<ins>23 600 Руб.</ins>
 			</div>
@@ -1671,51 +1686,62 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--blue">Новинка</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--blue">Новинка</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-out">Нет в наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
 			<div class="price">
 				<ins>41 390 Руб.</ins>
 			</div>
@@ -1723,109 +1749,112 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--gray">В архиве</div>
+		<a href="page-shop-product.html" class="card-photo" title="Автоматика для откатных ворот">
+			<img class="lazy" src="./images/products/6.jpg" alt="">
+			<div class="lazy-spin"></div>
+		</a>
 	</div>
-	<div class="card-label card-label--green">Выбор покупателей</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Came 001A5000A привод для распашных ворот линейный до 1000 кг">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Автоматика для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
-			<div class="stock stock-order">Под заказ</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Came 001A5000A привод для распашных ворот линейный до 1000 кг</a>
+		<div class="card-price">
+			<div class="stock stock-archive">В архиве</div>
 			<div class="price">
-				<ins>55 900 Руб.</ins>
-				<del>49 200 Руб.</del>
+				<ins>19 000 Руб.</ins>
 			</div>
 		</div>
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--orange">Лидер продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME KRONO COMBO CLASSICO автоматика для распашных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/6.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--orange">Лидер продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="CAME KRONO COMBO CLASSICO автоматика для распашных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/6.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME KRONO COMBO CLASSICO автоматика для распашных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-removed">Снято с прозводства</div>
-			<a href="page-shop-product.html" class="permalink blue-link">CAME KRONO COMBO CLASSICO автоматика для распашных ворот</a>
 			<div class="price">
 				<ins>38 200 Руб.</ins>
 				<del>14 900 Руб.</del>
@@ -1834,110 +1863,131 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--green">Выбор покупателей</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Came 001A5000A привод для распашных ворот линейный до 1000 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--gray">В архиве</div>
-	<a href="page-shop-product.html" class="card-photo" title="Автоматика для откатных ворот">
-		<img class="lazy" src="./images/dist/products/6.jpg" alt="">
-		<div class="lazy-spin"></div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Came 001A5000A привод для распашных ворот линейный до 1000 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
-			<div class="stock stock-archive">В архиве</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Автоматика для откатных ворот</a>
+		<div class="card-price">
+			<div class="stock stock-order">Под заказ</div>
 			<div class="price">
-				<ins>19 000 Руб.</ins>
+				<ins>55 900 Руб.</ins>
+				<del>49 200 Руб.</del>
 			</div>
 		</div>
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--yellow">−15%</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/1.png" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--yellow">−15%</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Alutech RTO-1000MKIT автоматика для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/1.png" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Alutech RTO-1000MKIT автоматика для откатных ворот</a>
 			<div class="price">
 				<ins>15 800 Руб.</ins>
 				<del>17 400 Руб.</del>
@@ -1946,61 +1996,67 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase _added">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--red">Хит продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
 			<div class="price">
 				<ins>23 600 Руб.</ins>
 			</div>
@@ -2008,51 +2064,62 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--blue">Новинка</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--blue">Новинка</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-out">Нет в наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
 			<div class="price">
 				<ins>41 390 Руб.</ins>
 			</div>
@@ -2060,26 +2127,23 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
@@ -2087,10 +2151,10 @@
 					</div><!-- /.swiper-container -->
 					<div class="products-slider-nav swiper-nav">
 						<button class="swiper-button-prev btn">
-							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 						</button>
 						<button class="swiper-button-next btn">
-							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 						</button>
 					</div><!-- /.products-slider-nav -->
 					<div class="products-slider-dots swiper-dots">
@@ -2111,41 +2175,50 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--yellow">−15%</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/1.png" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--yellow">−15%</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Alutech RTO-1000MKIT автоматика для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/1.png" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Alutech RTO-1000MKIT автоматика для откатных ворот</a>
 			<div class="price">
 				<ins>15 800 Руб.</ins>
 				<del>17 400 Руб.</del>
@@ -2154,61 +2227,67 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase _added">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--red">Хит продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
 			<div class="price">
 				<ins>23 600 Руб.</ins>
 			</div>
@@ -2216,51 +2295,62 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--blue">Новинка</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--blue">Новинка</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-out">Нет в наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
 			<div class="price">
 				<ins>41 390 Руб.</ins>
 			</div>
@@ -2268,109 +2358,112 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--gray">В архиве</div>
+		<a href="page-shop-product.html" class="card-photo" title="Автоматика для откатных ворот">
+			<img class="lazy" src="./images/products/6.jpg" alt="">
+			<div class="lazy-spin"></div>
+		</a>
 	</div>
-	<div class="card-label card-label--green">Выбор покупателей</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Came 001A5000A привод для распашных ворот линейный до 1000 кг">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Автоматика для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
-			<div class="stock stock-order">Под заказ</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Came 001A5000A привод для распашных ворот линейный до 1000 кг</a>
+		<div class="card-price">
+			<div class="stock stock-archive">В архиве</div>
 			<div class="price">
-				<ins>55 900 Руб.</ins>
-				<del>49 200 Руб.</del>
+				<ins>19 000 Руб.</ins>
 			</div>
 		</div>
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--orange">Лидер продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME KRONO COMBO CLASSICO автоматика для распашных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/6.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--orange">Лидер продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="CAME KRONO COMBO CLASSICO автоматика для распашных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/6.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME KRONO COMBO CLASSICO автоматика для распашных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-removed">Снято с прозводства</div>
-			<a href="page-shop-product.html" class="permalink blue-link">CAME KRONO COMBO CLASSICO автоматика для распашных ворот</a>
 			<div class="price">
 				<ins>38 200 Руб.</ins>
 				<del>14 900 Руб.</del>
@@ -2379,110 +2472,131 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--green">Выбор покупателей</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Came 001A5000A привод для распашных ворот линейный до 1000 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--gray">В архиве</div>
-	<a href="page-shop-product.html" class="card-photo" title="Автоматика для откатных ворот">
-		<img class="lazy" src="./images/dist/products/6.jpg" alt="">
-		<div class="lazy-spin"></div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Came 001A5000A привод для распашных ворот линейный до 1000 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
-			<div class="stock stock-archive">В архиве</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Автоматика для откатных ворот</a>
+		<div class="card-price">
+			<div class="stock stock-order">Под заказ</div>
 			<div class="price">
-				<ins>19 000 Руб.</ins>
+				<ins>55 900 Руб.</ins>
+				<del>49 200 Руб.</del>
 			</div>
 		</div>
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--yellow">−15%</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/1.png" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--yellow">−15%</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Alutech RTO-1000MKIT автоматика для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/1.png" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Alutech RTO-1000MKIT автоматика для откатных ворот</a>
 			<div class="price">
 				<ins>15 800 Руб.</ins>
 				<del>17 400 Руб.</del>
@@ -2491,61 +2605,67 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase _added">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--red">Хит продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
 			<div class="price">
 				<ins>23 600 Руб.</ins>
 			</div>
@@ -2553,51 +2673,62 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
 							<div class="swiper-slide">
 								<div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--blue">Новинка</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--blue">Новинка</div>
-	<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-out">Нет в наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
 			<div class="price">
 				<ins>41 390 Руб.</ins>
 			</div>
@@ -2605,26 +2736,23 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>
 							</div><!-- /.slide -->
@@ -2632,10 +2760,10 @@
 					</div><!-- /.swiper-container -->
 					<div class="products-slider-nav swiper-nav">
 						<button class="swiper-button-prev btn">
-							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 						</button>
 						<button class="swiper-button-next btn">
-							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 						</button>
 					</div><!-- /.products-slider-nav -->
 					<div class="products-slider-dots swiper-dots">
@@ -2657,7 +2785,7 @@
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold">Запрос на уменьшение цены</h5>
 				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -2779,12 +2907,12 @@
 							</div>
 							<div class="payments">
 								<div class="payments-title text-xxs">Мы принимаем</div>
-								<img src="./images/dist/payments.png" alt="Мы принимаем платежи">
+								<img src="./images/payments.png" alt="Мы принимаем платежи">
 							</div>
 							<div class="yandex-market">
 								<div class="yandex-market-title text-xxs">Оцените наш магазин<br> в Яндекс маркет</div>
 								<a href="#" target="_blank" rel="nofollow noopener">
-									<img src="./images/dist/yandex-market-logo.svg" alt="Яндекс маркет">
+									<img src="./images/yandex-market-logo.svg" alt="Яндекс маркет">
 								</a>
 							</div>
 						</div>
@@ -2808,9 +2936,9 @@
 							<div class="social">
 								<div class="social-title">Мы в социальных сетях</div>
 								<div class="social-list">
-									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-vk"><use xlink:href="images/symbol-defs.svg#vk"></use></svg></a>
-									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-youtube"><use xlink:href="images/symbol-defs.svg#youtube"></use></svg></a>
-									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#instagram"></use></svg></a>
+									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-vk"><use xlink:href="./images/symbol-defs.svg#vk"></use></svg></a>
+									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg></a>
+									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-instagram"><use xlink:href="./images/symbol-defs.svg#instagram"></use></svg></a>
 								</div>
 							</div>
 						</div>
@@ -2865,7 +2993,7 @@
 	<div class="go-up" id="go-up-button">
 		<button class="go-up-btn btn">
 			<span>Наверх</span>
-			<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+			<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 		</button>
 	</div>
 
@@ -2875,7 +3003,7 @@
 		<div class="mmenu-heading">
 			<span class="mmenu-heading-title text-lg w-bold">Меню</span>
 			<button class="mmenu-heading-btn btn btn-close">
-				<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+				<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 			</button>
 		</div><!-- /.mmenu-heading -->
 
@@ -2883,12 +3011,12 @@
 
 			<div class="mmenu-main-catalog">
 				<button class="btn btn-yellow">
-					<svg class="icon icon-bars"><use xlink:href="images/symbol-defs.svg#bars"></use></svg>
+					<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
 					<span>Каталог</span>
 				</button>
 				<div class="submenu">
 					<button class="submenu-back-btn">
-						<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+						<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 						<span>Назад</span>
 					</button>
 					<div class="submenu-title text-lg w-bold">Каталог</div>
@@ -2910,7 +3038,7 @@
 					<div class="shopping-cart-icon">
 						<button class="btn btn-secondary btn-shopping-cart">
 							<span class="badge">11</span>
-							<svg class="icon icon-cart"><use xlink:href="images/symbol-defs.svg#cart"></use></svg>
+							<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
 						</button>
 					</div>
 					<div class="shopping-cart-content">
@@ -2921,7 +3049,7 @@
 				<a href="page-shop-compare.html" class="compare">
 					<div class="compare-icon">
 						<button class="btn btn-secondary btn-compare">
-							<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+							<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 						</button>
 					</div>
 					<div class="wishlist-content">
@@ -2931,7 +3059,7 @@
 				<a href="page-shop-wishlist.html" class="wishlist">
 					<div class="wishlist-icon">
 						<button class="btn btn-secondary btn-wishlist">
-							<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+							<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 						</button>
 					</div>
 					<div class="wishlist-content">
@@ -2943,10 +3071,10 @@
 			<div class="mmenu-main-nav">
 				<ul class="menu">
 					<li class="menu-item">
-						<span>О компании <svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></span>
+						<span>О компании <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
 						<div class="submenu">
 							<button class="submenu-back-btn">
-								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 								<span>Назад</span>
 							</button>
 							<div class="submenu-title text-lg w-bold">О компании</div>
@@ -2962,10 +3090,10 @@
 					<li class="menu-item"><a href="page-delivery.html">Доставка</a></li>
 					<li class="menu-item"><a href="page-payment.html">Оплата</a></li>
 					<li class="menu-item">
-						<span>Покупателю <svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></span>
+						<span>Покупателю <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
 						<div class="submenu">
 							<button class="submenu-back-btn">
-								<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 								<span>Назад</span>
 							</button>
 							<div class="submenu-title text-lg w-bold">Покупателю</div>
@@ -2983,7 +3111,7 @@
 			<div class="mmenu-main-contacts">
 				<div class="phone">
 					<div class="phone-icon">
-						<svg class="icon icon-phone-alt"><use xlink:href="images/symbol-defs.svg#phone-alt"></use></svg>
+						<svg class="icon icon-phone-alt"><use xlink:href="./images/symbol-defs.svg#phone-alt"></use></svg>
 					</div>
 					<div class="phone-list">
 						<a href="tel:+74951283027" class="text-xs w-bold">+7 (495) 128-30-27</a>
@@ -2992,7 +3120,7 @@
 				</div>
 				<div class="mail mt-8">
 					<div class="mail-icon">
-						<svg class="icon icon-mail-alt"><use xlink:href="images/symbol-defs.svg#mail-alt"></use></svg>
+						<svg class="icon icon-mail-alt"><use xlink:href="./images/symbol-defs.svg#mail-alt"></use></svg>
 					</div>
 					<div class="mail-list">
 						<a href="mailto:zakaz@avtomatikavorot750.ru" class="text-xs w-bold">zakaz@avtomatikavorot750.ru</a>
@@ -3003,7 +3131,7 @@
 			<div class="mmenu-main-adress">
 				<div class="mmenu-main-adress-title text-xs">Адрес и режим работы</div>
 				<div class="mmenu-main-adress-item">
-					<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#location"></use></svg>
+					<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
 					<div class="content">
 						<span>Офис 1</span>
 						<p>г. Москва, ул. Летчика Бабушкина, д 103, кор. 4К, оф. 233</p>
@@ -3011,7 +3139,7 @@
 					</div>
 				</div>
 				<div class="mmenu-main-adress-item">
-					<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#location"></use></svg>
+					<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
 					<div class="content">
 						<span>Офис 2</span>
 						<p>г. Москва, ул. 8 марта Бабушкина, д 45, оф. 245</p>
@@ -3022,7 +3150,7 @@
 
 			<div class="mmenu-main-support">
 				<button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#freeAdviceModal">
-					<svg class="icon icon-support"><use xlink:href="images/symbol-defs.svg#support"></use></svg>
+					<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
 					<span>Бесплатная консультация</span>
 				</button>
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#checkOrderStatusModal">Что с моим заказом?</button>
@@ -3031,9 +3159,9 @@
 			<div class="mmenu-main-social">
 				<div class="mmenu-main-social-title text-xxs text-center">Мы в социальных сетях</div>
 				<ul class="mmenu-main-social-list">
-					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/dist/icons/instagram.svg" alt="Instagram"></a></li>
-					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/dist/icons/youtube.svg" alt="YouTube"></a></li>
-					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/dist/icons/vk.svg" alt="Vkontakte"></a></li>
+					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/instagram.svg" alt="Instagram"></a></li>
+					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/youtube.svg" alt="YouTube"></a></li>
+					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/vk.svg" alt="Vkontakte"></a></li>
 				</ul>
 			</div><!-- /.mmenu-main-social -->
 
@@ -3049,7 +3177,7 @@
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold">Заказать обратный звонок</h5>
 				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -3078,7 +3206,7 @@
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold">Что с моим заказом?</h5>
 				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -3111,13 +3239,13 @@
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold">Бесплатная консультация</h5>
 				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
 				<form class="form">
 					<div class="form-group form-group-label">
-						<input type="text" class="form-control" id="free-advice-form-name" placeholder="Номер заказа" autocomplete="off" required>
+						<input type="text" class="form-control" id="free-advice-form-name" placeholder="Имя" autocomplete="off" required>
 						<label for="free-advice-form-name">Имя</label>
 					</div>
 					<div class="form-group">
@@ -3144,14 +3272,14 @@
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold text-center">Купить в 1 клик</h5>
 				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
 				<form class="qb-product card card-product">
 					<div class="card-photo">
 						<div class="card-label card-label--yellow">−15%</div>
-						<img src="./images/dist/products/1.png" alt="">
+						<img src="./images/products/1.png" alt="">
 					</div>
 					<div class="card-meta">
 						<a href="#" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
@@ -3194,7 +3322,7 @@
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold text-center">Быстрый просмотр</h5>
 				<button type="button" class="btn btn-close" data-dismiss="modal">
-					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -3207,9 +3335,9 @@
 					<div class="qv-product-nav nav nav-tabs" role="tablist">
 						<a class="nav-link active" id="qv-gallery-tab" data-toggle="tab" href="#qv-gallery" role="tab" aria-controls="qv-gallery" aria-selected="true">Фото</a>
 						<a class="nav-link" id="qv-attributes-tab" data-toggle="tab" href="#qv-attributes" role="tab" aria-controls="qv-attributes" aria-selected="false">Характеристики</a>
-						<a class="permalink blue-link" href="#" class="product-link">
+						<a class="permalink blue-link" href="#">
 							<span>Подробнее о товаре</span>
-							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 						</a>
 					</div><!-- /.qv-product-nav -->
 
@@ -3226,38 +3354,38 @@
 									<div class="swiper-container">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-1.jpg" alt="">
+												<a href="images/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-2.jpg" alt="">
+												<a href="images/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-3.jpg" alt="">
+												<a href="images/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-4.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-4.jpg" alt="">
+												<a href="images/products/qv-photo-4.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
-												<a href="images/dist/products/qv-photo-5.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
-													<img src="./images/dist/products/qv-photo-5.jpg" alt="">
+												<a href="images/products/qv-photo-5.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-5.jpg" alt="">
 												</a>
 											</div><!-- /.slide -->
 										</div><!-- /.swiper-wrapper -->
 									</div><!-- /.swiper-container -->
 									<div class="product-gallery-slider-nav swiper-nav">
 										<button class="swiper-button-prev btn">
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</button>
 										<button class="swiper-button-next btn">
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
 										</button>
 									</div><!-- /.product-gallery-slider-nav -->
 								</div><!-- /.product-gallery-slider -->
@@ -3268,27 +3396,27 @@
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-1.jpg" alt="">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-2.jpg" alt="">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-3.jpg" alt="">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-4.jpg" alt="">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 											<div class="swiper-slide">
 												<div class="thumb img-scale">
-													<img src="./images/dist/products/qv-photo-5.jpg" alt="">
+													<img src="./images/products/qv-photo-5.jpg" alt="">
 												</div>
 											</div><!-- /.slide -->
 										</div><!-- /.swiper-wrapper -->
@@ -3347,7 +3475,7 @@
 							<button type="submit" class="btn btn-green btn-purchase btn-submit">
 								<div class="before-added">В корзину</div>
 								<div class="after-added">
-									<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
+									<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
 									<span>Товар добавлен<br> в <a href="#">корзину</a></span>
 								</div>
 							</button>
@@ -3360,9 +3488,12 @@
 	</div><!-- /.modal-dialog -->
 </div>
 
-	<script src="./js/app.min.js"></script>
-
-</script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.bundle.js"></script>
+	<script src="./js/vendors.js"></script>
+	<script src="./js/sliders.js"></script>
+	<script src="./js/shop.js"></script>
+	<script src="./js/app.js"></script>
 
 </body>
 </html>

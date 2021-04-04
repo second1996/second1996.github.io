@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Новости</title>
+	<meta name="description" content="Автоматика для ворот 750">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="icon" href="./images/favicon.png">
+
+	<link rel="stylesheet" href="./css/vendors/bootstrap.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+	<!-- Site header -->
+	<header class="header">
+
+		<!-- Shop Promo -->
+		<div class="shop-promo d-none">
+			<div class="container">
+				<div class="shop-promo-wrapper">
+					<div class="shop-promo-content">
+						<p>Скидка на лучшие товары −35%</p>
+					</div>
+					<div class="shop-promo-close">
+						<button type="button" class="btn btn-close">
+							<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-top">
+			<div class="container">
+				<div class="row flex-nowrap align-items-center justify-content-between">
+
+					<div class="col-auto header-top-adress">
+						<div class="dropdown dropdown-adress">
+							<button type="button" class="btn btn-dropdown" id="dropdownAdressMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Адрес и режим работы</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownAdressMenu">
+								<div class="dropdown-adress-item">
+									<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+									<div class="content">
+										<span>Офис 1</span>
+										<p>г. Москва, ул. Летчика Бабушкина, д 103, кор. 4К, оф. 233</p>
+										<p>Пн.-Пт. — с 9:00 до 21:00; <br> Сб. — с 11:00 до 18:00<br> Вс. — Выходной</p>
+									</div>
+								</div><!-- /.dropdown-adress-item -->
+								<div class="dropdown-adress-item">
+									<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+									<div class="content">
+										<span>Офис 2</span>
+										<p>г. Москва, ул. 8 марта Бабушкина, д 45, оф. 245</p>
+										<p>Пн.-Пт. — с 9:00 до 21:00; <br> Сб. — с 11:00 до 18:00<br> Вс. — Выходной</p>
+									</div>
+								</div><!-- /.dropdown-adress-item -->
+							</div><!-- /.dropdown-menu -->
+						</div><!-- /.dropdown -->
+					</div><!-- /.header-top-adress -->
+
+					<div class="col-auto header-top-btns">
+						<button type="button" class="btn btn-yellow btn-sm" data-toggle="modal" data-target="#freeAdviceModal">
+							<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
+							<span>Бесплатная консультация</span>
+						</button>
+						<button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#checkOrderStatusModal">Что с моим заказом?</button>
+					</div><!-- /.header-top-btns -->
+
+					<div class="col-auto header-top-nav">
+						<ul class="menu-list">
+							<li class="has-dropdown">
+								<a href="page-about.html">О компании</a>
+								<ul>
+									<li><a href="page-testimonials.html">Отзывы</a></li>
+									<li><a href="page-certificates.html">Сертификаты</a></li>
+									<li><a href="page-clients.html">Наши клиенты</a></li>
+								</ul>
+							</li>
+							<li><a href="page-delivery.html">Доставка</a></li>
+							<li><a href="page-payment.html">Оплата</a></li>
+							<li class="has-dropdown">
+								<a href="#">Покупателю</a>
+								<ul>
+									<li><a href="page-testimonials.html">Отзывы</a></li>
+									<li><a href="page-certificates.html">Сертификаты</a></li>
+									<li><a href="page-clients.html">Наши клиенты</a></li>
+								</ul>
+							</li>
+							<li><a href="page-contacts.html">Контакты</a></li>
+						</ul>
+						<ul class="social-list">
+							<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/instagram.svg" alt="Instagram"></a></li>
+							<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/youtube.svg" alt="YouTube"></a></li>
+						</ul>
+					</div><!-- /.header-top-nav -->
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.header-top -->
+
+		<div class="header-middle">
+			<div class="container">
+				<div class="row flex-nowrap align-items-center">
+
+					<div class="col-auto header-middle-burger">
+						<button class="toggle-mmenu-btn">
+							<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
+						</button>
+					</div><!-- /.header-middle-burger -->
+
+					<div class="col-auto header-middle-logo">
+						<a href="index.html" rel="home">
+							<img src="images/logo.svg" alt="Атоматика для ворот">
+						</a>
+					</div><!-- /.header-middle-logo -->
+
+					<div class="col header-middle-search">
+						<div class="heading">
+							<span class="heading-title text-lg w-bold">Поиск</span>
+							<button class="heading-btn btn btn-close">
+								<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+							</button>
+						</div>
+						<form class="form form-search">
+							<div class="form-group-label">
+								<input type="text" id="header-search-field" class="form-control" placeholder="Поиск" required autocomplete="off">
+								<label for="header-search-field">Поиск</label>
+							</div>
+							<button type="submit" class="btn btn-yellow btn-submit"><svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg></button>
+						</form>
+						<div class="search-results">
+							<div class="search-results-wrapper">
+								<div class="categories">
+									<span class="categories-title mb-8">Категории</span>
+									<ul class="categories-list">
+										<li><a href="#">Автоматика для подъёмно-поворотных ворот</a></li>
+										<li><a href="#">Автоматика для ворот</a></li>
+										<li><a href="#">Шлагбаумы</a></li>
+										<li><a href="#">Блоки управления</a></li>
+									</ul>
+								</div>
+								<div class="products">
+									<span class="products-title mb-8">Товары</span>
+									<div class="products-results">
+										<span>Найдено: 140 товаров</span>
+										<a href="page-search.html" class="link-arrow">Все результаты поиска <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></a>
+									</div>
+									<ul class="products-list">
+										<li>
+											<a href="#">
+												<div class="photo img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>15 800 руб.</ins>
+														<del>17 400 руб.</del>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="photo img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>19 200 руб.</ins>
+														<del>12 500 руб.</del>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="photo img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>71 300 руб.</ins>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div><!-- /.header-middle-search -->
+
+					<div class="col header-middle-contacts">
+						<div class="phone">
+							<div class="phone-icon">
+								<svg class="icon icon-phone-alt"><use xlink:href="./images/symbol-defs.svg#phone-alt"></use></svg>
+							</div>
+							<div class="phone-list">
+								<a href="tel:+74951283027" class="text-xs w-bold">+7 (495) 128-30-27</a>
+								<a href="tel:88005513027" class="text-xs w-bold">8 (800) 551-30-27 <i class="whatsapp"></i><i class="viber"></i></a>
+							</div>
+						</div>
+						<div class="mail">
+							<div class="mail-icon">
+								<svg class="icon icon-mail-alt"><use xlink:href="./images/symbol-defs.svg#mail-alt"></use></svg>
+							</div>
+							<div class="mail-list">
+								<a href="mailto:zakaz@avtomatikavorot750.ru" class="text-xs w-bold">zakaz@avtomatikavorot750.ru</a>
+							</div>
+						</div>
+					</div><!-- /.header-middle-contacts -->
+
+					<div class="col-auto header-middle-actions">
+						<div class="search d-xl-none">
+							<div class="search-icon">
+								<button class="btn btn-secondary btn-search">
+									<svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg>
+								</button>
+							</div>
+						</div><!-- /.compare -->
+						<div class="compare d-none d-sm-block">
+							<div class="compare-icon">
+								<a href="page-shop-compare.html" class="btn btn-secondary btn-compare">
+									<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+								</a>
+							</div>
+						</div><!-- /.compare -->
+						<div class="wishlist d-none d-sm-block">
+							<div class="wishlist-icon">
+								<a href="page-shop-wishlist.html" class="btn btn-secondary btn-wishlist">
+									<span class="badge">2</span>
+									<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+								</a>
+							</div>
+							<div class="wishlist-widget">
+								<div class="wrapper">
+									<ul class="products-list">
+										<li class="products-list-item">
+											<a href="page-shop-product.html" class="products-list-link">
+												<div class="photo img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>15 800 руб.</ins>
+													</div>
+												</div>
+											</a>
+											<a href="#" class="products-list-delete">
+												<svg class="icon icon-trash-alt"><use xlink:href="./images/symbol-defs.svg#trash-alt"></use></svg>
+											</a>
+										</li>
+										<li class="products-list-item">
+											<a href="page-shop-product.html" class="products-list-link">
+												<div class="photo img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>4 800 руб.</ins>
+													</div>
+												</div>
+											</a>
+											<a href="#" class="products-list-delete">
+												<svg class="icon icon-trash-alt"><use xlink:href="./images/symbol-defs.svg#trash-alt"></use></svg>
+											</a>
+										</li>
+									</ul>
+									<a href="page-shop-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
+								</div><!-- /.wrapper -->
+							</div><!-- /.widget -->
+						</div><!-- /.wishlist -->
+						<div class="shopping-cart">
+							<div class="shopping-cart-icon">
+								<a href="page-shop-cart.html" class="btn btn-secondary btn-shopping-cart">
+									<span class="badge">11</span>
+									<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
+								</a>
+							</div>
+							<div class="shopping-cart-content">
+								<span class="title">Товаров на сумму</span>
+								<span class="total">2 500 Руб.</span>
+							</div>
+							<div class="shopping-cart-widget">
+								<div class="wrapper">
+									<ul class="products-list">
+										<li class="products-list-item">
+											<a href="page-shop-product.html" class="products-list-link">
+												<div class="photo img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="">
+												</div>
+												<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+											</a>
+											<div class="total">
+												<div class="total-quantity quantity">
+													<button type="button" class="quantity-minus">-</button>
+													<input type="text" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество">
+													<button type="button" class="quantity-plus">+</button>
+												</div>
+												<div class="total-price price">
+													<ins>15 800 руб.</ins>
+													<!-- <del>17 400 руб.</del> -->
+												</div>
+											</div>
+											<a href="#" class="products-list-delete">
+												<svg class="icon icon-trash-alt"><use xlink:href="./images/symbol-defs.svg#trash-alt"></use></svg>
+											</a>
+										</li>
+									</ul>
+									<div class="subtotal text-md w-bold">Итого: 15 800 руб.</div>
+									<a href="page-shop-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
+								</div><!-- /.wrapper -->
+							</div><!-- /.widget -->
+						</div><!--/.shopping-cart-->
+					</div><!-- /.header-middle-actions -->
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.header-middle -->
+
+		<div class="header-bottom">
+			<div class="container">
+				<div class="row flex-nowrap align-items-center">
+
+					<div class="col-auto header-bottom-catalog">
+						<a href="page-shop-catalog.html" class="catalog-btn btn btn-yellow">
+							<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
+							<span>Каталог</span>
+						</a>
+						<nav class="catalog-nav">
+							<ul class="catalog-nav-list">
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Автоматика для ворот</span>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<div class="catalog-nav-submenu">
+										<h3 class="menu-title mb-24">Автоматика для ворот</h3>
+										<div class="menu-grid">
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для откатных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для распашных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для секционных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для подъёмно-поворотных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Блоки управления</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Пульты и брелоки</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+														<li><a href="#">Apollo</a></li>
+														<li><a href="#">2-х канальные</a></li>
+														<li><a href="#">4-х канальные</a></li>
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Радиоуправление</a>
+													<ul class="subcategories">
+														<li><a href="#">Радиоприемники</a></li>
+														<li><a href="#">Антенны</a></li>
+														<li><a href="#">Адиодекодеры</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Запчасти для автоматики</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Устройства для безопасности</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">Apollo</a></li>
+														<li><a href="#">2-х канальные</a></li>
+														<li><a href="#">4-х канальные</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Сигнальные элементы</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Консольные системы</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Дополнительное оборудование</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+										</div><!-- ./menu-grid -->
+									</div><!-- /.catalog-nav-submenu -->
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Шлагбаумы</span>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<div class="catalog-nav-submenu">
+										<h3 class="menu-title mb-24">Шлагбаумы</h3>
+										<div class="menu-grid">
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для откатных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для распашных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для подъёмно-поворотных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Блоки управления</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Радиоуправление</a>
+													<ul class="subcategories">
+														<li><a href="#">Радиоприемники</a></li>
+														<li><a href="#">Антенны</a></li>
+														<li><a href="#">Адиодекодеры</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Запчасти для автоматики</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Сигнальные элементы</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Консольные системы</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+										</div><!-- ./menu-grid -->
+									</div><!-- /.catalog-nav-submenu -->
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Комплектующие для ворот</span>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Парковочное оборудование</span>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Пульты</span>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Аксессуары</span>
+										<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div><!-- /.header-bottom-catalog -->
+
+					<div class="col header-bottom-nav">
+						<ul>
+							<li><a href="#" class="promo">Акции и скидки</a></li>
+							<li class="has-dropdown">
+								<a href="#">Автоматика для ворот</a>
+								<div class="megamenu">
+									<div class="container">
+										<div class="megamenu-list">
+											<div class="megamenu-item">
+												<div class="image img-cover">
+													<img src="./images/menu-categories/1.jpg" alt="Автоматика для откатных ворот">
+												</div>
+												<a href="#" class="category">Автоматика для откатных ворот</a>
+												<ul class="subcategories">
+													<li><a href="#">Комплекты</a></li>
+													<li><a href="#">Приводы</a></li>
+													<li><a href="#">Консольные системы</a></li>
+													<li><a href="#">Зубчатые рейки и крепеж</a></li>
+													<li><a href="#">Аксессуары</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+											<div class="megamenu-item">
+												<img src="./images/menu-categories/1.jpg" class="image" alt="Автоматика для распашных ворот">
+												<a href="#" class="category">Автоматика для распашных ворот</a>
+												<ul class="subcategories">
+													<li><a href="#">Комплекты</a></li>
+													<li><a href="#">Приводы</a></li>
+													<li><a href="#">Аксессуары</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-list-->
+									</div><!-- /.container -->
+								</div><!-- /.megamenu -->
+							</li>
+							<li class="has-dropdown">
+								<a href="#">Ворота</a>
+							</li>
+							<li class="has-dropdown">
+								<a href="#">Шлагбаумы</a>
+							</li>
+							<li class="has-dropdown">
+								<a href="#">Производители</a>
+							</li>
+							<li><a href="#">Наши работы</a></li>
+							<li><a href="#">Услуги</a></li>
+						</ul>
+					</div><!-- /.header-bottom-nav -->
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.header-bottom -->
+
+	</header>
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Новости</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="section-heading mb-32">
+				<h1 class="title">Новости</h1>
+			</div>
+
+			<!-- News -->
+			<div class="news">
+
+				<!-- News list -->
+				<div class="news-list">
+
+					<div class="row row-items-40 row-cols-1 row-cols-md-2 row-cols-lg-3">
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/1.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Режим работы на новогодние праздники 2021</h3>
+									<span class="date text-gray-400">16 января 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/2.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Как выбрать автоматику для ворот</h3>
+									<span class="date text-gray-400">1 декабря 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/3.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Виды приводов для ворот</h3>
+									<span class="date text-gray-400">8 ноября 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/4.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Где используется контроллер замка Perco</h3>
+									<span class="date text-gray-400">3 сентября 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/5.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Важная информация</h3>
+									<span class="date text-gray-400">2 сентября 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/1.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Важная информация покупателям</h3>
+									<span class="date text-gray-400">14 декабря 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+
+					<!-- Pagination -->
+					<div class="pagination">
+	<ul class="pagination-wrapper">
+		<li class="pagination-button pagination-button-prev _disabled">
+			<a href="#">
+				<svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg>
+				<span>Предыдущая</span>
+			</a>
+		</li>
+		<li class="pagination-item">
+			<a class="page-link" href="#">1</a>
+		</li>
+		<li class="pagination-item">
+			<a class="page-link" href="#">2</a>
+		</li>
+		<li class="pagination-item _current">
+			<a class="page-link" href="#">3</a>
+		</li>
+		<li class="pagination-item">
+			<a class="page-link" href="#">4</a>
+		</li>
+		<li class="pagination-item">
+			<a class="page-link" href="#">5</a>
+		</li>
+		<li class="pagination-item pagination-item--dots">
+			<span>...</span>
+		</li>
+		<li class="pagination-item">
+			<a class="page-link" href="#">12</a>
+		</li>
+		<li class="pagination-button pagination-button-next">
+			<a class="page-link" href="#">
+				<span>Следующая</span>
+				<svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg>
+			</a>
+		</li>
+	</ul>
+	<div class="pagination-start">
+		<a href="#">В начало</a>
+	</div>
+</div><!-- /.pagination -->
+
+				</div>
+
+			</div>
+			<!-- End News -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+	<!-- Section: Questions left? -->
+	<section class="f-questions section-blue">
+		<div class="container">
+			<h2 class="f-questions-title mb-16 text-lg w-bold text-center">Остались вопросы?</h2>
+			<p class="f-questions-descr mb-32 text-center">Заполните форму ниже, мы вам перезвоним и ответим на все интересующие вопросы</p>
+			<form class="f-questions-form form form-inline">
+				<div class="form-group form-group-label">
+					<input type="text" class="form-control" id="fq-form-name" placeholder="Имя" autocomplete="off" required>
+					<label for="fq-form-name">Имя</label>
+				</div>
+				<div class="form-group">
+					<div class="form-group-label">
+						<input type="tel" class="form-control" id="fq-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+						<label for="fq-form-phone">Телефон</label>
+					</div>
+					<div class="form-checkbox switch-input-mask">
+						<input type="checkbox" id="fq-form-phone-mask" checked>
+						<label for="fq-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-lg btn-yellow btn-submit">Позвонить мне</button>
+			</form>
+		</div><!-- /.container -->
+	</section>
+
+	<!-- Site footer -->
+	<footer class="footer">
+		<div class="footer-subscribe">
+			<div class="container">
+				<div class="subscribe">
+					<div class="subscribe-heading">
+						<h4 class="title">Подпишитесь на наши новости!</h4>
+						<p class="descr">Узнавайте первым о скидках, новинках, интересных предложениях!</p>
+					</div>
+					<div class="subscribe-form">
+						<form class="form form-inline">
+							<div class="form-group form-group-label">
+								<input type="email" id="subscribe-email" class="form-control" placeholder="Ваш e-mail" autocomplete="off" required>
+								<label for="subscribe-email">Ваш e-mail</label>
+							</div>
+							<button class="btn btn-lg btn-yellow btn-submit">Подписаться</button>
+						</form>
+					</div>
+				</div>
+			</div><!-- /.container -->
+		</div>
+		<div class="footer-main">
+			<div class="container">
+				<div class="row row-items-32 justify-content-between">
+					<div class="col-lg-2">
+						<div class="footer-intro">
+							<div class="logo">
+								<a href="index.html" rel="home">
+									<img src="images/logo-white.svg" alt="Автоматика для ворот 750">
+								</a>
+								<p class="descr text-xxs">Автоматика для ворот, системы контроля доступа, шлагбаумы, забор, навесы</p>
+							</div>
+							<div class="payments">
+								<div class="payments-title text-xxs">Мы принимаем</div>
+								<img src="./images/payments.png" alt="Мы принимаем платежи">
+							</div>
+							<div class="yandex-market">
+								<div class="yandex-market-title text-xxs">Оцените наш магазин<br> в Яндекс маркет</div>
+								<a href="#" target="_blank" rel="nofollow noopener">
+									<img src="./images/yandex-market-logo.svg" alt="Яндекс маркет">
+								</a>
+							</div>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-lg-3">
+						<div class="footer-contacts">
+							<div class="footer-title">Контакты</div>
+							<div class="phone">
+								<div>
+									<a href="tel:+74951283027" class="text-xs w-bold">+7 (495) 128-30-27</a>
+								</div>
+								<div>
+									<a href="tel:+78001283027" class="text-xs w-bold">+7 (800) 128-30-27 <i class="whatsapp"></i><i class="viber"></i></a>
+								</div>
+							</div>
+							<div class="email">
+								<div>
+									<a href="mailto:zakaz@avtomatikavorot750.ru">zakaz@avtomatikavorot750.ru</a>
+								</div>
+							</div>
+							<div class="social">
+								<div class="social-title">Мы в социальных сетях</div>
+								<div class="social-list">
+									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-vk"><use xlink:href="./images/symbol-defs.svg#vk"></use></svg></a>
+									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg></a>
+									<a href="#" target="_blank" rel="nofollow noopener"><svg class="icon icon-instagram"><use xlink:href="./images/symbol-defs.svg#instagram"></use></svg></a>
+								</div>
+							</div>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-lg-3">
+						<div class="footer-adress">
+							<div class="footer-title">Адрес и режим работы</div>
+							<p>г. Москва, ул. Летчика Бабушкина, дом 103, кор. 4К, оф. 233</p>
+							<p>Пн.-Пт. с 9:00 до 21:00;<br> Сб. с 11:00 до 18:00<br> Вс. Выходной</p>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-lg-2">
+						<div class="footer-nav">
+							<div class="footer-title">Информация</div>
+							<ul class="footer-nav-list">
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Статьи</a></li>
+								<li><a href="#">Оплата</a></li>
+								<li><a href="#">Доставка</a></li>
+							</ul>
+						</div>
+					</div><!-- /.col -->
+					<div class="col-sm-6 col-lg-2">
+						<div class="footer-nav">
+							<div class="footer-title">Каталог</div>
+							<ul class="footer-nav-list">
+								<li><a href="#">Приводы</a></li>
+								<li><a href="#">Ворота</a></li>
+								<li><a href="#">Автоматика для ворот</a></li>
+								<li><a href="#">Комплектующие</a></li>
+							</ul>
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<div class="footer-copyright">
+			<div class="copyright-top">
+				<div class="container">
+					<p class="text text-xxs">2008 – 2021 &copy; «Автоматика для ворот 750»</p>
+				</div><!-- /.container -->
+			</div>
+			<div class="copyright-bottom">
+				<div class="container">
+					<p class="text text-xxs">Cайт носит исключительно информационный характер, и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) Гражданского кодекса Российской Федерации. Наличие и цены уточняйте у наших операторов. Копирование всех составляющих частей сайта в какой бы то ни было форме без письменного разрешения владельцев авторских прав запрещено. Сайт использует технологию cookie. Используя сайт, Вы соглашаетесь с правилами использования cookie, а также даете согласие на обработку персональных данных.</p>
+				</div><!-- /.container -->
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go up button -->
+	<div class="go-up" id="go-up-button">
+		<button class="go-up-btn btn">
+			<span>Наверх</span>
+			<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+		</button>
+	</div>
+
+	<div class="mmenu scrollbar">
+	<div class="mmenu-wrapper">
+
+		<div class="mmenu-heading">
+			<span class="mmenu-heading-title text-lg w-bold">Меню</span>
+			<button class="mmenu-heading-btn btn btn-close">
+				<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+			</button>
+		</div><!-- /.mmenu-heading -->
+
+		<div class="mmenu-main">
+
+			<div class="mmenu-main-catalog">
+				<button class="btn btn-yellow">
+					<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
+					<span>Каталог</span>
+				</button>
+				<div class="submenu">
+					<button class="submenu-back-btn">
+						<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+						<span>Назад</span>
+					</button>
+					<div class="submenu-title text-lg w-bold">Каталог</div>
+					<ul class="submenu-list">
+						<li><a href="page-shop-category.html" class="promo">Акции и скидки</a></li>
+						<li><a href="page-shop-category.html">Шлагбаумы</a></li>
+						<li><a href="page-shop-category.html">Автоматика для ворот</a></li>
+						<li><a href="page-shop-category.html">Комплектующие для ворот</a></li>
+						<li><a href="page-shop-category.html">Парковочное оборудование</a></li>
+						<li><a href="page-shop-category.html">Пульты</a></li>
+						<li><a href="page-shop-category.html">Аксессуары</a></li>
+						<li><a href="page-shop-category.html">Производители</a></li>
+					</ul>
+				</div>
+			</div><!-- /.mmenu-main-catalog -->
+
+			<div class="mmenu-main-actions">
+				<a href="page-shop-cart.html" class="shopping-cart">
+					<div class="shopping-cart-icon">
+						<button class="btn btn-secondary btn-shopping-cart">
+							<span class="badge">11</span>
+							<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
+						</button>
+					</div>
+					<div class="shopping-cart-content">
+						<span class="title">Товаров на сумму</span>
+						<span class="total">2 500 Руб.</span>
+					</div>
+				</a><!--/.shopping-cart-->
+				<a href="page-shop-compare.html" class="compare">
+					<div class="compare-icon">
+						<button class="btn btn-secondary btn-compare">
+							<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+						</button>
+					</div>
+					<div class="wishlist-content">
+						<span class="title">Сравнить товары</span>
+					</div>
+				</a><!-- /.compare -->
+				<a href="page-shop-wishlist.html" class="wishlist">
+					<div class="wishlist-icon">
+						<button class="btn btn-secondary btn-wishlist">
+							<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+						</button>
+					</div>
+					<div class="wishlist-content">
+						<span class="title">Избранное</span>
+					</div>
+				</a><!-- /.wishlist -->
+			</div><!-- /.mmenu-main-actions -->
+
+			<div class="mmenu-main-nav">
+				<ul class="menu">
+					<li class="menu-item">
+						<span>О компании <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
+						<div class="submenu">
+							<button class="submenu-back-btn">
+								<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+								<span>Назад</span>
+							</button>
+							<div class="submenu-title text-lg w-bold">О компании</div>
+							<ul class="submenu-list">
+								<li><a href="page-testimonials.html">Отзывы</a></li>
+								<li><a href="page-certificates.html">Сертификаты</a></li>
+								<li><a href="page-clients.html">Наши клиенты</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu-item"><a href="page-portfolio.html">Наши работы</a></li>
+					<li class="menu-item"><a href="page-services.html">Услуги</a></li>
+					<li class="menu-item"><a href="page-delivery.html">Доставка</a></li>
+					<li class="menu-item"><a href="page-payment.html">Оплата</a></li>
+					<li class="menu-item">
+						<span>Покупателю <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
+						<div class="submenu">
+							<button class="submenu-back-btn">
+								<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+								<span>Назад</span>
+							</button>
+							<div class="submenu-title text-lg w-bold">Покупателю</div>
+							<ul class="submenu-list">
+								<li><a href="page-testimonials.html">Отзывы</a></li>
+								<li><a href="page-certificates.html">Сертификаты</a></li>
+								<li><a href="page-clients.html">Наши клиенты</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu-item"><a href="page-contacts.html">Контакты</a></li>
+				</ul>
+			</div><!-- /.mmenu-main-nav -->
+
+			<div class="mmenu-main-contacts">
+				<div class="phone">
+					<div class="phone-icon">
+						<svg class="icon icon-phone-alt"><use xlink:href="./images/symbol-defs.svg#phone-alt"></use></svg>
+					</div>
+					<div class="phone-list">
+						<a href="tel:+74951283027" class="text-xs w-bold">+7 (495) 128-30-27</a>
+						<a href="tel:+78005555555" class="text-xs w-bold">+7 (800) 555-55-55 <i class="whatsapp"></i><i class="viber"></i></a>
+					</div>
+				</div>
+				<div class="mail mt-8">
+					<div class="mail-icon">
+						<svg class="icon icon-mail-alt"><use xlink:href="./images/symbol-defs.svg#mail-alt"></use></svg>
+					</div>
+					<div class="mail-list">
+						<a href="mailto:zakaz@avtomatikavorot750.ru" class="text-xs w-bold">zakaz@avtomatikavorot750.ru</a>
+					</div>
+				</div>
+			</div><!-- /.mmenu-main-contacts -->
+
+			<div class="mmenu-main-adress">
+				<div class="mmenu-main-adress-title text-xs">Адрес и режим работы</div>
+				<div class="mmenu-main-adress-item">
+					<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+					<div class="content">
+						<span>Офис 1</span>
+						<p>г. Москва, ул. Летчика Бабушкина, д 103, кор. 4К, оф. 233</p>
+						<p>Пн.-Пт. — с 9:00 до 21:00; <br> Сб. — с 11:00 до 18:00<br> Вс. — Выходной</p>
+					</div>
+				</div>
+				<div class="mmenu-main-adress-item">
+					<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+					<div class="content">
+						<span>Офис 2</span>
+						<p>г. Москва, ул. 8 марта Бабушкина, д 45, оф. 245</p>
+						<p>Пн.-Пт. — с 9:00 до 21:00; <br> Сб. — с 11:00 до 18:00<br> Вс. — Выходной</p>
+					</div>
+				</div>
+			</div><!-- /.mmenu-main-adress -->
+
+			<div class="mmenu-main-support">
+				<button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#freeAdviceModal">
+					<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
+					<span>Бесплатная консультация</span>
+				</button>
+				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#checkOrderStatusModal">Что с моим заказом?</button>
+			</div><!-- /.mmenu-main-support -->
+
+			<div class="mmenu-main-social">
+				<div class="mmenu-main-social-title text-xxs text-center">Мы в социальных сетях</div>
+				<ul class="mmenu-main-social-list">
+					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/instagram.svg" alt="Instagram"></a></li>
+					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/youtube.svg" alt="YouTube"></a></li>
+					<li><a href="#" target="_blank" rel="nofollow noopener"><img src="./images/icons/vk.svg" alt="Vkontakte"></a></li>
+				</ul>
+			</div><!-- /.mmenu-main-social -->
+
+		</div><!-- /.mmenu-main -->
+
+	</div><!-- /.mmenu-wrapper -->
+</div>
+
+	<!-- Modal: Заказать обратный звонок -->
+<div class="modal fade" id="callbackModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold">Заказать обратный звонок</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="form-group">
+						<div class="form-group-label">
+							<input type="tel" class="form-control" id="callback-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+							<label for="callback-form-phone">Телефон</label>
+						</div>
+						<div class="form-checkbox switch-input-mask">
+							<input type="checkbox" id="callback-form-phone-mask" checked>
+							<label for="callback-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-lg btn-green btn-submit">Заказать</button>
+				</form>
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Что с моим заказом? -->
+<div class="modal fade" id="checkOrderStatusModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold">Что с моим заказом?</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="form-group form-group-label">
+						<input type="text" class="form-control" id="check-order-form-name" placeholder="Номер заказа" autocomplete="off" required>
+						<label for="check-order-form-name">Номер заказа</label>
+					</div>
+					<div class="form-group">
+						<div class="form-group-label">
+							<input type="tel" class="form-control" id="check-order-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+							<label for="check-order-form-phone">Телефон</label>
+						</div>
+						<div class="form-checkbox switch-input-mask">
+							<input type="checkbox" id="check-order-form-phone-mask" checked>
+							<label for="check-order-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-lg btn-green btn-submit">Проверить статус заказа</button>
+				</form>
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Бесплатная консультация -->
+<div class="modal fade" id="freeAdviceModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold">Бесплатная консультация</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="form-group form-group-label">
+						<input type="text" class="form-control" id="free-advice-form-name" placeholder="Имя" autocomplete="off" required>
+						<label for="free-advice-form-name">Имя</label>
+					</div>
+					<div class="form-group">
+						<div class="form-group-label">
+							<input type="tel" class="form-control" id="free-advice-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+							<label for="free-advice-form-phone">Телефон</label>
+						</div>
+						<div class="form-checkbox switch-input-mask">
+							<input type="checkbox" id="free-advice-form-phone-mask" checked>
+							<label for="free-advice-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-lg btn-yellow btn-submit">Заказать</button>
+				</form>
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Купить в 1 клик -->
+<div class="modal modal-quick-buy fade" id="buyOneClickModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold text-center">Купить в 1 клик</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="qb-product card card-product">
+					<div class="card-photo">
+						<div class="card-label card-label--yellow">−15%</div>
+						<img src="./images/products/1.png" alt="">
+					</div>
+					<div class="card-meta">
+						<a href="#" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+						<div class="price">
+							<ins>15 800 руб.</ins>
+							<del>17 400 руб.</del>
+						</div>
+						<div class="quantity">
+							<button type="button" class="quantity-minus">-</button>
+							<input type="text" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество">
+							<button type="button" class="quantity-plus">+</button>
+						</div>
+						<div class="order mt-32">
+							<div class="order-subtotal text-md w-bold">Итого: 15 800 руб.</div>
+							<div class="order-form form form-inline">
+								<div class="form-group">
+									<div class="form-group-label">
+										<input type="tel" class="form-control" id="qb-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+										<label for="qb-form-phone">Телефон</label>
+									</div>
+									<div class="form-checkbox switch-input-mask">
+										<input type="checkbox" id="qb-form-phone-mask" checked>
+										<label for="qb-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-lg btn-green btn-submit">Купить в один клик</button>
+							</div>
+						</div>
+					</div>
+				</form><!-- /.qb-product -->
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Быстрый просмотр товара -->
+<div class="modal modal-quick-view fade" id="quickViewProductModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold text-center">Быстрый просмотр</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="qv-product">
+
+					<!-- Product title -->
+					<h4 class="qv-product-title text-sm w-medium">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</h4>
+
+					<!-- Tabs -->
+					<div class="qv-product-nav nav nav-tabs" role="tablist">
+						<a class="nav-link active" id="qv-gallery-tab" data-toggle="tab" href="#qv-gallery" role="tab" aria-controls="qv-gallery" aria-selected="true">Фото</a>
+						<a class="nav-link" id="qv-attributes-tab" data-toggle="tab" href="#qv-attributes" role="tab" aria-controls="qv-attributes" aria-selected="false">Характеристики</a>
+						<a class="permalink blue-link" href="#">
+							<span>Подробнее о товаре</span>
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+						</a>
+					</div><!-- /.qv-product-nav -->
+
+					<!-- Content -->
+					<div class="qv-product-content tab-content">
+
+						<!-- Gallery -->
+						<div class="tab-pane fade show active" id="qv-gallery" role="tabpanel" aria-labelledby="qv-gallery-tab">
+							<div class="product-gallery">
+
+								<!-- Main slider -->
+								<div class="product-gallery-slider swiper-slider">
+									<div class="card-label card-label--yellow">−15%</div>
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<a href="images/products/qv-photo-1.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
+												</a>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<a href="images/products/qv-photo-2.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
+												</a>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<a href="images/products/qv-photo-3.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
+												</a>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<a href="images/products/qv-photo-4.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
+												</a>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<a href="images/products/qv-photo-5.jpg" class="photo img-scale" data-fancybox="qv-product-gallery">
+													<img src="./images/products/qv-photo-5.jpg" alt="">
+												</a>
+											</div><!-- /.slide -->
+										</div><!-- /.swiper-wrapper -->
+									</div><!-- /.swiper-container -->
+									<div class="product-gallery-slider-nav swiper-nav">
+										<button class="swiper-button-prev btn">
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+										</button>
+										<button class="swiper-button-next btn">
+											<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+										</button>
+									</div><!-- /.product-gallery-slider-nav -->
+								</div><!-- /.product-gallery-slider -->
+
+								<!-- Thumbs slider -->
+								<div class="product-gallery-thumbs mt-16 swiper-slider">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="thumb img-scale">
+													<img src="./images/products/qv-photo-1.jpg" alt="">
+												</div>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<div class="thumb img-scale">
+													<img src="./images/products/qv-photo-2.jpg" alt="">
+												</div>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<div class="thumb img-scale">
+													<img src="./images/products/qv-photo-3.jpg" alt="">
+												</div>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<div class="thumb img-scale">
+													<img src="./images/products/qv-photo-4.jpg" alt="">
+												</div>
+											</div><!-- /.slide -->
+											<div class="swiper-slide">
+												<div class="thumb img-scale">
+													<img src="./images/products/qv-photo-5.jpg" alt="">
+												</div>
+											</div><!-- /.slide -->
+										</div><!-- /.swiper-wrapper -->
+									</div><!-- /.swiper-container -->
+								</div><!-- /.product-gallery-thumbs -->
+
+							</div><!-- /.product-gallery -->
+						</div><!-- /.tab -->
+
+						<!-- Attributes -->
+						<div class="tab-pane fade" id="qv-attributes" role="tabpanel" aria-labelledby="qv-attributes-tab">
+							<table class="table-attributes">
+								<tbody>
+									<tr>
+										<td class="attribute"><span>Напряжение электропитания</span></td>
+										<td class="value"><span>230В, 50/60 Гц</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Напряжение питания двигателя</span></td>
+										<td class="value"><span>230В, 50/60 Гц</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Потребляемая мощность в режиме ожидания</span></td>
+										<td class="value"><span>4,5 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Потребляемая мощность с модулем Green Рower</span></td>
+										<td class="value"><span>0,8 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Мощность</span></td>
+										<td class="value"><span>530 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Толкающее усилие</span></td>
+										<td class="value"><span>800 Н</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /.tab -->
+
+					</div><!-- /.qv-product-content -->
+
+					<!-- Product summary -->
+					<div class="qv-product-summary">
+						<div class="price">
+							<ins>15 800 руб.</ins>
+							<del>17 400 руб.</del>
+						</div>
+						<form class="form">
+							<div class="quantity">
+								<button type="button" class="quantity-minus">-</button>
+								<input type="text" class="quantity-value form-control" name="qv-product-quantity" value="1" step="1" min="1" max="99" title="Количество" readonly>
+								<button type="button" class="quantity-plus">+</button>
+							</div>
+							<button type="submit" class="btn btn-green btn-purchase btn-submit">
+								<div class="before-added">В корзину</div>
+								<div class="after-added">
+									<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+									<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+								</div>
+							</button>
+						</form>
+					</div><!-- /.qv-product-summary -->
+
+				</div><!-- /.qv-product -->
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.bundle.js"></script>
+	<script src="./js/vendors.js"></script>
+	<script src="./js/sliders.js"></script>
+	<script src="./js/shop.js"></script>
+	<script src="./js/app.js"></script>
+
+</body>
+</html>
