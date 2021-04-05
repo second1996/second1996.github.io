@@ -1743,11 +1743,51 @@ hr {
   stroke: currentColor;
   fill: currentColor
 }
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(255,255,255,.8)
+}
+.preloader-spinner {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid #27ae60;
+  border-radius: 50%;
+  border-top-color: transparent;
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: spinner 1s infinite linear;
+  animation: spinner 1s infinite linear
+}
 .w-100 {
   width: 100%!important
 }
 .mw-100 {
   max-width: 100%!important
+}
+@-webkit-keyframes spinner {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+@keyframes spinner {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
 }
 .mt-8 {
   margin-top: 8px
@@ -3907,6 +3947,9 @@ article ul > li::before {
 .shop-message--blue {
   background-color: #f8faff
 }
+.shop-filters .filter {
+  position: relative
+}
 .shop-filters .filter-item:not(:last-child) {
   margin-bottom: 24px
 }
@@ -4271,6 +4314,9 @@ article ul > li::before {
   justify-content: center;
   text-align: center
 }
+.shop-products {
+  position: relative
+}
 .btn,
 button {
   display: -webkit-inline-box;
@@ -4325,6 +4371,11 @@ button:hover {
 button:focus {
   -webkit-box-shadow: 0 0 0 4px rgba(176,180,187,.25);
   box-shadow: 0 0 0 4px rgba(176,180,187,.25)
+}
+.btn:disabled,
+button:disabled {
+  background-color: #dfe3e8!important;
+  color: #b0b4bb!important
 }
 .btn.btn-yellow {
   background-color: #f8cb2d;

@@ -43,11 +43,9 @@ $(document).ready(function() {
 	 * WIDGET: Filter 'Show all' button
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	$('.filter-item').each(function (el, index) {
-		$(this).find('.filter-more > .filter-more-btn').on('click', function(e) {
-			e.preventDefault()
-			$(this).remove()
-		})
+	$(document).on('click', '.filter-item .filter-more-btn', function(e) {
+		e.preventDefault()
+		$(this).remove()
 	})
 
 

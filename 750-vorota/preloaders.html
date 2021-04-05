@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Избранные товары</title>
+	<title>Прелоадеры</title>
 	<meta name="description" content="Автоматика для ворот 750">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -646,7 +646,8 @@
 		<div class="container">
 			<ul class="breadcrumbs-list">
 				<li><a href="page-home.html">Главная</a></li>
-				<li><span>Избранное</span></li>
+				<li><a href="page-shop-catalog.html">Каталог</a></li>
+				<li><span>Автоматика для ворот</span></li>
 			</ul>
 		</div>
 	</div>
@@ -655,22 +656,376 @@
 	<div class="page-content">
 		<div class="container">
 			<div class="section-heading mb-32">
-				<h1 class="title">Избранное</h1>
+				<h1 class="title">Автоматика для ворот</h1>
 			</div>
 
-			<!-- Wishlist empty -->
-			<!-- <div class="shop-message shop-message--yellow">
-				<p>Нет товаров в избранном. Вы можете добавить товары в избранное со страницы каталога или карточек товаров.</p>
-			</div> -->
+			<div class="d-flex justify-content-between">
 
-			<!-- Wishlist -->
-			<div class="wishlist">
+				<!-- Sidebar -->
+				<aside class="page-aside widgets" id="shop-filters-sidebar">
 
-				<!-- List of products -->
-				<div class="shop-products">
-					<div class="row row-items-40 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6">
-						<div class="col">
-							<div class="card card-product">
+					<!-- Shop filters -->
+<div class="widget-item shop-filters">
+	<div class="shop-filters-heading mb-24">
+		<span class="title text-sm w-medium">Фильтры</span>
+		<button class="btn btn-close">
+			<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+		</button>
+	</div>
+	<div class="widget-inner">
+		<form class="filter form" id="shop-filters">
+
+			<!-- Start Preloader -->
+			<div class="preloader">
+				<div class="preloader-spinner"></div>
+			</div>
+			<!-- End Preloader -->
+
+			<div class="filter-item">
+				<div class="filter-header mb-16">Цена, руб</div>
+				<div class="filter-slider">
+					<div class="filter-slider-handle" data-slidermin="500" data-slidermax="28850"></div>
+					<div class="filter-slider-range">
+						<input type="number" name="p-price-from" id="p-price-from" value="2500" class="form-control filter-slider-from">
+						<input type="number" name="p-price-to" id="p-price-to" value="10000" class="form-control filter-slider-to">
+					</div>
+				</div>
+			</div><!-- /.filter-item -->
+			<div class="filter-item">
+				<div class="filter-header" id="filter-header-1">
+					<button class="btn btn-dropdown" type="button" data-toggle="collapse" data-target="#filter-body-1" aria-expanded="true" aria-controls="filter-body-1">Бренды</button>
+					<abbr class="hint" data-toggle="tooltip" title="Компания-производитель"></abbr>
+				</div>
+				<div id="filter-body-1" class="filter-collapse collapse show" aria-labelledby="filter-header-1">
+					<div class="filter-body">
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-1">
+							<label for="filter-brands-1" class="form-checkbox-label"><a href="#" class="blue-link">Came</a> <sup>11</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-2">
+							<label for="filter-brands-2" class="form-checkbox-label"><a href="#" class="blue-link">Nice</a> <sup>78</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-3">
+							<label for="filter-brands-3" class="form-checkbox-label"><a href="#" class="blue-link">FAAC</a> <sup>78</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-4">
+							<label for="filter-brands-4" class="form-checkbox-label"><a href="#" class="blue-link">DoorHan</a> <sup>45</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-5">
+							<label for="filter-brands-5" class="form-checkbox-label"><a href="#" class="blue-link">AN-Motors</a> <sup>56</sup></label>
+						</div>
+						<!-- Hidden content -->
+						<div class="filter-more">
+							<button type="button" class="filter-more-btn btn">Показать все</button>
+							<div class="filter-more-content">
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-brands-6">
+									<label for="filter-brands-6" class="form-checkbox-label"><a href="#" class="blue-link">Comunello</a> <sup>78</sup></label>
+								</div>
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-brands-7">
+									<label for="filter-brands-7" class="form-checkbox-label"><a href="#" class="blue-link">Came</a> <sup>44</sup></label>
+								</div>
+							</div>
+						</div>
+						<!-- End Hidden content -->
+					</div>
+				</div>
+			</div><!-- /.filter-item -->
+			<div class="filter-item">
+				<div class="filter-header" id="filter-header-2">
+					<button class="btn btn-dropdown" type="button" data-toggle="collapse" data-target="#filter-body-2" aria-expanded="true" aria-controls="filter-body-2">Тип привода</button>
+					<abbr class="hint" data-toggle="tooltip" title="Тип привода откатных ворот"></abbr>
+				</div>
+				<div id="filter-body-2" class="filter-collapse collapse show" aria-labelledby="filter-header-2">
+					<div class="filter-body">
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-1">
+							<label for="filter-pryvod-1" class="form-checkbox-label">Линейный <sup>11</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-2" checked>
+							<label for="filter-pryvod-2" class="form-checkbox-label">Осевой <sup>24</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-3">
+							<label for="filter-pryvod-3" class="form-checkbox-label">Откатной <sup>32</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-4">
+							<label for="filter-pryvod-4" class="form-checkbox-label">Подъемной-поворотный <sup>146</sup></label>
+						</div>
+						<!-- Hidden content -->
+						<div class="filter-more">
+							<button type="button" class="filter-more-btn btn">Показать все</button>
+							<div class="filter-more-content">
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-pryvod-5">
+									<label for="filter-pryvod-5" class="form-checkbox-label">Потолочный <sup>14</sup></label>
+								</div>
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-pryvod-6">
+									<label for="filter-pryvod-6" class="form-checkbox-label">Рычажный <sup>11</sup></label>
+								</div>
+							</div>
+						</div>
+						<!-- End Hidden content -->
+					</div><!-- /.filter-body -->
+				</div><!-- /.filter-collapse -->
+			</div><!-- /.filter-item -->
+			<div class="filter-item">
+				<div class="filter-header" id="filter-header-3">
+					<button class="btn btn-dropdown" type="button" data-toggle="collapse" data-target="#filter-body-3" aria-expanded="true" aria-controls="filter-body-3">Тип изделия</button>
+				</div>
+				<div id="filter-body-3" class="filter-collapse collapse show" aria-labelledby="filter-header-3">
+					<div class="filter-body">
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-1">
+							<label for="filter-profil-1" class="form-checkbox-label">Зубчатая рейка <sup>8</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-2">
+							<label for="filter-profil-2" class="form-checkbox-label">Крепеж <sup>19</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-3">
+							<label for="filter-profil-3" class="form-checkbox-label">Крепеж для рейки <sup>4</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-4">
+							<label for="filter-profil-4" class="form-checkbox-label">Профиль направляющий <sup>37</sup></label>
+						</div>
+						<!-- Hidden content -->
+						<div class="filter-more">
+							<button type="button" class="filter-more-btn btn">Показать все</button>
+							<div class="filter-more-content">
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-profil-5">
+									<label for="filter-profil-5" class="form-checkbox-label">Потолочный <sup>14</sup></label>
+								</div>
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-profil-6">
+									<label for="filter-profil-6" class="form-checkbox-label">Рычажный <sup>11</sup></label>
+								</div>
+							</div>
+						</div>
+						<!-- End Hidden content -->
+					</div><!-- /.filter-body -->
+				</div><!-- /.filter-collapse -->
+			</div><!-- /.filter-item -->
+		</form>
+	</div><!-- /.widget-inner -->
+</div><!-- /.widget-item -->
+<!-- End Shop filters -->
+
+<!-- Categories -->
+<div class="widget-item">
+	<h4 class="widget-title mb-24 text-sm w-medium">Смежные категории</h4>
+	<div class="widget-inner">
+		<ul class="categories">
+			<li><a href="#">Видеонаблюдение</a></li>
+			<li><a href="#">Контроль доступа</a></li>
+			<li><a href="#">Шлагбаумы</a></li>
+			<li><a href="#">Домофоны</a></li>
+		</ul>
+	</div><!-- /.widget-inner -->
+</div><!-- /.widget-item -->
+
+<!-- Managers -->
+<div class="widget-item">
+	<h4 class="widget-title mb-16 text-sm w-medium">Вас проконсультируют специалисты</h4>
+	<div class="widget-inner">
+		<div class="card card-manager mb-8">
+			<div class="card-photo img-cover">
+				<img src="images/manager-1.png" alt="Алексей Иванов">
+			</div>
+			<div class="card-meta">
+				<span class="name">Алексей Иванов</span>
+				<span class="post">Менеджер по продажам</span>
+			</div>
+		</div><!-- /.manager -->
+		<div class="card card-manager">
+			<div class="card-photo img-cover">
+				<img src="images/manager-2.png" alt="Марина Константиновская">
+			</div>
+			<div class="card-meta">
+				<span class="name">Марина Константиновская</span>
+				<span class="post">Менеджер по продажам</span>
+			</div>
+		</div><!-- /.manager -->
+	</div><!-- /.widget-inner -->
+</div><!-- /.widget-item -->
+
+				</aside>
+				<!-- End sidebar -->
+
+				<!-- Page content -->
+				<div class="page-content">
+
+					<!-- Shop categories -->
+					<div class="shop-categories mb-48">
+						<div class="shop-categories-wrapper row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5">
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/2.png" alt="">
+									</div>
+									<span class="category-title">Автоматика для откатных ворот</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/3.png" alt="">
+									</div>
+									<span class="category-title">Автоматика для подъёмно-поворотных ворот</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/4.png" alt="">
+									</div>
+									<span class="category-title">Автоматика для распашных ворот</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/5.png" alt="">
+									</div>
+									<span class="category-title">Автоматика для секционных ворот</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/6.png" alt="">
+									</div>
+									<span class="category-title">Блоки управления</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/7.png" alt="">
+									</div>
+									<span class="category-title">Пульты, брелки</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/8.png" alt="">
+									</div>
+									<span class="category-title">Радиоуправление</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/6.png" alt="">
+									</div>
+									<span class="category-title">Блоки управления</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/7.png" alt="">
+									</div>
+									<span class="category-title">Пульты, брелки</span>
+								</a>
+							</div><!-- /.col -->
+							<div class="shop-categories-item col">
+								<a href="page-shop-subcategory.html" class="category rounded-4">
+									<div class="category-photo img-scale">
+										<img src="images/categories/8.png" alt="">
+									</div>
+									<span class="category-title">Радиоуправление</span>
+								</a>
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div>
+
+					<!-- Shop settings -->
+					<div class="shop-settings">
+	<div class="shop-settings-wrapper">
+		<div class="shop-settings-row">
+			<div class="s-sort">
+				<span class="s-sort-label">Сортировки:</span>
+				<div class="s-sort-list">
+					<a rel="nofollow" href="#" class="_active">Популярные</a>
+					<a rel="nofollow" href="#">Дешевые</a>
+					<a rel="nofollow" href="#">Дорогие</a>
+					<a rel="nofollow" href="#">По отзывам</a>
+					<a rel="nofollow" href="#">Рейтингу</a>
+					<a rel="nofollow" href="#">Скидки</a>
+					<a rel="nofollow" href="#">Новинки</a>
+				</div>
+			</div><!-- /.s-sort -->
+			<div class="s-sort-dropdown dropdown">
+				<button type="button" class="s-sort-dropdown-btn btn btn-dropdown" id="dropdownSortProducts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сортировки</button>
+				<div class="s-sort-dropdown-menu dropdown-menu" aria-labelledby="dropdownSortProducts">
+					<a rel="nofollow" href="#">Популярные</a>
+					<a rel="nofollow" href="#">Дешевые</a>
+					<a rel="nofollow" href="#" class="_active">Дорогие</a>
+					<a rel="nofollow" href="#">По отзывам</a>
+					<a rel="nofollow" href="#">Рейтингу</a>
+					<a rel="nofollow" href="#">Скидки</a>
+					<a rel="nofollow" href="#">Новинки</a>
+				</div>
+			</div><!-- /.s-sort-dropdown -->
+			<div class="s-filter">
+				<button class="s-filter-btn btn" id="toggle-filters-sidebar">
+					<svg class="icon icon-filter"><use xlink:href="./images/symbol-defs.svg#filter"></use></svg>
+					<span>Фильтр</span>
+				</button>
+			</div>
+			<div class="s-view">
+				<div class="s-view-buttons">
+					<a rel="nofollow" href="#" class="s-view-button btn _selected">
+						<svg class="icon icon-view-more"><use xlink:href="./images/symbol-defs.svg#view-grid"></use></svg>
+					</a>
+					<a rel="nofollow" href="#" class="s-view-button btn">
+						<svg class="icon icon-view-row"><use xlink:href="./images/symbol-defs.svg#view-row"></use></svg>
+					</a>
+				</div>
+			</div><!-- /.s-view -->
+		</div><!-- /.shop-settings-row -->
+		<div class="shop-settings-row">
+			<div class="s-found">
+				<span class="s-found-label text-xxs">Найдено:</span>
+				<span class="s-found-value text-xxs w-bold">576 товара</span>
+			</div><!-- /.s-found -->
+			<div class="s-show">
+				<span class="s-show-label text-xxs">Показывать:</span>
+				<div class="s-show-list">
+					<a rel="nofollow" href="#" class="s-show-item _selected">20</a>
+					<a rel="nofollow" href="#" class="s-show-item">40</a>
+					<a rel="nofollow" href="#" class="s-show-item">100</a>
+				</div>
+			</div><!-- /.s-show -->
+		</div><!-- /.shop-settings-row -->
+	</div><!-- /.shop-settings-wrapper -->
+</div>
+
+					<!-- List of products -->
+					<div class="shop-products">
+
+						<!-- Start Preloader -->
+						<div class="preloader">
+							<div class="preloader-spinner"></div>
+						</div>
+						<!-- End Preloader -->
+
+						<div class="row row-items-40 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xxl-5">
+							<div class="col">
+								<div class="card card-product">
 	<div class="card-preview">
 		<div class="card-quick-view">
 			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
@@ -742,9 +1097,9 @@
 		</div>
 	</div>
 </div>
-						</div><!-- /.col -->
-						<div class="col">
-							<div class="card card-product">
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
 	<div class="card-preview">
 		<div class="card-quick-view">
 			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
@@ -810,9 +1165,9 @@
 		</div>
 	</div>
 </div>
-						</div><!-- /.col -->
-						<div class="col">
-							<div class="card card-product">
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
 	<div class="card-preview">
 		<div class="card-quick-view">
 			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
@@ -873,9 +1228,9 @@
 		</div>
 	</div>
 </div>
-						</div><!-- /.col -->
-						<div class="col">
-							<div class="card card-product">
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
 	<div class="card-preview">
 		<div class="card-quick-view">
 			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
@@ -923,9 +1278,9 @@
 		</div>
 	</div>
 </div>
-						</div><!-- /.col -->
-						<div class="col">
-							<div class="card card-product">
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
 	<div class="card-preview">
 		<div class="card-quick-view">
 			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
@@ -987,9 +1342,9 @@
 		</div>
 	</div>
 </div>
-						</div><!-- /.col -->
-						<div class="col">
-							<div class="card card-product">
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
 	<div class="card-preview">
 		<div class="card-quick-view">
 			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
@@ -1046,16 +1401,585 @@
 		</div>
 	</div>
 </div>
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-
-					<!-- Show more button -->
-					<div class="mb-32">
-						<button type="button" class="btn btn-secondary w-100">Показать ещё</button>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--yellow">−15%</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/1.png" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-in">В наличии</div>
+			<div class="price">
+				<ins>15 800 Руб.</ins>
+				<del>17 400 Руб.</del>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary _added">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase _added">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
 					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-in">В наличии</div>
+			<div class="price">
+				<ins>23 600 Руб.</ins>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary _added">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--blue">Новинка</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-out">Нет в наличии</div>
+			<div class="price">
+				<ins>41 390 Руб.</ins>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--gray">В архиве</div>
+		<a href="page-shop-product.html" class="card-photo" title="Автоматика для откатных ворот">
+			<img class="lazy" src="./images/products/6.jpg" alt="">
+			<div class="lazy-spin"></div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Автоматика для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-archive">В архиве</div>
+			<div class="price">
+				<ins>19 000 Руб.</ins>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase" disabled>
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--green">Выбор покупателей</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Came 001A5000A привод для распашных ворот линейный до 1000 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Came 001A5000A привод для распашных ворот линейный до 1000 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-order">Под заказ</div>
+			<div class="price">
+				<ins>55 900 Руб.</ins>
+				<del>49 200 Руб.</del>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--yellow">−15%</div>
+		<a href="page-shop-product.html" class="card-gallery" title="CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/1.png" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">CAME ATI 3000 COMBO CLASSICO (001U7088RU) комплект автоматики для распашных ворот до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-in">В наличии</div>
+			<div class="price">
+				<ins>15 800 Руб.</ins>
+				<del>17 400 Руб.</del>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary _added">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase _added">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-in">В наличии</div>
+			<div class="price">
+				<ins>23 600 Руб.</ins>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary _added">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--blue">Новинка</div>
+		<a href="page-shop-product.html" class="card-gallery" title="Привод для распашных ворот линейный до 800 кг">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Привод для распашных ворот линейный до 800 кг</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-out">Нет в наличии</div>
+			<div class="price">
+				<ins>41 390 Руб.</ins>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product">
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--gray">В архиве</div>
+		<a href="page-shop-product.html" class="card-photo" title="Автоматика для откатных ворот">
+			<img class="lazy" src="./images/products/6.jpg" alt="">
+			<div class="lazy-spin"></div>
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">Автоматика для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="card-price">
+			<div class="stock stock-archive">В архиве</div>
+			<div class="price">
+				<ins>19 000 Руб.</ins>
+			</div>
+		</div>
+		<div class="card-buttons">
+			<div class="card-buttons-group">
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
+				</a>
+				<a href="#" class="btn btn-secondary">
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
+				</a>
+			</div>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase" disabled>
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+		</div>
+	</div>
+</div>
+							</div><!-- /.col -->
+						</div><!-- /.row -->
 
-					<!-- Pagination -->
-					<div class="pagination">
+						<!-- Show more button -->
+						<div class="mb-32">
+							<button type="button" class="btn btn-secondary w-100">Показать ещё</button>
+						</div>
+
+						<!-- Pagination -->
+						<div class="pagination">
 	<ul class="pagination-wrapper">
 		<li class="pagination-button pagination-button-prev _disabled">
 			<a href="#">
@@ -1095,14 +2019,115 @@
 		<a href="#">В начало</a>
 	</div>
 </div><!-- /.pagination -->
-				</div>
+					</div>
 
-			</div>
-			<!-- End Wishlist -->
+					<!-- Section: Помочь с выбором? -->
+					<section class="f-questions section-blue mt-48 rounded-8">
+						<div class="container">
+							<h2 class="f-questions-title mb-16 text-lg w-bold text-center">Помочь с выбором?</h2>
+							<p class="f-questions-descr mb-32 text-center">Заполните форму ниже, мы вам перезвоним и ответим на все интересующие вопросы</p>
+							<form class="f-questions-form form form-inline">
+								<div class="form-group form-group-label">
+									<input type="text" class="form-control" id="fh-form-name" placeholder="Имя" autocomplete="off" required>
+									<label for="fh-form-name">Имя</label>
+								</div>
+								<div class="form-group">
+									<div class="form-group-label">
+										<input type="tel" class="form-control" id="fh-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+										<label for="fh-form-phone">Телефон</label>
+									</div>
+									<div class="form-checkbox switch-input-mask">
+										<input type="checkbox" id="fh-form-phone-mask" checked>
+										<label for="fh-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-lg btn-yellow btn-submit">Позвонить мне</button>
+							</form>
+						</div><!-- /.container -->
+					</section>
+
+					<!-- Section: Популярные подборки -->
+					<section class="shop-collections mt-48">
+						<div class="section-heading mb-32">
+							<h2 class="title">Популярные подборки</h2>
+						</div>
+						<div class="shop-collections-wrapper row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5">
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Для частного дома</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Для офиса</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Системы безопасности</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Шлагбаумы</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Автоматика </span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Для частного дома</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Для офиса</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Системы безопасности</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Шлагбаумы</span>
+								</a>
+							</div><!--/.col -->
+							<div class="shop-collections-item col">
+								<a href="page-shop-subcategory.html" class="collection rounded-4">
+									<span class="collection-title">Автоматика </span>
+								</a>
+							</div><!--/.col -->
+						</div><!-- /.row -->
+					</section>
+
+					<section class="seo-article mt-96">
+	<div class="row no-gutters justify-content-center">
+		<article class="col-lg-10">
+			<h2>Что такое автоматика для ворот?</h2>
+			<p><a href="#">Наша компания</a> имеет за плечами <b>солидный опыт в продажах</b>, установке и обслуживании самого разнообразного оборудования для видеонаблюдения. Наши специалисты всегда готовы оказать клиентам всестороннюю помощь в выборе оптимальной техники под конкретные запросы. Камеры видеонаблюдения, турникеты, шлагбаумы, автоматика ворот — у нас вы можете <u>заказать установку</u> и монтаж самых разнообразных устройств. К каждому заказу мы подходим индивидуально, учитывая все требования и пожелания клиента.</p>
+			<ul>
+				<li>Правильно настроенная система видеонаблюдения является надёжным способом обеспечить безопасность объекта.</li>
+				<li>Мы поможем не только с выбором, но и настроим оборудование, также при необходимости возьмёмся за регулярное его обслуживание.</li>
+				<li>Комплекты видеонаблюдения или отдельные камеры, видеорегистраторы всех типов, комплекты контроля доступа СКУД – мы предлагаем самый широкий ассортимент товаров с официальной сертификацией.</li>
+			</ul>
+			<p>Установка и эксплуатация систем видеонаблюдения может осуществляться на самых разных объектах – квартиры, частные дома, торговые центры, промышленные и складские помещения, публичные места, автомобильные парковки и улицы. В каждом из этих случаев вы получите консультацию высококвалифицированных профессионалов своего дела, которые смогут сэкономить ваш бюджет и помочь вам приобрести аналоговое или IP видеонаблюдение по оптимальной цене. Поставки осуществляются по всей России. Обеспечивается гарантийное и постгарантийное обслуживание. Обращаясь в магазин видеонаблюдения, вы делаете правильный выбор – мы заинтересованы в постоянных клиентах и долгосрочном сотрудничестве и прилагаем все усилия для того, чтобы каждый наш клиент остался доволен.</p>
+		</article>
+	</div><!-- /.row -->
+</section>
+
+				</div><!-- /.page-content -->
+				<!-- End Page content -->
+
+			</div><!-- /.d-flex -->
 
 		</div><!-- /.container -->
 	</div>
-	<!-- End Wishlist -->
+	<!-- End Page content -->
 
 </main>
 
