@@ -7902,6 +7902,46 @@ table {
 .s-cart-table-item .delete-btn:hover {
   color: #eb5757
 }
+.s-cart-table-item .configuration {
+  position: absolute;
+  left: 68%;
+  top: 75px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: #f8faff;
+  white-space: nowrap
+}
+.s-cart-table-item .configuration .form-checkbox {
+  margin-bottom: 0
+}
+.s-cart-table-item .configuration .form-checkbox-label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.s-cart-table-item .configuration .form-checkbox-label::after,
+.s-cart-table-item .configuration .form-checkbox-label::before {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.s-cart-table-item .configuration .form-checkbox-label::before {
+  border: 2px solid #27ae60
+}
+.s-cart-table-item .configuration-text {
+  overflow: hidden;
+  max-width: 256px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.s-cart-table-item .configuration-price {
+  padding-left: 10px
+}
 .s-cart-actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9413,6 +9453,9 @@ table {
     flex-basis: 20%;
     max-width: 20%
   }
+  .s-cart-table-item .configuration-text {
+    max-width: 180px
+  }
   .s-cart-actions--right .clear-cart,
   .s-cart-actions--right .print-cart {
     font-size: 13px;
@@ -9615,6 +9658,9 @@ table {
   }
   .services-single .s-heroes {
     padding: 30px
+  }
+  .s-cart-table-item .configuration-text {
+    max-width: 124px
   }
   .s-cart-actions--left,
   .s-cart-actions--right {
@@ -10139,6 +10185,18 @@ table {
     margin-right: 16px
   }
   .s-cart-table-item .card-product .card-meta .title {
+    font-size: 13px;
+    line-height: 16px
+  }
+  .s-cart-table-item .configuration {
+    left: 60%
+  }
+  .s-cart-table-item .configuration-text {
+    max-width: 116px;
+    font-size: 13px;
+    line-height: 16px
+  }
+  .s-cart-table-item .configuration-price {
     font-size: 13px;
     line-height: 16px
   }
@@ -10685,6 +10743,13 @@ table {
   .s-cart-table-item .delete-btn {
     font-size: 20px
   }
+  .s-cart-table-item .configuration {
+    position: static;
+    margin-top: 12px
+  }
+  .s-cart-table-item .configuration-text {
+    max-width: 300px
+  }
   .s-cart-actions--right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -11069,6 +11134,9 @@ table {
   .services-single .s-testimonials .card-testimonial {
     margin-left: 12px;
     margin-right: 12px
+  }
+  .s-cart-table-item .configuration-text {
+    max-width: 136px
   }
   .s-cart-checkout .checkout-support-form .form-group {
     margin-top: 24px
