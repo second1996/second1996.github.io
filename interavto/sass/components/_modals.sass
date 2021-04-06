@@ -1,0 +1,169 @@
+@import '../helpers/helpers'
+
+.modal
+	padding-right: 0!important
+	&.fade
+		transition: .3s ease
+		.modal-dialog
+			transform: translateX(30px)
+	&.show
+		.modal-dialog
+			transform: translateX(0)
+	&-backdrop
+		background-color: $darkblue
+	// Success modal popup
+	&--success,
+	&--error
+		.modal-dialog
+			max-width: 320px
+			margin-right: auto
+			background-color: $trsp
+			+media-breakpoint-down(xxs)
+				max-width: 280px
+		.modal-content
+			height: auto
+			border-radius: 16px
+			box-shadow: 0px 10px 28px rgba(176, 190, 197, 0.82), 0px 4px 6px rgba(176, 190, 197, 0.32)
+			background-color: $lightgray
+		.modal-header
+			position: static
+			height: 52px
+			border-bottom: 0
+		.modal-body
+			text-align: center
+			margin-top: 0
+			padding: 0 24px 32px
+			svg
+				width: 100px
+				height: 100px
+				+media-breakpoint-down(sm)
+					width: 75px
+					height: 75px
+			.title
+				margin-top: 10px
+			.descr
+				margin-top: 10px
+			span, p
+				display: block
+				margin-bottom: 0
+				line-height: 1.4
+	// User Profile modal customize
+	&--profile
+		.modal-header
+			.nav-tabs
+				.nav-item
+					margin: 0
+					&:not(:last-child)
+						margin-right: 32px
+				.nav-link
+					position: relative
+					padding-bottom: 0
+					line-height: 47px
+					border-bottom: 0
+					&::after
+						content: ''
+						position: absolute
+						top: 100%
+						left: 0
+						right: 0
+						height: 1px
+						background-color: $trsp
+						opacity: 0
+						transition: .3s ease
+					&:hover
+						&::after
+							opacity: 1
+							background-color: darken($lightgray, 15%)
+				.nav-item.show .nav-link::after,
+				.nav-link.active::after
+					background-color: $accent
+					opacity: 1
+		.modal-body
+			.form
+				&-group
+					align-items: flex-start
+					flex-direction: column
+				&-label
+					margin-bottom: 8px
+				&-control
+					margin-left: 0
+				&-link,
+				&-submit
+					width: auto
+					margin-left: 104px
+					+media-breakpoint-down(sm)
+						margin-left: 0
+				&-submit
+					margin-top: 24px
+	// Basic customize
+	&-dialog
+		max-width: 360px
+		height: 100%
+		margin: 0
+		margin-left: auto
+		background-color: $lightgray
+		+media-breakpoint-down(xs)
+			max-width: 320px
+		+media-breakpoint-down(xxs)
+			max-width: 100%
+	&-content
+		height: 100%
+		border: 0
+		background-color: $trsp
+	&-header
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 48px
+		padding: 0 24px
+		border-bottom: 1px solid #dde5e9
+		+media-breakpoint-down(xs)
+			padding: 0 16px
+		.title
+			display: flex
+			align-items: center
+			line-height: 1
+			.icon
+				margin-right: 8px
+			> span
+				font-size: 12px
+				font-weight: 700
+				text-transform: uppercase
+		.close
+			display: flex
+			align-items: center
+			height: 100%
+			cursor: pointer
+			> svg
+				fill: $darkblue
+				transition: fill .3s ease
+			&:hover
+				> svg
+					fill: $accent
+	&-body
+		overflow-y: auto
+		height: 100%
+		margin-top: 48px
+		padding: 24px
+		+media-breakpoint-down(xs)
+			padding: 16px
+		.form
+			&-group
+				+media-breakpoint-down(sm)
+					flex-direction: column
+					align-items: flex-start
+					.form-label
+						margin-bottom: 8px
+			&-control
+				flex-shrink: 1
+				margin-left: 10px
+				+media-breakpoint-down(sm)
+					margin-left: 0
+			&-submit
+				margin-top: 32px
+				margin-left: 104px
+				+media-breakpoint-down(sm)
+					margin-left: 0
+				+media-breakpoint-down(xs)
+					width: auto

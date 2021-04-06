@@ -1,0 +1,58 @@
+@import '../helpers/helpers'
+
+.search
+	&-section
+		&-title
+			color: $darkgray
+			margin-bottom: 24px
+	&-products-list
+		&-item
+			display: flex
+			margin-bottom: 48px
+			+media-breakpoint-down(md)
+				display: block
+			.image
+				overflow: hidden
+				flex: 0 0 auto
+				position: relative
+				width: 80px
+				height: 80px
+				margin-right: 16px
+				border-radius: 100%
+				+media-breakpoint-down(md)
+					margin-right: 0
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					z-index: 1
+					width: 100%
+					height: 100%
+					background: $accent
+					opacity: 0
+					transition: opacity .35s ease
+				&-icon
+					position: absolute
+					top: 50%
+					left: 50%
+					z-index: 3
+					transform: translate(-50%, -50%)
+				&-photo
+					display: block
+					width: 100%
+					height: 100%
+					object-fit: cover
+			.title
+				color: $black
+				font-size: 18px
+				font-weight: 400
+				line-height: 24px
+				transition: color .35s ease
+				+media-breakpoint-down(lg)
+					font-size: 16px
+			&:hover
+				.image::before
+					opacity: 1
+				.title
+					color: $accent

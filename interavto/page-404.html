@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Запрос на подбор смазки</title>
+	<title>Смазочная компания Интеравто</title>
 	<meta name="description" content="Смазочная компания Интеравто производит качественные высокотемпературные пасты, пищевые смазки, покрытия и ингибиторы коррозии для отечественной промышленности.">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
@@ -179,259 +179,18 @@
 
 	<main class="main">
 
-		<div class="main-header">
-			<div class="container">
-				<div class="breadcrumbs">
-					<ul class="breadcrumbs-list">
-						<li><a href="index.html">Главная</a></li>
-						<li><span>Запрос на подбор смазки</span></li>
-					</ul>
-				</div>
-				<h1 class="title text-xl">Запрос на подбор смазки</h1>
-			</div>
-		</div>
-
 		<div class="main-body">
-			<div class="application">
-				<div class="container">
-					<div class="application-wrapper">
-						<form action="" method="POST" class="application-form">
-							<div class="application-intro row">
-								<div class="application-intro-left col-md-11 col-lg-8 col-xl-6">
-									<div class="form-group">
-										<label for="apl-model" class="form-label">Вид, марка, модель оборудования</label>
-										<input type="text" name="" id="apl-model" class="form-control" placeholder="Например: смазки для редукторов" required>
-									</div>
-									<div class="form-group">
-										<label for="apl-uzel" class="form-label">Узел трения</label>
-										<select name="" id="apl-uzel" class="form-select">
-											<option value="Подшипник качения" selected="selected">Подшипник качения</option>
-											<option value="Подшипник">Подшипник</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="apl-nagruzki-vertical" class="form-label">Нагрузки вертикальные</label>
-										<select name="" id="apl-nagruzki-vertical" class="form-select">
-											<option value="Сильные" selected="selected">Сильные</option>
-											<option value="Умеренные">Умеренные</option>
-											<option value="Слабые">Слабые</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="apl-nagruzki-horizontal" class="form-label">Нагрузки горизонтальные</label>
-										<select name="" id="apl-nagruzki-horizontal" class="form-select">
-											<option value="Сильные" selected="selected">Сильные</option>
-											<option value="Умеренные">Умеренные</option>
-											<option value="Слабые" selected="selected">Слабые</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="apl-nagruzki-vibro" class="form-label">Нагрузки ударно-вибрационные </label>
-										<select name="" id="apl-nagruzki-vibro" class="form-select">
-											<option value="Сильные">Сильные</option>
-											<option value="Умеренные" selected="selected">Умеренные</option>
-											<option value="Слабые">Слабые</option>
-										</select>
-										<span class="form-group-error">Выбирите доступные нагрузки из списка</span>
-									</div>
-									<div class="form-group">
-										<label for="apl-speed-rpm" class="form-label">Скорость вращения, оборотов в минуту</label>
-										<input type="text" name="" id="apl-speed-rpm" class="form-control" placeholder="Введите значение" required>
-										<span class="form-group-error">Укажите скорость вращения</span>
-										</div>
-								</div><!-- /.col -->
-								<div class="application-intro-right col-xl-6 d-none d-xl-block">
-									<div class="application-descr">
-										<div class="dots dots--orange"></div>
-										<p>Поясняющий текст про опыт экспертов — PR ускоряет конструктивный клиентский спрос, размещаясь во всех медиа.</p>
-									</div>
-									<div class="application-expert">
-										<img class="photo lazy" data-src="images/dest/expert.png" alt="">
-										<div class="figure"></div>
-									</div>
-								</div><!-- /.col -->
-							</div><!-- /.row -->
-							<div class="application-form-section">
-								<div class="title w-bold">Агрессивные факторы и окружающая среда</div>
-								<div class="form-group-list">
-									<div class="form-checkbox">
-										<input type="checkbox" name="factor[]" id="factor-1">
-										<label for="factor-1">Испарение химических веществ</label>
-									</div>
-									<div class="form-checkbox">
-										<input type="checkbox" name="factor[]" id="factor-2" checked>
-										<label for="factor-2">Пар</label>
-									</div>
-									<div class="form-checkbox">
-										<input type="checkbox" name="factor[]" id="factor-3">
-										<label for="factor-3">Высокая запыленность</label>
-									</div>
-									<div class="form-checkbox">
-										<input type="checkbox" name="factor[]" id="factor-4">
-										<label for="factor-4">Вода</label>
-									</div>
-									<div class="form-checkbox">
-										<input type="checkbox" name="factor[]" id="factor-5">
-										<label for="factor-5">Воздействие окислителей</label>
-									</div>
-								</div>
-							</div><!-- /.application-form-section -->
-							<div class="application-form-section">
-								<div class="row">
-									<div class="col-md-11 col-lg-8 col-xl-6">
-										<div class="form-group">
-											<label for="apl-min-temp" class="form-label">Минимальная рабочая температура, °С</label>
-											<input type="text" name="" id="apl-min-temp" class="form-control" placeholder="Введите значение" required>
-											<span class="form-group-error">Укажите температуру</span>
-										</div>
-										<div class="form-group">
-											<label for="apl-max-temp" class="form-label">Максимальная рабочая температура, °С</label>
-											<input type="text" name="" id="apl-max-temp" class="form-control" placeholder="Введите значение" required>
-										</div>
-										<div class="form-group flex-wrap">
-											<label for="apl-refill" class="form-label">Частичное пополнение смазки</label>
-											<input type="text" name="" id="apl-refill" class="form-control" placeholder="Введите значение" required>
-											<span class="form-group-note">* Введите количество в кг и в какой срок производится пополнение, например 0,5 кг раз в неделю</span>
-										</div>
-										<div class="form-group flex-wrap">
-											<label for="apl-full-refill" class="form-label">Полная замена смазки</label>
-											<input type="text" name="" id="apl-full-refill" class="form-control" placeholder="Введите значение" required>
-											<span class="form-group-error">Укажите число в кг</span>
-											<span class="form-group-note">* Введите количество в кг и в какой срок производится полная замена смазки, например 1 кг раз в 2 недели</span>
-										</div>
-										<div class="form-group">
-											<label for="apl-method-smazki" class="form-label">Способ подачи смазки в узел трения</label>
-											<select name="" id="apl-method-smazki" class="form-select">
-												<option value="Непосредственный" selected="selected">Непосредственный</option>
-												<option value="С видимой подачей масла">С видимой подачей масла</option>
-											</select>
-										</div>
-										<div class="form-group flex-wrap">
-											<label for="apl-current-smazka" class="form-label">Текущая смазка</label>
-											<input type="text" name="" id="apl-current-smazka" class="form-control" placeholder="Введите значение" required>
-											<span class="form-group-error">Укажите текующую смазку</span>
-											<span class="form-group-note">* Эмульгирует, вымывается, выгорает, коксуется, и т. д.</span>
-										</div>
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-							</div><!-- /.application-form-section -->
-							<div class="application-form-section">
-								<div class="row">
-									<div class="col-md-6 col-lg-4">
-										<div class="title w-bold">Я хочу увеличить/повысить:</div>
-										<div class="form-group-list form-group-list--vertical">
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[]" id="increase-1">
-												<label for="increase-1">Время безаварийной работы</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[]" id="increase-2" checked>
-												<label for="increase-2">Влагостойкость</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[]" id="increase-3">
-												<label for="increase-3">Термостабильность смазки</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[]" id="increase-4">
-												<label for="increase-4">Сроки между техническим обслуживанием</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[]" id="increase-5">
-												<label for="increase-5">Воздействие окислителей</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[6" id="increase-6">
-												<label for="increase-6">Адгезию к металлу</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="increase[7" id="increase-7">
-												<label for="increase-7">Антикоррозийную защиту</label>
-											</div>
-										</div>
-									</div><!-- /.col -->
-									<div class="col-md-6 col-lg-4">
-										<div class="title w-bold">Я хочу уменьшить/сократить:</div>
-										<div class="form-group-list form-group-list--vertical">
-											<div class="form-checkbox">
-												<input type="checkbox" name="reduce[]" id="reduce-1">
-												<label for="reduce-1">Количество вышедших из строя подшипников</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="reduce[]" id="reduce-2" checked>
-												<label for="reduce-2">Смываемость</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="reduce[]" id="reduce-3">
-												<label for="reduce-3">Вытекание смазки из узла</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="reduce[]" id="reduce-4">
-												<label for="reduce-4">Износ и образование задиров</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="reduce[]" id="reduce-5">
-												<label for="reduce-5">Коксование смазки</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="reduce[6" id="reduce-6">
-												<label for="reduce-6">Расходы на смазку</label>
-											</div>
-										</div>
-									</div><!-- /.col -->
-									<div class="col-lg-4">
-										<div class="title w-bold">Контактирует ли смазка с пищевыми продуктами?:</div>
-										<div class="form-group-list form-group-list--vertical">
-											<div class="form-checkbox">
-												<input type="checkbox" name="contacts[]" id="contacts-1">
-												<label for="contacts-1">Возможный контакт</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="contacts[]" id="contacts-2" checked>
-												<label for="contacts-2">Непосредственный постоянный контакт</label>
-											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" name="contacts[]" id="contacts-3">
-												<label for="contacts-3">Нет контакта с пищевыми продуктами</label>
-											</div>
-										</div>
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-							</div><!-- /.application-form-section -->
-							<div class="application-form-section">
-								<div class="row">
-									<div class="col-md-11 col-lg-8 col-xl-6">
-										<div class="form-group">
-											<label for="personal-person" class="form-label">Контактное лицо</label>
-											<input type="text" id="personal-person" class="form-control" placeholder="Иванов Иван" required>
-											<span class="form-group-error">Укажите контактное лицо</span>
-										</div>
-										<div class="form-group">
-											<label for="personal-phone" class="form-label">Телефон</label>
-											<input type="text" id="personal-phone" class="form-control" placeholder="+7" data-mask="+7 000 000 00 00" required>
-											<span class="form-group-error">Укажите телефон</span>
-										</div>
-										<div class="form-group">
-											<label for="personal-email" class="form-label">E-mail</label>
-											<input type="email" id="personal-email" class="form-control" placeholder="sample@mail.ru" required>
-											<span class="form-group-error">Укажите E-mail</span>
-										</div>
-										<div class="form-group">
-											<label for="personal-organization" class="form-label">Название организации</label>
-											<input type="text" id="personal-organization" class="form-control" placeholder="ООО Прогресс" required>
-											<span class="form-group-error">Укажите название организации</span>
-										</div>
-										<button class="form-submit btn btn-primary btn-icon-right">
-											<span>Подобрать смазочный материал</span>
-											<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
-										</button>
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-							</div><!-- /.application-form-section -->
-						</form><!-- /.application-form -->
-					</div><!-- /.application-wrapper -->
-				</div><!-- /.container -->
-			</div><!-- /.application -->
+			<div class="container">
+				<div class="row">
+					<!-- Main: Content-->
+					<div class="main-content col-12">
+						<div class="error-page">
+							<h1 class="error-page-title"><span>404</span> Страница не найдена</h1>
+							<a href="page-index.html" class="error-page-btn btn btn-primary">На главную</a>
+						</div>
+					</div><!-- /.main-content -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
 		</div><!-- /.main-body -->
 
 	</main>
@@ -678,7 +437,6 @@
 	<!-- Load CSS -->
 	<link rel="stylesheet" href="css/vendor/bootstrap.css">
 	<link rel="stylesheet" href="css/modules/page.css">
-	<link rel="stylesheet" href="css/pages/appcilation-form.css">
 	<link rel="stylesheet" href="css/common/main.css">
 
 	<!-- Load JS -->

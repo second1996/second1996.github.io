@@ -1,0 +1,14 @@
+@import '../helpers/helpers'
+
+img.lazy
+	position: relative
+	border: 0
+	opacity: 0
+img.lazy:not([src])
+	visibility: hidden
+img.lazy:not(.initial)
+	transition: opacity .75s ease 0.2s
+img.initial,
+img.loaded,
+img.error
+	opacity: 1

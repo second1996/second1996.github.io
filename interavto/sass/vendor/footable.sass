@@ -1,0 +1,24 @@
+@import '../helpers/helpers'
+@import '../../libs/FooTable-3.1.6/compiled/footable.standalone.css'
+
+table > tbody > tr > td > span.footable-toggle
+	opacity: 1
+table > tbody > tr > td > span.footable-toggle.last-column
+	margin-left: 0
+	margin-right: 0
+.footable-toggle
+	position: absolute
+	top: 50%
+	left: 14px
+	margin-top: -8px
+	margin-left: 0
+	cursor: pointer
+	&.fooicon-plus::before,
+	&.fooicon-minus::before
+		content: ''
+		display: block
+		width: 16px
+		height: 16px
+		background: url('../../images/dest/icons/arrow-down.svg') no-repeat center/16px
+	&.fooicon-minus::before
+		transform: rotate(180deg)

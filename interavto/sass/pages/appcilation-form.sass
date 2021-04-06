@@ -1,0 +1,87 @@
+@import '../helpers/helpers'
+
+.application
+	+media-breakpoint-down(sm)
+		background-color: $lightgray
+	&-wrapper
+		padding: 32px 32px 42px
+		background-color: $lightgray
+		+media-breakpoint-down(sm)
+			padding-left: 0
+			padding-right: 0
+			background-color: $trsp
+	&-intro
+		&-left
+			+media-breakpoint-down(lg)
+				margin-bottom: 48px
+		&-right
+			padding-left: 90px
+	&-form
+		&-section
+			padding-top: 24px
+			padding-bottom: 24px
+			border-top: 1px solid #dde5e9
+			.title
+				margin-bottom: 16px
+		.form-group .form-control,
+		.form-group .form-select,
+		.form-group .form-textarea
+			+media-breakpoint-down(sm)
+				flex-basis: 100%
+				max-width: 100%
+		.form-group .form-group-note
+			+media-breakpoint-down(sm)
+				flex-basis: 100%
+				max-width: 100%
+				margin-top: 8px
+				margin-left: 0
+				margin-bottom: 0
+		.form-group-list
+			margin-bottom: 16px
+			+media-breakpoint-down(md)
+				flex-direction: column
+		.form-submit
+			margin-left: 38%
+			+media-breakpoint-down(lg)
+				margin-left: 39%
+			+media-breakpoint-down(sm)
+				margin-left: 0
+				width: 100%
+				justify-content: center
+			+media-breakpoint-down(xxs)
+				.icon
+					display: none
+	&-descr
+		display: flex
+		.dots
+			flex: 0 0 auto
+			margin-right: 16px
+		p
+			max-width: 334px
+			margin-top: -7px
+	&-expert
+		position: relative
+		right: -32px
+		margin-top: 90px
+		.photo
+			position: absolute
+			left: 90px
+			bottom: 0
+			z-index: 1
+			max-width: 100%
+			height: 340px
+			+media-breakpoint-down(lg)
+				left: 70px
+				max-width: 100%
+				height: 300px
+			+media-breakpoint-down(sm)
+				height: 240px
+		.figure
+			width: 100%
+			height: 248px
+			border-radius: 200px 0 0 200px
+			background-color: $lightblue
+			+media-breakpoint-down(lg)
+				height: 200px
+			+media-breakpoint-down(md)
+				width: 100vw

@@ -685,6 +685,8 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -695,6 +697,7 @@ button:hover {
 .form-group:not(:first-child) {
   margin-top: 24px
 }
+.form-group-error,
 .form-group-note {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 70%;
@@ -703,6 +706,14 @@ button:hover {
   margin: 16px 0 16px auto;
   font-size: 12px;
   line-height: 1.4
+}
+.form-group-error {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: red
+}
+.form-group-error ~ .form-group-note {
+  margin-top: 6px
 }
 .form-group .form-control,
 .form-group .form-select,
@@ -889,6 +900,10 @@ button:hover {
   border-radius: 2px;
   background-color: #fff
 }
+.form-checkbox > label > a {
+  position: relative;
+  z-index: 2
+}
 .link-arrow::after {
   content: '';
   display: inline-block;
@@ -957,6 +972,66 @@ table tr > th:not(:last-child) {
 .modal-backdrop {
   background-color: #25373f
 }
+.modal--error .modal-dialog,
+.modal--success .modal-dialog {
+  max-width: 320px;
+  margin-right: auto;
+  background-color: transparent
+}
+@media (max-width:374.98px) {
+  .modal--error .modal-dialog,
+  .modal--success .modal-dialog {
+    max-width: 280px
+  }
+}
+.modal--error .modal-content,
+.modal--success .modal-content {
+  height: auto;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 10px 28px rgba(176,190,197,.82),0 4px 6px rgba(176,190,197,.32);
+  box-shadow: 0 10px 28px rgba(176,190,197,.82),0 4px 6px rgba(176,190,197,.32);
+  background-color: #eff3f6
+}
+.modal--error .modal-header,
+.modal--success .modal-header {
+  position: static;
+  height: 52px;
+  border-bottom: 0
+}
+.modal--error .modal-body,
+.modal--success .modal-body {
+  text-align: center;
+  margin-top: 0;
+  padding: 0 24px 32px
+}
+.modal--error .modal-body svg,
+.modal--success .modal-body svg {
+  width: 100px;
+  height: 100px
+}
+@media (max-width:767.98px) {
+  .modal--error .modal-body svg,
+  .modal--success .modal-body svg {
+    width: 75px;
+    height: 75px
+  }
+}
+.modal--error .modal-body .title,
+.modal--success .modal-body .title {
+  margin-top: 10px
+}
+.modal--error .modal-body .descr,
+.modal--success .modal-body .descr {
+  margin-top: 10px
+}
+.modal--error .modal-body p,
+.modal--error .modal-body span,
+.modal--success .modal-body p,
+.modal--success .modal-body span {
+  display: block;
+  margin-bottom: 0;
+  line-height: 1.4
+}
 .modal--profile .modal-header .nav-tabs .nav-item {
   margin: 0
 }
@@ -990,6 +1065,21 @@ table tr > th:not(:last-child) {
 .modal--profile .modal-header .nav-tabs .nav-link.active::after {
   background-color: #ff6c02;
   opacity: 1
+}
+.modal--profile .modal-body .form-group {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.modal--profile .modal-body .form-label {
+  margin-bottom: 8px
+}
+.modal--profile .modal-body .form-control {
+  margin-left: 0
 }
 .modal--profile .modal-body .form-link,
 .modal--profile .modal-body .form-submit {

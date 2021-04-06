@@ -1,0 +1,312 @@
+@import '../helpers/helpers'
+
+/* ==========================================================================
+   Analogs Page
+   ========================================================================== */
+.analogs
+	&-header
+		margin-bottom: 32px
+		padding-bottom: 16px
+		border-bottom: 1px solid $lightgray
+		+media-breakpoint-down(sm)
+			display: none
+		&-title
+			color: $darkgray
+	&-body
+		+media-breakpoint-down(sm)
+			padding-top: 16px
+			border-top: 1px solid $lightgray
+	&-item
+		margin-bottom: 32px
+		padding-bottom: 32px
+		border-bottom: 1px solid $lightgray
+	&-brand
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 264px
+		margin-right: 24px
+		padding: 24px 24px 16px
+		border-radius: 0 342px 342px 0
+		background-color: $lightgray
+		+media-breakpoint-down(md)
+			margin-right: 0
+		+media-breakpoint-down(sm)
+			height: 170px
+			margin-bottom: 24px
+		.brand
+			&-header
+				display: flex
+				align-items: center
+			&-logo
+				overflow: hidden
+				backface-visibility: hidden
+				display: flex
+				align-items: center
+				justify-content: center
+				flex: 0 0 auto
+				width: 88px
+				height: 88px
+				border-radius: 50%
+				background-color: $white
+				transform: translate3d(0, 0, 0)
+				img
+					padding: 8px
+			&-name
+				margin-left: 16px
+				font-size: 24px
+				line-height: 1.3
+			&-analogs
+				color: $darkgray
+	&-materials
+		display: flex
+		flex-direction: column
+		.materials
+			&-item
+				position: relative
+				font-size: 12px
+				font-weight: 700
+				&:not(:last-child)
+					margin-bottom: 14px
+				&:hover
+					.btn
+						visibility: visible
+						opacity: 1
+				&.hidden
+					display: none
+				.btn
+					visibility: hidden
+					position: absolute
+					top: -11px
+					right: 0
+					opacity: 0
+					transition: .2s ease
+					+media-breakpoint-down(sm)
+						display: none
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						right: 100%
+						z-index: 1
+						width: 45px
+						height: 100%
+						background-image: linear-gradient(to left, rgba($white, 1) 0%, rgba($white, 0) 100%)
+		.show-more
+			height: 100%
+			margin-top: 16px
+			padding-left: 0
+			padding-right: 0
+			color: $darkgray
+			line-height: 1
+			&:hover
+				color: $accent
+			.icon
+				transform: rotate(90deg)
+
+
+/* ==========================================================================
+   Analogs Single page
+   ========================================================================== */
+// Compare
+.compare
+	+media-breakpoint-down(md)
+		background-color: $trsp
+	+media-breakpoint-down(sm)
+		border-radius: 0 0 300px 300px
+		background-color: $lightgray
+	&-wrapper
+		padding: 25px 80px 25px 25px
+		height: auto
+		+media-breakpoint-down(lg)
+			padding: 25px 25px 110px
+			border-radius: 0 0 48% 48%
+		+media-breakpoint-down(md)
+			border-radius: 0 0 300px 300px
+			background-color: $lightgray
+		+media-breakpoint-down(sm)
+			padding: 25px 0 120px
+			border-radius: 0
+			background-color: $trsp
+	&-inner
+		display: flex
+		justify-content: space-between
+		width: 100%
+		+media-breakpoint-down(lg)
+			flex-wrap: wrap
+			justify-content: center
+	&-product
+		max-width: 240px
+		align-self: center
+		+media-breakpoint-down(lg)
+			align-self: start
+			margin: 32px 16px 0
+		+media-breakpoint-down(sm)
+			flex: 0 0 50%
+			max-width: 50%
+			margin: 24px 0 0
+		&-photo
+			overflow: hidden
+			backface-visibility: hidden
+			width: 240px
+			height: 240px
+			margin: 0 auto
+			border-radius: 50%
+			background-color: $white
+			transform: translate3d(0, 0, 0)
+			+media-breakpoint-down(sm)
+				width: 140px
+				height: 140px
+			+media-breakpoint-down(xs)
+				width: 100px
+				height: 100px
+			+media-breakpoint-down(xxs)
+				width: 80px
+				height: 80px
+			> img
+				width: 100%
+				height: 100%
+				padding: 16px
+				object-fit: contain
+		&-title
+			margin-top: 10px
+			font-weight: 700
+			text-align: center
+			+media-breakpoint-down(sm)
+				max-width: 60%
+				margin-left: auto
+				margin-right: auto
+			+media-breakpoint-down(sm)
+				max-width: 90%
+	&-table
+		width: 100%
+		max-width: 100%
+		margin-left: 56px
+		margin-right: 16px
+		+media-breakpoint-down(lg)
+			margin-left: 0
+			margin-right: 0
+		&-header
+			display: flex
+			.specific
+				flex: 0 0 36%
+				padding-right: 22px
+				color: $darkgray
+				+media-breakpoint-down(sm)
+					display: none
+			.product
+				flex: 0 0 31%
+				padding-left: 22px
+				padding-bottom: 24px
+				border-left: 1px solid #dde5e9
+				font-size: 12px
+				font-weight: 700
+				+media-breakpoint-down(sm)
+					flex: 0 0 50%
+					padding-left: 0
+					padding-bottom: 16px
+					border-left: 0
+					border-bottom: 1px solid #dde5e9
+		&-item
+			display: flex
+			+media-breakpoint-down(sm)
+				flex-wrap: wrap
+				padding-bottom: 12px
+				border-bottom: 1px solid #dde5e9
+			&:last-child
+				.specific,
+				.feature
+					padding-bottom: 24px
+					+media-breakpoint-down(sm)
+						padding-bottom: 0
+			.specific
+				flex: 0 0 36%
+				padding-top: 16px
+				padding-right: 22px
+				line-height: 1.4
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+					padding-top: 10px
+					padding-right: 0
+					color: $darkgray
+					font-size: 12px
+			.feature
+				flex: 0 0 31%
+				padding-top: 16px
+				padding-left: 22px
+				padding-right: 22px
+				border-left: 1px solid #dde5e9
+				line-height: 1.4
+				+media-breakpoint-down(sm)
+					flex: 0 0 50%
+					padding-top: 8px
+					padding-left: 0
+					border-left: 0
+// Description
+.product-descr
+	margin-top: 70px
+	&-section
+		padding-top: 24px
+		padding-bottom: 32px
+		border-top: 1px solid $lightgray
+		+media-breakpoint-down(md)
+			padding-bottom: 18px
+	.title
+		margin-bottom: 24px
+		+media-breakpoint-down(sm)
+			margin-bottom: 16px
+// Actions (Buttons)
+.analog-actions
+	display: flex
+	flex-wrap: wrap
+	padding-top: 60px
+	border-top: 1px solid $lightgray
+	+media-breakpoint-down(sm)
+		flex-direction: column
+		padding-top: 0
+		border-top: 0
+	&-btn
+		margin-top: 16px
+		&:not(:last-child)
+			margin-right: 22px
+		+media-breakpoint-down(sm)
+			&:not(:last-child)
+				margin-right: 0
+			.btn
+				width: 100%
+				justify-content: center
+		&--order
+			+media-breakpoint-down(sm)
+				.btn
+					.icon
+						display: none
+		&--request
+			margin-left: auto
+			+media-breakpoint-down(md)
+				margin-left: 0
+			.btn
+				border: 0
+				padding-left: 0
+				padding-right: 0
+				color: $accent
+				&:hover
+					color: $black
+
+
+/* ==========================================================================
+   Print media queries
+   ========================================================================== */
+@media print
+	.header,
+	.footer,
+	.breadcrumbs,
+	.analog-actions
+		display: none
+	.main-header
+		margin-top: 30px
+		margin-bottom: 10px
+	.compare
+		border-radius: 0
+		background-color: $trsp
+	.compare-wrapper
+		padding-bottom: 24px

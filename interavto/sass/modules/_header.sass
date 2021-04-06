@@ -1,0 +1,312 @@
+@import '../helpers/helpers'
+
+.header
+	position: relative
+	background-color: $white
+	&-top
+		padding: 8px 0
+		background: $lightgray
+		.links
+			display: flex
+			justify-content: flex-end
+			> li
+				line-height: 16px
+				&:not(:first-child)
+					margin-left: 27px
+				> a
+					color: $black
+					font-size: 12px
+					&:hover
+						color: $accent
+	&-middle
+		position: relative
+		z-index: 10
+		padding: 30px 0 25px
+		border-bottom: 1px solid $lightgray
+		background-color: $white
+		+media-breakpoint-down(sm)
+			display: flex
+			align-items: center
+			height: 60px
+			padding: 0
+		> .container
+			position: relative
+			[class*="col"]
+				position: static
+		.logo
+			display: block
+			max-width: 262px
+			height: auto
+			+media-breakpoint-down(sm)
+				height: 24px
+		.search-form
+			display: flex
+			align-items: center
+			margin-left: 10px
+			margin-right: 50px
+			+media-breakpoint-down(lg)
+				margin: 0
+			+media-breakpoint-down(sm)
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				width: 100%
+				height: 100%
+				visibility: hidden
+				opacity: 0
+				transition: .2s ease
+				&.is-active
+					visibility: visible
+					opacity: 1
+			&-input
+				max-width: 100%
+				margin-bottom: 0
+				border-radius: 24px
+				border: 1px solid $lightblue
+				+media-breakpoint-down(sm)
+					height: 60px
+					padding-left: 48px
+					padding-right: 52px
+					border-radius: 0
+					border: none
+					line-height: 60px
+			&-btn
+				flex: 0 0 auto
+				width: 40px
+				height: 40px
+				margin-left: 24px
+				display: flex
+				align-items: center
+				justify-content: center
+				> svg
+					flex: 0 0 16px
+					width: 16px
+					height: 16px
+					fill: $white
+				+media-breakpoint-down(md)
+					margin-left: 16px
+				+media-breakpoint-down(sm)
+					position: absolute
+					left: 0
+					width: 16px
+					padding-left: 0
+					padding-right: 0
+					background-color: $trsp
+					> svg
+						fill: $darkblue
+			&-close
+				position: absolute
+				right: 22px
+				cursor: pointer
+				> svg
+					fill: $darkblue
+		.mobile-action
+			display: flex
+			justify-content: flex-end
+			margin-bottom: 4px
+			.search,
+			.burger
+				margin-left: 16px
+				&-btn
+					padding: 2px
+					> svg
+						fill: $darkblue
+		.phone
+			display: inline-flex
+			flex-direction: column
+			+media-breakpoint-down(md)
+				display: none
+			&-link
+				margin-bottom: 6px
+				padding-left: 24px
+				background-image: url('../../images/dest/icons/phone.svg')
+				background-repeat: no-repeat
+				background-position: left center
+				background-size: 16px
+				color: $black
+				font-size: 18px
+				line-height: 1
+				&:hover
+					color: $accent
+			&-descr
+				padding-left: 24px
+				color: #76858c
+				line-height: 1
+		.contacts
+			margin-left: 36px
+			+media-breakpoint-down(md)
+				margin-left: 0
+			&-link
+				color: $black
+				font-size: 18px
+				line-height: 1
+				&:hover
+					color: $accent
+	&-bottom
+		padding: 16px 0
+		background-color: $white
+		.header-menu
+			&:not(.--jsfied)
+				overflow-x: auto
+				-webkit-overflow-scrolling: touch
+				-ms-overflow-style: none // Internet Explorer 10+
+				scrollbar-width: none // Firefox
+				&::-webkit-scrollbar
+					display: none
+			.--hidden
+				display: none
+			a:not(.btn-catalog),
+			button
+				background-color: $trsp
+				color: $black
+				font-size: 14px
+				font-weight: 600
+				line-height: 1.2
+				text-align: center
+			// primary
+			&-primary
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-right: 114px
+				padding-right: 32px
+				+media-breakpoint-down(md)
+					margin-right: 100px
+					padding-right: 40px
+				> li
+					&:first-child
+						max-width: 114px
+						margin-right: 16px
+						+media-breakpoint-down(md)
+							margin-right: 0
+					> a:not(.btn-catalog)
+						padding: 0 9px
+						white-space: nowrap
+						&:hover,
+						&:active
+							color: $accent
+					&.more
+						position: absolute
+						left: 100%
+						white-space: nowrap
+						+media-breakpoint-down(md)
+							margin-left: -12px
+						> li
+							white-space: normal
+			&.--show-secondary .header-menu-primary
+				.more
+					.btn-more
+						> svg
+							fill: $accent
+							transform: rotate(90deg)
+						> span
+							color: $accent
+			// secondary
+			.-secondary
+				position: absolute
+				top: 100%
+				right: 0
+				z-index: 19
+				display: none
+				max-width: 100%
+				min-width: 230px
+				margin-top: 12px
+				padding: 15px 20px
+				background-color: $white
+				box-shadow: 0px 0px 10px rgba(37, 55, 63, 0.1)
+				animation: nav-secondary 0.2s
+				> li
+					white-space: normal
+					&:not(:last-child)
+						margin-bottom: 20px
+					> a
+						display: block
+						text-align: left
+						&:hover,
+						&:active
+							color: $accent
+			&.--show-secondary .-secondary
+				display: block
+		// keyframes
+		@keyframes nav-secondary
+			0%
+				opacity: 0
+				transform: translateY(-1em)
+			100%
+				opacity: 1
+				transform: translateY(0)
+	&-search
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 9
+		margin-top: -72px
+		padding-bottom: 80px
+		box-shadow: 0px 0px 30px rgba(37, 55, 63, 0.2)
+		background-color: $white
+		visibility: hidden
+		opacity: 0
+		transform: translateY(-20px)
+		transition: .2s ease
+		+media-breakpoint-down(sm)
+			height: 100vh
+			max-height: 400px
+			margin-top: -60px
+			padding-bottom: 20px
+			&::after
+				content: ''
+				position: absolute
+				user-select: none
+				pointer-events: none
+				left: 0
+				right: 0
+				z-index: 10
+				bottom: 20px
+				height: 20px
+				background-image: linear-gradient(to top, rgba($white, 1) 0%, rgba($white, 0.25) 100%)
+		&.is-active
+			visibility: visible
+			transform: translateY(0)
+			opacity: 1
+		&-inner
+			position: relative
+			z-index: 9
+			+media-breakpoint-down(sm)
+				overflow-y: scroll
+				height: 100%
+				padding-top: 60px
+				padding-bottom: 20px
+		&-title
+			margin-top: 24px
+			margin-bottom: 16px
+			font-size: 12px
+			color: $darkgray
+		&-list
+			&--bolder
+				> li
+					> a
+						font-size: 12px
+						font-weight: 700
+						text-transform: uppercase
+			> li
+				&:not(:last-child)
+					margin-bottom: 16px
+					+media-breakpoint-down(sm)
+						margin-bottom: 8px
+				> a
+					display: inline-block
+					color: $black
+					font-size: 14px
+					&:hover
+						color: $accent
+		&-backdrop
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 8
+			height: 100vh
+			background-color: $trsp

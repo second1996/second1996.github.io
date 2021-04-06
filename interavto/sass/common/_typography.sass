@@ -1,0 +1,41 @@
+@import '../helpers/helpers'
+
+.text-uppercase
+	text-transform: uppercase
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+
+.text-xxs
+	font-size: 12px
+.text-xs
+	font-size: 14px
+.text-sm
+	font-size: 16px
+.text-md
+	font-size: 18px
+	+media-breakpoint-down(xs)
+		font-size: 16px
+.text-lg
+	font-size: 24px
+	+media-breakpoint-down(lg)
+		font-size: 22px
+	+media-breakpoint-down(sm)
+		font-size: 20px
+.text-xl
+	font-size: 32px
+	+media-breakpoint-down(lg)
+		font-size: 28px
+	+media-breakpoint-down(sm)
+		font-size: 24px
+.w-light
+	font-weight: 200
+.w-regular
+	font-weight: 400
+.w-semibold
+	font-weight: 600
+.w-bold
+	font-weight: 700
+.w-extrabold
+	font-weight: 900

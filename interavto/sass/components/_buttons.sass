@@ -1,0 +1,90 @@
+@import '../helpers/helpers'
+
+.btn, button
+	display: inline-block
+	vertical-align: middle
+	border: 0
+	border-radius: 24px
+	background-color: $trsp
+	color: inherit
+	font-family: inherit
+	font-size: 14px
+	font-weight: 400
+	line-height: 40px
+	text-align: center
+	outline: none!important
+	transition: .35s ease
+	&:hover
+		color: inherit
+.btn
+	height: 40px
+	padding: 0 16px
+	.icon
+		font-size: 16px
+	&-icon-left
+		display: inline-flex
+		align-items: center
+		.icon
+			margin-right: 10px
+	&-icon-right
+		display: inline-flex
+		align-items: center
+		.icon
+			margin-left: 10px
+	&-primary
+		background-color: $accent
+		color: $white
+		&:hover
+			color: $white
+			background-color: $darkblue
+	&-dark
+		background-color: $darkblue
+		color: $white
+		&:hover
+			background-color: $accent
+			color: $white
+	&-white
+		border: 1px solid #e0e6ec
+		background-color: $white
+		color: $black
+		&:hover
+			border-color: $accent
+			background-color: $white
+			color: $accent
+	&-transparent
+		padding: 0
+		line-height: 1
+	&-icon-arrow
+		padding-right: 42px
+		background-image: url('../../images/dest/icons/arrow.svg')
+		background-repeat: no-repeat
+		background-position: right 16px center
+		background-size: 16px
+	&-catalog,
+	&-filter,
+	&-clear
+		display: flex
+		align-items: center
+		justify-content: center
+		> span
+			font-weight: 600
+	&-more
+		display: inline-flex
+		align-items: center
+		padding-left: 0
+		padding-right: 0
+		transition: none
+		> svg
+			vertical-align: baseline
+			fill: $darkblue
+			transition: fill .35s ease, transform .25s ease
+		> span
+			display: inline-block
+			vertical-align: top
+			margin-left: 8px
+			transition: .35s ease
+		&:hover
+			> svg
+				fill: $accent
+			> span
+				color: $accent

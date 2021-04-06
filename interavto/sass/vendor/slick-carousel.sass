@@ -1,0 +1,44 @@
+@import '../helpers/helpers'
+@import 'node_modules/slick-carousel/slick/slick.scss'
+
+.slick-arrow
+	position: absolute
+	z-index: 1
+	top: 50%
+	width: 40px
+	height: 40px
+	margin-top: -20px
+	border: 1px solid $lightgray
+	background: $white url('../../images/dest/icons/arrow-dark.svg') no-repeat center/16px
+	font-size: 0px
+	&:hover
+		opacity: 0.75
+	&.slick-disabled
+		cursor: default
+		opacity: 0.15
+	&.slick-prev
+		left: 0
+	&.slick-next
+		right: 0
+		transform: rotate(180deg)
+.slick-dots
+	position: absolute
+	z-index: 1
+	display: flex
+	left: 50%
+	bottom: 32px
+	transform: translateX(-50%)
+	> li
+		margin: 0 8px
+		&.slick-active
+			> button
+				box-shadow: 0 0 0 3px $lightblue
+		> button
+			width: 5px
+			height: 5px
+			padding: 0
+			background-color: $lightblue
+			font-size: 0
+.slick-slide
+	outline: none
+	transform: translate3d(0,0,0)

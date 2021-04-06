@@ -1,0 +1,130 @@
+@import '../helpers/helpers'
+
+.footer
+	margin-top: 120px
+	background: $lightgray
+	+media-breakpoint-down(lg)
+		margin-top: 80px
+	+media-breakpoint-down(sm)
+		margin-top: 60px
+	&-wrapper
+		padding-top: 30px
+		padding-bottom: 40px
+	&-logo
+		> a
+			display: inline-block
+		img
+			max-width: 206px
+	&-contacts
+		margin-top: 30px
+		.phone
+			display: inline-flex
+			flex-direction: column
+			margin-bottom: 20px
+			padding-left: 24px
+			background-image: url('../../images/dest/icons/phone.svg')
+			background-repeat: no-repeat
+			background-position: left 4px
+			background-size: 16px
+			line-height: 1
+			+media-breakpoint-down(sm)
+				background-position-y: 0
+			+media-breakpoint-down(xs)
+				padding-top: 26px
+				padding-left: 0
+				background-position-y: 0
+			&-link
+				margin-bottom: 6px
+				color: $black
+				font-size: 24px
+				+media-breakpoint-down(sm)
+					font-size: 18px
+				+media-breakpoint-down(xs)
+					font-size: 14px
+				&:hover
+					color: $accent
+		.email
+			display: inline-flex
+			flex-direction: column
+			margin-bottom: 20px
+			padding-left: 24px
+			background-image: url('../../images/dest/icons/mail.svg')
+			background-repeat: no-repeat
+			background-position: left 3px
+			background-size: 16px
+			line-height: 1
+			+media-breakpoint-down(xs)
+				padding-top: 24px
+				padding-left: 0
+				background-position-y: 0
+			&-link
+				color: $black
+				font-size: 18px
+				+media-breakpoint-down(xs)
+					font-size: 14px
+				&:hover
+					color: $accent
+		.adress
+			display: inline-flex
+			flex-direction: column
+			margin-bottom: 20px
+			line-height: 24px
+			&-title
+				padding-left: 24px
+				color: $darkgray
+				font-size: 14px
+				+media-breakpoint-down(xs)
+					padding-top: 24px
+					padding-left: 0
+					background-image: url('../../images/dest/icons/place.svg')
+					background-repeat: no-repeat
+					background-position: left 0
+					background-size: 16px
+			&-location
+				padding-left: 24px
+				color: $black
+				font-size: 14px
+				background-image: url('../../images/dest/icons/place.svg')
+				background-repeat: no-repeat
+				background-position: left 3px
+				background-size: 16px
+				+media-breakpoint-down(xs)
+					padding-left: 0
+					background: none
+		.navigation
+			> li
+				margin-bottom: 8px
+				> a
+					color: $black
+					font-size: 14px
+					font-weight: 400
+					&:hover
+						color: $accent
+		.social
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			+media-breakpoint-down(md)
+				margin-top: 30px
+			+media-breakpoint-down(sm)
+				margin-top: 16px
+			> a
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 32px
+				height: 32px
+				margin-bottom: 12px
+				border-radius: 50%
+				background-color: $darkblue
+				color: $white
+				font-size: 16px
+				&:not(:last-child)
+					margin-right: 12px
+				&:hover
+					background-color: $accent
+	&-copyright
+		padding: 12px 0
+		border-top: 1px solid $white
+		span, p
+			color: #25373f

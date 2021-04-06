@@ -127,9 +127,9 @@ jQuery(document).ready(function($) {
 	 */
 	if( $.fn.slick ) {
 		$('.heroes-slider').slick({
-			// autoplay: true,
-			// autoplaySpeed: 3000,
-			infinite: false,
+			autoplay: true,
+			autoplaySpeed: 15000,
+			// infinite: false,
 			dots: true,
 		})
 		// $('.heroes-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){

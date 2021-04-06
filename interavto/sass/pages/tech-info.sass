@@ -1,0 +1,60 @@
+@import '../helpers/helpers'
+
+.tech-info
+	&-item
+		border-top: 1px solid $lightgray
+		&:last-child
+			border-bottom: 1px solid $lightgray
+	&-btn
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		padding: 22px 0 32px
+		text-align: left
+		&[aria-expanded="true"]
+			.icon-toggle::after
+				transform: scaleY(0)
+				opacity: 0
+		&:hover
+			> span
+				color: $accent
+			.icon-toggle
+				&::before,
+				&::after
+					background-color: $accent
+		> span
+			padding-right: 12px
+			font-size: 24px
+			font-weight: 400
+			text-transform: none
+			transition: color .3s ease
+			line-height: 1.3
+			+media-breakpoint-down(sm)
+				font-size: 20px
+		.icon-toggle
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 16px
+			height: 16px
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				display: block
+				background-color: $darkblue
+				transition: .3s ease
+			&::before
+				width: 12px
+				height: 2px
+				margin-top: -1px
+				margin-left: -6px
+			&::after
+				width: 2px
+				height: 12px
+				margin-top: -6px
+				margin-left: -1px

@@ -1,0 +1,50 @@
+@import '../helpers/helpers'
+
+article,
+.product-descr
+	h1, h2, h3, h4, h5, h6, p, img, ul, ol, blockquote, table
+		margin-bottom: 24px
+	a
+		color: $accent
+		font-weight: 600
+		&:hover
+			color: $black
+	b, strong
+		font-weight: 600
+	ul
+		padding-left: 10px
+		li
+			position: relative
+			padding-left: 24px
+			&:not(:last-child)
+				margin-bottom: 8px
+			&::before
+				content: ''
+				position: absolute
+				top: 9px
+				left: 0
+				display: block
+				width: 8px
+				height: 8px
+				border-radius: 8px
+				background-color: $accent
+	blockquote
+		padding-left: 16px
+		border-left: 1px solid $accent
+		font-weight: 700
+		span
+			display: block
+			margin-bottom: 8px
+			color: $accent
+		p:last-of-type
+			margin-bottom: 0
+	mark
+		display: inline-block
+		margin-bottom: 8px
+		padding: 4px 8px
+		border-radius: 4px
+		background-color: $lightgray
+		font-size: 18px
+		+media-breakpoint-down(xs)
+			display: block
+			font-size: 16px

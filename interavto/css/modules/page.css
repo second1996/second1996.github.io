@@ -614,3 +614,83 @@ article mark {
     margin-top: 80px
   }
 }
+.main .error-page {
+  padding-top: 120px;
+  text-align: center
+}
+@media (max-width:1277.98px) {
+  .main .error-page {
+    padding-top: 80px
+  }
+}
+@media (max-width:767.98px) {
+  .main .error-page {
+    padding-top: 60px
+  }
+}
+.main .error-page-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1
+}
+@media (max-width:1277.98px) {
+  .main .error-page-title {
+    font-size: 22px
+  }
+}
+@media (max-width:767.98px) {
+  .main .error-page-title {
+    font-size: 20px
+  }
+}
+.main .error-page-title > span {
+  margin-bottom: 15px;
+  display: block;
+  color: #25373f;
+  font-size: 200px;
+  font-weight: 700
+}
+@media (max-width:1277.98px) {
+  .main .error-page-title > span {
+    font-size: 150px
+  }
+}
+@media (max-width:767.98px) {
+  .main .error-page-title > span {
+    font-size: 100px
+  }
+}
+.main .error-page-btn {
+  margin-top: 35px
+}
+.main ul.sitemap:not(:last-of-type) {
+  margin-bottom: 30px
+}
+.main ul.sitemap h2 {
+  font-weight: 700
+}
+.main ul.sitemap h3 {
+  font-weight: 600
+}
+.main ul.sitemap ul > li {
+  margin-left: 20px;
+  margin-top: 20px
+}
+.main ul.sitemap ul > li > ul > li {
+  position: relative;
+  margin-top: 6px;
+  margin-left: 20px;
+  padding-left: 24px
+}
+.main ul.sitemap ul > li > ul > li::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #ff6c02
+}

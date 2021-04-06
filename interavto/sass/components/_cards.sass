@@ -1,0 +1,203 @@
+@import '../helpers/helpers'
+
+.card
+	position: relative
+	height: 100%
+	// Advantages
+	&--advantages
+		.card-photo
+			height: 245px
+			+media-breakpoint-down(sm)
+				height: 145px
+		.card-meta
+			.excerpt
+				margin-top: 25px
+				+media-breakpoint-down(lg)
+					margin-top: 16px
+	// Article
+	&--article
+		margin-bottom: 8px
+		.card-photo
+			height: 136px
+			margin-bottom: 0
+			+media-breakpoint-down(xxs)
+				height: 120px
+			&:hover
+				~ .card-meta
+					.title > a
+						color: $accent
+		.card-meta
+			.title > a
+				padding-top: 16px
+			.excerpt
+				margin-top: 8px
+				color: $darkgray
+		&-big
+			.card-photo
+				height: 264px
+				+media-breakpoint-down(xs)
+					height: auto
+					min-height: 136px
+					max-height: 264px
+					img
+						min-height: 136px
+						max-height: 264px
+	// Product
+	&--product
+		padding: 16px
+		border: 1px solid $lightgray
+		transition: border-color .3s ease
+		&:hover
+			border-color: $lightblue
+			z-index: 1
+			.card-meta
+				.title
+					color: $accent
+		.card-photo
+			height: 194px
+			padding-top: 30px
+			margin-bottom: 10px
+			img
+				object-fit: scale-down
+		.card-meta
+			.title
+				overflow: hidden
+				height: 32px
+				line-height: 1.4
+			.excerpt
+				&::before
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					margin: 12px 0
+					background-color: $lightgray
+	// File
+	&--file
+		padding: 16px
+		border: 1px solid $lightgray
+		&:hover
+			.card-meta
+				.title
+					color: $accent
+	// PDF
+	&--pdf
+		display: flex
+		.card-photo
+			flex: 0 0 auto
+			width: 120px
+			height: 160px
+			margin-bottom: 0
+			background-color: $lightblue
+			+media-breakpoint-down(xs)
+				width: 90px
+				height: 120px
+		.card-meta
+			margin-left: 16px
+			.title
+				margin-bottom: 12px
+	// Industry
+	&--industry
+		margin-bottom: 16px
+		text-align: center
+		&:hover
+			.card-photo
+				&::after
+					visibility: visible
+					opacity: 1
+				&-icon
+					color: $darkblue
+			.card-meta
+				.title
+					color: $accent
+		.card-photo
+			height: 192px
+			margin-bottom: 16px
+			border-radius: 96px
+			&::after
+				content: ''
+				visibility: hidden
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background-color: $accent
+				opacity: 0
+				transition: .3s ease
+			&-icon
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: 1
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background-color: $white
+				color: $accent
+				font-size: 24px
+				transform: translate(-50%, -50%)
+				transition: color .3s ease
+	// Base customize
+	&-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		margin-bottom: 16px
+		border-radius: 50%
+		border: 1px solid $lightgray
+		color: $accent
+		font-size: 24px
+	&-photo
+		overflow: hidden
+		backface-visibility: hidden
+		position: relative
+		width: 100%
+		margin-bottom: 25px
+		transform: translate3d(0, 0, 0)
+		&.rounded-left
+			img
+				border-radius: 200px 0 0 200px
+		&.rounded-right
+			img
+				border-radius: 0 200px 200px 0
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+		.dots
+			position: absolute
+	&-meta
+		.title
+			transition: color .3s ease
+			> a
+				display: block
+		.excerpt
+			margin-bottom: 0
+			word-wrap: break-word
+		.date
+			margin-top: 16px
+			color: $darkgray
+		.badge
+			position: absolute
+			top: 16px
+			left: 16px
+			margin-right: 16px
+			padding: 8px 10px
+			border-radius: 16px
+			background-color: $lightgray
+			line-height: 1.3
+	&-link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		display: block

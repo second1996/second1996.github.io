@@ -227,118 +227,120 @@
 										</div>
 									</div>
 									<div class="filter-list">
-										<div class="filter-item">
-											<div class="filter-title" id="filter-heading-1">
-												<button class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-1" aria-expanded="true" aria-controls="filter-collapse-1">
-													<span>Высокотемпературные смазки</span>
-													<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
-												</button>
-											</div>
-											<div id="filter-collapse-1" class="collapse show" aria-labelledby="filter-heading-1">
-												<div class="filter-body">
-													<div class="form-checkbox">
-														<input type="checkbox" name="highttemp[]" id="highttemp-1" >
-														<label for="highttemp-1">Все</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="highttemp[]" id="highttemp-2">
-														<label for="highttemp-2">Кальциевые</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="highttemp[]" id="highttemp-3">
-														<label for="highttemp-3">Полимочевинные</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="highttemp[]" id="highttemp-4">
-														<label for="highttemp-4">Водостойкие</label>
+										<form class="categorieslst" action="" method="GET">
+											<div class="filter-item">
+												<div class="filter-title" id="filter-heading-1">
+													<button type="button" class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-1" aria-expanded="true" aria-controls="filter-collapse-1">
+														<span>Высокотемпературные смазки</span>
+														<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
+													</button>
+												</div>
+												<div id="filter-collapse-1" class="collapse show" aria-labelledby="filter-heading-1">
+													<div class="filter-body">
+														<div class="form-checkbox">
+															<input type="checkbox" class="filter-all" name="highttemp[]" id="highttemp-1">
+															<label for="highttemp-1">Все</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" class="filter-custom" name="highttemp[]" id="highttemp-2">
+															<label for="highttemp-2"><a href="page-catalog.html">Кальциевые</a></label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" class="filter-custom" name="highttemp[]" id="highttemp-3">
+															<label for="highttemp-3">Полимочевинные</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" class="filter-custom" name="highttemp[]" id="highttemp-4">
+															<label for="highttemp-4">Водостойкие</label>
+														</div>
 													</div>
 												</div>
-											</div>
-										</div><!-- /.filter-item -->
-										<div class="filter-item">
-											<div class="filter-title" id="filter-heading-2">
-												<button class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-2" aria-expanded="false" aria-controls="filter-collapse-2">
-													<span>Пасты приработочные</span>
-													<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
-												</button>
-											</div>
-											<div id="filter-collapse-2" class="collapse" aria-labelledby="filter-heading-2">
-												<div class="filter-body">
-													<div class="form-checkbox">
-														<input type="checkbox" name="pasta[]" id="pasta-1">
-														<label for="pasta-1">Все</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="pasta[]" id="pasta-2">
-														<label for="pasta-2">Многофункциональная смазка</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="pasta[]" id="pasta-3">
-														<label for="pasta-3">Шрус</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="pasta[]" id="pasta-4">
-														<label for="pasta-4">Эрна-РС</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="pasta[]" id="pasta-5">
-														<label for="pasta-5">Эрна-МФ</label>
-													</div>
-													<div class="form-checkbox">
-														<input type="checkbox" name="pasta[]" id="pasta-6">
-														<label for="pasta-6">Паста разделительная</label>
+											</div><!-- /.filter-item -->
+											<div class="filter-item">
+												<div class="filter-title" id="filter-heading-2">
+													<button type="button" class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-2" aria-expanded="false" aria-controls="filter-collapse-2">
+														<span>Пасты приработочные</span>
+														<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
+													</button>
+												</div>
+												<div id="filter-collapse-2" class="collapse" aria-labelledby="filter-heading-2">
+													<div class="filter-body">
+														<div class="form-checkbox">
+															<input type="checkbox" name="pasta[]" id="pasta-1">
+															<label for="pasta-1">Все</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" name="pasta[]" id="pasta-2">
+															<label for="pasta-2">Многофункциональная смазка</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" name="pasta[]" id="pasta-3">
+															<label for="pasta-3">Шрус</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" name="pasta[]" id="pasta-4">
+															<label for="pasta-4">Эрна-РС</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" name="pasta[]" id="pasta-5">
+															<label for="pasta-5">Эрна-МФ</label>
+														</div>
+														<div class="form-checkbox">
+															<input type="checkbox" name="pasta[]" id="pasta-6">
+															<label for="pasta-6">Паста разделительная</label>
+														</div>
 													</div>
 												</div>
-											</div>
-										</div><!-- /.filter-item -->
-										<div class="filter-item">
-											<div class="filter-title" id="filter-heading-3">
-												<button class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-3" aria-expanded="false" aria-controls="filter-collapse-3">
-													<span>Аэрозольные смазки</span>
-													<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
-												</button>
-											</div>
-											<div id="filter-collapse-3" class="collapse" aria-labelledby="filter-heading-3">
-												<div class="filter-body">
-													<div class="form-checkbox">
-														<input type="checkbox" name="" id="">
-														<label for="">Все</label>
+											</div><!-- /.filter-item -->
+											<div class="filter-item">
+												<div class="filter-title" id="filter-heading-3">
+													<button type="button" class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-3" aria-expanded="false" aria-controls="filter-collapse-3">
+														<span>Аэрозольные смазки</span>
+														<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
+													</button>
+												</div>
+												<div id="filter-collapse-3" class="collapse" aria-labelledby="filter-heading-3">
+													<div class="filter-body">
+														<div class="form-checkbox">
+															<input type="checkbox" name="" id="">
+															<label for="">Все</label>
+														</div>
 													</div>
 												</div>
-											</div>
-										</div><!-- /.filter-item -->
-										<div class="filter-item">
-											<div class="filter-title" id="filter-heading-4">
-												<button class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-4" aria-expanded="false" aria-controls="filter-collapse-4">
-													<span>Масла</span>
-													<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
-												</button>
-											</div>
-											<div id="filter-collapse-4" class="collapse" aria-labelledby="filter-heading-4">
-												<div class="filter-body">
-													<div class="form-checkbox">
-														<input type="checkbox" name="" id="">
-														<label for="">Все</label>
+											</div><!-- /.filter-item -->
+											<div class="filter-item">
+												<div class="filter-title" id="filter-heading-4">
+													<button type="button" class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-4" aria-expanded="false" aria-controls="filter-collapse-4">
+														<span>Масла</span>
+														<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
+													</button>
+												</div>
+												<div id="filter-collapse-4" class="collapse" aria-labelledby="filter-heading-4">
+													<div class="filter-body">
+														<div class="form-checkbox">
+															<input type="checkbox" name="" id="">
+															<label for="">Все</label>
+														</div>
 													</div>
 												</div>
-											</div>
-										</div><!-- /.filter-item -->
-										<div class="filter-item">
-											<div class="filter-title" id="filter-heading-5">
-												<button class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-5" aria-expanded="false" aria-controls="filter-collapse-5">
-													<span>Смазки на синтетических маслах</span>
-													<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
-												</button>
-											</div>
-											<div id="filter-collapse-5" class="collapse" aria-labelledby="filter-heading-5">
-												<div class="filter-body">
-													<div class="form-checkbox">
-														<input type="checkbox" name="" id="">
-														<label for="">Все</label>
+											</div><!-- /.filter-item -->
+											<div class="filter-item">
+												<div class="filter-title" id="filter-heading-5">
+													<button type="button" class="filter-btn text-xxs w-bold text-uppercase" data-toggle="collapse" data-target="#filter-collapse-5" aria-expanded="false" aria-controls="filter-collapse-5">
+														<span>Смазки на синтетических маслах</span>
+														<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#icon-arrow"></use></svg>
+													</button>
+												</div>
+												<div id="filter-collapse-5" class="collapse" aria-labelledby="filter-heading-5">
+													<div class="filter-body">
+														<div class="form-checkbox">
+															<input type="checkbox" name="" id="">
+															<label for="">Все</label>
+														</div>
 													</div>
 												</div>
-											</div>
-										</div><!-- /.filter-item -->
+											</div><!-- /.filter-item -->
+										</form>
 									</div><!-- /.filter-list -->
 								</div><!-- /.filter-wrapper -->
 							</div><!-- /.filter -->
@@ -793,6 +795,29 @@
 	<script src="js/pages/product-filter.js"></script>
 	<script src="js/vendor/jquery.mask.min.js"></script>
 	<script src="js/app.js"></script>
+
+	<!-- <script>
+		var form_cs = $('.categorieslst');
+
+		form_cs.find('input[type=checkbox]').each(function(i, e) {
+			$(e).click(function(e) {
+				var ct = $(e.currentTarget);
+				var r = ct.parents('.filter-body');
+
+				if($(e.currentTarget).hasClass('filter-all')){
+					r.find('input[type=checkbox]').each(function(i, e){
+						if($(e).hasClass('filter-custom')){
+							$(e).prop('checked', false);
+						}
+					});
+					form_cs.submit();
+				} else {
+					r.find('.filter-all').prop('checked', false);
+					form_cs.submit();
+				}
+			});
+		});
+	</script> -->
 
 </body>
 </html>

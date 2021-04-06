@@ -1,0 +1,133 @@
+@import '../helpers/helpers'
+
+.sidebar
+	width: 100%
+	max-width: 272px
+	margin-bottom: 40px
+	padding: 24px
+	background-color: $lightgray
+	+media-breakpoint-down(md)
+		max-width: 100%
+		padding: 0
+		background-color: $trsp
+	+media-breakpoint-down(xs)
+		margin-bottom: 24px
+	.filter
+		&-trigger
+			flex-wrap: wrap
+			align-items: center
+			&-item
+				&:not(:last-child)
+					margin-right: 24px
+					+media-breakpoint-down(xs)
+						margin-right: 16px
+			&--open
+				.btn
+					&:hover
+						.active-filters
+							background-color: $white
+				.active-filters
+					display: inline-block
+					width: 6px
+					height: 6px
+					margin-left: 12px
+					border-radius: 6px
+					background-color: $accent
+					transition: background-color .3s ease
+			&--clear
+				display: none
+				&.is-shown
+					display: block
+				+media-breakpoint-down(xs)
+					.btn
+						width: 40px
+						padding: 0
+						.icon
+							margin-right: 0
+						> span
+							display: none
+		&-wrapper
+			+media-breakpoint-down(md)
+				visibility: hidden
+				position: fixed
+				top: 0
+				right: 0
+				bottom: 0
+				z-index: 999
+				width: 100%
+				max-width: 360px
+				height: 100%
+				background-color: $lightgray
+				transform: translateX(30px)
+				opacity: 0
+				transition: .3s ease
+			+media-breakpoint-down(xs)
+				max-width: 320px
+			+media-breakpoint-down(xxs)
+				max-width: 100%
+			&.is-active
+				visibility: visible
+				transform: translateX(0)
+				opacity: 1
+		&-header
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			border-bottom: 1px solid #dde5e9
+			> .container
+				height: 48px
+				+media-breakpoint-down(xs)
+					padding-left: 16px
+					padding-right: 16px
+			.title
+				display: flex
+				align-items: center
+				line-height: 1
+				.icon
+					margin-right: 8px
+				> span
+					font-size: 12px
+					font-weight: 700
+					text-transform: uppercase
+			.close
+				display: flex
+				align-items: center
+				height: 100%
+				padding-right: 2px
+				cursor: pointer
+				> svg
+					fill: $darkblue
+		&-list
+			+media-breakpoint-down(md)
+				overflow-y: scroll
+				height: 100%
+				margin-top: 48px
+				padding: 24px 24px 84px
+			+media-breakpoint-down(xs)
+				padding: 16px 16px 84px
+		&-item
+			&:not(:last-child)
+				margin-bottom: 24px
+		&-btn
+			position: relative
+			width: 100%
+			height: auto
+			padding-left: 0
+			padding-right: 32px
+			border-radius: 0
+			text-align: left
+			line-height: 16px
+			&[aria-expanded="true"]
+				.icon
+					transform: rotate(-90deg)
+			.icon
+				position: absolute
+				top: 3px
+				right: 0
+				margin: 0
+				fill: $darkblue
+				transform: rotate(90deg)
+				transition: transform .3s ease
+		&-body
+			margin-top: 16px

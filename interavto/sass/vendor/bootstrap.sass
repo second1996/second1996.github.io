@@ -1,0 +1,79 @@
+@import '../helpers/helpers'
+
+/* ==========================================================================
+   Import Bootstrap components
+   ========================================================================== */
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+@import 'node_modules/bootstrap/scss/_nav.scss'
+@import 'node_modules/bootstrap/scss/_transitions.scss'
+@import 'node_modules/bootstrap/scss/_modal.scss'
+
+
+/* ==========================================================================
+   Bootstrap Grid
+   ========================================================================== */
+.row-items
+	> .col,
+	> [class*="col-"]
+		margin-bottom: 40px
+		+media-breakpoint-down(lg)
+			margin-bottom: 32px
+		+media-breakpoint-down(sm)
+			margin-bottom: 24px
+.row
+	+media-breakpoint-down(lg)
+		margin-left: -16px
+		margin-right: -16px
+		> .col,
+		> [class*="col-"]
+			padding-left: 16px
+			padding-right: 16px
+
+.no-xs-gutters
+	+media-breakpoint-down(xs)
+		margin-right: 0
+		margin-left: 0
+		margin-bottom: 40px
+		> .col,
+		> [class*="col-"]
+			margin: -1px 0 0 -1px
+			padding-right: 0
+			padding-left: 0
+
+
+/* ==========================================================================
+   Bootstrap Nav
+   ========================================================================== */
+.nav-tabs
+	flex-wrap: nowrap
+	justify-content: center
+	border: 0
+	box-shadow: inset 0 -1px 0 0 $lightgray
+	+media-breakpoint-down(xs)
+		justify-content: flex-start
+	.nav-item
+		margin: 0 32px
+		+media-breakpoint-down(xs)
+			margin-left: 0
+			margin-right: 32px
+	.nav-link
+		padding: 0 0 20px 0
+		border-radius: 0
+		border: none
+		border-bottom: 1px solid $trsp
+		color: #76858c
+		font-size: 12px
+		font-weight: 700
+		text-transform: uppercase
+		&:focus,
+		&:hover
+			border-color: darken($lightgray, 15%)
+		+media-breakpoint-down(xs)
+			padding-bottom: 16px
+	.nav-item.show .nav-link,
+	.nav-link.active
+		border-color: $accent
+		background-color: $trsp
+		color: $black

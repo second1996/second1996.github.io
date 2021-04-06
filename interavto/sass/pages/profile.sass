@@ -1,0 +1,121 @@
+@import '../helpers/helpers'
+
+.profile
+	.nav-tabs
+		overflow-x: auto
+		width: 100%
+		white-space: nowrap
+		justify-content: flex-start
+		margin-bottom: 40px
+		+media-breakpoint-down(sm)
+			margin-bottom: 32px
+		.nav-item
+			margin: 0
+			&:not(:last-child)
+				margin-right: 48px
+				+media-breakpoint-down(sm)
+					margin-right: 32px
+	// Profile Info
+	&-info
+		.discount
+			margin-bottom: 40px
+			padding: 16px
+			background-color: $lightgray
+			line-height: 1.4
+			+media-breakpoint-down(sm)
+				margin-bottom: 28px
+			&-system
+				&-table
+					max-width: 400px
+					margin-top: 32px
+					+media-breakpoint-down(sm)
+						max-width: 100%
+					td
+						border-bottom: 1px dashed rgba($darkblue, 0.5)
+	// Profile Personal
+	&-personal
+		+media-breakpoint-down(sm)
+			background-color: $lightgray
+		&-wrapper
+			padding: 32px 24px
+			background-color: $lightgray
+			+media-breakpoint-down(sm)
+				padding-left: 0
+				padding-right: 0
+				background-color: $trsp
+			.form
+				max-width: 530px
+				.form-control
+					+media-breakpoint-down(sm)
+						flex: 0 0 100%
+						max-width: 100%
+				.form-submit
+					width: 100%
+					max-width: 312px
+	// Profile Orders
+	.profile-orders
+		&-wrapper
+		&-table
+			border-spacing: revert
+			background-color: $lightgray
+			th, td
+				padding: 15px 0
+			thead
+				background-color: $white
+				+media-breakpoint-down(sm)
+					display: none
+				th
+					width: 11.111%
+			tbody
+				tr
+					border-top: 16px solid $white
+					+media-breakpoint-down(sm)
+						&:first-child
+							border-top: 0
+					td
+						position: relative
+						border-bottom: 0
+						&:first-child
+							padding-left: 16px
+							+media-breakpoint-down(lg)
+								padding-left: 42px
+						.invoice
+							display: block
+							font-weight: 700
+						.date
+							display: block
+							font-weight: 700
+						.status
+							display: block
+							&--send
+								color: #35b02a
+							&--hold
+								color: #ca9d22
+							&--wrong
+								color: #b62424
+							&--passive
+								color: #7a7a7a
+						.document
+							display: block
+							line-height: 1.2
+							margin-top: 4px
+							&:not(:last-child)
+								margin-bottom: 10px
+							> a
+								text-decoration: underline
+			.footable-detail-row
+				border-top: 16px solid $lightgray
+				td:first-child
+					padding-left: 16px
+				td:last-child
+					padding-right: 16px
+			.footable-details
+				margin-top: -30px
+				tbody
+					> tr
+						border-top: 0
+					th
+						font-size: 14px
+					th, td
+						padding: 0
+						padding-bottom: 16px

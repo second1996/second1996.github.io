@@ -1,0 +1,114 @@
+@import '../helpers/helpers'
+
+.m-menu
+	visibility: hidden
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 999
+	height: 100%
+	opacity: 0
+	transition: .2s ease
+	&.is-active
+		visibility: visible
+		opacity: 1
+	&-wrapper
+		overflow-y: scroll
+		position: relative
+		z-index: 1
+		height: 100%
+		background-color: $white
+	&-header
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 1
+		background-color: $white
+		border-bottom: 1px solid $lightgray
+		> .container
+			height: 60px
+		.title
+			font-size: 12px
+			font-weight: 700
+			line-height: 1
+			text-transform: uppercase
+		.close
+			display: flex
+			align-items: center
+			height: 100%
+			padding-right: 2px
+			cursor: pointer
+			> svg
+				fill: $darkblue
+	&-main
+		margin-top: 64px
+		padding: 24px 0 42px
+	&-catalog
+		.btn-catalog
+			width: 100%
+	&-nav
+		margin-top: 24px
+		&-list
+			> li
+				padding-right: 2px
+				display: block
+				&:not(:first-child)
+					margin-top: 16px
+				> a
+					display: flex
+					justify-content: space-between
+					color: $black
+					font-weight: 600
+					&:hover
+						color: $accent
+	&-info
+		margin-top: 24px
+		border-top: 1px solid $lightgray
+		.phone
+			display: inline-flex
+			flex-direction: column
+			margin-top: 16px
+			&-link
+				margin-bottom: 6px
+				padding-left: 24px
+				background-image: url('../../images/dest/icons/phone.svg')
+				background-repeat: no-repeat
+				background-position: left center
+				background-size: 16px
+				color: $black
+				font-size: 18px
+				line-height: 1
+				&:hover
+					color: $accent
+			&-descr
+				padding-left: 24px
+				color: #76858c
+				line-height: 1
+		.contacts
+			margin-top: 16px
+			padding-top: 16px
+			border-top: 1px solid $lightgray
+			&-link
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding-right: 2px
+				color: $black
+				font-size: 18px
+				&:hover
+					color: $accent
+	&-links
+		margin-top: 16px
+		padding-top: 24px
+		border-top: 1px solid $lightgray
+		.links
+			> li
+				&:not(:first-child)
+					margin-top: 24px
+				> a
+					color: $black
+					&:hover
+						color: $accent

@@ -1,0 +1,171 @@
+@import '../helpers/helpers'
+@import '../components/breadcrumbs'
+@import '../components/pagination'
+@import 'aside'
+@import 'article'
+
+.main
+	&-header
+		margin-bottom: 40px
+		.title
+			margin-top: 32px
+		+media-breakpoint-down(sm)
+			margin-bottom: 32px
+			.title
+				margin-top: 16px
+	&-heroes
+		position: relative
+		margin-bottom: 40px
+		+media-breakpoint-down(md)
+			background-color: $lightgray
+		&-wrapper
+			overflow: hidden
+			display: flex
+			justify-content: space-between
+			height: 424px
+			border-radius: 0 240px 240px 0
+			background-color: $lightgray
+			+media-breakpoint-down(md)
+				flex-direction: column-reverse
+				height: auto
+				padding-top: 256px
+				border-radius: 0
+				background-color: $trsp
+		&-meta
+			position: relative
+			margin: 32px 48px
+			+media-breakpoint-down(md)
+				margin: 18px 0 24px
+			.picture
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				margin-bottom: 48px
+				border-radius: 50%
+				background-color: $white
+				color: $accent
+				font-size: 24px
+				+media-breakpoint-down(md)
+					margin-top: 16px
+					margin-bottom: 12px
+			.date
+				margin-bottom: 32px
+				color: $darkgray
+				+media-breakpoint-down(md)
+					margin-bottom: 8px
+			.title
+				overflow: hidden
+				height: 75%
+				line-height: 1.2
+				+media-breakpoint-down(md)
+					overflow: visible
+					height: 100%
+			.dots
+				position: absolute
+				left: 0
+				bottom: 0
+				+media-breakpoint-down(md)
+					position: static
+					margin-top: 48px
+		&-photo
+			flex: 0 0 100%
+			max-width: 690px
+			+media-breakpoint-down(lg)
+				max-width: 500px
+			+media-breakpoint-down(md)
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				max-width: 100%
+				height: 256px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	&-sidebar
+		position: static
+	&-products
+		+media-breakpoint-down(xs)
+			padding-left: 0!important
+			padding-right: 0!important
+			margin-left: 1px
+	&-content
+		&-descr
+			margin-bottom: 64px
+			+media-breakpoint-down(md)
+				margin-bottom: 40px
+			.title
+				margin-bottom: 16px
+				font-size: 24px
+				+media-breakpoint-down(sm)
+					font-size: 20px
+			p
+				&:last-of-type
+					margin-bottom: 0
+		&-btn
+			margin-top: 32px
+			+media-breakpoint-down(md)
+				margin-top: 24px
+	&-seo
+		margin-top: 120px
+		+media-breakpoint-down(lg)
+			margin-top: 80px
+	.error-page
+		padding-top: 120px
+		text-align: center
+		+media-breakpoint-down(lg)
+			padding-top: 80px
+		+media-breakpoint-down(sm)
+			padding-top: 60px
+		&-title
+			font-size: 24px
+			font-weight: 400
+			text-align: center
+			line-height: 1
+			+media-breakpoint-down(lg)
+				font-size: 22px
+			+media-breakpoint-down(sm)
+				font-size: 20px
+			> span
+				margin-bottom: 15px
+				display: block
+				color: $darkblue
+				font-size: 200px
+				font-weight: 700
+				+media-breakpoint-down(lg)
+					font-size: 150px
+				+media-breakpoint-down(sm)
+					font-size: 100px
+		&-btn
+			margin-top: 35px
+
+	// Sitemap customize
+	ul.sitemap
+		&:not(:last-of-type)
+			margin-bottom: 30px
+		h2
+			font-weight: 700
+		h3
+			font-weight: 600
+		ul
+			> li
+				margin-left: 20px
+				margin-top: 20px
+			> li > ul > li,
+				position: relative
+				margin-top: 6px
+				margin-left: 20px
+				padding-left: 24px
+				&::before
+					content: ''
+					position: absolute
+					top: 9px
+					left: 0
+					display: block
+					width: 8px
+					height: 8px
+					border-radius: 8px
+					background-color: $accent

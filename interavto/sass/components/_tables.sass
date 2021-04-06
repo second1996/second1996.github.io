@@ -1,0 +1,29 @@
+@import '../helpers/helpers'
+
+.responsive-table
+	overflow-x: auto
+	width: 100%
+	-webkit-overflow-scrolling: touch
+	+media-breakpoint-down(xs)
+		table
+			th
+				min-width: 140px
+				+media-breakpoint-down(xxs)
+					min-width: 120px
+
+table
+	width: 100%
+	border-collapse: collapse
+	th
+		color: $darkgray
+		font-size: 12px
+		font-weight: 400
+	th, td
+		vertical-align: top
+		padding: 8px 0
+	td
+		border-bottom: 1px solid $lightgray
+	tr
+		> th:not(:last-child),
+		> td:not(:last-child)
+			padding-right: 24px

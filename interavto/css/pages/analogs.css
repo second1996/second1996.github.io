@@ -400,24 +400,24 @@
     border-left: 0
   }
 }
-.analog-descr {
+.product-descr {
   margin-top: 70px
 }
-.analog-descr-section {
+.product-descr-section {
   padding-top: 24px;
   padding-bottom: 32px;
   border-top: 1px solid #eff3f6
 }
 @media (max-width:991.98px) {
-  .analog-descr-section {
+  .product-descr-section {
     padding-bottom: 18px
   }
 }
-.analog-descr .title {
+.product-descr .title {
   margin-bottom: 24px
 }
 @media (max-width:767.98px) {
-  .analog-descr .title {
+  .product-descr .title {
     margin-bottom: 16px
   }
 }
