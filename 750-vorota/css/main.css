@@ -4380,8 +4380,8 @@ button:focus {
   -webkit-box-shadow: 0 0 0 4px rgba(176,180,187,.25);
   box-shadow: 0 0 0 4px rgba(176,180,187,.25)
 }
-.btn:disabled,
-button:disabled {
+.btn:disabled:not(.fancybox-button),
+button:disabled:not(.fancybox-button) {
   background-color: #dfe3e8!important;
   color: #b0b4bb!important
 }
@@ -8571,7 +8571,8 @@ table {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none
+  user-select: none;
+  outline: 0
 }
 .s-product .product-gallery-slider .swiper-slide .photo::before {
   content: '';
