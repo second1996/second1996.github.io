@@ -150,6 +150,9 @@ $(document).ready(function() {
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	window.initQuickViewModal = function () {
+		// Update BS Tooltip
+		$('[data-toggle="tooltip"]').tooltip('update')
+
 		// Thumbs slider
 		const qvGalleryThumbsSlider = new Swiper('.modal-quick-view .product-gallery-thumbs .swiper-container', {
 			observer: true,

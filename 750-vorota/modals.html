@@ -206,7 +206,7 @@
 
 					<!-- Modal: Форма отправлена -->
 					<button type="button" class="btn btn-green" data-toggle="modal" data-target="#successModal">Форма отправлена</button>
-					<div class="modal modal-success fade" id="successModal" tabindex="-1" role="dialog">
+					<div class="modal modal-notice fade" id="successModal" tabindex="-1" role="dialog">
 						<div class="modal-dialog modal-dialog-centered" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -215,7 +215,7 @@
 									</button>
 								</div>
 								<div class="modal-body">
-									<svg class="icon icon-success"><use xlink:href="images/symbol-defs.svg#success"></use></svg>
+									<svg class="icon icon-success text-green"><use xlink:href="images/symbol-defs.svg#success"></use></svg>
 									<h5 class="title text-lg w-bold">Успешно!</h5>
 									<p class="descr">Мы получили Ваше обращение и ответим в течение 30 минут</p>
 								</div><!-- /.modal-body -->
@@ -224,7 +224,29 @@
 					</div>
 
 				</div><!-- /.col -->
+				<div class="col-auto">
 
+					<!-- Modal: Ошибка при отправке формы -->
+					<button type="button" class="btn btn-green" data-toggle="modal" data-target="#errorModal">Ошибка при отправке формы</button>
+					<div class="modal modal-notice fade" id="errorModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn btn-close" data-dismiss="modal">
+										<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+									</button>
+								</div>
+								<div class="modal-body">
+									<svg class="icon icon-error text-red"><use xlink:href="images/symbol-defs.svg#error"></use></svg>
+									<h5 class="title text-lg w-bold">Ошибка!</h5>
+									<p class="descr">Нам не удалось отправить форму :(</p>
+								</div><!-- /.modal-body -->
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div>
+
+				</div><!-- /.col -->
+			</div><!-- /.row -->
 
 		</div><!-- /.container -->
 	</main>
