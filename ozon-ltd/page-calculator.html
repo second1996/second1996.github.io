@@ -19,8 +19,8 @@
 	<header class="site-aside">
 		<div class="logo">
 			<a href="index.html" rel="home">
-				<img class="logo-desktop" src="images/dest/ozon-logo.png" alt="OZON Development">
-				<img class="logo-mobile" src="images/dest/ozon-horizontal-logo.png" alt="OZON Development">
+				<img class="logo-desktop" src="images/dest/ozon-logo.svg" alt="OZON Development">
+				<img class="logo-mobile" src="images/dest/ozon-horizontal-logo.svg" alt="OZON Development">
 			</a>
 		</div>
 		<div class="menu">
@@ -157,7 +157,7 @@
 						<div class="calculator-total-separator"></div>
 						<div class="calculator-total-item">
 							<div class="title text-lg text-uppercase w-regular">Завдаток, $</div>
-							<div class="value title-md text-accent w-medium">10 000</div>
+							<div class="value title-md text-accent w-medium">20 000</div>
 							<div class="descr text-xss">При бронюванні будинку</div>
 						</div>
 						<div class="calculator-total-separator"></div>
@@ -179,9 +179,13 @@
 							<div class="descr text-xss">Фіксований платіж розтермінування</div>
 						</div>
 					</div><!-- /.calculator-total -->
-					<div class="calculator-descr" id="c-modal-link" >
-						<p class="mb-30 text-md text-white">При першому внеску в розмірі $<span id="c-descr-firstpay">0</span> та завдатком $10 000, сума розтермінування на <span id="c-descr-term">0</span> <span id="c-descr-term-label">міс.</span> складатиме $<span id="c-descr-termpay">0</span></p>
-						<a href="#" class="btn btn-primary"data-toggle="modal" data-target="#calcHouseModal" role="button">Залишити заявку</a>
+					<div class="calculator-descr" id="c-modal-link">
+						<div class="row justify-content-center">
+							<div class="col-sm-10 col-lg-8">
+								<p class="mb-30 text-md text-white"><span class="text-accent w-regular">Ваші персональні умови наступні:</span> перший платіж — завдаток в розмірі $20 000, другий платіж в розмірі <span id="c-descr-firstpay-percent">0</span>% складає $<span id="c-descr-firstpay">0</span> за мінусом уже внесеного завдатку, сума розтермінування складатиме $<span id="c-descr-termpay">0</span> на <span id="c-descr-term">0</span> <span id="c-descr-term-label">міс.</span></p>
+								<a href="#" class="btn btn-primary"data-toggle="modal" data-target="#calcHouseModal" role="button">Залишити заявку</a>
+							</div>
+						</div>
 					</div>
 				</div><!-- /.calculator -->
 			</div><!-- /.container-fluid -->
@@ -434,7 +438,7 @@
 						<div class="form-plate">
 							<div class="form-plate-item"><span class="name">Будинок:</span> <span class="value"><em id="cModalLabel-house">0</em></span></div>
 							<div class="form-plate-item"><span class="name">Вартість:</span> <span class="value">$<em id="cModalLabel-price">0</em></span></div>
-							<div class="form-plate-item"><span class="name">Завдаток:</span> <span class="value">$10 000</span></div>
+							<div class="form-plate-item"><span class="name">Завдаток:</span> <span class="value">$20 000</span></div>
 							<div class="form-plate-item"><span class="name">Перший внесок:</span> <span class="value">$<em id="cModalLabel-firstpay">0</em></span></div>
 							<div class="form-plate-item"><span class="name">Термін:</span> <span class="value"><em id="cModalLabel-term">0</em> <em id="cModalLabel-term-label">міс.</em></span></div>
 							<div class="form-plate-item"><span class="name">Платіж на період розтермінування:</span> <span class="value">$<em id="cModalLabel-termpay">0</em></span></div>
