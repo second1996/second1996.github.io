@@ -14,13 +14,10 @@ $(document).ready(function(){
   $gpTooltipStatus = $('#gp-tooltip-status')
   $gpTooltipPhoto = $('#gp-tooltip-photo')
   $gpHousePhotos = {
-    'Nebokray': '/images/dest/villa-nebokray-main.jpg',
-    'Zatyshok': '/images/dest/villa-zatyshok-main.jpg',
-    'Svitanok': '/images/dest/villa-svitanok-main.jpg'
-    // 'Harmonia': '/wp-content/uploads/2020/09/villa-harmonia-main-1024x579.jpg',
-    // 'Nebokray': '/wp-content/uploads/2020/05/villa-nebokray-main-1024x579.jpg',
-    // 'Zatyshok': '/wp-content/uploads/2020/05/villa-zatyshok-main-1024x579.jpg',
-    // 'Svitanok': '/wp-content/uploads/2020/05/villa-svitanok-main-1024x579.jpg'
+    'Harmonia': 'https://ozon-ltd.com/wp-content/uploads/2020/09/villa-harmonia-main-1024x579.jpg',
+    'Nebokray': 'https://ozon-ltd.com/wp-content/uploads/2020/05/villa-nebokray-main-1024x579.jpg',
+    'Zatyshok': 'https://ozon-ltd.com/wp-content/uploads/2020/05/villa-zatyshok-main-1024x579.jpg',
+    'Svitanok': 'https://ozon-ltd.com/wp-content/uploads/2020/05/villa-svitanok-main-1024x579.jpg'
   }
 
   $('.h-genplan-map .house--sale, .h-genplan-map .house--sold, .h-genplan-map .house--reserved').hover(function(e) {
