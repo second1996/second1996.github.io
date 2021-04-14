@@ -342,10 +342,14 @@ img.error
 		+media-breakpoint-down(xs)
 			flex: 0 0 120px
 		&-desktop
-			max-width: 80px
+			width: 80px
 			height: auto
 			+media-breakpoint-down(lg)
 				display: none
+			&--winter
+				position: relative
+				right: -10px
+				width: 116px
 		&-mobile
 			display: none
 			max-width: 140px
@@ -935,7 +939,7 @@ body.single-house
 		padding-right: 30px
 		font-size: 40px
 		color: $white
-		font-weight: $font-medium
+		font-weight: $font-semibold
 		text-transform: uppercase
 		> span
 			display: block
@@ -948,6 +952,10 @@ body.single-house
 			font-size: 28px
 			> span
 				font-size: 24px
+		+media-breakpoint-down(xs)
+			line-height: 1.1
+			> span
+				margin-bottom: 6px
 	&-descr
 		max-width: 900px
 		margin-top: 20px

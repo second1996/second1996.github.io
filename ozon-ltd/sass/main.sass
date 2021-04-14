@@ -4,6 +4,44 @@
 
 
 /* ==========================================================================
+   AUDIO customize button
+   ========================================================================== */
+#ozon_play_song
+	background-color: $accent
+	.audio-play
+		width: 20px
+		height: 20px
+		fill: $text-dark
+	.audio-waves
+		width: 30px
+		height: 30px
+		fill: $text-dark
+
+	&.audio-playing
+		.audio-play
+			display: none
+	&:not(.audio-playing)
+		.audio-waves
+			display: none
+
+	@for $i from 1 through 9
+		.line_#{$i}
+			animation: waves 1s infinite
+			animation-delay: $i * .1s
+
+@keyframes waves
+	0%
+		transform: scaleY(1)
+		transform-origin: 50% 50%
+	50%
+		transform: scaleY(.7)
+		transform-origin: 50% 50%
+	100%
+		transform: scaleY(1)
+		transform-origin: 50% 50%
+
+
+/* ==========================================================================
    Technical page
    ========================================================================== */
 .error-404,
@@ -26,6 +64,24 @@
 				top: -50px
 			+media-breakpoint-down(xs)
 				top: -40px
+
+/* ==========================================================================
+   Home page
+   ========================================================================== */
+body.home
+	.section
+		margin-top: 160px
+		margin-bottom: 0
+	.h-promo
+		margin-bottom: 0
+	.h-features, .cta
+		margin-top: 160px
+	+media-breakpoint-down(xs)
+		.section
+			margin-top: 100px
+		.h-features, .cta
+			margin-top: 100px
+
 
 /* ==========================================================================
    Home section: Heroes
@@ -66,6 +122,8 @@
 				bottom: 60px
 			+media-breakpoint-down(sm)
 				bottom: 40px
+			+media-breakpoint-down(xs)
+				display: none
 			.swiper-pagination-bullet
 				position: relative
 				display: inline-block
@@ -162,7 +220,7 @@
 			+media-breakpoint-down(sm)
 				padding-top: 60px
 			+media-breakpoint-down(xss)
-				justify-content: flex-start
+				padding-top: 0
 			.title
 				max-width: 75%
 				font-size: 70px
@@ -213,6 +271,8 @@
 					bottom: -12px
 					right: 15px
 					font-size: 100px
+				+media-breakpoint-down(xs)
+					display: none
 		// Slider background photo
 		&-photo
 			position: absolute
@@ -237,7 +297,7 @@
 				right: 0
 				bottom: 0
 				z-index: -1
-				background: rgba($black, 0.6)
+				background: rgba($black, 0.45)
 
 
 /* ==========================================================================
@@ -294,6 +354,20 @@
 		width: 100%
 		height: 100%
 		object-fit: cover
+	&-modal
+		display: none
+		border: 1px solid $border
+		background: $item-bg
+		.fancybox-close-small
+			display: none
+		.title
+			font-weight: 500
+			text-align: center
+		.promo-languages
+			display: flex
+			justify-content: center
+			> a
+				margin: 0 10px
 
 
 /* ==========================================================================
@@ -450,6 +524,8 @@
 			height: 100px
 			border-radius: 100%
 			border: 2px solid #6b6b6b
+			backface-visibility: hidden
+			transform: translate3d(0, 0, 0)
 			+media-breakpoint-down(xl)
 				width: 80px
 				height: 80px
@@ -561,8 +637,6 @@
    ========================================================================== */
 .h-genplan
 	position: static
-	+media-breakpoint-down(sm)
-		display: none
 	&-wrap
 		position: relative
 		text-align: center
@@ -600,6 +674,51 @@
 			&--sale
 				fill: rgba(#09c005, 0.5)
 				stroke: #09c005
+			&--process
+				fill: rgba(#ccc, 0.5)
+				stroke: #ccc
+	&-info
+		display: none
+		+media-breakpoint-down(md)
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			margin-top: 10px
+		.info-item
+			position: relative
+			margin-bottom: 5px
+			padding-left: 16px
+			line-height: 1.2
+			&:not(:last-child)
+				margin-right: 10px
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 0
+				width: 8px
+				height: 8px
+				margin-top: -4px
+				background: $white
+				line-height: 1
+				border: 1px solid $white
+			&.sale:before
+				border-color: darken(#09c005, 10%)
+				background: #09c005
+			&.reserved:before
+				border-color: darken(#ffc700, 10%)
+				background: #ffc700
+			&.sold:before
+				border-color: darken(#e32c2c, 10%)
+				background: #e32c2c
+			&.process:before
+				border-color: darken(#ccc, 10%)
+				background: #ccc
+			&.stage:before
+				border-color: $border-accent
+				background: #ffc700
+
+	// Stage tooltip
 	&-stage-tooltip
 		pointer-events: none
 		visibility: hidden
@@ -618,12 +737,15 @@
 		+media-breakpoint-down(lg)
 			margin-top: -75px
 			margin-left: 0
+		+media-breakpoint-down(md)
+			display: none
 		&.active
 			visibility: visible
 			opacity: 1
+
+	// House tooltip
 	&-tooltip
 		pointer-events: none
-		visibility: hidden
 		position: absolute
 		top: 0
 		left: 0
@@ -634,11 +756,14 @@
 		font-size: 18px
 		text-align: center
 		line-height: 30px
+		visibility: hidden
 		opacity: 0
 		transition: visibility .35s ease, opacity .35s ease
 		+media-breakpoint-down(lg)
 			margin-top: -75px
 			margin-left: 0
+		+media-breakpoint-down(md)
+			display: none
 		&.active
 			visibility: visible
 			opacity: 1
@@ -729,6 +854,58 @@
 				background: #039300
 				color: $white
 				font-weight: $font-medium
+
+	// Choose your house tooltip
+	&-process-tooltip
+		pointer-events: none
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 5
+		width: 320px
+		margin-left: -150px
+		background: $item-bg
+		font-size: 18px
+		text-align: center
+		line-height: 30px
+		visibility: hidden
+		opacity: 0
+		transition: visibility .35s ease, opacity .35s ease
+		+media-breakpoint-down(lg)
+			margin-top: -75px
+			margin-left: 0
+		+media-breakpoint-down(md)
+			display: none
+		&.active
+			visibility: visible
+			opacity: 1
+		.meta
+			padding: 30px
+			.number
+				display: inline-block
+				padding: 10px
+				border: 1px solid $border-accent
+				background: $accent
+				color: $darken
+				font-size: 14px
+				font-weight: $font-medium
+				line-height: 1
+				> em
+					font-style: normal
+			.title
+				margin-top: 30px
+				font-size: 16px
+				font-weight: $font-medium
+				line-height: 1.2
+				text-transform: uppercase
+			.descr
+				margin-top: 15px
+				margin-bottom: 0
+				color: $text-main
+				font-size: 13px
+				font-weight: $font-light
+				line-height: 1.3
+
 	&-image
 		user-select: none
 
@@ -1273,7 +1450,6 @@
 					&:hover
 						cursor: pointer
 						~ .point-content
-							z-index: 3
 							visibility: visible
 							height: 100%
 							opacity: 1
@@ -1281,6 +1457,7 @@
 				&-content
 					visibility: hidden
 					position: relative
+					z-index: 3
 					top: 20px
 					height: 1px
 					padding: 30px 20px
@@ -1509,6 +1686,16 @@
 					color: $white
 					> span
 						transform: translateX(4px)
+		&-gallery
+			padding-bottom: 20px
+			border-bottom: 1px solid #323232
+			&-list
+				[class*="col"]
+					margin-bottom: 20px
+				.card-image
+					height: 180px
+					+media-breakpoint-down(sm)
+						height: 120px
 // Section: Other news
 .s-news
 	&-other
@@ -1685,10 +1872,18 @@
 			max-height: 500px
 	.page-section
 		margin-top: 160px
-		margin-bottom: 80px
+		margin-bottom: 0
 		+media-breakpoint-down(lg)
 			margin-top: 120px
-			margin-bottom: 60px
+	+media-breakpoint-down(xs)
+		.page-section
+			margin: 0
+			margin-bottom: 100px
+		.planning
+			margin-top: 100px
+		.houses
+			margin-bottom: 0
+
 .p-house
 	position: relative
 	z-index: 1
@@ -1721,6 +1916,14 @@
 			+media-breakpoint-down(xs)
 				flex-direction: column
 				align-items: flex-start
+			.btn-solid
+				margin-left: 20px
+				background: #353535
+				&:hover
+					background: darken(#353535, 10%)
+				+media-breakpoint-down(xs)
+					margin-top: 10px
+					margin-left: 0
 			.price-full
 				display: inline-block
 				margin-left: 20px
@@ -1862,6 +2065,8 @@
 					text-align: center
 			tbody
 				tr
+					display: flex
+					align-items: center
 					border-bottom: 1px solid $border
 				td
 					padding: 15px 30px
@@ -1871,6 +2076,7 @@
 				.name
 					display: flex
 					align-items: center
+					flex: 1 1 auto
 					> .number
 						flex: 0 0 auto
 						display: inline-block
@@ -1888,10 +2094,15 @@
 						margin-left: 15px
 						color: $white
 				.value
+					flex-basis: 130px
+					min-width: 130px
 					color: $accent
 					font-weight: $font-regular
 					text-align: center
+					+media-breakpoint-down(xs)
+						padding-right: 0
 			&-section
+				width: 100%
 				padding: 16px 30px
 				border-bottom: 1px solid $border
 				background: #262626
@@ -1904,25 +2115,19 @@
 			display: flex
 			flex-wrap: wrap
 			align-items: center
-			+media-breakpoint-down(md)
-				justify-content: center
+			justify-content: center
+			margin-top: 30px
+			+media-breakpoint-down(xl)
+				margin-top: 0
 			&-item
 				margin-bottom: 20px
 				padding-right: 30px
 				+media-breakpoint-down(md)
 					padding: 0 15px
-				+media-breakpoint-down(xs)
-					flex-basis: 100%
-					text-align: center
-					&:not(:last-child)
 			&--reserve
-				+media-breakpoint-down(xl)
+				+media-breakpoint-down(sm)
 					flex-basis: 100%
-					margin-bottom: 30px
-				+media-breakpoint-down(md)
 					text-align: center
-			// &--pdf
-			// &--callback
 		// Planning 2D/3D switch buttons
 		&-switch
 			+media-breakpoint-down(md)
@@ -1950,38 +2155,57 @@
 						color: $text-dark
 		// Planning 2D/3D slider
 		&-slider
+			.swiper-wrapper
+				flex-wrap: wrap
+				+media-breakpoint-down(md)
+					flex-wrap: nowrap
 			&-prev,
 			&-next
-				position: absolute
-				top: 50%
-				margin-top: -25px
+				display: none
+				+media-breakpoint-down(md)
+					display: inline-block
+					position: absolute
+					top: 50%
+					margin-top: -25px
+				+media-breakpoint-down(sm)
+					top: auto
+					bottom: 0
+					margin-top: 0
 		&-slide
+			&:not(:last-child)
+				margin-bottom: 60px
+				+media-breakpoint-down(md)
+					margin-bottom: 0
 			&-photo
 				position: relative
 				display: flex
 				justify-content: center
 				align-items: center
-				width: 78%
-				height: 600px
+				width: 90%
 				margin: 0 auto
-				+media-breakpoint-down(xl)
-					height: 400px
 				+media-breakpoint-down(md)
-					height: 500px
-				+media-breakpoint-down(sm)
-					height: 400px
-				+media-breakpoint-down(xs)
-					height: 260px
+					margin-bottom: 30px
 				> img
-					width: 100%
-					height: 100%
-					object-fit: contain
+					max-height: 600px
+					+media-breakpoint-down(xl)
+						max-height: 540px
+					+media-breakpoint-down(md)
+						max-height: 500px
+					+media-breakpoint-down(sm)
+						max-height: 400px
+					+media-breakpoint-down(xs)
+						max-height: 260px
 				&:hover
 					cursor: zoom-in
 		// Planning 2D/3D floor
 		&-floor
-			margin-top: 20px
+			margin-top: 15px
 			text-align: center
+			+media-breakpoint-down(md)
+				margin-top: 30px
+				margin-bottom: 10px
+			+media-breakpoint-down(xss)
+				margin-bottom: 5px
 			> span
 				display: inline-block
 				padding-bottom: 6px
@@ -1991,17 +2215,129 @@
 				font-weight: $font-medium
 				text-transform: uppercase
 				line-height: 1
-	// Section: Dynamics
-	.dynamics
-		&-text
-			margin-top: 20px
-			padding-right: 80px
-			+media-breakpoint-down(md)
-				padding-right: 40px
-			+media-breakpoint-down(sm)
+	// Section: Includes
+	.includes
+		position: relative
+		+media-breakpoint-down(xs)
+			// &::before
+			// 	content: ''
+			// 	position: absolute
+			// 	left: -15px
+			// 	right: -15px
+			// 	bottom: 0
+			// 	display: block
+			// 	height: 50px
+			// 	background: linear-gradient(180deg, rgba($accent, 0) 0%, $accent 100%)
+		&-list
+			+media-breakpoint-down(xs)
+				// height: 400px
+				// overflow-y: auto
+		&-item
+			display: flex
+			height: 100%
+			padding: 15px 15px 15px 0
+			border-bottom: 1px solid rgba($white, 0.05)
+			+media-breakpoint-down(xs)
+				display: block
+				padding-left: 0
 				padding-right: 0
-				margin-bottom: 30px
+		&-head
+			display: inline-flex
+			flex: 0 0 35%
+			padding-top: 2px
+			padding-right: 30px
+			.icon
+				flex: 0 0 auto
+				width: 16px
+				height: 16px
+				margin-right: 15px
+			.title
+				font-size: 16px
+				font-weight: $font-regular
+				line-height: 1.2
+				text-transform: uppercase
+			+media-breakpoint-down(xl)
+				.title
+					word-break: break-word
+			+media-breakpoint-down(sm)
+				flex-direction: column
+				.icon
+					margin-right: 0
+					margin-bottom: 8px
+			+media-breakpoint-down(xs)
+				flex-direction: row
+				margin-bottom: 10px
+				.icon
+					margin-right: 10px
+		&-text
+			flex: 0 0 65%
+			> p
+				line-height: 1.35
+	// Section: Calculator
+	.calculate
+		position: relative
+		z-index: 1
+		overflow: hidden
+		padding: 80px 0
+		+media-breakpoint-down(xl)
+			padding: 60px 0
+		&-btn
+			text-align: center
+			+media-breakpoint-down(sm)
+				margin-top: 30px
+				text-align: left
+		&-photo
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 1
+				display: block
+				background: rgba(0,0,0,0.75)
+			> img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	// Section: Dynamics
+	// .dynamics
+	// 	&-text
+	// 		margin-top: 20px
+	// 		padding-right: 80px
+	// 		+media-breakpoint-down(md)
+	// 			padding-right: 40px
+	// 		+media-breakpoint-down(sm)
+	// 			padding-right: 0
+	// 			margin-bottom: 30px
 	// Section: Reserve
+	.reserve-mobile
+		margin-top: 30px
+		text-align: center
+		&-actions
+			margin-bottom: 20px
+		&-text
+			margin-bottom: 10px
+		&-phone
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-left: -28px
+			> svg.icon
+				fill: $accent
+				font-size: 18px
+			> .numbers
+				margin-left: 10px
+				a
+					font-size: 18px
+					font-weight: 400
 	.reserve
 		> .row > [class*="col"]
 			margin-top: 20px
@@ -2015,6 +2351,8 @@
 			min-height: 500px
 			border: 1px solid $border
 			text-align: center
+			+media-breakpoint-down(sm)
+				min-height: 350px
 			.price
 				margin-bottom: 10px
 				color: $accent
@@ -2069,7 +2407,7 @@
 					bottom: 0
 					z-index: 1
 					display: block
-					background: rgba(#222, 0.9)
+					background: rgba(#222, 0.25)
 				> img
 					width: 100%
 					height: 100%

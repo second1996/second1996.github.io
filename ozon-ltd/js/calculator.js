@@ -3,7 +3,7 @@
  */
 const calcForm = $("#c-calc-form")
 const cModalLink = $("#c-modal-link")
-const reqPay = 10000
+const reqPay = 20000
 const firstpaySlider = $('#c-first-pay')
 const termSlider = $('#c-term-pay')
 const termTab = $('.form-range-tabs > .tab-item')
@@ -127,6 +127,7 @@ function calcFirstpay(price = houseCost, persent = firstpaySliderValue) {
   let fpFormat = fpVal.toLocaleString('uk-UA')
   // Записуємо значення в блок "Загальні обрахунки"
   $('#c-first-pay-val').text(fpFormat)
+  $('#c-descr-firstpay-percent').text(persent)
   $('#c-descr-firstpay').text(fpFormat)
   // Записуємо значення в модальне вікно "Залишити заявку"
   $("#cModal-firstpay").val(fpFormat)
