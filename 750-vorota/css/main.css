@@ -4066,6 +4066,15 @@ article ul > li::before {
 .shop-filters .filter-slider-from {
   margin-right: 8px
 }
+.shop-filters .filter-triggers {
+  display: none
+}
+.shop-filters .filter-triggers._is-shown {
+  display: block
+}
+.shop-filters .filter-triggers .filter-reset {
+  width: 100%
+}
 .shop-settings {
   margin-bottom: 40px
 }
@@ -8959,10 +8968,22 @@ table {
 .s-product .product-complectation-item:hover .product-complectation-photo {
   border-color: #27ae60
 }
+.s-product .product-complectation-item:hover .product-complectation-photo::before {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none
+}
 .s-product .product-complectation-item:hover .product-complectation-meta .title {
   color: #27ae60
 }
 .s-product .product-complectation-photo {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -8976,6 +8997,28 @@ table {
 }
 .s-product .product-complectation-photo img {
   padding: 2px
+}
+.s-product .product-complectation-photo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
+  border-radius: 50%;
+  background: rgba(111,114,120,.5) url(../images/icons/plus-circle.svg) no-repeat center/22px;
+  opacity: 0;
+  will-change: transform;
+  -webkit-transform: scale(.9);
+  -ms-transform: scale(.9);
+  transform: scale(.9);
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease
 }
 .s-product .product-complectation-meta {
   display: -webkit-box;
