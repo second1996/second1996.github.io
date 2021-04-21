@@ -1075,17 +1075,6 @@ table tr > th:not(:last-child) {
   background-color: #ff6c02;
   opacity: 1
 }
-.modal--profile .modal-body .form-link,
-.modal--profile .modal-body .form-submit {
-  width: auto;
-  margin-left: 104px
-}
-@media (max-width:767.98px) {
-  .modal--profile .modal-body .form-link,
-  .modal--profile .modal-body .form-submit {
-    margin-left: 0
-  }
-}
 .modal--profile .modal-body .form-submit {
   margin-top: 24px
 }
