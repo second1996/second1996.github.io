@@ -904,6 +904,15 @@ button:hover {
   position: relative;
   z-index: 2
 }
+.form-policy {
+  margin-top: 20px
+}
+.form-policy label > a {
+  color: #ff6c02
+}
+.form-policy label > a:hover {
+  color: #25373f
+}
 .link-arrow::after {
   content: '';
   display: inline-block;
@@ -1066,21 +1075,6 @@ table tr > th:not(:last-child) {
   background-color: #ff6c02;
   opacity: 1
 }
-.modal--profile .modal-body .form-group {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column
-}
-.modal--profile .modal-body .form-label {
-  margin-bottom: 8px
-}
-.modal--profile .modal-body .form-control {
-  margin-left: 0
-}
 .modal--profile .modal-body .form-link,
 .modal--profile .modal-body .form-submit {
   width: auto;
@@ -1178,43 +1172,23 @@ table tr > th:not(:last-child) {
     padding: 16px
   }
 }
-@media (max-width:767.98px) {
-  .modal-body .form-group {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start
-  }
-  .modal-body .form-group .form-label {
-    margin-bottom: 8px
-  }
+.modal-body .form-group {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.modal-body .form-label {
+  margin-bottom: 8px
 }
 .modal-body .form-control {
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  margin-left: 10px
-}
-@media (max-width:767.98px) {
-  .modal-body .form-control {
-    margin-left: 0
-  }
+  margin-left: 0
 }
 .modal-body .form-submit {
-  margin-top: 32px;
-  margin-left: 104px
-}
-@media (max-width:767.98px) {
-  .modal-body .form-submit {
-    margin-left: 0
-  }
-}
-@media (max-width:575.98px) {
-  .modal-body .form-submit {
-    width: auto
-  }
+  margin-top: 32px
 }
 .header {
   position: relative;

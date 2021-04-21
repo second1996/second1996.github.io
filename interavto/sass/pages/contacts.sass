@@ -92,6 +92,7 @@
 			.form-group
 				align-items: flex-start
 				justify-content: flex-start
+				flex-wrap: nowrap
 				&:not(:first-child)
 					margin-top: 16px
 				+media-breakpoint-down(sm)
@@ -110,12 +111,16 @@
 					max-width: 100%
 					height: 120px
 					+media-breakpoint-down(sm)
-						flex: 0 0 100%
+						flex: 1 1 120px
 				.form-control
 					max-width: 280px
 					+media-breakpoint-down(sm)
 						flex: 0 0 100%
 						max-width: 100%
+			.form-policy
+				margin-left: 20%
+				+media-breakpoint-down(sm)
+					margin-left: 0
 			.form-submit
 				margin-left: 20%
 				width: 100%

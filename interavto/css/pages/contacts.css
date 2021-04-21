@@ -175,7 +175,9 @@
   align-items: flex-start;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: flex-start
+  justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap
 }
 .contacts-feedback-form .form-group:not(:first-child) {
   margin-top: 16px
@@ -218,9 +220,9 @@
 }
 @media (max-width:767.98px) {
   .contacts-feedback-form .form-group .form-textarea {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 120px;
+    flex: 1 1 120px
   }
 }
 .contacts-feedback-form .form-group .form-control {
@@ -232,6 +234,14 @@
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%
+  }
+}
+.contacts-feedback-form .form-policy {
+  margin-left: 20%
+}
+@media (max-width:767.98px) {
+  .contacts-feedback-form .form-policy {
+    margin-left: 0
   }
 }
 .contacts-feedback-form .form-submit {
