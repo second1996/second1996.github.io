@@ -145,37 +145,37 @@
 								<div class="search-results-categories">
 									<span class="cats-title mb-8">Категории</span>
 									<div class="cats-list">
-										<a href="#" class="cats-item">
+										<a href="page-catalog.html" class="cats-item">
 											<div class="photo img-cover">
 												<img src="./images/collections/1.jpg" alt="">
 											</div>
 											<div class="title">Настенная</div>
 										</a>
-										<a href="#" class="cats-item">
+										<a href="page-catalog.html" class="cats-item">
 											<div class="photo img-cover">
 												<img src="./images/collections/2.jpg" alt="">
 											</div>
 											<div class="title">Напольная</div>
 										</a>
-										<a href="#" class="cats-item">
+										<a href="page-catalog.html" class="cats-item">
 											<div class="photo img-cover">
 												<img src="./images/collections/3.jpg" alt="">
 											</div>
 											<div class="title">Мозаика</div>
 										</a>
-										<a href="#" class="cats-item">
+										<a href="page-catalog.html" class="cats-item">
 											<div class="photo img-cover">
 												<img src="./images/collections/4.jpg" alt="">
 											</div>
 											<div class="title">Бежевая</div>
 										</a>
-										<a href="#" class="cats-item">
+										<a href="page-catalog.html" class="cats-item">
 											<div class="photo img-cover">
 												<img src="./images/collections/5.jpg" alt="">
 											</div>
 											<div class="title">Серая</div>
 										</a>
-										<a href="#" class="cats-item">
+										<a href="page-catalog.html" class="cats-item">
 											<div class="photo img-cover">
 												<img src="./images/collections/6.jpg" alt="">
 											</div>
@@ -186,7 +186,7 @@
 								<div class="search-results-products">
 									<span class="products-title mb-8">Товары</span>
 									<div class="products-list">
-										<a href="#" class="products-item">
+										<a href="page-product.html" class="products-item">
 											<div class="photo zoom-photo img-cover">
 												<img src="./images/products/1.jpg" alt="">
 											</div>
@@ -200,7 +200,7 @@
 											</div>
 											<div class="product-price text-lg">16 950 ₽</div>
 										</a>
-										<a href="#" class="products-item">
+										<a href="page-product.html" class="products-item">
 											<div class="photo zoom-photo img-cover">
 												<img src="./images/products/2.jpg" alt="">
 											</div>
@@ -216,7 +216,7 @@
 										</a>
 									</div><!-- /.products-list -->
 									<div class="mt-16">
-										<a href="#" class="link-arrow">Все результаты <svg class="icon icon-arrow-small"><use xlink:href="./images/symbol-defs.svg#arrow-small"></use></svg></a>
+										<a href="page-search.html" class="link-arrow">Все результаты <svg class="icon icon-arrow-small"><use xlink:href="./images/symbol-defs.svg#arrow-small"></use></svg></a>
 									</div>
 								</div><!-- /.search-results-products -->
 							</div><!-- /.search-results-wrapper -->
@@ -247,7 +247,7 @@
 					</div><!-- /.contacts -->
 
 					<div class="col-auto align-self-center cart">
-						<a href="#" class="cart-link">
+						<a href="page-cart.html" class="cart-link">
 							<div class="cart-icon">
 								<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
 							</div>
@@ -517,7 +517,7 @@
 
 				<!-- Brands alphabet -->
 				<div class="brands">
-					<a href="#" class="brands-all">
+					<a href="page-brands.html" class="brands-all">
 						<span>Все производители</span>
 						<svg class="icon icon-arrow-small"><use xlink:href="./images/symbol-defs.svg#arrow-small"></use></svg>
 					</a>
@@ -639,7 +639,7 @@
 			</a>
 		</div><!-- /.col -->
 		<div class="col">
-			<a href="#" class="shop-categories-item">
+			<a href="#" class="shop-categories-item _is-active">
 				<div class="photo img-cover">
 					<img src="./images/collections/2.jpg" alt="">
 				</div>
@@ -757,11 +757,11 @@
 
 			<!-- Shop tabs -->
 			<div class="shop-tabs">
-				<div class="shop-tabs-item">
-					<a href="page-catalog-collections.html">Коллекции <span>2456</span></a>
-				</div><!-- /.shop-tabs-item -->
 				<div class="shop-tabs-item _current">
-					<a href="page-catalog-products.html">Товары <span>32457</span></a>
+					<a href="page-collections.html">Коллекции <span>2456</span></a>
+				</div><!-- /.shop-tabs-item -->
+				<div class="shop-tabs-item">
+					<a href="page-products.html">Товары <span>32457</span></a>
 				</div><!-- /.shop-tabs-item -->
 			</div><!-- /.shop-tabs -->
 
@@ -785,8 +785,9 @@
 					<span class="shop-filters-price-label">Цена:</span>
 					<div class="shop-filters-price-slider">
 						<div class="shop-filters-price-handle" data-slidermin="500" data-slidermax="28250"></div>
-						<div class="shop-filters-price-range" hidden>
+						<div class="shop-filters-price-range">
 							<input type="number" name="p-price-from" id="filter-price-from" value="3100" class="form-control shop-filters-price-from">
+							<span>—</span>
 							<input type="number" name="p-price-to" id="filter-price-to" value="26500" class="form-control shop-filters-price-to">
 						</div>
 					</div>
@@ -921,19 +922,19 @@
 
 	<!-- Sort -->
 	<div class="shop-filters-sort">
-		<span class="shop-filters-sort-label">Сортировки:</span>
-		<div class="shop-filters-sort-list">
-			<a rel="nofollow" href="?sort=-popular" class="_is-active">Популярные</a>
-			<a rel="nofollow" href="?sort=price">Дешевые</a>
-			<a rel="nofollow" href="?sort=-price">Дорогие</a>
-			<a rel="nofollow" href="?sort=-stock">Скидки</a>
-			<a rel="nofollow" href="?sort=-new">Новинки</a>
-			<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
-			<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
-		</div><!-- /.shop-filters-sort-list -->
-	</div><!-- /.shop-filters-sort -->
+	<span class="shop-filters-sort-label">Сортировки:</span>
+	<div class="shop-filters-sort-list">
+		<a rel="nofollow" href="?sort=-popular" class="_is-active">Популярные</a>
+		<a rel="nofollow" href="?sort=price">Дешевые</a>
+		<a rel="nofollow" href="?sort=-price">Дорогие</a>
+		<a rel="nofollow" href="?sort=-stock">Скидки</a>
+		<a rel="nofollow" href="?sort=-new">Новинки</a>
+		<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
+		<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
+	</div><!-- /.shop-filters-sort-list -->
+</div><!-- /.shop-filters-sort -->
 
-	<!-- Mobile filters  -->
+	<!-- Mobile filters -->
 	<div class="shop-filters-mobile">
 		<div class="sort dropdown">
 			<button type="button" class="sort-btn btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -960,343 +961,355 @@
 
 </div><!-- /.shop-filters -->
 
-			<!-- Products list -->
-			<div class="row row-items-24 row-cols-2 row-cols-md-3 row-cols-lg-4">
+			<!-- Collections list -->
+			<div class="row row-items-48 row-cols-1 row-cols-md-2 row-cols-xl-3">
 				<div class="col">
-					<div class="card card-product">
+					<div class="card card-collection">
 	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/2.jpg" alt="">
+	<div class="card-photo zoom-photo img-cover">
+		<div class="card-photo-btn">
+			<a href="./images/collections/1.jpg" data-fancybox="collection-gallery-1">
+				<svg class="icon icon-eye"><use xlink:href="./images/symbol-defs.svg#eye"></use></svg>
+				<span>Образцы в магазине</span>
+			</a>
+			<a href="./images/collections/2.jpg" data-fancybox="collection-gallery-1"></a>
+		</div>
+		<a href="page-collection.html">
+			<img src="./images/collections/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-collection.html" class="permalink">CHARME ADVANCE FLOOR PROJECT</a>
 		<div class="product-country">
 			<span>Italon,</span>
-			<img src="./images/flags/228-russia.svg" alt="Россия">
-			<span>Россия</span>
+			<img src="./images/flags/011-italy.svg" alt="Италия">
+			<span>Италия</span>
 		</div>
-		<div class="product-price">
-			<ins>6300 <sup>₽/шт</sup></ins>
+		<div class="product-price">от <span>5300</span> ₽</div>
+	</div>
+	<div class="card-details">
+		<div class="exemplars">
+			<div class="exemplars-item">
+				<span class="exemplars-title">Керамогранит</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/8.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/8.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-item">
+				<span class="exemplars-title">Мозаика</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-more">
+				<button class="btn btn-more btn-more--show">
+					<span>Показать ещё</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+				<button class="btn btn-more btn-more--hide">
+					<span>Скрыть</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+			</div>
+		</div>
+		<div class="attributes">
+			<ul>
+				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
+				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
+				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
+				<li><div class="attr">Геометрическая форма:</div> <div class="value">Квадрат, Прямоугольник</div></li>
+				<li><div class="attr">Стиль:</div> <div class="value">Лофт, Современный</div></li>
+				<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			</ul>
 		</div>
 	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
+</div>
 				</div><!-- /.col -->
 				<div class="col">
-					<div class="card card-product">
+					<div class="card card-collection">
 	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/1.jpg" alt="">
+	<div class="card-photo zoom-photo img-cover">
+		<div class="card-photo-btn">
+			<a href="./images/collections/3.jpg" data-fancybox="collection-gallery-2">
+				<svg class="icon icon-eye"><use xlink:href="./images/symbol-defs.svg#eye"></use></svg>
+				<span>Образцы в магазине</span>
+			</a>
+			<a href="./images/collections/4.jpg" data-fancybox="collection-gallery-2"></a>
+		</div>
+		<a href="page-collection.html">
+			<img src="./images/collections/2.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
-		<div class="product-country">
-			<span>Ibica,</span>
-			<img src="./images/flags/066-germany.svg" alt="Германия">
-			<span>Германия</span>
-		</div>
-		<div class="product-price">
-			<del>3300</del>
-			<ins>4300 <sup>₽/шт</sup></ins>
-		</div>
-	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
-				</div><!-- /.col -->
-				<div class="col">
-					<div class="card card-product">
-	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/2.jpg" alt="">
-		</a>
-	</div>
-	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
-		<div class="product-country">
-			<span>Italon,</span>
-			<img src="./images/flags/228-russia.svg" alt="Россия">
-			<span>Россия</span>
-		</div>
-		<div class="product-price">
-			<ins>6300 <sup>₽/шт</sup></ins>
-		</div>
-	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
-				</div><!-- /.col -->
-				<div class="col">
-					<div class="card card-product">
-	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/1.jpg" alt="">
-		</a>
-	</div>
-	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
-		<div class="product-country">
-			<span>Ibica,</span>
-			<img src="./images/flags/066-germany.svg" alt="Германия">
-			<span>Германия</span>
-		</div>
-		<div class="product-price">
-			<del>3300</del>
-			<ins>4300 <sup>₽/шт</sup></ins>
-		</div>
-	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
-				</div><!-- /.col -->
-				<div class="col">
-					<div class="card card-product">
-	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/2.jpg" alt="">
-		</a>
-	</div>
-	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-collection.html" class="permalink">CHARME ADVANCE FLOOR PROJECT</a>
 		<div class="product-country">
 			<span>Italon,</span>
-			<img src="./images/flags/228-russia.svg" alt="Россия">
-			<span>Россия</span>
+			<img src="./images/flags/011-italy.svg" alt="Италия">
+			<span>Италия</span>
 		</div>
-		<div class="product-price">
-			<ins>6300 <sup>₽/шт</sup></ins>
+		<div class="product-price">от <span>10200</span> ₽</div>
+	</div>
+	<div class="card-details">
+		<div class="exemplars">
+			<div class="exemplars-item">
+				<span class="exemplars-title">Декор</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/8.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-item">
+				<span class="exemplars-title">Мозаика</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-item">
+				<span class="exemplars-title">Бордюр</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-more">
+				<button class="btn btn-more btn-more--show">
+					<span>Показать ещё</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+				<button class="btn btn-more btn-more--hide">
+					<span>Скрыть</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+			</div>
+		</div>
+		<div class="attributes">
+			<ul>
+				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
+				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
+				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
+				<li><div class="attr">Геометрическая форма:</div> <div class="value">Квадрат, Прямоугольник</div></li>
+				<li><div class="attr">Стиль:</div> <div class="value">Лофт, Современный</div></li>
+				<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			</ul>
 		</div>
 	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
+</div>
 				</div><!-- /.col -->
 				<div class="col">
-					<div class="card card-product">
+					<div class="card card-collection">
 	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/1.jpg" alt="">
+	<div class="card-photo zoom-photo img-cover">
+		<div class="card-photo-btn">
+			<a href="./images/collections/1.jpg" data-fancybox="collection-gallery-1">
+				<svg class="icon icon-eye"><use xlink:href="./images/symbol-defs.svg#eye"></use></svg>
+				<span>Образцы в магазине</span>
+			</a>
+			<a href="./images/collections/2.jpg" data-fancybox="collection-gallery-1"></a>
+		</div>
+		<a href="page-collection.html">
+			<img src="./images/collections/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
-		<div class="product-country">
-			<span>Ibica,</span>
-			<img src="./images/flags/066-germany.svg" alt="Германия">
-			<span>Германия</span>
-		</div>
-		<div class="product-price">
-			<del>3300</del>
-			<ins>4300 <sup>₽/шт</sup></ins>
-		</div>
-	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
-				</div><!-- /.col -->
-				<div class="col">
-					<div class="card card-product">
-	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/2.jpg" alt="">
-		</a>
-	</div>
-	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-collection.html" class="permalink">CHARME ADVANCE FLOOR PROJECT</a>
 		<div class="product-country">
 			<span>Italon,</span>
-			<img src="./images/flags/228-russia.svg" alt="Россия">
-			<span>Россия</span>
+			<img src="./images/flags/011-italy.svg" alt="Италия">
+			<span>Италия</span>
 		</div>
-		<div class="product-price">
-			<ins>6300 <sup>₽/шт</sup></ins>
+		<div class="product-price">от <span>5300</span> ₽</div>
+	</div>
+	<div class="card-details">
+		<div class="exemplars">
+			<div class="exemplars-item">
+				<span class="exemplars-title">Керамогранит</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/8.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/8.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-item">
+				<span class="exemplars-title">Мозаика</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-more">
+				<button class="btn btn-more btn-more--show">
+					<span>Показать ещё</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+				<button class="btn btn-more btn-more--hide">
+					<span>Скрыть</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+			</div>
+		</div>
+		<div class="attributes">
+			<ul>
+				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
+				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
+				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
+				<li><div class="attr">Геометрическая форма:</div> <div class="value">Квадрат, Прямоугольник</div></li>
+				<li><div class="attr">Стиль:</div> <div class="value">Лофт, Современный</div></li>
+				<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			</ul>
 		</div>
 	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
+</div>
 				</div><!-- /.col -->
 				<div class="col">
-					<div class="card card-product">
+					<div class="card card-collection">
 	<div class="card-shadow"></div>
-	<div class="card-photo zoom-photo">
-		<a href="#">
-			<img src="./images/products/1.jpg" alt="">
+	<div class="card-photo zoom-photo img-cover">
+		<div class="card-photo-btn">
+			<a href="./images/collections/3.jpg" data-fancybox="collection-gallery-2">
+				<svg class="icon icon-eye"><use xlink:href="./images/symbol-defs.svg#eye"></use></svg>
+				<span>Образцы в магазине</span>
+			</a>
+			<a href="./images/collections/4.jpg" data-fancybox="collection-gallery-2"></a>
+		</div>
+		<a href="page-collection.html">
+			<img src="./images/collections/2.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="#" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
+		<a href="page-collection.html" class="permalink">CHARME ADVANCE FLOOR PROJECT</a>
 		<div class="product-country">
-			<span>Ibica,</span>
-			<img src="./images/flags/066-germany.svg" alt="Германия">
-			<span>Германия</span>
+			<span>Italon,</span>
+			<img src="./images/flags/011-italy.svg" alt="Италия">
+			<span>Италия</span>
 		</div>
-		<div class="product-price">
-			<del>3300</del>
-			<ins>4300 <sup>₽/шт</sup></ins>
+		<div class="product-price">от <span>10200</span> ₽</div>
+	</div>
+	<div class="card-details">
+		<div class="exemplars">
+			<div class="exemplars-item">
+				<span class="exemplars-title">Декор</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/4.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/8.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-item">
+				<span class="exemplars-title">Мозаика</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/7.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-item">
+				<span class="exemplars-title">Бордюр</span>
+				<ul class="exemplars-list">
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/2.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/5.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/6.jpg" alt=""></li>
+					<li><img src="./images/collections/exemplars/1.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="exemplars-more">
+				<button class="btn btn-more btn-more--show">
+					<span>Показать ещё</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+				<button class="btn btn-more btn-more--hide">
+					<span>Скрыть</span>
+					<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+				</button>
+			</div>
+		</div>
+		<div class="attributes">
+			<ul>
+				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
+				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
+				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
+				<li><div class="attr">Геометрическая форма:</div> <div class="value">Квадрат, Прямоугольник</div></li>
+				<li><div class="attr">Стиль:</div> <div class="value">Лофт, Современный</div></li>
+				<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			</ul>
 		</div>
 	</div>
-	<div class="card-buttons">
-		<form class="card-buttons-purchase">
-			<button type="submit" class="btn btn-primary btn-purchase _added">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="/images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
-		</form>
-	</div>
-	<div class="card-attributes">
-		<ul>
-			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
-			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
-			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
-			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
-			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
-		</ul>
-	</div>
-</div><!-- /.card-product -->
+</div>
 				</div><!-- /.col -->
 			</div><!-- /.row -->
 
@@ -1346,7 +1359,7 @@
 </div><!-- /.pagination -->
 
 			<!-- Popular rubrics -->
-			<section class="mt-40 show-more">
+			<section class="mt-60 show-more">
 	<h2 class="mb-32 text-xl">Популярные подборки</h2>
 	<div class="show-more-list row row-items-16 row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-xxl-6">
 		<div class="col">
@@ -1721,7 +1734,7 @@
 		<div class="mmenu-main">
 
 			<div class="cart">
-				<a href="#" class="cart-link">
+				<a href="page-cart.html" class="cart-link">
 					<div class="cart-icon">
 						<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
 					</div>
