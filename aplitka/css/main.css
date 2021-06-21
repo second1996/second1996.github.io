@@ -4686,9 +4686,6 @@ article ol > li::before {
   -ms-transform-origin: left bottom;
   transform-origin: left bottom
 }
-.card-product .card-meta .permalink {
-  overflow: hidden
-}
 .card-product .card-meta .product-country {
   margin-top: 16px
 }
@@ -7359,8 +7356,27 @@ table {
     margin-left: 6px;
     font-size: 12px
   }
+  .card-collection .card-details .attributes > ul > li .attr {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    word-break: break-all
+  }
+  .card-collection .card-details .attributes > ul > li .value {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    word-break: break-all
+  }
   .card-product .card-shadow {
     display: none
+  }
+  .card-product .card-photo img {
+    -o-object-position: center bottom;
+    object-position: center bottom;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom
   }
   .card-product .card-attributes {
     display: none
