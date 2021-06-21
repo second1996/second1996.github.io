@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Каталог</title>
+	<title>Страница колекции</title>
 	<meta name="description" content="⭐️⭐️⭐️⭐️⭐️ Большой Ассортимент Недорогой Керамической Плитки В Москве В Интернет Магазине Аплитка. ✔ Заказать По ☎ +7 (495) 225-50-96. ☺ Бережная Доставка! Услуги Резки!">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -84,7 +84,7 @@
 					</div><!-- /.burger -->
 
 					<div class="col-auto align-self-center phone">
-						<a href="#callbackModal" data-toggle="modal" class="phone-btn" role="button">
+						<a href="tel:+79262255096" title="Позвонить" class="phone-btn" role="button">
 							<svg class="icon icon-phone"><use xlink:href="./images/symbol-defs.svg#phone"></use></svg>
 						</a>
 					</div><!-- /.phone -->
@@ -741,17 +741,9 @@
 							<div class="price-value"><span>4500</span> ₽</div>
 						</div>
 
-						<!-- Purchase form -->
-						<div class="purchase">
-							<form class="purchase-form form">
-								<button type="submit" class="btn btn-secondary btn-purchase">
-									<div class="before-added">Заказать</div>
-									<div class="after-added">
-										<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
-										<span>Товар добавлен в <a href="#">корзину</a></span>
-									</div>
-								</button>
-							</form>
+						<!-- View products -->
+						<div class="view-products">
+							<a href="#collection-products" data-anchor class="view-products-btn btn btn-secondary">Перейти к товарам</a>
 						</div>
 
 						<!-- Quick order -->
@@ -859,7 +851,7 @@
 			</section><!-- /.collection-content -->
 
 			<!-- Section: Collection products -->
-			<section class="collection-products mt-60">
+			<section class="collection-products mt-60" id="collection-products">
 				<h2 class="mb-32 text-xl">Товары из коллекции</h2>
 
 				<!-- Tabs -->
@@ -879,24 +871,27 @@
 
 					<!-- Tab #1 -->
 					<div id="products-tab-1" class="tab-pane fade show active" role="tabpanel">
-						<div class="collection-products-list row row-items-24 row-cols-md-3 row-cols-lg-4">
+						<div class="collection-products-list row row-items-24 row-cols-2 row-cols-lg-4">
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
 			<img src="./images/products/3.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
 		<div class="product-country">
 			<span>Italon,</span>
 			<img src="./images/flags/228-russia.svg" alt="Россия">
 			<span>Россия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -923,23 +918,26 @@
 </div><!-- /.card-product -->
 							</div><!-- /.col -->
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
 			<img src="./images/products/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
 		<div class="product-country">
 			<span>Ibica,</span>
 			<img src="./images/flags/066-germany.svg" alt="Германия">
 			<span>Германия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<del>3300</del>
 			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -965,22 +963,25 @@
 </div><!-- /.card-product -->
 							</div><!-- /.col -->
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
 			<img src="./images/products/3.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
 		<div class="product-country">
 			<span>Italon,</span>
 			<img src="./images/flags/228-russia.svg" alt="Россия">
 			<span>Россия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1007,23 +1008,26 @@
 </div><!-- /.card-product -->
 							</div><!-- /.col -->
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
 			<img src="./images/products/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
 		<div class="product-country">
 			<span>Ibica,</span>
 			<img src="./images/flags/066-germany.svg" alt="Германия">
 			<span>Германия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<del>3300</del>
 			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1051,29 +1055,32 @@
 							<div class="col-12">
 								<a href="#" class="shop-promo">
 									<picture>
-										<source media="(min-width: 576px)" srcset="./images/promo-banner.png" />
+										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
 										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
 										<img src="./images/promo-banner.png" alt="">
 									</picture>
 								</a>
 							</div>
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
 			<img src="./images/products/3.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
 		<div class="product-country">
 			<span>Italon,</span>
 			<img src="./images/flags/228-russia.svg" alt="Россия">
 			<span>Россия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1100,23 +1107,116 @@
 </div><!-- /.card-product -->
 							</div><!-- /.col -->
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
 			<img src="./images/products/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
 		<div class="product-country">
 			<span>Ibica,</span>
 			<img src="./images/flags/066-germany.svg" alt="Германия">
 			<span>Германия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<del>3300</del>
 			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase _added">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
+			<img src="./images/products/3.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
+		<div class="product-country">
+			<span>Italon,</span>
+			<img src="./images/flags/228-russia.svg" alt="Россия">
+			<span>Россия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
+			<img src="./images/products/1.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
+		<div class="product-country">
+			<span>Ibica,</span>
+			<img src="./images/flags/066-germany.svg" alt="Германия">
+			<span>Германия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<del>3300</del>
+			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1146,25 +1246,28 @@
 
 					<!-- Tab #2 -->
 					<div id="products-tab-2" class="tab-pane fade" role="tabpanel">
-						<div class="collection-products-list row row-items-24 row-cols-2 row-cols-md-3 row-cols-lg-4">
+						<div class="collection-products-list row row-items-24 row-cols-2 row-cols-lg-4">
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
 			<img src="./images/products/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
 		<div class="product-country">
 			<span>Ibica,</span>
 			<img src="./images/flags/066-germany.svg" alt="Германия">
 			<span>Германия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<del>3300</del>
 			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1190,22 +1293,25 @@
 </div><!-- /.card-product -->
 							</div><!-- /.col -->
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
 			<img src="./images/products/3.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
 		<div class="product-country">
 			<span>Italon,</span>
 			<img src="./images/flags/228-russia.svg" alt="Россия">
 			<span>Россия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1232,23 +1338,26 @@
 </div><!-- /.card-product -->
 							</div><!-- /.col -->
 							<div class="col">
-								<div class="card card-product">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
 			<img src="./images/products/1.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45х45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
 		<div class="product-country">
 			<span>Ibica,</span>
 			<img src="./images/flags/066-germany.svg" alt="Германия">
 			<span>Германия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<del>3300</del>
 			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
@@ -1269,6 +1378,240 @@
 			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
 			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
 			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
+			<img src="./images/products/3.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
+		<div class="product-country">
+			<span>Italon,</span>
+			<img src="./images/flags/228-russia.svg" alt="Россия">
+			<span>Россия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col-12">
+								<a href="#" class="shop-promo">
+									<picture>
+										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
+										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
+										<img src="./images/promo-banner.png" alt="">
+									</picture>
+								</a>
+							</div>
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
+			<img src="./images/products/1.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
+		<div class="product-country">
+			<span>Ibica,</span>
+			<img src="./images/flags/066-germany.svg" alt="Германия">
+			<span>Германия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<del>3300</del>
+			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase _added">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
+			<img src="./images/products/3.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
+		<div class="product-country">
+			<span>Italon,</span>
+			<img src="./images/flags/228-russia.svg" alt="Россия">
+			<span>Россия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/1.jpg">
+			<img src="./images/products/1.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45х45</a>
+		<div class="product-country">
+			<span>Ibica,</span>
+			<img src="./images/flags/066-germany.svg" alt="Германия">
+			<span>Германия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<del>3300</del>
+			<ins>4300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase _added">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+		</ul>
+	</div>
+</div><!-- /.card-product -->
+							</div><!-- /.col -->
+							<div class="col">
+								<div class="card card-product" itemscope itemtype="http://schema.org/Product">
+	<div class="card-shadow"></div>
+	<div class="card-photo zoom-photo">
+		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
+			<img src="./images/products/3.jpg" alt="">
+		</a>
+	</div>
+	<div class="card-meta">
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
+		<div class="product-country">
+			<span>Italon,</span>
+			<img src="./images/flags/228-russia.svg" alt="Россия">
+			<span>Россия</span>
+		</div>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
+		</div>
+	</div>
+	<div class="card-buttons">
+		<form class="card-buttons-purchase">
+			<button type="submit" class="btn btn-primary btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+	</div>
+	<div class="card-attributes">
+		<ul>
+			<li><div class="attr">Поверхность:</div> <div class="value">Матовая</div></li>
+			<li><div class="attr">Размер, см:</div> <div class="value">60 × 60</div></li>
+			<li><div class="attr">Упаковка:</div> <div class="value">10 шт</div></li>
+			<li><div class="attr">Стиль:</div> <div class="value">Лофт</div></li>
+			<li><div class="attr">Форма:</div> <div class="value">Квадрат</div></li>
+			<li><div class="attr">Материал:</div> <div class="value">Керамогранит</div></li>
 		</ul>
 	</div>
 </div><!-- /.card-product -->
