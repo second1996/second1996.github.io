@@ -194,6 +194,17 @@ $(document).ready(function() {
 		$('.mmenu').removeClass('_is-opened')
 	})
 
+	// Toggle Submenu
+	$('.mmenu .catalog-item > span, .mmenu .brands-item > span').on('click', function() {
+		$(this).siblings('.submenu').addClass('_is-opened')
+	})
+
+	// Close Submenu
+	$('.mmenu .catalog-item .submenu > .submenu-back-btn, .mmenu .brands-item .submenu > .submenu-back-btn').on('click', function() {
+		$(this).parent().removeClass('_is-opened')
+	})
+
+
 
 	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
@@ -238,7 +249,7 @@ $(document).ready(function() {
 			if (!$('.popover:hover').length) {
 				$(_this).popover('hide')
 			}
-		}, 300)
+		}, 100)
 	})
 
 
@@ -325,31 +336,46 @@ $(document).ready(function() {
 		// Collection card
 		$('.exemplars').each(function() {
 			const _this = $(this)
-			const list = _this.find('.exemplars-item')
+			const clonedWrapper = _this.find('.exemplars-cloned')
+			const item = _this.find('.exemplars-item')
+			const items = _this.find('.exemplars-list > li').clone()
 			const btnShow = _this.find('.btn-more--show')
 			const btnHide = _this.find('.btn-more--hide')
-	
-			if (list.length > 1) {
+
+			clonedWrapper.find('ul').empty()
+
+			items.each(function(index, item) {
+				if (index <= 21) {
+					clonedWrapper.find('ul').append(item)
+				}
+			})
+
+			if (items.length > 22) {
 				btnShow.addClass('_is-visible')
+				btnShow.slideDown(0)
 				btnShow.on('click', function() {
+					clonedWrapper.addClass('d-none')
 					_this.addClass('_is-toggled')
 					$(this).addClass('_is-toggled')
-					list.each(function (index, el) {
+					item.each(function (index, el) {
 						if ($(el).is(':hidden')) {
 							$(el).addClass('hidden')
-							$(el).slideDown(200)
+							$(el).slideDown(250)
 						}
 					})
 				})
 				btnHide.on('click', function() {
+					clonedWrapper.removeClass('d-none')
 					_this.removeClass('_is-toggled')
 					btnShow.removeClass('_is-toggled')
-					list.each(function (index, el) {
+					item.each(function (index, el) {
 						if ($(el).hasClass('hidden')) {
-							$(el).slideUp(200)
+							$(el).slideUp(0)
 						}
 					})
 				})
+			} else {
+				btnShow.slideUp(0)
 			}
 		})
 	}

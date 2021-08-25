@@ -6,7 +6,7 @@
 	<meta name="description" content="⭐️⭐️⭐️⭐️⭐️ Большой Ассортимент Недорогой Керамической Плитки В Москве В Интернет Магазине Аплитка. ✔ Заказать По ☎ +7 (495) 225-50-96. ☺ Бережная Доставка! Услуги Резки!">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-	<link rel="icon" href="./images/favicon.png">
+	<link rel="icon" href="./images/favicon.svg">
 
 	<link rel="stylesheet" href="./css/vendors/bootstrap.css">
 	<link rel="stylesheet" href="./css/main.css">
@@ -91,7 +91,7 @@
 
 					<div class="col col-lg-auto align-self-center logotype">
 						<a href="index.html" rel="home">
-							<img src="./images/logotype.png" alt="Интернет-магазин Aplitka">
+							<img src="./images/logo.svg" alt="Интернет-магазин Aplitka">
 						</a>
 					</div><!-- /.logotype -->
 
@@ -247,7 +247,7 @@
 					</div><!-- /.contacts -->
 
 					<div class="col-auto align-self-center cart">
-						<a href="page-cart.html" class="cart-link">
+						<a href="page-cart.html" class="cart-link" data-quantity="5">
 							<div class="cart-icon">
 								<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
 							</div>
@@ -802,7 +802,7 @@
 					<div class="dropdown-menu">
 						<div class="shop-filters-list">
 							<div class="form-checkbox form-checkbox-sm">
-								<input type="checkbox" id="s-filter-1">
+								<input type="checkbox" id="s-filter-1" checked>
 								<label for="s-filter-1" class="form-checkbox-label">Настенная</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
@@ -810,11 +810,11 @@
 								<label for="s-filter-2" class="form-checkbox-label">Напольная</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
-								<input type="checkbox" id="s-filter-3">
+								<input type="checkbox" id="s-filter-3" checked>
 								<label for="s-filter-3" class="form-checkbox-label">Мозаика</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
-								<input type="checkbox" id="s-filter-4">
+								<input type="checkbox" id="s-filter-4" checked>
 								<label for="s-filter-4" class="form-checkbox-label">Бежевая</label>
 							</div>
 						</div><!-- /.shop-filters-list -->
@@ -824,27 +824,44 @@
 			<div class="col">
 				<div class="shop-filters-item dropdown">
 					<button type="button" class="btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="shop-filters-name"><span class="key">Тип помещения</span> <span class="values"></span></span>
+						<span class="shop-filters-name"><span class="key">Размер</span> <span class="values"></span></span>
 						<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
 					</button>
 					<div class="dropdown-menu">
 						<div class="shop-filters-list">
 							<div class="form-checkbox form-checkbox-sm">
 								<input type="checkbox" id="s-filter-5">
-								<label for="s-filter-5" class="form-checkbox-label">Настенная</label>
+								<label for="s-filter-5" class="form-checkbox-label">10х10</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
 								<input type="checkbox" id="s-filter-6">
-								<label for="s-filter-6" class="form-checkbox-label">Напольная</label>
+								<label for="s-filter-6" class="form-checkbox-label">15х15</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
 								<input type="checkbox" id="s-filter-7">
-								<label for="s-filter-7" class="form-checkbox-label">Мозаика</label>
+								<label for="s-filter-7" class="form-checkbox-label">20х20</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
 								<input type="checkbox" id="s-filter-8">
-								<label for="s-filter-8" class="form-checkbox-label">Бежевая</label>
+								<label for="s-filter-8" class="form-checkbox-label">30х30</label>
 							</div>
+							<div class="form-checkbox form-checkbox-sm">
+								<input type="checkbox" id="s-filter-9">
+								<label for="s-filter-9" class="form-checkbox-label">40х40</label>
+							</div>
+							<div class="form-checkbox form-checkbox-sm">
+								<input type="checkbox" id="s-filter-10">
+								<label for="s-filter-10" class="form-checkbox-label">45х45</label>
+							</div>
+							<div class="form-checkbox form-checkbox-sm">
+								<input type="checkbox" id="s-filter-11">
+								<label for="s-filter-11" class="form-checkbox-label">50х50</label>
+							</div>
+							<div class="form-checkbox form-checkbox-sm">
+								<input type="checkbox" id="s-filter-12">
+								<label for="s-filter-12" class="form-checkbox-label">60х60</label>
+							</div>
+						
 						</div><!-- /.shop-filters-list -->
 					</div><!-- /.dropdown-menu -->
 				</div><!-- /.shop-filters-item-->
@@ -858,12 +875,12 @@
 					<div class="dropdown-menu">
 						<div class="shop-filters-list">
 							<div class="form-checkbox form-checkbox-sm">
-								<input type="checkbox" id="s-filter-9">
-								<label for="s-filter-9" class="form-checkbox-label">Серая</label>
+								<input type="checkbox" id="s-filter-13">
+								<label for="s-filter-14" class="form-checkbox-label">Серая</label>
 							</div>
 							<div class="form-checkbox form-checkbox-sm">
 								<input type="checkbox" id="s-filter-10">
-								<label for="s-filter-10" class="form-checkbox-label">Черная</label>
+								<label for="s-filter-14" class="form-checkbox-label">Черная</label>
 							</div>
 						</div><!-- /.shop-filters-list -->
 					</div><!-- /.dropdown-menu -->
@@ -996,6 +1013,9 @@
 	</div>
 	<div class="card-details">
 		<div class="exemplars">
+			<div class="exemplars-cloned">
+				<ul class="exemplars-cloned-list"></ul>
+			</div>
 			<div class="exemplars-item">
 				<span class="exemplars-title">Керамогранит</span>
 				<ul class="exemplars-list">
@@ -1043,7 +1063,7 @@
 			</div>
 		</div>
 		<div class="attributes">
-			<ul>
+			<ul class="attributes-list">
 				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
 				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
 				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
@@ -1088,6 +1108,9 @@
 	</div>
 	<div class="card-details">
 		<div class="exemplars">
+			<div class="exemplars-cloned">
+				<ul class="exemplars-cloned-list"></ul>
+			</div>
 			<div class="exemplars-item">
 				<span class="exemplars-title">Декор</span>
 				<ul class="exemplars-list">
@@ -1140,7 +1163,7 @@
 			</div>
 		</div>
 		<div class="attributes">
-			<ul>
+			<ul class="attributes-list">
 				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
 				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
 				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
@@ -1185,6 +1208,9 @@
 	</div>
 	<div class="card-details">
 		<div class="exemplars">
+			<div class="exemplars-cloned">
+				<ul class="exemplars-cloned-list"></ul>
+			</div>
 			<div class="exemplars-item">
 				<span class="exemplars-title">Керамогранит</span>
 				<ul class="exemplars-list">
@@ -1232,7 +1258,7 @@
 			</div>
 		</div>
 		<div class="attributes">
-			<ul>
+			<ul class="attributes-list">
 				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
 				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
 				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
@@ -1277,6 +1303,9 @@
 	</div>
 	<div class="card-details">
 		<div class="exemplars">
+			<div class="exemplars-cloned">
+				<ul class="exemplars-cloned-list"></ul>
+			</div>
 			<div class="exemplars-item">
 				<span class="exemplars-title">Декор</span>
 				<ul class="exemplars-list">
@@ -1329,7 +1358,7 @@
 			</div>
 		</div>
 		<div class="attributes">
-			<ul>
+			<ul class="attributes-list">
 				<li><div class="attr">Поверхность:</div> <div class="value">Матовая, Глянцевая</div></li>
 				<li><div class="attr">Размер, см:</div> <div class="value">60 × 60, 80 × 60</div></li>
 				<li><div class="attr">Материал:</div> <div class="value">Керамика, Керамогранит</div></li>
@@ -1630,7 +1659,7 @@
 						<div class="footer-intro">
 							<div class="logo">
 								<a href="index.html" rel="home">
-									<img src="./images/logotype.png" alt="Интернет-магазин Aplitka">
+									<img src="./images/logo.svg" alt="Интернет-магазин Aplitka">
 								</a>
 							</div><!-- /.logo -->
 							<div class="stores">
@@ -1777,50 +1806,154 @@
 
 			<div class="catalog">
 				<ul class="catalog-list" role="navigation">
-					<li><a href="#">Плитка</a></li>
-					<li><a href="#">Плитка для ванной</a></li>
-					<li><a href="#">Плитка для кухни</a></li>
-					<li><a href="#">Керамогранит</a></li>
-					<li><a href="#">Мозаика</a></li>
-					<li><a href="#">Ступени</a></li>
-					<li><a href="#">Натуральный камень</a></li>
-					<li><a href="#">Керамическая плитка</a></li>
-					<li><a href="#">Сантехника</a></li>
+					<li class="catalog-item">
+						<span><a href="#">Плитка</a> <svg class="icon icon-slider-arrow"><use xlink:href="./images/symbol-defs.svg#slider-arrow"></use></svg></span>
+						<div class="submenu">
+							<button class="submenu-back-btn btn btn-primary">
+								<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
+								<span>Назад</span>
+							</button>
+							<div class="submenu-item">
+								<div class="submenu-title">Тип помещения</div>
+								<ul class="submenu-list">
+									<li><a href="#">Для ванной</a></li>
+									<li><a href="#">Для кухни</a></li>
+									<li><a href="#">Для туалет</a></li>
+									<li><a href="#">Для фартука</a></li>
+									<li><a href="#">Для бассейна</a></li>
+									<li><a href="#">Для ступеней</a></li>
+								</ul>
+							</div><!-- /.submenu-item-->
+							<div class="submenu-item">
+								<div class="submenu-title">Цвет</div>
+								<ul class="submenu-list">
+									<li><a href="#">Белый</a></li>
+									<li><a href="#">Бежевый</a></li>
+									<li><a href="#">Голубой</a></li>
+									<li><a href="#">Зеленый</a></li>
+									<li><a href="#">Оранжевый</a></li>
+									<li><a href="#">Коричневый</a></li>
+									<li><a href="#">Синий</a></li>
+									<li><a href="#">Красный</a></li>
+								</ul>
+							</div><!-- /.submenu-item-->
+						</div><!-- /.submenu-->
+					</li>
+					<li class="catalog-item">
+						<span><a href="#">Плитка для ванной</a> <svg class="icon icon-slider-arrow"><use xlink:href="./images/symbol-defs.svg#slider-arrow"></use></svg></span>
+						<div class="submenu">
+							<button class="submenu-back-btn btn btn-primary">
+								<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
+								<span>Назад</span>
+							</button>
+							<div class="submenu-item">
+								<div class="submenu-title">Размер</div>
+								<ul class="submenu-list">
+									<li><a href="#">10х10</a></li>
+									<li><a href="#">15х15</a></li>
+									<li><a href="#">20х20</a></li>
+									<li><a href="#">30х30</a></li>
+									<li><a href="#">40х40</a></li>
+									<li><a href="#">45х45</a></li>
+								</ul>
+							</div><!-- /.submenu-item-->
+							<div class="submenu-item">
+								<div class="submenu-title">Цвет</div>
+								<ul class="submenu-list">
+									<li><a href="#">Зеленый</a></li>
+									<li><a href="#">Оранжевый</a></li>
+									<li><a href="#">Коричневый</a></li>
+									<li><a href="#">Синий</a></li>
+									<li><a href="#">Красный</a></li>
+								</ul>
+							</div><!-- /.submenu-item-->
+						</div><!-- /.submenu-->
+					</li>
+					<li class="catalog-item"><a href="#">Натуральный камень</a></li>
+					<li class="catalog-item"><a href="#">Керамическая плитка</a></li>
+					<li class="catalog-item"><a href="#">Сантехника</a></li>
 				</ul>
 			</div><!-- /.catalog-->
 
 			<div class="brands">
 				<div class="brands-title">Бренды:</div>
-				<div class="brands-list">
-					<ul>
-						<li><a href="#">0-9</a></li>
-						<li><a href="#">A</a></li>
-						<li><a href="#">B</a></li>
-						<li><a href="#">C</a></li>
-						<li><a href="#">D</a></li>
-						<li><a href="#">E</a></li>
-						<li><a href="#">F</a></li>
-						<li><a href="#">G</a></li>
-						<li><a href="#">H</a></li>
-						<li><a href="#">I</a></li>
-						<li><a href="#">J</a></li>
-						<li><a href="#">K</a></li>
-						<li><a href="#">L</a></li>
-						<li><a href="#">M</a></li>
-						<li><a href="#">N</a></li>
-						<li><a href="#">O</a></li>
-						<li><a href="#">P</a></li>
-						<li><a href="#">Q</a></li>
-						<li><a href="#">R</a></li>
-						<li><a href="#">S</a></li>
-						<li><a href="#">T</a></li>
-						<li><a href="#">U</a></li>
-						<li><a href="#">V</a></li>
-						<li><a href="#">W</a></li>
-						<li><a href="#">X</a></li>
-						<li><a href="#">Y</a></li>
-						<li><a href="#">Z</a></li>
-						<li><a href="#">А-Я</a></li>
+				<div class="brands-wrapper">
+					<div class="brands-shadow"></div>
+					<ul class="brands-list">
+						<li class="brands-item">
+							<span>0-9</span>
+							<div class="submenu">
+								<button class="submenu-back-btn btn btn-primary">
+									<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
+									<span>Назад</span>
+								</button>
+								<div class="submenu-item">
+									<div class="submenu-title">0-9</div>
+									<ul class="submenu-list">
+										<li><a href="#">ABK</a></li>
+										<li><a href="#">ABSOLUT CERAMICA</a></li>
+										<li><a href="#">ADEX</a></li>
+										<li><a href="#">ALELUIA CERAMICAS</a></li>
+										<li><a href="#">ALMERA CERAMICA</a></li>
+										<li><a href="#">ATLAS CONCORDE RUSSIA</a></li>
+										<li><a href="#">Eurotile Ceramica RUSSIA</a></li>
+										<li><a href="#">Mykonos Ceramica</a></li>
+										<li><a href="#">Kutahya Seramik</a></li>
+										<li><a href="#">LOVE CERAMIC TILES</a></li>
+									</ul>
+								</div><!-- /.submenu-item-->
+							</div><!-- /.submenu-->
+						</li>
+						<li class="brands-item">
+							<span>A</span>
+							<div class="submenu">
+								<button class="submenu-back-btn btn btn-primary">
+									<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
+									<span>Назад</span>
+								</button>
+								<div class="submenu-item">
+									<div class="submenu-title">A</div>
+									<ul class="submenu-list">
+										<li><a href="#">ABK</a></li>
+										<li><a href="#">ABSOLUT CERAMICA</a></li>
+										<li><a href="#">ADEX</a></li>
+										<li><a href="#">ALELUIA CERAMICAS</a></li>
+										<li><a href="#">ALMERA CERAMICA</a></li>
+										<li><a href="#">ATLAS CONCORDE RUSSIA</a></li>
+										<li><a href="#">Eurotile Ceramica RUSSIA</a></li>
+										<li><a href="#">Mykonos Ceramica</a></li>
+										<li><a href="#">Kutahya Seramik</a></li>
+										<li><a href="#">LOVE CERAMIC TILES</a></li>
+									</ul>
+								</div><!-- /.submenu-item-->
+							</div><!-- /.submenu-->
+						</li>
+						<li class="brands-item"><span>B</span></li>
+						<li class="brands-item"><span>C</span></li>
+						<li class="brands-item"><span>D</span></li>
+						<li class="brands-item"><span>E</span></li>
+						<li class="brands-item"><span>F</span></li>
+						<li class="brands-item"><span>G</span></li>
+						<li class="brands-item"><span>H</span></li>
+						<li class="brands-item"><span>I</span></li>
+						<li class="brands-item"><span>J</span></li>
+						<li class="brands-item"><span>K</span></li>
+						<li class="brands-item"><span>L</span></li>
+						<li class="brands-item"><span>M</span></li>
+						<li class="brands-item"><span>N</span></li>
+						<li class="brands-item"><span>O</span></li>
+						<li class="brands-item"><span>P</span></li>
+						<li class="brands-item"><span>Q</span></li>
+						<li class="brands-item"><span>R</span></li>
+						<li class="brands-item"><span>S</span></li>
+						<li class="brands-item"><span>T</span></li>
+						<li class="brands-item"><span>U</span></li>
+						<li class="brands-item"><span>V</span></li>
+						<li class="brands-item"><span>W</span></li>
+						<li class="brands-item"><span>X</span></li>
+						<li class="brands-item"><span>Y</span></li>
+						<li class="brands-item"><span>Z</span></li>
+						<li class="brands-item"><span>А-Я</span></li>
 					</ul>
 				</div>
 			</div><!-- /.brands -->
@@ -1854,10 +1987,31 @@
 			</div><!-- /.navigation -->
 
 			<div class="stores">
-				<a href="#" class="stores-btn btn btn-corner">
-					<span>Где купить</span>
-					<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
-				</a>
+				<div class="dropdown dropdown-stores">
+					<button type="button" class="stores-btn btn btn-corner" id="dropdownStoresMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span>Где купить</span>
+						<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownStoresMenu">
+						<div class="dropdown-stores-item">
+							<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+							<div class="content">
+								<span>Волоколамское шоссе</span>
+								<p>г. Москва, инд.: 125371, ул. Волоколамское шоссе, д. 116, стр. 1</p>
+								<p>Без выходных<br> с 10:00 до 19:00</p>
+							</div>
+						</div><!-- /.dropdown-stores-item -->
+						<div class="dropdown-stores-item">
+							<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+							<div class="content">
+								<span>Калужское шоссе</span>
+								<p>г. Москва, инд.: 108841, ул. Калужское шоссе, д. 4, стр. 9</p>
+								<p>Без выходных<br> с 10:00 до 18:00</p>
+							</div>
+						</div><!-- /.dropdown-stores-item -->
+						<a href="#" class="link-arrow">Подробнее <svg class="icon icon-arrow-small"><use xlink:href="./images/symbol-defs.svg#arrow-small"></use></svg></a>
+					</div><!-- /.dropdown-menu -->
+				</div><!-- /.dropdown -->
 			</div><!-- /.stores -->
 
 			<div class="hours">
