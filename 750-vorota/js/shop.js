@@ -2,7 +2,56 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * Shop Settings: Toggle Filter sidebar
+	 * Calc product quantity
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.quantity-minus, .quantity-plus').on('click', function() {
+		const $this = $(this)
+
+		qtyOperator($this.parents('form').find('input[name="qty"]'), $this.data('qty-action'))
+	})
+
+	$('.quantity-amount .value').on('change', function() {
+		const $this = $(this)
+		const qty = $this.data()
+
+		if ($this.val() >= qty.max) $this.val(qty.max)
+
+		qtyChangeValue($this, Math.ceil($this.val() / qty.one))
+	})
+
+	function qtyOperator(qtyInput, action) {
+		const qty = qtyInput.data()
+
+		switch (action) {
+			case 'minus':
+				qty.count = qty.count <= 1 ? 1 : qty.count -= 1
+				break
+			case 'plus':
+				qty.count = qty.count += 1
+				break
+		}
+
+		return qtyChangeValue(qtyInput, qty.count)
+	}
+
+	function qtyChangeValue(qtyInput, count) {
+		const form = qtyInput.parents('form')
+		const qty = qtyInput.data()
+
+		qty.count = count <= 1 ? 1 : count
+
+		let qtyVal = Math.round((qty.count * qty.one) * 1000) / 1000
+
+		qtyInput.attr('data-count', qty.count).val(qtyVal)
+		form.find('.quantity-minus').attr('disabled', qty.count > 1 ? false : true)
+		form.find('.itemPrice').text((qty.price * qtyVal).toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 "))
+	}
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Toggle shop filters sidebar
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	function filtersBackdrop() {
@@ -13,7 +62,7 @@ $(document).ready(function() {
 				$(this).on('click', function () {
 					filtersBackdrop()
 					$('body').removeClass('lock-scroll')
-					$('#shop-filters-sidebar').removeClass('_is-active')
+					$('#shop-filters').removeClass('_is-active')
 				})
 			})
 		} else {
@@ -26,46 +75,116 @@ $(document).ready(function() {
 		filtersBackdrop()
 
 		$('body').addClass('lock-scroll')
-		$('#shop-filters-sidebar').addClass('_is-active')
+		$('#shop-filters').addClass('_is-active')
 	})
 
 	// Close sidebar
-	$('#shop-filters-sidebar .btn-close').on('click', function() {
+	$('#shop-filters .btn-close').on('click', function() {
 		filtersBackdrop()
 
 		$('body').removeClass('lock-scroll')
-		$('#shop-filters-sidebar').removeClass('_is-active')
+		$('#shop-filters').removeClass('_is-active')
 	})
 
 
 	/**
-	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * WIDGET: Filter 'Show all' button
-	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Shop filters
+	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	$(document).on('click', '.filter-item .filter-more-btn', function(e) {
-		e.preventDefault()
-		$(this).remove()
-	})
+	window.initShopFilters = function() {
+		$('.shop-filters-item').each(function(index, el) {
+			let arr = []
+
+			$(el).find('.shop-filters-list input[type="checkbox"]').each(function(index, checkboxEl) {
+				if ($(this).is(':checked')) {
+					arr.push($(this).siblings('label').text())
+					$(el).find('.shop-filters-name').find('.values').html(arr.join(', '))
+				}
+			})
+
+			if (arr.length > 0) {
+				$(el).addClass('_is-active')
+			} else {
+				$(el).removeClass('_is-active')
+			}
+
+			$(el).on('show.bs.dropdown', function() {
+				const filterName = $(el).find('.shop-filters-name'),
+							checkboxes = $(el).find('.shop-filters-list input[type="checkbox"]')
+				let filtersArr = []
+
+				checkboxes.each(function() {
+					if ($(this).is(':checked')) {
+						filtersArr.push($(this).siblings('label').text())
+						filterName.find('.values').html(filtersArr.join(', '))
+					}
+				})
+
+				$(el).find('.shop-filters-list input[type="checkbox"]').on('change', function(e) {
+					const filterItem = $(this).parents('.shop-filters-item'),
+								label = $(this).siblings('label').text()
+	
+					if ($(this).is(':checked')) {
+						filtersArr.push(label)
+					} else {
+						for (let el = filtersArr.length - 1; el >= 0; el--) {
+							if (filtersArr[el] === label) {
+								filtersArr.splice(el, 1);
+							}
+						}
+					}
+	
+					if (filtersArr.length > 0) {
+						filterItem.addClass('_is-active')
+					} else {
+						filterItem.removeClass('_is-active')
+					}
+	
+					filterName.find('.values').html(filtersArr.join(', '))
+				})
+			})
+		})
+	}
+	initShopFilters()
 
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * WIDGET: Price Filter (noUiSlider)
+	 * Price filter (noUiSlider)
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	window.initPriceFilter = function () {
-		document.querySelectorAll('.filter-slider-handle').forEach(slider => {
+	window.initPriceFilter = function() {
+		document.querySelectorAll('.shop-filters-price-handle').forEach(slider => {
 			let filterMinPrice = parseInt( slider.dataset.slidermin );
 			let filterMaxPrice = parseInt( slider.dataset.slidermax );
-			let priceFrom      = slider.nextElementSibling.querySelector('.filter-slider-from');
-			let priceTo        = slider.nextElementSibling.querySelector('.filter-slider-to');
+			let priceFrom      = slider.nextElementSibling.querySelector('.shop-filters-price-from');
+			let priceTo        = slider.nextElementSibling.querySelector('.shop-filters-price-to');
 			let inputMinPrice  = parseInt( priceFrom.value );
 			let inputMaxPrice  = parseInt( priceTo.value );
 
 			// Create noUiSlider
 			sliderOptions = {
 				start: [inputMinPrice, inputMaxPrice],
+				step: 100,
+				// tooltips: [
+				// 	{
+				// 		from: function(value) {
+				// 			return Math.round(value);
+				// 		},
+				// 		to: function(value) {
+				// 			return 'от ' + Math.round(value) + ' р';
+				// 		},
+				// 	},
+				// 	{
+				// 		from: function(value) {
+				// 			return Math.round(value);
+				// 		},
+				// 		to: function(value) {
+				// 			return 'до ' + Math.round(value) + ' р';
+				// 		},
+				// 	}
+				// ],
 				connect: true,
 				range: {
 					'min': filterMinPrice,
@@ -75,7 +194,7 @@ $(document).ready(function() {
 			noUiSlider.create(slider, sliderOptions)
 
 			// Update noUiSlider
-			// document.querySelector('.filter-slider-handle').noUiSlider.updateOptions(sliderOptions)
+			// document.querySelector('.shop-filters-price-handle').noUiSlider.updateOptions(sliderOptions)
 
 			// Change/Update noUiSlider values
 			priceFrom.addEventListener('change', priceUpdateValues);
@@ -128,62 +247,46 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * Init Shop filters
+	 * Init shop filters
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	window.initShopFilters = function() {
-		$('[data-toggle="tooltip"]').tooltip('update')
+	window.initFilters = function() {
+		// $('[data-toggle="tooltip"]').tooltip('update')
 
+		initShopFilters()
 		initPriceFilter()
 	}
 
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * Single Product: Discount Modal (noUiSlider)
+	 * Toggle cart checkout tabs
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	const discountSlider = document.querySelector('#m-discount-slider');
+	$('a[id*="checkout-tab"]').on('click', function(e) {
+		e.preventDefault()
 
-	if( typeof(discountSlider) != 'undefined' && discountSlider != null ) {
-		const discountSliderMin = parseInt( discountSlider.dataset.slidermin );
-		const discountSliderMax = parseInt( discountSlider.dataset.slidermax );
-		const discountSliderStart = parseInt( discountSlider.dataset.sliderstart );
-		const discountSliderInputValue = document.querySelector('.discount-slider-value');
+		$('a[id*="checkout-tab"]').removeClass('active')
+		$(this).addClass('active')
 
-		// Create noUiSlide
-		noUiSlider.create(discountSlider, {
-			start: discountSliderStart,
-			step: 1,
-			connect: [true, false],
-			range: {
-				'min': discountSliderMin,
-				'max': discountSliderMax
-			}
-		})
-
-		// Set default value
-		discountSliderInputValue.value = Math.round(discountSlider.noUiSlider.get()) + '%';
-
-		// Set pins
-		document.querySelector('.form-group-slider-values > .from').innerHTML = discountSliderMin + '%';
-		document.querySelector('.form-group-slider-values > .to').innerHTML = discountSliderMax + '%';
-
-		// Change value on toggle slider
-		discountSlider.noUiSlider.on('update', function (value) {
-			discountSliderInputValue.value = Math.round(value) + '%';
-			discountNewPrice(value);
-		})
-
-		// Calculate new price
-		function discountNewPrice(value) {
-			const productPriceEl = document.querySelector('.s-product .product-info-price .price ins').dataset.finalPrice;
-			const productPriceValue = parseInt(productPriceEl);
-			const discountNewPriceInput = document.querySelector('.discount-new-price');
-			const discountNewPriceValue = productPriceValue * Math.round(value) / 100;
-
-			discountNewPriceInput.value = Math.round(productPriceValue - discountNewPriceValue).toLocaleString('ru') + ' руб.';
+		if (this.id == 'checkout-tab-2') {
+			$('.checkout-form').find('.legal-entity').fadeIn(200)
 		}
+
+		if (this.id == 'checkout-tab-1') {
+			$('.checkout-form').find('.legal-entity').fadeOut(200)
+		}
+	})
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Toggle all collection products tabs
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	window.showAllCollectionTabs = function() {
+		$('.collection-products-list > [class*="col"]').clone().appendTo('#products-tab-1 .collection-products-list')
 	}
+	showAllCollectionTabs()
 
 })
