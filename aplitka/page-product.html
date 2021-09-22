@@ -810,22 +810,24 @@
 
 						<!-- Purchase form -->
 						<div class="purchase">
-							<form class="purchase-form form">
+							<form class="purchase-form form addToCartForm">
 								<div class="price">
 									<div class="price-main">
 										<div class="label">Цена:</div>
-										<div class="value"><span>4500</span> ₽/м<sup>2</sup></div>
+										<div class="value"><span class="itemPrice">8 950</span> ₽/м<sup>2</sup></div>
 									</div>
 									<div class="price-quantity">
 										<div class="quantity">
-											<button type="button" class="quantity-minus btn btn-primary">
+											<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus" disabled>
 												<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 											</button>
-											<div class="quantity-amount"><div class="value">1.467</div> <div class="size">м<sup>2</sup></div></div>
-											<button type="button" class="quantity-plus btn btn-primary">
+											<div class="quantity-amount">
+												<input type="number" name="qty" class="value form-control changeQty itemQtyChanger" step="0.001" min="0" value="3.336" data-price="8950" data-max="999" data-count="1" data-one="3.336">
+											</div>
+											<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 												<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 											</button>
-											<input type="text" name="quantity" hidden>
+											<div class="quantity-size">м<sup>2</sup></div>
 										</div>
 									</div>
 								</div>

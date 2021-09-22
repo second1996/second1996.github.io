@@ -1,19 +1,14 @@
 $(document).ready(function() {
 
 	/**
-	*-------------------------------------------------------------------------------------------------------------------------------------------
-	* Home heroes banner slider
-	*-------------------------------------------------------------------------------------------------------------------------------------------
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Home page: Heroes main slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	new Swiper('.h-heroes-slider .swiper-container', {
-		slidesPerView: 1,
-		speed: 1000,
+	new Swiper('.h-heroes-slider', {
+		loop: true,
 		autoplay: {
-			delay: 2500,
-		},
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
+			delay: 3500,
 		},
 		navigation: {
 			prevEl: '.h-heroes-slider-nav .swiper-button-prev',
@@ -22,46 +17,24 @@ $(document).ready(function() {
 		pagination: {
 			el: '.h-heroes-slider-dots .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
 		},
 	})
 
 
 	/**
-	*-------------------------------------------------------------------------------------------------------------------------------------------
-	* Home brands slider
-	*-------------------------------------------------------------------------------------------------------------------------------------------
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Home page: Heroes product slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	new Swiper('.h-brands-slider .swiper-container', {
-		slidesPerView: 1.5,
-		slidesPerGroup: 1,
-		spaceBetween: 16,
+	new Swiper('.h-heroes-product-slider', {
+		loop: true,
 		navigation: {
-			prevEl: '.h-brands-slider-nav .swiper-button-prev',
-			nextEl: '.h-brands-slider-nav .swiper-button-next',
+			prevEl: '.h-heroes-product-slider-nav .swiper-button-prev',
+			nextEl: '.h-heroes-product-slider-nav .swiper-button-next',
 		},
 		pagination: {
-			el: '.h-brands-slider-dots .swiper-pagination',
+			el: '.h-heroes-product-slider-dots .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: 3,
-				slidesPerGroup: 3,
-			},
-			992: {
-				slidesPerView: 4,
-				slidesPerGroup: 4,
-			},
-			1240: {
-				slidesPerView: 5,
-				slidesPerGroup: 5,
-			},
-			1468: {
-				slidesPerView: 6,
-				slidesPerGroup: 6,
-			},
 		},
 	})
 
@@ -77,9 +50,7 @@ $(document).ready(function() {
 		$(element).addClass(`products-slider-${id}`)
 
 		new Swiper(`.products-slider-${id} .swiper-container`, {
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1.5,
+			slidesPerView: 2,
 			spaceBetween: 16,
 			navigation: {
 				prevEl: `.products-slider-${id} .products-slider-nav .swiper-button-prev`,
@@ -88,18 +59,21 @@ $(document).ready(function() {
 			pagination: {
 				el: `.products-slider-${id} .products-slider-dots .swiper-pagination`,
 				type: 'bullets',
-				clickable: true,
 			},
 			breakpoints: {
 				576: {
-					slidesPerView: 2,
+					slidesPerView: 3,
+					spaceBetween: 24,
 				},
 				768: {
-					slidesPerView: 3,
-				},
-				992: {
 					slidesPerView: 4,
 				},
+				992: {
+					slidesPerView: 5,
+				},
+				1240: {
+					slidesPerView: 6,
+				}
 			}
 		})
 	})
@@ -107,67 +81,229 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * Collection gallery slider
+	 * Home page: Partners slider
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	const collectionThumbs = new Swiper('.page-single-collection .gallery-thumbs .swiper-container', {
-		spaceBetween: 8,
-		slidesPerView: 5,
-		freeMode: true,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
+	new Swiper('.h-partners-slider .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 16,
+		loop: true,
+		navigation: {
+			prevEl: '.h-partners-slider-nav .swiper-button-prev',
+			nextEl: '.h-partners-slider-nav .swiper-button-next',
+		},
+		pagination: {
+			el: '.h-partners-slider-dots .swiper-pagination',
+			type: 'bullets',
+		},
 		breakpoints: {
 			576: {
+				slidesPerView: 4,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 5,
+			},
+			992: {
 				slidesPerView: 6,
 			},
+			1240: {
+				slidesPerView: 7,
+			},
+			1468: {
+				slidesPerView: 9,
+			}
 		}
-	})
-
-	new Swiper('.page-single-collection .gallery-slider .swiper-container', {
-		slidesPerView: 1,
-		speed: 1000,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
-		navigation: {
-			prevEl: '.page-single-collection .gallery-slider-nav .swiper-button-prev',
-			nextEl: '.page-single-collection .gallery-slider-nav .swiper-button-next',
-		},
-		thumbs: {
-			swiper: collectionThumbs
-		},
 	})
 
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * Product gallery slider
+	 * Home page: Testimonials slider
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	const productThumbs = new Swiper('.page-single-product .gallery-thumbs .swiper-container', {
-		spaceBetween: 8,
-		slidesPerView: 5,
-		freeMode: true,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
+	new Swiper('.h-testimonials-slider .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		autoHeight: true,
+		navigation: {
+			prevEl: '.h-testimonials-slider-nav .swiper-button-prev',
+			nextEl: '.h-testimonials-slider-nav .swiper-button-next',
+		},
+		pagination: {
+			el: '.h-testimonials-slider-dots .swiper-pagination',
+			type: 'bullets',
+		},
 		breakpoints: {
-			576: {
-				slidesPerView: 6,
-			},
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+				autoHeight: false,
+			}
 		}
 	})
 
-	new Swiper('.page-single-product .gallery-slider .swiper-container', {
-		slidesPerView: 1,
-		speed: 1000,
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Quick View gallery slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	window.initQuickViewModal = function () {
+		// Update BS Tooltip
+		$('[data-toggle="tooltip"]').tooltip('update')
+
+		// Thumbs slider
+		const qvGalleryThumbsSlider = new Swiper('.modal-quick-view .product-gallery-thumbs .swiper-container', {
+			observer: true,
+			observeParents: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			allowTouchMove: false,
+			slidesPerView: 'auto',
+			spaceBetween: 8,
+			loop: false
+		})
+
+		// Main slider
+		const qvGallerySlider = new Swiper('.modal-quick-view .product-gallery-slider .swiper-container', {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 16,
+			loop: false,
+			speed: 450,
+			navigation: {
+				nextEl: '.modal-quick-view .product-gallery-slider-nav .swiper-button-next',
+				prevEl: '.modal-quick-view .product-gallery-slider-nav .swiper-button-prev',
+			},
+			thumbs: {
+				swiper: qvGalleryThumbsSlider
+			}
+		})
+	}
+	initQuickViewModal()
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Shop Compare slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const compareProductsSlider = new Swiper('.compare-products-slider .swiper-container', {
+		slidesPerView: 2,
+		spaceBetween: 12,
 		navigation: {
-			prevEl: '.page-single-product .gallery-slider-nav .swiper-button-prev',
-			nextEl: '.page-single-product .gallery-slider-nav .swiper-button-next',
+			prevEl: '.compare-products-slider-nav .swiper-button-prev',
+			nextEl: '.compare-products-slider-nav .swiper-button-next',
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1240: {
+				slidesPerView: 5,
+				spaceBetween: 24,
+			}
+		}
+	})
+	const compareTableSlider = new Swiper('.compare-table-values .swiper-container', {
+		slidesPerView: 2,
+		spaceBetween: 0,
+		scrollbar: {
+			el: '.compare-table-scrollbar',
+			draggable: true
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1240: {
+				slidesPerView: 5,
+				spaceBetween: 24,
+			}
+		}
+	})
+
+	// Sync Compare sliders
+	if( $('.compare .compare-products-slider, .compare .compare-table-values').length ) {
+		compareProductsSlider.controller.control = compareTableSlider
+		compareTableSlider.controller.control = compareProductsSlider
+	}
+
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Service single page: Testimonials slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	new Swiper('.s-testimonials-slider .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		autoHeight: true,
+		navigation: {
+			prevEl: '.s-testimonials-slider-nav .swiper-button-prev',
+			nextEl: '.s-testimonials-slider-nav .swiper-button-next',
+		},
+		pagination: {
+			el: '.s-testimonials-slider-dots .swiper-pagination',
+			type: 'bullets',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				autoHeight: false,
+			},
+			1468: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			}
+		}
+	})
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Product single page: Gallery slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	// Thumbs slider
+	const productGalleryThumbsSlider = new Swiper('.s-product .product-gallery-thumbs .swiper-container', {
+		observer: true,
+		observeParents: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		slidesPerView: 6,
+		spaceBetween: 8,
+		loop: false,
+		freeMode: true,
+		pagination: {
+			el: '.s-product .product-gallery-slider-dots .swiper-pagination'
+		}
+	})
+
+	// Main slider
+	const productGallerySlider = new Swiper('.s-product .product-gallery-slider .swiper-container', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 16,
+		loop: false,
+		speed: 450,
+		navigation: {
+			nextEl: '.s-product .product-gallery-slider-nav .swiper-button-next',
+			prevEl: '.s-product .product-gallery-slider-nav .swiper-button-prev',
 		},
 		thumbs: {
-			swiper: productThumbs
-		},
+			swiper: productGalleryThumbsSlider
+		}
 	})
 
 })

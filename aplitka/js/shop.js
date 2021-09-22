@@ -2,6 +2,55 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Calc product quantity
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.quantity-minus, .quantity-plus').on('click', function() {
+		const $this = $(this)
+
+		qtyOperator($this.parents('form').find('input[name="qty"]'), $this.data('qty-action'))
+	})
+
+	$('.quantity-amount .value').on('change', function() {
+		const $this = $(this)
+		const qty = $this.data()
+
+		if ($this.val() >= qty.max) $this.val(qty.max)
+
+		qtyChangeValue($this, Math.ceil($this.val() / qty.one))
+	})
+
+	function qtyOperator(qtyInput, action) {
+		const qty = qtyInput.data()
+
+		switch (action) {
+			case 'minus':
+				qty.count = qty.count <= 1 ? 1 : qty.count -= 1
+				break
+			case 'plus':
+				qty.count = qty.count += 1
+				break
+		}
+
+		return qtyChangeValue(qtyInput, qty.count)
+	}
+
+	function qtyChangeValue(qtyInput, count) {
+		const form = qtyInput.parents('form')
+		const qty = qtyInput.data()
+
+		qty.count = count <= 1 ? 1 : count
+
+		let qtyVal = Math.round((qty.count * qty.one) * 1000) / 1000
+
+		qtyInput.attr('data-count', qty.count).val(qtyVal)
+		form.find('.quantity-minus').attr('disabled', qty.count > 1 ? false : true)
+		form.find('.itemPrice').text((qty.price * qtyVal).toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 "))
+	}
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 * Toggle shop filters sidebar
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
@@ -45,7 +94,6 @@ $(document).ready(function() {
 	*/
 	window.initShopFilters = function() {
 		$('.shop-filters-item').each(function(index, el) {
-
 			let arr = []
 
 			$(el).find('.shop-filters-list input[type="checkbox"]').each(function(index, checkboxEl) {
