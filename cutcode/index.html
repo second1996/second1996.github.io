@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="./css/tailwind.css">
 	<link rel="stylesheet" href="./css/main.css">
 </head>
-<body x-data="{ 'showModal': false, 'showModal2': false }" @keydown.escape="showModal = false" x-cloak>
+<body x-data="{ 'showModal': false, 'showModal2': false, 'showModal3': false }" x-cloak>
 
 <!-- Promo banner -->
 <div class="promo-banner hidden fixed top-0 left-0 right-0 z-[999] py-3 bg-[#FFD569]">
@@ -128,7 +128,7 @@
 		<div class="s-intro-inner overflow-hidden relative z-[2] h-[360px] xl:h-[570px] rounded-left-xl bg-darkblue">
 			<div class="s-intro-content relative z-[2] flex flex-col items-center justify-center max-w-[740px] h-full mx-auto px-6">
 				<div class="mb-8">
-					<a href="#" class="inline-flex items-center justify-center w-20 xl:w-24 h-20 xl:h-24 rounded-left-lg shadow-[0_0_0_6px_rgba(255,255,255,0.05)] lg:shadow-[0_0_0_10px_rgba(255,255,255,0.05)] bg-pink hover:bg-purple active:shadow-[0_0_0_6px_rgba(255,255,255,0.05)]">
+					<button class="btn !w-20 xl:!w-24 !h-20 xl:!h-24 !p-0 rounded-left-lg shadow-[0_0_0_6px_rgba(255,255,255,0.05)] lg:shadow-[0_0_0_10px_rgba(255,255,255,0.05)] bg-pink hover:bg-purple active:shadow-[0_0_0_6px_rgba(255,255,255,0.05)]" @click="showModal3 = true">
 						<svg class="w-6 lg:w-8 h-6 lg:h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_99_32)">
 								<path d="M28.7858 18.4795L6.16183 31.6066C4.24183 32.7195 1.77783 31.3719 1.77783 29.1284V2.87413C1.77783 0.634126 4.23828 -0.716985 6.16183 0.399459L28.7858 13.5266C29.2226 13.7759 29.5856 14.1363 29.8382 14.5712C30.0907 15.0061 30.2237 15.5001 30.2237 16.003C30.2237 16.5059 30.0907 16.9999 29.8382 17.4348C29.5856 17.8697 29.2226 18.2301 28.7858 18.4795Z" fill="white"/>
@@ -139,7 +139,7 @@
 								</clipPath>
 							</defs>
 						</svg>
-					</a>
+					</button>
 				</div>
 				<h2 class="mb-4 xl:mb-8 text-white text-lg sm:text-xl xl:text-2xl font-black text-center">Коротко о курсе</h2>
 				<p class="mb-0 text-white text-xs sm:text-sm xl:text-md text-center">Меня зовут Данил, я уже 11 лет занимаюсь web-разработкой, из них 6 лет использую Laravel</p>
@@ -406,6 +406,74 @@
 						</div>
 					</div><!-- /.s-vacancies-item -->
 				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="s-vacancies-item relative p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="sm:absolute sm:top-[32px] sm:right-[48px] overflow-hidden w-[60px] sm:w-[80px] md:w-[100px] h-[60px] sm:h-[80px] md:h-[100px] mb-4 lg:mb-0 rounded-[50%] object-cover">
+							<img class="w-full h-full" src="./images/habr.png" alt="Хабр Карьера">
+						</div>
+						<div class="sm:pr-28 md:pr-32">
+							<h5 class="mb-2 md:mb-4 text-darkblue text-sm sm:text-md lg:text-lg font-black">Fullstack — разработчик Laravel / Vue</h5>
+							<div class="text-[#878787] text-xs sm:text-sm lg:text-md tracking-[0.03em]">от <span class="text-purple font-black">100 000 ₽</span> до <span class="text-purple font-black">200 000 ₽</span></div>
+						</div>
+						<div class="mt-3 md:mt-7">
+							<div class="mb-2 text-[14px] sm:text-xs">Требования:</div>
+							<div class="relative flex items-center overflow-hidden after:absolute after:top-0 after:right-0 after:block after:w-[60px] sm:after:w-[100px] after:h-full after:bg-gradient-to-r after:from-transparent after:to-white">
+								<div class="py-2 px-4 rounded-[40px] border border-pink bg-white text-pink text-[12px] sm:text-[14px] font-semibold leading-none whitespace-nowrap">Понимание принципов SOLID</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Опыт разработки на PHP</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Опыт работы с бэкэндом на Laravel</div>
+							</div>
+						</div>
+						<div class="mt-6 md:mt-8 2xl:mt-12">
+							<a href="#" class="inline-flex items-center text-darkblue hover:text-pink" target="_blank" rel="noopener nofollow">
+								<svg class="w-5 h-5" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_42_543)">
+										<path d="M16.875 13H15.625C15.4592 13 15.3003 13.0658 15.1831 13.1831C15.0658 13.3003 15 13.4592 15 13.625V18H2.5V5.5H8.125C8.29076 5.5 8.44973 5.43415 8.56694 5.31694C8.68415 5.19973 8.75 5.04076 8.75 4.875V3.625C8.75 3.45924 8.68415 3.30027 8.56694 3.18306C8.44973 3.06585 8.29076 3 8.125 3H1.875C1.37772 3 0.900806 3.19754 0.549175 3.54917C0.197544 3.90081 0 4.37772 0 4.875L0 18.625C0 19.1223 0.197544 19.5992 0.549175 19.9508C0.900806 20.3025 1.37772 20.5 1.875 20.5H15.625C16.1223 20.5 16.5992 20.3025 16.9508 19.9508C17.3025 19.5992 17.5 19.1223 17.5 18.625V13.625C17.5 13.4592 17.4342 13.3003 17.3169 13.1831C17.1997 13.0658 17.0408 13 16.875 13ZM19.0625 0.5H14.0625C13.2277 0.5 12.8105 1.51211 13.3984 2.10156L14.7941 3.49727L5.27344 13.0145C5.18604 13.1015 5.11669 13.205 5.06937 13.319C5.02206 13.433 4.9977 13.5551 4.9977 13.6785C4.9977 13.8019 5.02206 13.9241 5.06937 14.038C5.11669 14.152 5.18604 14.2555 5.27344 14.3426L6.15898 15.2266C6.24608 15.314 6.34957 15.3833 6.46353 15.4306C6.57748 15.4779 6.69966 15.5023 6.82305 15.5023C6.94643 15.5023 7.06861 15.4779 7.18256 15.4306C7.29652 15.3833 7.40001 15.314 7.48711 15.2266L17.0031 5.70781L18.3984 7.10156C18.9844 7.6875 20 7.27734 20 6.4375V1.4375C20 1.18886 19.9012 0.950403 19.7254 0.774587C19.5496 0.598772 19.3111 0.5 19.0625 0.5V0.5Z"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_42_543">
+										<rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span class="ml-3 text-[14px] sm:text-xs font-semibold">Посмотреть вакансию</span>
+							</a>
+						</div>
+					</div><!-- /.s-vacancies-item -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="s-vacancies-item relative p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="sm:absolute sm:top-[32px] sm:right-[48px] overflow-hidden w-[60px] sm:w-[80px] md:w-[100px] h-[60px] sm:h-[80px] md:h-[100px] mb-4 lg:mb-0 rounded-[50%] object-cover">
+							<img class="w-full h-full" src="./images/hh.png" alt="hh.ru">
+						</div>
+						<div class="sm:pr-28 md:pr-32">
+							<h5 class="mb-2 md:mb-4 text-darkblue text-sm sm:text-md lg:text-lg font-black">PHP-разработчик (удаленно)</h5>
+							<div class="text-[#878787] text-xs sm:text-sm lg:text-md tracking-[0.03em]">от <span class="text-purple font-black">200 000 ₽</span></div>
+						</div>
+						<div class="mt-3 md:mt-7">
+							<div class="mb-2 text-[14px] sm:text-xs">Требования:</div>
+							<div class="relative flex items-center overflow-hidden after:absolute after:top-0 after:right-0 after:block after:w-[60px] sm:after:w-[100px] after:h-full after:bg-gradient-to-r after:from-transparent after:to-white">
+								<div class="py-2 px-4 rounded-[40px] border border-pink bg-white text-pink text-[12px] sm:text-[14px] font-semibold leading-none whitespace-nowrap">Знание принципов SOLID и Clean Code</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Уверенная экспертиза в PHP</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Паттерны ООП</div>
+							</div>
+						</div>
+						<div class="mt-6 md:mt-8 2xl:mt-12">
+							<a href="#" class="inline-flex items-center text-darkblue hover:text-pink" target="_blank" rel="noopener nofollow">
+								<svg class="w-5 h-5" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_42_543)">
+										<path d="M16.875 13H15.625C15.4592 13 15.3003 13.0658 15.1831 13.1831C15.0658 13.3003 15 13.4592 15 13.625V18H2.5V5.5H8.125C8.29076 5.5 8.44973 5.43415 8.56694 5.31694C8.68415 5.19973 8.75 5.04076 8.75 4.875V3.625C8.75 3.45924 8.68415 3.30027 8.56694 3.18306C8.44973 3.06585 8.29076 3 8.125 3H1.875C1.37772 3 0.900806 3.19754 0.549175 3.54917C0.197544 3.90081 0 4.37772 0 4.875L0 18.625C0 19.1223 0.197544 19.5992 0.549175 19.9508C0.900806 20.3025 1.37772 20.5 1.875 20.5H15.625C16.1223 20.5 16.5992 20.3025 16.9508 19.9508C17.3025 19.5992 17.5 19.1223 17.5 18.625V13.625C17.5 13.4592 17.4342 13.3003 17.3169 13.1831C17.1997 13.0658 17.0408 13 16.875 13ZM19.0625 0.5H14.0625C13.2277 0.5 12.8105 1.51211 13.3984 2.10156L14.7941 3.49727L5.27344 13.0145C5.18604 13.1015 5.11669 13.205 5.06937 13.319C5.02206 13.433 4.9977 13.5551 4.9977 13.6785C4.9977 13.8019 5.02206 13.9241 5.06937 14.038C5.11669 14.152 5.18604 14.2555 5.27344 14.3426L6.15898 15.2266C6.24608 15.314 6.34957 15.3833 6.46353 15.4306C6.57748 15.4779 6.69966 15.5023 6.82305 15.5023C6.94643 15.5023 7.06861 15.4779 7.18256 15.4306C7.29652 15.3833 7.40001 15.314 7.48711 15.2266L17.0031 5.70781L18.3984 7.10156C18.9844 7.6875 20 7.27734 20 6.4375V1.4375C20 1.18886 19.9012 0.950403 19.7254 0.774587C19.5496 0.598772 19.3111 0.5 19.0625 0.5V0.5Z"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_42_543">
+										<rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span class="ml-3 text-[14px] sm:text-xs font-semibold">Посмотреть вакансию</span>
+							</a>
+						</div>
+					</div><!-- /.s-vacancies-item -->
+				</div><!-- /.swiper-slide -->
 			</div><!-- /.swiper-wrapper -->
 			<div class="swiper-pagination swiper-pagination-purple mt-12"></div>
 		</div>
@@ -468,6 +536,38 @@
 		<div class="s-testimonials-slider swiper mt-8 md:mt-12">
 			<div class="swiper-wrapper">
 				<!-- Slides -->
+				<div class="swiper-slide h-full">
+					<div class="s-testimonials-item relative flex flex-col justify-between h-full p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="text-gray text-xs lg:text-sm 2xl:text-md">
+							<p>CutCode помогли прямо из дома получать то, что нужно прогеру "как воздух": 1) Воочию видеть ПРОФИ своего дела и общаться с ними 2) почувствовать братско-сестринское плечо дизайнеров 3) увидеть даже в чатах просто адекватных людей 4) получить извне и изнутри заряд энтузиазма и 5) очень важно, получить прямые возможности для общения с спикерами.</p>
+						</div>
+						<div class="flex mt-4 md:mt-8">
+							<div class="overflow-hidden shrink-0 w-[60px] sm:w-[80px] xl:w-[100px] h-[60px] sm:h-[80px] xl:h-[100px] rounded-[50%] object-cover">
+								<img class="w-full h-full" src="./images/author.jpg" alt="Андрей Полторатских">
+							</div>
+							<div class="self-center ml-5 xl:ml-8">
+								<div class="text-purple text-xs sm:text-sm xl:text-md font-black leading-6">Андрей Полторатских</div>
+								<div class="mt-1 text-gray text-[14px] sm:text-xs xl:text-sm">г. Москва</div>
+							</div>
+						</div>
+					</div><!-- /.s-testimonials-item -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="s-testimonials-item relative flex flex-col justify-between h-full p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="text-gray text-xs lg:text-sm 2xl:text-md">
+							<p>Ребятки, вы знаете, как я вас обожаю и с каждым разом хочу все больше затискать в объятиях. Вы мега-крутые, поскольку постоянно объединяете самых лучших спикеров, которые поднимают очень важные темы. Для меня неделя интенсива значит больше, нежели 2 месяца на курсах.</p>
+						</div>
+						<div class="flex mt-4 md:mt-8">
+							<div class="overflow-hidden shrink-0 w-[60px] sm:w-[80px] xl:w-[100px] h-[60px] sm:h-[80px] xl:h-[100px] rounded-[50%] object-cover">
+								<img class="w-full h-full" src="./images/author.jpg" alt="Анна Бисерная">
+							</div>
+							<div class="self-center ml-5 xl:ml-8">
+								<div class="text-purple text-xs sm:text-sm xl:text-md font-black leading-6">Анна Бисерная</div>
+								<div class="mt-1 text-gray text-[14px] sm:text-xs xl:text-sm">г. Воронеж</div>
+							</div>
+						</div>
+					</div><!-- /.s-testimonials-item -->
+				</div><!-- /.swiper-slide -->
 				<div class="swiper-slide h-full">
 					<div class="s-testimonials-item relative flex flex-col justify-between h-full p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
 						<div class="text-gray text-xs lg:text-sm 2xl:text-md">
@@ -610,6 +710,12 @@
 							</a>
 						</div>
 					</div><!-- /.s-curriculum-lesson -->
+					<div class="s-curriculum-references">
+						<div class="py-4 px-5 md:px-8 bg-pink text-white text-xs sm:text-md font-bold">Дополнительные материалы</div>
+						<div class="py-3 px-5 md:px-8 bg-white border-b border-[rgba(0,0,0,0.05)]">Принцип единственной ответственности - слишком большие методы</div>
+						<div class="py-3 px-5 md:px-8 bg-white border-b border-[rgba(0,0,0,0.05)]">Принцип открытого-закрытого - поставщик в Laravel</div>
+						<div class="py-3 px-5 md:px-8 bg-white border-b border-[rgba(0,0,0,0.05)]">Принцип открытости-закрытости - красноречивый атрибут с калькулятором заработной платы</div>
+					</div><!-- /.s-curriculum-references -->
 				</div><!-- /.accordion-content -->
 			</div><!-- /.s-curriculum-item -->
 		</div><!-- /.s-curriculum-list -->
@@ -901,7 +1007,7 @@
 </div>
 
 	<!-- Modal: Купить курс -->
-<div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal }">
+<div class="overflow-auto bg-black/50" x-show="showModal" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal }">
 	<div class="modal-wrapper relative z-10 overflow-hidden max-w-[700px] p-7 md:p-10 2xl:p-12 mx-[10px] rounded-left-lg bg-purple" 
 			 x-show="showModal" 
 			 @click.away="showModal = false" 
@@ -943,7 +1049,7 @@
 </div>
 
 <!-- Modal: Получи 3 урока за заявку -->
-<div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal2" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal2 }">
+<div class="overflow-auto bg-black/50" x-show="showModal2" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal2 }">
 	<div class="modal-wrapper relative z-10 overflow-hidden max-w-[700px] p-7 md:p-10 2xl:p-12 mx-[10px] rounded-left-lg bg-purple" 
 			 x-show="showModal2" 
 			 @click.away="showModal2 = false" 
@@ -980,6 +1086,33 @@
 			</form>
 		</div><!-- /.modal-content -->
 		<img class="absolute -bottom-[80px] -right-[60px] -z-10 w-[320px] opacity-5" src="./images/watermark.svg" alt="CutCode">
+	</div><!-- /.modal-wrapper -->
+</div>
+
+<!-- Modal: Коротко о курсе -->
+<div class="overflow-auto bg-black/50" x-show="showModal3" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal3 }">
+	<div class="modal-wrapper relative z-10 overflow-hidden max-w-[1200px] p-7 md:p-10 2xl:p-12 mx-[10px] rounded-left-lg bg-white" 
+			 x-show="showModal3" 
+			 @click.away="showModal3 = false" 
+			 x-transition:enter="ease-out duration-300" 
+			 x-transition:enter-start="opacity-0 scale-90" 
+			 x-transition:enter-end="opacity-100 scale-100" 
+			 x-transition:leave="ease-in duration-300" 
+			 x-transition:leave-start="opacity-100 scale-100" 
+			 x-transition:leave-end="opacity-0 scale-90">
+		<!-- Content -->
+		<div class="modal-content relative">
+			<div class="flex items-center justify-between mb-8">
+				<h2 class="mb-0 pr-2 text-dark text-lg 2xl:text-[32px] font-black">Коротко о курсе</h2>
+				<button class="modal-close text-dark hover:text-purple transition" @click="showModal3 = false">
+					<span class="sr-only">Закрыть модальное окно</span>
+					<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<iframe class="overflow-hidden w-[240px] xs:w-auto sm:w-[460px] lg:w-[800px] h-[140px] xs:h-auto sm:h-[300px] lg:h-[400px] rounded-right-lg" src="https://www.youtube.com/embed/PeFR_dIbp4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div><!-- /.modal-content -->
 	</div><!-- /.modal-wrapper -->
 </div>
 
