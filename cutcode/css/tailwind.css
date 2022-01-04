@@ -1569,6 +1569,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: block;
 }
 
+.after\:hidden::after {
+  content: var(--tw-content);
+  display: none;
+}
+
 .after\:h-full::after {
   content: var(--tw-content);
   height: 100%;
@@ -1600,10 +1605,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.after\:bg-gradient-to-l::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
 .after\:from-transparent::after {
   content: var(--tw-content);
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
+}
+
+.after\:from-white::after {
+  content: var(--tw-content);
+  --tw-gradient-from: #FFF;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
 }
 
 .after\:to-white::after {
@@ -2236,6 +2252,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     align-self: flex-end;
   }
 
+  .lg\:overflow-hidden {
+    overflow: hidden;
+  }
+
   .lg\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -2300,6 +2320,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-shadow: 30px 30px 0 #EC4176;
     --tw-shadow-colored: 30px 30px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:after\:block::after {
+    content: var(--tw-content);
+    display: block;
   }
 }
 
@@ -2512,6 +2537,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:text-\[42px\] {
     font-size: 42px;
+  }
+
+  .xl\:after\:block::after {
+    content: var(--tw-content);
+    display: block;
   }
 }
 
