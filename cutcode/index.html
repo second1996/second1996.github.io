@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Solid Code в Laravel</title>
+	<meta name="description" content="Видеокурс по изучению принципов программирования">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="icon" href="./images/favicon.svg">
+
+	<link rel="stylesheet" href="./css/tailwind.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body x-data="{ 'showModal': false, 'showModal2': false }" @keydown.escape="showModal = false" x-cloak>
+
+<!-- Promo banner -->
+<div class="promo-banner hidden fixed top-0 left-0 right-0 z-[999] py-3 bg-[#FFD569]">
+	<div class="relative">
+		<div class="container">
+			<p class="px-4 text-black text-[14px] md:text-xs text-center">🎁 <b>Новогодняя распродажа</b> | Курс по цене 2999 руб. Осталось 3 дня!</p>
+		</div>
+		<div class="absolute top-0 right-2 sm:right-4 lg:right-8 bottom-0 w-6 h-6 my-auto">
+			<button id="closePromoBanner" class="text-dark hover:text-purple transition">
+				<span class="sr-only">Закрыть меню</span>
+				<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+
+<!-- Section: Heroes -->
+<section class="s-heroes relative overflow-hidden h-auto lg:h-screen md:min-h-[760px] md:max-h-[960px]">
+
+	<!-- Site header -->
+	<header class="header absolute top-6 xl:top-12 left-0 right-0 z-50">
+		<div class="container">
+			<div class="header-inner flex items-center">
+				<div class="header-logo shrink-0">
+					<a href="/" rel="home">
+						<img src="./images/logo.svg" class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]" alt="CutCode">
+					</a>
+				</div><!-- /.header-logo -->
+				<div class="header-menu grow flex justify-center ml-8 mr-8">
+					<nav class="hidden 2xl:inline-block">
+						<a href="#s-intro" class="ml-4 mr-4 text-white hover:text-pink font-bold">О курсе</a>
+						<a href="#s-about" class="ml-4 mr-4 text-white hover:text-pink font-bold">Для кого</a>
+						<a href="#s-education" class="ml-4 mr-4 text-white hover:text-pink font-bold">Что получишь</a>
+						<a href="#s-testimonials" class="ml-4 mr-4 text-white hover:text-pink font-bold">Отзывы</a>
+						<a href="#s-curriculum" class="ml-4 mr-4 text-white hover:text-pink font-bold">Программа курса</a>
+						<a href="#s-price" class="ml-4 mr-4 text-white hover:text-pink font-bold">Стоимость</a>
+					</nav>
+				</div><!-- /.header-menu -->
+				<div class="header-actions flex items-center">
+					<button class="profile hidden xs:flex items-center">
+						<svg class="profile-icon w-8 h-8 text-purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs/><path d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24zM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8zM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0z" fill="currentColor"/></svg>
+						<span class="profile-text relative ml-2 text-white text-[14px] md:text-xs font-bold">Войти</span>
+					</button>
+					<button class="!hidden md:!flex order btn btn-pink !h-16 ml-6 2xl:ml-12" @click="showModal = true">Купить курс</button>
+					<button id="burgerMenu" class="flex 2xl:hidden ml-4 text-white hover:text-pink transition">
+						<span class="sr-only">Открыть меню</span>
+						<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</div><!-- /.header-actions -->
+			</div><!-- /.header-inner -->
+		</div><!-- /.container -->
+	</header>
+
+	<!-- Heroes -->
+	<div class="container h-full">
+		<div class="s-heroes-inner relative z-10 h-full flex flex-col lg:flex-row items-start lg:items-center justify-between pt-24 md:pt-36 pb-16">
+			<div class="s-heroes-content">
+				<div class="inline-block mb-6 py-3 md:py-4 px-4 md:px-6 rounded-[6px] bg-purple/10 text-white text-[14px] md:text-xs 2xl:text-sm"><span class="font-bold">16 уроков</span> общей продолжительностью <span class="font-bold">3 часа</span></div>
+				<h1 class="mb-6 text-white text-[52px] leading-[1.1em] sm:text-2xl 2xl:text-3xl font-black"><span class="text-pink">Solid Code</span><br class="block md:hidden lg:block"> в Laravel</h1>
+				<p class="mb-8 text-white text-xs md:text-sm 2xl:text-md">Видеокурс по изучению принципов программирования</p>
+				<div class="flex flex-wrap flex-col 2xl:flex-row">
+					<div class="flex items-center 2xl:mr-10 mb-2 2xl:mb-0">
+						<svg class="shrink-0 w-6 xs:w-8 h-6 xs:h-8 text-purple" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16 1C7.72809 1 1 7.72809 1 16C1 24.2719 7.72809 31 16 31C24.2719 31 31 24.2719 31 16C31 7.72809 24.2719 1 16 1ZM12.087 22.5217V9.47826L23.1739 16L12.087 22.5217Z"/>
+						</svg>
+						<span class="ml-3 text-white text-[15px] xs:text-xs">В стоимость входит 16 уроков</span>
+					</div>
+					<div class="flex items-center">
+						<svg class="shrink-0 w-6 xs:w-8 h-6 xs:h-8 text-purple" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16 1C7.72848 1 1 7.72848 1 16C1 24.2715 7.72848 31 16 31C24.2715 31 31 24.2715 31 16C31 7.72848 24.2715 1 16 1ZM16 17.9565C15.6987 17.9565 15.4163 17.8828 15.1613 17.7609L11.2437 21.6785C11.1165 21.8057 10.9496 21.8696 10.7826 21.8696C10.6157 21.8696 10.4487 21.8057 10.3215 21.6785C10.0665 21.4235 10.0665 21.0113 10.3215 20.7563L14.2391 16.8387C14.1172 16.5837 14.0435 16.3013 14.0435 16C14.0435 15.1496 14.5893 14.4328 15.3478 14.1635V4.91304C15.3478 4.55239 15.6393 4.26087 16 4.26087C16.3607 4.26087 16.6522 4.55239 16.6522 4.91304V14.1635C17.4107 14.4328 17.9565 15.1496 17.9565 16C17.9565 17.0807 17.0807 17.9565 16 17.9565Z"/>
+						</svg>
+						<span class="ml-3 text-white text-[15px] xs:text-xs">Продолжительность курса 3 часа</span>
+					</div>
+				</div>
+			</div><!-- /.s-heroes-content -->
+			<div class="s-heroes-form w-full lg:w-auto mt-12 lg:mt-0">
+				<div class="s-heroes-form-inner p-7 sm:p-10 2xl:p-12 rounded-left-lg bg-purple">
+					<div class="flex items-center mb-4">
+						<h2 class="mb-0 text-white text-lg 2xl:text-[32px] font-black">Оплати курс по скидке сейчас</h2>
+						<img class="w-8 sm:w-12 2xl:w-16 h-8 sm:h-12 2xl:h-16 ml-4" src="./images/emoji/fire.png" alt="Оплати курс по скидке сейчас">
+					</div>
+					<p class="mb-8 text-white text-xs md:text-sm">Успей купить курс за выгодную цену.</p>
+					<form class="form">
+						<input class="form-control mb-4 sm:mb-8" type="email" placeholder="E-mail адресс" required>
+						<div class="flex flex-col sm:flex-row sm:items-center">
+							<button class="btn btn-pink" type="submit">Купить сейчас</button>
+							<div class="hidden sm:inline-block w-[3px] h-[48px] mx-6 2xl:mx-10 rounded-[6px] bg-white/[0.15]"></div>
+							<div class="price mt-6 sm:mt-0">
+								<div class="price-title text-white text-xs md:text-sm">Цена за курс</div>
+								<div class="price-offer">
+									<ins class="text-white text-[32px] sm:text-lg 2xl:text-[42px] font-black no-underline">2990 ₽</ins>
+									<del class="ml-2 2xl:ml-6 text-white text-[32px] sm:text-lg 2xl:text-[42px] font-black opacity-25">5990 ₽</del>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div><!-- /.s-heroes-form -->
+		</div><!-- /.s-heroes-inner -->
+	</div><!-- /.container -->
+	<div class="s-heroes-photo">
+		<img class="w-full h-full object-cover" src="./images/heroes-photo.png" alt="Solid Code в Laravel">
+	</div><!-- /.s-heroes-photo -->
+</section>
+
+<!-- Section: Intro -->
+<section id="s-intro" class="s-intro mt-16 sm:mt-24 xl:mt-40">
+	<div class="container">
+		<div class="s-intro-inner overflow-hidden relative z-[2] h-[360px] xl:h-[570px] rounded-left-xl bg-darkblue">
+			<div class="s-intro-content relative z-[2] flex flex-col items-center justify-center max-w-[740px] h-full mx-auto px-6">
+				<div class="mb-8">
+					<a href="#" class="inline-flex items-center justify-center w-20 xl:w-24 h-20 xl:h-24 rounded-left-lg shadow-[0_0_0_6px_rgba(255,255,255,0.05)] lg:shadow-[0_0_0_10px_rgba(255,255,255,0.05)] bg-pink hover:bg-purple active:shadow-[0_0_0_6px_rgba(255,255,255,0.05)]">
+						<svg class="w-6 lg:w-8 h-6 lg:h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_99_32)">
+								<path d="M28.7858 18.4795L6.16183 31.6066C4.24183 32.7195 1.77783 31.3719 1.77783 29.1284V2.87413C1.77783 0.634126 4.23828 -0.716985 6.16183 0.399459L28.7858 13.5266C29.2226 13.7759 29.5856 14.1363 29.8382 14.5712C30.0907 15.0061 30.2237 15.5001 30.2237 16.003C30.2237 16.5059 30.0907 16.9999 29.8382 17.4348C29.5856 17.8697 29.2226 18.2301 28.7858 18.4795Z" fill="white"/>
+							</g>
+							<defs>
+								<clipPath id="clip0_99_32">
+									<rect width="32" height="32" fill="white"/>
+								</clipPath>
+							</defs>
+						</svg>
+					</a>
+				</div>
+				<h2 class="mb-4 xl:mb-8 text-white text-lg sm:text-xl xl:text-2xl font-black text-center">Коротко о курсе</h2>
+				<p class="mb-0 text-white text-xs sm:text-sm xl:text-md text-center">Меня зовут Данил, я уже 11 лет занимаюсь web-разработкой, из них 6 лет использую Laravel</p>
+			</div>
+			<div class="absolute inset-0 z-[1] bg-darkblue/[0.85]"></div>
+			<img class="absolute inset-0 -z-[1] h-full w-full object-cover" src="./images/intro-bg.jpg" alt="Коротко о курсе">
+		</div>
+	</div><!--/.container -->
+</section>
+
+<!-- Section: About -->
+<section id="s-about" class="s-about mt-16 sm:mt-24">
+	<div class="container">
+		<div class="s-about-inner flex flex-col lg:flex-row">
+			<div class="s-about-content">
+				<div class="flex items-center mb-4 2xl:mb-8 2xl:pt-16">
+					<h2 class="text-dark text-lg sm:text-xl xl:text-[48px] 2xl:text-2xl font-black">Что такое SOLID?</h2>
+					<img class="w-8 sm:w-12 2xl:w-16 h-8 sm:h-12 2xl:h-16 ml-4 xl:ml-6" src="./images/emoji/thinking-face.png" alt="Что такое SOLID?">
+				</div>
+				<div class="w-[100px] h-[3px] mb-6 2xl:mb-8 rounded-[3px] bg-purple"></div>
+				<div class="text-xs sm:text-sm 2xl:text-md">
+					<p>Принципы SOLID — это стандарт программирования, который все разработчики должны хорошо понимать, чтобы избегать создания плохой архитектуры. Этот стандарт широко используется в ООП. Если применять его правильно, он делает код более расширяемым, логичным и читабельным. Когда разработчик создает приложение, руководствуясь плохой архитектурой, код получается негибким, даже небольшие изменения в нём могут сделать приложение не работоспособным. Поэтому нужно следовать принципам SOLID.</p>
+				</div>
+			</div><!-- /.s-about-content -->
+			<div class="s-about-image shrink-0 mt-10 lg:mt-0 lg:pl-10 2xl:pr-[50px]">
+				<img class="md:w-[420px] xl:w-[560px] mx-auto" src="./images/chair-man.png" alt="Что такое SOLID?">
+			</div><!-- /.s-about-image -->
+		</div><!-- /.s-about-inner -->
+		<div class="s-about-cards flex flex-wrap lg:flex-nowrap mt-8 lg:-mx-5">
+			<div class="lg:basis-1/2 lg:shrink-0 relative xl:-top-16 2xl:-top-24 mb-10 lg:mb-0 lg:px-5">
+				<div class="p-7 sm:p-10 2xl:p-12 rounded-right-lg shadow-[0_5px_0_0_rgba(120,67,233,0.1)] bg-purple">
+					<h3 class="mb-4 sm:mb-6 lg:mb-8 text-white text-md sm:text-lg 2xl:text-xl font-black">Для кого этот курс?</h3>
+					<p class="mb-0 text-white text-xs sm:text-sm 2xl:text-md">Для Laravel разработчиков уровней junior и middle, а также разработчиков, работающих на других языках программирования, которые хотят получить систематизированные знания по SOLID и овладеть практическими навыками современной разработки. Просто в видеоуроках будет использоваться фреймворк Laravel.</p>
+				</div>
+			</div>
+			<div class="lg:basis-1/2 lg:shrink-0 lg:px-5">
+				<div class="p-7 sm:p-10 2xl:p-12 rounded-left-lg shadow-[0_5px_0_0_rgba(236,65,118,0.1)] bg-pink">
+					<h3 class="mb-4 sm:mb-6 lg:mb-8 text-white text-md sm:text-lg 2xl:text-xl font-black">Какие знания потребуются?</h3>
+					<p class="mb-0 text-white text-xs sm:text-sm 2xl:text-md">Базовые навыки программирования на любом языке. Даже если Вы совсем начинающий разработчик - изучить правильную архитектуру в самом начале будет залогом быстрого прогресса в дальнейшем!</p>
+				</div>
+			</div>
+		</div><!-- /.s-about-cards -->
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Education -->
+<section id="s-education" class="s-education mt-16 sm:mt-24">
+	<div class="container">
+		<h2 class="mb-8 sm:mb-16 text-dark text-lg xs:text-xl xl:text-[48px] 2xl:text-2xl font-black text-center">После обучения вы сможете</h2>
+		<div class="s-education-adv flex flex-wrap xs:-m-5">
+			<div class="s-education-adv-item flex-grow xs:basis-1/2 lg:basis-1/4 mb-5 2xl:mb-0 xs:p-5">
+				<div class="flex items-center justify-center w-16 xl:w-24 h-16 xl:h-24 mx-auto mb-4 xl:mb-6 rounded-left-sm shadow-[0_5px_0_0_rgba(0,0,0,0.05)] bg-white text-center">
+					<img class="w-8 xl:w-12 h-8 xl:h-12" src="./images/icons/book.svg" alt="Писать собственные библиотеки">
+				</div>
+				<div class="text-gray text-xs sm:text-sm md:text-md 2xl:text-lg font-semibold text-center">Писать собственные библиотеки</div>
+			</div><!-- /.s-education-adv-item -->
+			<div class="s-education-adv-item flex-grow xs:basis-1/2 lg:basis-1/4 mb-5 2xl:mb-0 xs:p-5">
+				<div class="flex items-center justify-center w-16 xl:w-24 h-16 xl:h-24 mx-auto mb-4 xl:mb-6 rounded-left-sm shadow-[0_5px_0_0_rgba(0,0,0,0.05)] bg-white text-center">
+					<img class="w-8 xl:w-12 h-8 xl:h-12" src="./images/icons/tests.svg" alt="Покрывать код тестами">
+				</div>
+				<div class="text-gray text-xs sm:text-sm md:text-md 2xl:text-lg font-semibold text-center">Покрывать код тестами</div>
+			</div><!-- /.s-education-adv-item -->
+			<div class="s-education-adv-item flex-grow xs:basis-1/2 lg:basis-1/4 mb-5 2xl:mb-0 xs:p-5">
+				<div class="flex items-center justify-center w-16 xl:w-24 h-16 xl:h-24 mx-auto mb-4 xl:mb-6 rounded-left-sm shadow-[0_5px_0_0_rgba(0,0,0,0.05)] bg-white text-center">
+					<img class="w-8 xl:w-12 h-8 xl:h-12" src="./images/icons/team.svg" alt="Писать код в команде">
+				</div>
+				<div class="text-gray text-xs sm:text-sm md:text-md 2xl:text-lg font-semibold text-center">Писать код в команде</div>
+			</div><!-- /.s-education-adv-item -->
+			<div class="s-education-adv-item flex-grow xs:basis-1/2 lg:basis-1/4 mb-5 2xl:mb-0 xs:p-5">
+				<div class="flex items-center justify-center w-16 xl:w-24 h-16 xl:h-24 mx-auto mb-4 xl:mb-6 rounded-left-sm shadow-[0_5px_0_0_rgba(0,0,0,0.05)] bg-white text-center">
+					<img class="w-8 xl:w-12 h-8 xl:h-12" src="./images/icons/project.svg" alt="Правильно проектировать приложение">
+				</div>
+				<div class="text-gray text-xs sm:text-sm md:text-md 2xl:text-lg font-semibold text-center">Правильно проектировать приложение</div>
+			</div><!-- /.s-education-adv-item -->
+		</div><!-- /.s-education-adv -->
+
+		<!-- Tabs -->
+		<div x-data="tabs()">
+			<div class="flex justify-center items-center mt-12 lg:mt-16">
+				<ul class="inline-flex flex-col sm:flex-row overflow-hidden pb-1 rounded-md">
+					<template x-for="(tab, index) in tabs" :key="index">
+						<li class="cursor-pointer min-w-[240px] lg:min-w-[300px] py-4 lg:py-6 px-6 lg:px-8 shadow-[0_4px_0_0_rgba(0,0,0,0.05)] bg-white text-dark text-xs xl:text-sm font-bold text-center transition"
+							:class="activeTab===index ? 'bg-purple !text-white' : ''" @click="activeTab = index"
+							x-text="tab"></li>
+					</template>
+				</ul>
+			</div>
+			<div class="max-w-[1260px] my-6 xl:my-12 mx-auto">
+				<div x-show="activeTab===0" class="text-gray text-xs sm:text-sm xl:text-md text-center">
+					<p class="mb-4">Основная мысль в том что это 5 принципов и в целом принципы которые тут изложенны это фундамент для разработчика, они не являются законами но помогают делать качественные проекты за которые не стыдно, которые проходят проверку времени! Знание принципов и шаблонов проектирование это мост между новичком и профессионалом! Такой код проще поддерживать работая в команде! Его легче в будущем расширять и модернизировать.</p>
+					<p>На любом себеседовании в серьёзную фирму на зарплату более 150 т.р. у Вас обязательно попросят рассказать принципы SOLID. А общаясь в комьюнити Laravel не зная принципов хорошей архитектуры приложений, Вам будет очень сложно завоевать авторитет!</p>
+				</div>
+				<div x-show="activeTab===1" class="text-gray text-xs sm:text-sm xl:text-md text-center">
+					<p class="mb-4">Можно проходить обучение принципам SOLID для любого языка программирования, но в данном курсе мы будем разбирать все принципы применительно к Laravel.</p>
+					<p>Для более продуктивного изучения материала предусмотрена возможность задать возникающие вопросы автору по ходу изучения курса.</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function tabs() {
+				return {
+					activeTab: 0,
+					tabs: [
+						"Что даст вам этот курс?",
+						"Особенности курса",
+					]
+				};
+			};
+		</script>
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: CTA -->
+<section class="s-cta mt-16 sm:mt-24">
+	<div class="container">
+		<div class="s-cta-inner overflow-hidden relative z-10 flex flex-col lg:flex-row items-center md:items-start lg:items-center lg:justify-between p-8 md:p-10 2xl:p-16 rounded-right-xl bg-darkblue">
+			<div class="s-cta-text lg:basis-[580px] text-center md:text-left">
+				<h2 class="mb-3 xl:mb-6 text-white text-lg 2xl:text-xl font-black">Купи курс за супер-скидкой и ...</h2>
+				<p class="text-white text-xs 2xl:text-md">Начни больше понимать в разговорах разработчиков со стажем и не выглядеть “зеленым юнцом”</p>
+			</div><!-- /.s-cta-text -->
+			<div class="s-cta-offer shrink-0 mt-12 lg:mt-0 lg:pl-16">
+				<div class="flex flex-col md:flex-row md:items-center">
+					<div class="relative">
+						<img class="absolute -top-[20px] lg:-top-[32px] 2xl:-top-[50px] -left-[13px] lg:-left-[20px] 2xl:-left-[25px] z-10 pointer-events-none select-none w-8 lg:w-12 2xl:w-16 h-8 lg:h-12 2xl:h-16 rotate-[-15deg]" src="./images/emoji/thumbs-up.png" alt="Купить курс за выгодной ценой">
+						<button class="btn btn-pink" @click="showModal = true">Купить курс за выгодной ценой</button>
+					</div>
+					<div class="hidden md:inline-block w-[3px] h-[48px] mx-6 2xl:mx-10 rounded-[6px] bg-white/[0.15]"></div>
+					<div class="price mt-6 md:mt-0 text-center md:text-left">
+						<div class="price-title text-white text-xs md:text-sm">Цена за курс</div>
+						<div class="price-offer">
+							<ins class="text-white text-xl md:text-lg 2xl:text-[42px] font-black no-underline">2990 ₽</ins>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.s-cta-offer -->
+			<div class="s-cta-watermarks -z-10 opacity-5 pointer-events-none select-none">
+				<img class="absolute -top-[50px] sm:-top-[100px] -left-[80px] w-[260px] sm:w-[325px]" src="./images/watermark.svg" alt="CutCode">
+				<img class="absolute -bottom-[80px] sm:-bottom-[120px] -right-[40px] w-[260px] sm:w-[325px]" src="./images/watermark.svg" alt="CutCode">
+			</div><!-- /.s-cta-watermarks -->
+		</div><!-- /.s-cta-inner -->
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Author -->
+<section class="s-author mt-16 sm:mt-24">
+	<div class="container">
+		<div class="s-author-inner flex flex-col lg:flex-row lg:items-center">
+			<div class="s-author-image shrink-0">
+				<img class="w-[320px] lg:w-[420px] xl:w-[540px] 2xl:w-[610px] rounded-left-xl shadow-[15px_15px_0_#EC4176] lg:shadow-[30px_30px_0_#EC4176]" src="./images/author.jpg" alt="Об авторе">
+			</div><!-- /.s-author-image -->
+			<div class="s-author-content mt-12 lg:mt-0 lg:pl-24 xl:pl-[130px] xl:pr-10">
+				<div class="flex items-center mb-4 2xl:mb-8 2xl:pt-16">
+					<h2 class="text-dark text-lg xs:text-xl xl:text-[48px] 2xl:text-2xl font-black">Об авторе</h2>
+					<img class="w-8 sm:w-12 2xl:w-16 h-8 sm:h-12 2xl:h-16 ml-4 xl:ml-6" src="./images/emoji/eyes.png" alt="Об авторе">
+				</div>
+				<div class="text-gray text-xs sm:text-sm 2xl:text-md">
+					<p>Меня зовут Данил, я уже 11 лет занимаюсь web-разработкой, из них 6 лет использую Laravel.</p>
+					<p>За это время создал более 50 больших проектов.</p>
+					<p>Заметив отсутствие в русскоязычном сегменте качественных уроков по Laravel, в начале 2021 года решил попробовать себя в качестве учителя и создал канал с обучением — <a class="text-pink hover:text-purple font-bold" href="https://youtube.com/c/cutcoderu" target="_blank" rel="noopener nofollow">youtube.com/c/cutcoderu</a>.</p>
+				</div>
+			</div><!-- /.s-author-content -->
+		</div><!-- /.s-author-inner -->
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Vacancies -->
+<section class="s-vacancies mt-16 sm:mt-24 xl:mt-40">
+	<div class="container">
+		<div class="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
+			<h2 class="max-w-[1130px] mb-0 pr-0 lg:pr-8 text-dark text-lg md:text-xl xl:text-[48px] 2xl:text-2xl font-black">Хотите получить должность старшего разработчика <span class="text-pink">Laravel?</span></h2>
+			<img class="w-12 md:w-16 lg:w-24 xl:w-32 h-12 md:h-16 lg:h-24 xl:h-32 ml-0 lg:ml-4 xl:ml-6 mb-4 lg:mb-0" src="./images/emoji/man-pc.png" alt="Хотите получить должность старшего разработчика Laravel?">
+		</div>
+		<div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-4 xl:mt-8">
+			<div class="max-w-[1130px] pr-0 lg:pr-8 text-dark text-xs sm:text-sm xl:text-md">
+				<p class="mb-2 xl:mb-4">Тогда вам нужно овладеть принципами разработки приложений SOLID.</p>
+				<p>Вот лишь несколько примеров объявлений о вакансиях Laravel-разработчиков:</p>
+			</div>
+			<div class="s-vacancies-slider-arrows swiper-arrows-purple shrink-0 lg:self-end mt-6 lg:mt-0">
+				<button class="swiper-button-prev btn">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C11.9024 4.68342 11.9024 5.31658 12.2929 5.70711L18.5858 12L12.2929 18.2929C11.9024 18.6834 11.9024 19.3166 12.2929 19.7071C12.6834 20.0976 13.3166 20.0976 13.7071 19.7071L20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L13.7071 4.29289C13.3166 3.90237 12.6834 3.90237 12.2929 4.29289Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 11.4477 20.5523 11 20 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H20C20.5523 13 21 12.5523 21 12Z"/>
+					</svg>
+				</button>
+				<button class="swiper-button-next btn">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C11.9024 4.68342 11.9024 5.31658 12.2929 5.70711L18.5858 12L12.2929 18.2929C11.9024 18.6834 11.9024 19.3166 12.2929 19.7071C12.6834 20.0976 13.3166 20.0976 13.7071 19.7071L20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L13.7071 4.29289C13.3166 3.90237 12.6834 3.90237 12.2929 4.29289Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 11.4477 20.5523 11 20 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H20C20.5523 13 21 12.5523 21 12Z"/>
+					</svg>
+				</button>
+			</div><!-- /.s-vacancies-slider-arrows -->
+		</div>
+
+		<!-- Vacanies slider -->
+		<div class="s-vacancies-slider swiper mt-12 lg:mt-16">
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class="s-vacancies-item relative p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="sm:absolute sm:top-[32px] sm:right-[48px] overflow-hidden w-[60px] sm:w-[80px] md:w-[100px] h-[60px] sm:h-[80px] md:h-[100px] mb-4 lg:mb-0 rounded-[50%] object-cover">
+							<img class="w-full h-full" src="./images/habr.png" alt="Хабр Карьера">
+						</div>
+						<div class="sm:pr-28 md:pr-32">
+							<h5 class="mb-2 md:mb-4 text-darkblue text-sm sm:text-md lg:text-lg font-black">Fullstack — разработчик Laravel / Vue</h5>
+							<div class="text-[#878787] text-xs sm:text-sm lg:text-md tracking-[0.03em]">от <span class="text-purple font-black">100 000 ₽</span> до <span class="text-purple font-black">200 000 ₽</span></div>
+						</div>
+						<div class="mt-3 md:mt-7">
+							<div class="mb-2 text-[14px] sm:text-xs">Требования:</div>
+							<div class="relative flex items-center overflow-hidden after:absolute after:top-0 after:right-0 after:block after:w-[60px] sm:after:w-[100px] after:h-full after:bg-gradient-to-r after:from-transparent after:to-white">
+								<div class="py-2 px-4 rounded-[40px] border border-pink bg-white text-pink text-[12px] sm:text-[14px] font-semibold leading-none whitespace-nowrap">Понимание принципов SOLID</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Опыт разработки на PHP</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Опыт работы с бэкэндом на Laravel</div>
+							</div>
+						</div>
+						<div class="mt-6 md:mt-8 2xl:mt-12">
+							<a href="#" class="inline-flex items-center text-darkblue hover:text-pink" target="_blank" rel="noopener nofollow">
+								<svg class="w-5 h-5" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_42_543)">
+										<path d="M16.875 13H15.625C15.4592 13 15.3003 13.0658 15.1831 13.1831C15.0658 13.3003 15 13.4592 15 13.625V18H2.5V5.5H8.125C8.29076 5.5 8.44973 5.43415 8.56694 5.31694C8.68415 5.19973 8.75 5.04076 8.75 4.875V3.625C8.75 3.45924 8.68415 3.30027 8.56694 3.18306C8.44973 3.06585 8.29076 3 8.125 3H1.875C1.37772 3 0.900806 3.19754 0.549175 3.54917C0.197544 3.90081 0 4.37772 0 4.875L0 18.625C0 19.1223 0.197544 19.5992 0.549175 19.9508C0.900806 20.3025 1.37772 20.5 1.875 20.5H15.625C16.1223 20.5 16.5992 20.3025 16.9508 19.9508C17.3025 19.5992 17.5 19.1223 17.5 18.625V13.625C17.5 13.4592 17.4342 13.3003 17.3169 13.1831C17.1997 13.0658 17.0408 13 16.875 13ZM19.0625 0.5H14.0625C13.2277 0.5 12.8105 1.51211 13.3984 2.10156L14.7941 3.49727L5.27344 13.0145C5.18604 13.1015 5.11669 13.205 5.06937 13.319C5.02206 13.433 4.9977 13.5551 4.9977 13.6785C4.9977 13.8019 5.02206 13.9241 5.06937 14.038C5.11669 14.152 5.18604 14.2555 5.27344 14.3426L6.15898 15.2266C6.24608 15.314 6.34957 15.3833 6.46353 15.4306C6.57748 15.4779 6.69966 15.5023 6.82305 15.5023C6.94643 15.5023 7.06861 15.4779 7.18256 15.4306C7.29652 15.3833 7.40001 15.314 7.48711 15.2266L17.0031 5.70781L18.3984 7.10156C18.9844 7.6875 20 7.27734 20 6.4375V1.4375C20 1.18886 19.9012 0.950403 19.7254 0.774587C19.5496 0.598772 19.3111 0.5 19.0625 0.5V0.5Z"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_42_543">
+										<rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span class="ml-3 text-[14px] sm:text-xs font-semibold">Посмотреть вакансию</span>
+							</a>
+						</div>
+					</div><!-- /.s-vacancies-item -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="s-vacancies-item relative p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="sm:absolute sm:top-[32px] sm:right-[48px] overflow-hidden w-[60px] sm:w-[80px] md:w-[100px] h-[60px] sm:h-[80px] md:h-[100px] mb-4 lg:mb-0 rounded-[50%] object-cover">
+							<img class="w-full h-full" src="./images/hh.png" alt="hh.ru">
+						</div>
+						<div class="sm:pr-28 md:pr-32">
+							<h5 class="mb-2 md:mb-4 text-darkblue text-sm sm:text-md lg:text-lg font-black">PHP-разработчик (удаленно)</h5>
+							<div class="text-[#878787] text-xs sm:text-sm lg:text-md tracking-[0.03em]">от <span class="text-purple font-black">200 000 ₽</span></div>
+						</div>
+						<div class="mt-3 md:mt-7">
+							<div class="mb-2 text-[14px] sm:text-xs">Требования:</div>
+							<div class="relative flex items-center overflow-hidden after:absolute after:top-0 after:right-0 after:block after:w-[60px] sm:after:w-[100px] after:h-full after:bg-gradient-to-r after:from-transparent after:to-white">
+								<div class="py-2 px-4 rounded-[40px] border border-pink bg-white text-pink text-[12px] sm:text-[14px] font-semibold leading-none whitespace-nowrap">Знание принципов SOLID и Clean Code</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Уверенная экспертиза в PHP</div>
+								<div class="ml-3 py-2 px-4 rounded-[40px] border border-[#E8E8E8] bg-white text-gray text-[12px] sm:text-[14px] leading-none whitespace-nowrap">Паттерны ООП</div>
+							</div>
+						</div>
+						<div class="mt-6 md:mt-8 2xl:mt-12">
+							<a href="#" class="inline-flex items-center text-darkblue hover:text-pink" target="_blank" rel="noopener nofollow">
+								<svg class="w-5 h-5" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_42_543)">
+										<path d="M16.875 13H15.625C15.4592 13 15.3003 13.0658 15.1831 13.1831C15.0658 13.3003 15 13.4592 15 13.625V18H2.5V5.5H8.125C8.29076 5.5 8.44973 5.43415 8.56694 5.31694C8.68415 5.19973 8.75 5.04076 8.75 4.875V3.625C8.75 3.45924 8.68415 3.30027 8.56694 3.18306C8.44973 3.06585 8.29076 3 8.125 3H1.875C1.37772 3 0.900806 3.19754 0.549175 3.54917C0.197544 3.90081 0 4.37772 0 4.875L0 18.625C0 19.1223 0.197544 19.5992 0.549175 19.9508C0.900806 20.3025 1.37772 20.5 1.875 20.5H15.625C16.1223 20.5 16.5992 20.3025 16.9508 19.9508C17.3025 19.5992 17.5 19.1223 17.5 18.625V13.625C17.5 13.4592 17.4342 13.3003 17.3169 13.1831C17.1997 13.0658 17.0408 13 16.875 13ZM19.0625 0.5H14.0625C13.2277 0.5 12.8105 1.51211 13.3984 2.10156L14.7941 3.49727L5.27344 13.0145C5.18604 13.1015 5.11669 13.205 5.06937 13.319C5.02206 13.433 4.9977 13.5551 4.9977 13.6785C4.9977 13.8019 5.02206 13.9241 5.06937 14.038C5.11669 14.152 5.18604 14.2555 5.27344 14.3426L6.15898 15.2266C6.24608 15.314 6.34957 15.3833 6.46353 15.4306C6.57748 15.4779 6.69966 15.5023 6.82305 15.5023C6.94643 15.5023 7.06861 15.4779 7.18256 15.4306C7.29652 15.3833 7.40001 15.314 7.48711 15.2266L17.0031 5.70781L18.3984 7.10156C18.9844 7.6875 20 7.27734 20 6.4375V1.4375C20 1.18886 19.9012 0.950403 19.7254 0.774587C19.5496 0.598772 19.3111 0.5 19.0625 0.5V0.5Z"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_42_543">
+										<rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span class="ml-3 text-[14px] sm:text-xs font-semibold">Посмотреть вакансию</span>
+							</a>
+						</div>
+					</div><!-- /.s-vacancies-item -->
+				</div><!-- /.swiper-slide -->
+			</div><!-- /.swiper-wrapper -->
+			<div class="swiper-pagination swiper-pagination-purple mt-12"></div>
+		</div>
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: CTA -->
+<section class="s-cta mt-16 sm:mt-24">
+	<div class="container">
+		<div class="s-cta-inner overflow-hidden relative z-10 flex flex-col lg:flex-row items-center md:items-start lg:items-center lg:justify-between p-8 md:p-10 2xl:p-16 rounded-right-xl bg-purple">
+			<div class="s-cta-text lg:basis-[580px] text-center md:text-left">
+				<h2 class="mb-3 xl:mb-6 text-white text-lg 2xl:text-xl font-black">Получи 3 урока за заявку</h2>
+				<p class="text-white text-xs 2xl:text-md">Оставь свой електронный адрес и получи от меня совершенно бесплатно 3 урока в подарок!</p>
+			</div><!-- /.s-cta-text -->
+			<div class="s-cta-offer shrink-0 mt-12 lg:mt-0 lg:pl-16">
+				<div class="flex flex-col md:flex-row md:items-center">
+					<div class="relative">
+						<img class="absolute -top-[20px] lg:-top-[32px] 2xl:-top-[40px] -left-[13px] lg:-left-[20px] 2xl:-left-[25px] z-10 pointer-events-none select-none w-8 lg:w-12 2xl:w-16 h-8 lg:h-12 2xl:h-16 rotate-[-15deg]" src="./images/emoji/gift.png" alt="Получи 3 урока за заявку">
+						<button class="btn btn-pink" @click="showModal2 = true">Оставить заявку и получить 3 урока</button>
+					</div>
+					<div class="hidden md:inline-block w-[3px] h-[48px] mx-6 2xl:mx-10 rounded-[6px] bg-white/[0.15]"></div>
+					<div class="price mt-6 md:mt-0 text-center md:text-left">
+						<div class="price-title text-white text-xs md:text-sm">Цена</div>
+						<div class="price-offer">
+							<ins class="text-white text-lg 2xl:text-[42px] font-black no-underline">Бесплатно</ins>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.s-cta-offer -->
+			<div class="s-cta-watermarks -z-10 opacity-10 pointer-events-none select-none">
+				<img class="absolute -top-[50px] sm:-top-[100px] -left-[80px] w-[260px] sm:w-[325px]" src="./images/watermark.svg" alt="CutCode">
+				<img class="absolute -bottom-[80px] sm:-bottom-[120px] -right-[40px] w-[260px] sm:w-[325px]" src="./images/watermark.svg" alt="CutCode">
+			</div><!-- /.s-cta-watermarks -->
+		</div><!-- /.s-cta-inner -->
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Testimonials -->
+<section id="s-testimonials" class="s-testimonials mt-16 sm:mt-24">
+	<div class="container">
+		<div class="flex flex-row justify-between items-center mt-4 xl:mt-8">
+			<h2 class="max-w-[1130px] mb-0 pr-4 lg:pr-8 text-dark text-lg md:text-xl xl:text-[48px] 2xl:text-2xl font-black"><span class="text-pink">Отзывы</span> о курсе</h2>
+			<div class="s-testimonials-slider-arrows swiper-arrows-pink shrink-0">
+				<button class="swiper-button-prev btn">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C11.9024 4.68342 11.9024 5.31658 12.2929 5.70711L18.5858 12L12.2929 18.2929C11.9024 18.6834 11.9024 19.3166 12.2929 19.7071C12.6834 20.0976 13.3166 20.0976 13.7071 19.7071L20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L13.7071 4.29289C13.3166 3.90237 12.6834 3.90237 12.2929 4.29289Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 11.4477 20.5523 11 20 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H20C20.5523 13 21 12.5523 21 12Z"/>
+					</svg>
+				</button>
+				<button class="swiper-button-next btn">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C11.9024 4.68342 11.9024 5.31658 12.2929 5.70711L18.5858 12L12.2929 18.2929C11.9024 18.6834 11.9024 19.3166 12.2929 19.7071C12.6834 20.0976 13.3166 20.0976 13.7071 19.7071L20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L13.7071 4.29289C13.3166 3.90237 12.6834 3.90237 12.2929 4.29289Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 11.4477 20.5523 11 20 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H20C20.5523 13 21 12.5523 21 12Z"/>
+					</svg>
+				</button>
+			</div><!-- /.s-testimonials-slider-arrows -->
+		</div>
+
+		<!-- Testimonials slider -->
+		<div class="s-testimonials-slider swiper mt-8 md:mt-12">
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide h-full">
+					<div class="s-testimonials-item relative flex flex-col justify-between h-full p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="text-gray text-xs lg:text-sm 2xl:text-md">
+							<p>CutCode помогли прямо из дома получать то, что нужно прогеру "как воздух": 1) Воочию видеть ПРОФИ своего дела и общаться с ними 2) почувствовать братско-сестринское плечо дизайнеров 3) увидеть даже в чатах просто адекватных людей 4) получить извне и изнутри заряд энтузиазма и 5) очень важно, получить прямые возможности для общения с спикерами.</p>
+						</div>
+						<div class="flex mt-4 md:mt-8">
+							<div class="overflow-hidden shrink-0 w-[60px] sm:w-[80px] xl:w-[100px] h-[60px] sm:h-[80px] xl:h-[100px] rounded-[50%] object-cover">
+								<img class="w-full h-full" src="./images/author.jpg" alt="Андрей Полторатских">
+							</div>
+							<div class="self-center ml-5 xl:ml-8">
+								<div class="text-purple text-xs sm:text-sm xl:text-md font-black leading-6">Андрей Полторатских</div>
+								<div class="mt-1 text-gray text-[14px] sm:text-xs xl:text-sm">г. Москва</div>
+							</div>
+						</div>
+					</div><!-- /.s-testimonials-item -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="s-testimonials-item relative flex flex-col justify-between h-full p-7 md:p-10 2xl:p-12 rounded-right-lg bg-white shadow-[0_5px_0_rgba(0,0,0,0.05)]">
+						<div class="text-gray text-xs lg:text-sm 2xl:text-md">
+							<p>Ребятки, вы знаете, как я вас обожаю и с каждым разом хочу все больше затискать в объятиях. Вы мега-крутые, поскольку постоянно объединяете самых лучших спикеров, которые поднимают очень важные темы. Для меня неделя интенсива значит больше, нежели 2 месяца на курсах.</p>
+						</div>
+						<div class="flex mt-4 md:mt-8">
+							<div class="overflow-hidden shrink-0 w-[60px] sm:w-[80px] xl:w-[100px] h-[60px] sm:h-[80px] xl:h-[100px] rounded-[50%] object-cover">
+								<img class="w-full h-full" src="./images/author.jpg" alt="Анна Бисерная">
+							</div>
+							<div class="self-center ml-5 xl:ml-8">
+								<div class="text-purple text-xs sm:text-sm xl:text-md font-black leading-6">Анна Бисерная</div>
+								<div class="mt-1 text-gray text-[14px] sm:text-xs xl:text-sm">г. Воронеж</div>
+							</div>
+						</div>
+					</div><!-- /.s-testimonials-item -->
+				</div><!-- /.swiper-slide -->
+			</div><!-- /.swiper-wrapper -->
+			<div class="swiper-pagination swiper-pagination-pink mt-12"></div>
+		</div>
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Curriculum -->
+<section id="s-curriculum" class="s-curriculum mt-16 sm:mt-24 xl:mt-40">
+	<div class="container">
+		<div class="max-w-[1130px] mx-auto text-center">
+			<h2 class="mb-4 xl:mb-8 text-dark text-lg xs:text-xl xl:text-2xl font-black"><span class="text-purple">Программа</span> курса</h2>
+			<p class="text-gray text-xs sm:text-sm xl:text-md">В процессе обучения ты получишь комплексные знания и навыки</p>
+		</div>
+
+		<!-- Curriculum list -->
+		<div class="s-curriculum-list space-y-5 xl:space-y-8 mt-12">
+			<div class="s-curriculum-item overflow-hidden rounded-[10px]">
+				<!-- Header -->
+				<div class="accordion-header cursor-pointer flex items-center justify-between h-auto sm:h-[72px] xl:h-[95px] py-4 sm:py-8 px-5 md:px-8 transition">
+					<h4 class="accordion-header-title text-xs sm:text-md xl:text-lg font-black">Вступление</h4>
+					<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+					</svg>
+				</div><!-- /.accordion-header-->
+				<!-- Content -->
+				<div class="accordion-content overflow-hidden max-h-0">
+					<div class="s-curriculum-lesson flex flex-wrap md:flex-nowrap items-center py-3 px-5 md:px-8 bg-white border-b border-[rgba(0,0,0,0.05)]">
+						<div class="basis-full md:basis-auto shrink-0 flex items-center min-w-[80px] mb-3 md:mb-0 text-purple">
+							<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.99 2.5C6.47 2.5 2 6.98 2 12.5C2 18.02 6.47 22.5 11.99 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 11.99 2.5ZM16 16.5C15.9075 16.5927 15.7976 16.6663 15.6766 16.7164C15.5557 16.7666 15.426 16.7924 15.295 16.7924C15.164 16.7924 15.0343 16.7666 14.9134 16.7164C14.7924 16.6663 14.6825 16.5927 14.59 16.5L11.3 13.21C11.2055 13.1174 11.1303 13.0069 11.0788 12.8851C11.0273 12.7632 11.0005 12.6323 11 12.5V8.5C11 7.95 11.45 7.5 12 7.5C12.55 7.5 13 7.95 13 8.5V12.09L16 15.09C16.39 15.48 16.39 16.11 16 16.5Z"/>
+							</svg>
+							<span class="ml-[10px] text-xs sm:text-sm font-semibold leading-none">2:08</span>
+						</div>
+						<div class="flex items-center w-full">
+							<span class="grow pr-3 md:px-3 text-gray text-xs sm:text-sm">Прежде чем мы начнем: что такое твердое и мои первые мысли</span>
+							<a href="#" class="flex items-center text-purple hover:text-pink">
+								<span class="hidden sm:block mr-[10px] text-xs font-semibold leading-none">Смотреть</span>
+								<svg class="w-[18px] h-[18px]" viewBox="0 0 18 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_140_68)">
+										<path d="M16.192 10.8947L3.466 18.2787C2.386 18.9047 1 18.1467 1 16.8847V2.1167C1 0.856696 2.384 0.0966958 3.466 0.724696L16.192 8.1087C16.4377 8.24894 16.6419 8.45167 16.7839 8.69631C16.926 8.94095 17.0008 9.21881 17.0008 9.5017C17.0008 9.78458 16.926 10.0624 16.7839 10.3071C16.6419 10.5517 16.4377 10.7544 16.192 10.8947Z"/>
+									</g>
+									<defs>
+										<clipPath id="clip0_140_68">
+											<rect width="18" height="18" fill="white" transform="translate(0 0.5)"/>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div><!-- /.s-curriculum-lesson -->
+				</div><!-- /.accordion-content -->
+			</div><!-- /.s-curriculum-item -->
+			<div class="s-curriculum-item overflow-hidden rounded-[10px]">
+				<!-- Header -->
+				<div class="accordion-header cursor-pointer flex items-center justify-between h-auto sm:h-[72px] xl:h-[95px] py-4 sm:py-8 px-5 md:px-8 transition">
+					<h4 class="accordion-header-title text-xs sm:text-md xl:text-lg font-black">SOLID принципы: один за другим с примерами</h4>
+					<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+					</svg>
+				</div><!-- /.accordion-header-->
+				<!-- Content -->
+				<div class="accordion-content overflow-hidden max-h-0">
+					<div class="s-curriculum-lesson flex flex-wrap md:flex-nowrap items-center py-3 px-5 md:px-8 bg-white border-b border-[rgba(0,0,0,0.05)]">
+						<div class="basis-full md:basis-auto shrink-0 flex items-center min-w-[80px] mb-3 md:mb-0 text-purple">
+							<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.99 2.5C6.47 2.5 2 6.98 2 12.5C2 18.02 6.47 22.5 11.99 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 11.99 2.5ZM16 16.5C15.9075 16.5927 15.7976 16.6663 15.6766 16.7164C15.5557 16.7666 15.426 16.7924 15.295 16.7924C15.164 16.7924 15.0343 16.7666 14.9134 16.7164C14.7924 16.6663 14.6825 16.5927 14.59 16.5L11.3 13.21C11.2055 13.1174 11.1303 13.0069 11.0788 12.8851C11.0273 12.7632 11.0005 12.6323 11 12.5V8.5C11 7.95 11.45 7.5 12 7.5C12.55 7.5 13 7.95 13 8.5V12.09L16 15.09C16.39 15.48 16.39 16.11 16 16.5Z"/>
+							</svg>
+							<span class="ml-[10px] text-xs sm:text-sm font-semibold leading-none">2:08</span>
+						</div>
+						<div class="flex items-center w-full">
+							<span class="grow pr-3 md:px-3 text-gray text-xs sm:text-sm"><b>S:</b> Принцип единственной ответственности - слишком большие методы</span>
+							<a href="#" class="flex items-center text-purple hover:text-pink">
+								<span class="hidden sm:block mr-[10px] text-xs font-semibold leading-none">Смотреть</span>
+								<svg class="w-[18px] h-[18px]" viewBox="0 0 18 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_140_68)">
+										<path d="M16.192 10.8947L3.466 18.2787C2.386 18.9047 1 18.1467 1 16.8847V2.1167C1 0.856696 2.384 0.0966958 3.466 0.724696L16.192 8.1087C16.4377 8.24894 16.6419 8.45167 16.7839 8.69631C16.926 8.94095 17.0008 9.21881 17.0008 9.5017C17.0008 9.78458 16.926 10.0624 16.7839 10.3071C16.6419 10.5517 16.4377 10.7544 16.192 10.8947Z"/>
+									</g>
+									<defs>
+										<clipPath id="clip0_140_68">
+											<rect width="18" height="18" fill="white" transform="translate(0 0.5)"/>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div><!-- /.s-curriculum-lesson -->
+					<div class="s-curriculum-lesson flex flex-wrap md:flex-nowrap items-center py-3 px-5 md:px-8 bg-white border-b border-[rgba(0,0,0,0.05)]">
+						<div class="basis-full md:basis-auto shrink-0 flex items-center min-w-[80px] mb-3 md:mb-0 text-purple">
+							<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.99 2.5C6.47 2.5 2 6.98 2 12.5C2 18.02 6.47 22.5 11.99 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 11.99 2.5ZM16 16.5C15.9075 16.5927 15.7976 16.6663 15.6766 16.7164C15.5557 16.7666 15.426 16.7924 15.295 16.7924C15.164 16.7924 15.0343 16.7666 14.9134 16.7164C14.7924 16.6663 14.6825 16.5927 14.59 16.5L11.3 13.21C11.2055 13.1174 11.1303 13.0069 11.0788 12.8851C11.0273 12.7632 11.0005 12.6323 11 12.5V8.5C11 7.95 11.45 7.5 12 7.5C12.55 7.5 13 7.95 13 8.5V12.09L16 15.09C16.39 15.48 16.39 16.11 16 16.5Z"/>
+							</svg>
+							<span class="ml-[10px] text-xs sm:text-sm font-semibold leading-none">2:08</span>
+						</div>
+						<div class="flex items-center w-full">
+							<span class="grow pr-3 md:px-3 text-gray text-xs sm:text-sm"><b>S:</b> Принцип единственной ответственности - слишком большие методы</span>
+							<a href="#" class="flex items-center text-purple hover:text-pink">
+								<span class="hidden sm:block mr-[10px] text-xs font-semibold leading-none">Смотреть</span>
+								<svg class="w-[18px] h-[18px]" viewBox="0 0 18 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_140_68)">
+										<path d="M16.192 10.8947L3.466 18.2787C2.386 18.9047 1 18.1467 1 16.8847V2.1167C1 0.856696 2.384 0.0966958 3.466 0.724696L16.192 8.1087C16.4377 8.24894 16.6419 8.45167 16.7839 8.69631C16.926 8.94095 17.0008 9.21881 17.0008 9.5017C17.0008 9.78458 16.926 10.0624 16.7839 10.3071C16.6419 10.5517 16.4377 10.7544 16.192 10.8947Z"/>
+									</g>
+									<defs>
+										<clipPath id="clip0_140_68">
+											<rect width="18" height="18" fill="white" transform="translate(0 0.5)"/>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div><!-- /.s-curriculum-lesson -->
+				</div><!-- /.accordion-content -->
+			</div><!-- /.s-curriculum-item -->
+		</div><!-- /.s-curriculum-list -->
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Achivement -->
+<section class="s-achivement mt-16 sm:mt-24 xl:mt-40 py-10 sm:py-16 xl:py-24 bg-gradient-to-r from-[#E1E6FF] to-[#F7E1FF]">
+	<div class="container">
+		<div class="flex flex-col xl:flex-row xl:items-center">
+			<div>
+				<div class="flex items-center mb-6 2xl:mb-12">
+					<h2 class="text-dark text-lg xs:text-xl xl:text-[48px] 2xl:text-2xl font-black">После курса ты</h2>
+					<img class="w-8 sm:w-12 2xl:w-16 h-8 sm:h-12 2xl:h-16 ml-4 xl:ml-6" src="./images/emoji/partying-face.png" alt="После курса ты">
+				</div>
+				<div class="space-y-4 md:space-y-6">
+					<div class="flex items-center">
+						<img class="shrink-0 w-6 md:w-8 h-6 md:h-8" src="./images/emoji/backhand-right.png" alt="После курса ты">
+						<span class="ml-4 md:ml-6 text-gray text-xs sm:text-sm xl:text-md">Получишь все необходимые знания для правильного старта в Laravel</span>
+					</div>
+					<div class="flex items-center">
+						<img class="shrink-0 w-6 md:w-8 h-6 md:h-8" src="./images/emoji/backhand-right.png" alt="После курса ты">
+						<span class="ml-4 md:ml-6 text-gray text-xs sm:text-sm xl:text-md">Получишь доступ ко всем материалам курса</span>
+					</div>
+					<div class="flex items-center">
+						<img class="shrink-0 w-6 md:w-8 h-6 md:h-8" src="./images/emoji/backhand-right.png" alt="После курса ты">
+						<span class="ml-4 md:ml-6 text-gray text-xs sm:text-sm xl:text-md">Получишь электронныей сертификат об обкончании курса</span>
+					</div>
+				</div>
+				<div class="mt-6 2xl:mt-12">
+					<div class="flex flex-col sm:flex-row sm:items-center">
+						<button class="btn btn-pink" @click="showModal = true">Хочу купить курс</button>
+						<div class="hidden sm:inline-block w-[3px] h-[48px] mx-6 xl:mx-10 rounded-[6px] bg-black/[0.15]"></div>
+						<div class="price mt-6 sm:mt-0 text-center sm:text-left">
+							<div class="price-title text-gray text-xs md:text-sm">Цена за курс</div>
+							<div class="price-offer">
+								<ins class="text-dark text-xl xl:text-[42px] font-black no-underline">2990 ₽</ins>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-6 sm:mt-12 xl:mt-0 xl:pl-[70px]">
+				<img class="w-full max-w-[740px]" src="./images/certificate.svg" alt="Сертификат CutCode">
+			</div>
+		</div>
+	</div><!--/.container -->
+</section>
+
+<!-- Section: FAQ -->
+<section class="s-faq mt-16 sm:mt-24 xl:mt-40">
+	<div class="container">
+		<div class="flex flex-col xl:flex-row">
+			<div class="2xl:basis-[610px] shrink-0 mb-8">
+				<h2 class="mb-4 md:mb-8 text-dark text-lg xs:text-xl 2xl:text-2xl font-black">Часто задаваемые <span class="text-pink">вопросы</span></h2>
+				<div class="text-gray text-xs sm:text-sm xl:text-md">
+					<p>Не нашёл ответ на свой вопрос?</p>
+					<p>Не стесняйся, спрашивай всё, что тебя интересует!</p>
+				</div>
+				<div class="mt-4 md:mt-8">
+					<a href="#" class="inline-flex items-center text-dark hover:text-[#40b3e0]" target="_blank" rel="nofollow noopener">
+						<img class="w-8 lg:w-12 h-8 lg:h-12" src="./images/icons/telegram.svg" alt="CutCode Telegram">
+						<span class="ml-2 xs:ml-4 text-[15px] xs:text-xs sm:text-sm 2xl:text-md font-semibold after:block after:border-b after:border-dashed after:border-[#C4C4C4]">Задать вопрос автору в Telegram</span>
+					</a>
+				</div>
+			</div>
+
+			<!-- FAQ list -->
+			<div class="s-faq-list space-y-4 xl:space-y-6 xl:pl-20">
+				<div class="s-faq-item">
+					<!-- Header -->
+					<div class="accordion-header accordion-header-pink cursor-pointer flex items-center justify-between h-auto sm:h-[72px] py-4 sm:py-8 px-5 md:px-8 rounded-[8px] transition">
+						<h4 class="accordion-header-title text-xs sm:text-sm font-black">Вступление</h4>
+						<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+						</svg>
+					</div><!-- /.accordion-header-->
+					<!-- Content -->
+					<div class="accordion-content overflow-hidden max-h-0">
+						<div class="pb-3 lg:pb-0 pt-3 lg:pt-6 px-5 md:px-8 text-gray text-xs md:text-sm">
+							<p>Конечно — курс рассчитан на абсолютных новичков. Но придётся постараться — читать дополнительную литературу, не пропускать занятия и вовремя выполнять практические работы. В остальном поможет CutCode — кураторы разберут домашние задания, помощники ответят на вопросы о процессе прохождения, а Центр карьеры займётся вашим трудоустройством.</p>
+						</div>
+					</div><!-- /.accordion-content -->
+				</div><!-- /.s-faq-item -->
+				<div class="s-faq-item">
+					<!-- Header -->
+					<div class="accordion-header accordion-header-pink cursor-pointer flex items-center justify-between h-auto sm:h-[72px] py-4 sm:py-8 px-5 md:px-8 rounded-[8px] transition">
+						<h4 class="accordion-header-title text-xs sm:text-sm font-black">Нужно ли знать математику?</h4>
+						<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+						</svg>
+					</div><!-- /.accordion-header-->
+					<!-- Content -->
+					<div class="accordion-content overflow-hidden max-h-0">
+						<div class="pb-3 lg:pb-0 pt-3 lg:pt-6 px-5 md:px-8 text-gray text-xs md:text-sm">
+							<p>Конечно — курс рассчитан на абсолютных новичков.</p>
+						</div>
+					</div><!-- /.accordion-content -->
+				</div><!-- /.s-faq-item -->
+				<div class="s-faq-item">
+					<!-- Header -->
+					<div class="accordion-header accordion-header-pink cursor-pointer flex items-center justify-between h-auto sm:h-[72px] py-4 sm:py-8 px-5 md:px-8 rounded-[8px] transition">
+						<h4 class="accordion-header-title text-xs sm:text-sm font-black">Сколько часов в неделю мне нужно будет уделять курсу?</h4>
+						<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+						</svg>
+					</div><!-- /.accordion-header-->
+					<!-- Content -->
+					<div class="accordion-content overflow-hidden max-h-0">
+						<div class="pb-3 lg:pb-0 pt-3 lg:pt-6 px-5 md:px-8 text-gray text-xs md:text-sm">
+							<p>Конечно — курс рассчитан на абсолютных новичков.</p>
+						</div>
+					</div><!-- /.accordion-content -->
+				</div><!-- /.s-faq-item -->
+				<div class="s-faq-item">
+					<!-- Header -->
+					<div class="accordion-header accordion-header-pink cursor-pointer flex items-center justify-between h-auto sm:h-[72px] py-4 sm:py-8 px-5 md:px-8 rounded-[8px] transition">
+						<h4 class="accordion-header-title text-xs sm:text-sm font-black">Будут ли бонусы за результаты на курсе?</h4>
+						<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+						</svg>
+					</div><!-- /.accordion-header-->
+					<!-- Content -->
+					<div class="accordion-content overflow-hidden max-h-0">
+						<div class="pb-3 lg:pb-0 pt-3 lg:pt-6 px-5 md:px-8 text-gray text-xs md:text-sm">
+							<p>Конечно — курс рассчитан на абсолютных новичков.</p>
+						</div>
+					</div><!-- /.accordion-content -->
+				</div><!-- /.s-faq-item -->
+				<div class="s-faq-item">
+					<!-- Header -->
+					<div class="accordion-header accordion-header-pink cursor-pointer flex items-center justify-between h-auto sm:h-[72px] py-4 sm:py-8 px-5 md:px-8 rounded-[8px] transition">
+						<h4 class="accordion-header-title text-xs sm:text-sm font-black">Действуют ли какие-нибудь программы рассрочки?</h4>
+						<svg class="accordion-header-icon transition" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.99997 3.07164C8.67174 3.07329 8.34799 3.14799 8.05222 3.29032C7.75644 3.43265 7.49606 3.63903 7.28997 3.89449L1.87711 10.4516C1.56082 10.8464 1.36178 11.3221 1.30267 11.8244C1.24357 12.3268 1.32678 12.8357 1.54282 13.2931C1.71804 13.6906 2.00398 14.0292 2.36648 14.2686C2.72898 14.508 3.15273 14.638 3.58711 14.6431H14.4128C14.8472 14.638 15.271 14.508 15.6335 14.2686C15.996 14.0292 16.2819 13.6906 16.4571 13.2931C16.6732 12.8357 16.7564 12.3268 16.6973 11.8244C16.6382 11.3221 16.4391 10.8464 16.1228 10.4516L10.71 3.89449C10.5039 3.63903 10.2435 3.43265 9.94772 3.29032C9.65194 3.14799 9.3282 3.07329 8.99997 3.07164Z"/>
+						</svg>
+					</div><!-- /.accordion-header-->
+					<!-- Content -->
+					<div class="accordion-content overflow-hidden max-h-0">
+						<div class="pb-3 lg:pb-0 pt-3 lg:pt-6 px-5 md:px-8 text-gray text-xs md:text-sm">
+							<p>Конечно — курс рассчитан на абсолютных новичков.</p>
+						</div>
+					</div><!-- /.accordion-content -->
+				</div><!-- /.s-faq-item -->
+			</div>
+		</div><!-- /.s-faq-list -->
+	</div><!-- /.container -->
+</section>
+
+<!-- Section: Price -->
+<section id="s-price" class="s-price relative z-10 overflow-hidden mt-16 sm:mt-24 xl:mt-40 py-10 sm:py-16 xl:py-24 bg-gradient-to-l from-[#5B35AD] to-darkblue">
+	<div class="container">
+		<div class="flex flex-col lg:flex-row justify-between">
+			<div class="shrink-0">
+				<h2 class="mb-8 xl:mb-12 text-white text-lg xs:text-xl 2xl:text-2xl font-black">Стоимость курса</h2>
+				<div class="price">
+					<div class="price-title text-white text-xs md:text-sm">Цена за курс для первых 30 студентов</div>
+					<div class="price-offer lg:mt-2 mt-1 xl:mt-6">
+						<ins class="text-white text-xl xl:text-2xl font-black no-underline">2990 ₽</ins>
+						<del class="ml-2 2xl:ml-6 text-white text-xl xl:text-2xl font-black opacity-25">5990 ₽</del>
+					</div>
+				</div>
+				<div class="mt-4 md:mt-8 xl:mt-10 space-y-3 xl:space-y-4">
+					<div class="flex items-center">
+						<svg class="shrink-0 w-6 xs:w-8 h-6 xs:h-8 text-pink" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16 1C7.72809 1 1 7.72809 1 16C1 24.2719 7.72809 31 16 31C24.2719 31 31 24.2719 31 16C31 7.72809 24.2719 1 16 1ZM12.087 22.5217V9.47826L23.1739 16L12.087 22.5217Z"/>
+						</svg>
+						<span class="ml-3 text-white text-[15px] xs:text-xs">В стоимость входит 16 уроков</span>
+					</div>
+					<div class="flex items-center">
+						<svg class="shrink-0 w-6 xs:w-8 h-6 xs:h-8 text-pink" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16 1C7.72848 1 1 7.72848 1 16C1 24.2715 7.72848 31 16 31C24.2715 31 31 24.2715 31 16C31 7.72848 24.2715 1 16 1ZM16 17.9565C15.6987 17.9565 15.4163 17.8828 15.1613 17.7609L11.2437 21.6785C11.1165 21.8057 10.9496 21.8696 10.7826 21.8696C10.6157 21.8696 10.4487 21.8057 10.3215 21.6785C10.0665 21.4235 10.0665 21.0113 10.3215 20.7563L14.2391 16.8387C14.1172 16.5837 14.0435 16.3013 14.0435 16C14.0435 15.1496 14.5893 14.4328 15.3478 14.1635V4.91304C15.3478 4.55239 15.6393 4.26087 16 4.26087C16.3607 4.26087 16.6522 4.55239 16.6522 4.91304V14.1635C17.4107 14.4328 17.9565 15.1496 17.9565 16C17.9565 17.0807 17.0807 17.9565 16 17.9565Z"/>
+						</svg>
+						<span class="ml-3 text-white text-[15px] xs:text-xs">Продолжительность курса 3 часа</span>
+					</div>
+				</div>
+				<div class="mt-8 xl:mt-12">
+					<button class="btn btn-pink" @click="showModal = true">Купить курс за выгодной ценой</button>
+				</div>
+			</div>
+
+			<!-- Timer -->
+			<div class="relative z-10 self-center w-full lg:w-[560px] 2xl:w-[830px] mt-12 sm:mt-8 lg:mt-0 sm:p-8 xl:p-12">
+				<div class="relative z-10 mb-4 sm:mb-8 sm:py-4 sm:px-8">
+					<h4 class="text-white text-xs sm:text-sm md:text-md 2xl:text-lg text-center">Поспеши оформить курс за выгодной ценой!</h4>
+					<div class="absolute inset-0 -z-10 hidden sm:block rounded-md bg-white/[0.1] backdrop-blur-[10px]"></div>
+				</div>
+				<div class="s-price-timer flex justify-center" data-deadline="2022-01-19">
+					<div class="s-price-timer-days basis-[54px] xs:basis-[60px] sm:basis-[70px] md:basis-[80px] 2xl:basis-[120px] shrink-0 text-center">
+						<div class="text-white text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]" id="s-price-timer-days">24</div>
+						<div class="text-white text-xs sm:text-sm md:text-md 2xl:text-[28px] font-bold leading-[1.3]">дней</div>
+					</div>
+					<div class="s-price-timer-colon mx-2 md:mx-4 2xl:mx-8 text-pink text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]">:</div>
+					<div class="s-price-timer-hours basis-[54px] xs:basis-[60px] sm:basis-[70px] md:basis-[80px] 2xl:basis-[120px] shrink-0 text-center">
+						<div class="text-white text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]" id="s-price-timer-hours">05</div>
+						<div class="text-white text-xs sm:text-sm md:text-md 2xl:text-[28px] font-bold leading-[1.3]">часов</div>
+					</div>
+					<div class="s-price-timer-colon mx-2 md:mx-4 2xl:mx-8 text-pink text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]">:</div>
+					<div class="s-price-timer-minutes basis-[54px] xs:basis-[60px] sm:basis-[70px] md:basis-[80px] 2xl:basis-[120px] shrink-0 text-center">
+						<div class="text-white text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]" id="s-price-timer-minutes">34</div>
+						<div class="text-white text-xs sm:text-sm md:text-md 2xl:text-[28px] font-bold leading-[1.3]">минут</div>
+					</div>
+					<div class="s-price-timer-colon mx-2 md:mx-4 2xl:mx-8 text-pink text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]">:</div>
+					<div class="s-price-timer-seconds basis-[54px] xs:basis-[60px] sm:basis-[70px] md:basis-[80px] 2xl:basis-[120px] shrink-0 text-center">
+						<div class="text-white text-xl md:text-2xl 2xl:text-[100px] font-black leading-[1.3]" id="s-price-timer-seconds">53</div>
+						<div class="text-white text-xs sm:text-sm md:text-md 2xl:text-[28px] font-bold leading-[1.3]">секунд</div>
+					</div>
+				</div>
+				<div class="absolute inset-0 -z-10 hidden sm:block rounded-[40px] bg-white/[0.03] backdrop-blur-[10px]"></div>
+			</div>
+		</div>
+	</div><!-- /.container -->
+	<img class="absolute -z-10 top-0 -right-[90px] w-[360px] sm:w-[750px] opacity-5 pointer-events-none select-none" src="./images/watermark.svg" alt="CutCode">
+</section>
+
+	<!-- Site footer -->
+	<footer class="footer py-8 sm:py-12 xl:py-16">
+		<div class="container">
+			<div class="flex flex-wrap lg:flex-nowrap items-center">
+				<div class="footer-logo order-0 basis-full sm:basis-1/2 lg:basis-1/3 shrink-0 text-center sm:text-left">
+					<a href="/" class="inline-block" rel="home">
+						<img src="./images/logo-dark.svg" class="w-[155px] h-[38px]" alt="CutCode">
+					</a>
+				</div><!-- /.footer-logo -->
+				<div class="footer-copyright order-2 lg:order-1 basis-full lg:basis-1/3 mt-8 lg:mt-0">
+					<div class="text-[#999] text-[14px] xs:text-xs sm:text-sm text-center">CutCode, 2021 © Все права защещены.</div>
+				</div><!-- /.footer-copyright -->
+				<div class="footer-social order-1 lg:order-2 basis-full sm:basis-1/2 lg:basis-1/3 mt-8 sm:mt-0">
+					<div class="flex flex-wrap items-center justify-center sm:justify-end space-x-6">
+						<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">
+							<img class="h-5 lg:h-6" src="./images/icons/youtube.svg" alt="YouTube">
+							<span class="ml-2 lg:ml-3 text-[14px] font-semibold">YouTube</span>
+						</a>
+						<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">
+							<img class="h-5 lg:h-6" src="./images/icons/telegram.svg" alt="Telegram">
+							<span class="ml-2 lg:ml-3 text-[14px] font-semibold">Telegram</span>
+						</a>
+					</div>
+				</div><!-- /.footer-social -->
+			</div>
+		</div><!-- /.container -->
+	</footer>
+
+	<div id="mobileMenu" class="hidden bg-white fixed inset-0 z-[9999]">
+	<div class="container">
+		<div class="mmenu-heading flex items-center pt-6 xl:pt-12">
+			<div class="shrink-0 grow">
+				<a href="/" rel="home">
+					<img src="./images/logo-dark.svg" class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]" alt="CutCode">
+				</a>
+			</div>
+			<div class="shrink-0 flex items-center">
+				<button id="closeMobileMenu" class="text-dark hover:text-purple transition">
+					<span class="sr-only">Закрыть меню</span>
+					<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+		</div><!-- /.mmenu-heading -->
+		<div class="mmenu-inner pt-10">
+			<div class="flex items-center">
+				<button class="order !h-16 mr-6 btn btn-pink" @click="showModal = true">Купить курс</button>
+				<button class="profile flex items-center mr-12">
+					<svg class="profile-icon w-8 h-8 text-purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs/><path d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24zM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8zM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0z" fill="currentColor"/></svg>
+					<span class="profile-text relative ml-2 text-dark font-bold">Войти</span>
+				</button>
+			</div>
+			<nav class="flex flex-col mt-8">
+				<a href="#s-intro" class="self-start py-1 text-dark hover:text-pink text-md font-bold">О курсе</a>
+				<a href="#s-about" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Для кого</a>
+				<a href="#s-education" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Что получишь</a>
+				<a href="#s-testimonials" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Отзывы</a>
+				<a href="#s-curriculum" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Программа курса</a>
+				<a href="#s-price" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Стоимость</a>
+			</nav>
+			<div class="flex flex-wrap items-center space-x-6 mt-8">
+				<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">
+					<img class="h-5 lg:h-6" src="./images/icons/youtube.svg" alt="YouTube">
+					<span class="ml-2 lg:ml-3 text-[14px] font-semibold">YouTube</span>
+				</a>
+				<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">
+					<img class="h-5 lg:h-6" src="./images/icons/telegram.svg" alt="Telegram">
+					<span class="ml-2 lg:ml-3 text-[14px] font-semibold">Telegram</span>
+				</a>
+			</div>
+		</div><!-- /.mmenu-inner -->
+	</div><!-- /.container -->
+</div>
+
+	<!-- Modal: Купить курс -->
+<div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal }">
+	<div class="modal-wrapper relative z-10 overflow-hidden max-w-[700px] p-7 md:p-10 2xl:p-12 mx-[10px] rounded-left-lg bg-purple" 
+			 x-show="showModal" 
+			 @click.away="showModal = false" 
+			 x-transition:enter="ease-out duration-300" 
+			 x-transition:enter-start="opacity-0 scale-90" 
+			 x-transition:enter-end="opacity-100 scale-100" 
+			 x-transition:leave="ease-in duration-300" 
+			 x-transition:leave-start="opacity-100 scale-100" 
+			 x-transition:leave-end="opacity-0 scale-90">
+		<!-- Content -->
+		<div class="modal-content relative">
+			<div class="flex items-center justify-between mb-4">
+				<h2 class="mb-0 pr-2 text-white text-lg 2xl:text-[32px] font-black">Купить курс</h2>
+				<button class="modal-close text-white hover:text-white/[0.5] transition" @click="showModal = false">
+					<span class="sr-only">Закрыть модальное окно</span>
+					<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<p class="mb-8 text-white text-xs md:text-sm">Введите свой E-mail адресс для подальшей оплаты и отправки квитанции об оплате за курс.</p>
+			<form class="form">
+				<input class="form-control mb-4 sm:mb-8" type="email" placeholder="E-mail адресс" required>
+				<div class="flex flex-col sm:flex-row sm:items-center">
+					<button class="btn btn-pink" type="submit">Следующий шаг &nbsp;&rarr;</button>
+					<div class="hidden sm:inline-block w-[3px] h-[48px] mx-6 2xl:mx-10 rounded-[6px] bg-white/[0.15]"></div>
+					<div class="price mt-6 sm:mt-0">
+						<div class="price-title text-white text-xs md:text-sm">Цена за курс</div>
+						<div class="price-offer">
+							<ins class="text-white text-[32px] sm:text-lg 2xl:text-[42px] font-black no-underline">2990 ₽</ins>
+							<del class="ml-2 2xl:ml-6 text-white text-[32px] sm:text-lg 2xl:text-[42px] font-black opacity-25">5990 ₽</del>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!-- /.modal-content -->
+		<img class="absolute -bottom-[80px] -right-[60px] -z-10 w-[320px] opacity-5" src="./images/watermark.svg" alt="CutCode">
+	</div><!-- /.modal-wrapper -->
+</div>
+
+<!-- Modal: Получи 3 урока за заявку -->
+<div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal2" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showModal2 }">
+	<div class="modal-wrapper relative z-10 overflow-hidden max-w-[700px] p-7 md:p-10 2xl:p-12 mx-[10px] rounded-left-lg bg-purple" 
+			 x-show="showModal2" 
+			 @click.away="showModal2 = false" 
+			 x-transition:enter="ease-out duration-300" 
+			 x-transition:enter-start="opacity-0 scale-90" 
+			 x-transition:enter-end="opacity-100 scale-100" 
+			 x-transition:leave="ease-in duration-300" 
+			 x-transition:leave-start="opacity-100 scale-100" 
+			 x-transition:leave-end="opacity-0 scale-90">
+		<!-- Content -->
+		<div class="modal-content relative">
+			<div class="flex items-center justify-between mb-4">
+				<h2 class="mb-0 pr-2 text-white text-lg 2xl:text-[32px] font-black">Получи 3 урока за заявку</h2>
+				<button class="modal-close text-white hover:text-white/[0.5] transition" @click="showModal2 = false">
+					<span class="sr-only">Закрыть модальное окно</span>
+					<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<p class="mb-8 text-white text-xs md:text-sm">Оставь свой електронный адрес и получи от меня совершенно бесплатно 3 урока в подарок!</p>
+			<form class="form">
+				<input class="form-control mb-4 sm:mb-8" type="email" placeholder="E-mail адресс" required>
+				<div class="flex flex-col sm:flex-row sm:items-center">
+					<button class="btn btn-pink" type="submit">Оставить заявку &nbsp;&rarr;</button>
+					<div class="hidden sm:inline-block w-[3px] h-[48px] mx-6 2xl:mx-10 rounded-[6px] bg-white/[0.15]"></div>
+					<div class="price mt-6 sm:mt-0">
+						<div class="price-title text-white text-xs md:text-sm">Цена</div>
+						<div class="price-offer">
+							<ins class="text-white text-lg 2xl:text-[42px] font-black no-underline">Бесплатно</ins>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!-- /.modal-content -->
+		<img class="absolute -bottom-[80px] -right-[60px] -z-10 w-[320px] opacity-5" src="./images/watermark.svg" alt="CutCode">
+	</div><!-- /.modal-wrapper -->
+</div>
+
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.bundle.js"></script>
+	<script src="./js/vendors.js"></script>
+	<script src="./js/app.js"></script>
+
+</body>
+</html>
