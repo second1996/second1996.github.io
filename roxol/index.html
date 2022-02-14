@@ -40,8 +40,8 @@
 			<header class="header">
 				<div class="container">
 					<div class="logo pull-left" itemscope itemtype="http://schema.org/Organization">
-						<a href="https://roxol.ru" itemprop="url">
-							<img src="https://roxol.ru/img/general/logo.png" alt="логотип роксол">
+						<a href="/" itemprop="url">
+							<img src="https://rox-russia.ru/img/general/logo.png" alt="логотип роксол">
 						</a>
 					</div>
 					<div class="headerMobile">
@@ -86,7 +86,7 @@
 												</ul>
 											</li>
 											<li class="dropdown">
-												<a href="/catalog" class="dropdown-toggle" data-toggle="dropdown" role="button"
+												<a href="catalog.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
 													aria-haspopup="true" aria-expanded="false">Каталог <span class="caret"></span></a>
 												<ul class="dropdown-menu">
 													<li><a href="/catalog">Весь каталог</a></li>
@@ -104,10 +104,10 @@
 											<li><a href="/contacti">Контакты</a></li>
 										</ul>
 										<form action="/catalog" class="navbar-form navbar-left">
-											<div class="">
+											<div class>
 												<div class="input-group">
 													<input type="text" placeholder="Поиск..." class="form-control form-control-sm" name="s"
-														value="">
+														value>
 													<div class="input-group-btn">
 														<button class="btn btn-sm" type="submit">
 															<i class="icon-search"></i>
@@ -122,7 +122,7 @@
 						</div>
 						<nav class="menu">
 							<ul class="clearfix">
-								<li class="">
+								<li class>
 									<a href="/o-kompanii">О компании</a>
 
 									<div class="menu-drop">
@@ -161,9 +161,8 @@
 									</div>
 
 								</li>
-								<li class="">
-									<a href="/catalog">Каталог</a>
-
+								<li class>
+									<a href="catalog.html">Каталог</a>
 
 									<div class="menu-drop">
 										<div class="row">
@@ -240,17 +239,17 @@
 										</div>
 									</div>
 								</li>
-								<li class="">
+								<li class>
 									<a href="/otraslevie-resheniya">Отраслевые решения</a>
 
 
 								</li>
-								<li class="">
+								<li class>
 									<a href="/tribologiya">Трибология</a>
 
 
 								</li>
-								<li class="">
+								<li class>
 									<a href="/contacti">Контакты</a>
 
 									<div class="menu-drop">
@@ -284,7 +283,7 @@
 										<div class="search">
 											<div class="input-group">
 												<input type="text" placeholder="Поиск..." class="form-control form-control-sm" name="s"
-													value="">
+													value>
 												<div class="input-group-btn">
 													<button class="btn btn-sm" type="submit">
 														<i class="icon-search"></i>
@@ -305,6 +304,47 @@
 					</div>
 				</div>
 			</header>
+
+			<!-- Breadcumbs -->
+			<div class="page-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+				<div class="container">
+					<ul class="breadcrumbs">
+						<li>
+							<span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+								<a itemprop="item" href="/">
+									<span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1">
+								</a>
+							</span>
+						</li>
+						<li>
+							<span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+								<a itemprop="item" href="/o-kompanii">
+									<span itemprop="name">О компании</span>
+									<meta itemprop="position" content="2">
+								</a>
+							</span>
+						</li>
+						<li>
+							<span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+								<span property="name">Контрактное производство</span>
+								<meta itemprop="position" content="3">
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Page navigation -->
+			<div class="page-nav">
+				<ul class="clearfix">
+					<li class><a href="/stati">Статьи</a></li>
+					<li class><a href="/novosti">Новости</a></li>
+					<li class><a href="/o-kompanii/zakupaem">Закупаем</a></li>
+					<li class><a href="/o-kompanii/oprosnyj-list-dlya-podbora-smazochnogo-materiala">Опросный лист для подбора смазки</a></li>
+					<li class="active"><a href="/o-kompanii/kontraktnoe-proizvodstvo-smazochnyh-materialov">Контрактное производство</a></li>
+				</ul>
+			</div>
 
 			<!-- Section: Heroes -->
 			<section class="heroes">
@@ -630,7 +670,7 @@
 						<div class="contract-head">
 							<div class="contract-text" data-scroll data-animate="fadeIn">
 								<h2 class="section-title">Контрактное производство для торгово-коммерческих организаций</h2>
-								<a href="#" class="btn">Начать сотрудничество</a>
+								<a href="#commercialModal" data-toggle="modal" class="btn">Начать сотрудничество</a>
 								<p class="descr">В своём стремлении улучшить пользовательский опыт мы упускаем, что независимые государства, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований. Кстати, тщательные исследования конкурентов набирают популярность среди определенных слоев населения, а значит, должны быть преданы социально-демократической анафеме.</p>
 							</div>
 							<div class="contract-diagram" data-scroll data-animate="fadeIn">
@@ -725,7 +765,7 @@
 						<div class="contract-head">
 							<div class="contract-text">
 								<h2 class="section-title" data-scroll data-animate="fadeIn">Контрактное производство для физичеких лиц</h2>
-								<a href="#" class="btn" data-scroll data-animate="fadeIn">Начать сотрудничество</a>
+								<a href="#individualsModal" data-toggle="modal" class="btn" data-scroll data-animate="fadeIn">Начать сотрудничество</a>
 								<p class="descr" data-scroll data-animate="fadeIn">В своём стремлении улучшить пользовательский опыт мы упускаем, что независимые государства, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований. Кстати, тщательные исследования конкурентов набирают популярность среди определенных слоев населения, а значит, должны быть преданы социально-демократической анафеме.</p>
 							</div>
 							<div class="contract-diagram" data-scroll data-animate="fadeIn">
@@ -888,6 +928,70 @@
 		</div>
 
 	</div><!--.primary-->
+
+	<!-- Заявка для юрид. лиц -->
+	<div class="modal fade" id="commercialModal" tabindex="-1">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title">Контрактное производство для юридических лиц</h4>
+				</div>
+				<form action="#" class="form-ajax">
+					<div class="modal-body">
+						<input name="Форма" type="hidden" value="Контрактное производство для юридических лиц">
+						<div class="form-group">
+							<label>Ваше имя</label>
+							<input type="text" placeholder="Ваше имя" name="Имя" class="form-control form-control-sm required">
+						</div>
+						<div class="form-group">
+							<label>Телефон</label>
+							<input type="text" placeholder="Телефон" name="Телефон" class="phone_mask form-control form-control-sm required" maxlength="14">
+						</div>
+						<div class="form-group">
+							<label>E-mail</label>
+							<input type="email" placeholder="E-mail" name="E-mail" class="form-control form-control-sm required">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-yellow" value="Заказать">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Заявка для физ. лиц -->
+	<div class="modal fade" id="individualsModal" tabindex="-1">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title">Контрактное производство для физических лиц</h4>
+				</div>
+				<form action="#" class="form-ajax">
+					<div class="modal-body">
+						<input name="Форма" type="hidden" value="Контрактное производство для физических лиц">
+						<div class="form-group">
+							<label>Ваше имя</label>
+							<input type="text" placeholder="Ваше имя" name="Имя" class="form-control form-control-sm required">
+						</div>
+						<div class="form-group">
+							<label>Телефон</label>
+							<input type="text" placeholder="Телефон" name="Телефон" class="phone_mask form-control form-control-sm required" maxlength="14">
+						</div>
+						<div class="form-group">
+							<label>E-mail</label>
+							<input type="email" placeholder="E-mail" name="E-mail" class="form-control form-control-sm required">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-yellow" value="Заказать">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<script src="https://roxol.ru/js/separate-js/jquery.js"></script>
 	<script src="https://roxol.ru/js/separate-js/bootstrap.min.js"></script>
