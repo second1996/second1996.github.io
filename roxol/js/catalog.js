@@ -70,4 +70,46 @@ document.addEventListener('DOMContentLoaded', function () {
       mainGroup.slideDown(250);
     }
   });
+
+  /**
+   * Filters: Toggle subfilters
+   */
+  $('.gallery-slider').slick({
+    asNavFor: '.thumbs-slider',
+    slidesToShow: 1,
+    speed: 400,
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-prev"><svg class="icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.75 3.757L9.338 2.343 3.68 8l1.414 1.414 5.657-5.657z"/><path d="M9.336 13.657l1.414-1.415-5.657-5.656L3.68 8l5.657 5.657h-.001z"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg class="icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.75 3.757L9.338 2.343 3.68 8l1.414 1.414 5.657-5.657z"/><path d="M9.336 13.657l1.414-1.415-5.657-5.656L3.68 8l5.657 5.657h-.001z"/></svg></button>',
+  })
+  $('.thumbs-slider').slick({
+    asNavFor: '.gallery-slider',
+    slidesToShow: 4,
+    infinite: false,
+    arrows: false,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 374.98,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ],
+  });
+
+  /**
+   * Toggle FAQ ask form
+   */
+  $('#toggle-faq-form').on('click', function() {
+    $(this).hide();
+    $(this).next().fadeIn(250);
+  })
+
+	/**
+	 * Fancybox settings
+	 */
+	$('[data-fancybox]').fancybox({
+		smallBtn: true,
+	});
 });
