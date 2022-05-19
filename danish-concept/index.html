@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Danish concept</title>
+	<meta name="description" content="Official representative furniture brands">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="icon" href="./images/favicon.svg">
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<main>
+		<div class="container">
+
+			<style>
+				main {
+					padding-top: 32px;
+				}
+				.pages-logo {
+					margin-bottom: 32px;
+				}
+				.pages-logo img {
+					max-width: 240px;
+				}
+				.pages-title {
+					margin-bottom: 16px;
+				}
+				.pages-list {
+					counter-reset: page;
+					padding-left: 0;
+				}
+				.pages-list li {
+					list-style: none;
+					margin-bottom: 8px;
+				}
+				.pages-list li a {
+					display: inline-block;
+					font-size: 16px;
+					font-weight: 400;
+				}
+				.pages-list li a::before {
+					counter-increment: page;
+					content: counter(page);
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 26px;
+					height: 26px;
+					margin-right: 12px;
+					border-radius: 50%;
+					background-color: #000;
+					color: #fff;
+					font-size: 14px;
+					font-weight: 500;
+					transition: .3s ease;
+				}
+			</style>
+
+			<div class="pages-logo mb-40">
+				<img src="./images/logo.svg" alt="Danish Concept">
+			</div>
+			<div class="row row-items-24">
+				<div class="col-sm-6">
+					<h3 class="pages-title text-md w-bold">Pages</h3>
+					<ol class="pages-list">
+						<li><a href="page-home.html">Home page</a></li>
+						<li><a href="page-brands.html">Brands</a></li>
+						<li><a href="page-styling.html">Styling service</a></li>
+						<li><a href="page-favorites.html">Favorites</a></li>
+						<li><a href="page-search.html">Search</a></li>
+					</ol>
+				</div>
+				<div class="col-sm-6">
+					<h3 class="pages-title text-md w-bold">Shop</h3>
+					<ol class="pages-list">
+						<li><a href="page-category.html">Category</a></li>
+						<li><a href="page-product.html">Product</a></li>
+						<li><a href="page-cart.html">Shopping cart</a></li>
+						<li><a href="page-checkout.html">Checkout</a></li>
+						<li><a href="page-order-complete.html">Order complete</a></li>
+					</ol>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+</body>
+</html>
