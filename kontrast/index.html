@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="utf-8">
+	<title>Kontrast</title>
+	<meta name="description" content="Розумне проектування території">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<meta name="theme-color" content="#00B09D">
+	<link rel="icon" href="./images/favicon.svg">
+
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+	<main>
+		<div class="container">
+
+			<style>
+				main {
+					padding-top: 32px;
+					padding-bottom: 32px;
+				}
+				.pages-logo {
+					margin-bottom: 60px;
+				}
+				.pages-logo img {
+					max-width: 240px;
+				}
+				.pages-title {
+					margin-bottom: 20px;
+				}
+				.pages-list {
+					counter-reset: page;
+					padding-left: 0;
+				}
+				.pages-list li {
+					list-style: none;
+					margin-bottom: 15px;
+				}
+				.pages-list li a {
+					display: inline-block;
+					font-size: 16px;
+					font-weight: 300;
+				}
+				.pages-list li a::before {
+					counter-increment: page;
+					content: counter(page);
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 26px;
+					height: 26px;
+					margin-right: 12px;
+					border-radius: 50%;
+					background-color: #00B09D;
+					color: #fff;
+					font-size: 14px;
+					font-weight: 500;
+					transition: .3s ease;
+				}
+			</style>
+
+			<div class="pages-logo mb-40">
+				<img src="./images/logo.svg" alt="Danish Concept">
+			</div>
+			<div class="row row-gap-30">
+				<div class="col-md-6 col-lg-4">
+					<h3 class="pages-title text-md w-bold">Сторінки</h3>
+					<ol class="pages-list">
+						<li><a href="page-home.html">Головна сторінка</a></li>
+						<li><a href="page-services.html">Послуги</a></li>
+						<li><a href="page-gallery.html">Галерея</a></li>
+						<li><a href="page-gallery-single.html">Галерея: сторінка запису</a></li>
+						<li><a href="page-prices.html">Ціни</a></li>
+					</ol>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<h3 class="pages-title text-md w-bold">Послуги</h3>
+					<ol class="pages-list">
+						<li><a href="page-services-01.html">Проектування території</a></li>
+						<li><a href="page-services-02.html">Металоконструкції</a></li>
+						<li><a href="page-services-03.html">Укладання бруківки</a></li>
+					</ol>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<h3 class="pages-title text-md w-bold">Технічні сторінки</h3>
+					<ol class="pages-list">
+						<li><a href="404.html">404</a></li>
+						<li><a href="thanks.html">Дякуємо за заявку</a></li>
+					</ol>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+</body>
+</html>

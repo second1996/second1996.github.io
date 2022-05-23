@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="utf-8">
+	<title>Kontrast</title>
+	<meta name="description" content="Розумне проектування території">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	
+	<meta name="theme-color" content="#00B09D">
+	<link rel="icon" href="./images/favicon.svg">
+
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<!-- Site header -->
+<header class="header">
+	<div class="container">
+		<div class="row align-items-center justify-content-between">
+			<div class="col-auto">
+				<a href="index.html" class="header-logo" rel="home">
+					<img src="./images/logo.svg" width="314" height="58" alt="Kontrast">
+				</a>
+			</div>
+			<div class="col-auto">
+				<div class="header-nav">
+					<div class="header-nav-wrapper">
+						<ul class="header-nav-list">
+							<li class="header-nav-item">
+								<a href="page-services.html" class="header-nav-link">Послуги</a>
+								<div class="header-nav-services">
+									<div class="container">
+										<div class="header-nav-services-list">
+											<a href="page-services-01.html" class="header-nav-services-item">
+												<div class="photo img-cover">
+													<img src="./images/heroes-photo-01.jpg" alt="">
+												</div>
+												<div class="permalink">
+													<span>Проектування території</span>
+													<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="72" height="12" fill="none" viewBox="0 0 72 12">
+														<path d="M71.48 6.528c.32-.292.366-.764.1-1.056L67.26.721c-.266-.292-.74-.292-1.061 0-.32.291-.366.764-.1 1.055L69.938 6l-4.644 4.224c-.32.291-.365.764-.1 1.056.265.291.74.291 1.06 0l5.225-4.752ZM.93 6.747h70l.142-1.494h-70L.929 6.747Z"/>
+													</svg>
+												</div>
+											</a>
+											<a href="page-services-02.html" class="header-nav-services-item">
+												<div class="photo img-cover">
+													<img src="./images/heroes-photo-02.jpg" alt="">
+												</div>
+												<div class="permalink">
+													<span>Металоконструкції</span>
+													<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="72" height="12" fill="none" viewBox="0 0 72 12">
+														<path d="M71.48 6.528c.32-.292.366-.764.1-1.056L67.26.721c-.266-.292-.74-.292-1.061 0-.32.291-.366.764-.1 1.055L69.938 6l-4.644 4.224c-.32.291-.365.764-.1 1.056.265.291.74.291 1.06 0l5.225-4.752ZM.93 6.747h70l.142-1.494h-70L.929 6.747Z"/>
+													</svg>
+												</div>
+											</a>
+											<a href="page-services-03.html" class="header-nav-services-item">
+												<div class="photo img-cover">
+													<img src="./images/heroes-photo-03.jpg" alt="">
+												</div>
+												<div class="permalink">
+													<span>Укладання бруківки</span>
+													<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="72" height="12" fill="none" viewBox="0 0 72 12">
+														<path d="M71.48 6.528c.32-.292.366-.764.1-1.056L67.26.721c-.266-.292-.74-.292-1.061 0-.32.291-.366.764-.1 1.055L69.938 6l-4.644 4.224c-.32.291-.365.764-.1 1.056.265.291.74.291 1.06 0l5.225-4.752ZM.93 6.747h70l.142-1.494h-70L.929 6.747Z"/>
+													</svg>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="header-nav-item">
+								<a href="page-gallery.html" class="header-nav-link">Галерея</a>
+							</li>
+							<li class="header-nav-item">
+								<a href="page-prices.html" class="header-nav-link">Ціни</a>
+							</li>
+						</ul>
+						<a href="tel:+380500000000" class="header-phone w-bold">+380 50 000 00 00</a>
+					</div>
+				</div>
+				<div class="header-menu">
+					<button class="btn-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<main class="main home" role="main">
+
+		<!-- Section: Heroes -->
+		<section class="h-heroes section">
+			<!-- Main slider-->
+			<div class="h-heroes-slider swiper">
+				<div class="swiper-wrapper">
+					<!-- Slide -->
+					<div class="h-heroes-slide swiper-slide" style="background-image: url('./images/services-04.jpg');">
+						<div class="container">
+							<div class="h-heroes-content">
+								<h2 class="title text-xl w-bold text-uppercase">Розумне<br> проектування<br> території</h2>
+								<div class="buttons">
+									<button type="button" class="btn btn-primary" 
+										data-bs-toggle="modal" 
+										data-bs-target="#orderServiceModal" 
+										data-bs-service-photo="./images/heroes-photo-01.jpg" 
+										data-bs-service-name="Проектування території">Замовити послугу</button>
+									<a href="page-services-01.html" class="btn btn-outline">Про послугу</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Slide -->
+					<div class="h-heroes-slide swiper-slide" style="background-image: url('./images/heroes-photo-02.jpg');">
+						<div class="container">
+							<div class="h-heroes-content">
+								<h2 class="title text-xl w-bold text-uppercase">Виготовлення<br> металоконструкцій<br> різної складності</h2>
+								<div class="buttons">
+									<button type="button" class="btn btn-primary" 
+										data-bs-toggle="modal" 
+										data-bs-target="#orderServiceModal" 
+										data-bs-service-photo="./images/heroes-photo-02.jpg" 
+										data-bs-service-name="Виготовлення металоконструкцій">Замовити послугу</button>
+									<a href="page-services-02.html" class="btn btn-outline">Про послугу</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Slide -->
+					<div class="h-heroes-slide swiper-slide" style="background-image: url('./images/heroes-photo-03.jpg');">
+						<div class="container">
+							<div class="h-heroes-content">
+								<h2 class="title text-xl w-bold text-uppercase">Укладання<br> бруківки<br> різного формату</h2>
+								<div class="buttons">
+									<button type="button" class="btn btn-primary" 
+										data-bs-toggle="modal" 
+										data-bs-target="#orderServiceModal" 
+										data-bs-service-photo="./images/heroes-photo-03.jpg" 
+										data-bs-service-name="Укладання бруківки">Замовити послугу</button>
+									<a href="page-services-03.html" class="btn btn-outline">Про послугу</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Swiper pagination-->
+			<div class="h-heroes-pagination">
+				<div class="container">
+					<div class="h-heroes-pagination-numbers"></div>
+				</div>
+			</div>
+
+			<!-- Slider navigation -->
+			<div class="h-heroes-navigation">
+				<div class="h-heroes-navigation-slider swiper">
+					<div class="swiper-wrapper">
+						<div class="h-heroes-navigation-slide swiper-slide" data-next-slide="0">
+							<div class="photo img-cover">
+								<img src="./images/services-04.jpg" alt="">
+							</div>
+							<h5 class="title">Проектування території</h5>
+						</div>
+						<div class="h-heroes-navigation-slide swiper-slide" data-next-slide="1">
+							<div class="photo img-cover">
+								<img src="./images/heroes-photo-02.jpg" alt="">
+							</div>
+							<h5 class="title">Металоконструкції</h5>
+						</div>
+						<div class="h-heroes-navigation-slide swiper-slide" data-next-slide="2">
+							<div class="photo img-cover">
+								<img src="./images/heroes-photo-03.jpg" alt="">
+							</div>
+							<h5 class="title">Укладання бруківки</h5>
+						</div>
+					</div>
+				</div>
+
+				<!-- Swiper navigation -->
+				<div class="h-heroes-navigation-arrows swiper-navigation">
+					<button class="swiper-button-prev">
+						<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="27" fill="none" viewBox="0 0 14 27">
+							<path d="M13.67 26.36a.75.75 0 0 1-1.06 0L.378 14.128a.75.75 0 0 1 0-1.06L12.61.834a.75.75 0 1 1 1.06 1.061L1.97 13.598l11.7 11.701a.75.75 0 0 1 0 1.061Z" clip-rule="evenodd"/>
+						</svg>
+					</button>
+					<button class="swiper-button-next">
+						<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="15" height="27" fill="none" viewBox="0 0 15 27">
+							<path d="M1.183.64a.75.75 0 0 1 1.061 0l12.232 12.232a.75.75 0 0 1 0 1.06L2.244 26.165a.75.75 0 0 1-1.06-1.06l11.701-11.702L1.183 1.701a.75.75 0 0 1 0-1.061Z" clip-rule="evenodd"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section: Advantages -->
+		<section class="h-advantages section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-xl-6">
+						<div class="h-advantages-intro">
+							<h2 class="title text-lg w-bold text-uppercase">Чому з нами працювати легко?</h2>
+						</div>
+					</div>
+					<div class="col-lg-7 col-xl-6">
+						<div class="h-advantages-list">
+							<div class="h-advantages-list-item w-light text-uppercase">Гарантія 4 роки</div>
+							<div class="h-advantages-list-item w-light text-uppercase">Контроль термінів і порядок на ділянці</div>
+							<div class="h-advantages-list-item w-light text-uppercase">Укладання велико-форматної бруківки</div>
+							<div class="h-advantages-list-item w-light text-uppercase">Представники виробника</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section: Services -->
+		<section class="h-services section pt-160">
+			<div class="container">
+				<h2 class="h-services-title d-block d-lg-none text-lg w-bold text-uppercase">Наші послуги</h2>
+				<div class="row align-items-center">
+					<div class="col-lg-8">
+						<!-- Slider -->
+						<div class="h-services-slider swiper">
+							<div class="h-services-wrapper swiper-wrapper">
+								<!-- Slide -->
+								<div class="h-services-slide swiper-slide" data-slide-title="Проектування">
+									<div class="h-services-content">
+										<h3 class="title text-lg w-bold text-uppercase">Проектування території</h3>
+										<div class="description">
+											<p>Під благоустроєм території розуміють її впорядкування – устрій тротуарів, під'їзних шляхів, клумб, газонів, зовнішнього освітлення, огородження території, посадку дерев, кущів тощо.</p>
+										</div>
+										<a href="page-services-01.html" class="btn btn-primary">Про послугу</a>
+									</div>
+									<div class="h-services-photo img-cover">
+										<img src="./images/services-01.jpg" alt="">
+									</div>
+								</div>
+								<!-- Slide -->
+								<div class="h-services-slide swiper-slide" data-slide-title="Металоконструкції">
+									<div class="h-services-content">
+										<h3 class="title text-lg w-bold text-uppercase">Виготовлення метало-<br>конструкцій</h3>
+										<div class="description">
+											<p>Під благоустроєм території розуміють її впорядкування – устрій тротуарів, під'їзних шляхів, клумб, газонів, зовнішнього освітлення, огородження території, посадку дерев, кущів тощо.</p>
+										</div>
+										<a href="page-services-02.html" class="btn btn-primary">Про послугу</a>
+									</div>
+									<div class="h-services-photo img-cover">
+										<img src="./images/services-02.jpg" alt="">
+									</div>
+								</div>
+								<!-- Slide -->
+								<div class="h-services-slide swiper-slide" data-slide-title="Бруківка">
+									<div class="h-services-content">
+										<h3 class="title text-lg w-bold text-uppercase">Укладання бруківки</h3>
+										<div class="description">
+											<p>Під благоустроєм території розуміють її впорядкування – устрій тротуарів, під'їзних шляхів, клумб, газонів, зовнішнього освітлення, огородження території, посадку дерев, кущів тощо.</p>
+										</div>
+										<a href="page-services-03.html" class="btn btn-primary">Про послугу</a>
+									</div>
+									<div class="h-services-photo img-cover">
+										<img src="./images/services-03.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 d-none d-lg-block">
+						<!-- Slider pagination -->
+						<div class="h-services-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section: About -->
+		<section class="h-about section pt-160 pb-100">
+			<div class="container">
+				<div class="row row-gap-60">
+					<div class="col-lg-5 col-xl-4 offset-xl-1">
+						<h2 class="h-about-title text-lg w-bold text-uppercase">Про компанію</h2>
+						<div class="h-about-descr">
+							<p>Компанія, що займається проектуванням ділянок та втіленням запроектованих робіт: від плану проекту до озеленення. По характеру компанія серйозна, стримана, наближена до будівельних компаній.</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-xl-5 offset-lg-1">
+						<div class="h-about-list">
+							<div class="h-about-list-item">
+								<div class="number text-lg w-bold">20</div>
+								<div class="title">років досвіду</div>
+							</div>
+							<div class="h-about-list-item">
+								<div class="number text-lg w-bold">50</div>
+								<div class="title">фахівців у команді</div>
+							</div>
+							<div class="h-about-list-item">
+								<div class="number text-lg w-bold">500</div>
+								<div class="title">реалізовано проектів</div>
+							</div>
+							<div class="h-about-list-item">
+								<div class="number text-lg w-bold">200 000</div>
+								<div class="title">метрів квадратних облаштованих дворів</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section: Partners -->
+		<section class="h-partners section pt-100 pb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-11 offset-xl-1">
+						<h2 class="h-partners-title text-dark text-lg w-bold text-uppercase">Наші <span class="text-accent">партнери</span></h2>
+						<div class="h-partners-slider swiper">
+							<!-- Slider -->
+							<div class="h-partners-wrapper swiper-wrapper">
+								<!-- Slide -->
+								<div class="h-partners-slide swiper-slide">
+									<div class="logo img-scale">
+										<img src="./images/partner-01.png" alt="">
+									</div>
+									<p class="description">Головний та єдиний партнер по продукції яку встановлюємо</p>
+								</div>
+								<!-- Slide -->
+								<div class="h-partners-slide swiper-slide">
+									<div class="logo img-scale">
+										<img src="./images/partner-02.png" alt="">
+									</div>
+									<p class="description">Металеві конструкції та оствітлення, лавки огорожі ліхтарі</p>
+								</div>
+								<!-- Slide -->
+								<div class="h-partners-slide swiper-slide">
+									<div class="logo img-scale">
+										<img src="./images/partner-03.png" alt="">
+									</div>
+									<p class="description">Королівський сад (Озеленення поливи)</p>
+								</div>
+								<!-- Slide -->
+								<div class="h-partners-slide swiper-slide">
+									<div class="logo img-scale">
+										<img src="./images/partner-01.png" alt="">
+									</div>
+									<p class="description">Головний та єдиний партнер по продукції яку встановлюємо</p>
+								</div>
+								<!-- Slide -->
+								<div class="h-partners-slide swiper-slide">
+									<div class="logo img-scale">
+										<img src="./images/partner-02.png" alt="">
+									</div>
+									<p class="description">Металеві конструкції та оствітлення, лавки огорожі ліхтарі</p>
+								</div>
+							</div>
+
+							<!-- Slider navigation -->
+							<div class="h-partners-navigation swiper-navigation swiper-navigation-dark d-flex d-xl-none">
+								<button class="swiper-button-prev">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="27" fill="none" viewBox="0 0 14 27">
+										<path d="M13.67 26.36a.75.75 0 0 1-1.06 0L.378 14.128a.75.75 0 0 1 0-1.06L12.61.834a.75.75 0 1 1 1.06 1.061L1.97 13.598l11.7 11.701a.75.75 0 0 1 0 1.061Z" clip-rule="evenodd"/>
+									</svg>
+								</button>
+								<button class="swiper-button-next">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="15" height="27" fill="none" viewBox="0 0 15 27">
+										<path d="M1.183.64a.75.75 0 0 1 1.061 0l12.232 12.232a.75.75 0 0 1 0 1.06L2.244 26.165a.75.75 0 0 1-1.06-1.06l11.701-11.702L1.183 1.701a.75.75 0 0 1 0-1.061Z" clip-rule="evenodd"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+<!-- Modal: Order service -->
+<div class="modal modal-service fade" id="orderServiceModal" tabindex="-1" aria-labelledby="orderServiceModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="37" height="38" fill="none" viewBox="0 0 37 38">
+						<path d="M0 37 36 1l.707.707-36 36L0 37Z" clip-rule="evenodd"/>
+						<path d="M36 37 0 1 .707.293l36 36L36 37Z" clip-rule="evenodd"/>
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="photo" id="orderServiceModalPhoto" style="background-image: url('./images/service-heroes-01.jpg');"></div>
+				<div class="content">
+					<h5 class="content-title text-lg w-bold text-uppercase" id="orderServiceModalLabel">Замовити <span>проектування території</span></h5>
+					<form class="content-form form">
+						<input type="hidden" id="orderServiceName">
+						<div class="row">
+							<div class="col-lg-6">
+								<input type="text" class="form-control" placeholder="ім’я" required>
+							</div>
+							<div class="col-lg-6">
+								<input type="tel" class="form-control" placeholder="+380" required>
+							</div>
+							<div class="col-12">
+								<textarea class="form-textarea" rows="1" placeholder="поле для коментаря"></textarea>
+							</div>
+						</div>
+						<button type="submit" class="form-submit btn btn-secondary">Надіслати</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- Site footer -->
+	<footer class="footer">
+		<!-- Section: Callback -->
+		<section class="footer-callback section">
+			<div class="container">
+				<div class="row justify-content-md-between">
+					<div class="col-sm-10 col-md-6 col-xl-5">
+						<h2 class="footer-callback-title text-lg w-bold text-uppercase">Ще вагаєшся?</h2>
+						<p class="footer-callback-descr">пиши просто зараз і зателефонуємо</p>
+						<form class="footer-callback-form form">
+							<div class="row">
+								<div class="col-lg-6">
+									<input type="text" class="form-control" placeholder="ім’я" required>
+								</div>
+								<div class="col-lg-6">
+									<input type="tel" class="form-control" placeholder="+380" required>
+								</div>
+								<div class="col-12">
+									<textarea class="form-textarea" rows="1" placeholder="поле для коментаря"></textarea>
+								</div>
+							</div>
+							<button type="submit" class="form-submit btn btn-secondary">Надіслати</button>
+						</form>
+					</div>
+					<div class="col-md-6 align-self-md-end">
+						<div class="footer-callback-contacts">
+							<div class="footer-callback-contacts-phone">
+								<a href="tel:+380997504054" class="text-lg w-bold">+380 99 750 40 54</a>
+							</div>
+							<div class="footer-callback-contacts-social">
+								<a href="#" target="_blank" rel="noopener nofollow">Viber</a>
+								<a href="#" target="_blank" rel="noopener nofollow">Telegram</a>
+								<a href="#" target="_blank" rel="noopener nofollow">WhatsApp</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main footer -->
+		<div class="footer-main">
+			<div class="container">
+				<div class="footer-main-logo">
+					<a href="index.html" rel="home">
+						<img src="./images/logo.svg" width="314" height="58" alt="Kontrast">
+					</a>
+				</div>
+				<div class="footer-main-wrapper row justify-content-between">
+					<div class="col-lg align-self-end">
+						<div class="footer-main-contacts">
+							<div class="social">
+								<a href="#" class="social-link" target="_blank" rel="noopener nofollow">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34">
+										<path d="M16.995 8.277A8.71 8.71 0 0 0 8.273 17a8.71 8.71 0 0 0 8.722 8.723A8.71 8.71 0 0 0 25.718 17a8.71 8.71 0 0 0-8.723-8.723Zm0 14.392A5.681 5.681 0 0 1 11.326 17a5.681 5.681 0 0 1 5.67-5.67A5.681 5.681 0 0 1 22.663 17a5.681 5.681 0 0 1-5.669 5.67Zm9.08-16.782c-1.127 0-2.037.91-2.037 2.037 0 1.127.91 2.037 2.037 2.037a2.032 2.032 0 0 0 2.037-2.037 2.034 2.034 0 0 0-2.037-2.037ZM33.998 17c0-2.348.021-4.674-.11-7.017-.132-2.722-.753-5.138-2.743-7.128C29.15.86 26.739.244 24.017.112 21.669-.02 19.343.002 17 .002c-2.348 0-4.674-.022-7.017.11C7.26.244 4.845.865 2.855 2.855.86 4.85.244 7.26.112 9.983-.02 12.33.002 14.657.002 17s-.022 4.674.11 7.017c.132 2.722.753 5.138 2.743 7.128 1.994 1.995 4.406 2.611 7.128 2.743 2.347.132 4.673.11 7.017.11 2.347 0 4.674.022 7.017-.11 2.722-.132 5.137-.753 7.128-2.743 1.994-1.994 2.61-4.406 2.743-7.128.136-2.343.11-4.67.11-7.017Zm-3.742 10.028a5.404 5.404 0 0 1-1.285 1.948c-.6.6-1.174.974-1.948 1.285-2.236.888-7.548.688-10.028.688-2.479 0-7.795.2-10.032-.684a5.403 5.403 0 0 1-1.948-1.285 5.44 5.44 0 0 1-1.284-1.948c-.885-2.24-.685-7.553-.685-10.032 0-2.48-.2-7.796.685-10.033A5.404 5.404 0 0 1 5.015 5.02a5.497 5.497 0 0 1 1.948-1.285c2.237-.884 7.553-.684 10.032-.684 2.48 0 7.796-.2 10.033.684.774.31 1.352.685 1.948 1.285.6.6.973 1.173 1.284 1.947.884 2.237.685 7.554.685 10.033 0 2.48.2 7.791-.69 10.028Z"/>
+									</svg>
+								</a>
+								<a href="#" class="social-link" target="_blank" rel="noopener nofollow">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" fill="none" viewBox="0 0 36 35">
+										<path d="M15.467 12.14v2.41h-1.764v2.945h1.764v8.755h3.626v-8.755h2.432s.23-1.413.34-2.958h-2.758v-2.012c0-.303.395-.707.787-.707h1.974V8.75h-2.686c-3.805 0-3.715 2.949-3.715 3.39Z"/>
+										<path d="M17.75 31.5a14 14 0 1 0 0-28 14 14 0 0 0 0 28Zm0 3.5C8.085 35 .25 27.165.25 17.5S8.085 0 17.75 0s17.5 7.835 17.5 17.5S27.415 35 17.75 35Z"/>
+									</svg>
+								</a>
+							</div>
+							<a href="mailto:kozyrayura@gmail.com" class="email">kozyrayura@gmail.com</a>
+						</div>
+					</div>
+					<div class="col-md-8 col-lg-4">
+						<div class="footer-main-nav">
+							<ul class="footer-main-nav-list">
+								<li><a href="page-services.html">Послуги</a></li>
+								<li><a href="page-gallery.html">Галерея</a></li>
+								<li><a href="page-prices.html">Ціни</a></li>
+							</ul>
+							<ul class="footer-main-nav-list">
+								<li><a href="page-services-01.html">Благоустрій території</a></li>
+								<li><a href="page-services-02.html">Металоконструкції</a></li>
+								<li><a href="page-services-03.html">Укладання бруківки</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="footer-main-copyright">
+							<a href="page-prices.html" class="order-btn btn btn-primary">Ціни на послуги</a>
+							<a href="https://aprostir.com" class="madeby" target="_blank" rel="noopener">Made with <span class="text-accent">❤</span> by aprostir</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./js/app.min.js"></script>
+
+</body>
+</html>
