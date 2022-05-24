@@ -5067,35 +5067,6 @@ table {
   width: 100%;
 }
 
-table tr {
-  position: relative;
-}
-
-table tr:before,
-table tr:last-child:after {
-  background-image: -webkit-gradient(linear,left top,right top,color-stop(50%,#f2f2f2),color-stop(0,hsla(0,0%,95%,0)));
-  background-image: -o-linear-gradient(left,#f2f2f2 50%,hsla(0,0%,95%,0) 0);
-  background-image: linear-gradient(90deg,#f2f2f2 50%,hsla(0,0%,95%,0) 0);
-  background-position: bottom;
-  background-repeat: repeat-x;
-  background-size: 12px 1px;
-  content: "";
-  display: block;
-  height: 1px;
-  left: 0;
-  opacity: .2;
-  position: absolute;
-  width: 100%;
-}
-
-table tr:before {
-  top: 0;
-}
-
-table tr:after {
-  bottom: 0;
-}
-
 table th {
   font-weight: 400;
   padding-bottom: 15px;
@@ -5797,7 +5768,7 @@ table th {
   padding-right: 0;
 }
 
-.prices-section .accordion-body .prices-table tr:first-child:before {
+.prices-section .accordion-body .prices-table>li:first-child:before {
   opacity: 0;
 }
 
@@ -5874,6 +5845,57 @@ table th {
   margin-top: 90px;
   padding-left: 65px;
   padding-right: 65px;
+}
+
+.prices-table>li {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.prices-table>li:before,
+.prices-table>li:last-child:after {
+  background-image: -webkit-gradient(linear,left top,right top,color-stop(50%,#f2f2f2),color-stop(0,hsla(0,0%,95%,0)));
+  background-image: -o-linear-gradient(left,#f2f2f2 50%,hsla(0,0%,95%,0) 0);
+  background-image: linear-gradient(90deg,#f2f2f2 50%,hsla(0,0%,95%,0) 0);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 12px 1px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  opacity: .2;
+  position: absolute;
+  width: 100%;
+}
+
+.prices-table>li:before {
+  top: 1px;
+}
+
+.prices-table>li:after {
+  bottom: -1px;
+}
+
+.prices-table>li>span {
+  -webkit-box-flex: 1;
+  color: #00b09d;
+  -ms-flex: 1 0 100px;
+  flex: 1 0 100px;
+  font-weight: 700;
+  padding-left: 30px;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .services-list {
@@ -13921,6 +13943,10 @@ table th {
 
   .prices-list .cost {
     font-size: 20px;
+  }
+
+  .prices-table>li>span {
+    padding-left: 15px;
   }
 
   .services-list-item {
