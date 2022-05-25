@@ -5276,23 +5276,13 @@ table th {
   animation: fadeInUp 1.25s .25s both;
   bottom: 10%;
   position: absolute;
-  right: 370px;
-  width: 400px;
+  right: 0;
+  width: 760px;
   z-index: 3;
 }
 
-.h-heroes-navigation-slider {
-  overflow: visible;
-}
-
-.h-heroes-navigation-slide {
-  -webkit-transition: opacity .3s ease;
-  -o-transition: opacity .3s ease;
-  transition: opacity .3s ease;
-}
-
-.h-heroes-navigation-slide:not(.swiper-slide-active):not(.swiper-slide-next) {
-  opacity: 0;
+.h-heroes-navigation-slide:not(.swiper-slide-active.has-click) {
+  pointer-events: none;
 }
 
 .h-heroes-navigation-slide:hover {
@@ -12572,8 +12562,8 @@ table th {
   }
 
   .h-heroes-navigation {
-    right: 200px;
-    width: 320px;
+    bottom: 15%;
+    width: 520px;
   }
 
   .h-heroes-navigation-slide .photo {
@@ -12925,8 +12915,7 @@ table th {
   }
 
   .h-heroes-navigation {
-    right: 140px;
-    width: 280px;
+    width: 400px;
   }
 
   .h-heroes-navigation-arrows {
