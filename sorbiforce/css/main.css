@@ -2399,7 +2399,7 @@ strong {
 }
 
 .header-menu-list>li:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 .header-menu-list>li>a {
@@ -2675,8 +2675,8 @@ button {
   color: #333;
   height: 64px;
   min-width: 270px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .btn:hover {
@@ -9628,10 +9628,6 @@ label a:hover {
     font-size: 45px;
   }
 
-  .header-menu-list>li:not(:last-child) {
-    margin-bottom: 45px;
-  }
-
   .footer-logo-link>img {
     height: 64px;
   }
@@ -9711,6 +9707,22 @@ label a:hover {
 
   .s-product-heading .title {
     font-size: 76px;
+  }
+
+  .s-advantages-item {
+    padding-bottom: 30px;
+  }
+
+  .s-advantages-item .title {
+    font-size: 24px;
+  }
+
+  .s-advantages-item .step {
+    font-size: 24px;
+  }
+
+  .s-battery {
+    padding-top: 100px;
   }
 
   .s-battery-image {
@@ -9972,7 +9984,7 @@ label a:hover {
 
   .btn,
   button {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .btn {
@@ -10082,11 +10094,15 @@ label a:hover {
   }
 
   .s-advantages-item .description {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .s-advantages-item .step {
     font-size: 24px;
+  }
+
+  .s-battery {
+    padding-top: 80px;
   }
 
   .s-battery-content {
@@ -10352,12 +10368,22 @@ label a:hover {
     padding-top: 60px;
   }
 
-  .s-advantages-heading .description {
-    margin-top: 15px;
+  .s-advantages-heading {
+    text-align: left;
   }
 
-  .s-advantages-item {
-    padding-bottom: 30px;
+  .s-advantages-heading .description {
+    margin: 15px 0 0;
+    max-width: 460px;
+  }
+
+  .s-advantages-list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .s-battery {
+    padding-top: 60px;
   }
 
   .s-battery-content {
@@ -10442,10 +10468,6 @@ label a:hover {
 
   .s-about-content .suptitle {
     margin-bottom: 10px;
-  }
-
-  .s-team-card .photo:before {
-    background-color: #ffca18;
   }
 
   .s-team-card .description {
@@ -10570,13 +10592,12 @@ label a:hover {
     font-size: 18px;
   }
 
-  .s-advantages-list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
   .s-advantages-item {
     padding-bottom: 0;
+  }
+
+  .s-advantages-item .title {
+    font-size: 20px;
   }
 
   .s-advantages-item .step {
