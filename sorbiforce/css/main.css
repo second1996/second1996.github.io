@@ -3363,7 +3363,7 @@ label a:hover {
 }
 
 .s-battery-image>svg {
-  width: 100%;
+  width: 420px;
 }
 
 .s-battery-advantages {
@@ -9649,6 +9649,10 @@ label a:hover {
     flex-basis: 360px;
   }
 
+  .s-battery-image>svg {
+    width: 360px;
+  }
+
   .s-battery-advantages-item {
     padding-left: 120px;
   }
@@ -9732,6 +9736,10 @@ label a:hover {
   .s-battery-image {
     -ms-flex-preferred-size: 280px;
     flex-basis: 280px;
+  }
+
+  .s-battery-image>svg {
+    width: 280px;
   }
 
   .s-battery-advantages {
@@ -10116,6 +10124,10 @@ label a:hover {
   .s-battery-image {
     -ms-flex-preferred-size: 240px;
     flex-basis: 240px;
+  }
+
+  .s-battery-image>svg {
+    width: 240px;
   }
 
   .s-battery-advantages {
@@ -10795,6 +10807,10 @@ label a:hover {
 
   .s-advantages-item .step {
     font-size: 18px;
+  }
+
+  .s-battery-image>svg {
+    width: 200px;
   }
 
   .s-battery-advantages-item:before {
