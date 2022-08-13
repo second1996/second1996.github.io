@@ -3362,6 +3362,10 @@ label a:hover {
   justify-content: center;
 }
 
+.s-battery-image>svg {
+  width: 100%;
+}
+
 .s-battery-advantages {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -10399,10 +10403,6 @@ label a:hover {
     -ms-flex-preferred-size: 0 0 100px;
     flex-basis: 0 0 100px;
     margin-bottom: 40px;
-  }
-
-  .s-battery-image>svg {
-    max-width: 160px;
   }
 
   .s-battery-advantages {
