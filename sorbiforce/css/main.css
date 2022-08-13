@@ -9818,6 +9818,10 @@ label a:hover {
     max-width: 560px;
   }
 
+  .s-graphic-image {
+    text-align: right;
+  }
+
   .s-callback {
     padding-bottom: 120px;
     padding-top: 120px;
