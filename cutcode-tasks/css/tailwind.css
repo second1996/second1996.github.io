@@ -839,8 +839,8 @@ video {
   height: 64px;
 }
 
-.\!h-full {
-  height: 100% !important;
+.\!h-\[64px\] {
+  height: 64px !important;
 }
 
 .h-16 {
@@ -1628,6 +1628,10 @@ video {
 
   .sm\:h-\[74px\] {
     height: 74px;
+  }
+
+  .sm\:\!h-\[74px\] {
+    height: 74px !important;
   }
 
   .sm\:h-64 {
