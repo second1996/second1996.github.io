@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>CutCode</title>
+	<meta name="description" content="Видеокурс по изучению принципов программирования">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+	<link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#7843E9">
+	<meta name="msapplication-TileColor" content="#7843E9">
+	<meta name="theme-color" content="#7843E9">
+
+	<link rel="stylesheet" href="./css/tailwind.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body x-data="{ 'showTaskUploadModal': false, 'showTaskEditModal': false }" x-cloak>
+
+	<!-- Site header -->
+	<header class="header pt-6 xl:pt-12">
+		<div class="container">
+			<div class="header-inner flex items-center">
+				<div class="header-logo shrink-0">
+					<a href="/" rel="home">
+						<img src="./images/logo.svg" class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]" alt="CutCode">
+					</a>
+				</div><!-- /.header-logo -->
+				<div class="header-menu grow flex justify-center ml-8 mr-8">
+					<nav class="hidden 2xl:inline-block">
+						<a href="#s-intro" class="ml-4 mr-4 text-white hover:text-pink font-bold">О курсе</a>
+						<a href="#s-about" class="ml-4 mr-4 text-white hover:text-pink font-bold">Для кого</a>
+						<a href="#s-education" class="ml-4 mr-4 text-white hover:text-pink font-bold">Что получишь</a>
+						<a href="#s-testimonials" class="ml-4 mr-4 text-white hover:text-pink font-bold">Отзывы</a>
+						<a href="#s-curriculum" class="ml-4 mr-4 text-white hover:text-pink font-bold">Программа курса</a>
+						<a href="#s-price" class="ml-4 mr-4 text-white hover:text-pink font-bold">Стоимость</a>
+					</nav>
+				</div><!-- /.header-menu -->
+				<div class="header-actions flex items-center">
+					<a href="login.html" class="profile hidden xs:flex items-center">
+						<svg class="profile-icon w-8 h-8 text-purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs/><path d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24zM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8zM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0z" fill="currentColor"/></svg>
+						<span class="profile-text relative ml-2 text-white text-xxs md:text-xs font-bold">Войти</span>
+					</a>
+					<a href="purchase.html" class="!hidden md:!flex order btn btn-pink !h-16 ml-6 2xl:ml-12">Купить курс</a>
+					<button id="burgerMenu" class="flex 2xl:hidden ml-4 text-white hover:text-pink transition">
+						<span class="sr-only">Открыть меню</span>
+						<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</div><!-- /.header-actions -->
+			</div><!-- /.header-inner -->
+		</div><!-- /.container -->
+	</header>
+
+
+ <main class="py-16 lg:py-20">
+	 <div class="container">
+
+		<!-- Page heading -->
+		<h1 class="text-[26px] sm:text-xl xl:text-[48px] 2xl:text-2xl font-black">Новостной портал с админкой</h1>
+		<p class="mt-4 text-xs md:text-sm text-body">Простой новостной порта с админ. панелью, который мы делали в рамках курса «Laravel с нуля», Не смотря на простоту задействованы базовые разделы изучения Laravel! Будет полезно новичку! Да и есть возможность посмотреть полный путь реализации на нашем YouTube канале.</p>
+		<ul class="flex flex-wrap gap-x-10 gap-y-3 mt-5">
+			<li class="text-xs font-semibold">Категория: Laravel</li>
+			<li class="text-xs font-semibold">Сложность: средняя</li>
+			<li class="text-xs font-semibold">Чек: 20 000 ₽</li>
+			<li class="text-xs font-semibold">Дедлайн: 26.11.2022</li>
+		</ul>
+
+		<!-- Task progress -->
+		<div class="flex flex-col-reverse lg:flex-row lg:items-center mt-16 rounded-3xl xl:rounded-[40px] bg-pink">
+			<div class="lg:basis-3/5 xl:basis-2/4 flex flex-col-reverse sm:flex-row sm:items-center px-5 sm:px-8 xl:px-10 2xl:px-16 py-8 lg:py-0">
+				<div class="grow sm:pr-6">
+					<h5 class="text-md md:text-lg 2xl:text-xl font-black">Прогресс обучения</h5>
+					<div class="sm:mt-2 text-xs lg:text-sm opacity-80">Начало обучения: 12.11.2022</div>
+				</div>
+				<div class="radial-progress grow-0 shrink-0 mb-4 sm:mb-0" style="--value: 25;">
+					<span class="text-md sm:text-lg lg:text-xl font-black">25%</span>
+				</div>
+			</div>
+			<div class="overflow-hidden lg:basis-2/5 xl:basis-2/4 h-40 xs:h-48 sm:h-64 lg:ml-10 rounded-3xl xl:rounded-[40px]">
+				<img src="./images/tasks/1.png" class="object-cover w-full h-full" alt="Новостной портал с админкой">
+			</div>
+		</div>
+
+		<!-- Curriculum -->
+		<div class="grid grid-cols-1 xl:grid-cols-2 gap-10 mt-20">
+
+			<!-- Column #1 -->
+			<div class="space-y-10">
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<img src="./images/emoji/man-pc.png" class="absolute -top-4 md:-top-10 right-6 2xl:right-10 h-16 md:w-24 2xl:w-32 h-16 md:h-24 2xl:h-32" alt="Прежде чем начать">
+					<h4 class="pr-16 md:pr-24 text-md md:text-lg 2xl:text-xl font-black">Прежде чем начать</h4>
+					<div class="space-y-3 2xl:space-y-5 mt-5 text-body text-xxs sm:text-xs xl:text-sm">
+						<p>Этапы будут открываться постепенно, по мере прохождения, со всей полнотой задачи Вы можете ознакомиться в файле ТЗ.</p>
+						<p>Потребуются знания php, sql, laravel, composer, npm.</p>
+					</div>
+				</div>
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<div class="curriculum-item">
+						<!-- Header -->
+						<div class="accordion-header cursor-pointer">
+							<div class="flex items-center justify-between">
+								<h4 class="accordion-header-title text-md md:text-lg 2xl:text-xl font-black">Этап 1. <span class="text-pink">Установка</span></h4>
+								<svg class="accordion-header-icon w-5 2xl:w-7 h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+									<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div class="mt-5">
+								<div class="w-full h-3 rounded-full bg-pink/20">
+									<div class="h-3 rounded-full bg-pink" style="width: 45%"></div>
+								</div>
+								<!-- <div class="text-body text-xs xl:text-sm">Завершено</div> -->
+							</div>
+						</div>
+						<!-- Content -->
+						<div class="accordion-content overflow-hidden hidden">
+							<div class="curriculum-lesson pt-8 lg:pt-12 2xl:pt-16 space-y-6 2xl:space-y-10">
+
+								<!-- Lesson -->
+								<div class="lesson">
+									<!-- Header -->
+									<div class="_is-done accordion-header relative cursor-pointer flex items-start justify-between">
+										<h4 class="accordion-header-title grow text-xs 2xl:text-sm font-semibold">1. Создайте документ с именем «index.html»</h4>
+										<svg class="accordion-header-icon relative top-[6px] w-4 h-4 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+											<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+									<!-- Content -->
+									<div class="accordion-content overflow-hidden hidden">
+										<div class="lesson-body pt-4 pb-6 2xl:pb-10 border-b border-[#8485B8]">
+											<div class="mb-3 text-xs text-pink">Выполнено</div>
+											<div class="space-y-3 2xl:space-y-5 text-body text-xxs sm:text-xs">
+												<p>Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis.</p>
+												<p>Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End lesson -->
+
+								<!-- Lesson -->
+								<div class="lesson">
+									<!-- Header -->
+									<div class="_is-done accordion-header relative cursor-pointer flex items-start justify-between">
+										<h4 class="accordion-header-title grow text-xs 2xl:text-sm font-semibold">2. Откройте с помощью редактора кода</h4>
+										<svg class="accordion-header-icon relative top-[6px] w-4 h-4 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+											<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+									<!-- Content -->
+									<div class="accordion-content overflow-hidden hidden">
+										<div class="lesson-body pt-4 pb-6 2xl:pb-10 border-b border-[#8485B8]">
+											<div class="mb-3 text-xs text-pink">Выполнено</div>
+											<div class="space-y-3 2xl:space-y-5 text-body text-xxs sm:text-xs">
+												<p>Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis.</p>
+												<p>Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End lesson -->
+
+								<!-- Lesson -->
+								<div class="lesson">
+									<!-- Header -->
+									<div class="_is-checking accordion-header relative cursor-pointer flex items-start justify-between">
+										<h4 class="accordion-header-title grow text-xs 2xl:text-sm font-semibold">3. Напишите в теге “body” Hello world</h4>
+										<svg class="accordion-header-icon relative top-[6px] w-4 h-4 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+											<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+									<!-- Content -->
+									<div class="accordion-content overflow-hidden hidden">
+										<div class="lesson-body pt-4 pb-6 2xl:pb-10 border-b border-[#8485B8]">
+											<div class="mb-3 text-xs text-pink">На проверке</div>
+											<div class="space-y-3 2xl:space-y-5 text-body text-xxs sm:text-xs">
+												<p>Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis.</p>
+												<p>Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.</p>
+											</div>
+
+											<!-- Upload task -->
+											<div class="mt-5">
+												<div class="mb-4 2xl:mb-7 text-xxs sm:text-xs">Для проверки задания, загрузите Ваш файл на GitHub.</div>
+												<input type="text" class="w-full py-3 sm:py-5 2xl:py-6 px-4 sm:px-6 2xl:px-8 border border-[#8485B8] rounded-lg bg-white/5 text-body shadow-transparent outline-0" value="https://github.com/marketplace/circleci/plan/MDIyOk1hcmtldHBsYWNlTGlzdGluZ1BsYW45MA==#pricing-and-setup" readonly>
+												<button class="inline-block mt-3 text-pink hover:text-white text-xs font-semibold" @click="showTaskEditModal = true">Редактировать ссылку</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End lesson -->
+
+								<!-- Lesson -->
+								<div class="lesson">
+									<!-- Header -->
+									<div class="_is-progress accordion-header relative cursor-pointer flex items-start justify-between">
+										<h4 class="accordion-header-title grow text-xs 2xl:text-sm font-semibold">4. Использовать теги «ul» и «li»</h4>
+										<svg class="accordion-header-icon relative top-[6px] w-4 h-4 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+											<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+									<!-- Content -->
+									<div class="accordion-content overflow-hidden hidden">
+										<div class="lesson-body pt-4 pb-6 2xl:pb-10 border-b border-[#8485B8]">
+											<div class="mb-3 text-xs text-pink">На проверке</div>
+											<div class="space-y-3 2xl:space-y-5 text-body text-xxs sm:text-xs">
+												<p>Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis.</p>
+												<p>Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.</p>
+											</div>
+
+											<!-- Upload task -->
+											<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-7">
+												<button class="btn btn-pink" @click="showTaskUploadModal = true">Отправить на проверку</button>
+												<div class="mt-6 sm:mt-0 sm:text-right">
+													<span class="block text-xs">Осталось времени</span>
+													<div class="text-lg 2xl:text-[42px] font-black">2 дня</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End lesson -->
+
+								<!-- Lesson -->
+								<div class="lesson">
+									<!-- Header -->
+									<div class="_is-pending accordion-header relative cursor-pointer flex items-start justify-between">
+										<h4 class="accordion-header-title grow text-xs 2xl:text-sm font-semibold">5. Использовать тег «section»</h4>
+										<svg class="accordion-header-icon relative top-[6px] w-4 h-4 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+											<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+									<!-- Content -->
+									<div class="accordion-content overflow-hidden hidden">
+										<div class="lesson-body pt-4 pb-6 2xl:pb-10 border-b border-[#8485B8]">
+											<div class="mb-3 text-xs text-pink">Будет доступно позже</div>
+											<div class="space-y-3 2xl:space-y-5 text-body text-xxs sm:text-xs">
+												<p>Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End lesson -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End card -->
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<div class="curriculum-item">
+						<!-- Header -->
+						<div class="accordion-header cursor-pointer">
+							<div class="flex items-center justify-between">
+								<h4 class="accordion-header-title text-md md:text-lg 2xl:text-xl font-black">Этап 2. <span class="text-pink">Введение</span></h4>
+								<svg class="accordion-header-icon w-5 2xl:w-7 h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+									<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div class="mt-5">
+								<!-- <div class="w-full h-3 rounded-full bg-pink/20">
+									<div class="h-3 rounded-full bg-pink" style="width: 45%"></div>
+								</div> -->
+								<div class="text-body text-xs xl:text-sm !leading-none">Завершено</div>
+							</div>
+						</div>
+						<!-- Content -->
+						<div class="accordion-content overflow-hidden hidden">
+							<div class="curriculum-lesson pt-8 lg:pt-12 2xl:pt-16 space-y-6 2xl:space-y-10">
+
+								<!-- Lesson -->
+								<div class="lesson">
+									<!-- Header -->
+									<div class="_is-done accordion-header relative cursor-pointer flex items-start justify-between">
+										<h4 class="accordion-header-title grow text-xs 2xl:text-sm font-semibold">1. Создайте документ с именем «index.html»</h4>
+										<svg class="accordion-header-icon relative top-[6px] w-4 h-4 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+											<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+									<!-- Content -->
+									<div class="accordion-content overflow-hidden hidden">
+										<div class="lesson-body pt-4 pb-6 2xl:pb-10 border-b border-[#8485B8]">
+											<div class="mb-3 text-xs text-pink">Выполнено</div>
+											<div class="space-y-3 2xl:space-y-5 text-body text-xxs sm:text-xs">
+												<p>Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis.</p>
+												<p>Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End lesson -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End card -->
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<div class="curriculum-item">
+						<!-- Header -->
+						<div class="accordion-header cursor-pointer">
+							<div class="flex items-center justify-between">
+								<h4 class="accordion-header-title text-md md:text-lg 2xl:text-xl font-black">Этап 3. <span class="text-pink">Интерфейс</span></h4>
+								<svg class="accordion-header-icon w-5 2xl:w-7 h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+									<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div class="mt-5">
+								<!-- <div class="w-full h-3 rounded-full bg-pink/20">
+									<div class="h-3 rounded-full bg-pink" style="width: 45%"></div>
+								</div> -->
+								<div class="text-body text-xs xl:text-sm !leading-none">Завершено</div>
+							</div>
+						</div>
+						<!-- Content -->
+						<div class="accordion-content overflow-hidden hidden">
+							<div class="curriculum-lesson pt-8 lg:pt-12 2xl:pt-16 space-y-6 2xl:space-y-10">
+								Задания
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End card -->
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<div class="curriculum-item">
+						<!-- Header -->
+						<div class="accordion-header cursor-pointer">
+							<div class="flex items-center justify-between">
+								<h4 class="accordion-header-title text-md md:text-lg 2xl:text-xl font-black">Этап 4. <span class="text-pink">Hello world</span></h4>
+								<svg class="accordion-header-icon w-5 2xl:w-7 h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+									<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div class="mt-5">
+								<!-- <div class="w-full h-3 rounded-full bg-pink/20">
+									<div class="h-3 rounded-full bg-pink" style="width: 45%"></div>
+								</div> -->
+								<div class="text-body text-xs xl:text-sm !leading-none">Завершено</div>
+							</div>
+						</div>
+						<!-- Content -->
+						<div class="accordion-content overflow-hidden hidden">
+							<div class="curriculum-lesson pt-8 lg:pt-12 2xl:pt-16 space-y-6 2xl:space-y-10">
+								Задания
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End card -->
+
+			</div>
+			<!-- End column #1 -->
+
+			<!-- Column #2 -->
+			<div class="space-y-10">
+				
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<!-- Header -->
+					<div class="flex items-baseline justify-between gap-x-3">
+						<h4 class="text-md md:text-lg 2xl:text-xl font-black">Возникли сложности?</h4>
+						<div class="flex items-center space-x-3 sm:space-x-5">
+							<div class="flex items-center text-pink">
+								<span class="mr-2 text-md 2xl:text-lg font-semibold leading-none">1</span>
+								<svg class="w-5 2xl:w-7 h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 28 28">
+									<path d="M20.416 2.237A7.467 7.467 0 0 0 14 6.087a7.467 7.467 0 0 0-6.417-3.85A7.933 7.933 0 0 0 0 10.462c0 5.304 5.583 11.098 10.267 15.026a5.802 5.802 0 0 0 7.466 0C22.416 21.56 28 15.766 28 10.462a7.934 7.934 0 0 0-7.584-8.225Z"/>
+								</svg>
+							</div>
+							<div x-data="{dropdownInfo: false}" class="relative inline-flex">
+								<!-- Dropdown toggle button -->
+								<button @click="dropdownInfo = ! dropdownInfo" class="text-white hover:text-pink">
+									<svg class="w-5 2xl:w-7 h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 28 28">
+										<path d="M14 0a14 14 0 1 0 14 14A14.015 14.015 0 0 0 14 0Zm0 25.667A11.667 11.667 0 1 1 25.667 14 11.68 11.68 0 0 1 14 25.667Z"/>
+										<path d="M14 11.667h-1.166a1.167 1.167 0 0 0 0 2.333H14v7a1.167 1.167 0 1 0 2.334 0v-7A2.333 2.333 0 0 0 14 11.667Zm0-2.334a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z"/>
+									</svg>
+								</button>
+								<!-- Dropdown list -->
+								<div
+									x-show="dropdownInfo"
+									@click.away="dropdownInfo = false"
+									x-transition:enter="ease-out duration-300" 
+									x-transition:enter-start="opacity-0" 
+									x-transition:enter-end="opacity-100" 
+									x-transition:leave="ease-in duration-150" 
+									x-transition:leave-start="opacity-100" 
+									x-transition:leave-end="opacity-0"
+									class="absolute z-50 -right-6 xs:-right-3 lg:-right-4 w-[290px] xs:w-[320px] sm:w-[460px] md:w-[560px] mt-10 p-6 xl:p-10 border border-[#8485B8] rounded-3xl xl:rounded-[40px] shadow-xl bg-darkblue"
+								>
+									<div class="space-y-3 sm:space-y-5 text-xxs md:text-xs">
+										<p>Этот раздел для помощи, можно задать вопрос ментору. по нажатии на задать вопрос появляется модалка.</p>
+										<p>В ней написаны советы, как надо задавать вопрос:</p>
+										<p>Помощь нужна для крайних случаев, когда самостоятельно найти решение проблемы неполучается.</p>
+										<p>Вам доступен 1 вопрос бесплатно, каждая следующая просьба будет платной - 100, 150, 200, 250 и т.д., по возрастающей. Вопрос должен содержать всю информацию необходимую для помощи - скриншоты и тд.</p>
+										<p>Решение каждой проблемы занимать 1 сообщение. Тратьте свою помощь рационально!</p>
+									</div>
+								</div>
+						</div>
+							
+						</div>
+					</div>
+					<!-- Question form  -->
+					<div class="mt-5">
+						<form>
+							<textarea type="text" class="w-full min-h-[174px] max-h-[360px] py-3 sm:py-5 2xl:py-6 px-4 sm:px-6 2xl:px-8 border border-[#8485B8] focus:border-pink focus:shadow-[0_0_0_3px_#EC4176] rounded-lg bg-white/5 text-body text-xxs sm:text-xs 2xl:text-sm shadow-transparent outline-0 transition" placeholder="Опишите Вашу проблему или вопрос" required></textarea>
+							<!-- Uploaded files -->
+							<div id="upload-files" class="space-y-3 mt-5">
+								<!-- File -->
+								<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+									<div class="overflow-hidden text-ellipsis text-xxs sm:text-xs font-bold">image.png</div>
+									<a href="#" class="flex items-center text-pink hover:text-white transition">
+										<svg class="w-4 xs:w-5 2xl:w-6 h-4 xs:h-5 2xl:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+											<path d="M17.5 3.333h-2.583A4.174 4.174 0 0 0 10.834 0H9.167a4.174 4.174 0 0 0-4.083 3.333H2.5A.833.833 0 1 0 2.5 5h.834v10.833A4.172 4.172 0 0 0 7.5 20h5a4.171 4.171 0 0 0 4.167-4.167V5h.833a.833.833 0 0 0 0-1.667ZM9.167 1.667h1.667a2.505 2.505 0 0 1 2.357 1.666H6.81a2.505 2.505 0 0 1 2.358-1.666ZM15 15.833a2.5 2.5 0 0 1-2.5 2.5h-5a2.5 2.5 0 0 1-2.5-2.5V5h10v10.833Z"/>
+											<path d="M8.333 15a.833.833 0 0 0 .834-.833v-5a.833.833 0 1 0-1.667 0v5a.833.833 0 0 0 .833.833Zm3.333 0a.833.833 0 0 0 .834-.833v-5a.833.833 0 1 0-1.667 0v5a.833.833 0 0 0 .833.833Z"/>
+										</svg>
+										<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Удалить</span>
+									</a>
+								</div>
+								<!-- File -->
+								<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+									<div class="overflow-hidden text-ellipsis text-xxs sm:text-xs font-bold">desktop_recording.mp4</div>
+									<a href="#" class="flex items-center text-pink hover:text-white transition">
+										<svg class="w-4 xs:w-5 2xl:w-6 h-4 xs:h-5 2xl:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+											<path d="M17.5 3.333h-2.583A4.174 4.174 0 0 0 10.834 0H9.167a4.174 4.174 0 0 0-4.083 3.333H2.5A.833.833 0 1 0 2.5 5h.834v10.833A4.172 4.172 0 0 0 7.5 20h5a4.171 4.171 0 0 0 4.167-4.167V5h.833a.833.833 0 0 0 0-1.667ZM9.167 1.667h1.667a2.505 2.505 0 0 1 2.357 1.666H6.81a2.505 2.505 0 0 1 2.358-1.666ZM15 15.833a2.5 2.5 0 0 1-2.5 2.5h-5a2.5 2.5 0 0 1-2.5-2.5V5h10v10.833Z"/>
+											<path d="M8.333 15a.833.833 0 0 0 .834-.833v-5a.833.833 0 1 0-1.667 0v5a.833.833 0 0 0 .833.833Zm3.333 0a.833.833 0 0 0 .834-.833v-5a.833.833 0 1 0-1.667 0v5a.833.833 0 0 0 .833.833Z"/>
+										</svg>
+										<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Удалить</span>
+									</a>
+								</div>
+							</div>
+							<!-- End uploaded files -->
+							<div class="flex flex-wrap items-center justify-between gap-5 mt-7">
+								<button type="submit" class="btn btn-pink">Отправить вопрос куратору</button>
+								<label for="upload-file" class="flex items-center cursor-pointer text-white hover:text-pink transition">
+									<div class="flex items-center">
+										<svg class="w-5 2xl:w-7 h-5 2xl:h-7" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+											<g clip-path="url(#a)">
+												<path d="M19.125 8a.833.833 0 0 0-1.178 0L8.87 17.116a4.167 4.167 0 0 1-5.893-5.893l8.79-8.826a2.5 2.5 0 0 1 3.537 3.535l-8.791 8.826a.852.852 0 0 1-1.179 0 .833.833 0 0 1 0-1.178l7.827-7.862a.833.833 0 0 0-1.178-1.179l-7.827 7.863a2.5 2.5 0 0 0 0 3.536 2.561 2.561 0 0 0 3.536 0l8.79-8.828a4.167 4.167 0 0 0-5.893-5.892L1.8 10.045a5.834 5.834 0 1 0 8.25 8.25l9.076-9.113a.832.832 0 0 0 0-1.182Z"/>
+											</g>
+											<defs>
+												<clipPath id="a">
+													<path d="M0 0h20v20H0z"/>
+												</clipPath>
+											</defs>
+										</svg>
+										<span class="ml-2 text-xs font-bold">Прикрепить файл</span>
+									</div>
+									<input id="upload-file" type="file" class="hidden">
+								</label>
+							</div>
+						</form>
+					</div>
+
+					<!-- FAQ list -->
+					<div class="mt-12 sm:mt-16">
+						<h4 class="text-md md:text-lg 2xl:text-xl font-black">Прошлые вопросы</h4>
+						<div class="space-y-4 sm:space-y-6 lg:space-y-10 mt-6 lg:mt-10">
+	
+							<!-- FAQ item-->
+							<div class="faq-item">
+								<!-- Header -->
+								<div class="accordion-header flex items-center justify-between cursor-pointer">
+									<h4 class="accordion-header-title text-xxs sm:text-xs lg:text-md 2xl:text-lg font-bold">Как начать задание?</h4>
+									<svg class="accordion-header-icon w-4 sm:w-5 2xl:w-7 h-4 sm:h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+										<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+									</svg>
+								</div>
+								<!-- Content -->
+								<div class="accordion-content overflow-hidden hidden pt-4 lg:pt-7 space-y-3 lg:space-y-5">
+									<div class="text-body text-xxs sm:text-xs">
+										<span class="text-white font-semibold">Вопрос:</span> Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis. Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.
+									</div>
+									<div class="text-body text-xxs sm:text-xs">
+										<span class="text-white font-semibold">Ответ:</span> Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis. Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.
+									</div>
+								</div>
+							</div>
+							<!-- End FAQ -->
+	
+							<!-- FAQ item-->
+							<div class="faq-item">
+								<!-- Header -->
+								<div class="accordion-header flex items-center justify-between cursor-pointer">
+									<h4 class="accordion-header-title text-xxs sm:text-xs lg:text-md 2xl:text-lg font-bold">Неверно отображается страница</h4>
+									<svg class="accordion-header-icon w-4 sm:w-5 2xl:w-7 h-4 sm:h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+										<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+									</svg>
+								</div>
+								<!-- Content -->
+								<div class="accordion-content overflow-hidden hidden pt-4 lg:pt-7 space-y-3 lg:space-y-5">
+									<div class="text-body text-xxs sm:text-xs">
+										<span class="text-white font-semibold">Вопрос:</span> Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis. Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.
+									</div>
+									<div class="text-body text-xxs sm:text-xs">
+										<span class="text-white font-semibold">Ответ:</span> Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis. Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.
+									</div>
+								</div>
+							</div>
+							<!-- End FAQ -->
+	
+							<!-- FAQ item-->
+							<div class="faq-item">
+								<!-- Header -->
+								<div class="accordion-header flex items-center justify-between cursor-pointer">
+									<h4 class="accordion-header-title text-xxs sm:text-xs lg:text-md 2xl:text-lg font-bold">Не могу найти решение</h4>
+									<svg class="accordion-header-icon w-4 sm:w-5 2xl:w-7 h-4 sm:h-5 2xl:h-7 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 16">
+										<path fill-rule="evenodd" d="M27.536.72a2 2 0 0 1-.256 2.816l-12 10a2 2 0 0 1-2.56 0l-12-10A2 2 0 1 1 3.28.464L14 9.397 24.72.464a2 2 0 0 1 2.816.256Z" clip-rule="evenodd"/>
+									</svg>
+								</div>
+								<!-- Content -->
+								<div class="accordion-content overflow-hidden hidden pt-4 lg:pt-7 space-y-3 lg:space-y-5">
+									<div class="text-body text-xxs sm:text-xs">
+										<span class="text-white font-semibold">Вопрос:</span> Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis. Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.
+									</div>
+									<div class="text-body text-xxs sm:text-xs">
+										<span class="text-white font-semibold">Ответ:</span> Etiam rhoncus pellentesque mi, ac hendrerit sapien tincidunt a. Ut gravida nibh semper, tempus nibh ac, convallis turpis. Praesent pharetra nec odio id ultrices. Duis quis augue dapibus, sollicitudin elit id, lobortis tellus. Pellentesque quis maximus justo, in vestibulum felis.
+									</div>
+								</div>
+							</div>
+							<!-- End FAQ -->
+	
+						</div>
+					</div>
+					<!-- End FAQ -->
+				</div>
+				<!-- End card -->
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<div class="flex flex-col sm:flex-row md:items-center gap-5">
+						<div class="grow">
+							<h4 class="text-md md:text-lg 2xl:text-xl font-black">Техническое задание</h4>
+						</div>
+						<div class="grow-0">
+							<a href="#" class="w-full sm:w-auto btn btn-pink" target="_blank" rel="noopener nofollow">Ознакомиться с заданием</a>
+						</div>
+					</div>
+				</div>
+				<!-- End card -->
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<h4 class="text-md md:text-lg 2xl:text-xl font-black">Прикрепленные файлы</h4>
+					<!-- Attachment files -->
+					<div class="space-y-3 mt-5 md:mt-7">
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Техническое задание.docx</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M15.622 16.945a.832.832 0 0 1-.068 1.177l-1.321 1.179a2.418 2.418 0 0 1-1.72.699 2.51 2.51 0 0 1-1.78-.735L9.446 18.12a.832.832 0 1 1 1.108-1.245l1.113.995v-6.204a.833.833 0 0 1 1.667 0v6.205l1.112-.994a.833.833 0 0 1 1.176.068Zm-.325-10.811a.907.907 0 0 1-.602-.613 6.667 6.667 0 0 0-12.907.702 6.38 6.38 0 0 0 .666 4.317 4.54 4.54 0 0 0-2.406 4.71 4.87 4.87 0 0 0 4.688 3.916h1.93a.833.833 0 1 0 0-1.666h-1.93a3.175 3.175 0 0 1-3.038-2.485 2.89 2.89 0 0 1 1.528-3 1.66 1.66 0 0 0 .66-2.238 5 5 0 1 1 9.218-3.76 2.584 2.584 0 0 0 1.704 1.71 4.976 4.976 0 0 1 3.51 5.175 4.481 4.481 0 0 1-.926 2.424.834.834 0 0 0 1.322 1.015 6.222 6.222 0 0 0 1.266-3.31 6.634 6.634 0 0 0-4.683-6.897Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Скачать</span>
+							</a>
+						</div>
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Logotype.svg</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M15.622 16.945a.832.832 0 0 1-.068 1.177l-1.321 1.179a2.418 2.418 0 0 1-1.72.699 2.51 2.51 0 0 1-1.78-.735L9.446 18.12a.832.832 0 1 1 1.108-1.245l1.113.995v-6.204a.833.833 0 0 1 1.667 0v6.205l1.112-.994a.833.833 0 0 1 1.176.068Zm-.325-10.811a.907.907 0 0 1-.602-.613 6.667 6.667 0 0 0-12.907.702 6.38 6.38 0 0 0 .666 4.317 4.54 4.54 0 0 0-2.406 4.71 4.87 4.87 0 0 0 4.688 3.916h1.93a.833.833 0 1 0 0-1.666h-1.93a3.175 3.175 0 0 1-3.038-2.485 2.89 2.89 0 0 1 1.528-3 1.66 1.66 0 0 0 .66-2.238 5 5 0 1 1 9.218-3.76 2.584 2.584 0 0 0 1.704 1.71 4.976 4.976 0 0 1 3.51 5.175 4.481 4.481 0 0 1-.926 2.424.834.834 0 0 0 1.322 1.015 6.222 6.222 0 0 0 1.266-3.31 6.634 6.634 0 0 0-4.683-6.897Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Скачать</span>
+							</a>
+						</div>
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Main_picture.png</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M15.622 16.945a.832.832 0 0 1-.068 1.177l-1.321 1.179a2.418 2.418 0 0 1-1.72.699 2.51 2.51 0 0 1-1.78-.735L9.446 18.12a.832.832 0 1 1 1.108-1.245l1.113.995v-6.204a.833.833 0 0 1 1.667 0v6.205l1.112-.994a.833.833 0 0 1 1.176.068Zm-.325-10.811a.907.907 0 0 1-.602-.613 6.667 6.667 0 0 0-12.907.702 6.38 6.38 0 0 0 .666 4.317 4.54 4.54 0 0 0-2.406 4.71 4.87 4.87 0 0 0 4.688 3.916h1.93a.833.833 0 1 0 0-1.666h-1.93a3.175 3.175 0 0 1-3.038-2.485 2.89 2.89 0 0 1 1.528-3 1.66 1.66 0 0 0 .66-2.238 5 5 0 1 1 9.218-3.76 2.584 2.584 0 0 0 1.704 1.71 4.976 4.976 0 0 1 3.51 5.175 4.481 4.481 0 0 1-.926 2.424.834.834 0 0 0 1.322 1.015 6.222 6.222 0 0 0 1.266-3.31 6.634 6.634 0 0 0-4.683-6.897Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Скачать</span>
+							</a>
+						</div>
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Video_background.mp4</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M15.622 16.945a.832.832 0 0 1-.068 1.177l-1.321 1.179a2.418 2.418 0 0 1-1.72.699 2.51 2.51 0 0 1-1.78-.735L9.446 18.12a.832.832 0 1 1 1.108-1.245l1.113.995v-6.204a.833.833 0 0 1 1.667 0v6.205l1.112-.994a.833.833 0 0 1 1.176.068Zm-.325-10.811a.907.907 0 0 1-.602-.613 6.667 6.667 0 0 0-12.907.702 6.38 6.38 0 0 0 .666 4.317 4.54 4.54 0 0 0-2.406 4.71 4.87 4.87 0 0 0 4.688 3.916h1.93a.833.833 0 1 0 0-1.666h-1.93a3.175 3.175 0 0 1-3.038-2.485 2.89 2.89 0 0 1 1.528-3 1.66 1.66 0 0 0 .66-2.238 5 5 0 1 1 9.218-3.76 2.584 2.584 0 0 0 1.704 1.71 4.976 4.976 0 0 1 3.51 5.175 4.481 4.481 0 0 1-.926 2.424.834.834 0 0 0 1.322 1.015 6.222 6.222 0 0 0 1.266-3.31 6.634 6.634 0 0 0-4.683-6.897Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Скачать</span>
+							</a>
+						</div>
+					</div>
+					<!-- End attachment files -->
+					<div class="mt-5 md:mt-7">
+						<a href="#" class="w-full sm:w-auto btn btn-pink" target="_blank" rel="noopener nofollow">Скачать все архивом</a>
+					</div>
+				</div>
+				<!-- End card -->
+
+				<!-- Card -->
+				<div class="relative px-5 sm:px-8 xl:px-10 2xl:px-16 py-6 sm:py-8 xl:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card">
+					<h4 class="text-md md:text-lg 2xl:text-xl font-black">Материалы</h4>
+					<!-- Materials -->
+					<div class="space-y-3 mt-5 md:mt-7">
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Установка Laravel</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M20 2.5v11.7a4.186 4.186 0 0 1-3.022 4.006l-5.605 1.601a4.996 4.996 0 0 1-2.746 0l-5.605-1.6A4.184 4.184 0 0 1 0 14.2V3.333c.005-1.09 1.662-1.089 1.667 0V14.2c0 1.11.746 2.099 1.813 2.404l5.605 1.6c.6.172 1.232.172 1.832 0l5.604-1.6a2.51 2.51 0 0 0 1.813-2.404V2.5c.005-1.09 1.662-1.09 1.667 0H20ZM3.333 12.447V3.333c0-1.056.484-2.026 1.326-2.66A3.306 3.306 0 0 1 7.582.127L9.021.54c.371.106.704.295.98.543.276-.248.608-.437.98-.543l1.437-.41c2.051-.65 4.31 1.056 4.25 3.204v9.114c0 1.48-.995 2.799-2.418 3.205l-2.876.822a4.99 4.99 0 0 1-2.747 0l-2.875-.822a3.348 3.348 0 0 1-2.418-3.205Zm7.5 2.447 2.958-.844A1.674 1.674 0 0 0 15 12.447V3.333c0-.527-.242-1.012-.662-1.33a1.656 1.656 0 0 0-1.462-.273l-1.438.41a.837.837 0 0 0-.605.802v11.952ZM5 12.447c0 .74.497 1.4 1.21 1.603l2.957.844V2.942a.836.836 0 0 0-.604-.8l-1.44-.412a1.653 1.653 0 0 0-1.462.272A1.662 1.662 0 0 0 5 3.334v9.113Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Читать</span>
+							</a>
+						</div>
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Реализация “Laravel с нуля”</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M18.333 17.5a.833.833 0 0 1-.833-.833V3.333a.833.833 0 1 1 1.666 0v13.334c0 .46-.372.833-.833.833ZM15 17.5a.833.833 0 0 1-.834-.833V3.333a.833.833 0 1 1 1.667 0v13.334c0 .46-.373.833-.833.833Zm-11.394-.226a2.79 2.79 0 0 1-1.258-.306 2.716 2.716 0 0 1-1.515-2.465V5.497c0-1.062.566-1.984 1.514-2.464a2.754 2.754 0 0 1 2.884.237l6.14 4.502A2.737 2.737 0 0 1 12.498 10c0 .89-.412 1.703-1.13 2.228l-6.14 4.503c-.49.36-1.053.542-1.623.542v.001ZM3.603 4.395c-.17 0-.34.042-.502.124-.382.194-.601.55-.601.978v9.006c0 .429.219.784.6.979.383.193.8.158 1.144-.094l6.14-4.503c.29-.212.449-.526.449-.884s-.16-.673-.448-.884l-6.14-4.504a1.079 1.079 0 0 0-.642-.218Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Смотреть</span>
+							</a>
+						</div>
+						<!-- File -->
+						<div class="flex items-center justify-between gap-x-4 px-4 sm:px-5 py-4 sm:py-6 rounded-lg bg-[#2A2B4E]">
+							<div class="text-xxs sm:text-xs font-bold break-all">Фабрики и сиды</div>
+							<a href="#" class="flex items-center text-pink hover:text-white transition" target="_blank" rel="noopener nofollow">
+								<svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M20 2.5v11.7a4.186 4.186 0 0 1-3.022 4.006l-5.605 1.601a4.996 4.996 0 0 1-2.746 0l-5.605-1.6A4.184 4.184 0 0 1 0 14.2V3.333c.005-1.09 1.662-1.089 1.667 0V14.2c0 1.11.746 2.099 1.813 2.404l5.605 1.6c.6.172 1.232.172 1.832 0l5.604-1.6a2.51 2.51 0 0 0 1.813-2.404V2.5c.005-1.09 1.662-1.09 1.667 0H20ZM3.333 12.447V3.333c0-1.056.484-2.026 1.326-2.66A3.306 3.306 0 0 1 7.582.127L9.021.54c.371.106.704.295.98.543.276-.248.608-.437.98-.543l1.437-.41c2.051-.65 4.31 1.056 4.25 3.204v9.114c0 1.48-.995 2.799-2.418 3.205l-2.876.822a4.99 4.99 0 0 1-2.747 0l-2.875-.822a3.348 3.348 0 0 1-2.418-3.205Zm7.5 2.447 2.958-.844A1.674 1.674 0 0 0 15 12.447V3.333c0-.527-.242-1.012-.662-1.33a1.656 1.656 0 0 0-1.462-.273l-1.438.41a.837.837 0 0 0-.605.802v11.952ZM5 12.447c0 .74.497 1.4 1.21 1.603l2.957.844V2.942a.836.836 0 0 0-.604-.8l-1.44-.412a1.653 1.653 0 0 0-1.462.272A1.662 1.662 0 0 0 5 3.334v9.113Z"/>
+								</svg>
+								<span class="ml-2 text-[12px] xs:text-xxs sm:text-xs font-bold">Читать</span>
+							</a>
+						</div>
+					</div>
+					<!-- End materials -->
+				</div>
+				<!-- End card -->
+
+			</div>
+			<!-- End column #2 -->
+
+		</div>
+
+	</div>
+ </main>
+
+	<!-- Site footer -->
+	<footer class="footer py-8 sm:py-12 xl:py-16">
+		<div class="container">
+			<div class="flex flex-wrap lg:flex-nowrap items-center">
+				<div class="footer-logo order-0 basis-full sm:basis-1/2 lg:basis-1/3 shrink-0 text-center sm:text-left">
+					<a href="/" class="inline-block" rel="home">
+						<img src="./images/logo.svg" class="w-[155px] h-[38px]" alt="CutCode">
+					</a>
+				</div><!-- /.footer-logo -->
+				<div class="footer-copyright order-2 lg:order-1 basis-full lg:basis-1/3 mt-8 lg:mt-0">
+					<div class="text-[#999] text-xxs xs:text-xs sm:text-sm text-center">CutCode, 2021 © Все права защещены.</div>
+				</div><!-- /.footer-copyright -->
+				<div class="footer-social order-1 lg:order-2 basis-full sm:basis-1/2 lg:basis-1/3 mt-8 sm:mt-0">
+					<div class="flex flex-wrap items-center justify-center sm:justify-end space-x-6">
+						<a href="#" class="inline-flex items-center text-white hover:text-pink" target="_blank" rel="nofollow noopener">
+							<img class="h-5 lg:h-6" src="./images/icons/youtube.svg" alt="YouTube">
+							<span class="ml-2 lg:ml-3 text-xxs font-semibold">YouTube</span>
+						</a>
+						<a href="#" class="inline-flex items-center text-white hover:text-pink" target="_blank" rel="nofollow noopener">
+							<img class="h-5 lg:h-6" src="./images/icons/telegram.svg" alt="Telegram">
+							<span class="ml-2 lg:ml-3 text-xxs font-semibold">Telegram</span>
+						</a>
+					</div>
+				</div><!-- /.footer-social -->
+			</div>
+		</div><!-- /.container -->
+	</footer>
+
+	<div id="mobileMenu" class="hidden bg-white fixed inset-0 z-[9999]">
+	<div class="container">
+		<div class="mmenu-heading flex items-center pt-6 xl:pt-12">
+			<div class="shrink-0 grow">
+				<a href="/" rel="home">
+					<img src="./images/logo-dark.svg" class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]" alt="CutCode">
+				</a>
+			</div>
+			<div class="shrink-0 flex items-center">
+				<button id="closeMobileMenu" class="text-dark hover:text-purple transition">
+					<span class="sr-only">Закрыть меню</span>
+					<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+		</div><!-- /.mmenu-heading -->
+		<div class="mmenu-inner pt-10">
+			<div class="flex items-center">
+				<a href="purchase.html" class="order !h-16 mr-6 btn btn-pink">Купить курс</a>
+				<button class="profile flex items-center mr-12">
+					<svg class="profile-icon w-8 h-8 text-purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs/><path d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24zM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8zM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0z" fill="currentColor"/></svg>
+					<span class="profile-text relative ml-2 text-dark font-bold">Войти</span>
+				</button>
+			</div>
+			<nav class="flex flex-col mt-8">
+				<a href="#s-intro" class="self-start py-1 text-dark hover:text-pink text-md font-bold">О курсе</a>
+				<a href="#s-about" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Для кого</a>
+				<a href="#s-education" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Что получишь</a>
+				<a href="#s-testimonials" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Отзывы</a>
+				<a href="#s-curriculum" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Программа курса</a>
+				<a href="#s-price" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Стоимость</a>
+			</nav>
+			<div class="flex flex-wrap items-center space-x-6 mt-8">
+				<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">
+					<img class="h-5 lg:h-6" src="./images/icons/youtube.svg" alt="YouTube">
+					<span class="ml-2 lg:ml-3 text-xxs font-semibold">YouTube</span>
+				</a>
+				<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">
+					<img class="h-5 lg:h-6" src="./images/icons/telegram.svg" alt="Telegram">
+					<span class="ml-2 lg:ml-3 text-xxs font-semibold">Telegram</span>
+				</a>
+			</div>
+		</div><!-- /.mmenu-inner -->
+	</div><!-- /.container -->
+</div>
+
+	<!-- Modal: Upload task -->
+<div class="overflow-auto bg-black/50" x-show="showTaskUploadModal" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showTaskUploadModal }">
+	<div class="modal-wrapper relative z-10 max-w-[300px] xs:max-w-[350px] sm:max-w-[560px] px-6 sm:px-10 2xl:px-16 py-6 sm:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card" 
+			 x-show="showTaskUploadModal" 
+			 @click.away="showTaskUploadModal = false" 
+			 x-transition:enter="ease-out duration-300" 
+			 x-transition:enter-start="opacity-0 scale-90" 
+			 x-transition:enter-end="opacity-100 scale-100" >
+		<!-- Close button -->
+		<button class="modal-close absolute z-50 -top-[50px] right-0 md:-right-[50px] text-white hover:text-white/[0.5] transition" @click="showTaskUploadModal = false">
+			<span class="sr-only">Закрыть модальное окно</span>
+			<svg class="w-6 md:w-8 h-6 md:h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 40 40">
+				<path d="M.406.406a1.386 1.386 0 0 1 1.96 0l37.228 37.229a1.385 1.385 0 1 1-1.96 1.96L.407 2.364a1.386 1.386 0 0 1 0-1.959Z"/>
+				<path d="M39.594.406a1.386 1.386 0 0 1 0 1.96L2.365 39.593a1.386 1.386 0 0 1-1.96-1.96L37.636.407a1.385 1.385 0 0 1 1.96 0Z"/>
+			</svg>
+		</button>
+
+		<!-- Content -->
+		<div class="modal-content relative">
+			<h2 class="mb-7 text-white text-md sm:text-lg xl:text-xl font-black text-center">Отправить ссылку на commit</h2>
+			<!-- Upload task -->
+			<form>
+				<input type="text" class="w-full py-3 sm:py-5 2xl:py-6 px-4 sm:px-6 2xl:px-8 border border-[#8485B8] focus:border-pink focus:shadow-[0_0_0_3px_#EC4176] rounded-lg bg-white/5 text-body shadow-transparent outline-0 transition" placeholder="Ссылка на GitHub" required>
+				<button type="submit" class="btn btn-pink w-full mt-5">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal: Edit task -->
+<div class="overflow-auto bg-black/50" x-show="showTaskEditModal" :class="{ 'fixed inset-0 z-[9999] flex items-center justify-center': showTaskEditModal }">
+	<div class="modal-wrapper relative z-10 max-w-[300px] xs:max-w-[350px] sm:max-w-[560px] px-6 sm:px-10 2xl:px-16 py-6 sm:py-10 2xl:py-16 rounded-3xl xl:rounded-[40px] bg-card" 
+			 x-show="showTaskEditModal" 
+			 @click.away="showTaskEditModal = false" 
+			 x-transition:enter="ease-out duration-300" 
+			 x-transition:enter-start="opacity-0 scale-90" 
+			 x-transition:enter-end="opacity-100 scale-100">
+		<!-- Close button -->
+		<button class="modal-close absolute z-50 -top-[50px] right-0 md:-right-[50px] text-white hover:text-white/[0.5] transition" @click="showTaskEditModal = false">
+			<span class="sr-only">Закрыть модальное окно</span>
+			<svg class="w-6 md:w-8 h-6 md:h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 40 40">
+				<path d="M.406.406a1.386 1.386 0 0 1 1.96 0l37.228 37.229a1.385 1.385 0 1 1-1.96 1.96L.407 2.364a1.386 1.386 0 0 1 0-1.959Z"/>
+				<path d="M39.594.406a1.386 1.386 0 0 1 0 1.96L2.365 39.593a1.386 1.386 0 0 1-1.96-1.96L37.636.407a1.385 1.385 0 0 1 1.96 0Z"/>
+			</svg>
+		</button>
+
+		<!-- Content -->
+		<div class="modal-content relative">
+			<h2 class="mb-7 text-white text-md sm:text-lg xl:text-xl font-black text-center">Отправить новую ссылку на commit</h2>
+			<!-- Upload task -->
+			<form>
+				<input type="text" class="w-full py-3 sm:py-5 2xl:py-6 px-4 sm:px-6 2xl:px-8 border border-[#8485B8] focus:border-pink focus:shadow-[0_0_0_3px_#EC4176] rounded-lg bg-white/5 text-body shadow-transparent outline-0 transition" placeholder="Ссылка на GitHub" required>
+				<button type="submit" class="btn btn-pink w-full mt-5">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script src="./js/app.js"></script>
+
+</body>
+</html>
