@@ -9,9 +9,9 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-	<link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#7843E9">
-	<meta name="msapplication-TileColor" content="#7843E9">
-	<meta name="theme-color" content="#7843E9">
+	<link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#1E1F43">
+	<meta name="msapplication-TileColor" content="#1E1F43">
+	<meta name="theme-color" content="#1E1F43">
 
 	<link rel="stylesheet" href="./css/tailwind.css">
 	<link rel="stylesheet" href="./css/main.css">
@@ -70,7 +70,25 @@
 				<div class="mb-6 sm:mb-8 text-lg sm:text-xl 2xl:text-[42px] font-black">500 ₽</div>
 				<div class="text-md sm:text-lg 2xl:text-xl font-black">Доступ к заданию</div>
 				<p class="max-w-[380px] mt-3 sm:mt-5 text-body text-xs md:text-sm">Открыть доступ к выбранному заданию и начать его выполнение.</p>
-				<button class="mt-7 btn btn-outline">Получить доступ</button>
+				<div x-data="{purchaseAccessBasicBtn: true, purchaseAccessBasic: false}" class="mt-7">
+					<!-- Purchase access button -->
+					<button @click="purchaseAccessBasic = ! purchaseAccessBasic, purchaseAccessBasicBtn = ! purchaseAccessBasicBtn" x-show="purchaseAccessBasicBtn" class="btn btn-outline">Получить доступ</button>
+					<!-- Purchase access form -->
+					<div
+						x-show="purchaseAccessBasic"
+						x-transition:enter="ease-out duration-300" 
+						x-transition:enter-start="opacity-0" 
+						x-transition:enter-end="opacity-100" 
+						x-transition:leave="ease-in duration-150" 
+						x-transition:leave-start="opacity-100" 
+						x-transition:leave-end="opacity-0"
+					>
+						<form class="flex gap-3 h-[64px] sm:h-[74px]">
+							<input type="email" class="w-full h-full px-4 md:px-6 rounded-lg border border-[#8485B8] focus:border-pink focus:shadow-[0_0_0_3px_#EC4176] bg-white/5 text-white text-xxs sm:text-xs 2xl:text-sm shadow-transparent outline-0 transition" placeholder="E-mail" required>
+							<button type="submit" class="shrink-0 w-14 sm:w-[74px] !h-full !px-0 btn btn-pink">→</button>
+						</form>
+					</div>
+				</div>
 				<ul class="space-y-3 mt-10">
 					<li class="flex">
 						<svg class="shrink-0 w-5 sm:w-6 h-5 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -96,7 +114,25 @@
 				<div class="mb-6 sm:mb-8 text-lg sm:text-xl 2xl:text-[42px] font-black">5 000 ₽</div>
 				<div class="text-md sm:text-lg 2xl:text-xl font-black">Полный доступ</div>
 				<p class="max-w-[380px] mt-3 sm:mt-5 text-white text-xs md:text-sm">Полный доступ ко всем заданиям и не только...</p>
-				<button class="mt-7 btn btn-pink">Получить доступ</button>
+				<div x-data="{purchaseAccessFullBtn: true, purchaseAccessFull: false}" class="mt-7">
+					<!-- Purchase access button -->
+					<button @click="purchaseAccessFull = ! purchaseAccessFull, purchaseAccessFullBtn = ! purchaseAccessFullBtn" x-show="purchaseAccessFullBtn" class="btn btn-pink">Получить доступ</button>
+					<!-- Purchase access form -->
+					<div
+						x-show="purchaseAccessFull"
+						x-transition:enter="ease-out duration-300" 
+						x-transition:enter-start="opacity-0" 
+						x-transition:enter-end="opacity-100" 
+						x-transition:leave="ease-in duration-150" 
+						x-transition:leave-start="opacity-100" 
+						x-transition:leave-end="opacity-0"
+					>
+						<form class="flex gap-3 h-[64px] sm:h-[74px]">
+							<input type="email" class="w-full h-full px-4 md:px-6 rounded-lg border border-[#A07BF0] bg-white/10 focus:border-pink focus:shadow-[0_0_0_3px_#EC4176] text-white placeholder:text-white text-xxs sm:text-xs 2xl:text-sm shadow-transparent outline-0 transition" placeholder="E-mail" required>
+							<button type="submit" class="shrink-0 w-14 sm:w-[74px] !h-full !px-0 btn btn-pink">→</button>
+						</form>
+					</div>
+				</div>
 				<ul class="space-y-3 mt-10">
 					<li class="flex">
 						<svg class="shrink-0 w-5 sm:w-6 h-5 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
