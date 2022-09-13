@@ -646,12 +646,20 @@ video {
   right: -1.5rem;
 }
 
-.-top-\[50px\] {
-  top: -50px;
+.top-0 {
+  top: 0px;
 }
 
 .right-0 {
   right: 0px;
+}
+
+.-top-\[50px\] {
+  top: -50px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .z-50 {
@@ -771,6 +779,10 @@ video {
   margin-right: 1rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
 }
@@ -785,6 +797,38 @@ video {
 
 .mb-7 {
   margin-bottom: 1.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-12 {
+  margin-left: 3rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-\[6px\] {
+  margin-left: 6px;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -863,12 +907,28 @@ video {
   height: 2rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .\!h-16 {
   height: 4rem !important;
 }
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-\[14px\] {
+  height: 14px;
 }
 
 .max-h-\[360px\] {
@@ -915,8 +975,36 @@ video {
   width: 2rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
 .w-6 {
   width: 1.5rem;
+}
+
+.w-\[280px\] {
+  width: 280px;
+}
+
+.w-11 {
+  width: 2.75rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-\[14px\] {
+  width: 14px;
 }
 
 .max-w-\[640px\] {
@@ -1210,6 +1298,10 @@ video {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .py-16 {
@@ -1566,6 +1658,10 @@ video {
     width: 1.25rem;
   }
 
+  .xs\:w-\[300px\] {
+    width: 300px;
+  }
+
   .xs\:max-w-\[350px\] {
     max-width: 350px;
   }
@@ -1578,13 +1674,13 @@ video {
     padding: 2rem;
   }
 
-  .xs\:text-xxs {
-    font-size: 14px;
+  .xs\:text-xs {
+    font-size: 16px;
     line-height: 1.6em;
   }
 
-  .xs\:text-xs {
-    font-size: 16px;
+  .xs\:text-xxs {
+    font-size: 14px;
     line-height: 1.6em;
   }
 }
@@ -1660,6 +1756,10 @@ video {
 
   .sm\:w-5 {
     width: 1.25rem;
+  }
+
+  .sm\:w-\[300px\] {
+    width: 300px;
   }
 
   .sm\:max-w-\[560px\] {

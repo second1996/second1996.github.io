@@ -162,6 +162,10 @@ a {
   -o-transition: .3s ease;
   transition: .3s ease
 }
+input._is-error,
+textarea._is-error {
+  border-color: #ec4176
+}
 .header-actions .profile .profile-text::after,
 .mmenu-inner .profile .profile-text::after {
   content: "";
