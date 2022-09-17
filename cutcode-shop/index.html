@@ -27,12 +27,8 @@
 						<img src="./images/logo.svg" class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]" alt="CutCode">
 					</a>
 				</div><!-- /.header-logo -->
-				<div class="header-menu grow flex items-center justify-center ml-8 mr-8 gap-8">
-					<nav class="flex gap-8">
-						<a href="index.html" class="text-white hover:text-pink font-bold">Главная</a>
-						<a href="catalog.html" class="text-white hover:text-pink font-bold">Каталог</a>
-					</nav>
-					<form class="flex gap-3">
+				<div class="header-menu grow flex items-center ml-8 mr-8 gap-8">
+					<form class="hidden lg:flex gap-3">
 						<input type="search" class="w-full h-12 px-4 rounded-lg border border-body/10 focus:border-pink focus:shadow-[0_0_0_3px_#EC4176] bg-white/5 text-white text-xs shadow-transparent outline-0 transition" placeholder="Поиск..." required>
 						<button type="submit" class="shrink-0 w-12 !h-12 !px-0 btn btn-pink">
 							<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
@@ -40,6 +36,11 @@
 							</svg>
 						</button>
 					</form>
+					<nav class="hidden 2xl:flex gap-8">
+						<a href="index.html" class="text-white hover:text-pink font-bold">Главная</a>
+						<a href="catalog.html" class="text-white hover:text-pink font-bold">Каталог товаров</a>
+						<a href="cart.html" class="text-white hover:text-pink font-bold">Корзина</a>
+					</nav>
 				</div><!-- /.header-menu -->
 				<div class="header-actions flex items-center gap-5">
 					<!-- <a href="login.html" class="profile hidden xs:flex items-center">
@@ -94,9 +95,15 @@
 						</svg>
 						<div class="flex flex-col gap-2">
 							<span class="text-body text-xxs leading-none">3 шт.</span>
-							<span class="text-white text-xs font-bold leading-none">57 900 ₽</span>
+							<span class="text-white text-xxs 2xl:text-xs font-bold !leading-none">57 900 ₽</span>
 						</div>
 					</a>
+					<button id="burgerMenu" class="flex 2xl:hidden text-white hover:text-pink transition">
+						<span class="sr-only">Меню</span>
+						<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
 				</div><!-- /.header-actions -->
 			</div><!-- /.header-inner -->
 		</div><!-- /.container -->
@@ -110,8 +117,8 @@
 			<!-- Section heading -->
 			<h2 class="text-[42px] font-black">Категории</h2>
 
-			<!-- Products list -->
-			<div class="products grid grid-cols-5 gap-5 mt-12">
+			<!-- Categories -->
+			<div class="grid grid-cols-3 xl:grid-cols-5 gap-5 mt-8">
 				<a href="catalog.html" class="p-6 rounded-xl bg-card hover:bg-pink text-sm text-white font-semibold">Мыши</a>
 				<a href="catalog.html" class="p-6 rounded-xl bg-card hover:bg-pink text-sm text-white font-semibold">Клавиатуры</a>
 				<a href="catalog.html" class="p-6 rounded-xl bg-card hover:bg-pink text-sm text-white font-semibold">Наушники</a>
@@ -130,7 +137,7 @@
 			<h2 class="text-[42px] font-black">Каталог товаров</h2>
 
 			<!-- Products list -->
-			<div class="products grid grid-cols-4 gap-x-8 gap-y-12 mt-12">
+			<div class="products grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-12 mt-8">
 				<!-- Product card -->
 <div class="product-card flex flex-col rounded-3xl bg-card">
 	<a href="product.html" class="product-card-photo overflow-hidden h-[320px] rounded-3xl">
@@ -141,7 +148,11 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">30 000 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">В корзине</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="Удалить из избранного">
 					<!-- <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -164,7 +175,12 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">43 900 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="pointer-events-none w-auto !h-[56px] btn btn-pink">Загрузка...</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg> -->
+					...
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -184,7 +200,14 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">51 500 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">Купить</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg> -->
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path fill-rule="evenodd" d="M51.38 6.692c.481.442.514 1.19.073 1.67l-33.8 36.873a1.182 1.182 0 0 1-1.707.037L.582 29.908a1.182 1.182 0 1 1 1.672-1.67l14.49 14.49L49.712 6.765a1.182 1.182 0 0 1 1.67-.073Z" clip-rule="evenodd"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -204,7 +227,11 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">87 200 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">Купить</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -224,7 +251,11 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">58 730 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">Купить</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -244,7 +275,11 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">9 800 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">Купить</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -264,7 +299,11 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">25 000 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">Купить</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -284,7 +323,11 @@
 		<div class="mt-auto pt-6">
 			<div class="mb-3 text-sm font-semibold">37 150 ₽</div>
 			<div class="flex flex-wrap items-center gap-4">
-				<a href="#" class="w-auto !h-[56px] btn btn-pink">Купить</a>
+				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-pink">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
+						<path d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z"/>
+					</svg>
+				</a>
 				<a href="#" class="w-[56px] !h-[56px] !px-0 btn btn-purple" title="В избранное">
 					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
 						<path d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z"/>
@@ -306,7 +349,7 @@
 			<h2 class="text-[42px] font-black">Бренды</h2>
 
 			<!-- Brands list -->
-			<div class="grid grid-cols-6 gap-8 mt-12">
+			<div class="grid grid-cols-3 2xl:grid-cols-6 gap-8 mt-12">
 				<a href="catalog.html" class="p-6 rounded-xl bg-card hover:bg-card/60">
 					<div class="h-16">
 						<img src="./images/brands/1.png" class="object-contain w-full h-full" alt="Steelseries">
@@ -395,7 +438,6 @@
 			</div>
 		</div><!-- /.mmenu-heading -->
 		<div class="mmenu-inner pt-10">
-			<a href="purchase.html" class="order !h-16 mr-6 mb-8 btn btn-pink">Купить курс</a>
 			<!-- <a href="login.html" class="profile flex items-center mr-12">
 				<svg class="profile-icon w-8 h-8 text-purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs/><path d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24zM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8zM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0z" fill="currentColor"/></svg>
 				<span class="profile-text relative ml-2 text-dark font-bold">Войти</span>
@@ -414,12 +456,10 @@
 				</div>
 			</div>
 			<nav class="flex flex-col mt-8">
-				<a href="#s-intro" class="self-start py-1 text-dark hover:text-pink text-md font-bold">О курсе</a>
-				<a href="#s-about" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Для кого</a>
-				<a href="#s-education" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Что получишь</a>
-				<a href="#s-testimonials" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Отзывы</a>
-				<a href="#s-curriculum" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Программа курса</a>
-				<a href="#s-price" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Стоимость</a>
+				<a href="index.html" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Главная</a>
+				<a href="catalog.html" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Каталог товаров</a>
+				<a href="orders.html" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Мои заказы</a>
+				<a href="cart.html" class="self-start py-1 text-dark hover:text-pink text-md font-bold">Корзина</a>
 			</nav>
 			<div class="flex flex-wrap items-center space-x-6 mt-8">
 				<a href="#" class="inline-flex items-center text-darkblue hover:text-purple" target="_blank" rel="nofollow noopener">

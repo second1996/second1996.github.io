@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Gilroy;
   font-style: normal;
@@ -208,6 +209,86 @@ input[type=number] {
 .form-checkbox input:checked + label::after {
   opacity: 1
 }
+.form-radio {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px
+}
+.form-radio input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  opacity: 0
+}
+.form-radio-label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  width: 100%;
+  padding-top: 2px;
+  margin-bottom: 0;
+  padding-left: 36px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px
+}
+.form-radio-label::before {
+  content: "";
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(189,190,202,.35);
+  background-color: transparent;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease
+}
+.form-radio-label::after {
+  content: "";
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease
+}
+.form-radio-label:hover::after,
+.form-radio-label:hover::before {
+  border-color: #ec4176
+}
+.form-radio input:checked + label::before {
+  border-color: transparent;
+  background-color: #ec4176
+}
+.form-radio input:checked + label::after {
+  opacity: 1
+}
 .accordion-header-icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -230,6 +311,14 @@ input[type=number] {
   -webkit-transition: max-height .3s ease-out,padding .3s ease;
   -o-transition: max-height .3s ease-out,padding .3s ease;
   transition: max-height .3s ease-out,padding .3s ease
+}
+.breadcrumbs > li {
+  position: relative
+}
+.breadcrumbs > li:not(:last-child)::after {
+  content: "—";
+  margin-left: 16px;
+  color: #bdbeca
 }
 ::-moz-selection {
   background-color: #ec4176;
