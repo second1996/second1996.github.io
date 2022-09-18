@@ -147,6 +147,10 @@ input[type=number] {
   background-position: right 8px center;
   background-size: 20px
 }
+.form-select > * {
+  background-color: #1e1f43;
+  color: #fff
+}
 .form-checkbox {
   position: relative;
   display: -webkit-box;
@@ -319,6 +323,26 @@ input[type=number] {
   content: "—";
   margin-left: 16px;
   color: #bdbeca
+}
+article ul > li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline
+}
+article ul > li::before {
+  content: "";
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  border-radius: 3px;
+  background-color: #ec4176
 }
 ::-moz-selection {
   background-color: #ec4176;
