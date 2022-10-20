@@ -13,32 +13,134 @@
 </head>
 <body>
 
-	<!-- Site header -->
-	<header class="header">
-		<div class="container-fluid">
-		</div><!-- /.container-fluid -->
-	</header>
+<!-- Site header -->
+<header class="header header--light">
+	<div class="header-inner">
+		<div class="header-logo">
+			<a href="index.html" class="header-logo-link" rel="home">
+				<img src="./images/logo.svg" width="190" height="114" alt="Ведмежа Гора">
+			</a>
+		</div><!-- /.header-logo -->
+		<div class="header-menu">
+			<button type="button" class="header-menu-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="header-menu-wrapper scrollbar-light">
+	<div class="header-menu-scroll">
+		<ul class="header-menu-list" role="navigation">
+			<li><a href="page-home.html">Головна сторінка</a></li>
+			<li class="menu-item-has-children">
+				<a href="page-hotels.html">Проживання</a>
+				<ul class="sub-menu">
+					<li><a href="page-rooms.html">Panorama Hotel</a></li>
+					<li><a href="page-rooms.html">Ведмежа гора Hotel</a></li>
+					<li><a href="page-rooms.html">Номери в котеджах</a></li>
+					<li><a href="page-rooms.html">Сімейні будиночки</a></li>
+				</ul>
+			</li>
+			<li><a href="page-restaurants.html">Ресторани</a></li>
+			<li><a href="page-offers-single.html">SPA та басейн</a></li>
+			<li><a href="page-offers-single.html">Для дітей</a></li>
+			<li><a href="page-offers-single.html">Дозвілля</a></li>
+			<li><a href="page-offers-single.html">Оздоровлення</a></li>
+			<li><a href="page-offers-single.html">Пропозиції</a></li>
+		</ul>
+		<ul class="header-menu-contacts">
+			<li><a href="tel:+380983715152">+38 098 371-51-52</a></li>
+			<li><a href="tel:+380663153941">+38 066 315-39-41</a></li>
+			<li><a href="tel:+380938388841">+38 093 838-88-41</a></li>
+		</ul>
+	</div>
+</div>
+		</div><!-- /.header-menu -->
+	</div><!-- /.header-inner -->
+</header>
 
 <main class="page-main">
 
 	<!-- Section: Heroes-->
 	<section class="h-heroes section">
-		<div class="container">
-			<div class="h-heroes-content">
+		<div class="h-heroes-slider swiper">
+			<div class="swiper-wrapper">
+				<!-- Slide -->
+				<div class="h-heroes-slide swiper-slide swiper-lazy" data-background="https://vedmezhagora.com/wp-content/uploads/aktsiya4.png">
+					<div class="swiper-lazy-preloader"></div>
+					<div class="h-heroes-content">
+						<h4 class="title text-white text-xl">Скелі Довбуша</h4>
+						<div class="button">
+							<a href="page-offers-single.html" class="btn btn-sm btn-light btn-outline">Детальніше</a>
+						</div>
+					</div>
+				</div><!-- /.h-heroes-slide -->
+				<!-- Slide -->
+				<div class="h-heroes-slide swiper-slide swiper-lazy" data-background="https://vedmezhagora.com/wp-content/uploads/kamin-dovbusha-min.jpg">
+					<div class="swiper-lazy-preloader"></div>
+					<div class="h-heroes-content">
+						<h4 class="title text-white text-xl">Скелі Довбуша</h4>
+						<div class="button">
+							<a href="page-offers-single.html" class="btn btn-sm btn-light btn-outline">Детальніше</a>
+						</div>
+					</div>
+				</div><!-- /.h-heroes-slide -->
+			</div><!-- /.swiper-wrapper -->
 
-			</div><!-- /.h-heroes-content -->
-		</div><!-- /.container -->
-		<div class="h-heroes-photo img-cover">
-			<img src="./images/heroes-photo.jpg" alt="Ведмежа гора">
-		</div><!-- /.h-heroes-photo -->
+			<!-- Swiper navigation-->
+			<div class="h-heroes-slider-nav swiper-navigation swiper-navigation--light">
+				<button class="btn swiper-button-prev">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+						<path d="m17.046-.04 1.949 1.963L8.917 12l10.078 10.078-1.95 1.963L5.006 12 17.045-.04Z"/>
+					</svg>
+				</button>
+				<button class="btn swiper-button-next">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+						<path d="m6.976.012-1.94 1.954L15.069 12 5.036 22.033l1.94 1.955L18.964 12 6.976.012Z"/>
+					</svg>
+				</button>
+			</div><!-- /.h-heroes-slider-nav -->
+
+			<!-- Swiper pagination -->
+			<div class="h-heroes-slider-dots swiper-pagination swiper-pagination--light"></div>
+		</div><!-- /.h-heroes-slider -->
 	</section>
+
+	<!-- Booking Form -->
+	<div class="booking-form">
+		<div id="tl-search-form" class="container">
+			<noindex><a href="http://travelline.ua/" rel="nofollow">система онлайн-бронювання</a></noindex>
+		</div>
+	</div>
+	<script type='text/javascript'>
+	(function(w) {
+		var q = [
+			['setContext', 'TL-INT-vedmezhagora', 'uk'],
+			['embed', 'search-form', {
+				container: 'tl-search-form'
+			}]
+		];
+		var t = w.travelline = (w.travelline || {}),
+				ti = t.integration = (t.integration || {});
+		ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+		if (!ti.__loader) {
+			ti.__loader = true;
+			var d = w.document,
+					p = d.location.protocol,
+					s = d.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = (p == 'https:' ? p : 'http:') + '//eu-ibe.tlintegration.com/integration/loader.js';
+			(d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+		}
+	})(window);
+	</script>
 
 	<!-- Section: Categories -->
 	<section class="h-categories section mt-80">
 		<div class="container-fluid">
 			<div class="row row-cols-1 row-cols-lg-3 gy-5">
 				<div class="col">
-					<a href="#" class="card card-category card-animated">
+					<a href="page-offers-single.html" class="card card-category card-animated">
 						<div class="card-photo img-cover">
 							<img src="./images/categories/category-1.jpg" alt="Проживання">
 						</div>
@@ -49,7 +151,7 @@
 					</a>
 				</div><!-- /.col -->
 				<div class="col">
-					<a href="#" class="card card-category card-animated">
+					<a href="page-offers-single.html" class="card card-category card-animated">
 						<div class="card-photo img-cover">
 							<img src="./images/categories/category-2.jpg" alt="Ресторани">
 						</div>
@@ -60,7 +162,7 @@
 					</a>
 				</div><!-- /.col -->
 				<div class="col">
-					<a href="#" class="card card-category card-animated">
+					<a href="page-offers-single.html" class="card card-category card-animated">
 						<div class="card-photo img-cover">
 							<img src="./images/categories/category-3.jpg" alt="Для дітей">
 						</div>
@@ -84,7 +186,7 @@
 						<div class="h-offers-content">
 							<h4 class="title text-white text-xl">SPA та басейн</h4>
 							<div class="button">
-								<a href="#" class="btn btn-sm btn-light btn-outline">Забронювати</a>
+								<a href="page-offers-single.html" class="btn btn-sm btn-light btn-outline">Детальніше</a>
 							</div>
 						</div>
 						<div class="h-offers-photo img-cover">
@@ -97,7 +199,7 @@
 						<div class="h-offers-content">
 							<h4 class="title text-white text-xl">Гуцульська палітра</h4>
 							<div class="button">
-								<a href="#" class="btn btn-sm btn-light btn-outline">Забронювати</a>
+								<a href="page-offers-single.html" class="btn btn-sm btn-light btn-outline">Детальніше</a>
 							</div>
 						</div>
 						<div class="h-offers-photo img-cover">
@@ -109,7 +211,7 @@
 						<div class="h-offers-content">
 							<h4 class="title text-white text-xl">Скелі Довбуша</h4>
 							<div class="button">
-								<a href="#" class="btn btn-sm btn-light btn-outline">Забронювати</a>
+								<a href="page-offers-single.html" class="btn btn-sm btn-light btn-outline">Детальніше</a>
 							</div>
 						</div>
 						<div class="h-offers-photo img-cover">
@@ -403,8 +505,6 @@
 			</div><!-- /.row -->
 		</div><!-- /.container -->
 	</footer>
-
-	
 
 	<script src="./js/app.min.js"></script>
 
