@@ -745,7 +745,7 @@
 		<div class="tabs tabs--centered" role="tablist">
 			<button class="tabs-item active" data-bs-toggle="tab" data-bs-target="#calculator-tab-1" type="button" role="tab">Откатные ворота</button>
 			<button class="tabs-item" data-bs-toggle="tab" data-bs-target="#calculator-tab-2" type="button" role="tab">Распашные ворота</button>
-			<button class="tabs-item" data-bs-toggle="tab" data-bs-target="#categories-tab-3" type="button" role="tab">Гаражные ворота</button>
+			<button class="tabs-item" data-bs-toggle="tab" data-bs-target="#calculator-tab-3" type="button" role="tab">Гаражные ворота</button>
 		</div>
 
 		<!-- Tabs content -->
@@ -1433,6 +1433,354 @@
 			</div>
 			<!-- /.tab-pane -->
 
+			<!-- Tab -->
+			<div class="tab-pane" id="calculator-tab-3" role="tabpanel" tabindex="0">
+				<form class="calculator-form" id="calculator-garazhnye">
+					<div class="row gy-8">
+						<div class="col-xl-7">
+							<div class="calculator-options row gy-6 gy-md-8">
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Ширина проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая ширина проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2000" checked>
+											<span>2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2100">
+											<span>2,1</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2200">
+											<span>2,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2300">
+											<span>2,3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2400">
+											<span>2,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2500">
+											<span>2,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2600">
+											<span>2,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2700">
+											<span>2,7</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2800">
+											<span>2,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2900">
+											<span>2,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="3000">
+											<span>3</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Высота проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая высота проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="1800" checked>
+											<span>1,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="1900">
+											<span>1,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2000">
+											<span>2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2100">
+											<span>2,1</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2200">
+											<span>2,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2300">
+											<span>2,3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2400">
+											<span>2,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2500">
+											<span>2,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2600">
+											<span>2,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2700">
+											<span>2,7</span>
+										</label>
+										<!-- <label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2800">
+											<span>2,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2900">
+											<span>2,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="3000">
+											<span>3</span> -->
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-12">
+									<div class="calculator-heading">
+										<h5 class="title">Обшивка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите тип обшивки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-images">
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0" checked>
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-1.png');"></span>
+												<span class="image-title">Тип 1</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-2.png');"></span>
+												<span class="image-title">Тип 2</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-3.png');"></span>
+												<span class="image-title">Тип 3</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-4.png');"></span>
+												<span class="image-title">Тип 4</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-5.png');"></span>
+												<span class="image-title">Тип 5</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-12">
+									<div class="calculator-heading">
+										<h5 class="title">Варианты цветов</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Цвет металлического основания забора, а также ворот и калитки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-colors">
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="brown" checked>
+											<div class="color">
+												<span class="color-badge" style="background-color: #442F29;"></span>
+												<span class="color-name">RAL-8017<br> (коричневый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="red">
+											<div class="color">
+												<span class="color-badge" style="background-color: #59191F;"></span>
+												<span class="color-name">RAL-3005<br> (винно-красный)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="green">
+											<div class="color">
+												<span class="color-badge" style="background-color: #164231;"></span>
+												<span class="color-name">RAL-6005<br> (зелёный мох)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="grey">
+											<div class="color">
+												<span class="color-badge" style="background-color: #9B9B9B;"></span>
+												<span class="color-name">RAL-7004<br> (серый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="black">
+											<div class="color">
+												<span class="color-badge" style="background-color: #020407;"></span>
+												<span class="color-name">RAL-9005<br> (чёрный)</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Калитка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужна ли калитка">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-kalitka[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-kalitka[]" value="49000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Окошко</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужно ли окошко">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-okowko[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-okowko[]" value="8400">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Управление</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость автоматику для ворот">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-upravlenie[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-upravlenie[]" value="20000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+							</div>
+							<!-- /.calculator-options -->
+						</div>
+						<!-- /.col -->
+						<div class="col-xl-5">
+							<div class="calculator-preview rounded-8 img-cover">
+								<img src="./images/calculator/garazhnye-vorota.jpg" class="calculator-preview-image" alt="Распашные ворота">
+							</div>
+							<!-- /.calculator-preview -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+					<div class="calculator-summary">
+						<div class="row gy-6">
+							<div class="calculator-delivery col-md-6 col-lg-12 col-xl-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Доставка</h5>
+								</div>
+								<div class="delivery">
+									<input type="number" class="delivery-field form-control" name="garazhnye-delivery" data-km-cost="60" min="1" max="1000" placeholder="Введите значение" autocomplete="off">
+									<span class="delivery-title">км от МКАД</span>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-setup col-md-6 col-lg-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Монтаж</h5>
+									<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость монтаж или установку ворот">
+										<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+									</div>
+								</div>
+								<div class="row g-4">
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="garazhnye-montazh-vorot" value="10000" checked>
+											<span>Ворот</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="garazhnye-montazh-elektroprivoda" value="4000">
+											<span>Электропривода</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-market col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Рыночная цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-current col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Ваша цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-order col-md-auto">
+								<button type="button" class="calculator-order-btn btn btn-green" data-bs-toggle="modal" data-bs-target="#calculatorModal" data-modal-title="Расчет стоимости: Гаражные ворота">Заказать</button>
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.calculator-summary -->
+				</form>
+				<!-- /.calculator-form -->
+			</div>
+			<!-- /.tab-pane -->
+
 		</div>
 		<!-- /.tab-content -->
 
@@ -1608,7 +1956,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1641,7 +1989,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1689,7 +2037,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1726,7 +2074,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1767,7 +2115,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1812,7 +2160,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1861,7 +2209,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -1913,7 +2261,7 @@
 				</div>
 			</button>
 		</form>
-		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
 	</div>
 </div>
 						</div>
@@ -3987,7 +4335,7 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
-	
+
 	<!-- Modal: Calculator -->
 <div class="modal modal-calculator fade" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
@@ -4042,7 +4390,73 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
-	
+
+	<!-- Modal: Buy in one click -->
+<div class="modal modal-quickbuy fade" id="buyOneClickModal" tabindex="-1" aria-labelledby="buyOneClickModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="buyOneClickModalLabel">Купить в 1 клик</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="modal-quickbuy-form">
+					<div class="row">
+						<div class="col-sm-auto">
+							<div class="modal-quickbuy-photo rounded-4 img-cover">
+								<img src="./images/products/1.jpg" alt="">
+							</div>
+							<!-- /.modal-quickbuy-photo -->
+						</div>
+						<!-- /.col-auto -->
+						<div class="col-sm">
+							<div class="modal-quickbuy-content">
+								<a href="#" class="permalink">Каркас с несущей системой Ролтэк Микро 3х2</a>
+								<div class="price mt-8">
+									<ins>31 200 ₽</ins>
+									<del>37 100 ₽</del>
+								</div>
+								<div class="quantity mt-8">
+									<button type="button" class="quantity-minus" data-ripplet>
+										<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
+									</button>
+									<input type="number" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество" readonly>
+									<button type="button" class="quantity-plus" data-ripplet>
+										<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
+									</button>
+								</div>
+								<div class="order">
+									<div class="order-phone form-phone">
+										<label class="form-phone-field form-label">
+											<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+											<span>Телефон</span>
+										</label>
+										<label class="form-phone-checkbox form-checkbox">
+											<input type="checkbox" checked>
+											<span>Отобразить маску ввода телефона</span>
+										</label>
+									</div>
+									<button type="submit" class="order-submit btn btn-green">Купить в один клик</button>
+								</div>
+								<!-- /.order -->
+							</div>
+							<!-- /.modal-quickbuy-content -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
 	<!-- Go up button -->
 	<div class="go-up" id="go-up-button">
 		<button class="go-up-btn">
