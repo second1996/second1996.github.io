@@ -8,9 +8,12 @@ const currencyFormat = {
 
 // Calculator constructor
 function Calculator(form, prices, combineImagePreview = false) {
-	this.combineImagePreviewBool = combineImagePreview;
 	this.form = document.querySelector(form);
+
+	if (!this.form) return;
+
 	this.prices = prices;
+	this.combineImagePreviewBool = combineImagePreview;
 	this.imagePreview = this.form.querySelector('.calculator-preview-image');
 	this.deliveryInput = this.form.querySelector('.delivery-field');
 	this.marketPriceEl = this.form.querySelector('.calculator-price-market .calculator-price');

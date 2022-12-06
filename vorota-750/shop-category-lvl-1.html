@@ -1,0 +1,4339 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="utf-8">
+	<title>Категория 1-й уровень</title>
+	<meta name="description" content="Интернет-магазин автоматических ворот">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<link rel="icon" href="./images/favicon.svg">
+
+	<link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+
+	<!-- Site header -->
+	<header class="header">
+
+		<div class="header-top">
+			<div class="container">
+				<div class="row flex-nowrap align-items-center">
+					<div class="col header-top-left">
+						<div class="info">
+							<svg class="icon icon-clock"><use xlink:href="./images/symbol-defs.svg#clock"></use></svg>
+							<span><b>Режим работы:</b> Пн-Вс – с 9:00 по 19:00</span>
+						</div>
+						<div class="divider"></div>
+						<div class="info">
+							<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+							<span><b>Адрес:</b> г. Москва, инд. 117042, ул. Адмирала Руднева, д. 2</span>
+						</div>
+					</div>
+					<!-- /.header-top-left -->
+					<div class="col-auto header-top-right">
+						<button type="button" class="measure-btn" data-bs-toggle="modal" data-bs-target="#measureModal">
+							<svg class="icon icon-measure"><use xlink:href="./images/symbol-defs.svg#measure"></use></svg>
+							<span>Вызвать замерщика</span>
+						</button>
+						<div class="divider"></div>
+						<ul class="social">
+							<li class="social-item">
+								<a href="#" class="social-link" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-telegram"><use xlink:href="./images/symbol-defs.svg#telegram"></use></svg>
+								</a>
+							</li>
+							<li class="social-item">
+								<a href="#" class="social-link" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.header-top-right -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.header-top -->
+
+		<div class="header-middle">
+			<div class="container">
+				<div class="row flex-nowrap align-items-center gx-4 gx-xs-6 gx-lg-5 gx-xl-4 gx-xxl-8">
+					<div class="col col-md-auto header-middle-menu">
+						<button type="button" class="btn-burger" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+							<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
+						</button>
+					</div>
+					<!-- /.header-middle-menu -->
+					<div class="col-auto header-middle-logo">
+						<a href="index.html" class="logo" rel="home">
+							<img src="./images/logo.svg" width="304" height="42" alt="Атоматика для ворот">
+						</a>
+						<ul class="advantages">
+							<li>Ворота – без предоплаты!</li>
+							<li>Изготавливаем за 1 день</li>
+							<li>Выезд на замер – бесплатно</li>
+						</ul>
+					</div>
+					<!-- /.header-middle-logo -->
+					<div class="col header-middle-search">
+						<form class="form form-search">
+							<label class="form-label">
+								<input type="text" class="form-search-field form-control" placeholder="Поиск" autocomplete="off" required>
+								<span>Поиск</span>
+							</label>
+							<button type="submit" class="form-search-btn">
+								<svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg>
+							</button>
+						</form>
+					</div>
+					<!-- /.header-middle-search -->
+					<div class="col-auto header-middle-phone">
+						<div class="dropdown dropdown-phone">
+							<button type="button" class="btn-dropdown" data-bs-toggle="dropdown" data-bs-offset="-17, -36" data-bs-auto-close="outside" aria-expanded="false">+7 (495) 532-98-42</button>
+							<div class="dropdown-menu">
+								<div class="dropdown-phone-item">
+									<a href="tel:+74955329842">+7 (495) 532-98-42</a>
+								</div>
+								<div class="dropdown-phone-item">
+									<a href="tel:+79254747175">+7 (925) 474-71-75</a>
+									<span class="text-3xs text-gray-200">Viber, WhatsApp</span>
+								</div>
+								<div class="dropdown-phone-btn">
+									<button class="btn btn-sm btn-green" data-bs-toggle="modal" data-bs-target="#callbackModal">Заказать звонок</button>
+								</div>
+							</div>
+						</div>
+						<!-- /.dropdown-phone -->
+						<button class="callback-btn btn-inline" data-bs-toggle="modal" data-bs-target="#callbackModal">
+							<svg class="icon icon-phone"><use xlink:href="./images/symbol-defs.svg#phone"></use></svg>
+							<span>Заказать звонок</span>
+						</button>
+					</div>
+					<!-- /.header-middle-phone -->
+					<div class="col-auto header-middle-mail">
+						<a href="mailto:zakaz@vorota750.ru" class="mail">
+							<svg class="icon icon-mail"><use xlink:href="./images/symbol-defs.svg#mail"></use></svg>
+							<span>zakaz@vorota750.ru</span>
+						</a>
+						<button class="btn-inline" data-bs-toggle="modal" data-bs-target="#questionModal">
+							<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+							<span>Задать вопрос</span>
+						</button>
+					</div>
+					<!-- /.header-middle-mail -->
+					<div class="col col-md-auto header-middle-cart">
+						<button class="btn-cart" data-bs-toggle="offcanvas" data-bs-target="#miniCart" aria-controls="miniCart">
+							<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
+							<span>Корзина</span>
+							<em>12</em>
+						</button>
+					</div>
+					<!-- /.header-middle-cart -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.header-middle -->
+
+		<div class="header-bottom">
+			<div class="container">
+				<nav class="navigation scrollbar" role="navigation">
+					<ul class="navigation-list">
+						<li class="navigation-item navigation-catalog">
+							<button class="btn btn-green btn-catalog" data-bs-toggle="dropdown" data-bs-offset="0, 16" data-bs-auto-close="outside" aria-expanded="false">
+								<svg class="icon icon-list"><use xlink:href="./images/symbol-defs.svg#list"></use></svg>
+								<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+								<span>Каталог</span>
+							</button>
+							<!-- Catalog menu -->
+							<div class="megamenu dropdown-menu">
+								<div class="megamenu-list row row-cols-5 gy-8 gx-6">
+									<div class="megamenu-item col">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/1.jpg" alt="">
+											</div>
+											<h4 class="category-name">Автоматические ворота</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Откатные ворота</a></li>
+											<li><a href="#">Распашные ворота</a></li>
+											<li><a href="#">Гаражные ворота</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/2.jpg" alt="">
+											</div>
+											<h4 class="category-name">Заборы для дачи</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Из профнастила</a></li>
+											<li><a href="#">На винтовых сваях</a></li>
+											<li><a href="#">Из сетки рабицы</a></li>
+											<li><a href="#">Из евроштакетника</a></li>
+											<li><a href="#">Из металлического штакетника</a></li>
+											<li><a href="#">Деревянные</a></li>
+											<li><a href="#">Сварные</a></li>
+											<li><a href="#">Кованые</a></li>
+											<li><a href="#">Металлические</a></li>
+											<li><a href="#">Из поликарбоната</a></li>
+											<li><a href="#">С кирпичными столбами</a></li>
+											<li><a href="#">Секционные</a></li>
+											<li><a href="#">Железные</a></li>
+											<li><a href="#">Решетчатые</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item col">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/3.jpg" alt="">
+											</div>
+											<h4 class="category-name">Навесы для автомобилей</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Из металлочерепицы</a></li>
+											<li><a href="#">На даче</a></li>
+											<li><a href="#">Из поликарбоната</a></li>
+											<li><a href="#">Деревянные</a></li>
+											<li><a href="#">Готовые</a></li>
+											<li><a href="#">Металлические</a></li>
+											<li><a href="#">Сварные</a></li>
+											<li><a href="#">Сборные</a></li>
+											<li><a href="#">Разборные</a></li>
+											<li><a href="#">Консольные</a></li>
+											<li><a href="#">Для двух автомобилей</a></li>
+											<li><a href="#">Односкатные</a></li>
+											<li><a href="#">Арочные</a></li>
+											<li><a href="#">Кованые</a></li>
+											<li><a href="#">Дизайнерские</a></li>
+											<li><a href="#">Треугольные</a></li>
+											<li><a href="#">С хозблоком</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/4.jpg" alt="">
+											</div>
+											<h4 class="category-name">Художественная ковка</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Перила</a></li>
+											<li><a href="#">Ворота</a></li>
+											<li><a href="#">Скамейки</a></li>
+											<li><a href="#">Качели</a></li>
+											<li><a href="#">Мангалы</a></li>
+											<li><a href="#">Козырьки</a></li>
+											<li><a href="#">Лестницы</a></li>
+											<li><a href="#">Ограждения</a></li>
+											<li><a href="#">Решетки на окна</a></li>
+											<li><a href="#">Балконы</a></li>
+											<li><a href="#">Калитки</a></li>
+											<li><a href="#">Беседки</a></li>
+											<li><a href="#">Цветочницы</a></li>
+											<li><a href="#">Крыльцо</a></li>
+											<li><a href="#">Мостики</a></li>
+											<li><a href="#">Арки</a></li>
+											<li><a href="#">Фонари</a></li>
+											<li><a href="#">Стойки для цветов</a></li>
+											<li><a href="#">Перголы</a></li>
+											<li><a href="#">Урны</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item col">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/5.jpg" alt="">
+											</div>
+											<h4 class="category-name">Калитки для забора</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Из профнастила</a></li>
+											<li><a href="#">Металлические</a></li>
+											<li><a href="#">Для дачи</a></li>
+											<li><a href="#">Из сетки рабицы</a></li>
+											<li><a href="#">Деревянные</a></li>
+											<li><a href="#">Для частного дома</a></li>
+											<li><a href="#">Из профильной трубы</a></li>
+											<li><a href="#">Из 3d сетки</a></li>
+											<li><a href="#">Сварные</a></li>
+											<li><a href="#">Из евроштакетника</a></li>
+											<li><a href="#">Из сварной сетки</a></li>
+											<li><a href="#">Из сэндвич панелей</a></li>
+											<li><a href="#">Из металлопрофиля</a></li>
+											<li><a href="#">Железные</a></li>
+											<li><a href="#">Из алюминиевого профиля</a></li>
+											<li><a href="#">Из металлического штакетника</a></li>
+											<li><a href="#">Из трубы</a></li>
+											<li><a href="#">Из поликарбоната</a></li>
+											<li><a href="#">Автоматические</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/6.jpg" alt="">
+											</div>
+											<h4 class="category-name">Готовые комплекты ворот, навесов, заборов и калиток</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Ворота</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/7.jpg" alt="">
+											</div>
+											<h4 class="category-name">Автоматика для ворот</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Откатных</a></li>
+											<li><a href="#">Распашных</a></li>
+											<li><a href="#">Гаражных</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+									<div class="megamenu-item">
+										<a href="#" class="category img-animated">
+											<div class="category-photo img-cover">
+												<img src="./images/categories/8.jpg" alt="">
+											</div>
+											<h4 class="category-name">Комплектующие для ворот</h4>
+										</a>
+										<ul class="subcategories" data-showmore data-showmore-items="4">
+											<li><a href="#">Откатных</a></li>
+											<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+										</ul>
+									</div>
+									<!-- /.megamenu-item-->
+								</div>
+								<!-- /.megamenu-list-->
+							</div>
+							<!-- /.megamenu -->
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link navigation-link-dropdown">О компании</a>
+							<ul class="navigation-dropdown">
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Наши работы</a></li>
+								<li><a href="#">Наши мастера</a></li>
+								<li><a href="#">Сертификаты</a></li>
+								<li><a href="#">Партнеры</a></li>
+								<li><a href="#">Производство</a></li>
+								<li><a href="#">Видеоотзывы</a></li>
+							</ul>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link navigation-link-dropdown">Услуги</a>
+							<ul class="navigation-dropdown">
+								<li><a href="#">Ремонт</a></li>
+								<li><a href="#">Монтаж и установка</a></li>
+							</ul>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link">Цены</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link">Калькулятор</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link">Наши работы</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link navigation-link-dropdown">Покупателю</a>
+							<ul class="navigation-dropdown">
+								<li><a href="#">Инструкции</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Статьи</a></li>
+								<li><a href="#">Видео</a></li>
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Оплата</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link">Контакты</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link navigation-link-promo">Акции</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /.navigation -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.header-bottom -->
+
+	</header>
+
+<main class="page-main shop-category">
+
+	<!-- Page heading -->
+	<section class="page-heading">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list">
+					<li><a href="page-home.html">Главная</a></li>
+					<li><a href="shop-catalog.html">Каталог</a></li>
+					<li><span>Автоматические ворота</span></li>
+				</ul>
+			</div>
+			<h1 class="title text-3xl w-bold">Автоматические ворота под ключ</h1>
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Section: Categories -->
+	<section class="categories section">
+		<div class="container">
+			<div class="row row-cols-1 row-cols-md-2 gy-4 gy-md-6">
+				<div class="col">
+					<div class="categories-item">
+						<a href="shop-category-lvl-2.html" class="categories-item-photo rounded-6 img-cover">
+							<img src="./images/categories/1.jpg" alt="">
+						</a>
+						<div class="categories-item-content">
+							<div class="heading">
+								<h3 class="heading-title">
+									<a href="shop-category-lvl-2.html">Откатные ворота</a>
+								</h3>
+								<div class="heading-count">35 товаров</div>
+							</div>
+							<ul class="subcategories">
+								<li><a href="shop-category-lvl-3.html">На винтовых сваях</a></li>
+								<li><a href="shop-category-lvl-3.html">Для дачи</a></li>
+								<li><a href="shop-category-lvl-3.html">Из сэндвич панелей</a></li>
+								<li><a href="shop-category-lvl-3.html">Из профнастила</a></li>
+								<li><a href="shop-category-lvl-3.html">С электроприводом</a></li>
+								<li><a href="shop-category-lvl-3.html">Без электропривода</a></li>
+								<li><a href="shop-category-lvl-3.html">Раздвижные</a></li>
+								<li><a href="shop-category-lvl-3.html">С калиткой</a></li>
+								<li><a href="shop-category-lvl-3.html">Решетчатые</a></li>
+								<li><a href="shop-category-lvl-3.html">С дистанционным открытием</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<div class="categories-item">
+						<a href="shop-category-lvl-2.html" class="categories-item-photo rounded-6 img-cover">
+							<img src="./images/categories/1-2.jpg" alt="">
+						</a>
+						<div class="categories-item-content">
+							<div class="heading">
+								<h3 class="heading-title">
+									<a href="shop-category-lvl-2.html">Распашные ворота</a>
+								</h3>
+								<div class="heading-count">9 товаров</div>
+							</div>
+							<ul class="subcategories">
+								<li><a href="shop-category-lvl-3.html">С калиткой для дачи</a></li>
+								<li><a href="shop-category-lvl-3.html">Металлические</a></li>
+								<li><a href="shop-category-lvl-3.html">Деревянные</a></li>
+								<li><a href="shop-category-lvl-3.html">Из профнастила</a></li>
+								<li><a href="shop-category-lvl-3.html">С дистанционным открытием</a></li>
+								<li><a href="shop-category-lvl-3.html">Кованые</a></li>
+								<li><a href="shop-category-lvl-3.html">Из сэндвич панелей</a></li>
+								<li><a href="shop-category-lvl-3.html">Электрические</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<div class="categories-item">
+						<a href="shop-category-lvl-2.html" class="categories-item-photo rounded-6 img-cover">
+							<img src="./images/categories/1-3.jpg" alt="">
+						</a>
+						<div class="categories-item-content">
+							<div class="heading">
+								<h3 class="heading-title">
+									<a href="shop-category-lvl-2.html">Гаражные ворота</a>
+								</h3>
+								<div class="heading-count">21 товар</div>
+							</div>
+							<ul class="subcategories">
+								<li><a href="shop-category-lvl-3.html">Подъёмные</a></li>
+								<li><a href="shop-category-lvl-3.html">Секционные</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Products -->
+	<div class="products section pt-64">
+		<div class="container">
+			<!-- Shop Filters -->
+			<div class="shop-filters mb-32">
+	<form class="shop-filters-form">
+		<div class="shop-filters-item shop-filters-item-sortby dropdown">
+			<button type="button" class="shop-filters-btn" data-bs-toggle="dropdown" data-bs-offset="0, 8" data-bs-auto-close="outside" aria-expanded="false">
+				<span>Сначала популярные</span>
+				<svg class="icon icon-triangle-arrow"><use xlink:href="./images/symbol-defs.svg#triangle-arrow"></use></svg>
+			</button>
+			<div class="shop-filters-options shop-filters-options--select dropdown-menu scrollbar">
+				<ul class="options">
+					<li class="options-item">
+						<a href="#" rel="nofollow prefetch">Сначала новые</a>
+					</li>
+					<li class="options-item _is-active">
+						<a href="#" rel="nofollow prefetch">Сначала популярные</a>
+					</li>
+					<li class="options-item">
+						<a href="#" rel="nofollow prefetch">Сначала дешевые</a>
+					</li>
+					<li class="options-item">
+						<a href="#" rel="nofollow prefetch">Сначала дорогие</a>
+					</li>
+					<li class="options-item">
+						<a href="#" rel="nofollow prefetch">С начала алфавита</a>
+					</li>
+					<li class="options-item">
+						<a href="#" rel="nofollow prefetch">С конца алфавита</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.shop-filters-item -->
+		<div class="shop-filters-item shop-filters-item-price dropdown">
+			<button type="button" class="shop-filters-btn" data-bs-toggle="dropdown" aria-expanded="false">
+				<span>Цена</span>
+				<svg class="icon icon-triangle-arrow"><use xlink:href="./images/symbol-defs.svg#triangle-arrow"></use></svg>
+				<span class="remove">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</span>
+			</button>
+			<div class="shop-filters-options shop-filters-options--slider dropdown-menu scrollbar">
+				<h5 class="title">Цена, ₽</h5>
+				<div class="filter-slider">
+					<div class="filter-slider-range">
+						<input type="number" value="500" class="form-control filter-slider-from">
+						<input type="number" value="28850" class="form-control filter-slider-to">
+					</div>
+					<div class="filter-slider-handle" data-slidermin="500" data-slidermax="28850"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /.shop-filters-item -->
+		<div class="shop-filters-item dropdown">
+			<button type="button" class="shop-filters-btn" data-bs-toggle="dropdown" aria-expanded="false">
+				<span>Тип ворот</span>
+				<span class="counter"></span>
+				<svg class="icon icon-triangle-arrow"><use xlink:href="./images/symbol-defs.svg#triangle-arrow"></use></svg>
+				<span class="remove">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</span>
+			</button>
+			<div class="shop-filters-options shop-filters-options--checkboxes dropdown-menu scrollbar">
+				<ul class="options">
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Откатные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Распашные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Гаражные</span>
+						</label>
+					</li>
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Откатные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Распашные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Гаражные</span>
+						</label>
+					</li>
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Откатные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Распашные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Гаражные</span>
+						</label>
+					</li>
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Откатные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Распашные</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Гаражные</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.shop-filters-item -->
+		<div class="shop-filters-item dropdown">
+			<button type="button" class="shop-filters-btn" data-bs-toggle="dropdown" aria-expanded="false">
+				<span>Автоматика</span>
+				<span class="counter"></span>
+				<svg class="icon icon-triangle-arrow"><use xlink:href="./images/symbol-defs.svg#triangle-arrow"></use></svg>
+				<span class="remove">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</span>
+			</button>
+			<div class="shop-filters-options shop-filters-options--checkboxes dropdown-menu scrollbar">
+				<ul class="options">
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Без автоматики</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>С автоматикой</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.shop-filters-item -->
+		<div class="shop-filters-item dropdown">
+			<button type="button" class="shop-filters-btn" data-bs-toggle="dropdown" aria-expanded="false">
+				<span>Цвет</span>
+				<span class="counter"></span>
+				<svg class="icon icon-triangle-arrow"><use xlink:href="./images/symbol-defs.svg#triangle-arrow"></use></svg>
+				<span class="remove">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</span>
+			</button>
+			<div class="shop-filters-options shop-filters-options--checkboxes dropdown-menu scrollbar">
+				<ul class="options">
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Красный</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Коричневый</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Чёрный</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Серый</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Зелёный</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.shop-filters-item -->
+		<div class="shop-filters-item dropdown">
+			<button type="button" class="shop-filters-btn" data-bs-toggle="dropdown" aria-expanded="false">
+				<span>Бренд</span>
+				<span class="counter"></span>
+				<svg class="icon icon-triangle-arrow"><use xlink:href="./images/symbol-defs.svg#triangle-arrow"></use></svg>
+				<span class="remove">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</span>
+			</button>
+			<div class="shop-filters-options shop-filters-options--checkboxes dropdown-menu scrollbar">
+				<ul class="options">
+					<li class="options-item _is-active">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Ворота750</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>ALUTECH</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Doorhan</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox" checked>
+							<span>Nice</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>R-Tech</span>
+						</label>
+					</li>
+					<li class="options-item">
+						<label class="form-checkbox">
+							<input type="checkbox">
+							<span>Comunello</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.shop-filters-item -->
+		<button type="button" class="shop-filters-reset">Очистить фильтр</button>
+	</form>
+	<!-- /.shop-filters-form -->
+	<div class="shop-filters-results">
+		<div class="found">
+			<span class="found-label">Найдено:</span>
+			<span class="found-value">419 товара</span>
+		</div>
+		<!-- /.found -->
+		<div class="show">
+			<span class="show-label">Показывать:</span>
+			<div class="show-list">
+				<a href="#" class="show-item _is-active" rel="nofollow">18</a>
+				<a href="#" class="show-item" rel="nofollow">36</a>
+				<a href="#" class="show-item" rel="nofollow">72</a>
+			</div>
+		</div>
+		<!-- /.show -->
+	</div>
+	<!-- /.shop-filters-results -->
+</div>
+<!-- /.shop-filters -->
+
+			<!-- Products list -->
+			<div class="products-list">
+				<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6 gy-6 gy-xs-8 gx-4 gx-xl-6">
+					<div class="col">
+						<div class="card card-product">
+	<div class="card-labels">
+		<div class="label label-new">Новинка</div>
+	</div>
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Ролтэк Микро 3х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/1.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/2.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/4.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Ролтэк Микро 3х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>31 200 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase _is-added">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<div class="card-labels">
+		<div class="label label-popular">Хит продаж</div>
+	</div>
+	<a href="shop-product.html" class="card-photo img-cover" title="Каркас с несущей системой Ролтэк Микро 4х2">
+		<img src="./images/products/2.jpg" alt="">
+	</a>
+	<div class="card-body">
+		<a href="shop-product.html" class="permalink">Каркас с несущей системой Ролтэк Микро 4х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>32 500 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<div class="card-labels">
+		<div class="label label-promo">-15%</div>
+	</div>
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Алютех 4х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/4.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/6.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Алютех 4х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>26 775 ₽</ins>
+				<del>31 500 ₽</del>
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Алютех 5х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/4.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/1.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Алютех 5х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>37 100 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей Ролтэк Эко 5х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/1.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей Ролтэк Эко 5х2</a>
+		<div class="product-price">
+			<div class="stock out-of-stock">Нет в наличии</div>
+			<div class="price">
+				<ins>29 800 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase" disabled>
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Ролтэк Евро 6х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/6.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/2.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Ролтэк Евро 6х2</a>
+		<div class="product-price">
+			<div class="stock out-of-stock">Нет в наличии</div>
+			<div class="price">
+				<ins>29 800 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase" disabled>
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<div class="card-labels">
+		<div class="label label-promo">-15%</div>
+	</div>
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Алютех 4х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/4.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/6.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Алютех 4х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>26 775 ₽</ins>
+				<del>31 500 ₽</del>
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<div class="card-labels">
+		<div class="label label-new">Новинка</div>
+	</div>
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Ролтэк Микро 3х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/1.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/2.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/4.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Ролтэк Микро 3х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>31 200 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase _is-added">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Алютех 5х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/4.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/1.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Алютех 5х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>37 100 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей системой Ролтэк Евро 6х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/6.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/2.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей системой Ролтэк Евро 6х2</a>
+		<div class="product-price">
+			<div class="stock out-of-stock">Нет в наличии</div>
+			<div class="price">
+				<ins>29 800 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase" disabled>
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<div class="card-labels">
+		<div class="label label-popular">Хит продаж</div>
+	</div>
+	<a href="shop-product.html" class="card-photo img-cover" title="Каркас с несущей системой Ролтэк Микро 4х2">
+		<img src="./images/products/2.jpg" alt="">
+	</a>
+	<div class="card-body">
+		<a href="shop-product.html" class="permalink">Каркас с несущей системой Ролтэк Микро 4х2</a>
+		<div class="product-price">
+			<div class="stock in-stock">В наличии</div>
+			<div class="price">
+				<ins>32 500 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase">
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal">Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+					<div class="col">
+						<div class="card card-product">
+	<a href="shop-product.html" class="card-gallery" title="Каркас с несущей Ролтэк Эко 5х2">
+		<div class="card-gallery-item _is-active">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/5.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/3.jpg" alt="">
+		</div>
+		<div class="card-gallery-item">
+			<span class="card-gallery-item-nav"></span>
+			<img src="./images/products/1.jpg" alt="">
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="#" class="permalink">Каркас с несущей Ролтэк Эко 5х2</a>
+		<div class="product-price">
+			<div class="stock out-of-stock">Нет в наличии</div>
+			<div class="price">
+				<ins>29 800 ₽</ins>
+				<!-- <del>31 500 ₽</del> -->
+			</div>
+		</div>
+	</div>
+	<div class="card-actions">
+		<form class="card-actions-purchase">
+			<button type="button" class="btn btn-green btn-purchase" disabled>
+				<div class="before-added">В корзину</div>
+				<div class="after-added">
+					<svg class="icon icon-check"><use xlink:href="./images/symbol-defs.svg#check"></use></svg>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+				</div>
+			</button>
+		</form>
+		<button type="button" class="btn btn-sm btn-outline btn-quick-buy" data-bs-toggle="modal" data-bs-target="#buyOneClickModal" disabled>Купить в 1 клик</button>
+	</div>
+</div>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.products-list -->
+
+			<!-- Pagination -->
+			<div class="pagination mt-32">
+	<button type="button" class="pagination-more btn btn-outline">Загрузить ещё</button>
+	<ul class="pagination-wrapper">
+		<li class="pagination-button pagination-button-prev _is-disabled">
+			<a href="#" class="page-link">
+				<svg class="icon icon-arrow-left"><use xlink:href="./images/symbol-defs.svg#arrow-left"></use></svg>
+				<span>Предыдущая</span>
+			</a>
+		</li>
+		<li class="pagination-item">
+			<a href="#" class="page-link">1</a>
+		</li>
+		<li class="pagination-item">
+			<a href="#" class="page-link">2</a>
+		</li>
+		<li class="pagination-item _current">
+			<a href="#" class="page-link">3</a>
+		</li>
+		<li class="pagination-item">
+			<a href="#" class="page-link">4</a>
+		</li>
+		<li class="pagination-item">
+			<a href="#" class="page-link">5</a>
+		</li>
+		<li class="pagination-item pagination-item--dots">
+			<span>...</span>
+		</li>
+		<li class="pagination-item">
+			<a href="#" class="page-link">10</a>
+		</li>
+		<li class="pagination-button pagination-button-next">
+			<a href="#" class="page-link">
+				<span>Следующая</span>
+				<svg class="icon icon-arrow-right"><use xlink:href="./images/symbol-defs.svg#arrow-right"></use></svg>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- /.pagination -->
+
+		</div>
+		<!-- /.container -->
+	</div>
+
+	<!-- Section: Steps -->
+	<section class="steps section bg-lightblue mt-96 pt-64 pb-64">
+		<div class="container">
+			<div class="section-heading mb-48">
+				<h2 class="title">Этапы работ по установке автоматических ворот</h2>
+			</div>
+			<!-- /.section-heading -->
+			<div class="steps-list row gy-8 flex-nowrap flex-lg-wrap overflow-x-auto">
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/call.svg" class="picture-icon" alt="Звонок или заявка">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Звонок или заявка</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>Вы можете позвонить нам по телефонам <a href="tel:+74955329842">+7 (495) 532-98-42</a>, <a href="tel:+79254747175">+7 (925) 474-71-75</a>, заказать обратный звонок, оформить заявку онлайн с помощью <a href="page-calculator.html">калькулятора</a> автоматических ворот или написать на почту <a href="mailto:zakaz@vorota750.ru">zakaz@vorota750.ru</a>.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/pencil.svg" class="picture-icon" alt="Оформление заявки">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Оформление заявки</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>Через сайт вы можете оформить заявку через любую форму или через звонок нашего менеджера.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/thought.svg" class="picture-icon" alt="Согласование деталей">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Согласование деталей</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>Наши специалисты свяжутся с вами для согласования деталей и профессионально проконсультируют по всем возникшим вопросам.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/delivery.svg" class="picture-icon" alt="Доставка продукции">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Доставка продукции</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>Мы доставим продукцию по указаном адресу в оговоренный день.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/wrench.svg" class="picture-icon" alt="Снятие старых ворот">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Снятие старых ворот</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>Eсли на объекте есть старые автоматические ворота или другого вида то мы их снимем бесплатно.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/wrench-2.svg" class="picture-icon" alt="Монтаж новых ворот">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Монтаж новых ворот</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>Наши мастера быстро и качественно произведут все необходимые работы.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+	<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+		<div class="steps-item">
+			<div class="steps-item-heading">
+				<div class="picture">
+					<img src="./images/icons/recycle.svg" class="picture-icon" alt="Вывоз мусора">
+				</div>
+				<div class="content">
+					<div class="content-step" data-step-title="Шаг"></div>
+					<h5 class="content-title">Вывоз мусора</h5>
+				</div>
+			</div>
+			<div class="steps-item-descr">
+				<p>После окончания работ мы вывезем весь мусор включая старые автоматические ворота.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.col -->
+</div>
+<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Section: Pricelist -->
+	<section class="pricelist section pt-96">
+		<div class="container">
+			<div class="section-heading section-heading-divider mb-48">
+				<h2 class="title">Прайс-лист</h2>
+			</div>
+			<!-- /.section-heading -->
+			<div class="table-responsive">
+				<table class="table table-price table-bordered table-striped table-hover">
+					<thead class="table-light">
+						<tr>
+							<th width="30%">Тип ворот</th>
+							<th width="70%" class="bg-lightblue">Цены</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Секционные</th>
+							<td>от 19 500 руб.</td>
+						</tr>
+						<tr>
+							<th>Откатные</th>
+							<td>от 30 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Распашные</th>
+							<td>от 23 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Раздвижные</td>
+							<td>от 35 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Сдвижные</th>
+							<td>от 37 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Рулонные</th>
+							<td>от 22 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Подъемные</th>
+							<td>от 32 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Поворотные</th>
+							<td>от 30 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Подвесные</th>
+							<td>от 41 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Гаражные</th>
+							<td>от 32 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Промышленные</th>
+							<td>от 50 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Въездные</th>
+							<td>от 30 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Для дачи</th>
+							<td>от 20 000 руб.</td>
+						</tr>
+						<tr>
+							<th>Противопожарные</th>
+							<td>от 25 000 руб.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- /.table-responsive-->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Section: Pricelist -->
+	<section class="pricelist section pt-96">
+		<div class="container">
+			<div class="section-heading">
+				<h2 class="title">Стоимость откатных ворот <u>без электропривода</u></h2>
+			</div>
+			<!-- /.section-heading -->
+			<div class="pricelist-includes mt-24">
+				<h5 class="title text-body text-sm w-medium">В комплектацию входит:</h5>
+				<ul class="list-checked">
+					<li>один комплект фурнитуры для ворот</li>
+					<li>рама с обшивкой из профлиста и установка ворот</li>
+					<li>установка откатных ворот</li>
+					<li>аренда генератора</li>
+					<li>доставка в пределах 50 км от МКАД</li>
+				</ul>
+			</div>
+			<!-- /.pricelist-includes -->
+			<div class="table-responsive mt-32">
+				<table class="table table-price table-bordered table-striped table-hover">
+					<thead>
+						<tr class="table-light">
+							<th width="10%" rowspan="2" valign="middle">↓ Высота проёма (мм)</th>
+							<th width="90%" colspan="5">→ Ширина проёма (мм)</th>
+						</tr>
+						<tr>
+							<th>3000</th>
+							<th>3500</th>
+							<th>4000</th>
+							<th>4500</th>
+							<th>5000</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>1800</th>
+							<td>59 000 руб.</td>
+							<td>61 000 руб.</td>
+							<td>61 500 руб.</td>
+							<td>69 500 руб.</td>
+							<td>70 000 руб.</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>60 000 руб.</td>
+							<td>62 000 руб.</td>
+							<td>62 500 руб.</td>
+							<td>70 000 руб.</td>
+							<td>70 500 руб.</td>
+						</tr>
+						<tr>
+							<th>2200</th>
+							<td>65 000 руб.</td>
+							<td>67 000 руб.</td>
+							<td>67 500 руб.</td>
+							<td>75 000 руб.</td>
+							<td>75 500 руб.</td>
+						</tr>
+						<tr>
+							<th>2600</th>
+							<td>70 000 руб.</td>
+							<td>72 000 руб.</td>
+							<td>72 500 руб.</td>
+							<td>80 000 руб.</td>
+							<td>80 500 руб.</td>
+						</tr>
+						<tr>
+							<th>3000</th>
+							<td>70 000 руб.</td>
+							<td>72 000 руб.</td>
+							<td>72 500 руб.</td>
+							<td>80 000 руб.</td>
+							<td>80 500 руб.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- /.table-responsive-->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Section: Pricelist -->
+	<section class="pricelist section pt-96">
+		<div class="container">
+			<div class="section-heading">
+				<h2 class="title">Стоимость откатных ворот <u>с электропривода</u></h2>
+			</div>
+			<!-- /.section-heading -->
+			<div class="pricelist-includes mt-24">
+				<h5 class="title text-body text-sm w-medium">В комплектацию входит:</h5>
+				<ul class="list-checked">
+					<li>один комплект фурнитуры для ворот</li>
+					<li>рама с обшивкой из профлиста и установка ворот</li>
+					<li>установка откатных ворот</li>
+					<li>автоматика Nice RD 400</li>
+					<li>аренда генератора</li>
+					<li>доставка в пределах 50 км от МКАД</li>
+				</ul>
+			</div>
+			<!-- /.pricelist-includes -->
+			<div class="table-responsive mt-32">
+				<table class="table table-price table-bordered table-striped table-hover">
+					<thead>
+						<tr class="table-light">
+							<th width="10%" rowspan="2" valign="middle">↓ Высота проёма (мм)</th>
+							<th width="90%" colspan="5">→ Ширина проёма (мм)</th>
+						</tr>
+						<tr>
+							<th>3000</th>
+							<th>3500</th>
+							<th>4000</th>
+							<th>4500</th>
+							<th>5000</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1800</td>
+							<td>77 000 руб.</td>
+							<td>79 000 руб.</td>
+							<td>79 500 руб.</td>
+							<td>88 000 руб.</td>
+							<td>89 500 руб.</td>
+						</tr>
+						<tr>
+							<td>2000</td>
+							<td>78 000 руб.</td>
+							<td>80 000 руб.</td>
+							<td>80 500 руб.</td>
+							<td>88 500 руб.</td>
+							<td>90 000 руб.</td>
+						</tr>
+						<tr>
+							<td>2200</td>
+							<td>83 000 руб.</td>
+							<td>85 000 руб.</td>
+							<td>85 500 руб.</td>
+							<td>93 500 руб.</td>
+							<td>95 000 руб.</td>
+						</tr>
+						<tr>
+							<td>2600</td>
+							<td>88 000 руб.</td>
+							<td>90 000 руб.</td>
+							<td>90 500 руб.</td>
+							<td>93 500 руб.</td>
+							<td>95 000 руб.</td>
+						</tr>
+						<tr>
+							<td>3000</td>
+							<td>88 000 руб.</td>
+							<td>90 000 руб.</td>
+							<td>90 500 руб.</td>
+							<td>98 500 руб.</td>
+							<td>100 000 руб.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- /.table-responsive-->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Section: Callback -->
+	<section class="callback section mt-96 pt-48 pb-48 bg-lightblue">
+		<div class="container">
+			<div class="row align-items-center gy-6">
+				<div class="col-lg-5 col-xl-4">
+					<h2 class="callback-title text-2xl">Нашли дешевле?</h2>
+					<p class="callback-descr mt-16">Звоните за телефоном <a href="tel:+79254747175">+7 (925) 474-71-75</a>, обсудим или заполните форму и мы Вам сами перезвоним.</p>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<form class="callback-form form">
+						<div class="row g-4 g-xl-6">
+							<div class="col-md">
+								<label class="form-label">
+									<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+									<span>Имя</span>
+								</label>
+							</div>
+							<!-- /.col -->
+							<div class="col-md">
+								<div class="form-phone">
+									<label class="form-phone-field form-label">
+										<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+										<span>Телефон</span>
+									</label>
+									<label class="form-phone-checkbox form-checkbox">
+										<input type="checkbox" checked>
+										<span>Отобразить маску ввода телефона</span>
+									</label>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="col-md-3">
+								<button type="submit" class="form-submit btn btn-green">Отправить</button>
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</form>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Section: Video testimonials -->
+<section class="video-testimonials section pt-96" id="s-video-testimonials">
+	<div class="container">
+		<div class="row align-items-center gy-4 gx-8 mb-32">
+			<div class="col-sm">
+				<div class="section-heading">
+					<h2 class="title text-2xl">Видеоотзывы клиентов</h2>
+				</div>
+			</div>
+			<!-- /.col -->
+			<div class="col-sm-auto">
+				<a href="page-video-testimonials.html" class="btn-inline-arrow">
+					<span>Все видеоотзывы</span>
+					<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
+				</a>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+
+		<!-- Video testimonails list -->
+		<div class="row flex-nowrap flex-lg-wrap gy-lg-8 gx-4 gx-lg-6 overflow-x-auto">
+			<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
+				<a href="https://www.youtube.com/watch?v=hjvgMrQz9co" class="card card-video-testimonial img-animated" data-fancybox>
+	<div class="card-photo rounded-6 img-cover">
+		<button type="button" class="btn-play">
+			<svg class="icon icon-play"><use xlink:href="./images/symbol-defs.svg#play"></use></svg>
+		</button>
+		<img src="./images/video-testimonials/1.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<div class="date">
+			<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+			<span>18.07.2022</span>
+		</div>
+		<h5 class="title text-sm w-medium">Установка откатных ворот с автоматикой</h5>
+	</div>
+</a>
+			</div>
+			<!-- /.col -->
+			<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
+				<a href="https://www.youtube.com/watch?v=hjvgMrQz9co" class="card card-video-testimonial img-animated" data-fancybox>
+	<div class="card-photo rounded-6 img-cover">
+		<button type="button" class="btn-play">
+			<svg class="icon icon-play"><use xlink:href="./images/symbol-defs.svg#play"></use></svg>
+		</button>
+		<img src="./images/video-testimonials/2.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<div class="date">
+			<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+			<span>16.06.2022</span>
+		</div>
+		<h5 class="title text-sm w-medium">Установка откатных ворот и навеса для автомобиля</h5>
+	</div>
+</a>
+			</div>
+			<!-- /.col -->
+			<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
+				<a href="https://www.youtube.com/watch?v=hjvgMrQz9co" class="card card-video-testimonial img-animated" data-fancybox>
+	<div class="card-photo rounded-6 img-cover">
+		<button type="button" class="btn-play">
+			<svg class="icon icon-play"><use xlink:href="./images/symbol-defs.svg#play"></use></svg>
+		</button>
+		<img src="./images/video-testimonials/3.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<div class="date">
+			<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+			<span>10.06.2022</span>
+		</div>
+		<h5 class="title text-sm w-medium">Установка 2-х Автонавесов</h5>
+	</div>
+</a>
+			</div>
+			<!-- /.col -->
+			<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
+				<a href="https://www.youtube.com/watch?v=hjvgMrQz9co" class="card card-video-testimonial img-animated" data-fancybox>
+	<div class="card-photo rounded-6 img-cover">
+		<button type="button" class="btn-play">
+			<svg class="icon icon-play"><use xlink:href="./images/symbol-defs.svg#play"></use></svg>
+		</button>
+		<img src="./images/video-testimonials/4.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<div class="date">
+			<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+			<span>18.07.2022</span>
+		</div>
+		<h5 class="title text-sm w-medium">Установка откатных ворот из профлиста</h5>
+	</div>
+</a>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+</section>
+
+	<!-- Section: Calculator -->
+<section class="calculator section mt-96">
+	<div class="container">
+		<div class="section-heading section-heading-centered mb-32">
+			<h2 class="title text-2xl">Узнать стоимость прямо сейчас</h2>
+			<p class="description">Воспользуйтесь нашим калькулятором ворот и подберите лучший вариант для Вас.</p>
+		</div>
+		<!-- /.section-heading -->
+
+		<!-- Tabs -->
+		<div class="tabs tabs--centered" role="tablist">
+			<button class="tabs-item active" data-bs-toggle="tab" data-bs-target="#calculator-tab-1" type="button" role="tab">Откатные ворота</button>
+			<button class="tabs-item" data-bs-toggle="tab" data-bs-target="#calculator-tab-2" type="button" role="tab">Распашные ворота</button>
+			<button class="tabs-item" data-bs-toggle="tab" data-bs-target="#calculator-tab-3" type="button" role="tab">Гаражные ворота</button>
+		</div>
+
+		<!-- Tabs content -->
+		<div class="tab-content">
+
+			<!-- Tab -->
+			<div class="tab-pane show active" id="calculator-tab-1" role="tabpanel" tabindex="0">
+				<form class="calculator-form" id="calculator-otkatnye">
+					<div class="row gy-8">
+						<div class="col-xl-7">
+							<div class="calculator-options row gy-6 gy-md-8">
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Ширина проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая ширина проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="3000" checked>
+											<span>3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="3250">
+											<span>3,25</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="3500">
+											<span>3,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="3750">
+											<span>3,75</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="4000">
+											<span>4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="4250">
+											<span>4,25</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="4500">
+											<span>4,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="4750">
+											<span>4,75</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-shyrina-proema[]" value="5000">
+											<span>5</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Высота проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая высота проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="1800" checked>
+											<span>1,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="2000">
+											<span>2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="2200">
+											<span>2,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="2400">
+											<span>2,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="2600">
+											<span>2,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="2800">
+											<span>2,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-vysota-proema[]" value="3000">
+											<span>3</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Обшивка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите тип материала для обшивки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-obwyvka[]" value="0" data-image-category="./images/calculator/empty" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-obwyvka[]" value="10000" data-image-category="./images/calculator/evroshtaketnik">
+											<span>Евроштакетник</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-obwyvka[]" value="10000" data-image-category="./images/calculator/reshetka">
+											<span>Решётка</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-obwyvka[]" value="7000" data-image-category="./images/calculator/profflist">
+											<span>Профлист</span>
+										</label>
+
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Калитка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите тип калитки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-kalitka[]" data-gate="net" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-kalitka[]" data-gate="vstroennay" value="9000">
+											<span>Встроенная</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-kalitka[]" data-gate="otdelno" value="12000">
+											<span>Отдельностоящая</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-12">
+									<div class="calculator-heading">
+										<h5 class="title">Варианты цветов</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Цвет металлического основания забора, а также ворот и калитки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-colors">
+										<label class="options-radio-color">
+											<input type="radio" name="otkatnye-tsvet[]" value="0" data-color="brown" checked>
+											<div class="color">
+												<span class="color-badge" style="background-color: #442F29;"></span>
+												<span class="color-name">RAL-8017<br> (коричневый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="otkatnye-tsvet[]" value="0" data-color="red">
+											<div class="color">
+												<span class="color-badge" style="background-color: #59191F;"></span>
+												<span class="color-name">RAL-3005<br> (винно-красный)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="otkatnye-tsvet[]" value="0" data-color="green">
+											<div class="color">
+												<span class="color-badge" style="background-color: #164231;"></span>
+												<span class="color-name">RAL-6005<br> (зелёный мох)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="otkatnye-tsvet[]" value="0" data-color="grey">
+											<div class="color">
+												<span class="color-badge" style="background-color: #9B9B9B;"></span>
+												<span class="color-name">RAL-7004<br> (серый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="otkatnye-tsvet[]" value="0" data-color="black">
+											<div class="color">
+												<span class="color-badge" style="background-color: #020407;"></span>
+												<span class="color-name">RAL-9005<br> (чёрный)</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-md-6">
+									<div class="calculator-heading">
+										<h5 class="title">Фундамент</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужен ли фундамент">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-fundament[]" value="0" checked>
+											<span>Не нужен</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-fundament[]" value="35000">
+											<span>Монолитный</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-fundament[]" value="12000">
+											<span>Свайновинтовый</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Столбы</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужны ли столбы">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-stolby[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-stolby[]" value="8000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Управление</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость автоматику для ворот">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-upravlenie[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="otkatnye-upravlenie[]" value="20000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+							</div>
+							<!-- /.calculator-options -->
+						</div>
+						<!-- /.col -->
+						<div class="col-xl-5">
+							<div class="calculator-preview rounded-8 img-cover">
+								<img src="./images/calculator/empty/net.png" class="calculator-preview-image" alt="Откатные ворота">
+							</div>
+							<!-- /.calculator-preview -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+					<div class="calculator-summary">
+						<div class="row gy-6">
+							<div class="calculator-delivery col-md-6 col-lg-12 col-xl-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Доставка</h5>
+								</div>
+								<div class="delivery">
+									<input type="number" class="delivery-field form-control" name="otkatnye-delivery" data-km-cost="60" min="1" max="1000" placeholder="Введите значение" autocomplete="off">
+									<span class="delivery-title">км от МКАД</span>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-setup col-md-6 col-lg-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Монтаж</h5>
+									<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость монтаж или установку ворот">
+										<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+									</div>
+								</div>
+								<div class="row g-4">
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="otkatnye-montazh-vorot" value="10000" checked>
+											<span>Ворот</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="otkatnye-montazh-elektroprivoda" value="4000">
+											<span>Электропривода</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-market col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Рыночная цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-current col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Ваша цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-order col-md-auto">
+								<button type="button" class="calculator-order-btn btn btn-green" data-bs-toggle="modal" data-bs-target="#calculatorModal" data-modal-title="Расчет стоимости: Откатные ворота">Заказать</button>
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.calculator-summary -->
+				</form>
+				<!-- /.calculator-form -->
+			</div>
+			<!-- /.tab-pane -->
+
+			<!-- Tab -->
+			<div class="tab-pane" id="calculator-tab-2" role="tabpanel" tabindex="0">
+				<form class="calculator-form" id="calculator-raspashnye">
+					<div class="row gy-8">
+						<div class="col-xl-7">
+							<div class="calculator-options row gy-6 gy-md-8">
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Ширина проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая ширина проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="3000" checked>
+											<span>3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="3200">
+											<span>3,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="3400">
+											<span>3,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="3600">
+											<span>3,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="3800">
+											<span>3,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="4000">
+											<span>4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="4200">
+											<span>4,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="4400">
+											<span>4,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="4600">
+											<span>4,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="4800">
+											<span>4,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-shyrina-proema[]" value="5000">
+											<span>5</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Высота проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая высота проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="1800" checked>
+											<span>1,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="1900">
+											<span>1,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2000">
+											<span>2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2100">
+											<span>2,1</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2200">
+											<span>2,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2300">
+											<span>2,3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2400">
+											<span>2,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2500">
+											<span>2,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2600">
+											<span>2,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2700">
+											<span>2,7</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2800">
+											<span>2,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="2900">
+											<span>2,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-vysota-proema[]" value="3000">
+											<span>3</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Обшивка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите тип материала для обшивки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-obwyvka[]" value="0" data-image-category="./images/calculator/empty" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-obwyvka[]" value="10000" data-image-category="./images/calculator/evroshtaketnik">
+											<span>Евроштакетник</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-obwyvka[]" value="10000" data-image-category="./images/calculator/reshetka">
+											<span>Решётка</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-obwyvka[]" value="7000" data-image-category="./images/calculator/profflist">
+											<span>Профлист</span>
+										</label>
+
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Калитка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите тип калитки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-kalitka[]" data-gate="net" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-kalitka[]" data-gate="vstroennay" value="9000">
+											<span>Встроенная</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-kalitka[]" data-gate="otdelno" value="12000">
+											<span>Отдельностоящая</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-12">
+									<div class="calculator-heading">
+										<h5 class="title">Варианты цветов</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Цвет металлического основания забора, а также ворот и калитки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-colors">
+										<label class="options-radio-color">
+											<input type="radio" name="raspashnye-tsvet[]" value="0" data-color="brown" checked>
+											<div class="color">
+												<span class="color-badge" style="background-color: #442F29;"></span>
+												<span class="color-name">RAL-8017<br> (коричневый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="raspashnye-tsvet[]" value="0" data-color="red">
+											<div class="color">
+												<span class="color-badge" style="background-color: #59191F;"></span>
+												<span class="color-name">RAL-3005<br> (винно-красный)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="raspashnye-tsvet[]" value="0" data-color="green">
+											<div class="color">
+												<span class="color-badge" style="background-color: #164231;"></span>
+												<span class="color-name">RAL-6005<br> (зелёный мох)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="raspashnye-tsvet[]" value="0" data-color="grey">
+											<div class="color">
+												<span class="color-badge" style="background-color: #9B9B9B;"></span>
+												<span class="color-name">RAL-7004<br> (серый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="raspashnye-tsvet[]" value="0" data-color="black">
+											<div class="color">
+												<span class="color-badge" style="background-color: #020407;"></span>
+												<span class="color-name">RAL-9005<br> (чёрный)</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-md-6">
+									<div class="calculator-heading">
+										<h5 class="title">Фундамент</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужен ли фундамент">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-fundament[]" value="0" checked>
+											<span>Не нужен</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-fundament[]" value="35000">
+											<span>Монолитный</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-fundament[]" value="12000">
+											<span>Свайновинтовый</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Столбы</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужны ли столбы">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-stolby[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-stolby[]" value="8000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Управление</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость автоматику для ворот">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-upravlenie[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="raspashnye-upravlenie[]" value="20000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+							</div>
+							<!-- /.calculator-options -->
+						</div>
+						<!-- /.col -->
+						<div class="col-xl-5">
+							<div class="calculator-preview rounded-8 img-cover">
+								<img src="./images/calculator/raspashnye-vorota.jpg" class="calculator-preview-image" alt="Распашные ворота">
+							</div>
+							<!-- /.calculator-preview -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+					<div class="calculator-summary">
+						<div class="row gy-6">
+							<div class="calculator-delivery col-md-6 col-lg-12 col-xl-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Доставка</h5>
+								</div>
+								<div class="delivery">
+									<input type="number" class="delivery-field form-control" name="raspashnye-delivery" data-km-cost="60" min="1" max="1000" placeholder="Введите значение" autocomplete="off">
+									<span class="delivery-title">км от МКАД</span>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-setup col-md-6 col-lg-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Монтаж</h5>
+									<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость монтаж или установку ворот">
+										<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+									</div>
+								</div>
+								<div class="row g-4">
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="raspashnye-montazh-vorot" value="10000" checked>
+											<span>Ворот</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="raspashnye-montazh-elektroprivoda" value="4000">
+											<span>Электропривода</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-market col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Рыночная цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-current col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Ваша цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-order col-md-auto">
+								<button type="button" class="calculator-order-btn btn btn-green" data-bs-toggle="modal" data-bs-target="#calculatorModal" data-modal-title="Расчет стоимости: Распашные ворота">Заказать</button>
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.calculator-summary -->
+				</form>
+				<!-- /.calculator-form -->
+			</div>
+			<!-- /.tab-pane -->
+
+			<!-- Tab -->
+			<div class="tab-pane" id="calculator-tab-3" role="tabpanel" tabindex="0">
+				<form class="calculator-form" id="calculator-garazhnye">
+					<div class="row gy-8">
+						<div class="col-xl-7">
+							<div class="calculator-options row gy-6 gy-md-8">
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Ширина проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая ширина проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2000" checked>
+											<span>2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2100">
+											<span>2,1</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2200">
+											<span>2,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2300">
+											<span>2,3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2400">
+											<span>2,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2500">
+											<span>2,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2600">
+											<span>2,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2700">
+											<span>2,7</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2800">
+											<span>2,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="2900">
+											<span>2,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-shyrina-proema[]" value="3000">
+											<span>3</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-sm-6">
+									<div class="calculator-heading">
+										<h5 class="title">Высота проема (в метрах)</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Общая высота проема, с учетом ворот и калиток, если они необходимы.">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-sizes">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="1800" checked>
+											<span>1,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="1900">
+											<span>1,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2000">
+											<span>2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2100">
+											<span>2,1</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2200">
+											<span>2,2</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2300">
+											<span>2,3</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2400">
+											<span>2,4</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2500">
+											<span>2,5</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2600">
+											<span>2,6</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2700">
+											<span>2,7</span>
+										</label>
+										<!-- <label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2800">
+											<span>2,8</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="2900">
+											<span>2,9</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-vysota-proema[]" value="3000">
+											<span>3</span> -->
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-12">
+									<div class="calculator-heading">
+										<h5 class="title">Обшивка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите тип обшивки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-images">
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0" checked>
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-1.png');"></span>
+												<span class="image-title">Тип 1</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-2.png');"></span>
+												<span class="image-title">Тип 2</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-3.png');"></span>
+												<span class="image-title">Тип 3</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-4.png');"></span>
+												<span class="image-title">Тип 4</span>
+											</div>
+										</label>
+										<label class="options-radio-image">
+											<input type="radio" name="garazhnye-obwyvka[]" value="0">
+											<div class="image">
+												<span class="image-preview" style="background-image: url('./images/calculator/garazh-obwyvka-5.png');"></span>
+												<span class="image-title">Тип 5</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-12">
+									<div class="calculator-heading">
+										<h5 class="title">Варианты цветов</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Цвет металлического основания забора, а также ворот и калитки">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options options-colors">
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="brown" checked>
+											<div class="color">
+												<span class="color-badge" style="background-color: #442F29;"></span>
+												<span class="color-name">RAL-8017<br> (коричневый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="red">
+											<div class="color">
+												<span class="color-badge" style="background-color: #59191F;"></span>
+												<span class="color-name">RAL-3005<br> (винно-красный)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="green">
+											<div class="color">
+												<span class="color-badge" style="background-color: #164231;"></span>
+												<span class="color-name">RAL-6005<br> (зелёный мох)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="grey">
+											<div class="color">
+												<span class="color-badge" style="background-color: #9B9B9B;"></span>
+												<span class="color-name">RAL-7004<br> (серый)</span>
+											</div>
+										</label>
+										<label class="options-radio-color">
+											<input type="radio" name="garazhnye-tsvet[]" value="0" data-color="black">
+											<div class="color">
+												<span class="color-badge" style="background-color: #020407;"></span>
+												<span class="color-name">RAL-9005<br> (чёрный)</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Калитка</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужна ли калитка">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-kalitka[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-kalitka[]" value="49000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Окошко</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Выберите нужно ли окошко">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-okowko[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-okowko[]" value="8400">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+								<div class="calculator-options-item col-auto">
+									<div class="calculator-heading">
+										<h5 class="title">Управление</h5>
+										<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость автоматику для ворот">
+											<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+										</div>
+									</div>
+									<div class="options">
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-upravlenie[]" value="0" checked>
+											<span>Нет</span>
+										</label>
+										<label class="options-radio">
+											<input type="radio" name="garazhnye-upravlenie[]" value="20000">
+											<span>Да</span>
+										</label>
+									</div>
+								</div>
+								<!-- /.calculator-options-item -->
+							</div>
+							<!-- /.calculator-options -->
+						</div>
+						<!-- /.col -->
+						<div class="col-xl-5">
+							<div class="calculator-preview rounded-8 img-cover">
+								<img src="./images/calculator/garazhnye-vorota.jpg" class="calculator-preview-image" alt="Распашные ворота">
+							</div>
+							<!-- /.calculator-preview -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+					<div class="calculator-summary">
+						<div class="row gy-6">
+							<div class="calculator-delivery col-md-6 col-lg-12 col-xl-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Доставка</h5>
+								</div>
+								<div class="delivery">
+									<input type="number" class="delivery-field form-control" name="garazhnye-delivery" data-km-cost="60" min="1" max="1000" placeholder="Введите значение" autocomplete="off">
+									<span class="delivery-title">км от МКАД</span>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-setup col-md-6 col-lg-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Монтаж</h5>
+									<div class="hint" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Включить в стоимость монтаж или установку ворот">
+										<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+									</div>
+								</div>
+								<div class="row g-4">
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="garazhnye-montazh-vorot" value="10000" checked>
+											<span>Ворот</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="form-checkbox">
+											<input type="checkbox" name="garazhnye-montazh-elektroprivoda" value="4000">
+											<span>Электропривода</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-market col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Рыночная цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-price-current col-auto">
+								<div class="calculator-heading">
+									<h5 class="title">Ваша цена</h5>
+								</div>
+								<div class="calculator-price">0 ₽</div>
+							</div>
+							<!-- /.col -->
+							<div class="calculator-order col-md-auto">
+								<button type="button" class="calculator-order-btn btn btn-green" data-bs-toggle="modal" data-bs-target="#calculatorModal" data-modal-title="Расчет стоимости: Гаражные ворота">Заказать</button>
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.calculator-summary -->
+				</form>
+				<!-- /.calculator-form -->
+			</div>
+			<!-- /.tab-pane -->
+
+		</div>
+		<!-- /.tab-content -->
+
+	</div>
+	<!-- /.container -->
+</section>
+
+	<!-- Section: Projects -->
+<section class="projects section pt-96">
+	<div class="container">
+		<div class="row align-items-center gy-4 gx-8 mb-32">
+			<div class="col-sm">
+				<div class="section-heading">
+					<h2 class="title text-2xl">Результат нашей работы</h2>
+					<p class="description">Реализованные проекты — визитная карточка нашей компании.</p>
+				</div>
+			</div>
+			<!-- /.col -->
+			<div class="col-sm-auto">
+				<a href="page-projects.html" class="btn-inline-arrow">
+					<span>Смотреть все работы</span>
+					<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
+				</a>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+
+		<!-- Projects slider -->
+		<div class="projects-slider swiper-slider">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="projects-slide swiper-slide">
+						<a href="page-projects-level-2.html" class="card card-project img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/projects/1.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Ворота</h4>
+	</div>
+</a>
+					</div>
+					<!-- /.projects-slide -->
+					<div class="projects-slide swiper-slide">
+						<a href="page-projects-level-2.html" class="card card-project img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/projects/2.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Гаражные</h4>
+	</div>
+</a>
+					</div>
+					<!-- /.projects-slide -->
+					<div class="projects-slide swiper-slide">
+						<a href="page-projects-level-2.html" class="card card-project img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/projects/3.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Распашные</h4>
+	</div>
+</a>
+					</div>
+					<!-- /.projects-slide -->
+					<div class="projects-slide swiper-slide">
+						<a href="page-projects-level-2.html" class="card card-project img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/projects/4.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Навесы для авто</h4>
+	</div>
+</a>
+					</div>
+					<!-- /.projects-slide -->
+					<div class="projects-slide swiper-slide">
+						<a href="page-projects-level-2.html" class="card card-project img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/projects/5.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Заборы для дачи</h4>
+	</div>
+</a>
+					</div>
+					<!-- /.projects-slide -->
+					<div class="projects-slide swiper-slide">
+						<a href="page-projects-level-2.html" class="card card-project img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/projects/6.jpg" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Ковка</h4>
+	</div>
+</a>
+					</div>
+					<!-- /.projects-slide -->
+				</div>
+				<!-- /.swiper-wrapper -->
+			</div>
+			<!-- /.swiper -->
+
+			<!-- Swiper navigation-->
+			<div class="projects-slider-nav swiper-navigation">
+				<button class="swiper-button-prev" data-ripplet>
+					<svg class="icon icon-arrow-left"><use xlink:href="./images/symbol-defs.svg#arrow-left"></use></svg>
+				</button>
+				<button class="swiper-button-next" data-ripplet>
+					<svg class="icon icon-arrow-right"><use xlink:href="./images/symbol-defs.svg#arrow-right"></use></svg>
+				</button>
+			</div>
+		</div>
+		<!-- /.projects-slider -->
+
+		<!-- Swiper pagination -->
+		<div class="projects-slider-dots swiper-pagination"></div>
+	</div>
+	<!-- /.container -->
+</section>
+
+	<!-- SEO Article -->
+	<article class="seo section pt-96">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-xxl-8">
+					<p>Компания «Ворота 750» предлагает широкий выбор продукции от лучших производителей – Алютех, Ролтэк, Nice, DoorHan. У нас можно приобрести по низким ценам металлические и деревянные ворота самых разных видов, автоматику к ним. Мы обеспечиваем доставку и монтаж, гарантийное и постгарантийное обслуживание по Москве и Московской области.</p>
+					<h2 class="mb-32 text-2xl text-center">Виды воротных конструкций</h2>
+					<ul>
+						<li>Распашные – бывают одно- и двухстворчатые, с несущими опорами и навесными петлями. Для удобства эксплуатации дополнительно устанавливаются фиксаторы для удерживания створок в открытом или закрытом состоянии, автоматика с электроприводом. Заказываются чаще всего такие ворота на дачу или для загородного дома, где достаточно свободного места для их открытия, что не всегда возможно в городских условиях.</li>
+						<li>Откатные (раздвижные и сдвижные) – наиболее востребованы на сегодняшний день, выпускаются консольного, рельсового и подвесного типа, характеризуются тем, что полотна сдвигаются вдоль забора. Преимущества конструкций – компактность, возможность монтажа в местах с повышенной плотностью застройки, парусность, надежность и удобство эксплуатации.</li>
+						<li>Гаражные – представлены в нескольких вариантах – подъемно-секционные, подъемно-поворотные и рулонные. Независимо от вида, ворота служат защитой от уличной пыли и шума, сохраняют тепло (конструкции из сэндвич-панелей), обладают привлекательным видом и долговечностью, а установка автоматики обеспечивает простое и комфортное управление.</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</article>
+
+	<!-- Section: Subproducts -->
+	<section class="subproducts section pt-96">
+		<div class="container">
+			<div class="section-heading section-heading-divider mb-48">
+				<h2 class="title">Выбрать свои ворота</h2>
+			</div>
+			<!-- /.section-heading -->
+			<div class="subproducts-list row g-4 g-lg-6 flex-nowrap flex-sm-wrap overflow-x-auto">
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/1.jpg" alt="Откатные ворота">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> профнастил, евроштакетник, решетка, поликарбонат;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой, монолитный;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 28 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/2.jpg" alt="Откатные ворота на винтовых сваях">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота на винтовых сваях</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> профнастил, евроштакетник, решетка, поликарбонат;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 40 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота на винтовых сваях">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/3.jpg" alt="Откатные ворота из профнастила">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота из профнастила</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> профнастил;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 28 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота из профнастила">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/4.jpg" alt="Откатные ворота с калиткой">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота с калиткой</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> профнастил, евроштакетник, решетка, поликарбонат;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой, монолитный;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 37 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота с калиткой">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/5.jpg" alt="Откатные ворота для дачи">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота для дачи</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> профнастил, евроштакетник, решетка, поликарбонат;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой, монолитный;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 28 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота для дачи">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/6.jpg" alt="Откатные ворота из евроштакетника">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота из евроштакетника</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> евроштакетник;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой, монолитный;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 29 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота из евроштакетника">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/7.jpg" alt="Откатные ворота из поликарбоната">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота из поликарбоната</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> поликарбонат;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой, монолитный;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 30 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота из поликарбоната">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+				<div class="col-10 col-sm-6">
+					<div class="subproducts-item">
+	<a href="shop-category-lvl-3.html" class="subproducts-photo rounded-6 img-cover img-animated">
+		<img src="./images/subproducts/8.jpg" alt="Откатные ворота с кирпичными столбами">
+	</a>
+	<div class="subproducts-content">
+		<h4 class="title text-md w-medium">
+			<a href="shop-category-lvl-3.html">Откатные ворота с кирпичными столбами</a>
+		</h4>
+		<ul class="attributes">
+			<li><b>Материал:</b> профнастил, евроштакетник, решетка, поликарбонат;</li>
+			<li><b>Высота (метр):</b> 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3.0;</li>
+			<li><b>Ширина (метр):</b> 3, 3.25, 3.5, 3.75, 4,4.25, 4.5, 4.75, 5.0,...6.0;</li>
+			<li><b>Автоматика (Nice):</b> RD 400, ROX 600, Robus 600, Robus 1000, Robus 1800;</li>
+			<li><b>Фундамент:</b> свайно-винтовой, монолитный;</li>
+			<li><b>Калитка:</b> встроенная, отдельностаящая;</li>
+			<li><b>Столбы:</b> есть, нет.</li>
+		</ul>
+		<div class="order">
+			<div class="order-price">
+				<div class="text-gray-200 text-xxs">Стоимость</div>
+				<div class="text-accent text-lg w-bold">от 50 000 ₽</div>
+			</div>
+			<div class="order-btn">
+				<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Откатные ворота с кирпичными столбами">Заказать</button>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.subproducts-list -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- SEO Article -->
+<article class="seo section pt-96">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 col-xxl-8">
+				<h2 class="mb-32 text-2xl text-center">Где приобрести откатные ворота разных типов</h2>
+				<p>Компания «Vorota750», зарекомендовавшая себя на рынке, как честный и ответственный партнер, дешево предлагает широкий ассортимент автоматических ворот, заборов для дачи и навесов для авто различных типов с установкой.</p>
+				<p>Такое разнообразие автоматических ворот для забора позволяет наиболее правильно подобрать конструкцию во двор для оснащения въездного проема. Помощь в выборе окажет наш консультант, который внимательно изучит объект и даст профессиональный обоснованный совет по выбору той или иной модели в оптимальном сочетании качества и стоимости.</p>
+				<h3>Преимущества работы с нашей компанией</h3>
+				<ul>
+					<li>Мы являемся официальным дилером известных производителей ворот – Ролтэк, Алютех, Дорхан и автоматики – Nice, а также успешно сотрудничаем с другими фирмами.</li>
+					<li>Не только реализуем, изготавливаем и устанавливаем конструкции и механизмы, но и обеспечиваем ремонт, гарантийное и постгарантийное сервисное обслуживание.</li>
+					<li>Низкие цены позволяют всем категориям граждан пользоваться нашими услугами.</li>
+					<li>Обеспечивается доставка и монтаж продукции по Москве и Московской области.</li>
+					<li>Знания и умения наших мастеров, огромный опыт работы в данной сфере обеспечивает высокий уровень качества и комфортные для клиента сроки выполнения услуг.</li>
+				</ul>
+				<p>Долговременное и эффективное сотрудничество с компанией «Ворота750» позволит воплотить пусть небольшую, но мечту о красивых, надежных, современных, функциональных и недорогих автоматических откатных воротах для дачи и дома.</p>
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+</article>
+
+</main>
+
+	<!-- Section: Questions left? -->
+	<section class="f-questions bg-lightblue pt-32 pb-32">
+		<div class="container">
+			<div class="section-heading section-heading-centered mb-32">
+				<h2 class="title text-2xl">Остались вопросы?</h2>
+				<p class="description">Заполните форму ниже, мы вам перезвоним и ответим на все интересующие вопросы.</p>
+			</div>
+			<!-- /.section-heading -->
+			<form class="f-questions-form form">
+				<div class="row g-4 g-lg-6">
+					<div class="col-md">
+						<label class="form-label">
+							<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+							<span>Имя</span>
+						</label>
+					</div>
+					<!-- /.col -->
+					<div class="col-md">
+						<div class="form-phone">
+							<label class="form-phone-field form-label">
+								<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+								<span>Телефон</span>
+							</label>
+							<label class="form-phone-checkbox form-checkbox">
+								<input type="checkbox" checked>
+								<span>Отобразить маску ввода телефона</span>
+							</label>
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-auto">
+						<button type="submit" class="form-submit btn btn-green">Перезвонить мне</button>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</form>
+			<!-- /.f-questions-form -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Site footer -->
+	<footer class="footer">
+		<div class="container">
+			<!-- Subscribe form -->
+			<div class="footer-subscribe">
+				<div class="row align-items-lg-center gy-6">
+					<div class="col-lg-6 col-xl-7">
+						<div class="footer-subscribe-content">
+							<svg class="icon icon-subscribe"><use xlink:href="./images/symbol-defs.svg#subscribe"></use></svg>
+							<div class="heading">
+								<h5 class="heading-title text-dark text-md w-bold">Подписаться на новости и акции</h5>
+								<p class="heading-descr">Узнавайте первым о скидках, новинках, интересных предложениях!</p>
+							</div>
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-lg-6 col-xl-5">
+						<form class="footer-subscribe-form form">
+							<label class="form-label">
+								<input type="email" class="form-control" placeholder="Введите свой E-mail" autocomplete="off" required>
+								<span>Введите свой E-mail</span>
+							</label>
+							<button type="submit" class="form-submit btn btn-green">Подписаться</button>
+						</form>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.footer-subscribe -->
+
+			<!-- Main footer -->
+			<div class="footer-main scrollbar">
+				<div class="row gy-8 gx-2 gx-sm-6">
+					<div class="col-6 col-md-4 col-lg">
+						<div class="footer-nav">
+							<div class="footer-title">Каталог</div>
+							<ul class="footer-nav-list" data-showmore data-showmore-items="7">
+								<li><a href="#">Откатные ворота</a></li>
+								<li><a href="#">Деревянных ворот</a></li>
+								<li><a href="#">Металлических ворот</a></li>
+								<li><a href="#">Алюминиевых ворот</a></li>
+								<li><a href="#">Кованых ворот</a></li>
+								<li><a href="#">Промышленных ворот</a></li>
+								<li><a href="#">Сварных ворот</a></li>
+								<li><a href="#">Ангарных ворот</a></li>
+								<li><a href="#">Ворот 5 метров</a></li>
+								<li><a href="#">Ворот 6 метров</a></li>
+								<li><a href="#">Ворот со встроенной калиткой</a></li>
+								<li><a href="#">Ворот из евроштакетника</a></li>
+								<li><a href="#">Ворот с кирпичными столбами</a></li>
+								<li><a href="#">Ворот из поликарбоната</a></li>
+								<li><a href="#">Ворот для дома</a></li>
+								<li><a href="#">Ворот на бетонном фундаменте</a></li>
+								<li><a href="#">Ворот 9 метров</a></li>
+								<li><a href="#">Ворот 10 метров</a></li>
+								<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-6 col-md-4 col-lg">
+						<div class="footer-nav">
+							<div class="footer-title">Цены</div>
+							<ul class="footer-nav-list" data-showmore data-showmore-items="7">
+								<li><a href="#">Откатные ворота</a></li>
+								<li><a href="#">Навесы для авто</a></li>
+								<li><a href="#">Из поликарбоната</a></li>
+								<li><a href="#">Из профнастила</a></li>
+								<li><a href="#">Заборы для дачи</a></li>
+								<li><a href="#">Из сетки рабицы</a></li>
+								<li><a href="#">Из евроштакетника</a></li>
+								<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-6 col-md-4 col-lg">
+						<div class="footer-nav">
+							<div class="footer-title">Наши работы</div>
+							<ul class="footer-nav-list" data-showmore data-showmore-items="7">
+								<li><a href="#">На винтовых сваях</a></li>
+								<li><a href="#">Гаражные ворота</a></li>
+								<li><a href="#">Распашные ворота</a></li>
+								<li><a href="#">Навесы для авто</a></li>
+								<li><a href="#">Откатные ворота</a></li>
+								<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-6 col-md-4 col-lg">
+						<div class="footer-nav">
+							<div class="footer-title">Города</div>
+							<ul class="footer-nav-list" data-showmore data-showmore-items="7">
+								<li><a href="#">Подольск</a></li>
+								<li><a href="#">Раменское</a></li>
+								<li><a href="#">Серпухов</a></li>
+								<li><a href="#">Домодедово</a></li>
+								<li><a href="#">Люберцы</a></li>
+								<li><a href="#">Воскресенск</a></li>
+								<li><a href="#">Павловский Посад</a></li>
+								<li><a href="#">Орехово-Зуево</a></li>
+								<li><a href="#">Троицк</a></li>
+								<li><a href="#">Гольцыно</a></li>
+								<li><a href="#">Истре</a></li>
+								<li><a href="#">Дедовске</a></li>
+								<li><a href="#">Красногорск</a></li>
+								<li class="show-more">
+	<button type="button" class="btn-more">
+		<span class="btn-more-hide">Скрыть</span>
+		<span class="btn-more-show">Ещё</span>
+		<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+	</button>
+</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-md col-lg-3">
+						<div class="footer-title">Контакты</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts-phone">
+								<div class="dropdown dropdown-phone">
+									<button type="button" class="btn-dropdown" data-bs-toggle="dropdown" data-bs-offset="-17, -36" data-bs-auto-close="outside" aria-expanded="false">+7 (495) 532-98-42</button>
+									<div class="dropdown-menu">
+										<div class="dropdown-phone-item">
+											<a href="tel:+74955329842">+7 (495) 532-98-42</a>
+										</div>
+										<div class="dropdown-phone-item">
+											<a href="tel:+79254747175">+7 (925) 474-71-75</a>
+											<span class="text-3xs text-gray-200">Viber, WhatsApp</span>
+										</div>
+									</div>
+								</div>
+								<!-- /.dropdown-phone -->
+								<button class="callback-btn btn-inline" data-bs-toggle="modal" data-bs-target="#callbackModal">
+									<svg class="icon icon-phone"><use xlink:href="./images/symbol-defs.svg#phone"></use></svg>
+									<span>Заказать звонок</span>
+								</button>
+							</div>
+							<!-- /.footer-contacts-phone -->
+							<div class="footer-contacts-mail">
+								<a href="mailto:zakaz@vorota750.ru" class="btn-inline">
+									<svg class="icon icon-mail"><use xlink:href="./images/symbol-defs.svg#mail"></use></svg>
+									<span>zakaz@vorota750.ru</span>
+								</a>
+							</div>
+							<!-- /.footer-contacts-mail -->
+							<div class="footer-contacts-address">
+								<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+								<span>г. Москва, инд. 117042, ул. Адмирала Руднева, д. 2</span>
+							</div>
+							<!-- /.footer-contacts-address -->
+							<div class="footer-contacts-hours">
+								<svg class="icon icon-clock"><use xlink:href="./images/symbol-defs.svg#clock"></use></svg>
+								<span>Пн-Вс – с 9:00 по 19:00</span>
+							</div>
+							<!-- /.footer-contacts-hours -->
+						</div>
+						<!-- /.footer-contacts -->
+						<div class="footer-social">
+							<ul class="footer-social-list">
+								<li class="footer-social-item">
+									<a href="#" class="footer-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+										<svg class="icon icon-vk"><use xlink:href="./images/symbol-defs.svg#vk"></use></svg>
+									</a>
+								</li>
+								<li class="footer-social-item">
+									<a href="#" class="footer-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+										<svg class="icon icon-facebook"><use xlink:href="./images/symbol-defs.svg#facebook"></use></svg>
+									</a>
+								</li>
+								<li class="footer-social-item">
+									<a href="#" class="footer-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+										<svg class="icon icon-telegram"><use xlink:href="./images/symbol-defs.svg#telegram"></use></svg>
+									</a>
+								</li>
+								<li class="footer-social-item">
+									<a href="#" class="footer-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+										<svg class="icon icon-tiktok"><use xlink:href="./images/symbol-defs.svg#tiktok"></use></svg>
+									</a>
+								</li>
+								<li class="footer-social-item">
+									<a href="#" class="footer-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+										<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+									</a>
+								</li>
+								<li class="footer-social-item">
+									<a href="#" class="footer-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+										<svg class="icon icon-instagram"><use xlink:href="./images/symbol-defs.svg#instagram"></use></svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.footer-social -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.footer-main -->
+			<div class="footer-bottom">
+				<div class="row align-items-center justify-content-center gy-4">
+					<div class="col-md-6 col-lg order-0">
+						<div class="footer-bottom-copyright">© 2010-2022. «Интернет-магазин Vorota750»</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-auto order-2 order-lg-1">
+						<div class="footer-bottom-payments">
+							<img src="./images/payments.svg" width="264" height="20" alt="Мы принимаем разные способы платежей">
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-6 col-lg order-1 order-lg-2">
+						<div class="footer-bottom-nav">
+							<a href="#">Конфиденциальнось</a>
+							<a href="#">Оферта</a>
+						</div>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="footer-bottom-text">
+					<p>Cайт носит исключительно информационный характер, и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) Гражданского кодекса Российской Федерации. Наличие и цены уточняйте у наших операторов. Копирование всех составляющих частей сайта в какой бы то ни было форме без письменного разрешения владельцев авторских прав запрещено. Сайт использует технологию cookie. Используя сайт, Вы соглашаетесь с правилами использования cookie, а также даете согласие на обработку персональных данных.</p>
+				</div>
+			</div>
+			<!-- /.footer-bottom -->
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Mobile menu -->
+<div class="mmenu offcanvas offcanvas-start scrollbar" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+	<div class="mmenu-header offcanvas-header">
+		<h5 class="offcanvas-title text-xl w-bold" id="mobileMenuLabel">Меню</h5>
+		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+			<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+		</button>
+	</div>
+	<div class="mmenu-body offcanvas-body">
+		<div class="mmenu-body-catalog">
+			<button class="btn btn-green btn-catalog">
+				<svg class="icon icon-bars"><use xlink:href="./images/symbol-defs.svg#bars"></use></svg>
+				<span>Каталог товаров</span>
+			</button>
+			<div class="submenu">
+				<button class="submenu-back-btn">
+					<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+					<span>Назад</span>
+				</button>
+				<div class="submenu-title text-lg w-bold">Каталог</div>
+				<ul class="submenu-list">
+					<li><a href="shop-catalog.html" class="promo">Акции и скидки</a></li>
+					<li><a href="shop-category-lvl-1.html">Автоматические ворота</a></li>
+					<li><a href="shop-category-lvl-1.html">Заборы для дачи</a></li>
+					<li><a href="shop-category-lvl-1.html">Навесы для автомобилей</a></li>
+					<li><a href="shop-category-lvl-1.html">Художественная ковка</a></li>
+					<li><a href="shop-category-lvl-1.html">Калитки для забора</a></li>
+					<li><a href="shop-category-lvl-1.html">Готовые комплекты ворот, навесов, заборов и калиток</a></li>
+					<li><a href="shop-category-lvl-1.html">Автоматика для ворот</a></li>
+					<li><a href="shop-category-lvl-1.html">Комплектующие для ворот</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.mmenu-body-catalog -->
+		<div class="mmenu-body-actions">
+			<a href="page-shop-cart.html" class="shopping-cart">
+				<div class="shopping-cart-icon">
+					<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
+					<span class="badge">12</span>
+				</div>
+				<div class="shopping-cart-content">
+					<span class="title">Товаров на сумму</span>
+					<span class="total">2 500 ₽</span>
+				</div>
+			</a>
+		</div>
+		<!-- /.mmenu-body-actions -->
+		<div class="mmenu-body-nav">
+			<ul class="menu">
+				<li class="menu-item">
+					<a href="page-home.html">Главная</a>
+				</li>
+				<li class="menu-item">
+					<span>О компании <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
+					<div class="submenu">
+						<button class="submenu-back-btn">
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+							<span>Назад</span>
+						</button>
+						<div class="submenu-title text-lg w-bold">О компании</div>
+						<ul class="submenu-list">
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Наши работы</a></li>
+							<li><a href="#">Наши мастера</a></li>
+							<li><a href="#">Сертификаты</a></li>
+							<li><a href="#">Партнеры</a></li>
+							<li><a href="#">Производство</a></li>
+							<li><a href="#">Видеоотзывы</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-item">
+					<span>Услуги <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
+					<div class="submenu">
+						<button class="submenu-back-btn">
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+							<span>Назад</span>
+						</button>
+						<div class="submenu-title text-lg w-bold">Услуги</div>
+						<ul class="submenu-list">
+							<li><a href="#">Ремонт</a></li>
+							<li><a href="#">Монтаж и установка</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-item">
+					<a href="#">Цены</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Калькулятор</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Наши работы</a>
+				</li>
+				<li class="menu-item">
+					<span>Покупателю <svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg></span>
+					<div class="submenu">
+						<button class="submenu-back-btn">
+							<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+							<span>Назад</span>
+						</button>
+						<div class="submenu-title text-lg w-bold">Покупателю</div>
+						<ul class="submenu-list">
+							<li><a href="#">Инструкции</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Статьи</a></li>
+							<li><a href="#">Видео</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-item">
+					<a href="page-contacts.html">Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.mmenu-body-nav -->
+		<div class="mmenu-body-contacts">
+			<div class="contacts">
+				<div class="contacts-item">
+					<a href="tel:+74955329842">
+						<svg class="icon icon-phone"><use xlink:href="./images/symbol-defs.svg#phone"></use></svg>
+						<span>+7 (495) 532-98-42</span>
+					</a>
+				</div>
+				<div class="contacts-item">
+					<a href="tel:+79254747175">
+						<svg class="icon icon-phone"><use xlink:href="./images/symbol-defs.svg#phone"></use></svg>
+						<span>+7 (925) 474-71-75</span>
+					</a>
+					<span class="text-3xs text-gray-200">Viber, WhatsApp</span>
+				</div>
+				<div class="contacts-item">
+					<a href="mailto:zakaz@vorota750.ru">
+						<svg class="icon icon-mail"><use xlink:href="./images/symbol-defs.svg#mail"></use></svg>
+						<span>zakaz@vorota750.ru</span>
+					</a>
+				</div>
+			</div>
+			<div class="buttons">
+				<button class="btn btn-green" data-bs-toggle="modal" data-bs-target="#callbackModal">Заказать звонок</button>
+				<button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#questionModal">
+					<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
+					<span>Задать вопрос</span>
+				</button>
+			</div>
+			<div class="info">
+				<div class="info-item">
+					<svg class="icon icon-clock"><use xlink:href="./images/symbol-defs.svg#clock"></use></svg>
+					<span><b>Режим работы:</b> Пн-Вс – с 9:00 по 19:00</span>
+				</div>
+				<div class="info-item">
+					<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+					<span><b>Адрес:</b> г. Москва, инд. 117042, ул. Адмирала Руднева, д. 2</span>
+				</div>
+			</div>
+		</div>
+		<!-- /.mmenu-body-contacts -->
+		<div class="mmenu-body-social">
+			<h5 class="mmenu-body-social-title text-xs">Мы в социальных сетях</h5>
+			<ul class="mmenu-body-social-list">
+				<li class="mmenu-body-social-item">
+					<a href="#" class="mmenu-body-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+						<svg class="icon icon-vk"><use xlink:href="./images/symbol-defs.svg#vk"></use></svg>
+					</a>
+				</li>
+				<li class="mmenu-body-social-item">
+					<a href="#" class="mmenu-body-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+						<svg class="icon icon-facebook"><use xlink:href="./images/symbol-defs.svg#facebook"></use></svg>
+					</a>
+				</li>
+				<li class="mmenu-body-social-item">
+					<a href="#" class="mmenu-body-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+						<svg class="icon icon-telegram"><use xlink:href="./images/symbol-defs.svg#telegram"></use></svg>
+					</a>
+				</li>
+				<li class="mmenu-body-social-item">
+					<a href="#" class="mmenu-body-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+						<svg class="icon icon-tiktok"><use xlink:href="./images/symbol-defs.svg#tiktok"></use></svg>
+					</a>
+				</li>
+				<li class="mmenu-body-social-item">
+					<a href="#" class="mmenu-body-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+						<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+					</a>
+				</li>
+				<li class="mmenu-body-social-item">
+					<a href="#" class="mmenu-body-social-link" data-ripplet target="_blank" rel="nofollow noopener">
+						<svg class="icon icon-instagram"><use xlink:href="./images/symbol-defs.svg#instagram"></use></svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.mmenu-body-social -->
+	</div>
+	<!-- /.mmenu-body -->
+</div>
+
+	<!-- Shopping cart -->
+<div class="mcart offcanvas offcanvas-end scrollbar" tabindex="-1" id="miniCart" aria-labelledby="miniCartLabel">
+	<div class="mcart-header offcanvas-header">
+		<h5 class="offcanvas-title text-xl w-bold" id="miniCartLabel">Корзина покупок</h5>
+		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+			<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+		</button>
+	</div>
+	<div class="mcart-body offcanvas-body">
+		<div class="mcart-list">
+			<div class="mcart-item">
+				<a href="#" class="mcart-item-photo rounded-4 img-cover">
+					<img src="./images/products/1.jpg" alt="">
+				</a>
+				<div class="mcart-item-body">
+					<a href="#" class="permalink">Каркас с несущей системой Ролтэк Микро 3х2</a>
+					<div class="total">
+						<div class="total-quantity quantity">
+							<button type="button" class="quantity-minus" data-ripplet>
+								<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
+							</button>
+							<input type="number" class="quantity-value form-control" name="quantity" value="2" step="1" min="1" max="99" title="Количество" readonly>
+							<button type="button" class="quantity-plus" data-ripplet>
+								<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
+							</button>
+						</div>
+						<div class="total-price price">
+							<ins>31 200 ₽</ins>
+							<!-- <del>37 500 ₽</del> -->
+						</div>
+					</div>
+				</div>
+				<div class="mcart-item-remove">
+					<button type="button" class="btn-remove">
+						<svg class="icon icon-trash"><use xlink:href="./images/symbol-defs.svg#trash"></use></svg>
+					</button>
+				</div>
+			</div>
+			<!-- /.mcart-item -->
+			<div class="mcart-item">
+				<a href="#" class="mcart-item-photo rounded-4 img-cover">
+					<img src="./images/products/7.jpg" alt="">
+				</a>
+				<div class="mcart-item-body">
+					<a href="#" class="permalink">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</a>
+					<div class="total">
+						<div class="total-quantity quantity">
+							<button type="button" class="quantity-minus" data-ripplet>
+								<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
+							</button>
+							<input type="number" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество" readonly>
+							<button type="button" class="quantity-plus" data-ripplet>
+								<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
+							</button>
+						</div>
+						<div class="total-price price">
+							<ins>15 800 ₽</ins>
+							<!-- <del>17 400 ₽</del> -->
+						</div>
+					</div>
+				</div>
+				<div class="mcart-item-remove">
+					<button type="button" class="btn-remove">
+						<svg class="icon icon-trash"><use xlink:href="./images/symbol-defs.svg#trash"></use></svg>
+					</button>
+				</div>
+			</div>
+			<!-- /.mcart-item -->
+			<div class="mcart-item">
+				<a href="#" class="mcart-item-photo rounded-4 img-cover">
+					<img src="./images/products/3.jpg" alt="">
+				</a>
+				<div class="mcart-item-body">
+					<a href="#" class="permalink">Каркас с несущей системой Алютех 4х2</a>
+					<div class="total">
+						<div class="total-quantity quantity">
+							<button type="button" class="quantity-minus" data-ripplet>
+								<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
+							</button>
+							<input type="number" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество" readonly>
+							<button type="button" class="quantity-plus" data-ripplet>
+								<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
+							</button>
+						</div>
+						<div class="total-price price">
+							<ins>26 775 ₽</ins>
+							<del>31 500 ₽</del>
+						</div>
+					</div>
+				</div>
+				<div class="mcart-item-remove">
+					<button type="button" class="btn-remove">
+						<svg class="icon icon-trash"><use xlink:href="./images/symbol-defs.svg#trash"></use></svg>
+					</button>
+				</div>
+			</div>
+			<!-- /.mcart-item -->
+		</div>
+		<!-- /.mcart-list -->
+	</div>
+	<!-- /.mcart-body -->
+	<div class="mcart-summary">
+		<h5 class="mcart-summary-total text-xl w-bold">Итого: 15 800 ₽</h5>
+		<div class="mcart-summary-checkout">
+			<a href="#" class="btn btn-green">Оформить заказ</a>
+		</div>
+	</div>
+	<!-- /.mcart-summary -->
+</div>
+
+	<!-- Modal: Callback -->
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="callbackModalLabel">Заказать звонок</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Имя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<div class="form-phone">
+								<label class="form-phone-field form-label">
+									<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+									<span>Телефон</span>
+								</label>
+								<label class="form-phone-checkbox form-checkbox">
+									<input type="checkbox" checked>
+									<span>Отобразить маску ввода телефона</span>
+								</label>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn btn-green">Заказать</button>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Question -->
+<div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="questionModalLabel">Задать вопрос</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Имя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<div class="form-phone">
+								<label class="form-phone-field form-label">
+									<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+									<span>Телефон</span>
+								</label>
+								<label class="form-phone-checkbox form-checkbox">
+									<input type="checkbox" checked>
+									<span>Отобразить маску ввода телефона</span>
+								</label>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<textarea class="form-textarea" placeholder="Опишите Ваш вопрос..." required></textarea>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn btn-green">Отправить</button>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Measure -->
+<div class="modal fade" id="measureModal" tabindex="-1" aria-labelledby="measureModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="measureModalLabel">Вызвать замерщика</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Имя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<div class="form-phone">
+								<label class="form-phone-field form-label">
+									<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+									<span>Телефон</span>
+								</label>
+								<label class="form-phone-checkbox form-checkbox">
+									<input type="checkbox" checked>
+									<span>Отобразить маску ввода телефона</span>
+								</label>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn btn-green">Отправить</button>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Calculator -->
+<div class="modal modal-calculator fade" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="calculatorModalLabel">Расчет стоимости</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="modal-calculator-form form">
+					<div class="modal-calculator-inputs"></div>
+					<ul class="modal-calculator-data"></ul>
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Имя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<div class="form-phone">
+								<label class="form-phone-field form-label">
+									<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+									<span>Телефон</span>
+								</label>
+								<label class="form-phone-checkbox form-checkbox">
+									<input type="checkbox" checked>
+									<span>Отобразить маску ввода телефона</span>
+								</label>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<textarea class="form-textarea" placeholder="Ваше сообщение..." required></textarea>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn btn-green">Заказать</button>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Buy in one click -->
+<div class="modal modal-quickbuy fade" id="buyOneClickModal" tabindex="-1" aria-labelledby="buyOneClickModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="buyOneClickModalLabel">Купить в 1 клик</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="modal-quickbuy-form">
+					<div class="row">
+						<div class="col-sm-auto">
+							<div class="modal-quickbuy-photo rounded-4 img-cover">
+								<img src="./images/products/1.jpg" alt="">
+							</div>
+							<!-- /.modal-quickbuy-photo -->
+						</div>
+						<!-- /.col-auto -->
+						<div class="col-sm">
+							<div class="modal-quickbuy-content">
+								<a href="#" class="permalink">Каркас с несущей системой Ролтэк Микро 3х2</a>
+								<div class="price mt-8">
+									<ins>31 200 ₽</ins>
+									<del>37 100 ₽</del>
+								</div>
+								<div class="quantity mt-8">
+									<button type="button" class="quantity-minus" data-ripplet>
+										<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
+									</button>
+									<input type="number" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество" readonly>
+									<button type="button" class="quantity-plus" data-ripplet>
+										<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
+									</button>
+								</div>
+								<div class="order">
+									<div class="order-phone form-phone">
+										<label class="form-phone-field form-label">
+											<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+											<span>Телефон</span>
+										</label>
+										<label class="form-phone-checkbox form-checkbox">
+											<input type="checkbox" checked>
+											<span>Отобразить маску ввода телефона</span>
+										</label>
+									</div>
+									<button type="submit" class="order-submit btn btn-green">Купить в один клик</button>
+								</div>
+								<!-- /.order -->
+							</div>
+							<!-- /.modal-quickbuy-content -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+	<!-- Modal: Order Subproduct -->
+<div class="modal modal-subproduct fade" id="subproductModal" tabindex="-1" aria-labelledby="subproductModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-xl w-bold" id="subproductModalLabel">Заказать товар</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<form class="modal-subproduct-form form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" id="modal-subproduct-name" placeholder="Товар" autocomplete="off" readonly required>
+								<span>Товар</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Имя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<div class="form-phone">
+								<label class="form-phone-field form-label">
+									<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+									<span>Телефон</span>
+								</label>
+								<label class="form-phone-checkbox form-checkbox">
+									<input type="checkbox" checked>
+									<span>Отобразить маску ввода телефона</span>
+								</label>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<textarea class="form-textarea" placeholder="Ваше сообщение..." required></textarea>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn btn-green">Заказать</button>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+	<!-- Go up button -->
+	<div class="go-up" id="go-up-button">
+		<button class="go-up-btn">
+			<svg class="icon icon-dropdown"><use xlink:href="./images/symbol-defs.svg#dropdown"></use></svg>
+		</button>
+	</div>
+
+	<script src="./js/app.min.js"></script>
+	<script src="./js/calculator.js"></script>
+
+</body>
+</html>
