@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="utf-8">
+	<title>Блог: сторінка запису</title>
+	<meta name="description" content="Будівельна компанія">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<link rel="icon" href="./images/favicon.svg">
+
+	<link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+
+	<!-- Site header -->
+	<header class="header">
+		<div class="header-wrapper">
+			<div class="header-logo">
+				<a href="index.html" class="header-logo-link">
+					<svg class="header-logo-svg" xmlns="http://www.w3.org/2000/svg" width="67" height="50" viewBox="0 0 67 50">
+						<path fill-rule="evenodd" d="M40.91 1.332 39.412 4.39h4.256c7.646 0 13.873 6.19 13.873 13.793 0 7.602-6.227 13.793-13.873 13.793H36.89v3.056h6.778c9.302 0 16.947-7.523 16.947-16.85 0-9.325-7.567-16.849-16.947-16.849H40.91Zm-2.13 4.232-1.89 3.762v21.395h6.778c7.016 0 12.691-5.643 12.691-12.618 0-6.975-5.675-12.617-12.69-12.617H38.78v.078Zm-3.074 6.113-3.074 6.113v18.339H31.45v-15.91L23.253 36.6l-.71-1.254.08-.157c2.995-5.8 5.911-11.677 8.828-17.555l.473-.94c1.97-3.997 4.02-7.994 5.99-11.99L39.57 1.41h-3.39a4899.27 4899.27 0 0 0-10.168 20.297c-1.182 2.43-2.444 4.781-3.626 7.21-.394.863-.788 1.646-1.182 2.508l-.316.627L5.045.078h1.261l14.661 29.154 1.656-3.37L9.696 0h1.26l12.297 24.608c4.099-8.15 8.198-16.3 12.297-24.53h8.118c10.011 0 18.13 8.072 18.13 18.025S53.679 36.13 43.668 36.13h-7.96V11.677Z" clip-rule="evenodd"/>
+						<path d="M5.202 50H0v-5.172h5.202v1.018H1.025v3.135h3.153v-1.019H3.153v-1.018h2.05V50Zm12.376-2.038h-1.025V50h-1.025v-5.172h5.203v3.134h-1.813L20.73 50h-1.262l-1.891-2.038Zm-1.104-1.018h3.153v-1.098h-3.153v1.098Zm14.425-2.116H36.1V50h-5.2v-5.172Zm4.178 1.018h-3.153v3.135h3.153v-3.135Zm12.296-1.018v4.153h3.153v-4.153h1.025V50h-5.203v-5.172h1.025ZM62.822 50h-1.024v-5.172H67v3.134h-4.178V50Zm3.153-4.154h-3.153v1.02h3.153v-1.02Z"/>
+					</svg>
+				</a>
+			</div>
+			<!-- /.header-logo -->
+			<div class="header-navigation">
+				<ul class="header-navigation-menu">
+					<li><a href="page-about.html">Про компанію</a></li>
+					<li><a href="page-projects.html">Проєкти</a></li>
+					<li><a href="page-blog.html">Новини</a></li>
+					<li><a href="page-contacts.html">Контакти</a></li>
+				</ul>
+				<button class="header-navigation-btn btn" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal">
+					<svg class="icon icon-phone"><use xlink:href="./images/symbol-defs.svg#phone"></use></svg>
+					<span>Замовити дзвінок</span>
+				</button>
+				<button class="header-navigation-burger btn">
+					<span></span>
+					<span></span>
+				</button>
+				<div class="header-navigation-mobile">
+					<ul class="menu">
+						<li><a href="page-about.html">Про компанію</a></li>
+						<li><a href="page-projects.html">Проєкти</a></li>
+						<li><a href="page-blog.html">Новини</a></li>
+						<li><a href="page-contacts.html">Контакти</a></li>
+					</ul>
+					<div class="social">
+						<div class="social-list">
+							<a href="#" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-instagram"><use xlink:href="./images/symbol-defs.svg#instagram"></use></svg>
+							</a>
+							<a href="#" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+							</a>
+							<a href="#" target="_blank" rel="nofollow noopener">
+								<svg class="icon icon-facebook"><use xlink:href="./images/symbol-defs.svg#facebook"></use></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- /.header-navigation-mobile -->
+			</div>
+			<!-- /.header-navigation -->
+		</div>
+		<!-- /.header-wrapper -->
+	</header>
+
+
+<main class="page-main blog-single">
+
+	<!-- Page heading -->
+	<section class="page-heading">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list">
+					<li>
+						<a href="page-home.html">
+							<svg class="icon icon-home"><use xlink:href="./images/symbol-defs.svg#home"></use></svg>
+							<span>Головна</span>
+						</a>
+					</li>
+					<li><a href="page-blog.html">Новини та акції</a></li>
+					<li><span>Відкриття дитячого майданчика на Богунській</span></li>
+				</ul>
+			</div>
+			<!-- /.breadcrumbs -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<!-- Post article -->
+	<article class="post section">
+		<div class="container">
+
+			<div class="post-heading post-wrapper">
+				<h1 class="post-title text-2xl w-bold">Відкриття дитячого майданчика на Богунській</h1>
+				<div class="post-actions">
+					<a href="#" class="post-actions-category">Central house</a>
+					<div class="post-actions-date">10/12/2022</div>
+				</div>
+			</div>
+
+			<div class="post-section">
+				<img src="./images/blog-single-photo.jpg" alt="">
+			</div>
+
+			<div class="post-section post-wrapper">
+				<p>Богунська-1 - це будинок, який має свій особистий стиль, не порушуючи при цьому цілісне сприйняття всього комплексу – затишного, гармонійного, особливого. Вишуканість відчувається в усьому: плануванні фасаду, інтер’єру, ландшафту. Тут поєднано комфорт з люксом, практичність з мрією.</p>
+			</div>
+
+			<div class="post-section post-video">
+				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="post-video-frame" data-fancybox>
+					<button class="btn-play">
+						<svg class="icon icon-play"><use xlink:href="./images/symbol-defs.svg#play"></use></svg>
+					</button>
+					<img src="./images/blog-video-photo.jpg" alt="">
+				</a>
+			</div>
+
+			<div class="post-section post-wrapper">
+				<h5>Громадський простір поділено на декілька функціональних зон:</h5>
+				<ul>
+					<li>Сучасний дитячий майданчик для найменших діток із зручними гірками, гойдалками, батутами та іншими не менш цікавими локаціями для ігор.</li>
+					<li>Workout площадка, яка підійде як для дорослих, так і для підлітків.</li>
+					<li>Сучасний дитячий майданчик для найменших діток із зручними гірками, гойдалками, батутами та іншими не менш цікавими локаціями для ігор.</li>
+					<li>Workout площадка, яка підійде як для дорослих, так і для підлітків.</li>
+				</ul>
+			</div>
+
+			<div class="post-section post-gallery">
+				<div class="post-gallery-slider vd-swiper">
+					<!-- Swiper navigation -->
+					<div class="swiper-navigation">
+						<button class="swiper-button-prev">
+							<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="35" viewBox="0 0 20 35">
+								<path fill-rule="evenodd" d="m17.802.393 2.108 2.135L4.963 17.284 19.91 32.04l-2.108 2.135L.692 17.284 17.802.393Z" clip-rule="evenodd"/>
+							</svg>
+						</button>
+						<button class="swiper-button-next">
+							<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="21" height="35" viewBox="0 0 21 35">
+								<path fill-rule="evenodd" d="M15.808 17.284.86 2.528 2.968.393l17.11 16.89-17.11 16.892L.86 32.04l14.948-14.756Z" clip-rule="evenodd"/>
+							</svg>
+						</button>
+					</div>
+
+					<!-- Swiper -->
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="./images/blog/gallery-1.jpg" class="vd-swiper-photo img-cover img-animated" data-fancybox="post-gallery-1">
+									<img src="./images/blog/gallery-1.jpg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="./images/blog/gallery-2.jpg" class="vd-swiper-photo img-cover img-animated" data-fancybox="post-gallery-1">
+									<img src="./images/blog/gallery-2.jpg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="./images/blog/gallery-3.jpg" class="vd-swiper-photo img-cover img-animated" data-fancybox="post-gallery-1">
+									<img src="./images/blog/gallery-3.jpg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="./images/heroes-photo-1.jpg" class="vd-swiper-photo img-cover img-animated" data-fancybox="post-gallery-1">
+									<img src="./images/heroes-photo-1.jpg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="./images/advantages-photo.jpg" class="vd-swiper-photo img-cover img-animated" data-fancybox="post-gallery-1">
+									<img src="./images/advantages-photo.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="post-section post-wrapper">
+				<p>Богунська-1 - це будинок, який має свій особистий стиль, не порушуючи при цьому цілісне сприйняття всього комплексу – затишного, гармонійного, особливого. Вишуканість відчувається в усьому: плануванні фасаду, інтер’єру, ландшафту. Тут поєднано комфорт з люксом, практичність з мрією.</p>
+			</div>
+
+		</div>
+		<!-- /.container -->
+	</article>
+
+	<!-- Post navigation -->
+	<div class="post-navigation container mt-64">
+		<a href="page-blog.html" class="post-navigation-prev btn btn-outline">
+			<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+			<span>До всіх новин</span>
+		</a>
+		<a href="page-blog-single.html" class="post-navigation-next btn">
+			<span>Наступна новина</span>
+			<svg class="icon icon-arrow"><use xlink:href="./images/symbol-defs.svg#arrow"></use></svg>
+		</a>
+	</div>
+
+</main>
+
+	<!-- Site footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrapper row flex-lg-nowrap">
+				<div class="col-12 col-lg-auto col-xl-2">
+					<div class="footer-logo">
+						<a href="index.html" class="footer-logo-link">
+							<img src="./images/logo-gold.svg" width="67" height="50" alt="VD Group">
+						</a>
+					</div>
+					<!-- /.footer-logo -->
+				</div>
+				<!-- /.col -->
+				<div class="col-12 col-lg-3">
+					<ul class="footer-menu">
+						<li><a href="page-about.html">Про компанію</a></li>
+						<li><a href="page-projects.html">Проєкти</a></li>
+						<li><a href="page-blog.html">Новини</a></li>
+						<li><a href="page-contacts.html">Контакти</a></li>
+					</ul>
+					<!-- /.footer-menu -->
+				</div>
+				<!-- /.col -->
+				<div class="col-12 col-lg">
+					<div class="footer-contacts">
+						<div class="footer-contacts-column">
+							<h5 class="title">Контактний телефон</h5>
+							<ul class="contacts">
+								<li><a href="tel:+380663718819">+380 66 371 88 19</a></li>
+								<li><a href="tel:+380673718819">+380 67 371 88 19</a></li>
+							</ul>
+						</div>
+						<!-- /.footer-contacts-column -->
+						<div class="footer-contacts-column">
+							<h5 class="title">Email</h5>
+							<ul class="contacts">
+								<li><a href="mailto:info@vdgroup.com">info@vdgroup.com</a></li>
+							</ul>
+						</div>
+						<!-- /.footer-contacts-column -->
+						<div class="footer-contacts-column">
+							<h5 class="title">Відділ продажу</h5>
+							<ul class="contacts">
+								<li>Івано-Франківськ,<br> вул. Назалежності, 5</li>
+							</ul>
+						</div>
+						<!-- /.footer-contacts-column -->
+						<div class="footer-contacts-column">
+							<h5 class="title">Графік роботи</h5>
+							<ul class="contacts">
+								<li>Пн-Пт<br> 9:00-19:00</li>
+							</ul>
+						</div>
+						<!-- /.footer-contacts-column -->
+					</div>
+					<!-- /.footer-contacts -->
+				</div>
+				<!-- /.col -->
+				<div class="col-12 col-lg-auto">
+					<div class="footer-actions">
+						<button class="go-up-btn" id="go-up-button" type="button">
+							<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="23" height="13" viewBox="0 0 23 13">
+								<path fill-rule="evenodd" d="m11.5 3.121-9.293 9.293L.793 11 11.5.293 22.207 11l-1.414 1.414L11.5 3.121Z" clip-rule="evenodd"/>
+							</svg>
+							<span>Вгору</span>
+						</button>
+						<!-- /.go-up-btn -->
+						<div class="social">
+							<div class="social-list">
+								<a href="#" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-instagram"><use xlink:href="./images/symbol-defs.svg#instagram"></use></svg>
+								</a>
+								<a href="#" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-youtube"><use xlink:href="./images/symbol-defs.svg#youtube"></use></svg>
+								</a>
+								<a href="#" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-facebook"><use xlink:href="./images/symbol-defs.svg#facebook"></use></svg>
+								</a>
+							</div>
+						</div>
+						<!-- /.social -->
+					</div>
+					<!-- /.footer-actions -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+			<div class="footer-copyright">
+				<span>© 2022 VD group. Всі права захищені.</span>
+			</div>
+			<!-- /.footer-copyright -->
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Call button -->
+	<div class="call-button">
+		<a href="tel:+380663718819" class="btn">
+			<svg class="icon icon-phone-2"><use xlink:href="./images/symbol-defs.svg#phone-2"></use></svg>
+		</a>
+	</div>
+
+	<!-- Modal: Callback -->
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="callbackModalLabel">Передзвоніть мені</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<div class="modal-description text-center">
+					<p>Заповніть форму і ми вас відразу вам перетелефонуємо.</p>
+				</div>
+				<form class="form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Імʼя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<label class="form-label">
+								<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+								<span>Телефон</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn">Надіслати</button>
+							<div class="form-policy mt-24">Ознайомлений з <a href="#">Політикою конфіденційності</a> та даю згоду на збір та обробку своїх персональних даних.</div>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+
+	<!-- Modal: Callback -->
+<div class="modal fade" id="reviewFlatModal" tabindex="-1" aria-labelledby="reviewFlatModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="reviewFlatModalLabel">Записатись на огляд</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<div class="modal-description text-center">
+					<p>Заповніть форму і ми вас відразу вам перетелефонуємо.</p>
+				</div>
+				<form class="form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" id="reviewFlatModalField" class="form-control" placeholder="Квартира" autocomplete="off" required readonly>
+								<span>Квартира</span>
+							</label>
+						</div>
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Імʼя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<label class="form-label">
+								<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+								<span>Телефон</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn">Надіслати</button>
+							<div class="form-policy mt-24">Ознайомлений з <a href="#">Політикою конфіденційності</a> та даю згоду на збір та обробку своїх персональних даних.</div>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+
+	<script src="./js/app.min.js"></script>
+
+</body>
+</html>
