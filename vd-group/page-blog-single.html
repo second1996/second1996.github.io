@@ -316,7 +316,7 @@
 			<!-- /.modal-header -->
 			<div class="modal-body">
 				<div class="modal-description text-center">
-					<p>Заповніть форму і ми вас відразу вам перетелефонуємо.</p>
+					<p>Заповніть форму і ми вам відразу перетелефонуємо.</p>
 				</div>
 				<form class="form">
 					<div class="row g-4">
@@ -364,7 +364,7 @@
 			<!-- /.modal-header -->
 			<div class="modal-body">
 				<div class="modal-description text-center">
-					<p>Заповніть форму і ми вас відразу вам перетелефонуємо.</p>
+					<p>Заповніть форму і ми вам відразу перетелефонуємо.</p>
 				</div>
 				<form class="form">
 					<div class="row g-4">
@@ -405,7 +405,89 @@
 </div>
 
 
+	<!-- Modal: Rescheduling -->
+<div class="modal fade" id="reschedulingModal" tabindex="-1" aria-labelledby="reschedulingModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="reschedulingModalLabel">Вигідні умови розтермінування</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<div class="modal-description text-center">
+					<p>Заповніть форму і ми вам відразу перетелефонуємо.</p>
+				</div>
+				<form class="form">
+					<div class="row g-4">
+						<div class="col-12">
+							<label class="form-label">
+								<input type="text" class="form-control" placeholder="Имя" autocomplete="off" required>
+								<span>Імʼя</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<label class="form-label">
+								<input type="tel" class="form-control" placeholder="Телефон" autocomplete="off" required>
+								<span>Телефон</span>
+							</label>
+						</div>
+						<!-- /.col -->
+						<div class="col-12">
+							<button type="submit" class="form-submit btn">Надіслати</button>
+							<div class="form-policy mt-24">Ознайомлений з <a href="#">Політикою конфіденційності</a> та даю згоду на збір та обробку своїх персональних даних.</div>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</form>
+			</div>
+			<!-- /.modal-body -->
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+
 	<script src="./js/app.min.js"></script>
+
+	<!-- Google Maps scripts -->
+	<script>
+		// Google Maps locations
+		var locations = {
+			"Central park": {
+				'lat': 48.90999518914599,
+				'lng': 24.70210069369511,
+				'url': 'page-projects-single.html',
+				'icon': './images/icons/house.svg',
+				'object': 'Central park',
+				'address': "вул. Національної Гвардії, 14в",
+			},
+			"Central house": {
+				'lat': 48.925599749480085,
+				'lng': 24.716353059813173,
+				'url': 'page-projects-single.html',
+				'icon': './images/icons/house.svg',
+				'object': 'Central house',
+				'address': "вул. Василіянок, 2а",
+			},
+			"Головний офіс": {
+				'lat': 48.922680753040545,
+				'lng': 24.7151605915034,
+				'url': 'https://goo.gl/maps/PkmFb8wANKWKGzGK9',
+				'icon': './images/icons/vd-group.svg',
+				'object': 'Головний офіс',
+				'address': "вул. Михайла Грушевського, 22а",
+			},
+		};
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfGxtV3BYJwZHsHyvv8oe2s7pbc4DUsMk&callback=initMap&libraries=marker,places&v=beta" defer></script>
+	<script src="./js/google-maps/vd-map.js"></script>
+	<!-- End Google Maps scripts -->
 
 </body>
 </html>
