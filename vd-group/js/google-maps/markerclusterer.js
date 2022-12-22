@@ -639,28 +639,28 @@ function defaultClusterOnAdd(clusterIcon) {
   panes.overlayMouseTarget.appendChild(clusterIcon.div_);
   var isDragging = false;
   var isMouseDown = false;
-  google.maps.event.addDomListener(clusterIcon.div_, 'click', function (event) {
+  clusterIcon.div_.addEventListener('click', function (event) {
     if (!isDragging) {
       clusterIcon.triggerClusterClick(event);
     }
   });
-  google.maps.event.addDomListener(clusterIcon.div_, 'mousedown', function () {
+  clusterIcon.div_.addEventListener('mousedown', function () {
     isDragging = false;
     isMouseDown = true;
   });
-  google.maps.event.addDomListener(clusterIcon.div_, 'mouseup', function () {
+  clusterIcon.div_.addEventListener('mouseup', function () {
     isDragging = false;
     isMouseDown = false;
   });
-  google.maps.event.addDomListener(clusterIcon.div_, 'mousemove', function () {
+  clusterIcon.div_.addEventListener('mousemove', function () {
     if (isMouseDown) {
       isDragging = true;
     }
   });
-  google.maps.event.addDomListener(clusterIcon.div_, 'mouseover', function (event) {
+  clusterIcon.div_.addEventListener('mouseover', function (event) {
     clusterIcon.triggerClusterMouseover(event);
   });
-  google.maps.event.addDomListener(clusterIcon.div_, 'mouseout', function (event) {
+  clusterIcon.div_.addEventListener('mouseout', function (event) {
     clusterIcon.triggerClusterMouseout(event);
   });
 }

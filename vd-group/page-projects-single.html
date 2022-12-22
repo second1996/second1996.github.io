@@ -215,16 +215,13 @@
 			</div>
 			<!-- /.section-heading -->
 			<div class="location-filters mb-48">
-				<button class="location-filters-btn btn btn-outline btn-filter _is-active" type="button">Вся інфраструктура</button>
-				<button class="location-filters-btn btn btn-outline btn-filter" type="button">Покупки</button>
-				<button class="location-filters-btn btn btn-outline btn-filter" type="button">Спорт</button>
-				<button class="location-filters-btn btn btn-outline btn-filter" type="button">Дозвілля</button>
-				<button class="location-filters-btn btn btn-outline btn-filter" type="button">Транспорт</button>
+				<button class="location-filters-btn btn btn-outline btn-filter _is-active" type="button" data-category="all">Вся інфраструктура</button>
+				<button class="location-filters-btn btn btn-outline btn-filter" type="button" data-category="university">Університети</button>
+				<button class="location-filters-btn btn btn-outline btn-filter" type="button" data-category="kindergarten">Дитсадки</button>
+				<button class="location-filters-btn btn btn-outline btn-filter" type="button" data-category="park">Парки</button>
 			</div>
 			<!-- /.location-filters -->
-			<div class="location-map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5244.559860088202!2d24.701862727818742!3d48.91005871717027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c1025359dfad%3A0x1e606112f3c3a6a0!2sNatsional%CA%B9noyi%20Hvardiyi%2014V!5e0!3m2!1sen!2sua!4v1670965844948!5m2!1sen!2sua" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
+			<div class="location-map" id="vd-group-map"></div>
 			<!-- /.location-map -->
 		</div>
 		<!-- /.container -->
@@ -983,6 +980,75 @@
 
 </main>
 
+<script>
+	// Google Maps locations
+	var locations = [
+		{
+			'lat': 48.90999518914599,
+			'lng': 24.70210069369511,
+			'url': 'page-projects-single.html',
+			'icon': './images/icons/central-park.svg',
+			'category': 'house',
+			'object': 'Central park',
+			'address': 'вул. Національної Гвардії, 14в',
+		},
+		{
+			'lat': 48.925599749480085,
+			'lng': 24.716353059813173,
+			'url': 'page-projects-single.html',
+			'icon': './images/icons/central-house.svg',
+			'category': 'house',
+			'object': 'Central house',
+			'address': 'вул. Василіянок, 2а',
+		},
+		{
+			'lat': 48.922680753040545,
+			'lng': 24.7151605915034,
+			'url': 'https://goo.gl/maps/PkmFb8wANKWKGzGK9',
+			'icon': './images/icons/vd-office.svg',
+			'category': 'office',
+			'object': 'Головний офіс',
+			'address': 'вул. Михайла Грушевського, 22а',
+		},
+		{
+			'lat': 48.91069777761089,
+			'lng': 24.694335408225903,
+			'url': 'https://goo.gl/maps/3z3UEJ76gtC8Rg3P8',
+			'icon': './images/icons/park.svg',
+			'category': 'park',
+			'object': 'Парк',
+			'address': 'Парк ім. Тараса Шевченка',
+		},
+		{
+			'lat': 48.90433049288567,
+			'lng': 24.700084212462396,
+			'url': 'https://goo.gl/maps/MwLjyM72K3j4pbxd7',
+			'icon': './images/icons/kindergarten.svg',
+			'category': 'kindergarten',
+			'object': 'Дитячий садок',
+			'address': 'Дитячий садок №29 "Кобзарик"',
+		},
+		{
+			'lat': 48.91458641256111,
+			'lng': 24.70098809099094,
+			'url': 'https://goo.gl/maps/jrrJ4koDLvKaYFim7',
+			'icon': './images/icons/university.svg',
+			'category': 'university',
+			'object': 'Університет',
+			'address': 'Прикарпатський національний університет',
+		},
+		{
+			'lat': 48.91524968256673,
+			'lng': 24.711118600986953,
+			'url': 'https://goo.gl/maps/z6fZnMKaUjH4MyNR8',
+			'icon': './images/icons/university.svg',
+			'category': 'university',
+			'object': 'Університет',
+			'address': 'Університет Короля Данила',
+		},
+	];
+</script>
+
 	<!-- Site footer -->
 	<footer class="footer">
 		<div class="container">
@@ -1238,36 +1304,8 @@
 	<script src="./js/app.min.js"></script>
 
 	<!-- Google Maps scripts -->
-	<script>
-		// Google Maps locations
-		var locations = {
-			"Central park": {
-				'lat': 48.90999518914599,
-				'lng': 24.70210069369511,
-				'url': 'page-projects-single.html',
-				'icon': './images/icons/house.svg',
-				'object': 'Central park',
-				'address': "вул. Національної Гвардії, 14в",
-			},
-			"Central house": {
-				'lat': 48.925599749480085,
-				'lng': 24.716353059813173,
-				'url': 'page-projects-single.html',
-				'icon': './images/icons/house.svg',
-				'object': 'Central house',
-				'address': "вул. Василіянок, 2а",
-			},
-			"Головний офіс": {
-				'lat': 48.922680753040545,
-				'lng': 24.7151605915034,
-				'url': 'https://goo.gl/maps/PkmFb8wANKWKGzGK9',
-				'icon': './images/icons/vd-group.svg',
-				'object': 'Головний офіс',
-				'address': "вул. Михайла Грушевського, 22а",
-			},
-		};
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfGxtV3BYJwZHsHyvv8oe2s7pbc4DUsMk&callback=initMap&libraries=marker,places&v=beta" defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfGxtV3BYJwZHsHyvv8oe2s7pbc4DUsMk&callback=initMap&language=ua" defer></script>
+	<script src="./js/google-maps/markerclusterer.js"></script>
 	<script src="./js/google-maps/vd-map.js"></script>
 	<!-- End Google Maps scripts -->
 
