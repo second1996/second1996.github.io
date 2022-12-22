@@ -40,7 +40,6 @@ function setMarkers(map, locations) {
 			category: location.category,
 			title: location.object,
 			icon: location.icon,
-			// content: buildContent(location),
 		});
 
 		map.markers.push(marker); // add marker on Google
