@@ -1,5 +1,5 @@
 var mapElement = document.getElementById('vd-group-map');
-var map, marker, infoWindow, markerCluster;
+var map, marker, infoWindow, markerCluster, timeout;
 var markersArr = [];
 
 // Init map function
@@ -51,29 +51,35 @@ function setMarkers(map, locations) {
 			// pan to marker on click
 			return function() {
 				map.panTo(latLng);
-				map.setZoom(16); // zoom map
+				map.setZoom(18); // zoom map
 			};
 		}(marker));
 
 		addInfoWindow(marker, location); // render InfoWindow for marker
 	}
 
+	createClusters(); // create clusters
+	centerMap(map); // center map
+}
+
+// Create Clusters function
+function createClusters() {
 	// if cluster was previously created
 	if (markerCluster !== undefined) {
 		markerCluster.clearMarkers(); // clear markers from cluster
 		infoWindow.close();
 	}
 
-	// apply clustering to the map
-	markerCluster = new MarkerClusterer(map, map.markers, {
-		cssClass: 'vd-gm-cluster',
-		zoomOnClick: true,
-		averageCenter: true,
-		gridSize: 90,
-		minimumClusterSize: 2
-	});
-
-	centerMap(map);
+	timeout = setTimeout(function() {
+		// apply clustering to the map
+		markerCluster = new MarkerClusterer(map, map.markers, {
+			cssClass: 'vd-gm-cluster',
+			zoomOnClick: true,
+			averageCenter: true,
+			// gridSize: 90,
+			minimumClusterSize: 2
+		});
+	}, 350);
 }
 
 // Add InfoWindow for markers function
@@ -142,6 +148,7 @@ function buildContent(location) {
 // Filtering markers function
 function filterMarkers(category) {
 	var filteredLocations;
+	clearTimeout(timeout);
 
 	// filtering markers by category
 	if (category !== 'all') {
