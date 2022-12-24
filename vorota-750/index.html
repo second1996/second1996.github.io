@@ -15,6 +15,7 @@
 	<main>
 		<div class="container">
 
+			<!-- Page styles -->
 			<style>
 				main {
 					padding-top: 32px;
@@ -29,10 +30,14 @@
 				.pages-list li {
 					list-style: none;
 					margin-bottom: 8px;
+					display: flex;
 				}
 				.pages-list li::before {
 					counter-increment: page;
 					content: counter(page);
+					flex: 0 0 auto;
+					position: relative;
+					top: -1px;
 					display: inline-flex;
 					align-items: center;
 					justify-content: center;
@@ -48,14 +53,16 @@
 				}
 				.pages-list li a {
 					display: inline-block;
+					font-size: 16px;
 				}
 			</style>
+			<!-- End Page styles -->
 
 			<div class="pages-logo mb-48">
 				<img src="./images/logo.svg" alt="Автоматика для ворот">
 			</div>
-			<div class="row row-items-24">
-				<div class="col-sm-6">
+			<div class="row g-4">
+				<div class="col-sm-6 col-lg-4">
 					<h3 class="mb-16 text-dark text-lg">Общие страницы</h3>
 					<ol class="pages-list">
 						<li><a href="page-home.html">Главная страница</a></li>
@@ -69,9 +76,14 @@
 						<li><a href="page-brands.html">Производители</a></li>
 						<li><a href="page-brands-single.html">Производители: страница записи</a></li>
 						<li><a href="page-contacts.html">Наши контакты</a></li>
+						<li><a href="page-calculator.html">Калькулятор</a></li>
+						<li><a href="page-prices.html">Цены</a></li>
+						<li><a href="page-cities.html">Города</a></li>
+						<li><a href="page-cities-single.html">Города: страница записи</a></li>
 					</ol>
 				</div>
-				<div class="col-sm-6">
+				<!-- /.col -->
+				<div class="col-sm-6 col-lg-4">
 					<h3 class="mb-16 text-dark text-lg">Магазин</h3>
 					<ol class="pages-list">
 						<li><a href="shop-catalog.html">Каталог</a></li>
@@ -82,9 +94,60 @@
 						<li><a href="shop-cart.html">Корзина и оформление заказа</a></li>
 					</ol>
 				</div>
+				<!-- /.col -->
+				<div class="col-sm-6 col-lg-4">
+					<h3 class="mb-16 text-dark text-lg">Покупателю</h3>
+					<ol class="pages-list">
+						<li><a href="page-customer.html">Покупателю</a></li>
+						<li><a href="page-faq.html">FAQ</a></li>
+						<li><a href="page-manuals.html">Инструкции</a></li>
+						<li><a href="page-videos.html">Видео</a></li>
+						<li><a href="page-payment.html">Оплата</a></li>
+						<li><a href="page-delivery.html">Доставка</a></li>
+						<li><a href="page-promos.html">Акции</a></li>
+						<li><a href="page-promos-single.html">Акции: страница записи</a></li>
+						<li><a href="page-news.html">Новости</a></li>
+						<li><a href="page-news-single.html">Новости: страница записи</a></li>
+						<li><a href="page-articles.html">Статьи</a></li>
+						<li><a href="page-articles-single.html">Статьи: страница записи</a></li>
+						<li><a href="page-ral-colors.html">Каталог цветов RAL</a></li>
+						<li><a href="page-rules.html">Политика использования</a></li>
+						<li><a href="page-privacy-policy.html">Политика конфиденциальности сайта</a></li>
+						<li><a href="page-terms-of-use.html">Пользовательское соглашение</a></li>
+					</ol>
+				</div>
+				<!-- /.col -->
+				<div class="col-sm-6 col-lg-4">
+					<h3 class="mb-16 text-dark text-lg">Наши работы</h3>
+					<ol class="pages-list">
+						<li><a href="page-projects.html">Наши работы</a></li>
+						<li><a href="page-projects-lvl-2.html">Наши работы 2-й уровень</a></li>
+						<li><a href="page-projects-lvl-3.html">Наши работы 3-й уровень</a></li>
+						<li><a href="page-projects-lvl-4.html">Наши работы 4-й уровень</a></li>
+					</ol>
+				</div>
+				<!-- /.col -->
+				<div class="col-sm-6 col-lg-4">
+					<h3 class="mb-16 text-dark text-lg">Услуги</h3>
+					<ol class="pages-list">
+						<li><a href="page-services.html">Услуги</a></li>
+						<li><a href="page-services-lvl-2.html">Услуги 2-й уровень</a></li>
+						<li><a href="page-services-lvl-3.html">Услуги 3-й уровень</a></li>
+					</ol>
+				</div>
+				<!-- /.col -->
+				<div class="col-sm-6 col-lg-4">
+					<h3 class="mb-16 text-dark text-lg">Технические страницы</h3>
+					<ol class="pages-list">
+						<li><a href="404.html">404 страница</a></li>
+					</ol>
+				</div>
+				<!-- /.col -->
 			</div>
+			<!-- /.row -->
 
-		</div><!-- /.container -->
+		</div>
+		<!-- /.container -->
 	</main>
 
 </body>

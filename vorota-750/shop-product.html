@@ -81,7 +81,7 @@
 					<div class="col header-middle-search">
 						<form class="form form-search">
 							<label class="form-label">
-								<input type="text" class="form-search-field form-control" placeholder="Поиск" autocomplete="off" required>
+								<input type="search" class="form-search-field form-control" placeholder="Поиск" autocomplete="off" required>
 								<span>Поиск</span>
 							</label>
 							<button type="submit" class="form-search-btn">
@@ -1120,7 +1120,7 @@
 								<!-- /.row -->
 						
 								<!-- Video testimonails list -->
-								<div class="row flex-nowrap flex-lg-wrap gy-lg-8 gx-4 gx-lg-6 overflow-x-auto">
+								<div class="row flex-nowrap flex-lg-wrap gy-lg-8 gx-4 gx-lg-6 overflow-x-auto pb-8">
 									<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
 										<a href="https://www.youtube.com/watch?v=hjvgMrQz9co" class="card card-video-testimonial img-animated" data-fancybox>
 	<div class="card-photo rounded-6 img-cover">
@@ -1272,19 +1272,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="vote">
-			<div class="vote-title text-gray-200 text-2xs">Был ли полезен отзыв?</div>
-			<div class="vote-thumbs">
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-like" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Нравится">
-					<svg class="icon icon-thumbs-up"><use xlink:href="./images/symbol-defs.svg#thumbs-up"></use></svg>
-					<span>2</span>
-				</a>
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-unlike" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Не нравится">
-					<svg class="icon icon-thumbs-down"><use xlink:href="./images/symbol-defs.svg#thumbs-down"></use></svg>
-					<span>1</span>
-				</a>
-			</div>
-		</div>
 	</div>
 </div>
 <!-- /.card-testimonial -->
@@ -1336,19 +1323,6 @@
 					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</div>
-			</div>
-		</div>
-		<div class="vote">
-			<div class="vote-title text-gray-200 text-2xs">Был ли полезен отзыв?</div>
-			<div class="vote-thumbs">
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-like" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Нравится">
-					<svg class="icon icon-thumbs-up"><use xlink:href="./images/symbol-defs.svg#thumbs-up"></use></svg>
-					<span>3</span>
-				</a>
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-unlike" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Не нравится">
-					<svg class="icon icon-thumbs-down"><use xlink:href="./images/symbol-defs.svg#thumbs-down"></use></svg>
-					<span>0</span>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -1405,19 +1379,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="vote">
-			<div class="vote-title text-gray-200 text-2xs">Был ли полезен отзыв?</div>
-			<div class="vote-thumbs">
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-like" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Нравится">
-					<svg class="icon icon-thumbs-up"><use xlink:href="./images/symbol-defs.svg#thumbs-up"></use></svg>
-					<span>1</span>
-				</a>
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-unlike" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Не нравится">
-					<svg class="icon icon-thumbs-down"><use xlink:href="./images/symbol-defs.svg#thumbs-down"></use></svg>
-					<span>4</span>
-				</a>
-			</div>
-		</div>
 	</div>
 </div>
 <!-- /.card-testimonial -->
@@ -1469,19 +1430,6 @@
 					<svg class="icon icon-star-filled"><use xlink:href="./images/symbol-defs.svg#star-filled"></use></svg>
 					<svg class="icon icon-star-filled"><use xlink:href="./images/symbol-defs.svg#star-filled"></use></svg>
 				</div>
-			</div>
-		</div>
-		<div class="vote">
-			<div class="vote-title text-gray-200 text-2xs">Был ли полезен отзыв?</div>
-			<div class="vote-thumbs">
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-like" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Нравится">
-					<svg class="icon icon-thumbs-up"><use xlink:href="./images/symbol-defs.svg#thumbs-up"></use></svg>
-					<span>0</span>
-				</a>
-				<a href="javascript:void(0)" class="vote-thumbs-item vote-thumbs-unlike" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Не нравится">
-					<svg class="icon icon-thumbs-down"><use xlink:href="./images/symbol-defs.svg#thumbs-down"></use></svg>
-					<span>0</span>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -3858,11 +3806,11 @@
 </div>
 
 	<!-- Modal: Order Subproduct -->
-<div class="modal modal-subproduct fade" id="subproductModal" tabindex="-1" aria-labelledby="subproductModalLabel" aria-hidden="true">
+<div class="modal modal-subproduct fade" id="orderProductModal" tabindex="-1" aria-labelledby="orderProductModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title text-xl w-bold" id="subproductModalLabel">Заказать товар</h5>
+				<h5 class="modal-title text-xl w-bold" id="orderProductModalLabel">Заказать товар</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
@@ -3873,7 +3821,7 @@
 					<div class="row g-4">
 						<div class="col-12">
 							<label class="form-label">
-								<input type="text" class="form-control" id="modal-subproduct-name" placeholder="Товар" autocomplete="off" readonly required>
+								<input type="text" class="form-control" id="modal-product-name" placeholder="Товар" autocomplete="off" readonly required>
 								<span>Товар</span>
 							</label>
 						</div>

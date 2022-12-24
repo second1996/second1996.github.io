@@ -81,7 +81,7 @@
 					<div class="col header-middle-search">
 						<form class="form form-search">
 							<label class="form-label">
-								<input type="text" class="form-search-field form-control" placeholder="Поиск" autocomplete="off" required>
+								<input type="search" class="form-search-field form-control" placeholder="Поиск" autocomplete="off" required>
 								<span>Поиск</span>
 							</label>
 							<button type="submit" class="form-search-btn">
@@ -454,8 +454,8 @@
 		<!-- /.container -->
 	</section>
 
-	<!-- Section: Categories -->
-	<section class="categories-inline section">
+	<!-- Categories -->
+	<div class="categories-inline">
 		<div class="container">
 			<ul class="categories-inline-list">
 				<li><a href="shop-category-lvl-3.html" class="_is-current">На винтовых сваях</a></li>
@@ -471,16 +471,16 @@
 			</ul>
 		</div>
 		<!-- /.container -->
-	</section>
+	</div>
 
 	<!-- Section: Product -->
 	<section class="product section pt-48">
 		<div class="container">
-			<article class="product-article">
+			<article class="product-article mb-32">
 				<p>Откатные ворота на винтовых сваях из профлиста, сетки Рабицы, кованные и пр. Такие конструкции экономят пространство, могут быть установлены в местах с повышенной плотностью застройки и в проемы любой ширины. Управлять воротами несложно вручную, а при использовании автоматики и пульта ДУ открывать и закрывать створки можно, не покидая машины, здания.</p>
 			</article>
 			<!-- /.product-article -->
-			<nav class="product-navigation mt-32">
+			<nav class="product-navigation">
 				<a href="#s-pricelist" class="product-navigation-link">Стоимость</a>
 				<a href="#s-complectation" class="product-navigation-link">Комплектация</a>
 				<a href="#s-faq" class="product-navigation-link">FAQ</a>
@@ -510,7 +510,7 @@
 						<div class="text-dark text-2xl w-bold">от 40 000 ₽</div>
 					</div>
 					<div class="order-buttons">
-						<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#subproductModal" data-product="Ворота на винтовых сваях">Заказать</button>
+						<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#orderProductModal" data-product="Ворота на винтовых сваях">Заказать</button>
 						<button type="button" class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#questionModal">
 							<svg class="icon icon-question"><use xlink:href="./images/symbol-defs.svg#question"></use></svg>
 							<span>Задать вопрос</span>
@@ -1821,7 +1821,7 @@
 		<!-- /.row -->
 
 		<!-- Video testimonails list -->
-		<div class="row flex-nowrap flex-lg-wrap gy-lg-8 gx-4 gx-lg-6 overflow-x-auto">
+		<div class="row flex-nowrap flex-lg-wrap gy-lg-8 gx-4 gx-lg-6 overflow-x-auto pb-8">
 			<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
 				<a href="https://www.youtube.com/watch?v=hjvgMrQz9co" class="card card-video-testimonial img-animated" data-fancybox>
 	<div class="card-photo rounded-6 img-cover">
@@ -4786,11 +4786,11 @@
 </div>
 
 	<!-- Modal: Order Subproduct -->
-<div class="modal modal-subproduct fade" id="subproductModal" tabindex="-1" aria-labelledby="subproductModalLabel" aria-hidden="true">
+<div class="modal modal-subproduct fade" id="orderProductModal" tabindex="-1" aria-labelledby="orderProductModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title text-xl w-bold" id="subproductModalLabel">Заказать товар</h5>
+				<h5 class="modal-title text-xl w-bold" id="orderProductModalLabel">Заказать товар</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
 				</button>
@@ -4801,7 +4801,7 @@
 					<div class="row g-4">
 						<div class="col-12">
 							<label class="form-label">
-								<input type="text" class="form-control" id="modal-subproduct-name" placeholder="Товар" autocomplete="off" readonly required>
+								<input type="text" class="form-control" id="modal-product-name" placeholder="Товар" autocomplete="off" readonly required>
 								<span>Товар</span>
 							</label>
 						</div>
