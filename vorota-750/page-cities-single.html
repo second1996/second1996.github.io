@@ -499,7 +499,60 @@
 				<h2 class="title">Мы выполнили установку откатных ворот в следующих районах города Клин:</h2>
 			</div>
 			<!-- /.section-heading -->
-			<div class="map-wrapper">
+			<div class="map-wrapper scrollbar">
+				<div class="map-wrapper-content">
+					<h3 class="text-xl w-semibold">Стоимость доставки</h3>
+					<div class="delivery mt-16 text-xs">
+						<p class="delivery-descr">Средняя цена за погонный метр установки с доставкой:</p>
+						<ul class="delivery-list list-checked list-checked-sm mt-8">
+							<li>Сетка рабица <span class="text-accent">от 400 рублей.</span></li>
+							<li>Профнастил <span class="text-accent">от 860 рублей.</span></li>
+							<li>Евроштакетник <span class="text-accent">от 1100 рублей.</span></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<h4 class="cities-title text-sm w-medium">Сроки выполнения работ: 3 дня.</h4>
+						<p class="cities-descr text-xs">Наш замерщик посетил и установил заборы в следующих районах Клина:</p>
+						<div class="cities-list row row-cols-2 row-cols-sm-3 row-cols-lg-2 row-cols-xl-3 g-2">
+							<div class="col">
+								<a href="page-cities-single.html" class="cities-item">
+									<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+									<span>Барвиха</span>
+								</a>
+							</div>
+							<!-- /.col -->
+							<div class="col">
+								<a href="page-cities-single.html" class="cities-item">
+									<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+									<span>Можайск</span>
+								</a>
+							</div>
+							<!-- /.col -->
+							<div class="col">
+								<a href="page-cities-single.html" class="cities-item">
+									<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+									<span>Егорьевск</span>
+								</a>
+							</div>
+							<!-- /.col -->
+							<div class="col">
+								<a href="page-cities-single.html" class="cities-item">
+									<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+									<span>Зеленоград</span>
+								</a>
+							</div>
+							<!-- /.col -->
+							<div class="col">
+								<a href="page-cities-single.html" class="cities-item">
+									<svg class="icon icon-address"><use xlink:href="./images/symbol-defs.svg#address"></use></svg>
+									<span>Покров</span>
+								</a>
+							</div>
+							<!-- /.col -->
+						</div>
+					</div>
+				</div>
+				<!-- /.map-wrapper-content -->
 				<iframe frameborder="0" height="400" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c3303648bfd524bfa161d2e73df0bd8c2af17367201b684f733173f9c9dafa4&amp;source=constructor" width="100%"></iframe>
 			</div>
 			<!-- /.map-wrapper -->
@@ -531,7 +584,7 @@
 			</div>
 			<!-- /.pricelist-includes -->
 			<div class="table-responsive mt-32">
-				<table class="table table-price table-bordered table-striped table-hover">
+				<table class="table table-price table-bordered">
 					<thead>
 						<tr class="table-light">
 							<th width="10%" rowspan="2" valign="middle">↓ Высота проёма (мм)</th>
@@ -615,7 +668,7 @@
 			</div>
 			<!-- /.pricelist-includes -->
 			<div class="table-responsive mt-32">
-				<table class="table table-price table-bordered table-striped table-hover">
+				<table class="table table-price table-bordered">
 					<thead>
 						<tr class="table-light">
 							<th width="10%" rowspan="2" valign="middle">↓ Высота проёма (мм)</th>
@@ -696,8 +749,8 @@
 				<h2 class="title">Стоимость на монтаж и доставку</h2>
 			</div>
 			<!-- /.section-heading -->
-			<div class="table-resposive">
-				<table class="table table-price table-bordered table-striped table-hover">
+			<div class="table-responsive">
+				<table class="table table-center table-bordered table-striped table-hover">
 					<thead>
 						<tr class="table-green">
 							<th width="70%">Наименование услуги</th>
@@ -748,7 +801,7 @@
 					</tbody>
 				</table>
 			</div>
-			<!-- /.table-resposive -->
+			<!-- /.table-responsive -->
 		</div>
 		<!-- /.container -->
 	</section>
@@ -1995,7 +2048,7 @@
 			</div>
 			<!-- /.section-heading -->
 			<div class="table-responsive mt-32">
-				<table class="table table-price table-bordered table-striped table-hover">
+				<table class="table table-price table-bordered">
 					<thead>
 						<tr class="table-light">
 							<th width="10%" rowspan="2" valign="middle">↓ Высота проёма (мм)</th>
@@ -2504,9 +2557,13 @@
 				<h2 class="title">Другие города</h2>
 			</div>
 			<!-- /.section-heading -->
-			<div class="row flex-nowrap flex-lg-wrap gy-lg-8 gx-4 gx-lg-6 overflow-x-auto pb-8">
-				<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
-					<a href="page-cities-single.html" class="card card-city img-animated">
+
+			<!-- Other posts slider -->
+			<div class="other-posts-slider swiper-slider">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
 	<div class="card-photo rounded-6 img-cover">
 		<img src="./images/cities/1.png" alt="">
 	</div>
@@ -2514,10 +2571,10 @@
 		<h4 class="title text-sm w-medium">Клин</h4>
 	</div>
 </a>
-				</div>
-				<!-- /.col -->
-				<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
-					<a href="page-cities-single.html" class="card card-city img-animated">
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
 	<div class="card-photo rounded-6 img-cover">
 		<img src="./images/cities/2.png" alt="">
 	</div>
@@ -2525,10 +2582,10 @@
 		<h4 class="title text-sm w-medium">Коломна</h4>
 	</div>
 </a>
-				</div>
-				<!-- /.col -->
-				<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
-					<a href="page-cities-single.html" class="card card-city img-animated">
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
 	<div class="card-photo rounded-6 img-cover">
 		<img src="./images/cities/3.png" alt="">
 	</div>
@@ -2536,10 +2593,10 @@
 		<h4 class="title text-sm w-medium">Можайск</h4>
 	</div>
 </a>
-				</div>
-				<!-- /.col -->
-				<div class="col-10 col-xs-9 col-sm-7 col-md-5 col-lg-3">
-					<a href="page-cities-single.html" class="card card-city img-animated">
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
 	<div class="card-photo rounded-6 img-cover">
 		<img src="./images/cities/4.png" alt="">
 	</div>
@@ -2547,13 +2604,71 @@
 		<h4 class="title text-sm w-medium">Откатные ворота Ногинск</h4>
 	</div>
 </a>
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/cities/1.png" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Клин</h4>
+	</div>
+</a>
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/cities/2.png" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Коломна</h4>
+	</div>
+</a>
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/cities/3.png" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Можайск</h4>
+	</div>
+</a>
+						</div>
+						<!-- /.other-posts-slide -->
+						<div class="other-posts-slide swiper-slide">
+							<a href="page-cities-single.html" class="card card-city img-animated">
+	<div class="card-photo rounded-6 img-cover">
+		<img src="./images/cities/4.png" alt="">
+	</div>
+	<div class="card-body">
+		<h4 class="title text-sm w-medium">Откатные ворота Ногинск</h4>
+	</div>
+</a>
+						</div>
+						<!-- /.other-posts-slide -->
+					</div>
+					<!-- /.swiper-wrapper -->
 				</div>
-				<!-- /.col -->
+				<!-- /.swiper -->
+
+				<!-- Swiper navigation-->
+				<div class="other-posts-slider-nav swiper-navigation">
+					<button class="swiper-button-prev" data-ripplet>
+						<svg class="icon icon-arrow-left"><use xlink:href="./images/symbol-defs.svg#arrow-left"></use></svg>
+					</button>
+					<button class="swiper-button-next" data-ripplet>
+						<svg class="icon icon-arrow-right"><use xlink:href="./images/symbol-defs.svg#arrow-right"></use></svg>
+					</button>
+				</div>
 			</div>
-			<!-- /.row -->
-			<div class="mt-32 text-center">
-				<a href="page-cities.html" class="btn btn-green">К списку всех городов</a>
-			</div>
+			<!-- /.other-posts-slider -->
+
+			<!-- Swiper pagination -->
+			<div class="other-posts-slider-dots swiper-pagination"></div>
 		</div>
 		<!-- /.container -->
 	</section>
